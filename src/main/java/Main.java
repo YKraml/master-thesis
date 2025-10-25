@@ -2,6 +2,9 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
+import org.kohsuke.github.GitHubBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,15 +17,12 @@ public class Main {
 
     public static void main(String[] args) throws IOException, GitAPIException {
 
-        //https://github.com/YKraml/Pokedex
         String owner = "YKraml";
         String repoName = "GameOfLive";
 
-        //GitHub github = new GitHubBuilder().withOAuthToken(TOKEN).build();
-        //GHRepository repository = github.getRepository(owner + "/" + repoName);
-        //String gitTransportUrl = repository.getUrl() + ".git";
+        GitHub github = new GitHubBuilder().withOAuthToken(TOKEN).build();
 
-        try (Git git = cloneRepo(owner, repoName)) {
+        try (Git git = getRepo(github, owner, repoName)) {
             Iterable<RevCommit> call = git.log().call();
 
             List<RevCommit> commits = new ArrayList<>();
@@ -37,16 +37,33 @@ public class Main {
 
     }
 
-    private static Git cloneRepo(String owner, String repoName) throws GitAPIException, IOException {
+
+    private static Git getRepo(GitHub github, String owner, String repoName) throws GitAPIException, IOException {
         String folderName = "repos" + File.separator + owner + File.separator + repoName;
         File folder = new File(folderName);
+
         if (folder.exists()) {
-            folder.delete();
-            return Git.wrap(new FileRepositoryBuilder()
-                    .setGitDir(new File(folderName + File.separator + ".git"))
-                    .build());
+            File gitFile = new File(folderName + File.separator + ".git");
+            return openRepoAndGoToDefaultBranch(github, owner, repoName, gitFile);
         }
 
+        return cloneRepo(owner, repoName, folder);
+    }
+
+    private static Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, File gitFile) throws IOException, GitAPIException {
+        Git repo = Git.wrap(new FileRepositoryBuilder()
+                .setGitDir(gitFile)
+                .build());
+
+        //Go to default branch
+        GHRepository repository = github.getRepository(owner + "/" + repoName);
+        String defaultBranch = repository.getDefaultBranch();
+        repo.checkout().setName(defaultBranch).call();
+
+        return repo;
+    }
+
+    private static Git cloneRepo(String owner, String repoName, File folder) throws GitAPIException {
         return Git.cloneRepository()
                 .setDirectory(folder)
                 .setURI("https://github.com/" + owner + "/" + repoName + ".git")
