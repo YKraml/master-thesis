@@ -50,7 +50,7 @@ public class Main {
                     Linter linter = linterProofEntry.getKey();
                     Proof proof = linterProofEntry.getValue();
 
-                    String commitId = linterIntroductionFinder.findIntroduction(git, linter).get();
+                    String commitId = linterIntroductionFinder.findIntroduction(git, linter).getName();
                     System.out.println(linter + " Introduced: " + commitId);
 
                 }
