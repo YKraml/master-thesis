@@ -18,7 +18,7 @@ public class Main {
     public static final String TOKEN = "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";
 
     private final static List<Pair<String, String>> repos = List.of(
-            Pair.of("YKraml","KramlsBot"),
+            Pair.of("YKraml", "KramlsBot"),
             Pair.of("YKraml", "GameOfLive"),
             Pair.of("YKraml", "MandelBrot"),
             Pair.of("YKraml", "AnimeFetcher"),
@@ -28,13 +28,12 @@ public class Main {
 
     public static void main(String[] args) throws IOException, GitAPIException {
 
-
-
         GitHub github = new GitHubBuilder().withOAuthToken(TOKEN).build();
+        System.out.printf("Remaining: %s%n", github.getRateLimit().getCore().getLimit());;
 
         RepositoryDownloader repositoryDownloader = new RepositoryDownloader(github);
-
         LinterFolderFinder linterFolderFinder = new LinterFolderFinder(new LinterFileFinder());
+        LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinder(linterFolderFinder);
 
         for (Pair<String, String> repo : repos) {
 
@@ -46,9 +45,19 @@ public class Main {
                 Map<Linter, Proof> linters = linterFolderFinder.findLinters(folder);
                 System.out.println(linters);
 
+
+                for (Map.Entry<Linter, Proof> linterProofEntry : linters.entrySet()) {
+                    Linter linter = linterProofEntry.getKey();
+                    Proof proof = linterProofEntry.getValue();
+
+                    String commitId = linterIntroductionFinder.findIntroduction(git, linter).get();
+                    System.out.println(linter + " Introduced: " + commitId);
+
+                }
+
+
             }
         }
-
 
 
     }

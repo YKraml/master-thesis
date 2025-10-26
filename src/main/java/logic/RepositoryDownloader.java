@@ -31,14 +31,15 @@ public class RepositoryDownloader {
     }
 
     private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, File gitFile) throws IOException, GitAPIException {
-        Git repo = Git.wrap(new FileRepositoryBuilder().setGitDir(gitFile).build());
+        Git git = Git.wrap(new FileRepositoryBuilder().setGitDir(gitFile).build());
 
         //Go to default branch
         GHRepository repository = github.getRepository(owner + "/" + repoName);
         String defaultBranch = repository.getDefaultBranch();
-        repo.checkout().setName(defaultBranch).call();
+        git.stashCreate().call();
+        git.checkout().setName(defaultBranch).call();
 
-        return repo;
+        return git;
     }
 
     private Git cloneRepo(String owner, String repoName, File folder) throws GitAPIException {

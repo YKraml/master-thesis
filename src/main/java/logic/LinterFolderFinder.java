@@ -21,7 +21,7 @@ public class LinterFolderFinder {
     public Map<Linter, Proof> findLinters(File folder) {
 
         Map<Linter, Proof> linters = new HashMap<>();
-        for (File file : getFilesForFolder(folder)) {
+        for (File file : getFilesInFolder(folder)) {
             Map<Linter, Proof> lintersInFile = linterFileFinder.searchForLinters(file);
             linters.putAll(lintersInFile);
         }
@@ -29,16 +29,16 @@ public class LinterFolderFinder {
         return linters;
     }
 
-    private List<File> getFilesForFolder(File folder) {
+    private List<File> getFilesInFolder(File folder) {
         List<File> collector = new ArrayList<>();
-        listFilesForFolder(folder, collector);
+        listFilesInFolder(folder, collector);
         return collector;
     }
 
-    public void listFilesForFolder(File folder, List<File> collector) {
+    public void listFilesInFolder(File folder, List<File> collector) {
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
-                listFilesForFolder(fileEntry, collector);
+                listFilesInFolder(fileEntry, collector);
             } else {
                 collector.add(fileEntry);
             }

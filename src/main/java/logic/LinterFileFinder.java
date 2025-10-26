@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LinterFileFinder {
+
     public Map<Linter, Proof> searchForLinters(File file) {
         HashMap<Linter, Proof> linters = new HashMap<>();
 
@@ -21,4 +22,5 @@ public class LinterFileFinder {
 
         return linters;
     }
+
 }
