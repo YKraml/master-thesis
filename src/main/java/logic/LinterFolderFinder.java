@@ -20,7 +20,6 @@ public class LinterFolderFinder {
 
 
     public Map<Linter, Proof> findLinters(File folder) {
-
         Map<Linter, Proof> linters = new ConcurrentHashMap<>();
         getFilesInFolder(folder).stream().parallel().map(linterFileFinder::searchForLinters).forEach(linters::putAll);
 

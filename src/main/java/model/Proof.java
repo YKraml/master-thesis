@@ -1,19 +1,17 @@
 package model;
 
-import java.io.File;
-
 public class Proof {
 
-    private final File file;
+    private final String fileName;
 
-    public Proof(File file) {
-        this.file = file;
+    public Proof(String fileName) {
+        this.fileName = fileName;
     }
 
     @Override
     public String toString() {
         return "Proof{" +
-                "file=" + file +
+                "file=" + fileName +
                 '}';
     }
 }

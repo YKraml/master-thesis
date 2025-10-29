@@ -3,8 +3,8 @@ package logic;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
-import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
 import java.io.File;
@@ -18,7 +18,6 @@ public class RepositoryDownloader {
         this.github = github;
     }
 
-
     public Git getRepo(String owner, String repoName) throws GitAPIException, IOException {
         String folderName = "repos" + File.separator + owner + File.separator + repoName;
         File folder = new File(folderName);
@@ -27,32 +26,29 @@ public class RepositoryDownloader {
             return openRepoAndGoToDefaultBranch(github, owner, repoName, folderName);
         }
 
-
         return cloneRepo(owner, repoName, folderName);
     }
 
-    private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws IOException, GitAPIException {
+    private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {
         File gitFile = new File(folderName + File.separator + ".git");
-        Git git = Git.wrap(new FileRepositoryBuilder().setGitDir(gitFile).build());
+        Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
+        Git git = Git.wrap(repo);
 
-        try {
-            //Go to default branch
-            GHRepository repository = github.getRepository(owner + "/" + repoName);
-            String defaultBranch = repository.getDefaultBranch();
-            git.reset().setMode(ResetCommand.ResetType.HARD).call();
-            git.checkout().setName(defaultBranch).call();
-            return git;
-        } catch (UnsupportedOperationException e) {
-            //Clone repo new
-            return cloneRepo(owner, repoName, folderName);
-        }
+        GitUtil.prepareCheckout(git);
+        String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
+        git.checkout().setName(defaultBranch).call();
 
-
+        return git;
     }
 
+
+
     private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException {
+        System.out.println("Start cloning: " + owner + "/" + repoName);
         File folder = new File(folderName);
-        folder.delete();
-        return Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
+
+        Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
+        System.out.println("End cloning: " + owner + "/" + repoName);
+        return git;
     }
 }

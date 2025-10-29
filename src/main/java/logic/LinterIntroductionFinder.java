@@ -1,8 +1,8 @@
 package logic;
 
+import model.Language;
 import model.Linter;
 import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 
@@ -29,7 +29,7 @@ public class LinterIntroductionFinder {
         //Binary search for the introduction commit
         RevCommit revCommit = doBinarySearch(git, linter, commits);
 
-        git.stashCreate().call();
+        GitUtil.prepareCheckout(git);
         git.checkout().setName(commits.getLast().getName()).call();
 
         return revCommit;
@@ -40,7 +40,7 @@ public class LinterIntroductionFinder {
         int bottom = 0;
         do {
             int halfWay = bottom + (top - bottom) / 2;
-            git.stashCreate().call();
+            GitUtil.prepareCheckout(git);
             git.checkout().setName(commits.get(halfWay).getName()).call();
             File folder = git.getRepository().getDirectory().getParentFile();
             if (linterFolderFinder.findLinters(folder).containsKey(linter)) {
@@ -53,9 +53,9 @@ public class LinterIntroductionFinder {
 
         // Check bottom and top commit for linter
         int commitIndex;
-        if (isLinterPresent(git, linter, commits.get(bottom))) {
+        if (isLinterPresent(git, linter, commits.get(bottom).getName())) {
             commitIndex = bottom;
-        } else if (isLinterPresent(git, linter, commits.get(top))) {
+        } else if (isLinterPresent(git, linter, commits.get(top).getName())) {
             commitIndex = top;
         } else {
             throw new RuntimeException("Linter introduction not found.");
@@ -63,19 +63,24 @@ public class LinterIntroductionFinder {
 
 
         //Check commit before introduction commit. It should not contain the linter.
-        if (commitIndex > 0 & isLinterPresent(git, linter, commits.get(commitIndex - 1))) {
+        if (commitIndex > 0 && isLinterPresent(git, linter, commits.get(commitIndex - 1).getName())) {
             throw new RuntimeException("Linter found, but not expected.");
         }
 
+        //Check commit after introduction commit. It should contain the linter.
+        if (commitIndex < commits.size() - 1 && !isLinterPresent(git, linter, commits.get(commitIndex + 1).getName())) {
+            throw new RuntimeException("Linter expected, but not found.");
+        }
 
         return commits.get(commitIndex);
     }
 
-    private boolean isLinterPresent(Git git, Linter linter, RevCommit targetCommit) throws GitAPIException {
-        git.reset().setMode(ResetCommand.ResetType.HARD).call();
-        git.stashCreate().call();
-        git.checkout().setName(targetCommit.getName()).call();
+    private boolean isLinterPresent(Git git, Linter linter, String commitName) throws GitAPIException {
+        GitUtil.prepareCheckout(git);
+        git.checkout().setName(commitName).call();
+
         File folder = git.getRepository().getDirectory().getParentFile();
         return linterFolderFinder.findLinters(folder).containsKey(linter);
     }
+
 }

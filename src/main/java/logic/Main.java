@@ -1,5 +1,6 @@
 package logic;
 
+import model.Language;
 import model.Linter;
 import model.Proof;
 import org.eclipse.jgit.api.Git;
@@ -9,8 +10,6 @@ import org.kohsuke.github.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -19,27 +18,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException, GitAPIException {
         GitHub github = new GitHubBuilder().withOAuthToken(TOKEN).build();
-
         System.out.printf("Remaining: %s%n", github.getRateLimit().getCore().getLimit());
 
         RepositoryDownloader repositoryDownloader = new RepositoryDownloader(github);
         LinterFolderFinder linterFolderFinder = new LinterFolderFinder(new LinterFileFinder());
         LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinder(linterFolderFinder);
 
-
         PagedSearchIterable<GHRepository> repos = github.searchRepositories().language("Java").sort(GHRepositorySearchBuilder.Sort.STARS).list();
-        List<GHRepository> repoList = new ArrayList<>();
         for (GHRepository ghRepository : repos) {
-            if (repoList.size() == 100) {
-                break;
-            }
-            repoList.add(ghRepository);
+            handleRepo(ghRepository, repositoryDownloader, linterFolderFinder, linterIntroductionFinder);
         }
-
-        for (GHRepository repo : repoList) {
-            handleRepo(repo, repositoryDownloader, linterFolderFinder, linterIntroductionFinder);
-        }
-
 
     }
 
@@ -48,22 +36,42 @@ public class Main {
         String repoName = repo.getName();
 
         System.out.println();
-        System.out.println("Ownber: " + ownerName);
+        System.out.println("https://github.com/" + ownerName + "/" + repoName);
+        System.out.println("Owner: " + ownerName);
         System.out.println("Repo: " + repoName);
+        System.out.println("Repo Size: " + repo.getSize() + " kb");
 
+        //Limit at around 0.5GB. The getSize() is not very accurate.
+        if (repo.getSize() > 500000) {
+            System.out.println("Skipping. Repo too large.");
+            return;
+        }
+
+        //Skip if already analysed
         File proofFile = new File("proofs" + File.separator + ownerName + "." + repoName + ".txt");
         if (proofFile.exists()) {
-            System.out.println("Skipping");
+            System.out.println("Skipping. Already analysed.");
             return;
         }
 
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
 
-
             File folder = git.getRepository().getDirectory().getParentFile();
+            long size = Files.walk(folder.toPath())
+                    .filter(p -> p.toFile().isFile())
+                    .mapToLong(p -> p.toFile().length())
+                    .sum();
+
+            System.out.println("Real Size: " + size / 1000 + " kB");
+
+            //Limit at 0.5GB. The getSize() is not very accurate.
+            if (size > 500 * 1000 * 1000) {
+                System.out.println("Skipping. Folder too large.");
+                return;
+            }
+
             Map<Linter, Proof> linters = linterFolderFinder.findLinters(folder);
             System.out.println("Linters: " + linters);
-
 
             StringBuilder text = new StringBuilder();
             for (Map.Entry<Linter, Proof> linterProofEntry : linters.entrySet()) {
