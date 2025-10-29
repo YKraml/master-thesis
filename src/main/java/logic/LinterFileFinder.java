@@ -16,7 +16,7 @@ public class LinterFileFinder {
             linters.put(Linter.QODANA, new Proof(file));
         }
 
-        if(file.getName().equals("checkstyle-idea.xml")){
+        if(file.getName().equals("checkstyle-idea.xml") || file.getName().equals("checkstyle.xml")){
             linters.put(Linter.CHECKSTYLE, new Proof(file));
         }
 

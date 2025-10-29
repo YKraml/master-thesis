@@ -2,13 +2,13 @@ package logic;
 
 import model.Linter;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class LinterIntroductionFinder {
 
@@ -61,15 +61,18 @@ public class LinterIntroductionFinder {
             throw new RuntimeException("Linter introduction not found.");
         }
 
-        //Check commit before commit that introduced linter
-        if (commitIndex > 0 && isLinterPresent(git, linter, commits.get(commitIndex - 1))) {
+
+        //Check commit before introduction commit. It should not contain the linter.
+        if (commitIndex > 0 & isLinterPresent(git, linter, commits.get(commitIndex - 1))) {
             throw new RuntimeException("Linter found, but not expected.");
         }
+
 
         return commits.get(commitIndex);
     }
 
     private boolean isLinterPresent(Git git, Linter linter, RevCommit targetCommit) throws GitAPIException {
+        git.reset().setMode(ResetCommand.ResetType.HARD).call();
         git.stashCreate().call();
         git.checkout().setName(targetCommit.getName()).call();
         File folder = git.getRepository().getDirectory().getParentFile();

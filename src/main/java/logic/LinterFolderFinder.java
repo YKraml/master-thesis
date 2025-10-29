@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class LinterFolderFinder {
 
@@ -20,11 +21,8 @@ public class LinterFolderFinder {
 
     public Map<Linter, Proof> findLinters(File folder) {
 
-        Map<Linter, Proof> linters = new HashMap<>();
-        for (File file : getFilesInFolder(folder)) {
-            Map<Linter, Proof> lintersInFile = linterFileFinder.searchForLinters(file);
-            linters.putAll(lintersInFile);
-        }
+        Map<Linter, Proof> linters = new ConcurrentHashMap<>();
+        getFilesInFolder(folder).stream().parallel().map(linterFileFinder::searchForLinters).forEach(linters::putAll);
 
         return linters;
     }
