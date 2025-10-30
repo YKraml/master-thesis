@@ -86,6 +86,7 @@ public class LinterIntroductionFinderTest {
         File gitFile = new File(repoFolder + File.separator + ".git");
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         Git git = Git.wrap(repo);
+        git.checkout().setName("master").call();
 
         Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroduction(git, Linter.CHECKSTYLE);
         Assertions.assertEquals(repoFolder + File.separator + "checkstyle.xml", introduction.getRight());
