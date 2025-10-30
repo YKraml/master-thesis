@@ -4,28 +4,50 @@ import model.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.lib.ObjectId;
+import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevSort;
+import org.eclipse.jgit.revwalk.RevWalk;
+import org.kohsuke.github.GitHub;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
 public class LinterIntroductionFinder {
 
     private final LinterFolderFinder linterFolderFinder;
+    private final GitHub gitHub;
 
-    public LinterIntroductionFinder(LinterFolderFinder linterFolderFinder) {
+    public LinterIntroductionFinder(LinterFolderFinder linterFolderFinder, GitHub gitHub) {
         this.linterFolderFinder = linterFolderFinder;
+        this.gitHub = gitHub;
     }
 
-    public Pair<RevCommit, String> findIntroduction(Git git, Linter linter) throws GitAPIException {
-        Iterable<RevCommit> call = git.log().call();
-
-        //First entry in list is the latest commit
+    public Pair<RevCommit, String> findIntroduction(Git git, Linter linter) throws IOException, GitAPIException {
+        Iterable<RevCommit> topologicalLog = getTopologicalLog(git.getRepository());
         List<RevCommit> commits = new ArrayList<>();
-        call.forEach(commits::add);
-        commits = commits.reversed();
+        topologicalLog.forEach(commits::add);
+        //commits = commits.reversed();
+
+        //commits.sort(new Comparator<RevCommit>() {
+        //    @Override
+        //    public int compare(RevCommit o1, RevCommit o2) {
+        //        return o1.getCommitTime() - o2.getCommitTime();
+        //    }
+        //});
+        //for (int i = 0; i < commits.size() - 1; i++) {
+        //    if (commits.get(i).getCommitTime() > commits.get(i + 1).getCommitTime()) {
+        //        System.out.println(i + " " + (i + 1));
+        //          throw new RuntimeException();
+        //    }
+        //}
+
+        String name = commits.get(1000).getName();
 
         //Binary search for the introduction commit
         Pair<RevCommit, String> revCommit = doBinarySearch(git, linter, commits);
@@ -92,6 +114,15 @@ public class LinterIntroductionFinder {
         }
 
         return Optional.empty();
+    }
+
+    public Iterable<RevCommit> getTopologicalLog(Repository repository) throws IOException {
+        try (RevWalk walk = new RevWalk(repository)) {
+            ObjectId headId = repository.resolve("HEAD");
+            walk.markStart(walk.parseCommit(headId));
+            walk.sort(RevSort.TOPO_KEEP_BRANCH_TOGETHER);
+            return walk;
+        }
     }
 
 }

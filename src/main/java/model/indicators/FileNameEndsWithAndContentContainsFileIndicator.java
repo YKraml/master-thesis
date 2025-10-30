@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-public class FileNameEndsWithAndContentContainsIndicator extends Indicator {
+public class FileNameEndsWithAndContentContainsFileIndicator extends FileIndicator {
 
     private final String fileName;
     private final String fileContent;
 
-    public FileNameEndsWithAndContentContainsIndicator(String fileName, String fileContent) {
+    public FileNameEndsWithAndContentContainsFileIndicator(String fileName, String fileContent) {
         this.fileName = fileName;
         this.fileContent = fileContent;
     }

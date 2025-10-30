@@ -1,7 +1,7 @@
 package logic;
 
 import model.Linter;
-import model.indicators.Indicator;
+import model.indicators.FileIndicator;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,10 +11,10 @@ public class LinterFileFinder {
 
     public Optional<Result> searchForLinter(File file, Linter linter) {
 
-        for (Indicator indicator : linter.getIndicators()) {
+        for (FileIndicator fileIndicator : linter.getIndicators()) {
                 boolean test;
                 try {
-                    test = indicator.test(file);
+                    test = fileIndicator.test(file);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

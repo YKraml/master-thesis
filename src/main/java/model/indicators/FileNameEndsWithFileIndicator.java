@@ -2,11 +2,11 @@ package model.indicators;
 
 import java.io.File;
 
-public class FileNameEndsWithIndicator extends Indicator {
+public class FileNameEndsWithFileIndicator extends FileIndicator {
 
     private final String fileName;
 
-    public FileNameEndsWithIndicator(String fileName) {
+    public FileNameEndsWithFileIndicator(String fileName) {
         this.fileName = fileName;
     }
 

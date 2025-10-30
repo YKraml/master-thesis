@@ -21,7 +21,7 @@ public class RepoHandler {
     public static final int SIZE_1 = 1000 * 1000; // 1 GB
     public static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
 
-    public void handleRepo(GHRepository repo, RepositoryDownloader repositoryDownloader, LinterFolderFinder linterFolderFinder, LinterIntroductionFinder linterIntroductionFinder) throws IOException, GitAPIException, GitAPIException, IOException {
+    public void handleRepo(GHRepository repo, RepositoryDownloader repositoryDownloader, LinterFolderFinder linterFolderFinder, LinterIntroductionFinder linterIntroductionFinder) throws Exception {
         String ownerName = repo.getOwnerName();
         String repoName = repo.getName();
 
