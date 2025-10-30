@@ -1,7 +1,7 @@
 package logic;
 
+import org.apache.commons.io.FileUtils;
 import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.ResetCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
@@ -34,19 +34,22 @@ public class RepositoryDownloader {
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         Git git = Git.wrap(repo);
 
-        GitUtil.prepareCheckout(git);
-        String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
-        git.checkout().setName(defaultBranch).call();
+        try {
+            GitUtil.prepareCheckout(git);
+            String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
+            git.checkout().setName(defaultBranch).call();
+            return git;
+        } catch (Exception e) {
+            return cloneRepo(owner, repoName, folderName);
+        }
 
-        return git;
     }
 
-
-
-    private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException {
-        System.out.println("Start cloning: " + owner + "/" + repoName);
+    private synchronized Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
         File folder = new File(folderName);
+        FileUtils.deleteDirectory(folder);
 
+        System.out.println("Start cloning: " + owner + "/" + repoName);
         Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
         System.out.println("End cloning: " + owner + "/" + repoName);
         return git;

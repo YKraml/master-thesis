@@ -6,11 +6,15 @@ public class Result {
 
     private final String repoOwner;
     private final String repoName;
+    private final Language language;
+    private final String link;
     private final List<LinterWithProof> linters;
 
-    public Result(String repoOwner, String repoName, List<LinterWithProof> linters) {
+    public Result(String repoOwner, String repoName, Language language, String link, List<LinterWithProof> linters) {
         this.repoOwner = repoOwner;
         this.repoName = repoName;
+        this.language = language;
+        this.link = link;
         this.linters = linters;
     }
 
@@ -26,28 +30,59 @@ public class Result {
         return linters;
     }
 
+    public Language getLanguage() {
+        return language;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
     public static class LinterWithProof {
 
-        private final Linter linter;
-        private final Proof proof;
-        private final String commit;
+        private final String linterName;
+        private final String currentFile;
+        private final String currentCommit;
+        private final String introductionFile;
+        private final String introductionCommit;
 
-        private LinterWithProof(Linter linter, Proof proof, String commit) {
-            this.linter = linter;
-            this.proof = proof;
-            this.commit = commit;
+        public LinterWithProof(String linterName, String currentFile, String commit, String introductionCommit, String introductionFile) {
+            this.linterName = linterName;
+            this.currentFile = currentFile;
+            this.currentCommit = commit;
+            this.introductionCommit = introductionCommit;
+            this.introductionFile = introductionFile;
         }
 
-        public Linter getLinter() {
-            return linter;
+        public String getLinterName() {
+            return linterName;
         }
 
-        public Proof getProof() {
-            return proof;
+        public String getCurrentFile() {
+            return currentFile;
         }
 
-        public String getCommit() {
-            return commit;
+        public String getCurrentCommit() {
+            return currentCommit;
+        }
+
+        public String getIntroductionCommit() {
+            return introductionCommit;
+        }
+
+        public String getIntroductionFile() {
+            return introductionFile;
+        }
+
+        @Override
+        public String toString() {
+            return "LinterWithProof{" +
+                    "linterName='" + linterName + '\'' +
+                    ", currentFile='" + currentFile + '\'' +
+                    ", currentCommit='" + currentCommit + '\'' +
+                    ", introductionFile='" + introductionFile + '\'' +
+                    ", introductionCommit='" + introductionCommit + '\'' +
+                    '}';
         }
     }
 }
