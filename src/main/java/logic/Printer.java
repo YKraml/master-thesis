@@ -19,6 +19,7 @@ public class Printer {
             System.out.println();
             System.out.println(next.getHtmlUrl());
             System.out.println("Something went wrong!");
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
     }

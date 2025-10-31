@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.diff.DiffFormatter;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
@@ -33,7 +32,7 @@ public class LinterIntroductionFinderTest {
     private final GitHub github = new GitHubBuilder().withOAuthToken(Main.TOKEN).build();
     private final LinterFileFinder linterFileFinder = new LinterFileFinder();
     private final LinterFolderFinder linterFolderFinder = new LinterFolderFinder(linterFileFinder);
-    private final LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinder(linterFolderFinder, github);
+    private final LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinderBinarySearch(linterFolderFinder);
 
     public LinterIntroductionFinderTest() throws IOException {
     }

@@ -42,7 +42,7 @@ public class LinterFolderFinder {
         return collector;
     }
 
-    public void listFilesInFolder(File folder, List<File> collector) {
+    private void listFilesInFolder(File folder, List<File> collector) {
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
                 listFilesInFolder(fileEntry, collector);

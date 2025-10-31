@@ -21,7 +21,7 @@ public class Main {
 
         RepositoryDownloader repositoryDownloader = new RepositoryDownloader(github);
         LinterFolderFinder linterFolderFinder = new LinterFolderFinder(new LinterFileFinder());
-        LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinder(linterFolderFinder, github);
+        LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinderDiff(linterFolderFinder);
         RepoHandler repoHandler = new RepoHandler();
 
         PagedIterator<GHRepository> repos = github.searchRepositories().language("Java").sort(GHRepositorySearchBuilder.Sort.STARS).list().iterator();

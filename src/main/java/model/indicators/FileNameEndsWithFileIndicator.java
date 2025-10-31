@@ -1,5 +1,7 @@
 package model.indicators;
 
+import org.eclipse.jgit.diff.DiffEntry;
+
 import java.io.File;
 
 public class FileNameEndsWithFileIndicator extends FileIndicator {
@@ -13,5 +15,10 @@ public class FileNameEndsWithFileIndicator extends FileIndicator {
     @Override
     public boolean test(File file) {
         return file.getName().endsWith(fileName);
+    }
+
+    @Override
+    public boolean test(DiffEntry.ChangeType changeType, String diffText) {
+        return diffText.contains(fileName);
     }
 }
