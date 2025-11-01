@@ -14,6 +14,7 @@ public enum Linter {
             new FileNameEndsWithAndContentContainsFileIndicator(".xml", "<module name=\"Checker\">"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "checkstyle {"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":maven-checkstyle-plugin:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'checkstyle'"),
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-checkstyle-plugin</artifactId>")
     )),
     SPOTBUGS(Language.JAVA, List.of(
@@ -22,7 +23,8 @@ public enum Linter {
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs-maven-plugin:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "\"com.github.spotbugs\""),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "spotbugs {")
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "spotbugs {"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'spotbugs'")
     )),
     FINDBUGS(Language.JAVA, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>findbugs-maven-plugin</artifactId>"),

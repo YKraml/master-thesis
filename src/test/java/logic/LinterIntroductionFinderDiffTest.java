@@ -7,15 +7,15 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
-import java.io.File;
 import java.io.IOException;
+
+import static java.io.File.separator;
 
 @Execution(ExecutionMode.CONCURRENT)
 class LinterIntroductionFinderDiffTest {
@@ -32,7 +32,7 @@ class LinterIntroductionFinderDiffTest {
     void testHaloDevHalo() throws GitAPIException, IOException {
         Git git = repositoryDownloader.getRepo("halo-dev", "halo");
         asserNumberOfLinters(git, 1);
-        assertLinterPresent(git, Linter.CHECKSTYLE, "e8db12a93dbab4e49bbff1ed136cc25357d4504d", "config" + File.separator + "checkstyle" + File.separator + "checkstyle.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "e8db12a93dbab4e49bbff1ed136cc25357d4504d", "build.gradle");
     }
 
     @Test
@@ -49,7 +49,7 @@ class LinterIntroductionFinderDiffTest {
     void testNettyNetty() throws GitAPIException, IOException {
         Git git = repositoryDownloader.getRepo("netty", "netty");
         asserNumberOfLinters(git, 1);
-        assertLinterPresent(git, Linter.CHECKSTYLE, "ebfc4513e0ba619592af3ba946bd1974d1becb55", "build" + File.separator + "pom.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "ebfc4513e0ba619592af3ba946bd1974d1becb55", "build" + separator + "pom.xml");
     }
 
     @Test
@@ -57,7 +57,7 @@ class LinterIntroductionFinderDiffTest {
         Git git = repositoryDownloader.getRepo("apache", "incubator-seata");
         asserNumberOfLinters(git, 2);
         assertLinterPresent(git, Linter.PMD, "dbc295fc6518a988f62af3730e27fb3615938ddd", "pom.xml");
-        assertLinterPresent(git, Linter.CHECKSTYLE, "85192cc816e71a852e0123333ed964f0c6c6f3b4", "style" + File.separator + "feats_checkstyle.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "85192cc816e71a852e0123333ed964f0c6c6f3b4", "style" + separator + "feats_checkstyle.xml");
     }
 
     @Test
@@ -66,14 +66,14 @@ class LinterIntroductionFinderDiffTest {
         asserNumberOfLinters(git, 3);
         assertLinterPresent(git, Linter.CHECKSTYLE, "173000394121d1f0e8a97fd4c185d4449e2bcbad", "pom.xml");
         assertLinterPresent(git, Linter.PMD, "173000394121d1f0e8a97fd4c185d4449e2bcbad", "pom.xml");
-        assertLinterPresent(git, Linter.SPOTBUGS, "fbb0a9cbf86dc908187f60e090bf62acc422f5ff", "pom.xml");
+        assertLinterPresent(git, Linter.SPOTBUGS, "fbb0a9cbf86dc908187f60e090bf62acc422f5ff", "redisson" + separator + "pom.xml");
     }
 
     @Test
     void testApacheRocketmq() throws GitAPIException, IOException {
         Git git = repositoryDownloader.getRepo("apache", "rocketmq");
         asserNumberOfLinters(git, 2);
-        assertLinterPresent(git, Linter.CHECKSTYLE, "ec5a9c9bf611631ba62f38309a7ffdabaf8f6d89", "checkstyle" + File.separator + "checkstyle.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "ec5a9c9bf611631ba62f38309a7ffdabaf8f6d89", "checkstyle" + separator + "checkstyle.xml");
         assertLinterPresent(git, Linter.SPOTBUGS, "f23fdbe016ab4b60c2dd9786016c5f4756b3db54", "pom.xml");
     }
 
@@ -82,7 +82,7 @@ class LinterIntroductionFinderDiffTest {
         Git git = repositoryDownloader.getRepo("bumptech", "glide");
         asserNumberOfLinters(git, 2);
         assertLinterPresent(git, Linter.CHECKSTYLE, "fe090f50f3040f4d478143a3e0ffa8cdf813fefc", "build.gradle");
-        assertLinterPresent(git, Linter.PMD, "42086c3cc9c9303dd7d219cd43da7426683d3a26", "library" + File.separator + "build.gradle");
+        assertLinterPresent(git, Linter.PMD, "42086c3cc9c9303dd7d219cd43da7426683d3a26", "library" + separator + "build.gradle");
     }
 
     @Test
@@ -105,7 +105,7 @@ class LinterIntroductionFinderDiffTest {
     void testNetflixZuul() throws GitAPIException, IOException {
         Git git = repositoryDownloader.getRepo("Netflix", "zuul");
         asserNumberOfLinters(git, 1);
-        assertLinterPresent(git, Linter.CHECKSTYLE, "697fd66aae9beed107e13f49a741455f1d9d8dd9", "codequality" + File.separator + "checkstyle.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "697fd66aae9beed107e13f49a741455f1d9d8dd9", "codequality" + separator + "checkstyle.xml");
     }
 
 
@@ -113,8 +113,8 @@ class LinterIntroductionFinderDiffTest {
     void testAlibabaNacos() throws GitAPIException, IOException {
         Git git = repositoryDownloader.getRepo("alibaba", "nacos");
         asserNumberOfLinters(git, 3);
-        assertLinterPresent(git, Linter.CHECKSTYLE, "7c4cca4360284344d9194c0d0f76edca02a5ba9c", "style" + File.separator + "NacosCheckStyle.xml");
-        assertLinterPresent(git, Linter.SPOTBUGS, "b16b90048a23225cd72bd7df8223c413daf27d78", "address" + File.separator + "pom.xml");
+        assertLinterPresent(git, Linter.CHECKSTYLE, "7c4cca4360284344d9194c0d0f76edca02a5ba9c", "style" + separator + "NacosCheckStyle.xml");
+        assertLinterPresent(git, Linter.SPOTBUGS, "b16b90048a23225cd72bd7df8223c413daf27d78", "address" + separator + "pom.xml");
         assertLinterPresent(git, Linter.PMD, "91d20f34fdec6b77b0b27c874983ca57a2feb584", "pom.xml");
     }
 
@@ -136,11 +136,21 @@ class LinterIntroductionFinderDiffTest {
         assertLinterPresent(git, Linter.PMD, "36cacf799487075af4b28a1db55acd0aa45ba2f8", "pom.xml");
     }
 
+    @Test
+    void testRealmRealmJava() throws GitAPIException, IOException {
+        Git git = repositoryDownloader.getRepo("realm", "realm-java");
+        asserNumberOfLinters(git, 4);
+        assertLinterPresent(git, Linter.CHECKSTYLE, "d9f5c8fc0b6f0d3788769d1100220fc07719ab9e", "realm" + separator + "build.gradle");
+        assertLinterPresent(git, Linter.SPOTBUGS, "4aa94b1cde481d5d42c81ce0bf1ee7a170aa2636", "realm" + separator + "realm-library" + separator + "build.gradle");
+        assertLinterPresent(git, Linter.FINDBUGS, "876bac7df960ad8535a01c1c64228ccc806d6fe2", "realm" + separator + "build.gradle");
+        assertLinterPresent(git, Linter.PMD, "eb041c8a486b6cd3031752ff6b2d048320b1c330", "realm" + separator + "realm-library" + separator + "build.gradle");
+    }
+
 
     private void assertLinterPresent(Git git, Linter linter, String commitName, String fileName) throws IOException, GitAPIException {
         Pair<RevCommit, String> introduction = linterIntroductionFinderDiff.findIntroductionCommitWithProof(git, linter);
         Assertions.assertEquals(commitName, introduction.getLeft().getName());
-        Assertions.assertTrue(introduction.getRight().endsWith(fileName));
+        Assertions.assertEquals(fileName, introduction.getRight());
     }
 
     private void asserNumberOfLinters(Git git, int expected) {

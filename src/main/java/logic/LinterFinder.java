@@ -28,7 +28,7 @@ public class LinterFinder {
 
     private void searchForLinter(File folder, Linter linter, List<Result> linters) {
         for (File file : getFilesInFolder(folder)) {
-            Optional<Result> result = searchForLinter(file, linter);
+            Optional<Result> result = searchForLinter(folder, file, linter);
             if (result.isPresent()) {
                 linters.add(result.get());
                 return;
@@ -36,7 +36,7 @@ public class LinterFinder {
         }
     }
 
-    public Optional<Result> searchForLinter(File file, Linter linter) {
+    public Optional<Result> searchForLinter(File folder, File file, Linter linter) {
 
         for (FileIndicator fileIndicator : linter.getIndicators()) {
             boolean test;
@@ -47,7 +47,7 @@ public class LinterFinder {
             }
 
             if (test) {
-                return Optional.of(new Result(file.getPath(), linter.name()));
+                return Optional.of(new Result(folder.toPath().relativize(file.toPath()).toString(), linter.name()));
             }
         }
 

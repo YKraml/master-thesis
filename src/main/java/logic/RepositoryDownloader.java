@@ -10,10 +10,12 @@ import util.GitUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.Semaphore;
 
 public class RepositoryDownloader {
 
     private final GitHub github;
+    private static final Semaphore semaphore = new Semaphore(4);
 
     public RepositoryDownloader(GitHub github) {
         this.github = github;
@@ -46,13 +48,20 @@ public class RepositoryDownloader {
 
     }
 
-    private synchronized Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
-        File folder = new File(folderName);
-        FileUtils.deleteDirectory(folder);
+    private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
+        try {
+            semaphore.acquire();
+            File folder = new File(folderName);
+            FileUtils.deleteDirectory(folder);
 
-        System.out.println("Start cloning: " + owner + "/" + repoName);
-        Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
-        System.out.println("End cloning: " + owner + "/" + repoName);
-        return git;
+            System.out.println("Start cloning: " + owner + "/" + repoName);
+            Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
+            System.out.println("End cloning: " + owner + "/" + repoName);
+            return git;
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } finally {
+            semaphore.release();
+        }
     }
 }
