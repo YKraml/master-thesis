@@ -6,9 +6,9 @@ import model.Linter;
 import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.kohsuke.github.GHRepository;
+import util.Printer;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class RepoHandler {
     public static final int SIZE_1 = 1000 * 1000; // 1 GB
     public static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
 
-    public void handleRepo(GHRepository repo, RepositoryDownloader repositoryDownloader, LinterFolderFinder linterFolderFinder, LinterIntroductionFinder linterIntroductionFinder) throws Exception {
+    public void handleRepo(GHRepository repo, RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder) throws Exception {
         String ownerName = repo.getOwnerName();
         String repoName = repo.getName();
 
@@ -54,12 +54,12 @@ public class RepoHandler {
                 return;
             }
 
-            List<LinterFileFinder.Result> linters = linterFolderFinder.findLinters(folder);
+            List<LinterFinder.Result> linters = linterFinder.findLinters(folder);
             String currentCommit = git.getRepository().getBranch();
 
             List<Result.LinterWithProof> linterss = new ArrayList<>();
-            for (LinterFileFinder.Result linter : linters) {
-                Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroduction(git, Linter.valueOf(linter.linterName()));
+            for (LinterFinder.Result linter : linters) {
+                Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
                 linterss.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), currentCommit, introduction.getKey().getName(), introduction.getValue()));
             }
             Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), linterss);

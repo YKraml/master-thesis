@@ -1,7 +1,9 @@
-package logic;
+package main;
 
+import logic.*;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.kohsuke.github.*;
+import util.Printer;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
@@ -20,8 +22,8 @@ public class Main {
         System.out.printf("Remaining: %s%n", github.getRateLimit().getCore().getLimit());
 
         RepositoryDownloader repositoryDownloader = new RepositoryDownloader(github);
-        LinterFolderFinder linterFolderFinder = new LinterFolderFinder(new LinterFileFinder());
-        LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinderDiff(linterFolderFinder);
+        LinterFinder linterFinder = new LinterFinder();
+        LinterIntroductionFinder linterIntroductionFinder = new LinterIntroductionFinderDiff(linterFinder);
         RepoHandler repoHandler = new RepoHandler();
 
         PagedIterator<GHRepository> repos = github.searchRepositories().language("Java").sort(GHRepositorySearchBuilder.Sort.STARS).list().iterator();
@@ -33,7 +35,7 @@ public class Main {
             }
 
             try {
-                repoHandler.handleRepo(next, repositoryDownloader, linterFolderFinder, linterIntroductionFinder);
+                repoHandler.handleRepo(next, repositoryDownloader, linterFinder, linterIntroductionFinder);
             } catch (Exception e) {
                 Printer.getInstance().printError(e, next);
             }

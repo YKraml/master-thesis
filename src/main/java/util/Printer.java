@@ -1,4 +1,4 @@
-package logic;
+package util;
 
 import model.Result;
 import org.kohsuke.github.GHRepository;

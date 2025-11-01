@@ -6,6 +6,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.kohsuke.github.GitHub;
+import util.GitUtil;
 
 import java.io.File;
 import java.io.IOException;

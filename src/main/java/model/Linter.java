@@ -10,19 +10,25 @@ import java.util.List;
 public enum Linter {
 
     CHECKSTYLE(Language.JAVA, List.of(
-            new FileNameEndsWithFileIndicator("checkstyle.xml")
+            new FileNameEndsWithFileIndicator("checkstyle.xml"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".xml", "<module name=\"Checker\">"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "checkstyle {"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":maven-checkstyle-plugin:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-checkstyle-plugin</artifactId>")
     )),
     SPOTBUGS(Language.JAVA, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs-maven-plugin</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs-maven-plugin:"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "\"com.github.spotbugs\"")
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "\"com.github.spotbugs\""),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "spotbugs {")
     )),
     FINDBUGS(Language.JAVA, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>findbugs-maven-plugin</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":findbugs-maven-plugin:"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'findbugs'")
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'findbugs'"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "findbugs {")
     )),
     PMD(Language.JAVA, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-pmd-plugin</artifactId>"),

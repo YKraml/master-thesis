@@ -2,22 +2,22 @@ package logic;
 
 import model.Language;
 import model.Linter;
+import model.indicators.FileIndicator;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class LinterFolderFinder {
+public class LinterFinder {
 
-    private final LinterFileFinder linterFileFinder;
 
-    public LinterFolderFinder(LinterFileFinder linterFileFinder) {
-        this.linterFileFinder = linterFileFinder;
+    public LinterFinder() {
     }
 
-    public List<LinterFileFinder.Result> findLinters(File folder) {
-        List<LinterFileFinder.Result> linters = new ArrayList<>();
+    public List<Result> findLinters(File folder) {
+        List<Result> linters = new ArrayList<>();
 
         for (Linter linter : Linter.getLinterOfLanguage(Language.JAVA)) {
             searchForLinter(folder, linter, linters);
@@ -26,15 +26,34 @@ public class LinterFolderFinder {
         return linters;
     }
 
-    private void searchForLinter(File folder, Linter linter, List<LinterFileFinder.Result> linters) {
+    private void searchForLinter(File folder, Linter linter, List<Result> linters) {
         for (File file : getFilesInFolder(folder)) {
-            Optional<LinterFileFinder.Result> result = linterFileFinder.searchForLinter(file, linter);
+            Optional<Result> result = searchForLinter(file, linter);
             if (result.isPresent()) {
                 linters.add(result.get());
                 return;
             }
         }
     }
+
+    public Optional<Result> searchForLinter(File file, Linter linter) {
+
+        for (FileIndicator fileIndicator : linter.getIndicators()) {
+            boolean test;
+            try {
+                test = fileIndicator.test(file);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            if (test) {
+                return Optional.of(new Result(file.getPath(), linter.name()));
+            }
+        }
+
+        return Optional.empty();
+    }
+
 
     private List<File> getFilesInFolder(File folder) {
         List<File> collector = new ArrayList<>();
@@ -50,5 +69,8 @@ public class LinterFolderFinder {
                 collector.add(fileEntry);
             }
         }
+    }
+
+    public record Result(String fileName, String linterName) {
     }
 }
