@@ -17,6 +17,7 @@ import org.eclipse.jgit.util.io.DisabledOutputStream;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -37,17 +38,17 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
         topologicalLog.forEach(commits::add);
         commits = commits.reversed();
 
-        DiffFormatter diffFormatter = new DiffFormatter(DisabledOutputStream.INSTANCE);
+        DiffFormatter formatter1 = new DiffFormatter(DisabledOutputStream.INSTANCE);
         Repository repository = git.getRepository();
-        diffFormatter.setRepository(repository);
+        formatter1.setRepository(repository);
 
         RevCommit commitThatIntroducedLinter = null;
         String fileName = null;
+
+        int i = 0;
         outer:
         //Go through all commits
         for (RevCommit commit : commits) {
-
-
             ObjectReader reader = repository.newObjectReader();
             AbstractTreeIterator oldTreeIter;
             if (commit.getParentCount() == 0) {
@@ -58,22 +59,21 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
                 ((CanonicalTreeParser) oldTreeIter).reset(reader, parent.getTree());
             }
 
-
             CanonicalTreeParser newTreeIter = new CanonicalTreeParser();
             newTreeIter.reset(reader, commit.getTree());
 
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            DiffFormatter formatter = new DiffFormatter(outputStream);
-            formatter.setRepository(repository);
-
             //Go through all diff entries (one entry per file)
-            for (DiffEntry entry : diffFormatter.scan(oldTreeIter, newTreeIter)) {
-                formatter.format(entry);
-                String diffText = outputStream.toString("UTF-8");
-
+            for (DiffEntry entry : formatter1.scan(oldTreeIter, newTreeIter)) {
+                i++;
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                DiffFormatter formatter2 = new DiffFormatter(outputStream);
+                formatter2.setRepository(repository);
+                formatter2.format(entry);
+                String diffText = outputStream.toString(StandardCharsets.UTF_8);
 
                 //Go through all indicators of linter
                 for (FileIndicator indicator : linter.getIndicators()) {
+
                     boolean test = indicator.test(entry.getChangeType(), diffText);
                     if (test) {
                         Optional<String> fileNameOptional = searchLinterInRepo(git, linter, commit.getName(), linterFolderFinder);
@@ -94,6 +94,9 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
         if (commitThatIntroducedLinter == null) {
             throw new RuntimeException("Linter introduction not found");
         }
+
+        GitUtil.prepareCheckout(git);
+        git.checkout().setName(commits.getLast().getName()).call();
 
         return Pair.of(commitThatIntroducedLinter, fileName);
     }

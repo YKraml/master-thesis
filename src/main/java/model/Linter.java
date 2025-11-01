@@ -1,8 +1,8 @@
 package model;
 
+import model.indicators.FileIndicator;
 import model.indicators.FileNameEndsWithAndContentContainsFileIndicator;
 import model.indicators.FileNameEndsWithFileIndicator;
-import model.indicators.FileIndicator;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,16 +13,21 @@ public enum Linter {
             new FileNameEndsWithFileIndicator("checkstyle.xml")
     )),
     SPOTBUGS(Language.JAVA, List.of(
-            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml","spotbugs"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle","spotbugs")
+            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs</artifactId>"),
+            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs-maven-plugin</artifactId>"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs-maven-plugin:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "\"com.github.spotbugs\"")
     )),
     FINDBUGS(Language.JAVA, List.of(
-            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml","findbugs"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle","findbugs")
+            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>findbugs-maven-plugin</artifactId>"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":findbugs-maven-plugin:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'findbugs'")
     )),
     PMD(Language.JAVA, List.of(
-            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml","maven-pmd-plugin"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle","maven-pmd-plugin")
+            new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-pmd-plugin</artifactId>"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":maven-pmd-plugin:"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'pmd'")
     ));
 
 
