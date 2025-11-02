@@ -19,6 +19,7 @@ import util.GitUtil;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.MalformedInputException;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.List;
@@ -63,34 +64,49 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
     }
 
     private Optional<Pair<RevCommit, String>> checkDiffWithIndicators(Git git, Linter linter, RevCommit commit, DiffEntry diff) throws IOException, GitAPIException {
-        String diffText = getDiffText(git, diff);
+        Optional<String> diffText = getDiffText(git, diff);
+        if (diffText.isEmpty()) {
+            return Optional.empty();
+        }
+
         for (FileIndicator indicator : linter.getIndicators()) {
-            if (indicator.test(diff.getChangeType(), diffText)) {
+            if (indicator.test(diff.getChangeType(), diffText.get())) {
                 Optional<String> fileNameOptional = searchLinterInRepo(git, linter, commit.getName(), linterFinder);
                 if (fileNameOptional.isPresent()) {
                     return Optional.of(Pair.of(commit, fileNameOptional.get()));
                 }
             }
         }
+
         return Optional.empty();
     }
 
-    private static String getDiffText(Git git, DiffEntry entry) throws IOException {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        DiffFormatter formatter = new DiffFormatter(outputStream);
-        formatter.setRepository(git.getRepository());
-        formatter.format(entry);
-        return outputStream.toString(StandardCharsets.ISO_8859_1);
+    private static Optional<String> getDiffText(Git git, DiffEntry entry) throws IOException {
+        try {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            DiffFormatter formatter = new DiffFormatter(outputStream);
+            formatter.setRepository(git.getRepository());
+            formatter.format(entry);
+            return Optional.of(outputStream.toString(StandardCharsets.ISO_8859_1));
+        } catch (MalformedInputException e) {
+            System.out.println("Malformed diff");
+            return Optional.empty();
+        }
     }
 
     private static List<DiffEntry> getCommitDiffs(Git git, RevCommit commit) throws IOException {
-        Repository repository = git.getRepository();
-        DiffFormatter formatter = new DiffFormatter(DisabledOutputStream.INSTANCE);
-        formatter.setRepository(repository);
-        ObjectReader reader = repository.newObjectReader();
-        AbstractTreeIterator oldTreeIterator = getOldTreeIterator(commit, reader);
-        CanonicalTreeParser newTreeIterator = getNewCommitIterator(commit, reader);
-        return formatter.scan(oldTreeIterator, newTreeIterator);
+        try {
+            Repository repository = git.getRepository();
+            DiffFormatter formatter = new DiffFormatter(DisabledOutputStream.INSTANCE);
+            formatter.setRepository(repository);
+            ObjectReader reader = repository.newObjectReader();
+            AbstractTreeIterator oldTreeIterator = getOldTreeIterator(commit, reader);
+            CanonicalTreeParser newTreeIterator = getNewCommitIterator(commit, reader);
+            return formatter.scan(oldTreeIterator, newTreeIterator);
+        } catch (MalformedInputException e) {
+            System.out.println("Malformed diff");
+            return List.of();
+        }
     }
 
     private static CanonicalTreeParser getNewCommitIterator(RevCommit commit, ObjectReader reader) throws IOException {
@@ -124,6 +140,4 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
 
         return Optional.empty();
     }
-
-
 }

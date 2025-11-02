@@ -29,7 +29,7 @@ public class LinterFinder {
 
     private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
         List<File> files = new ArrayList<>(FileUtils.listFiles(folder, Linter.getExtensionsOfLanguage(linter.getLanguage()), true));
-        files.sort(Comparator.comparingInt(o -> o.getAbsolutePath().length()));
+        files.sort(Comparator.comparingInt((File file) -> file.getAbsolutePath().length()).thenComparing(File::getAbsolutePath));
 
         for (File file : files) {
             Optional<Result> result = searchForLinter(folder, file, linter);
