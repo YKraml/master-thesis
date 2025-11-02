@@ -35,9 +35,7 @@ public class RepositoryDownloader {
     private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {
         File gitFile = new File(folderName + File.separator + ".git");
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
-        Git git = Git.wrap(repo);
-
-        try {
+        try (Git git = Git.wrap(repo)) {
             GitUtil.prepareCheckout(git);
             String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
             git.checkout().setName(defaultBranch).call();
@@ -55,9 +53,11 @@ public class RepositoryDownloader {
             FileUtils.deleteDirectory(folder);
 
             System.out.println("Start cloning: " + owner + "/" + repoName);
-            Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();
-            System.out.println("End cloning: " + owner + "/" + repoName);
-            return git;
+            try (Git git = Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call()) {
+                System.out.println("End cloning: " + owner + "/" + repoName);
+                return git;
+            }
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {

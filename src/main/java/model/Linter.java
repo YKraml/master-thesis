@@ -18,15 +18,15 @@ public enum Linter {
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-checkstyle-plugin</artifactId>")
     )),
     SPOTBUGS(Language.JAVA, List.of(
+            /* SpotBugs */
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>spotbugs-maven-plugin</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":spotbugs-maven-plugin:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "\"com.github.spotbugs\""),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "spotbugs {"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'spotbugs'")
-    )),
-    FINDBUGS(Language.JAVA, List.of(
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'spotbugs'"),
+            /* FindBugs*/
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>findbugs-maven-plugin</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":findbugs-maven-plugin:"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'findbugs'"),
@@ -35,7 +35,8 @@ public enum Linter {
     PMD(Language.JAVA, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator("pom.xml", "<artifactId>maven-pmd-plugin</artifactId>"),
             new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", ":maven-pmd-plugin:"),
-            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'pmd'")
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "'pmd'"),
+            new FileNameEndsWithAndContentContainsFileIndicator("build.gradle", "pmd {")
     ));
 
 
@@ -47,9 +48,6 @@ public enum Linter {
         this.fileIndicators = fileIndicators;
     }
 
-    public static List<Linter> getLinterOfLanguage(Language language) {
-        return Arrays.stream(Linter.values()).filter(linter -> linter.language.equals(language)).toList();
-    }
 
     public Language getLanguage() {
         return language;
@@ -57,5 +55,18 @@ public enum Linter {
 
     public List<FileIndicator> getIndicators() {
         return fileIndicators;
+    }
+
+    public static List<Linter> getLinterOfLanguage(Language language) {
+        return Arrays.stream(Linter.values()).filter(linter -> linter.language.equals(language)).toList();
+    }
+
+    public static String[] getExtensionsOfLanguage(Language language) {
+        switch (language) {
+            case JAVA -> {
+                return new String[]{".xml", ".gradle"};
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + language);
+        }
     }
 }

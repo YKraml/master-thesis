@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Language;
 import model.Linter;
 import model.Result;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.revwalk.RevCommit;
@@ -41,14 +42,11 @@ public class RepoHandler {
         }
 
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
-
             File folder = git.getRepository().getDirectory().getParentFile();
-            long size = Files.walk(folder.toPath())
-                    .filter(p -> p.toFile().isFile())
-                    .mapToLong(p -> p.toFile().length())
-                    .sum();
+
 
             //Limit at 0.5GB. The getSize() is not very accurate.
+            long size = FileUtils.sizeOfDirectory(folder);
             if (size > SIZE_2) {
                 Printer.getInstance().printFolderTooLarge(ownerName, repoName, size);
                 return;
@@ -65,7 +63,6 @@ public class RepoHandler {
             Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), linterss);
 
             writeResult(proofFile, result);
-
         }
     }
 

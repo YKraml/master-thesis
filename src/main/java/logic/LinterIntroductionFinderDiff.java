@@ -111,7 +111,7 @@ public class LinterIntroductionFinderDiff implements LinterIntroductionFinder {
         return oldTreeIterator;
     }
 
-    private Optional<String> searchLinterInRepo(Git git, Linter linter, String commitName, LinterFinder linterFinder) throws GitAPIException {
+    private Optional<String> searchLinterInRepo(Git git, Linter linter, String commitName, LinterFinder linterFinder) throws GitAPIException, IOException {
         GitUtil.prepareCheckout(git);
         git.checkout().setName(commitName).call();
 

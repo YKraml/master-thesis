@@ -3,6 +3,7 @@ package logic;
 import model.Language;
 import model.Linter;
 import model.indicators.FileIndicator;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class LinterFinder {
     public LinterFinder() {
     }
 
-    public List<Result> findLinters(File folder) {
+    public List<Result> findLinters(File folder) throws IOException {
         List<Result> linters = new ArrayList<>();
 
         for (Linter linter : Linter.getLinterOfLanguage(Language.JAVA)) {
@@ -26,8 +27,8 @@ public class LinterFinder {
         return linters;
     }
 
-    private void searchForLinter(File folder, Linter linter, List<Result> linters) {
-        for (File file : getFilesInFolder(folder)) {
+    private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
+        for (File file : FileUtils.listFiles(folder, Linter.getExtensionsOfLanguage(linter.getLanguage()), true)) {
             Optional<Result> result = searchForLinter(folder, file, linter);
             if (result.isPresent()) {
                 linters.add(result.get());
@@ -36,40 +37,15 @@ public class LinterFinder {
         }
     }
 
-    public Optional<Result> searchForLinter(File folder, File file, Linter linter) {
-
+    public Optional<Result> searchForLinter(File folder, File file, Linter linter) throws IOException {
         for (FileIndicator fileIndicator : linter.getIndicators()) {
-            boolean test;
-            try {
-                test = fileIndicator.test(file);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            if (test) {
+            if (fileIndicator.test(file)) {
                 return Optional.of(new Result(folder.toPath().relativize(file.toPath()).toString(), linter.name()));
             }
         }
-
         return Optional.empty();
     }
 
-
-    private List<File> getFilesInFolder(File folder) {
-        List<File> collector = new ArrayList<>();
-        listFilesInFolder(folder, collector);
-        return collector;
-    }
-
-    private void listFilesInFolder(File folder, List<File> collector) {
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                listFilesInFolder(fileEntry, collector);
-            } else {
-                collector.add(fileEntry);
-            }
-        }
-    }
 
     public record Result(String fileName, String linterName) {
     }
