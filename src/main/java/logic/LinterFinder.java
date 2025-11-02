@@ -8,11 +8,11 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
 public class LinterFinder {
-
 
     public LinterFinder() {
     }
@@ -28,7 +28,10 @@ public class LinterFinder {
     }
 
     private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
-        for (File file : FileUtils.listFiles(folder, Linter.getExtensionsOfLanguage(linter.getLanguage()), true)) {
+        List<File> files = new ArrayList<>(FileUtils.listFiles(folder, Linter.getExtensionsOfLanguage(linter.getLanguage()), true));
+        files.sort(Comparator.comparingInt(o -> o.getAbsolutePath().length()));
+
+        for (File file : files) {
             Optional<Result> result = searchForLinter(folder, file, linter);
             if (result.isPresent()) {
                 linters.add(result.get());
@@ -45,7 +48,6 @@ public class LinterFinder {
         }
         return Optional.empty();
     }
-
 
     public record Result(String fileName, String linterName) {
     }

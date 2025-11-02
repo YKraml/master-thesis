@@ -41,7 +41,7 @@ class LinterIntroductionFinderDiffTest {
         Git git = repositoryDownloader.getRepo("TheAlgorithms", "Java");
         Assertions.assertAll(
                 () -> asserNumberOfLinters(git, 3),
-                () -> assertLinterPresent(git, Linter.CHECKSTYLE, "7a42f68b66dfc7a53d67125f9685a2db0a5e2dd9", "checkstyle.xml"),
+                () -> assertLinterPresent(git, Linter.CHECKSTYLE, "7a42f68b66dfc7a53d67125f9685a2db0a5e2dd9", "pom.xml"),
                 () -> assertLinterPresent(git, Linter.SPOTBUGS, "4bb64559deb6722069678aaa910f7379645d5a7b", "pom.xml"),
                 () -> assertLinterPresent(git, Linter.PMD, "cb401fed69258f3ccc0484ccd9f588c10af0dd32", "pom.xml")
         );
