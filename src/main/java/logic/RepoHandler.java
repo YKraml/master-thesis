@@ -49,12 +49,13 @@ public class RepoHandler {
             State.getInstance().addToState(Pair.of(ownerName, repoName), "Searching for linter");
             List<LinterFinder.Result> linters = linterFinder.findLinters(folder);
             String currentCommit = git.getRepository().getBranch();
+            int currentCommitTime = git.log().call().iterator().next().getCommitTime();
 
             List<Result.LinterWithProof> linterss = new ArrayList<>();
             for (LinterFinder.Result linter : linters) {
                 State.getInstance().addToState(Pair.of(ownerName, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
-                linterss.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), currentCommit, introduction.getKey().getName(), introduction.getValue()));
+                linterss.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), currentCommit, currentCommitTime, introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
             Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), linterss);
 

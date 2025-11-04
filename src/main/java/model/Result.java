@@ -43,15 +43,19 @@ public class Result {
         private final String linterName;
         private final String currentFile;
         private final String currentCommit;
+        private final int currentTime;
         private final String introductionFile;
         private final String introductionCommit;
+        private final int introductionTime;
 
-        public LinterWithProof(String linterName, String currentFile, String commit, String introductionCommit, String introductionFile) {
+        public LinterWithProof(String linterName, String currentFile, String commit, int currentTime, String introductionCommit, String introductionFile, int introductionTime) {
             this.linterName = linterName;
             this.currentFile = currentFile;
             this.currentCommit = commit;
+            this.currentTime = currentTime;
             this.introductionCommit = introductionCommit;
             this.introductionFile = introductionFile;
+            this.introductionTime = introductionTime;
         }
 
         public String getLinterName() {
@@ -74,15 +78,12 @@ public class Result {
             return introductionFile;
         }
 
-        @Override
-        public String toString() {
-            return "LinterWithProof{" +
-                    "linterName='" + linterName + '\'' +
-                    ", currentFile='" + currentFile + '\'' +
-                    ", currentCommit='" + currentCommit + '\'' +
-                    ", introductionFile='" + introductionFile + '\'' +
-                    ", introductionCommit='" + introductionCommit + '\'' +
-                    '}';
+        public int getCurrentTime() {
+            return currentTime;
+        }
+
+        public int getIntroductionTime() {
+            return introductionTime;
         }
     }
 }
