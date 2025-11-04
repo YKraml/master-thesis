@@ -121,7 +121,7 @@ class LinterIntroductionFinderDiffTest {
         Git git = repositoryDownloader.getRepo("Netflix", "zuul");
         Assertions.assertAll(
                 () -> asserNumberOfLinters(git, 1),
-                () -> assertLinterPresent(git, Linter.CHECKSTYLE, "697fd66aae9beed107e13f49a741455f1d9d8dd9", "codequality/checkstyle.xml")
+                () -> assertLinterPresent(git, Linter.CHECKSTYLE, "697fd66aae9beed107e13f49a741455f1d9d8dd9", "gradle/check.gradle")
         );
     }
 
