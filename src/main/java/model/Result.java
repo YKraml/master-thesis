@@ -8,13 +8,15 @@ public class Result {
     private final String repoName;
     private final Language language;
     private final String link;
+    private final int stars;
     private final List<LinterWithProof> linters;
 
-    public Result(String repoOwner, String repoName, Language language, String link, List<LinterWithProof> linters) {
+    public Result(String repoOwner, String repoName, Language language, String link, int stars, List<LinterWithProof> linters) {
         this.repoOwner = repoOwner;
         this.repoName = repoName;
         this.language = language;
         this.link = link;
+        this.stars = stars;
         this.linters = linters;
     }
 
@@ -38,51 +40,12 @@ public class Result {
         return link;
     }
 
-    public static class LinterWithProof {
+    public int getStars() {
+        return stars;
+    }
 
-        private final String linterName;
-        private final String currentFile;
-        private final String currentCommit;
-        private final String introductionFile;
-        private final String introductionCommit;
+    public record LinterWithProof(String linterName, String currentFile, String currentCommit,
+                                  String introductionCommit, String introductionFile) {
 
-        public LinterWithProof(String linterName, String currentFile, String commit, String introductionCommit, String introductionFile) {
-            this.linterName = linterName;
-            this.currentFile = currentFile;
-            this.currentCommit = commit;
-            this.introductionCommit = introductionCommit;
-            this.introductionFile = introductionFile;
-        }
-
-        public String getLinterName() {
-            return linterName;
-        }
-
-        public String getCurrentFile() {
-            return currentFile;
-        }
-
-        public String getCurrentCommit() {
-            return currentCommit;
-        }
-
-        public String getIntroductionCommit() {
-            return introductionCommit;
-        }
-
-        public String getIntroductionFile() {
-            return introductionFile;
-        }
-
-        @Override
-        public String toString() {
-            return "LinterWithProof{" +
-                    "linterName='" + linterName + '\'' +
-                    ", currentFile='" + currentFile + '\'' +
-                    ", currentCommit='" + currentCommit + '\'' +
-                    ", introductionFile='" + introductionFile + '\'' +
-                    ", introductionCommit='" + introductionCommit + '\'' +
-                    '}';
-        }
     }
 }

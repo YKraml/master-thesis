@@ -1,5 +1,6 @@
 package logic;
 
+import jakarta.inject.Inject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
@@ -18,9 +19,12 @@ public class RepositoryDownloader {
 
     private final GitHub github;
     private static final Semaphore semaphore = new Semaphore(4);
+    private final State state;
 
-    public RepositoryDownloader(GitHub github) {
+    @Inject
+    public RepositoryDownloader(GitHub github, State state) {
         this.github = github;
+        this.state = state;
     }
 
     public Git getRepo(String owner, String repoName) throws GitAPIException, IOException {
@@ -38,9 +42,8 @@ public class RepositoryDownloader {
         File gitFile = new File(folderName + File.separator + ".git");
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         try (Git git = Git.wrap(repo)) {
-            GitUtil.prepareCheckout(git);
             String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
-            git.checkout().setName(defaultBranch).call();
+            GitUtil.checkout(git, defaultBranch);
             return git;
         } catch (Exception e) {
             return cloneRepo(owner, repoName, folderName);
@@ -49,9 +52,9 @@ public class RepositoryDownloader {
 
     private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException {
         try {
-            State.getInstance().addToState(Pair.of(owner, repoName), "Waiting for download");
+            state.addToState(Pair.of(owner, repoName), "Waiting for download");
             semaphore.acquire();
-            State.getInstance().addToState(Pair.of(owner, repoName), "Downloading");
+            state.addToState(Pair.of(owner, repoName), "Downloading");
             File folder = new File(folderName);
             deleteRepo(owner, repoName);
             return Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();

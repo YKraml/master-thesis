@@ -6,8 +6,13 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 
 public class GitUtil {
 
-    public static void prepareCheckout(Git git) throws GitAPIException {
+    private static void prepareCheckout(Git git) throws GitAPIException {
         git.clean().setForce(true).setCleanDirectories(true).call();
         git.reset().setMode(ResetCommand.ResetType.HARD).call();
+    }
+
+    public static void checkout(Git git, String commit) throws GitAPIException {
+        GitUtil.prepareCheckout(git);
+        git.checkout().setName(commit).call();
     }
 }

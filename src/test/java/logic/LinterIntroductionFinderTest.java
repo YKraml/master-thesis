@@ -1,30 +1,35 @@
 package logic;
 
-import main.Main;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import model.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.kohsuke.github.GitHub;
-import org.kohsuke.github.GitHubBuilder;
+import util.GuiceModule;
 
 import java.io.File;
 import java.io.IOException;
 
 @Execution(ExecutionMode.CONCURRENT)
-class LinterIntroductionFinderDiffTest {
+class LinterIntroductionFinderTest {
 
-    private final GitHub github = new GitHubBuilder().withOAuthToken(Main.TOKEN).build();
-    private final RepositoryDownloader repositoryDownloader = new RepositoryDownloader(github);
-    private final LinterFinder linterFinder = new LinterFinder();
-    private final LinterIntroductionFinderDiff linterIntroductionFinderDiff = new LinterIntroductionFinderDiff(linterFinder);
+    private RepositoryDownloader repositoryDownloader;
+    private LinterFinder linterFinder;
+    private LinterIntroductionFinder linterIntroductionFinder;
 
-    private LinterIntroductionFinderDiffTest() throws IOException {
+    @BeforeEach
+    void setup() {
+        Injector injector = Guice.createInjector(new GuiceModule());
+        repositoryDownloader = injector.getInstance(RepositoryDownloader.class);
+        linterFinder = injector.getInstance(LinterFinder.class);
+        linterIntroductionFinder = injector.getInstance(LinterIntroductionFinder.class);
     }
 
     @Test
@@ -212,7 +217,7 @@ class LinterIntroductionFinderDiffTest {
     }
 
     private void assertLinterPresent(Git git, Linter linter, String commitName, String fileName) throws IOException, GitAPIException {
-        Pair<RevCommit, String> introduction = linterIntroductionFinderDiff.findIntroductionCommitWithProof(git, linter);
+        Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, linter);
         Assertions.assertEquals(commitName, introduction.getLeft().getName());
         Assertions.assertEquals(fileName.replace("/", File.separator), introduction.getRight());
     }

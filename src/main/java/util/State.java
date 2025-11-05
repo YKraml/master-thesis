@@ -7,20 +7,14 @@ import java.util.*;
 
 public class State {
 
-    private static final State INSTANCE = new State();
-
     private final Map<Pair<String, String>, String> state;
     private final Map<Pair<String, String>, Integer> indices;
 
     private int index = 1;
 
-    private State() {
+    public State() {
         state = new LinkedHashMap<>();
         indices = new LinkedHashMap<>();
-    }
-
-    public static State getInstance() {
-        return INSTANCE;
     }
 
     public void addToState(Pair<String, String> key, String value) {
@@ -47,7 +41,16 @@ public class State {
         }, 1500);
     }
 
-    public void printState() {
+    public void startPrintingTimer() {
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                printState();
+            }
+        }, 1000, 1000);
+    }
+
+    private void printState() {
         synchronized (state) {
             SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss:SSS");
             String currentTime = formatter.format(new Date());

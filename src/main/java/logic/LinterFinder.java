@@ -1,5 +1,6 @@
 package logic;
 
+import jakarta.inject.Inject;
 import model.Language;
 import model.Linter;
 import model.indicators.FileIndicator;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 public class LinterFinder {
 
+    @Inject
     public LinterFinder() {
     }
 
