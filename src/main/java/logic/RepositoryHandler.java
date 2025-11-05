@@ -62,15 +62,16 @@ public class RepositoryHandler {
 
             state.addToState(Pair.of(ownerName, repoName), "Searching for linter");
             List<LinterFinder.Result> currentLinters = linterFinder.findLinters(folder);
-            String currentCommit = git.getRepository().getBranch();
+            RevCommit currentCommit = git.log().call().iterator().next();
 
             List<Result.LinterWithProof> lintersWithProof = new ArrayList<>();
             for (LinterFinder.Result linter : currentLinters) {
                 state.addToState(Pair.of(ownerName, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
-                lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), currentCommit, introduction.getKey().getName(), introduction.getValue()));
+                lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), currentCommit.getName(), linter.fileName(), currentCommit.getCommitTime(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
-            Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), repo.getStargazersCount(), lintersWithProof);
+            Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), git.getRepository().getBranch(), lintersWithProof);
+
             resultReaderWriter.writeResult(result);
         }
     }

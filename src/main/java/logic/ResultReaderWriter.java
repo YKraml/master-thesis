@@ -17,7 +17,7 @@ public class ResultReaderWriter {
     }
 
     public void writeResult(Result result) throws IOException {
-        File resultFile = getResultFile(result.getRepoOwner(), result.getRepoName());
+        File resultFile = getResultFile(result.repoOwner(), result.repoName());
         if (!resultFile.getParentFile().exists()) {
             resultFile.getParentFile().mkdirs();
         }
