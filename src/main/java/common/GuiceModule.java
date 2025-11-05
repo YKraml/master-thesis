@@ -1,7 +1,8 @@
-package util;
+package common;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
+import linter.searching.logic.State;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
@@ -14,12 +15,12 @@ public class GuiceModule implements Module {
     public void configure(Binder binder) {
 
         try {
-            binder.bind(GitHub.class).toInstance(new GitHubBuilder().withOAuthToken(Main.TOKEN).build());
+            binder.bind(GitHub.class).toInstance(new GitHubBuilder().withOAuthToken(Constants.TOKEN).build());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         binder.bind(State.class).toInstance(new State());
-        binder.bind(ExecutorService.class).toInstance(Executors.newFixedThreadPool(Main.AVAILABLE_PROCESSORS));
+        binder.bind(ExecutorService.class).toInstance(Executors.newFixedThreadPool(Constants.AVAILABLE_PROCESSORS));
     }
 }

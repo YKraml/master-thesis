@@ -1,4 +1,4 @@
-package logic;
+package linter.searching.logic;
 
 import jakarta.inject.Inject;
 import org.apache.commons.io.FileUtils;
@@ -8,8 +8,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.kohsuke.github.GitHub;
-import util.GitUtil;
-import util.State;
+import common.Constants;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +17,7 @@ import java.util.concurrent.Semaphore;
 public class RepositoryDownloader {
 
     private final GitHub github;
-    private static final Semaphore semaphore = new Semaphore(4);
+    private static final Semaphore semaphore = new Semaphore(Constants.CONCURRENT_REPO_DOWNLOADS);
     private final State state;
 
     @Inject
@@ -40,17 +39,21 @@ public class RepositoryDownloader {
 
     private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {
         File gitFile = new File(folderName + File.separator + ".git");
+        String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
+
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         try (Git git = Git.wrap(repo)) {
-            String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
+            state.addToState(Pair.of(owner, repoName), "Opening existing repo");
+
             GitUtil.checkout(git, defaultBranch);
+            git.pull();
             return git;
         } catch (Exception e) {
             return cloneRepo(owner, repoName, folderName);
         }
     }
 
-    private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException {
+    private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
         try {
             state.addToState(Pair.of(owner, repoName), "Waiting for download");
             semaphore.acquire();
@@ -65,13 +68,9 @@ public class RepositoryDownloader {
         }
     }
 
-    public void deleteRepo(String owner, String repoName) {
+    public void deleteRepo(String owner, String repoName) throws IOException {
         String folderName = "repos" + File.separator + owner + File.separator + repoName;
         File folder = new File(folderName);
-        try {
-            FileUtils.deleteDirectory(folder);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        FileUtils.deleteDirectory(folder);
     }
 }

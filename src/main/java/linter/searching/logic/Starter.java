@@ -1,14 +1,14 @@
-package util;
+package linter.searching.logic;
 
 import jakarta.inject.Inject;
-import logic.RepositoryDownloader;
-import logic.RepositoryHandler;
 import org.apache.commons.lang3.tuple.Pair;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GHRepositorySearchBuilder;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.PagedIterator;
+import common.Constants;
 
+import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
@@ -50,13 +50,17 @@ public class Starter {
                 repositoryHandler.handleRepo(repo);
             } catch (Exception e) {
                 printError(e, repo);
-                repositoryDownloader.deleteRepo(repo.getOwnerName(), repo.getName());
+                try {
+                    repositoryDownloader.deleteRepo(repo.getOwnerName(), repo.getName());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             } finally {
                 state.removeFromState(Pair.of(repo.getOwnerName(), repo.getName()));
             }
         };
 
-        for (int i = 0; i < Main.AVAILABLE_PROCESSORS; i++) {
+        for (int i = 0; i < Constants.AVAILABLE_PROCESSORS; i++) {
             submitContinuousTask(task, executorService);
         }
     }

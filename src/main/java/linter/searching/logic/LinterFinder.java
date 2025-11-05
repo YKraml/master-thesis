@@ -1,9 +1,9 @@
-package logic;
+package linter.searching.logic;
 
 import jakarta.inject.Inject;
-import model.Language;
-import model.Linter;
-import model.indicators.FileIndicator;
+import linter.searching.model.Language;
+import linter.searching.model.Linter;
+import linter.searching.model.FileIndicator;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

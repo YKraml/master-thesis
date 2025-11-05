@@ -1,8 +1,4 @@
-package model;
-
-import model.indicators.FileIndicator;
-import model.indicators.FileNameEndsWithAndContentContainsFileIndicator;
-import model.indicators.FileNameEndsWithFileIndicator;
+package linter.searching.model;
 
 import java.util.Arrays;
 import java.util.List;

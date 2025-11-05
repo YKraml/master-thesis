@@ -1,4 +1,4 @@
-package model.indicators;
+package linter.searching.model;
 
 import org.eclipse.jgit.diff.DiffEntry;
 

@@ -1,15 +1,15 @@
-package logic;
+package linter.searching.logic;
 
+import common.ResultReaderWriter;
 import jakarta.inject.Inject;
-import model.Language;
-import model.Linter;
-import model.Result;
+import linter.searching.model.Language;
+import linter.searching.model.Linter;
+import common.Result;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.kohsuke.github.GHRepository;
-import util.State;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -53,6 +53,8 @@ public class RepositoryHandler {
 
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
+            RevCommit currentCommit = git.log().call().iterator().next();
+            String currentBranch = git.getRepository().getBranch();
 
             //Limit at 0.5GB. The getSize() is not very accurate.
             long size = FileUtils.sizeOfDirectory(folder);
@@ -62,15 +64,16 @@ public class RepositoryHandler {
 
             state.addToState(Pair.of(ownerName, repoName), "Searching for linter");
             List<LinterFinder.Result> currentLinters = linterFinder.findLinters(folder);
-            RevCommit currentCommit = git.log().call().iterator().next();
 
             List<Result.LinterWithProof> lintersWithProof = new ArrayList<>();
             for (LinterFinder.Result linter : currentLinters) {
                 state.addToState(Pair.of(ownerName, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
-                lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), currentCommit.getName(), linter.fileName(), currentCommit.getCommitTime(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
+                lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
-            Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), git.getRepository().getBranch(), lintersWithProof);
+
+
+            Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof);
 
             resultReaderWriter.writeResult(result);
         }

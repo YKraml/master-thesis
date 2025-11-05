@@ -1,8 +1,7 @@
-package logic;
+package common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
-import model.Result;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

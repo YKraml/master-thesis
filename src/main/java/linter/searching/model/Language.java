@@ -1,4 +1,4 @@
-package model;
+package linter.searching.model;
 
 public enum Language {
 

@@ -1,8 +1,8 @@
-package logic;
+package linter.searching.logic;
 
 import jakarta.inject.Inject;
-import model.Linter;
-import model.indicators.FileIndicator;
+import linter.searching.model.Linter;
+import linter.searching.model.FileIndicator;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -15,7 +15,6 @@ import org.eclipse.jgit.treewalk.AbstractTreeIterator;
 import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
-import util.GitUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
