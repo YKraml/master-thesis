@@ -171,6 +171,10 @@ public class ProjectCreator {
         return List.of();
     }
 
+    private void deleteSingleProject(String project_name) {
+        //TODO
+    }
+
     private void createSingleProject(String project_name, String suffix, String defaultBranch) {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             HttpPost httppost = new HttpPost("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?skip-project-validation=false");
