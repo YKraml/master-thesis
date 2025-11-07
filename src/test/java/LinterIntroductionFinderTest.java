@@ -1,5 +1,3 @@
-package logic;
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import linter.searching.logic.LinterFinder;

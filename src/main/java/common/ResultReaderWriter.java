@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ResultReaderWriter {
 
@@ -36,5 +37,13 @@ public class ResultReaderWriter {
             list.add(new ObjectMapper().readValue(file, Result.class));
         }
         return list;
+    }
+
+    public Optional<Result> getResultOfRepo(String repoOwner, String repoName) throws IOException {
+        File proofs = new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
+        if(!proofs.exists()){
+            return Optional.empty();
+        }
+        return Optional.ofNullable(new ObjectMapper().readValue(proofs, Result.class));
     }
 }

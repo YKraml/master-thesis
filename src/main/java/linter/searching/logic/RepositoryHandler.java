@@ -1,19 +1,22 @@
 package linter.searching.logic;
 
+import common.Result;
 import common.ResultReaderWriter;
 import jakarta.inject.Inject;
 import linter.searching.model.Language;
 import linter.searching.model.Linter;
-import common.Result;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.kohsuke.github.GHRepository;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class RepositoryHandler {
 
@@ -51,6 +54,13 @@ public class RepositoryHandler {
             return;
         }
 
+        Optional<Result> result = handleRepo(ownerName, repoName);
+        if (result.isPresent()) {
+            resultReaderWriter.writeResult(result.get());
+        }
+    }
+
+    public Optional<Result> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
             RevCommit currentCommit = git.log().call().iterator().next();
@@ -59,7 +69,7 @@ public class RepositoryHandler {
             //Limit at 0.5GB. The getSize() is not very accurate.
             long size = FileUtils.sizeOfDirectory(folder);
             if (size > SIZE_2) {
-                return;
+                return Optional.empty();
             }
 
             state.addToState(Pair.of(ownerName, repoName), "Searching for linter");
@@ -72,10 +82,7 @@ public class RepositoryHandler {
                 lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
 
-
-            Result result = new Result(ownerName, repoName, Language.JAVA, repo.getHtmlUrl().toString(), currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof);
-
-            resultReaderWriter.writeResult(result);
+            return Optional.of(new Result(ownerName, repoName, Language.JAVA, "https://github.com/" + ownerName + "/" + repoName, currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof));
         }
     }
 }

@@ -142,7 +142,7 @@ public class ProjectCreator {
             HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false");
 
             // Authentication
-            addAuthTo(httpGet);
+            addAuth(httpGet);
 
             // Headers
             httpGet.setHeader("accept", "application/json");
@@ -165,10 +165,8 @@ public class ProjectCreator {
                 return List.of(new ObjectMapper().readValue(responseBody, Project[].class));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-
-        return List.of();
     }
 
     private void deleteSingleProject(String project_name) {
@@ -180,7 +178,7 @@ public class ProjectCreator {
             HttpPost httppost = new HttpPost("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?skip-project-validation=false");
 
             // Authentication
-            addAuthTo(httppost);
+            addAuth(httppost);
 
             // Headers
             httppost.setHeader("accept", "*/*");
@@ -209,7 +207,7 @@ public class ProjectCreator {
         }
     }
 
-    private static void addAuthTo(HttpRequestBase request) {
+    public static void addAuth(HttpRequestBase request) {
         String auth = "kraml:" + Constants.TEAMSCALE_ACCESS_KEY;
         byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
         String authHeader = "Basic " + new String(encodedAuth);
