@@ -6,22 +6,24 @@ import java.util.List;
 
 public class Result {
 
+    private final String repoOwner;
+    private final String repoName;
     private final List<Entry> entries;
 
     //Churns are sorted by time
-    public Result(List<FindingsChurn> churns) {
+    public Result(String repoOwner, String repoName, List<FindingsChurn> churns) {
+        this.repoOwner = repoOwner;
+        this.repoName = repoName;
         entries = new ArrayList<>();
 
         for (int i = 0; i < churns.size(); i++) {
             FindingsChurn churn = churns.get(i);
-            List<Finding> addedFindings = churn.getAddedFindings();
-            List<Finding> removedFindings = churn.getRemovedFindings();
 
             int numberOfCodeClones = 0;
             int numberOfFileSizeViolations = 0;
             int numberOfMethodLengthViolations = 0;
             int numberOfNestingDepthViolations = 0;
-            for (Finding addedFinding : addedFindings) {
+            for (Finding addedFinding : churn.getAddedFindings()) {
                 String groupName = addedFinding.getGroupName();
                 switch (groupName) {
                     case "Code Clones" -> numberOfCodeClones++;
@@ -32,7 +34,29 @@ public class Result {
                 }
             }
 
-            for (Finding removedFinding : removedFindings) {
+            for (Finding addedFinding : churn.getFindingsAddedInBranch()) {
+                String groupName = addedFinding.getGroupName();
+                switch (groupName) {
+                    case "Code Clones" -> numberOfCodeClones++;
+                    case "File Size" -> numberOfFileSizeViolations++;
+                    case "Method Length" -> numberOfMethodLengthViolations++;
+                    case "Nesting Depth" -> numberOfNestingDepthViolations++;
+                    default -> throw new IllegalStateException("Unexpected value: " + groupName);
+                }
+            }
+
+            for (Finding removedFinding : churn.getRemovedFindings()) {
+                String groupName = removedFinding.getGroupName();
+                switch (groupName) {
+                    case "Code Clones" -> numberOfCodeClones--;
+                    case "File Size" -> numberOfFileSizeViolations--;
+                    case "Method Length" -> numberOfMethodLengthViolations--;
+                    case "Nesting Depth" -> numberOfNestingDepthViolations--;
+                    default -> throw new IllegalStateException("Unexpected value: " + groupName);
+                }
+            }
+
+            for (Finding removedFinding : churn.getFindingsRemovedInBranch()) {
                 String groupName = removedFinding.getGroupName();
                 switch (groupName) {
                     case "Code Clones" -> numberOfCodeClones--;
@@ -63,6 +87,14 @@ public class Result {
 
     public List<Entry> getEntries() {
         return Collections.unmodifiableList(entries);
+    }
+
+    public String getRepoName() {
+        return repoName;
+    }
+
+    public String getRepoOwner() {
+        return repoOwner;
     }
 
     public record Entry(int time, int numberOfCodeClones, int numberOfFileSizeViolations,

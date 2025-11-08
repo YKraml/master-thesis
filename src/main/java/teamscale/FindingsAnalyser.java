@@ -58,14 +58,16 @@ public class FindingsAnalyser {
             futures.add(future);
         }
 
+
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+        System.out.println(alreadyAnalyzed.size());
 
         //Sort churns by date
         churns.sort((o1, o2) -> Math.toIntExact(o1.getCommit().getTimestamp() / 1000 - o2.getCommit().getTimestamp() / 1000));
 
         state.removeFromState(key);
 
-        return new Result(churns);
+        return new Result(repoOwner, repoName, churns);
     }
 
 }
