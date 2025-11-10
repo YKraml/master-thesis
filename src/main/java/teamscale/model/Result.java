@@ -1,4 +1,10 @@
-package teamscale.model.churn;
+package teamscale.model;
+
+import org.apache.commons.lang3.tuple.Pair;
+import teamscale.api.model.churn.Finding;
+import teamscale.api.model.churn.FindingsChurn;
+import teamscale.api.model.metrics.MetricValueDouble;
+import teamscale.api.model.metrics.Metrics;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,13 +17,19 @@ public class Result {
     private final List<Entry> entries;
 
     //Churns are sorted by time
-    public Result(String repoOwner, String repoName, List<FindingsChurn> churns) {
+    public Result(String repoOwner, String repoName, List<Pair<FindingsChurn, Metrics>> data) {
         this.repoOwner = repoOwner;
         this.repoName = repoName;
         entries = new ArrayList<>();
 
-        for (int i = 0; i < churns.size(); i++) {
-            FindingsChurn churn = churns.get(i);
+        for (int i = 0; i < data.size(); i++) {
+            FindingsChurn churn = data.get(i).getLeft();
+            Metrics metrics = data.get(i).getRight();
+
+            int sloc = -1;
+            if (metrics.getMetricValues().size() > 2) {
+                sloc = (int) ((MetricValueDouble) (metrics.getMetricValues().get(2))).getValue();
+            }
 
             int numberOfCodeClones = 0;
             int numberOfFileSizeViolations = 0;
@@ -68,21 +80,27 @@ public class Result {
             }
 
             if (entries.isEmpty()) {
-                entries.add(new Entry(Math.toIntExact(churn.getCommit().getTimestamp() / 1000), numberOfCodeClones, numberOfFileSizeViolations, numberOfMethodLengthViolations, numberOfNestingDepthViolations));
+                entries.add(new Entry(
+                        Math.toIntExact(churn.getCommit().getTimestamp() / 1000),
+                        sloc, numberOfCodeClones,
+                        numberOfFileSizeViolations,
+                        numberOfMethodLengthViolations,
+                        numberOfNestingDepthViolations));
             } else {
                 Entry beforeEntry = entries.get(i - 1);
-                entries.add(new Entry(Math.toIntExact(churn.getCommit().getTimestamp() / 1000),
+                entries.add(new Entry(
+                        Math.toIntExact(churn.getCommit().getTimestamp() / 1000),
+                        sloc,
                         beforeEntry.numberOfCodeClones + numberOfCodeClones,
                         beforeEntry.numberOfFileSizeViolations + numberOfFileSizeViolations,
                         beforeEntry.numberOfMethodLengthViolations + numberOfMethodLengthViolations,
                         beforeEntry.numberOfNestingDepthViolations + numberOfNestingDepthViolations));
             }
-
         }
     }
 
-    public void addEntry(int time, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
-        entries.add(new Entry(time, numberOfCodeClones, numberOfFileSizeViolations, numberOfMethodLengthViolations, numberOfNestingDepthViolations));
+    public void addEntry(int time, int sourceLinesOfCode, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
+        entries.add(new Entry(time, sourceLinesOfCode, numberOfCodeClones, numberOfFileSizeViolations, numberOfMethodLengthViolations, numberOfNestingDepthViolations));
     }
 
     public List<Entry> getEntries() {
@@ -97,7 +115,7 @@ public class Result {
         return repoOwner;
     }
 
-    public record Entry(int time, int numberOfCodeClones, int numberOfFileSizeViolations,
+    public record Entry(int time, int sourceLinesOfCode, int numberOfCodeClones, int numberOfFileSizeViolations,
                         int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
     }
 }

@@ -1,26 +1,29 @@
-package teamscale;
+package teamscale.api;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import common.Constants;
-import common.Result;
-import common.ResultReaderWriter;
+import common.GuiceModule;
+import common.Proof;
+import common.ProofReaderWriter;
 import jakarta.inject.Inject;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import teamscale.model.Project;
+import teamscale.api.model.project.Project;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -44,9 +47,9 @@ public class ProjectCreator {
                         "Enable branch analysis":"false",
                         "Included branches":"%s",
                         "Excluded branches":"",
-                        "Start revision":"",
+                        "Start revision":"%s",
                         "Content exclude":"",
-                        "Polling interval":"60",
+                        "Polling interval":"600",
                         "Include files stored via Git LFS":"false",
                         "Important Branches":"",
                         "Include Submodules":"false",
@@ -55,7 +58,7 @@ public class ProjectCreator {
                         "Test-code path pattern":"**/test/**, **/testFixtures/**",
                         "Test-code path exclude pattern":"",
                         "Prepend repository identifier":"false",
-                        "End revision":"",
+                        "End revision":"%s",
                         "Text filter":"",
                         "Language mapping":"",
                         "Analysis report mapping":"",
@@ -78,18 +81,10 @@ public class ProjectCreator {
                "codeScopes":[
                   {
                      "name":"default",
-                     "pathIncludes":[
-                       \s
-                     ],
-                     "pathExcludes":[
-                       \s
-                     ],
-                     "contentIncludes":[
-                       \s
-                     ],
-                     "contentExcludes":[
-                       \s
-                     ],
+                     "pathIncludes":[],
+                     "pathExcludes":[],
+                     "contentIncludes":[],
+                     "contentExcludes":[],
                      "profile":"master-thesis-analysis-profile"
                   }
                ],
@@ -106,74 +101,76 @@ public class ProjectCreator {
                ]
             }""";
 
+    private static final long MILLISECONDS_IN_YEAR = 1000L * 60L * 60L * 24L * 365L;
+
+    private final ProjectsGetter projectsGetter;
+
     @Inject
-    public ProjectCreator() {
+    public ProjectCreator(ProjectsGetter projectsGetter) {
+        this.projectsGetter = projectsGetter;
+    }
+
+    public static void main(String[] args) throws IOException {
+        Injector injector = Guice.createInjector(new GuiceModule());
+        ProjectCreator projectCreator = injector.getInstance(ProjectCreator.class);
+        projectCreator.createAllProjects();
     }
 
     public void createAllProjects() throws IOException {
-        List<Result> results = new ResultReaderWriter().readAllResults();
+        List<Proof> proofs = new ProofReaderWriter().readAllResults();
 
-        List<Project> existingProjects = getExistingProjects();
+        List<Project> existingProjects = projectsGetter.getExistingProjects();
         Set<String> existingProjectNames = existingProjects.stream().map(Project::getName).collect(Collectors.toSet());
 
-        for (Result result : results) {
-            if (result.linters().isEmpty()) {
+        for (Proof proof : proofs) {
+            if (proof.linters().isEmpty()) {
                 continue;
             }
 
-            String projectName = result.repoOwner() + "." + result.repoName();
-            String suffix = result.repoOwner() + "/" + result.repoName();
-            String defaultBranch = result.defaultBranch();
-
             System.out.println();
-            if (existingProjectNames.contains(projectName)) {
-                System.out.println("Skipped " + result.link());
+            if (existingProjectNames.contains(proof.repoOwner() + "." + proof.repoName())) {
+                System.out.println("Skipped " + proof.link());
             } else {
-                System.out.println("Create: " + result.link());
-                createSingleProject(projectName, suffix, defaultBranch);
+                System.out.println("Create: " + proof.link());
+                createProjectWithProof(proof);
                 System.out.println("Finished creation");
             }
         }
     }
 
-    public List<Project> getExistingProjects() {
+    private void createProjectWithProof(Proof proof) {
+        long startTime = 1767222000000L; // 2026-01-01
+        long endTime = 946681200000L; //2000-01-01
+        for (Proof.LinterWithProof linter : proof.linters()) {
+            long introductionTime = linter.introductionTime() * 1000L;
 
-        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false");
-
-            // Authentication
-            addAuth(httpGet);
-
-            // Headers
-            httpGet.setHeader("accept", "application/json");
-
-            // Execute the POST request
-            try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
-                int statusCode = response.getStatusLine().getStatusCode();
-                System.out.println("Response Code: " + statusCode);
-
-                HttpEntity entity = response.getEntity();
-                if (entity == null) {
-                    throw new IOException("Empty response entity");
-                }
-
-                String responseBody;
-                try (InputStream contentStream = entity.getContent()) {
-                    responseBody = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
-                }
-
-                return List.of(new ObjectMapper().readValue(responseBody, Project[].class));
+            long start = introductionTime - MILLISECONDS_IN_YEAR;
+            if (start < startTime) {
+                startTime = start;
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+
+            long end = introductionTime + MILLISECONDS_IN_YEAR;
+            if (end > endTime) {
+                endTime = end;
+            }
         }
+
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.setTimeInMillis(startTime);
+        String startData = formatter.format(calendar.getTime());
+
+        calendar.setTimeInMillis(endTime);
+        String endDate = formatter.format(calendar.getTime());
+
+        createSingleProject(proof.repoOwner(), proof.repoName(), proof.defaultBranch(), startData, endDate);
     }
 
-    private void deleteSingleProject(String project_name) {
-        //TODO
-    }
+    private void createSingleProject(String repoOwner, String repoName, String defaultBranch, String startData, String endDate) {
+        String suffix = repoOwner + "/" + repoName;
+        String projectName = repoOwner + "." + repoName;
 
-    private void createSingleProject(String project_name, String suffix, String defaultBranch) {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             HttpPost httppost = new HttpPost("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?skip-project-validation=false");
 
@@ -185,7 +182,7 @@ public class ProjectCreator {
             httppost.setHeader("Content-Type", "application/json");
 
             // Body
-            String request = REQUEST.formatted(project_name, suffix, defaultBranch, defaultBranch, project_name);
+            String request = REQUEST.formatted(projectName, suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
             StringEntity requestEntity = new StringEntity(request, StandardCharsets.UTF_8);
             httppost.setEntity(requestEntity);
 

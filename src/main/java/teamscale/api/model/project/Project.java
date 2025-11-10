@@ -1,4 +1,4 @@
-package teamscale.model;
+package teamscale.api.model.project;
 
 import com.fasterxml.jackson.annotation.*;
 import jakarta.annotation.Generated;

@@ -1,4 +1,4 @@
-package teamscale.model.churn;
+package teamscale.api.model.churn;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

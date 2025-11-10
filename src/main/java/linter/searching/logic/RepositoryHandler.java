@@ -1,7 +1,7 @@
 package linter.searching.logic;
 
-import common.Result;
-import common.ResultReaderWriter;
+import common.Proof;
+import common.ProofReaderWriter;
 import jakarta.inject.Inject;
 import linter.searching.model.Language;
 import linter.searching.model.Linter;
@@ -26,15 +26,15 @@ public class RepositoryHandler {
     private final RepositoryDownloader repositoryDownloader;
     private final LinterFinder linterFinder;
     private final LinterIntroductionFinder linterIntroductionFinder;
-    private final ResultReaderWriter resultReaderWriter;
+    private final ProofReaderWriter proofReaderWriter;
     private final State state;
 
     @Inject
-    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ResultReaderWriter resultReaderWriter, State state) {
+    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state) {
         this.repositoryDownloader = repositoryDownloader;
         this.linterFinder = linterFinder;
         this.linterIntroductionFinder = linterIntroductionFinder;
-        this.resultReaderWriter = resultReaderWriter;
+        this.proofReaderWriter = proofReaderWriter;
         this.state = state;
     }
 
@@ -49,18 +49,18 @@ public class RepositoryHandler {
         }
 
         //Skip if already analysed
-        File proofFile = resultReaderWriter.getResultFile(ownerName, repoName);
+        File proofFile = proofReaderWriter.getResultFile(ownerName, repoName);
         if (proofFile.exists()) {
             return;
         }
 
-        Optional<Result> result = handleRepo(ownerName, repoName);
+        Optional<Proof> result = handleRepo(ownerName, repoName);
         if (result.isPresent()) {
-            resultReaderWriter.writeResult(result.get());
+            proofReaderWriter.writeResult(result.get());
         }
     }
 
-    public Optional<Result> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
+    public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
             RevCommit currentCommit = git.log().call().iterator().next();
@@ -75,14 +75,14 @@ public class RepositoryHandler {
             state.addToState(Pair.of(ownerName, repoName), "Searching for linter");
             List<LinterFinder.Result> currentLinters = linterFinder.findLinters(folder);
 
-            List<Result.LinterWithProof> lintersWithProof = new ArrayList<>();
+            List<Proof.LinterWithProof> lintersWithProof = new ArrayList<>();
             for (LinterFinder.Result linter : currentLinters) {
                 state.addToState(Pair.of(ownerName, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
-                lintersWithProof.add(new Result.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
+                lintersWithProof.add(new Proof.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
 
-            return Optional.of(new Result(ownerName, repoName, Language.JAVA, "https://github.com/" + ownerName + "/" + repoName, currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof));
+            return Optional.of(new Proof(ownerName, repoName, Language.JAVA, "https://github.com/" + ownerName + "/" + repoName, currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof));
         }
     }
 }

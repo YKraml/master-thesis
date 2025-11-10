@@ -1,49 +1,31 @@
 package common;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.inject.Inject;
-import org.apache.commons.io.FileUtils;
+import teamscale.model.Result;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.io.PrintWriter;
 
 public class ResultReaderWriter {
 
-    @Inject
-    public ResultReaderWriter() {
-    }
-
     public void writeResult(Result result) throws IOException {
-        File resultFile = getResultFile(result.repoOwner(), result.repoName());
+        File resultFile = getResultFile(result.getRepoOwner(), result.getRepoName());
         if (!resultFile.getParentFile().exists()) {
             resultFile.getParentFile().mkdirs();
         }
         if (!resultFile.exists()) {
             resultFile.createNewFile();
         }
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(resultFile, result);
-    }
 
-    public File getResultFile(String owner, String repoName) {
-        return new File("proofs" + File.separator + owner + "." + repoName + ".json");
-    }
-
-    public List<Result> readAllResults() throws IOException {
-        List<Result> list = new ArrayList<>();
-        for (File file : FileUtils.listFiles(new File("proofs"), new String[]{".json"}, false)) {
-            list.add(new ObjectMapper().readValue(file, Result.class));
+        try (PrintWriter pw = new PrintWriter(resultFile)) {
+            for (Result.Entry entry : result.getEntries()) {
+                String line = entry.time() + "," + entry.sourceLinesOfCode() + "," + entry.numberOfCodeClones() + "," + entry.numberOfFileSizeViolations() + "," + entry.numberOfMethodLengthViolations() + "," + entry.numberOfNestingDepthViolations();
+                pw.println(line);
+            }
         }
-        return list;
     }
 
-    public Optional<Result> getResultOfRepo(String repoOwner, String repoName) throws IOException {
-        File proofs = new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
-        if(!proofs.exists()){
-            return Optional.empty();
-        }
-        return Optional.ofNullable(new ObjectMapper().readValue(proofs, Result.class));
+    private File getResultFile(String owner, String repoName) {
+        return new File("results" + File.separator + owner + "." + repoName + ".csv");
     }
 }
