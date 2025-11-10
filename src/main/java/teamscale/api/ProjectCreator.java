@@ -101,7 +101,7 @@ public class ProjectCreator {
                ]
             }""";
 
-    private static final long MILLISECONDS_IN_YEAR = 1000L * 60L * 60L * 24L * 365L;
+    private static final long MILLISECONDS_IN_TWO_YEARS = 1000L * 60L * 60L * 24L * 365L * 2L;
 
     private final ProjectsGetter projectsGetter;
 
@@ -144,12 +144,12 @@ public class ProjectCreator {
         for (Proof.LinterWithProof linter : proof.linters()) {
             long introductionTime = linter.introductionTime() * 1000L;
 
-            long start = introductionTime - MILLISECONDS_IN_YEAR;
+            long start = introductionTime - MILLISECONDS_IN_TWO_YEARS;
             if (start < startTime) {
                 startTime = start;
             }
 
-            long end = introductionTime + MILLISECONDS_IN_YEAR;
+            long end = introductionTime + MILLISECONDS_IN_TWO_YEARS;
             if (end > endTime) {
                 endTime = end;
             }
