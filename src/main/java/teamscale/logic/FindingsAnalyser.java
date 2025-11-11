@@ -1,7 +1,9 @@
 package teamscale.logic;
 
+import common.Proof;
 import jakarta.inject.Inject;
 import linter.searching.logic.RepositoryDownloader;
+import linter.searching.logic.RepositoryHandler;
 import linter.searching.logic.State;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
@@ -17,52 +19,47 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class FindingsAnalyser {
 
-    private final ExecutorService executorService;
     private final RepositoryDownloader repositoryDownloader;
     private final State state;
     private final FindingsChurnGetter findingsChurnGetter;
     private final MetricsGetter metricsGetter;
+    private final RepositoryHandler repositoryHandler;
 
     @Inject
-    public FindingsAnalyser(ExecutorService executorService, RepositoryDownloader repositoryDownloader, State state, FindingsChurnGetter findingsChurnGetter, MetricsGetter metricsGetter) {
-        this.executorService = executorService;
+    public FindingsAnalyser(RepositoryDownloader repositoryDownloader, State state, FindingsChurnGetter findingsChurnGetter, MetricsGetter metricsGetter, RepositoryHandler repositoryHandler) {
         this.repositoryDownloader = repositoryDownloader;
         this.state = state;
         this.findingsChurnGetter = findingsChurnGetter;
         this.metricsGetter = metricsGetter;
+        this.repositoryHandler = repositoryHandler;
     }
 
     public Result analyseFindings(String repoOwner, String repoName) throws IOException, GitAPIException {
         Pair<String, String> key = Pair.of(repoOwner, repoName);
         state.addToState(key, "Analysing findings");
+
         Git repo = repositoryDownloader.getRepo(repoOwner, repoName);
+        Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
+
         List<RevCommit> commits = new ArrayList<>();
         repo.log().call().iterator().forEachRemaining(commits::add);
-        commits = commits.reversed();
+        commits = commits.stream().filter(revCommit -> revCommit.getCommitTime() >= proof.analysisStartTime() && revCommit.getCommitTime() <= proof.analysisEndTime()).toList().reversed();
 
         List<Pair<FindingsChurn, Metrics>> data = Collections.synchronizedList(new ArrayList<>());
-        List<CompletableFuture<?>> futures = new ArrayList<>();
+
         AtomicInteger current = new AtomicInteger();
         for (RevCommit commit : commits) {
-            List<RevCommit> finalCommits = commits;
-            CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-                state.addToState(key, "Analysing finding from commit " + current.getAndIncrement() + "/" + finalCommits.size());
-                long time = commit.getCommitTime() * 1000L;
-                FindingsChurn churn = findingsChurnGetter.getFindingsChurn(repoOwner, repoName, time);
-                Metrics metrics = metricsGetter.getMetrics(repoOwner, repoName, time);
 
-                data.add(Pair.of(churn, metrics));
-            }, executorService);
-            futures.add(future);
+            state.addToState(key, "Analysing finding from commit " + current.getAndIncrement() + "/" + commits.size());
+            long time = commit.getCommitTime() * 1000L;
+            FindingsChurn churn = findingsChurnGetter.getFindingsChurn(repoOwner, repoName, time);
+            Metrics metrics = metricsGetter.getMetrics(repoOwner, repoName, time);
+            data.add(Pair.of(churn, metrics));
         }
-
-        CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
 
         //Sort data by date
         data.sort((o1, o2) -> Math.toIntExact(o1.getLeft().getCommit().getTimestamp() / 1000 - o2.getLeft().getCommit().getTimestamp() / 1000));

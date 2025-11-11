@@ -20,8 +20,9 @@ import java.util.Optional;
 
 public class RepositoryHandler {
 
-    public static final int SIZE_1 = 1000 * 1000; // 1 GB
-    public static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
+    private static final int SIZE_1 = 1000 * 1000; // 1 GB
+    private static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
+    private static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2; // two years in seconds
 
     private final RepositoryDownloader repositoryDownloader;
     private final LinterFinder linterFinder;
@@ -43,14 +44,8 @@ public class RepositoryHandler {
         String repoName = repo.getName();
         state.addToState(Pair.of(ownerName, repoName), "Started handling");
 
-        //Limit at around 0.5GB. The getSize() is not very accurate.
+        //Size limit with the data from GitHub
         if (repo.getSize() > SIZE_1) {
-            return;
-        }
-
-        //Skip if already analysed
-        File proofFile = proofReaderWriter.getResultFile(ownerName, repoName);
-        if (proofFile.exists()) {
             return;
         }
 
@@ -61,12 +56,19 @@ public class RepositoryHandler {
     }
 
     public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
+
+        //Skip if already analysed
+        File proofFile = proofReaderWriter.getResultFile(ownerName, repoName);
+        if (proofFile.exists()) {
+            return proofReaderWriter.getResultOfRepo(ownerName, repoName);
+        }
+
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
             RevCommit currentCommit = git.log().call().iterator().next();
             String currentBranch = git.getRepository().getBranch();
 
-            //Limit at 0.5GB. The getSize() is not very accurate.
+            //Limit again here after download. The getSize() is not very accurate.
             long size = FileUtils.sizeOfDirectory(folder);
             if (size > SIZE_2) {
                 return Optional.empty();
@@ -82,7 +84,46 @@ public class RepositoryHandler {
                 lintersWithProof.add(new Proof.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
 
-            return Optional.of(new Proof(ownerName, repoName, Language.JAVA, "https://github.com/" + ownerName + "/" + repoName, currentBranch, currentCommit.getName(), currentCommit.getCommitTime(), lintersWithProof));
+            Pair<Integer, Integer> startAndEndTime = getStartAndEndTime(lintersWithProof);
+
+            return Optional.of(new Proof(
+                            ownerName,
+                            repoName,
+                            Language.JAVA,
+                            "https://github.com/" + ownerName + "/" + repoName,
+                            currentBranch,
+                            currentCommit.getName(),
+                            currentCommit.getCommitTime(),
+                            startAndEndTime.getLeft(),
+                            startAndEndTime.getRight(),
+                            lintersWithProof
+                    )
+            );
         }
     }
+
+    private static Pair<Integer, Integer> getStartAndEndTime(List<Proof.LinterWithProof> lintersWithProof) {
+        int startTime = Integer.MAX_VALUE;
+        int endTime = Integer.MIN_VALUE;
+        for (Proof.LinterWithProof linter : lintersWithProof) {
+            int introductionTime = linter.introductionTime();
+
+            int start = introductionTime - SECONDS_IN_TWO_YEARS;
+            if (start < startTime) {
+                startTime = start;
+            }
+
+            int end = introductionTime + SECONDS_IN_TWO_YEARS;
+            if (end > endTime) {
+                endTime = end;
+            }
+        }
+
+        if (lintersWithProof.isEmpty()) {
+            startTime = -1;
+            endTime = -1;
+        }
+        return Pair.of(startTime, endTime);
+    }
+
 }

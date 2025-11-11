@@ -101,7 +101,7 @@ public class ProjectCreator {
                ]
             }""";
 
-    private static final long MILLISECONDS_IN_TWO_YEARS = 1000L * 60L * 60L * 24L * 365L * 2L;
+
 
     private final ProjectsGetter projectsGetter;
 
@@ -139,29 +139,15 @@ public class ProjectCreator {
     }
 
     private void createProjectWithProof(Proof proof) {
-        long startTime = 1767222000000L; // 2026-01-01
-        long endTime = 946681200000L; //2000-01-01
-        for (Proof.LinterWithProof linter : proof.linters()) {
-            long introductionTime = linter.introductionTime() * 1000L;
 
-            long start = introductionTime - MILLISECONDS_IN_TWO_YEARS;
-            if (start < startTime) {
-                startTime = start;
-            }
-
-            long end = introductionTime + MILLISECONDS_IN_TWO_YEARS;
-            if (end > endTime) {
-                endTime = end;
-            }
-        }
 
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
 
-        calendar.setTimeInMillis(startTime);
+        calendar.setTimeInMillis(proof.analysisStartTime() * 1000L);
         String startData = formatter.format(calendar.getTime());
 
-        calendar.setTimeInMillis(endTime);
+        calendar.setTimeInMillis(proof.analysisEndTime() * 1000L);
         String endDate = formatter.format(calendar.getTime());
 
         createSingleProject(proof.repoOwner(), proof.repoName(), proof.defaultBranch(), startData, endDate);

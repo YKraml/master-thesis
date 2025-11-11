@@ -15,14 +15,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException, GitAPIException {
         Injector injector = Guice.createInjector(new GuiceModule());
-        //injector.getInstance(ProjectCreator.class).createAllProjects();
 
         FindingsAnalyser findingsAnalyser = injector.getInstance(FindingsAnalyser.class);
         ResultReaderWriter resultReaderWriter = injector.getInstance(ResultReaderWriter.class);
         injector.getInstance(State.class).startPrintingTimer();
 
-        String repoOwner = "TheAlgorithms";
-        String repoName = "Java";
+        String repoOwner = "apache";
+        String repoName = "hop";
 
         Result result = findingsAnalyser.analyseFindings(repoOwner, repoName);
 
