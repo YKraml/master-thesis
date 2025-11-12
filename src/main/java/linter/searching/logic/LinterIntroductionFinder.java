@@ -35,9 +35,9 @@ public class LinterIntroductionFinder {
     }
 
     public Pair<RevCommit, String> findIntroductionCommitWithProof(Git git, Linter linter) throws IOException, GitAPIException {
-        Iterable<RevCommit> topologicalLog = git.log().call();
+        Iterable<RevCommit> log = git.log().call();
         List<RevCommit> commits = new LinkedList<>();
-        topologicalLog.forEach(commits::addFirst);
+        log.forEach(commits::addFirst);
 
         Optional<Pair<RevCommit, String>> introductionCommitWithProof = findIntroductionCommitWithProof(git, linter, commits);
         if (introductionCommitWithProof.isEmpty()) {

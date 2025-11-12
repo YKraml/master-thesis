@@ -28,8 +28,8 @@ public class ProofReaderWriter {
         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(resultFile, proof);
     }
 
-    public File getResultFile(String owner, String repoName) {
-        return new File("proofs" + File.separator + owner + "." + repoName + ".json");
+    public File getResultFile(String repoOwner, String repoName) {
+        return new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
     }
 
     public List<Proof> readAllResults() throws IOException {
@@ -47,7 +47,7 @@ public class ProofReaderWriter {
     }
 
     public Optional<Proof> getResultOfRepo(String repoOwner, String repoName) throws IOException {
-        File proofs = new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
+        File proofs = getResultFile(repoOwner, repoName);
         if(!proofs.exists()){
             return Optional.empty();
         }

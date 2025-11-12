@@ -1,10 +1,10 @@
 package teamscale.api.model.metrics;
 
-public class MetricValueDouble extends MetricValue {
+public class ValueDouble extends Value {
 
     private double value;
 
-    public MetricValueDouble(double value) {
+    public ValueDouble(double value) {
         this.value = value;
     }
 

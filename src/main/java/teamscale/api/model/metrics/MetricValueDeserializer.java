@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.io.IOException;
 
-public class MetricValueDeserializer extends StdDeserializer<MetricValue> {
+public class MetricValueDeserializer extends StdDeserializer<Value> {
 
     public MetricValueDeserializer() {
         this(null);
@@ -22,11 +22,11 @@ public class MetricValueDeserializer extends StdDeserializer<MetricValue> {
     }
 
     @Override
-    public MetricValue deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
+    public Value deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
         TreeNode treeNode = jsonParser.getCodec().readTree(jsonParser);
 
         if (treeNode instanceof DoubleNode doubleNode) {
-            return new MetricValueDouble(doubleNode.doubleValue());
+            return new ValueDouble(doubleNode.doubleValue());
         }
 
         if (treeNode instanceof ObjectNode objectNode) {
@@ -36,7 +36,7 @@ public class MetricValueDeserializer extends StdDeserializer<MetricValue> {
                 double c = arrayNode.get(2).asDouble();
                 double d = arrayNode.get(3).asDouble();
                 double e = arrayNode.get(4).asDouble();
-                return new MetricValueMapping(a, b, c, d, e);
+                return new ValueMapping(a, b, c, d, e);
             }
         }
 

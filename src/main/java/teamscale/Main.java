@@ -20,8 +20,8 @@ public class Main {
         ResultReaderWriter resultReaderWriter = injector.getInstance(ResultReaderWriter.class);
         injector.getInstance(State.class).startPrintingTimer();
 
-        String repoOwner = "apache";
-        String repoName = "hop";
+        String repoOwner = "Activiti";
+        String repoName = "Activiti";
 
         Result result = findingsAnalyser.analyseFindings(repoOwner, repoName);
 

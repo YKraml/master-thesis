@@ -8,37 +8,22 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import teamscale.api.model.churn.FindingsChurn;
+import teamscale.api.model.churn.Churn;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.concurrent.Semaphore;
+import java.util.List;
 
-public class FindingsChurnGetter {
-
-    private final Semaphore semaphore = new Semaphore(4);
+public class ChurnGetter {
 
     @Inject
-    public FindingsChurnGetter() {
+    public ChurnGetter() {
     }
 
-    public FindingsChurn getFindingsChurn(String repoOwner, String repoName, long time) {
-
-        try {
-            semaphore.acquire();
-            return getFindingsChurnThreadSafe(repoOwner, repoName, time);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } finally {
-            semaphore.release();
-        }
-
-    }
-
-    private static FindingsChurn getFindingsChurnThreadSafe(String repoOwner, String repoName, long time) {
+    public Churn getFindingsChurn(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects/" + repoOwner + "." + repoName + "/finding-churn/list?&t=" + time + "&max=-1");
+            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/projects/" + repoOwner + "." + repoName + "/findings/delta?t1=" + analysisStartTime + "&t2=" + analysisEndTime + "&max-milliseconds=-1");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);
@@ -62,10 +47,12 @@ public class FindingsChurnGetter {
                 }
 
                 ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-                return mapper.readValue(responseBody, FindingsChurn.class);
+                return mapper.readValue(responseBody, Churn.class);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
     }
+
 }

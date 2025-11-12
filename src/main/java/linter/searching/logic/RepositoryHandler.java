@@ -15,6 +15,7 @@ import org.kohsuke.github.GHRepository;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,14 +50,18 @@ public class RepositoryHandler {
             return;
         }
 
-        Optional<Proof> result = handleRepo(ownerName, repoName);
-        if (result.isPresent()) {
-            proofReaderWriter.writeResult(result.get());
-        }
+        handleRepo(ownerName, repoName);
     }
 
     public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
+        Optional<Proof> proof = handleRepo2(ownerName, repoName);
+        if (proof.isPresent()) {
+            proofReaderWriter.writeResult(proof.get());
+        }
+        return proof;
+    }
 
+    private Optional<Proof> handleRepo2(String ownerName, String repoName) throws IOException, GitAPIException {
         //Skip if already analysed
         File proofFile = proofReaderWriter.getResultFile(ownerName, repoName);
         if (proofFile.exists()) {
@@ -65,7 +70,12 @@ public class RepositoryHandler {
 
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
-            RevCommit currentCommit = git.log().call().iterator().next();
+            Iterator<RevCommit> commits = git.log().call().iterator();
+            ArrayList<RevCommit> commitList = new ArrayList<>();
+            commits.forEachRemaining(commitList::add);
+
+            RevCommit currentCommit = commitList.getFirst();
+            RevCommit firstCommit = commitList.getLast();
             String currentBranch = git.getRepository().getBranch();
 
             //Limit again here after download. The getSize() is not very accurate.
@@ -94,6 +104,8 @@ public class RepositoryHandler {
                             currentBranch,
                             currentCommit.getName(),
                             currentCommit.getCommitTime(),
+                            firstCommit.getName(),
+                            firstCommit.getCommitTime(),
                             startAndEndTime.getLeft(),
                             startAndEndTime.getRight(),
                             lintersWithProof

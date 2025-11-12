@@ -3,7 +3,8 @@ package teamscale.api.model.churn;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import jakarta.annotation.Generated;
+
+import javax.annotation.processing.Generated;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -12,7 +13,7 @@ import jakarta.annotation.Generated;
         "timestamp"
 })
 @Generated("jsonschema2pojo")
-public class Commit {
+public class Birth {
 
     @JsonProperty("type")
     private String type;

@@ -2,7 +2,6 @@
 package teamscale.api.model.metrics;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.annotation.Generated;
 
@@ -16,18 +15,14 @@ import java.util.List;
 @Generated("jsonschema2pojo")
 public class Metrics {
 
-    @JsonProperty("uniformPath")
-    private String uniformPath;
-    @JsonProperty("metricValues")
-    private List<MetricValue> metricValues;
+    private long timestamp;
+    private List<Value> value;
 
-    @JsonProperty("uniformPath")
-    public String getUniformPath() {
-        return uniformPath;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    @JsonProperty("metricValues")
-    public List<MetricValue> getMetricValues() {
-        return metricValues;
+    public List<Value> getValue() {
+        return value;
     }
 }

@@ -9,13 +9,15 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import teamscale.api.model.metrics.MetricValue;
+import teamscale.api.model.metrics.Value;
 import teamscale.api.model.metrics.MetricValueDeserializer;
 import teamscale.api.model.metrics.Metrics;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class MetricsGetter {
@@ -26,21 +28,13 @@ public class MetricsGetter {
     public MetricsGetter() {
     }
 
-    public Metrics getMetrics(String repoOwner, String repoName, long time) {
-
-        try {
-            semaphore.acquire();
-            return getFindingsChurnThreadSafe(repoOwner, repoName, time);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } finally {
-            semaphore.release();
-        }
+    public List<Metrics> getMetrics(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
+        return getFindingsChurnThreadSafe(repoOwner, repoName, analysisStartTime, analysisEndTime);
     }
 
-    private static Metrics getFindingsChurnThreadSafe(String repoOwner, String repoName, long time) {
+    private static List<Metrics> getFindingsChurnThreadSafe(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/projects/" + repoOwner + "." + repoName + "/metrics?uniform-path=&t=" + time);
+            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/projects/" + repoOwner + "." + repoName + "/metrics/history?uniform-path=&start=" + analysisStartTime + "&end=" + analysisEndTime + "&all-partitions=true&max-milliseconds=-1");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);
@@ -65,10 +59,10 @@ public class MetricsGetter {
 
                 ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
                 SimpleModule module = new SimpleModule();
-                module.addDeserializer(MetricValue.class, new MetricValueDeserializer());
+                module.addDeserializer(Value.class, new MetricValueDeserializer());
                 mapper.registerModule(module);
 
-                return mapper.readValue(responseBody, Metrics.class);
+                return Arrays.stream(mapper.readValue(responseBody, Metrics[].class)).toList();
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
