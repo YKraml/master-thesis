@@ -6,25 +6,21 @@ import common.GuiceModule;
 import common.ResultReaderWriter;
 import linter.searching.logic.State;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import teamscale.api.ProjectsGetter;
+import teamscale.api.model.project.Project;
+import teamscale.logic.AnalysisStarter;
 import teamscale.logic.FindingsAnalyser;
 import teamscale.model.Result;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Semaphore;
 
-public class Main {
+public class MainProjectAnalysis {
 
     public static void main(String[] args) throws IOException, GitAPIException {
         Injector injector = Guice.createInjector(new GuiceModule());
-
-        FindingsAnalyser findingsAnalyser = injector.getInstance(FindingsAnalyser.class);
-        ResultReaderWriter resultReaderWriter = injector.getInstance(ResultReaderWriter.class);
         injector.getInstance(State.class).startPrintingTimer();
-
-        String repoOwner = "Activiti";
-        String repoName = "Activiti";
-
-        Result result = findingsAnalyser.analyseFindings(repoOwner, repoName);
-
-        resultReaderWriter.writeResult(result);
+        injector.getInstance(AnalysisStarter.class).startAnalysis();
     }
 }

@@ -27,8 +27,8 @@ class FindingsAnalyserTest {
     void testAirbnbDeepLinkDispatch() throws GitAPIException, IOException {
         Result result = findingsAnalyser.analyseFindings("airbnb", "DeepLinkDispatch");
         Assertions.assertAll(
-                () -> assertFindingsAtEntry(result.getEntries().getFirst(), 0, 0, 0, 0),
-                () -> assertFindingsAtEntry(result.getEntries().getLast(), 6, 4, 6, 15)
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 6, 4, 6, 15)
         );
     }
 
@@ -36,8 +36,8 @@ class FindingsAnalyserTest {
     void testAlexvasilkovGestureViews() throws GitAPIException, IOException {
         Result result = findingsAnalyser.analyseFindings("alexvasilkov", "GestureViews");
         Assertions.assertAll(
-                () -> assertFindingsAtEntry(result.getEntries().getFirst(), 0, 0, 3, 0),
-                () -> assertFindingsAtEntry(result.getEntries().getLast(), 6, 4, 18, 5)
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 3, 0),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 6, 4, 18, 5)
         );
     }
 
@@ -45,17 +45,17 @@ class FindingsAnalyserTest {
     void testAeronIoSimpleBinaryEncoding() throws GitAPIException, IOException {
         Result result = findingsAnalyser.analyseFindings("aeron-io", "simple-binary-encoding");
         Assertions.assertAll(
-                () -> assertFindingsAtEntry(result.getEntries().getFirst(), 0, 0, 0, 0),
-                () -> assertFindingsAtEntry(result.getEntries().getLast(), 480, 31, 287, 38)
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 480, 31, 287, 38)
         );
     }
 
     private static void assertFindingsAtEntry(Result.Entry entry, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
         Assertions.assertAll(
-                () -> Assertions.assertEquals(numberOfCodeClones, entry.numberOfCodeClones()),
-                () -> Assertions.assertEquals(numberOfFileSizeViolations, entry.numberOfFileSizeViolations()),
-                () -> Assertions.assertEquals(numberOfMethodLengthViolations, entry.numberOfMethodLengthViolations()),
-                () -> Assertions.assertEquals(numberOfNestingDepthViolations, entry.numberOfNestingDepthViolations())
+                () -> Assertions.assertEquals(numberOfCodeClones, entry.totalNumberOfCodeClones()),
+                () -> Assertions.assertEquals(numberOfFileSizeViolations, entry.totalNumberOfFileSizeViolations()),
+                () -> Assertions.assertEquals(numberOfMethodLengthViolations, entry.totalNumberOfMethodLengthViolations()),
+                () -> Assertions.assertEquals(numberOfNestingDepthViolations, entry.totalNumberOfNestingDepthViolations())
         );
     }
 

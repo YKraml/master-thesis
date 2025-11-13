@@ -1,47 +1,65 @@
 package teamscale.model;
 
-import org.apache.commons.lang3.tuple.Pair;
-import teamscale.api.model.churn.Churn;
-import teamscale.api.model.metrics.ValueDouble;
-import teamscale.api.model.metrics.Metrics;
-
+import java.lang.reflect.RecordComponent;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Result {
+public record Result(String repoOwner, String repoName, List<Entry> entries) {
 
-    private final String repoOwner;
-    private final String repoName;
-    private final List<Entry> entries;
-
-    //Churns are sorted by time
-    public Result(String repoOwner, String repoName, List<Pair<Churn, Metrics>> data) {
+    public Result(String repoOwner, String repoName, List<Entry> entries) {
         this.repoOwner = repoOwner;
         this.repoName = repoName;
-        entries = new ArrayList<>();
-
-
-
+        this.entries = new ArrayList<>(entries);
     }
 
-    public void addEntry(int time, int sourceLinesOfCode, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
-        entries.add(new Entry(time, sourceLinesOfCode, numberOfCodeClones, numberOfFileSizeViolations, numberOfMethodLengthViolations, numberOfNestingDepthViolations));
-    }
-
-    public List<Entry> getEntries() {
+    @Override
+    public List<Entry> entries() {
         return Collections.unmodifiableList(entries);
     }
 
-    public String getRepoName() {
-        return repoName;
-    }
+    public record Entry(
+            int time,
+            int totalNumberOfContributors,
+            int totalNumberOfFiles,
+            int totalNumberOfLinesOfCode,
+            int totalNumberOfSourceLinesOfCode,
+            int totalNumberOfCodeClones,
+            int totalNumberOfFileSizeViolations,
+            int totalNumberOfMethodLengthViolations,
+            int totalNumberOfNestingDepthViolations,
+            double relativeNumberOfCodeClones,
+            double relativeNumberOfFileSizeViolations,
+            double relativeNumberOfMethodLengthViolations,
+            double relativeNumberOfNestingDepthViolations
+    ) {
 
-    public String getRepoOwner() {
-        return repoOwner;
-    }
+        public static String csvHeader() {
+            return Arrays.stream(Entry.class.getRecordComponents())
+                    .map(RecordComponent::getName)
+                    .collect(Collectors.joining(","));
+        }
 
-    public record Entry(int time, int sourceLinesOfCode, int numberOfCodeClones, int numberOfFileSizeViolations,
-                        int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
+        public static Entry getDefault() {
+            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        }
+
+        public String csvLine() {
+            try {
+                return Arrays.stream(this.getClass().getRecordComponents())
+                        .map(recordComponent -> {
+                            try {
+                                return String.valueOf(recordComponent.getAccessor().invoke(this));
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        })
+                        .collect(Collectors.joining(","));
+            } catch (Exception e) {
+                throw new RuntimeException("Error creating CSV string", e);
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,14 +31,16 @@ public class RepositoryHandler {
     private final LinterIntroductionFinder linterIntroductionFinder;
     private final ProofReaderWriter proofReaderWriter;
     private final State state;
+    private final GitHub github;
 
     @Inject
-    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state) {
+    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state, GitHub github) {
         this.repositoryDownloader = repositoryDownloader;
         this.linterFinder = linterFinder;
         this.linterIntroductionFinder = linterIntroductionFinder;
         this.proofReaderWriter = proofReaderWriter;
         this.state = state;
+        this.github = github;
     }
 
     public void handleRepo(GHRepository repo) throws Exception {
@@ -67,6 +70,8 @@ public class RepositoryHandler {
         if (proofFile.exists()) {
             return proofReaderWriter.getResultOfRepo(ownerName, repoName);
         }
+
+        int numberOfStars = github.getRepository(ownerName + "/" + repoName).getStargazersCount();
 
         try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
@@ -108,6 +113,7 @@ public class RepositoryHandler {
                             firstCommit.getCommitTime(),
                             startAndEndTime.getLeft(),
                             startAndEndTime.getRight(),
+                            numberOfStars,
                             lintersWithProof
                     )
             );
@@ -137,5 +143,4 @@ public class RepositoryHandler {
         }
         return Pair.of(startTime, endTime);
     }
-
 }

@@ -1,9 +1,6 @@
 package teamscale.api;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
 import common.Constants;
-import common.GuiceModule;
 import common.Proof;
 import common.ProofReaderWriter;
 import jakarta.inject.Inject;
@@ -16,16 +13,15 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import teamscale.api.model.project.Project;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ProjectCreator {
@@ -101,8 +97,6 @@ public class ProjectCreator {
                ]
             }""";
 
-
-
     private final ProjectsGetter projectsGetter;
 
     @Inject
@@ -110,18 +104,22 @@ public class ProjectCreator {
         this.projectsGetter = projectsGetter;
     }
 
-    public static void main(String[] args) throws IOException {
-        Injector injector = Guice.createInjector(new GuiceModule());
-        ProjectCreator projectCreator = injector.getInstance(ProjectCreator.class);
-        projectCreator.createAllProjects();
-    }
-
     public void createAllProjects() throws IOException {
         List<Proof> proofs = new ProofReaderWriter().readAllResults();
+        proofs.sort(Comparator.comparingInt(Proof::numberOfStars));
 
         List<Project> existingProjects = projectsGetter.getExistingProjects();
         Set<String> existingProjectNames = existingProjects.stream().map(Project::getName).collect(Collectors.toSet());
 
+        createProjects(proofs, existingProjectNames);
+
+        System.out.println();
+        System.out.println("Finished");
+    }
+
+    private void createProjects(List<Proof> proofs, Set<String> existingProjectNames) {
+        int numberOfProjectsToBeCreated = getNumberOfProjectsToBeCreated();
+        int i = 0;
         for (Proof proof : proofs) {
             if (proof.linters().isEmpty()) {
                 continue;
@@ -131,6 +129,11 @@ public class ProjectCreator {
             if (existingProjectNames.contains(proof.repoOwner() + "." + proof.repoName())) {
                 System.out.println("Skipped " + proof.link());
             } else {
+                if (i == numberOfProjectsToBeCreated) {
+                    break;
+                }
+                i++;
+
                 System.out.println("Create: " + proof.link());
                 createProjectWithProof(proof);
                 System.out.println("Finished creation");
@@ -138,8 +141,30 @@ public class ProjectCreator {
         }
     }
 
-    private void createProjectWithProof(Proof proof) {
+    private static int getNumberOfProjectsToBeCreated() {
+        JFrame topFrame = new JFrame();
+        topFrame.setAlwaysOnTop(true);
+        topFrame.setUndecorated(true);
+        topFrame.setLocationRelativeTo(null); // center on screen
+        topFrame.setVisible(true);
 
+        String input = JOptionPane.showInputDialog(
+                topFrame,
+                "How many projects should be created?"
+        );
+
+        topFrame.dispose(); // remove temp frame
+
+        int numberOfProjectsToBeCreeated;
+        try {
+            numberOfProjectsToBeCreeated = Integer.parseInt(input);
+        } catch (Exception e) {
+            numberOfProjectsToBeCreeated = -1;
+        }
+        return numberOfProjectsToBeCreeated;
+    }
+
+    public void createProjectWithProof(Proof proof) {
 
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();

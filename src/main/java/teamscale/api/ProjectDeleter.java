@@ -1,8 +1,6 @@
 package teamscale.api;
 
-import com.google.inject.Guice;
 import com.google.inject.Inject;
-import common.GuiceModule;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -18,10 +16,6 @@ public class ProjectDeleter {
     @Inject
     public ProjectDeleter(ProjectsGetter projectsGetter) {
         this.projectsGetter = projectsGetter;
-    }
-
-    public static void main(String[] args) {
-        Guice.createInjector(new GuiceModule()).getInstance(ProjectDeleter.class).deleteAllProjects();
     }
 
     public void deleteAllProjects() {

@@ -8,22 +8,22 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import teamscale.api.model.churn.Churn;
+import teamscale.api.model.churn.FindingChurn;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.List;
 
-public class ChurnGetter {
+public class FindingChurnGetter {
 
     @Inject
-    public ChurnGetter() {
+    public FindingChurnGetter() {
     }
 
-    public Churn getFindingsChurn(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
+    public FindingChurn getFindingsChurn(String repoOwner, String repoName, long time) {
+
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/projects/" + repoOwner + "." + repoName + "/findings/delta?t1=" + analysisStartTime + "&t2=" + analysisEndTime + "&max-milliseconds=-1");
+            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects/" + repoOwner + "." + repoName + "/finding-churn/list?&t=" + time + "&max=-1");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);
@@ -47,12 +47,10 @@ public class ChurnGetter {
                 }
 
                 ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-                return mapper.readValue(responseBody, Churn.class);
+                return mapper.readValue(responseBody, FindingChurn.class);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
-
 }

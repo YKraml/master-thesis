@@ -5,11 +5,12 @@ import teamscale.model.Result;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Optional;
 
 public class ResultReaderWriter {
 
     public void writeResult(Result result) throws IOException {
-        File resultFile = getResultFile(result.getRepoOwner(), result.getRepoName());
+        File resultFile = getResultFile(result.repoOwner(), result.repoName());
         if (!resultFile.getParentFile().exists()) {
             resultFile.getParentFile().mkdirs();
         }
@@ -18,14 +19,18 @@ public class ResultReaderWriter {
         }
 
         try (PrintWriter pw = new PrintWriter(resultFile)) {
-            for (Result.Entry entry : result.getEntries()) {
-                String line = entry.time() + "," + entry.sourceLinesOfCode() + "," + entry.numberOfCodeClones() + "," + entry.numberOfFileSizeViolations() + "," + entry.numberOfMethodLengthViolations() + "," + entry.numberOfNestingDepthViolations();
-                pw.println(line);
+            pw.println(Result.Entry.csvHeader());
+            for (Result.Entry entry : result.entries()) {
+                pw.println(entry.csvLine());
             }
         }
     }
 
-    private File getResultFile(String owner, String repoName) {
-        return new File("results" + File.separator + owner + "." + repoName + ".csv");
+    private File getResultFile(String repoOwner, String repoName) {
+        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv");
+    }
+
+    public boolean resultIsPresent(String repoOwner, String repoName) {
+        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv").exists();
     }
 }
