@@ -1,26 +1,35 @@
 package logic;
 
-import jakarta.inject.Inject;
-import org.apache.commons.lang3.tuple.Pair;
 import api.FindingChurnGetter;
 import api.MetricsGetter;
 import api.model.churn.Finding;
 import api.model.churn.FindingChurn;
 import api.model.metrics.Metrics;
 import api.model.metrics.ValueDouble;
+import jakarta.inject.Inject;
 import model.Result;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class FindingsAnalyser {
 
+    private final static Semaphore SEMAPHORE = new Semaphore(4);
+
+    private final ExecutorService executorService;
     private final State state;
     private final FindingChurnGetter findingChurnGetter;
     private final MetricsGetter metricsGetter;
 
     @Inject
-    public FindingsAnalyser(State state, FindingChurnGetter findingChurnGetter, MetricsGetter metricsGetter) {
+    public FindingsAnalyser(ExecutorService executorService, State state, FindingChurnGetter findingChurnGetter, MetricsGetter metricsGetter) {
+        this.executorService = executorService;
         this.state = state;
         this.findingChurnGetter = findingChurnGetter;
         this.metricsGetter = metricsGetter;
@@ -28,25 +37,33 @@ public class FindingsAnalyser {
 
     public Result analyseFindings(String repoOwner, String repoName) {
         Pair<String, String> stateKey = Pair.of(repoOwner, repoName);
-
-        long start = 1;
-        long end = Long.MAX_VALUE;
-
         state.addToState(stateKey, "Getting metrics list");
-        List<Metrics> metricsList = metricsGetter.getMetrics(repoOwner, repoName, start, end);
 
-        List<Pair<FindingChurn, Metrics>> data = new ArrayList<>();
-        for (int i = 0; i < metricsList.size(); i++) {
-            state.addToState(stateKey, "Analysing finding from commit " + i + "/" + metricsList.size());
-            Metrics metrics = metricsList.get(i);
-            FindingChurn findingChurn = findingChurnGetter.getFindingsChurn(repoOwner, repoName, metrics.getTimestamp());
+        List<Metrics> metricsList = metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
 
-            if (metrics.getTimestamp() != findingChurn.getCommit().getTimestamp()) {
-                throw new RuntimeException("Timestamps not equal!");
-            }
+        List<CompletableFuture<?>> futures = Collections.synchronizedList(new ArrayList<>());
+        List<Pair<FindingChurn, Metrics>> data = Collections.synchronizedList(new ArrayList<>());
+        AtomicInteger atomicInteger = new AtomicInteger(0);
+        for (Metrics metrics : metricsList) {
+            futures.add(CompletableFuture.runAsync(() -> {
 
-            data.add(Pair.of(findingChurn, metrics));
+                try {
+                    SEMAPHORE.acquire();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+
+                state.addToState(stateKey, "Analysing finding from commit " + atomicInteger.get() + "/" + metricsList.size());
+                FindingChurn findingChurn = findingChurnGetter.getFindingsChurn(repoOwner, repoName, metrics.getTimestamp());
+                data.add(Pair.of(findingChurn, metrics));
+                atomicInteger.incrementAndGet();
+
+                SEMAPHORE.release();
+            }, executorService));
         }
+
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).join();
+        data.sort((o1, o2) -> Math.toIntExact(o1.getRight().getTimestamp() / 1000 - o2.getRight().getTimestamp() / 1000));
 
         List<Result.Entry> entries = createEntriesFromData(stateKey, data);
         return new Result(repoOwner, repoName, entries);

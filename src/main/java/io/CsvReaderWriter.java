@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class CsvReaderWriter {
 
     private File getResultFileCsv(String repoOwner, String repoName, String linter) {
-        return new File("csv" + File.separator + repoOwner + "." + repoName + "." + linter + ".csv");
+        return new File("python/root/csv" + File.separator + repoOwner + "." + repoName + "." + linter + ".csv");
     }
 
     public void writeResultAsCsv(Result result, String linter) throws IOException {
