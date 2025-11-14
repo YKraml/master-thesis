@@ -1,9 +1,7 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import org.junit.jupiter.api.BeforeAll;
 import util.GuiceModule;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
@@ -13,17 +11,16 @@ import model.Result;
 @Execution(ExecutionMode.CONCURRENT)
 class FindingsAnalyserTest {
 
-    private static FindingsAnalyser findingsAnalyser;
+    private static final FindingsAnalyser FINDINGS_ANALYSER;
 
-    @BeforeAll
-    static void setup() {
+    static {
         Injector injector = Guice.createInjector(new GuiceModule());
-        findingsAnalyser = injector.getInstance(FindingsAnalyser.class);
+        FINDINGS_ANALYSER = injector.getInstance(FindingsAnalyser.class);
     }
 
     @Test
     void testAirbnbDeepLinkDispatch() {
-        Result result = findingsAnalyser.analyseFindings("airbnb", "DeepLinkDispatch");
+        Result result = FINDINGS_ANALYSER.analyseFindings("airbnb", "DeepLinkDispatch");
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 4, 3, 12, 15),
@@ -34,7 +31,7 @@ class FindingsAnalyserTest {
 
     @Test
     void testApacheMetron() {
-        Result result = findingsAnalyser.analyseFindings("apache", "metron");
+        Result result = FINDINGS_ANALYSER.analyseFindings("apache", "metron");
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 66, 5, 54, 76),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 852, 42, 266, 363),
@@ -45,7 +42,7 @@ class FindingsAnalyserTest {
 
     @Test
     void testTraccerTraccer() {
-        Result result = findingsAnalyser.analyseFindings("traccar", "traccar");
+        Result result = FINDINGS_ANALYSER.analyseFindings("traccar", "traccar");
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 290, 1, 67, 12),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 216, 12, 247, 162),
@@ -56,7 +53,7 @@ class FindingsAnalyserTest {
 
     @Test
     void testGooglePhysicalWeb() {
-        Result result = findingsAnalyser.analyseFindings("google", "physical-web");
+        Result result = FINDINGS_ANALYSER.analyseFindings("google", "physical-web");
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 2, 1, 2, 5),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 21, 3, 20, 18),
