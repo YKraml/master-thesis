@@ -1,11 +1,15 @@
 package common;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import org.apache.commons.io.FileUtils;
 import teamscale.model.Result;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class ResultReaderWriter {
 
@@ -18,19 +22,37 @@ public class ResultReaderWriter {
             resultFile.createNewFile();
         }
 
-        try (PrintWriter pw = new PrintWriter(resultFile)) {
-            pw.println(Result.Entry.csvHeader());
-            for (Result.Entry entry : result.entries()) {
-                pw.println(entry.csvLine());
+        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(resultFile, result);
+    }
+
+    public List<Result> readAllResults() throws IOException {
+        List<Result> list = new ArrayList<>();
+        String folderName = getFolderName();
+
+        for (File file : FileUtils.listFiles(new File(folderName), new String[]{".json"}, false)) {
+            try {
+                list.add(new ObjectMapper().readValue(file, Result.class));
+            } catch (MismatchedInputException e) {
+                e.printStackTrace();
+                file.delete();
             }
+
         }
+        return list;
     }
 
     private File getResultFile(String repoOwner, String repoName) {
-        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv");
+        String folderName = getFolderName();
+        return new File(folderName + File.separator + repoOwner + "." + repoName + ".json");
+
     }
 
-    public boolean resultIsPresent(String repoOwner, String repoName) {
-        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv").exists();
+    private static String getFolderName() {
+        return "results";
     }
+
+    public boolean resultFileIsPresent(String repoOwner, String repoName) {
+        return getResultFile(repoOwner, repoName).exists();
+    }
+
 }

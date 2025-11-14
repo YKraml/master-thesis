@@ -12,9 +12,12 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Semaphore;
 
+import static common.ResultReaderWriter.*;
+
 public class AnalysisStarter {
 
     private final static Semaphore SEMAPHORE = new Semaphore(4);
+
     private final ProjectsGetter projectsGetter;
     private final ExecutorService executorService;
     private final FindingsAnalyser findingsAnalyser;
@@ -44,7 +47,7 @@ public class AnalysisStarter {
         try {
             SEMAPHORE.acquire();
             state.addToState(Pair.of(repoOwner, repoName), "Analysing findings");
-            if (!resultReaderWriter.resultIsPresent(repoOwner, repoName)) {
+            if (!resultReaderWriter.resultFileIsPresent(repoOwner, repoName)) {
                 Result result = findingsAnalyser.analyseFindings(repoOwner, repoName);
                 resultReaderWriter.writeResult(result);
             }

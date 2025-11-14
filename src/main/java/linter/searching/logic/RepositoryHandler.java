@@ -59,16 +59,16 @@ public class RepositoryHandler {
     public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
         Optional<Proof> proof = handleRepo2(ownerName, repoName);
         if (proof.isPresent()) {
-            proofReaderWriter.writeResult(proof.get());
+            proofReaderWriter.writeProof(proof.get());
         }
         return proof;
     }
 
     private Optional<Proof> handleRepo2(String ownerName, String repoName) throws IOException, GitAPIException {
         //Skip if already analysed
-        File proofFile = proofReaderWriter.getResultFile(ownerName, repoName);
+        File proofFile = proofReaderWriter.getProofFile(ownerName, repoName);
         if (proofFile.exists()) {
-            return proofReaderWriter.getResultOfRepo(ownerName, repoName);
+            return proofReaderWriter.getProofOfRepo(ownerName, repoName);
         }
 
         int numberOfStars = github.getRepository(ownerName + "/" + repoName).getStargazersCount();

@@ -105,7 +105,7 @@ public class ProjectCreator {
     }
 
     public void createAllProjects() throws IOException {
-        List<Proof> proofs = new ProofReaderWriter().readAllResults();
+        List<Proof> proofs = new ProofReaderWriter().readAllProofs();
         proofs.sort(Comparator.comparingInt(Proof::numberOfStars));
 
         List<Project> existingProjects = projectsGetter.getExistingProjects();

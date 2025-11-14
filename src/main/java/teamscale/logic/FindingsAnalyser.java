@@ -50,7 +50,6 @@ public class FindingsAnalyser {
         }
 
         List<Result.Entry> entries = createEntriesFromData(stateKey, data);
-
         return new Result(repoOwner, repoName, entries);
     }
 

@@ -10,6 +10,7 @@ import teamscale.api.ProjectsGetter;
 import teamscale.api.model.project.Project;
 import teamscale.logic.AnalysisStarter;
 import teamscale.logic.FindingsAnalyser;
+import teamscale.logic.ResultNormaliser;
 import teamscale.model.Result;
 
 import java.io.IOException;
@@ -18,7 +19,7 @@ import java.util.concurrent.Semaphore;
 
 public class MainProjectAnalysis {
 
-    public static void main(String[] args) throws IOException, GitAPIException {
+    public static void main(String[] args) {
         Injector injector = Guice.createInjector(new GuiceModule());
         injector.getInstance(State.class).startPrintingTimer();
         injector.getInstance(AnalysisStarter.class).startAnalysis();

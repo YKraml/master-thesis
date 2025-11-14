@@ -17,22 +17,22 @@ public class ProofReaderWriter {
     public ProofReaderWriter() {
     }
 
-    public void writeResult(Proof proof) throws IOException {
-        File resultFile = getResultFile(proof.repoOwner(), proof.repoName());
-        if (!resultFile.getParentFile().exists()) {
-            resultFile.getParentFile().mkdirs();
+    public void writeProof(Proof proof) throws IOException {
+        File proofFile = getProofFile(proof.repoOwner(), proof.repoName());
+        if (!proofFile.getParentFile().exists()) {
+            proofFile.getParentFile().mkdirs();
         }
-        if (!resultFile.exists()) {
-            resultFile.createNewFile();
+        if (!proofFile.exists()) {
+            proofFile.createNewFile();
         }
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(resultFile, proof);
+        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(proofFile, proof);
     }
 
-    public File getResultFile(String repoOwner, String repoName) {
+    public File getProofFile(String repoOwner, String repoName) {
         return new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
     }
 
-    public List<Proof> readAllResults() throws IOException {
+    public List<Proof> readAllProofs() throws IOException {
         List<Proof> list = new ArrayList<>();
         for (File file : FileUtils.listFiles(new File("proofs"), new String[]{".json"}, false)) {
             try {
@@ -46,8 +46,8 @@ public class ProofReaderWriter {
         return list;
     }
 
-    public Optional<Proof> getResultOfRepo(String repoOwner, String repoName) throws IOException {
-        File proofs = getResultFile(repoOwner, repoName);
+    public Optional<Proof> getProofOfRepo(String repoOwner, String repoName) throws IOException {
+        File proofs = getProofFile(repoOwner, repoName);
         if(!proofs.exists()){
             return Optional.empty();
         }
