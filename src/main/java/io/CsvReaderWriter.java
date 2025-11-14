@@ -8,16 +8,12 @@ import java.io.PrintWriter;
 
 public class CsvReaderWriter {
 
-    private File getResultFileCsv(String repoOwner, String repoName) {
-        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv");
+    private File getResultFileCsv(String repoOwner, String repoName, String linter) {
+        return new File("csv" + File.separator + repoOwner + "." + repoName + "." + linter + ".csv");
     }
 
-    public boolean resultFileCsvIsPresent(String repoOwner, String repoName) {
-        return new File("results" + File.separator + repoOwner + "." + repoName + ".csv").exists();
-    }
-
-    public void writeResultAsCsv(Result result) throws IOException {
-        File resultFile = getResultFileCsv(result.repoOwner(), result.repoName());
+    public void writeResultAsCsv(Result result, String linter) throws IOException {
+        File resultFile = getResultFileCsv(result.repoOwner(), result.repoName(), linter);
         if (!resultFile.getParentFile().exists()) {
             resultFile.getParentFile().mkdirs();
         }

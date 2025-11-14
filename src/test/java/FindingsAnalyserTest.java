@@ -1,7 +1,7 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import org.junit.jupiter.api.BeforeAll;
 import util.GuiceModule;
-import org.eclipse.jgit.api.errors.GitAPIException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,43 +10,66 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import logic.FindingsAnalyser;
 import model.Result;
 
-import java.io.IOException;
-
 @Execution(ExecutionMode.CONCURRENT)
 class FindingsAnalyserTest {
 
-    private FindingsAnalyser findingsAnalyser;
+    private static FindingsAnalyser findingsAnalyser;
 
-    @BeforeEach
-    void setup() {
+    @BeforeAll
+    static void setup() {
         Injector injector = Guice.createInjector(new GuiceModule());
         findingsAnalyser = injector.getInstance(FindingsAnalyser.class);
     }
 
     @Test
-    void testAirbnbDeepLinkDispatch() throws GitAPIException, IOException {
+    void testAirbnbDeepLinkDispatch() {
         Result result = findingsAnalyser.analyseFindings("airbnb", "DeepLinkDispatch");
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
-                () -> assertFindingsAtEntry(result.entries().getLast(), 6, 4, 6, 15)
+                () -> assertFindingsAtEntry(result.entries().getLast(), 4, 3, 12, 15),
+                () -> assertMetricsAtEntry(result.entries().getFirst(), 3, 67, 41),
+                () -> assertMetricsAtEntry(result.entries().getLast(), 36, 4126, 3179)
         );
     }
 
     @Test
-    void testAlexvasilkovGestureViews() throws GitAPIException, IOException {
-        Result result = findingsAnalyser.analyseFindings("alexvasilkov", "GestureViews");
+    void testApacheMetron() {
+        Result result = findingsAnalyser.analyseFindings("apache", "metron");
         Assertions.assertAll(
-                () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 3, 0),
-                () -> assertFindingsAtEntry(result.entries().getLast(), 6, 4, 18, 5)
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 66, 5, 54, 76),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 852, 42, 266, 363),
+                () -> assertMetricsAtEntry(result.entries().getFirst(), 150, 19892, 11945),
+                () -> assertMetricsAtEntry(result.entries().getLast(), 1053, 149933, 97244)
         );
     }
 
     @Test
-    void testAeronIoSimpleBinaryEncoding() throws GitAPIException, IOException {
-        Result result = findingsAnalyser.analyseFindings("aeron-io", "simple-binary-encoding");
+    void testTraccerTraccer() {
+        Result result = findingsAnalyser.analyseFindings("traccar", "traccar");
         Assertions.assertAll(
-                () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
-                () -> assertFindingsAtEntry(result.entries().getLast(), 480, 31, 287, 38)
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 290, 1, 67, 12),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 216, 12, 247, 162),
+                () -> assertMetricsAtEntry(result.entries().getFirst(), 147, 15855, 10264),
+                () -> assertMetricsAtEntry(result.entries().getLast(), 789, 68087, 46056)
+        );
+    }
+
+    @Test
+    void testGooglePhysicalWeb() {
+        Result result = findingsAnalyser.analyseFindings("google", "physical-web");
+        Assertions.assertAll(
+                () -> assertFindingsAtEntry(result.entries().getFirst(), 2, 1, 2, 5),
+                () -> assertFindingsAtEntry(result.entries().getLast(), 21, 3, 20, 18),
+                () -> assertMetricsAtEntry(result.entries().getFirst(), 12, 2633, 1509),
+                () -> assertMetricsAtEntry(result.entries().getLast(), 63, 11524, 7217)
+        );
+    }
+
+    private static void assertMetricsAtEntry(Result.Entry entry, int numberOfFiles, int numberOfLinesOfCode, int numberOfSourceLinesOfCode) {
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(numberOfFiles, entry.totalNumberOfFiles()),
+                () -> Assertions.assertEquals(numberOfLinesOfCode, entry.totalNumberOfLinesOfCode()),
+                () -> Assertions.assertEquals(numberOfSourceLinesOfCode, entry.totalNumberOfSourceLinesOfCode())
         );
     }
 
