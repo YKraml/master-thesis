@@ -1,9 +1,9 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import linter.searching.logic.LinterFinder;
-import linter.searching.logic.LinterIntroductionFinder;
-import linter.searching.logic.RepositoryDownloader;
-import linter.searching.model.Linter;
+import logic.LinterFinder;
+import logic.LinterIntroductionFinder;
+import logic.RepositoryDownloader;
+import model.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import common.GuiceModule;
+import util.GuiceModule;
 
 import java.io.File;
 import java.io.IOException;

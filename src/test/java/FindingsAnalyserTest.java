@@ -1,14 +1,14 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import common.GuiceModule;
+import util.GuiceModule;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import teamscale.logic.FindingsAnalyser;
-import teamscale.model.Result;
+import logic.FindingsAnalyser;
+import model.Result;
 
 import java.io.IOException;
 
