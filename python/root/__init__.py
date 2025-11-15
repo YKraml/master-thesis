@@ -1,4 +1,5 @@
 import math
+from concurrent.futures import ProcessPoolExecutor
 from os import listdir
 
 import matplotlib.pyplot as pyplot
@@ -47,23 +48,38 @@ def plot_data_frame(data_frame, file_name):
 
 
 def create_data_frame(file_name):
-    data_frame = pandas.read_csv("csv/" + file_name, sep=',', index_col=0)
+    data_frame = pandas.read_csv("csv/" + file_name + ".csv", sep=',', index_col=0)
     data_frame = data_frame.reset_index(drop=True)
     data_frame.index = range(-730, 731)  # [-730,...,0,...,730]
     return data_frame
 
 
-print("Start Python Script")
+def worker(file):
+    file_name = file.replace(".csv", "")
+    print(f"Create plot for: {file_name}")
 
-files = listdir("csv")
-for file in files:
-    print("Create plot for: " + file)
-    data_frame = create_data_frame(file)
+    df = create_data_frame(file_name)
+    plot_data_frame(df, file_name)
+    return df
 
 
-    file = file.replace(".csv","")
-    plot_data_frame(data_frame, file)
+def main():
+    print("Start Python Script")
+    files = listdir("csv")
 
-# createPlot("Activiti.Activiti.CHECKSTYLE.csv")
+    frames = []
+    with ProcessPoolExecutor() as exe:
+        for df in exe.map(worker, files):
+            frames.append(df)
 
-print("End Python Script")
+    # Plot average
+    print("Create average plot with this many data frames: " + str(len(frames)))
+    average_frame = pandas.concat(frames).groupby(level=0).mean()
+    plot_data_frame(average_frame, "Average")
+
+    print("End Python Script")
+
+    return frames
+
+if __name__ == "__main__":
+    main()
