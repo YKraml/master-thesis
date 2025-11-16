@@ -6,6 +6,7 @@ import api.model.churn.Finding;
 import api.model.churn.FindingChurn;
 import api.model.metrics.Metrics;
 import api.model.metrics.ValueDouble;
+import api.model.metrics.ValueMapping;
 import jakarta.inject.Inject;
 import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
@@ -122,6 +123,33 @@ public class FindingsAnalyser {
         double relativeNumberOfMethodLengthViolations = (double) totalNumberOfMethodLengthViolations / totalNumberOfLinesOfCode * 1000;
         double relativeNumberOfNestingDepthViolations = (double) totalNumberOfNestingDepthViolations / totalNumberOfLinesOfCode * 1000;
 
+        ValueMapping fileSizeAssessment = (ValueMapping) metrics.getValue().get(3);
+        int fileSizeAssessmentRed = (int) fileSizeAssessment.getA();
+        int fileSizeAssessmentYellow = (int) fileSizeAssessment.getYellow();
+        int fileSizeAssessmentGreen = (int) fileSizeAssessment.getGreen();
+
+        ValueMapping methodLengthAssessment = (ValueMapping) metrics.getValue().get(5);
+        int methodLengthAssessmentRed = (int) methodLengthAssessment.getA();
+        int methodLengthAssessmentYellow = (int) methodLengthAssessment.getYellow();
+        int methodLengthAssessmentGreen = (int) methodLengthAssessment.getGreen();
+
+        ValueMapping nestingDepthAssessment = (ValueMapping) metrics.getValue().get(7);
+        int nestingDepthAssessmentRed = (int) nestingDepthAssessment.getA();
+        int nestingDepthAssessmentYellow = (int) nestingDepthAssessment.getYellow();
+        int nestingDepthAssessmentGreen = (int) nestingDepthAssessment.getGreen();
+
+        double relativeFileSizeAssessmentRed = (double) fileSizeAssessmentRed / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
+        double relativeFileSizeAssessmentYellow = (double) fileSizeAssessmentYellow / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
+        double relativeFileSizeAssessmentGreen = (double) fileSizeAssessmentGreen / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
+        double relativeMethodLengthAssessmentRed = (double) methodLengthAssessmentRed / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
+        double relativeMethodLengthAssessmentYellow = (double) methodLengthAssessmentYellow / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
+        double relativeMethodLengthAssessmentGreen = (double) methodLengthAssessmentGreen / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
+        double relativeNestingDepthAssessmentRed = (double) nestingDepthAssessmentRed / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
+        double relativeNestingDepthAssessmentYellow = (double) nestingDepthAssessmentYellow / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
+        double relativeNestingDepthAssessmentGreen = (double) nestingDepthAssessmentGreen / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
+
+        double cloneCoverage = ((ValueDouble) metrics.getValue().get(17)).getValue();
+
         return new Result.Entry(
                 time,
                 totalNumberOfContributors,
@@ -135,6 +163,26 @@ public class FindingsAnalyser {
                 relativeNumberOfCodeClones,
                 relativeNumberOfFileSizeViolations,
                 relativeNumberOfMethodLengthViolations,
-                relativeNumberOfNestingDepthViolations);
+                relativeNumberOfNestingDepthViolations,
+                fileSizeAssessmentRed,
+                fileSizeAssessmentYellow,
+                fileSizeAssessmentGreen,
+                methodLengthAssessmentRed,
+                methodLengthAssessmentYellow,
+                methodLengthAssessmentGreen,
+                nestingDepthAssessmentRed,
+                nestingDepthAssessmentYellow,
+                nestingDepthAssessmentGreen,
+                relativeFileSizeAssessmentRed,
+                relativeFileSizeAssessmentYellow,
+                relativeFileSizeAssessmentGreen,
+                relativeMethodLengthAssessmentRed,
+                relativeMethodLengthAssessmentYellow,
+                relativeMethodLengthAssessmentGreen,
+                relativeNestingDepthAssessmentRed,
+                relativeNestingDepthAssessmentYellow,
+                relativeNestingDepthAssessmentGreen,
+                cloneCoverage
+        );
     }
 }

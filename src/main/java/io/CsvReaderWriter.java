@@ -1,6 +1,7 @@
 package io;
 
 import model.Result;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,6 +11,10 @@ public class CsvReaderWriter {
 
     private File getResultFileCsv(String repoOwner, String repoName, String linter) {
         return new File("python/root/csv" + File.separator + repoOwner + "." + repoName + "." + linter + ".csv");
+    }
+
+    public void deleteAllCsvFiles() throws IOException {
+        FileUtils.deleteDirectory(new File("python/root/csv"));
     }
 
     public void writeResultAsCsv(Result result, String linter) throws IOException {
@@ -28,5 +33,4 @@ public class CsvReaderWriter {
             }
         }
     }
-
 }

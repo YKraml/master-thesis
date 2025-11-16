@@ -10,7 +10,9 @@ public class MainResultNormalisation {
 
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
-        injector.getInstance(State.class).startPrintingTimer();
+        //injector.getInstance(State.class).startPrintingTimer();
+        System.out.println("Start");
         injector.getInstance(ResultNormaliser.class).normaliseResults();
+        System.out.println("End");
     }
 }

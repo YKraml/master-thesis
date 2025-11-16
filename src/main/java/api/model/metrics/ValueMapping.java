@@ -24,11 +24,11 @@ public class ValueMapping extends Value {
         return b;
     }
 
-    public double getC() {
+    public double getYellow() {
         return c;
     }
 
-    public double getD() {
+    public double getGreen() {
         return d;
     }
 

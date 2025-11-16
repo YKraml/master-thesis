@@ -1,15 +1,18 @@
 package logic;
 
 import io.NormalisedResultReaderWriter;
-import model.Proof;
 import io.ResultReaderWriter;
+import model.Proof;
+import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import model.Result;
 
 import javax.inject.Inject;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 
 public class ResultNormaliser {
@@ -49,24 +52,34 @@ public class ResultNormaliser {
 
     private void normaliseResult(Result result) throws IOException, GitAPIException {
         Proof proof = repositoryHandler.handleRepo(result.repoOwner(), result.repoName()).get();
-        TreeMap<Integer, Result.Entry> map = new TreeMap<>();
+        TreeMap<Integer, Result.Entry> timeEntryMap = new TreeMap<>();
+
         for (Result.Entry entry : result.entries()) {
-            map.put(entry.time(), entry);
+            timeEntryMap.put(entry.time(), entry);
         }
 
         for (Proof.LinterWithProof linter : proof.linters()) {
-            Result normalise = normalise(map, linter, proof.repoOwner(), proof.repoName());
+
+            //Skip projects that do not have two years before and after linter introduction
+            int analysisStartTime = linter.introductionTime() - SECONDS_IN_A_DAY * (DAYS_IN_TWO_YEARS);
+            int analysisEndTime = linter.introductionTime() + SECONDS_IN_A_DAY * (DAYS_IN_TWO_YEARS);
+            int firstEntryTime = result.entries().getFirst().time();
+            int lastEntryTime = result.entries().getLast().time();
+            if (analysisStartTime < firstEntryTime || lastEntryTime < analysisEndTime) {
+                continue;
+            }
+
+            Result normalise = normalise(timeEntryMap, linter, proof.repoOwner(), proof.repoName());
             normalisedResultReaderWriter.writeNormalisedResult(normalise, linter.linterName());
         }
-
     }
 
-    private Result normalise(TreeMap<Integer, Result.Entry> map, Proof.LinterWithProof linter, String repoOwner, String repoName) {
+    private Result normalise(TreeMap<Integer, Result.Entry> timeEntryMap, Proof.LinterWithProof linter, String repoOwner, String repoName) {
 
         List<Result.Entry> entries = new ArrayList<>();
         for (Integer time : createTimes(linter)) {
-            Map.Entry<Integer, Result.Entry> low = map.floorEntry(time);
-            Map.Entry<Integer, Result.Entry> high = map.ceilingEntry(time);
+            Map.Entry<Integer, Result.Entry> low = timeEntryMap.floorEntry(time);
+            Map.Entry<Integer, Result.Entry> high = timeEntryMap.ceilingEntry(time);
 
             Result.Entry res = null;
             if (low != null && high != null) {
@@ -95,5 +108,4 @@ public class ResultNormaliser {
         }
         return times;
     }
-
 }

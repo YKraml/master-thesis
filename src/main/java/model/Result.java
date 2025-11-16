@@ -33,7 +33,26 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
             double relativeNumberOfCodeClones,
             double relativeNumberOfFileSizeViolations,
             double relativeNumberOfMethodLengthViolations,
-            double relativeNumberOfNestingDepthViolations
+            double relativeNumberOfNestingDepthViolations,
+            int fileSizeAssessmentRed,
+            int fileSizeAssessmentYellow,
+            int fileSizeAssessmentGreen,
+            int methodLengthAssessmentRed,
+            int methodLengthAssessmentYellow,
+            int methodLengthAssessmentGreen,
+            int nestingDepthAssessmentRed,
+            int nestingDepthAssessmentYellow,
+            int nestingDepthAssessmentGreen,
+            double relativeFileSizeAssessmentRed,
+            double relativeFileSizeAssessmentYellow,
+            double relativeFileSizeAssessmentGreen,
+            double relativeMethodLengthAssessmentRed,
+            double relativeMethodLengthAssessmentYellow,
+            double relativeMethodLengthAssessmentGreen,
+            double relativeNestingDepthAssessmentRed,
+            double relativeNestingDepthAssessmentYellow,
+            double relativeNestingDepthAssessmentGreen,
+            double cloneCoverage
     ) {
 
         public static String csvHeader() {
@@ -43,7 +62,7 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
         }
 
         public static Entry getDefault() {
-            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         }
 
         public String csvLine() {

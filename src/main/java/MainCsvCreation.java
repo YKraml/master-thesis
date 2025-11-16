@@ -15,6 +15,8 @@ public class MainCsvCreation {
         NormalisedResultReaderWriter resultReaderWriter = injector.getInstance(NormalisedResultReaderWriter.class);
         CsvReaderWriter csvReaderWriter = injector.getInstance(CsvReaderWriter.class);
 
+        System.out.println("Deleting CSVs");
+        csvReaderWriter.deleteAllCsvFiles();
         System.out.println("Start writing CSVs");
         for (Pair<String, Result> entry : resultReaderWriter.readAllNormalisedResults()) {
             csvReaderWriter.writeResultAsCsv(entry.getRight(), entry.getLeft());
