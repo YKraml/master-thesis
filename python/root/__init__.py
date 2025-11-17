@@ -54,13 +54,20 @@ def create_data_frame(file_name):
     return data_frame
 
 
-def worker(file):
+def handle_csv_file(file):
     file_name = file.replace(".csv", "")
-    print(f"Create plot for: {file_name}")
+    print("Create plot for: " + file_name)
 
     df = create_data_frame(file_name)
     plot_data_frame(df, file_name)
-    return df
+
+    return file_name, df
+
+
+def plot_average(frames, linter_name):
+    print("Create average plot with this many data frames: " + str(len(frames)))
+    average_frame = pandas.concat(frames).groupby(level=0).mean()
+    plot_data_frame(average_frame, "Average." + linter_name)
 
 
 def main():
@@ -68,18 +75,28 @@ def main():
     files = listdir("csv")
 
     frames = []
+    frames_checkstyle = []
+    frames_pmd = []
+    frames_spotbugs = []
+
     with ProcessPoolExecutor() as exe:
-        for df in exe.map(worker, files):
+        for element in exe.map(handle_csv_file, files):
+            file_name, df = element
             frames.append(df)
+            if "CHECKSTYLE" in file_name:
+                frames_checkstyle.append(df)
+            elif "PMD" in file_name:
+                frames_pmd.append(df)
+            elif "SPOTBUGS" in file_name:
+                frames_spotbugs.append(df)
 
     # Plot average
-    print("Create average plot with this many data frames: " + str(len(frames)))
-    average_frame = pandas.concat(frames).groupby(level=0).mean()
-    plot_data_frame(average_frame, "Average")
-
+    plot_average(frames_pmd, "ALL")
+    plot_average(frames_pmd, "PMD")
+    plot_average(frames_checkstyle, "CHECKSTYLE")
+    plot_average(frames_spotbugs, "SPOTBUGS")
     print("End Python Script")
 
-    return frames
 
 if __name__ == "__main__":
     main()
