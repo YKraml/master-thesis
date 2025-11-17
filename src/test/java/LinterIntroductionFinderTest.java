@@ -2,7 +2,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import logic.LinterFinder;
 import logic.LinterIntroductionFinder;
-import logic.RepositoryDownloader;
+import io.RepositoryDownloader;
 import model.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;

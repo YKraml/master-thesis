@@ -1,6 +1,7 @@
-package logic;
+package io;
 
 import jakarta.inject.Inject;
+import logic.State;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;

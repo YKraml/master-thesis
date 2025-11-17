@@ -2,37 +2,26 @@ package api.model.metrics;
 
 public class ValueMapping extends Value {
 
-    private final double a;
-    private final double b;
-    private final double c;
-    private final double d;
-    private final double e;
+    private final double red;
+    private final double yellow;
+    private final double green;
 
-    public ValueMapping(double a, double b, double c, double d, double e) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
+    public ValueMapping(double red, double yellow, double green) {
+        this.red = red;
+        this.yellow = yellow;
+        this.green = green;
     }
 
-    public double getA() {
-        return a;
-    }
-
-    public double getB() {
-        return b;
+    public double getRed() {
+        return red;
     }
 
     public double getYellow() {
-        return c;
+        return yellow;
     }
 
     public double getGreen() {
-        return d;
+        return green;
     }
 
-    public double getE() {
-        return e;
-    }
 }

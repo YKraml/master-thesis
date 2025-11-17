@@ -1,26 +1,33 @@
+import api.model.cleaned.TeamscaleData;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import util.GuiceModule;
+import io.TeamscaleDataDownloader;
+import logic.FindingsAnalyser;
+import model.Result;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import logic.FindingsAnalyser;
-import model.Result;
+import util.GuiceModule;
+
+import java.io.IOException;
 
 @Execution(ExecutionMode.CONCURRENT)
 class FindingsAnalyserTest {
 
+    private static final TeamscaleDataDownloader TEAMSCALE_DATA_DOWNLOADER;
     private static final FindingsAnalyser FINDINGS_ANALYSER;
 
     static {
         Injector injector = Guice.createInjector(new GuiceModule());
         FINDINGS_ANALYSER = injector.getInstance(FindingsAnalyser.class);
+        TEAMSCALE_DATA_DOWNLOADER = injector.getInstance(TeamscaleDataDownloader.class);
     }
 
     @Test
-    void testAirbnbDeepLinkDispatch() {
-        Result result = FINDINGS_ANALYSER.analyseFindings("airbnb", "DeepLinkDispatch");
+    void testAirbnbDeepLinkDispatch() throws IOException {
+        TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("airbnb", "DeepLinkDispatch");
+        Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 4, 3, 12, 15),
@@ -30,8 +37,9 @@ class FindingsAnalyserTest {
     }
 
     @Test
-    void testApacheMetron() {
-        Result result = FINDINGS_ANALYSER.analyseFindings("apache", "metron");
+    void testApacheMetron() throws IOException {
+        TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("apache", "metron");
+        Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 66, 5, 54, 76),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 852, 42, 266, 363),
@@ -41,8 +49,9 @@ class FindingsAnalyserTest {
     }
 
     @Test
-    void testTraccerTraccer() {
-        Result result = FINDINGS_ANALYSER.analyseFindings("traccar", "traccar");
+    void testTraccerTraccer() throws IOException {
+        TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("traccar", "traccar");
+        Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 290, 1, 67, 12),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 216, 12, 247, 162),
@@ -52,8 +61,9 @@ class FindingsAnalyserTest {
     }
 
     @Test
-    void testGooglePhysicalWeb() {
-        Result result = FINDINGS_ANALYSER.analyseFindings("google", "physical-web");
+    void testGooglePhysicalWeb() throws IOException {
+        TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("google", "physical-web");
+        Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 2, 1, 2, 5),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 21, 3, 20, 18),

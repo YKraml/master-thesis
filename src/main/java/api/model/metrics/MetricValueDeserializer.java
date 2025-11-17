@@ -22,7 +22,7 @@ public class MetricValueDeserializer extends StdDeserializer<Value> {
     }
 
     @Override
-    public Value deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
+    public Value deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         TreeNode treeNode = jsonParser.getCodec().readTree(jsonParser);
 
         if (treeNode instanceof DoubleNode doubleNode) {
@@ -32,11 +32,11 @@ public class MetricValueDeserializer extends StdDeserializer<Value> {
         if (treeNode instanceof ObjectNode objectNode) {
             if (objectNode.values().next() instanceof ArrayNode arrayNode) {
                 double a = arrayNode.get(0).asDouble();
-                double b = arrayNode.get(1).asDouble();
+                //double b = arrayNode.get(1).asDouble();
                 double c = arrayNode.get(2).asDouble();
                 double d = arrayNode.get(3).asDouble();
-                double e = arrayNode.get(4).asDouble();
-                return new ValueMapping(a, b, c, d, e);
+                //double e = arrayNode.get(4).asDouble();
+                return new ValueMapping(a, c, d);
             }
         }
 

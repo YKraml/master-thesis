@@ -11,10 +11,12 @@ public class State {
     private final Map<Pair<String, String>, Integer> indices;
 
     private int index = 1;
+    private final Timer timer;
 
     public State() {
         state = new LinkedHashMap<>();
         indices = new LinkedHashMap<>();
+        timer = new Timer();
     }
 
     public void addToState(Pair<String, String> key, String value) {
@@ -42,7 +44,7 @@ public class State {
     }
 
     public void startPrintingTimer() {
-        new Timer().schedule(new TimerTask() {
+        timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 printState();
@@ -68,5 +70,9 @@ public class State {
 
             System.out.println(output);
         }
+    }
+
+    public void stopPrintingTimer() {
+        timer.cancel();
     }
 }

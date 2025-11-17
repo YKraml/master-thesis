@@ -1,5 +1,6 @@
 package logic;
 
+import io.RepositoryDownloader;
 import model.Proof;
 import io.ProofReaderWriter;
 import jakarta.inject.Inject;

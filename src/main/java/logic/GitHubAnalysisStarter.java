@@ -1,5 +1,6 @@
 package logic;
 
+import io.RepositoryDownloader;
 import jakarta.inject.Inject;
 import org.apache.commons.lang3.tuple.Pair;
 import org.kohsuke.github.GHRepository;
