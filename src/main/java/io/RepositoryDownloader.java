@@ -59,7 +59,7 @@ public class RepositoryDownloader {
         try {
             state.addToState(Pair.of(owner, repoName), "Waiting for download");
             semaphore.acquire();
-            state.addToState(Pair.of(owner, repoName), "Downloading");
+            state.addToState(Pair.of(owner, repoName), "Downloading repository");
             File folder = new File(folderName);
             deleteRepo(owner, repoName);
             return Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();

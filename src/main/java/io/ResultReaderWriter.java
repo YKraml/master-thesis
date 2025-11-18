@@ -2,8 +2,9 @@ package io;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import org.apache.commons.io.FileUtils;
 import model.Result;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,13 +25,12 @@ public class ResultReaderWriter {
         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(resultFile, result);
     }
 
-    public List<Result> readAllResults() throws IOException {
-        List<Result> list = new ArrayList<>();
-        String folderName = getFolderName();
-
-        for (File file : FileUtils.listFiles(new File(folderName), new String[]{".json"}, false)) {
+    public List<Pair<String, Result>> readAllResults() throws IOException {
+        List<Pair<String, Result>> list = new ArrayList<>();
+        for (File file : FileUtils.listFiles(new File(getFolderName()), new String[]{".json"}, false)) {
             try {
-                list.add(new ObjectMapper().readValue(file, Result.class));
+                Result result = new ObjectMapper().readValue(file, Result.class);
+                list.add(Pair.of(file.getName().split("\\.")[2], result));
             } catch (MismatchedInputException e) {
                 e.printStackTrace();
                 file.delete();
