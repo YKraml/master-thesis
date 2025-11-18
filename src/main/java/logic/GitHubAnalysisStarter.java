@@ -34,7 +34,7 @@ public class GitHubAnalysisStarter {
     }
 
     public void start() {
-        state.startPrintingTimer();
+        state.start();
         startAnalysis();
     }
 

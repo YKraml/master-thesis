@@ -52,7 +52,9 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
             double relativeNestingDepthAssessmentRed,
             double relativeNestingDepthAssessmentYellow,
             double relativeNestingDepthAssessmentGreen,
-            double cloneCoverage
+            double cloneCoverage,
+            double averageFileLoc,
+            double averageFileSloc
     ) {
 
         public static String csvHeader() {
@@ -62,7 +64,7 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
         }
 
         public static Entry getDefault() {
-            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         }
 
         public String csvLine() {

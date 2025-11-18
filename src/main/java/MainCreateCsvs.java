@@ -8,7 +8,7 @@ import util.GuiceModule;
 
 import java.io.IOException;
 
-public class MainCsvCreation {
+public class MainCreateCsvs {
 
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());

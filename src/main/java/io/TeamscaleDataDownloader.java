@@ -4,15 +4,15 @@ import api.FindingChurnGetter;
 import api.MetricsGetter;
 import api.ProjectsGetter;
 import api.model.churn.FindingChurn;
+import api.model.cleaned.Assessment;
+import api.model.cleaned.CleanedMetrics;
+import api.model.cleaned.TeamscaleData;
+import api.model.cleaned.TeamscaleDataEntry;
 import api.model.metrics.Metrics;
 import api.model.metrics.ValueDouble;
 import api.model.metrics.ValueMapping;
 import api.model.project.Project;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import api.model.cleaned.Assessment;
-import api.model.cleaned.CleanedMetrics;
-import api.model.cleaned.TeamscaleData;
-import api.model.cleaned.TeamscaleDataEntry;
 import jakarta.inject.Inject;
 import logic.State;
 import org.apache.commons.lang3.tuple.Pair;
@@ -46,47 +46,47 @@ public class TeamscaleDataDownloader {
         this.metricsGetter = metricsGetter;
     }
 
-    public void startDownload() throws IOException {
+    public void startDownload() {
         List<Project> existingProjects = projectsGetter.getExistingProjects();
         for (Project existingProject : existingProjects) {
-            String[] split = existingProject.getName().split("\\.");
-            String repoOwner = split[0];
-            String repoName = split[1];
+            try {
+                String[] split = existingProject.getName().split("\\.", 2);
+                String repoOwner = split[0];
+                String repoName = split[1];
 
-            state.addToState(Pair.of(repoOwner, repoName), "Downloading data from Teamscale");
-            downloadDataFrom(repoOwner, repoName);
-            state.removeFromState(Pair.of(repoOwner, repoName));
+                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from Teamscale");
+                downloadDataFrom(repoOwner, repoName);
+                state.removeFromState(Pair.of(repoOwner, repoName));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException {
-
         File file = new File("data" + File.separator + repoOwner + "." + repoName + ".json");
         if (file.exists()) {
             return new ObjectMapper().readValue(file, TeamscaleData.class);
         }
 
-        List<Metrics> metricsList = metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
-
         List<CompletableFuture<?>> futures = Collections.synchronizedList(new ArrayList<>());
         List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
-        AtomicInteger atomicInteger = new AtomicInteger(0);
-        for (Metrics metrics : metricsList) {
+        AtomicInteger counter = new AtomicInteger(0);
+        for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
             futures.add(CompletableFuture.runAsync(() -> {
-
                 try {
                     SEMAPHORE.acquire();
+
+                    state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.get() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
+                    FindingChurn findingChurn = findingChurnGetter.getFindingsChurn(repoOwner, repoName, metrics.getTimestamp());
+                    data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
+                    counter.incrementAndGet();
+
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
+                } finally {
+                    SEMAPHORE.release();
                 }
-
-                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + atomicInteger.get() + "/" + metricsList.size());
-                FindingChurn findingChurn = findingChurnGetter.getFindingsChurn(repoOwner, repoName, metrics.getTimestamp());
-
-                data.add(TeamscaleDataEntry.of(findingChurn, getCleanedMetrics(metrics)));
-                atomicInteger.incrementAndGet();
-
-                SEMAPHORE.release();
             }, executorService));
         }
 
@@ -104,7 +104,7 @@ public class TeamscaleDataDownloader {
         return teamscaleData;
     }
 
-    private static CleanedMetrics getCleanedMetrics(Metrics metrics) {
+    private static CleanedMetrics cleanMetrics(Metrics metrics) {
         int time = Math.toIntExact(metrics.getTimestamp() / 1000);
         int totalNumberOfFiles = (int) ((ValueDouble) metrics.getValue().get(0)).getValue();
         int totalNumberOfLinesOfCode = (int) ((ValueDouble) metrics.getValue().get(1)).getValue();

@@ -19,8 +19,8 @@ public class GuiceModule implements Module {
 
     @Provides
     @Singleton
-    static State provideState() {
-        return new State();
+    static State provideState(ExecutorService executorService) {
+        return new State(executorService);
     }
 
     @Provides

@@ -1,5 +1,8 @@
 package api;
 
+import api.model.metrics.MetricValueDeserializer;
+import api.model.metrics.Metrics;
+import api.model.metrics.Value;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -9,9 +12,6 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import api.model.metrics.Value;
-import api.model.metrics.MetricValueDeserializer;
-import api.model.metrics.Metrics;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -62,9 +62,14 @@ public class MetricsGetter {
                 module.addDeserializer(Value.class, new MetricValueDeserializer());
                 mapper.registerModule(module);
 
-                return Arrays.stream(mapper.readValue(responseBody, Metrics[].class)).toList();
+                try {
+                    return Arrays.stream(mapper.readValue(responseBody, Metrics[].class)).toList();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

@@ -4,19 +4,22 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
 
 public class State {
 
     private final Map<Pair<String, String>, String> state;
     private final Map<Pair<String, String>, Integer> indices;
+    private final ExecutorService executorService;
 
     private int index = 1;
     private final Timer timer;
 
-    public State() {
+    public State(ExecutorService executorService) {
+        this.executorService = executorService;
         state = new LinkedHashMap<>();
         indices = new LinkedHashMap<>();
-        timer = new Timer();
+        timer = new Timer(true);
     }
 
     public void addToState(Pair<String, String> key, String value) {
@@ -32,7 +35,7 @@ public class State {
         synchronized (state) {
             state.put(key, "Finished");
         }
-        new Timer().schedule(new TimerTask() {
+        new Timer(true).schedule(new TimerTask() {
             @Override
             public void run() {
                 synchronized (state) {
@@ -43,7 +46,7 @@ public class State {
         }, 1500);
     }
 
-    public void startPrintingTimer() {
+    public void start() {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -72,7 +75,18 @@ public class State {
         }
     }
 
-    public void stopPrintingTimer() {
-        timer.cancel();
+    public void end() {
+        Timer timer1 = new Timer(false);
+        timer1.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                synchronized (state) {
+                    timer.cancel();
+                    timer1.cancel();
+                    executorService.close();
+                    System.out.println("Finished");
+                }
+            }
+        }, 3000);
     }
 }

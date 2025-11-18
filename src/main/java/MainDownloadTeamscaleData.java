@@ -1,19 +1,17 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import logic.State;
 import io.TeamscaleDataDownloader;
+import logic.State;
 import util.GuiceModule;
 
-import java.io.IOException;
+public class MainDownloadTeamscaleData {
 
-public class MainTeamscaleDataDownload {
-
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Injector injector = Guice.createInjector(new GuiceModule());
         State state = injector.getInstance(State.class);
         TeamscaleDataDownloader teamscaleDataDownloader = injector.getInstance(TeamscaleDataDownloader.class);
 
-        state.startPrintingTimer();
+        state.start();
         teamscaleDataDownloader.startDownload();
     }
 

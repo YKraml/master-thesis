@@ -5,7 +5,7 @@ import api.ProjectCreator;
 
 import java.io.IOException;
 
-public class MainProjectCreation {
+public class MainCreateProject {
 
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());

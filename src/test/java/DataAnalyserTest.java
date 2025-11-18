@@ -2,7 +2,7 @@ import api.model.cleaned.TeamscaleData;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import io.TeamscaleDataDownloader;
-import logic.FindingsAnalyser;
+import logic.DataAnalyser;
 import model.Result;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,14 +13,14 @@ import util.GuiceModule;
 import java.io.IOException;
 
 @Execution(ExecutionMode.CONCURRENT)
-class FindingsAnalyserTest {
+class DataAnalyserTest {
 
     private static final TeamscaleDataDownloader TEAMSCALE_DATA_DOWNLOADER;
-    private static final FindingsAnalyser FINDINGS_ANALYSER;
+    private static final DataAnalyser FINDINGS_ANALYSER;
 
     static {
         Injector injector = Guice.createInjector(new GuiceModule());
-        FINDINGS_ANALYSER = injector.getInstance(FindingsAnalyser.class);
+        FINDINGS_ANALYSER = injector.getInstance(DataAnalyser.class);
         TEAMSCALE_DATA_DOWNLOADER = injector.getInstance(TeamscaleDataDownloader.class);
     }
 

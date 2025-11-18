@@ -18,16 +18,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 
-public class FindingsAnalyser {
+public class DataAnalyser {
 
     private final ResultReaderWriter resultReaderWriter;
     private final State state;
     private final ExecutorService executorService;
 
     @Inject
-    public FindingsAnalyser(ResultReaderWriter resultReaderWriter, State state, ExecutorService executorService) {
+    public DataAnalyser(ResultReaderWriter resultReaderWriter, State state, ExecutorService executorService) {
 
         this.resultReaderWriter = resultReaderWriter;
         this.state = state;
@@ -35,12 +36,10 @@ public class FindingsAnalyser {
     }
 
     public void startAnalysis() {
-
+        List<CompletableFuture<?>> completableFutures = new ArrayList<>();
         Collection<File> files = FileUtils.listFiles(new File("data"), new String[]{".json"}, false);
-
         for (File file : files) {
-
-            executorService.execute(() -> {
+            completableFutures.add(CompletableFuture.runAsync(() -> {
                 try {
                     TeamscaleData data = new ObjectMapper().readValue(file, TeamscaleData.class);
                     String repoOwner = data.getRepoOwner();
@@ -52,11 +51,12 @@ public class FindingsAnalyser {
 
                     state.removeFromState(Pair.of(repoOwner, repoName));
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    e.printStackTrace();
                 }
-            });
-
+            }, executorService));
         }
+
+        CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0])).join();
     }
 
     public Result analyseTeamscaleData(TeamscaleData data) throws IOException {
@@ -68,7 +68,6 @@ public class FindingsAnalyser {
     private List<Result.Entry> createEntriesFromData(String repoOwner, String repoName, TeamscaleData teamscaleData) {
         List<Result.Entry> resultEntries = new ArrayList<>();
         List<TeamscaleDataEntry> dataEntries = teamscaleData.getEntries();
-
 
         Result.Entry beforeEntry = Result.Entry.getDefault();
         for (int i = 0; i < dataEntries.size(); i++) {
@@ -146,6 +145,8 @@ public class FindingsAnalyser {
         double relativeNestingDepthAssessmentGreen = (double) nestingDepthAssessmentGreen / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
 
         double cloneCoverage = cleanedMetrics.getCloneCoverage();
+        double averageFileLoc = (double) totalNumberOfSourceLinesOfCode / totalNumberOfFiles;
+        double averageFileSloc = (double) totalNumberOfLinesOfCode / totalNumberOfFiles;
 
         return new Result.Entry(
                 time,
@@ -179,7 +180,9 @@ public class FindingsAnalyser {
                 relativeNestingDepthAssessmentRed,
                 relativeNestingDepthAssessmentYellow,
                 relativeNestingDepthAssessmentGreen,
-                cloneCoverage
+                cloneCoverage,
+                averageFileLoc,
+                averageFileSloc
         );
     }
 
