@@ -1,101 +1,90 @@
 import math
-from concurrent.futures import ProcessPoolExecutor
-from os import listdir
+import os
 
 import matplotlib.pyplot as pyplot
 import pandas
-
-
-def plot_data_frame(data_frame, file_name):
-    columns = data_frame.columns
-    num_cols = len(columns)
-
-    # Choose grid size (square-ish)
-    cols = 4
-    rows = math.ceil(num_cols / cols)
-
-    fig, axes = pyplot.subplots(rows, cols, figsize=(8 * cols, 5 * rows))
-    axes = axes.flatten() if num_cols > 1 else [axes]
-
-    index_values = data_frame.index
-    mid_index = index_values[int(len(index_values) / 2)]
-
-    # Plot each column in its own subplot
-    for i, column_name in enumerate(columns):
-        ax = axes[i]
-
-        # Plot the column
-        data_frame[column_name].plot(ax=ax, title=column_name, xlabel="Days relative to linter introduction",
-                                     ylabel=column_name)
-
-        # Add vertical line in the middle with a name
-        ax.axvline(
-            x=mid_index,
-            linestyle="--",
-            label="Linter introduction"
-        )
-
-        # Show the legend
-        ax.legend(loc="upper left")
-
-    # Hide any unused subplots (if columns are odd number)
-    for j in range(i + 1, len(axes)):
-        axes[j].set_visible(False)
-
-    pyplot.tight_layout()
-    pyplot.savefig("plots/" + file_name + ".png")
-    pyplot.close()
-
-
-def create_data_frame(file_name):
-    data_frame = pandas.read_csv("csv/" + file_name + ".csv", sep=',', index_col=0)
-    data_frame = data_frame.reset_index(drop=True)
-    data_frame.index = range(-730, 731)  # [-730,...,0,...,730]
-    return data_frame
-
-
-def handle_csv_file(file):
-    file_name = file.replace(".csv", "")
-    print("Create plot for: " + file_name)
-
-    df = create_data_frame(file_name)
-    plot_data_frame(df, file_name)
-
-    return file_name, df
-
-
-def plot_average(frames, linter_name):
-    print("Create average plot with this many data frames: " + str(len(frames)))
-    average_frame = pandas.concat(frames).groupby(level=0).mean()
-    plot_data_frame(average_frame, "Average." + linter_name)
+import statsmodels.api as statsmodels
+from matplotlib.axes import Axes
+from pandas import DataFrame
 
 
 def main():
-    print("Start Python Script")
-    files = listdir("csv")
+    os.makedirs("plots", exist_ok=True)
 
-    frames = []
-    frames_checkstyle = []
-    frames_pmd = []
-    frames_spotbugs = []
+    project_name = "Alluxio.alluxio"
+    data_frame = pandas.read_csv("csv/{}.data.csv".format(project_name), sep=',', index_col=[0])
+    linter_frame = pandas.read_csv("csv/{}.linter.csv".format(project_name), sep=',')
 
-    with ProcessPoolExecutor() as exe:
-        for element in exe.map(handle_csv_file, files):
-            file_name, df = element
-            frames.append(df)
-            if "CHECKSTYLE" in file_name:
-                frames_checkstyle.append(df)
-            elif "PMD" in file_name:
-                frames_pmd.append(df)
-            elif "SPOTBUGS" in file_name:
-                frames_spotbugs.append(df)
+    for linter in get_linters(linter_frame):
+        linter_introduction_time: int = linter[0]
+        linter_name: str = linter[1]
 
-    # Plot average
-    plot_average(frames_pmd, "ALL")
-    plot_average(frames_pmd, "PMD")
-    plot_average(frames_checkstyle, "CHECKSTYLE")
-    plot_average(frames_spotbugs, "SPOTBUGS")
-    print("End Python Script")
+        columns = data_frame.columns
+        num_cols = len(columns)
+
+        # Choose grid size (square-ish)
+        cols = 4
+        rows = math.ceil(num_cols / cols)
+        fig, axes = pyplot.subplots(rows, cols, figsize=(8 * cols, 5 * rows))
+        axes = axes.flatten() if num_cols > 1 else [axes]
+
+        # Plot each column in its own subplot
+        for i, metric in enumerate(columns):
+            df: DataFrame = data_frame[[metric]].reset_index()
+            do_magic(df, linter_introduction_time, linter_name, metric, axes[i])
+
+        # Remove empty plots
+        for j in range(i + 1, len(axes)):
+            axes[j].set_visible(False)
+
+        # Save complete plot
+        pyplot.tight_layout()
+        pyplot.savefig("plots/{0}.{1}.png".format(project_name, linter_name), dpi=300)
+        pyplot.close()
+
+
+def get_linters(linter_frame: DataFrame) -> list[tuple[int, str]]:
+    linters = []
+    for idx, row in linter_frame.iterrows():
+        time = row.iloc[0]
+        linter = row.iloc[1]
+        linters.append((time, linter))
+    return linters
+
+
+def do_magic(data: DataFrame, linter_introduction_time: int, linter_name: str, metric: str, ax: Axes):
+    # Define the intervention time
+    intervention_time = linter_introduction_time  # replace x with your actual time
+
+    # Create the intervention indicator
+    data['intervention'] = (data['time'] >= intervention_time).astype(int)
+
+    # Create the time after intervention variable (0 before, time since intervention after)
+    data['time_after_intervention'] = data['time'] - intervention_time
+    data['time_after_intervention'] = data['time_after_intervention'] * data['intervention']
+
+    # Prepare the regression variables
+    X = statsmodels.add_constant(data[['time', 'intervention', 'time_after_intervention']])
+    y = data[metric]
+
+    # Fit the model
+    model = statsmodels.OLS(y, X).fit()
+
+    # print(model.summary())
+    # print(df.to_string())
+
+    # Plot observed data
+    data.plot.scatter(x='time', y=metric, ax=ax, label='Observed')
+
+    # Plot intervention line
+    ax.axvline(x=intervention_time, linestyle='--', color='green', label="{0} introduced".format(linter_name))
+
+    # Plot fitted regression line
+    ax.plot(data['time'], model.fittedvalues, color='red', label='Fitted')
+
+    # Plot title and legend
+    ax.set_title(f'ITS for {metric}')
+    # ax.legend(loc='upper left')
 
 
 if __name__ == "__main__":

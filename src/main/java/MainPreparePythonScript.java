@@ -6,14 +6,18 @@ import com.google.inject.Inject;
 import com.google.inject.Injector;
 import io.CsvReaderWriter;
 import io.TeamscaleDataDownloader;
+import logic.DataAnalyser;
 import logic.RepositoryHandler;
 import logic.State;
 import model.Proof;
+import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import util.GuiceModule;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -27,15 +31,17 @@ public class MainPreparePythonScript {
     private final RepositoryHandler repositoryHandler;
     private final TeamscaleDataDownloader teamscaleDataDownloader;
     private final ExecutorService executorService;
+    private final DataAnalyser dataAnalyser;
 
     @Inject
-    public MainPreparePythonScript(ProjectsGetter projectsGetter, CsvReaderWriter csvReaderWriter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, ExecutorService executorService) {
+    public MainPreparePythonScript(ProjectsGetter projectsGetter, CsvReaderWriter csvReaderWriter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, ExecutorService executorService, DataAnalyser dataAnalyser) {
         this.projectsGetter = projectsGetter;
         this.csvReaderWriter = csvReaderWriter;
         this.state = state;
         this.repositoryHandler = repositoryHandler;
         this.teamscaleDataDownloader = teamscaleDataDownloader;
         this.executorService = executorService;
+        this.dataAnalyser = dataAnalyser;
     }
 
     public static void main(String[] args) {
@@ -54,27 +60,64 @@ public class MainPreparePythonScript {
             String repoOwner = split[0];
             String repoName = split[1];
 
-            futures.add(CompletableFuture.runAsync(() -> {
-                state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
-                try {
-                    prepareData(repoOwner, repoName);
-                } catch (GitAPIException | IOException e) {
-                    e.printStackTrace();
-                }
-                state.removeFromState(Pair.of(repoOwner, repoName));
-            }, executorService));
-
+            //futures.add(CompletableFuture.runAsync(() -> {
+            state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
+            try {
+                prepareData(repoOwner, repoName);
+            } catch (GitAPIException | IOException e) {
+                e.printStackTrace();
+            }
+            state.removeFromState(Pair.of(repoOwner, repoName));
+            //}, executorService));
         }
 
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
     }
 
     private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException {
-
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
+        Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 
-        //TODO: continue here
+        writeResultAsCsv(result);
+        writeProofAsCsv(proof);
+    }
 
+    private void writeProofAsCsv(Proof proof) throws IOException {
+        String repoOwner = proof.repoOwner();
+        String repoName = proof.repoName();
+        File resultFile = new File("python" + File.separator + "root" + File.separator + "csv" + File.separator + repoOwner + "." + repoName + ".linter.csv");
+        if (!resultFile.getParentFile().exists()) {
+            resultFile.getParentFile().mkdirs();
+        }
+        if (!resultFile.exists()) {
+            resultFile.createNewFile();
+        }
+
+        try (PrintWriter pw = new PrintWriter(resultFile)) {
+            pw.println("time,linter");
+            for (Proof.LinterWithProof linter : proof.linters()) {
+                pw.println(linter.introductionTime() + "," + linter.linterName());
+            }
+        }
+    }
+
+    public void writeResultAsCsv(Result result) throws IOException {
+        String repoOwner = result.repoOwner();
+        String repoName = result.repoName();
+        File resultFile = new File("python" + File.separator + "root" + File.separator + "csv" + File.separator + repoOwner + "." + repoName + ".data.csv");
+        if (!resultFile.getParentFile().exists()) {
+            resultFile.getParentFile().mkdirs();
+        }
+        if (!resultFile.exists()) {
+            resultFile.createNewFile();
+        }
+
+        try (PrintWriter pw = new PrintWriter(resultFile)) {
+            pw.println(Result.Entry.csvHeader());
+            for (Result.Entry entry : result.entries()) {
+                pw.println(entry.csvLine());
+            }
+        }
     }
 }

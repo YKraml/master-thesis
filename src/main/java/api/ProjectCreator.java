@@ -105,12 +105,15 @@ public class ProjectCreator {
     }
 
     public void createAllProjects() throws IOException {
+        System.out.println("Start reading proof files");
         List<Proof> proofs = new ProofReaderWriter().readAllProofs();
         proofs.sort(Comparator.comparingInt(Proof::numberOfStars));
 
+        System.out.println("Getting existing projects from teamscale");
         List<Project> existingProjects = projectsGetter.getExistingProjects();
         Set<String> existingProjectNames = existingProjects.stream().map(Project::getName).collect(Collectors.toSet());
 
+        System.out.println("Creating projects");
         createProjects(proofs, existingProjectNames);
 
         System.out.println();
@@ -134,7 +137,7 @@ public class ProjectCreator {
                 }
                 i++;
 
-                System.out.println("Create: " + proof.link());
+                System.out.println(i + ". Create: " + proof.link());
                 createProjectWithProof(proof);
                 System.out.println("Finished creation");
             }

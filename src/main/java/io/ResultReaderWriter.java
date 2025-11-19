@@ -35,7 +35,6 @@ public class ResultReaderWriter {
                 e.printStackTrace();
                 file.delete();
             }
-
         }
         return list;
     }
@@ -43,7 +42,6 @@ public class ResultReaderWriter {
     private File getResultFile(String repoOwner, String repoName) {
         String folderName = getFolderName();
         return new File(folderName + File.separator + repoOwner + "." + repoName + ".json");
-
     }
 
     private static String getFolderName() {
@@ -54,4 +52,7 @@ public class ResultReaderWriter {
         return getResultFile(repoOwner, repoName).exists();
     }
 
+    public Result getResult(String repoOwner, String repoName) throws IOException {
+        return new ObjectMapper().readValue(getResultFile(repoOwner, repoName), Result.class);
+    }
 }

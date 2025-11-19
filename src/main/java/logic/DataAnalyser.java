@@ -62,6 +62,11 @@ public class DataAnalyser {
     public Result analyseTeamscaleData(TeamscaleData data) throws IOException {
         String repoOwner = data.getRepoOwner();
         String repoName = data.getRepoName();
+
+        if (resultReaderWriter.resultFileIsPresent(repoOwner, repoName)) {
+            return resultReaderWriter.getResult(repoOwner, repoName);
+        }
+
         return new Result(repoOwner, repoName, createEntriesFromData(repoOwner, repoName, data));
     }
 
@@ -82,7 +87,7 @@ public class DataAnalyser {
     }
 
     private Result.Entry createEntryFromData(FindingChurn findingChurn, CleanedMetrics cleanedMetrics, Result.Entry beforeEntry) {
-        int time = Math.toIntExact(cleanedMetrics.getTimestamp() / 1000);
+        int time = Math.toIntExact(cleanedMetrics.getTimestamp());
         int totalNumberOfContributors = -1;
         int totalNumberOfFiles = cleanedMetrics.getTotalNumberOfFiles();
         int totalNumberOfLinesOfCode = cleanedMetrics.getTotalNumberOfLinesOfCode();
@@ -185,5 +190,4 @@ public class DataAnalyser {
                 averageFileSloc
         );
     }
-
 }
