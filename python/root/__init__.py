@@ -2,11 +2,17 @@ import math
 import os
 
 import matplotlib.pyplot as pyplot
+import numpy
 import pandas
 import statsmodels.api as statsmodels
 from matplotlib.axes import Axes
 from pandas import DataFrame
 from statsmodels.regression.linear_model import RegressionResults
+
+from statsmodels.tsa.stattools import pacf
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import pandas as pd
 
 
 def main():
@@ -14,8 +20,6 @@ def main():
     for filename in os.listdir("csv"):
         if filename.endswith(".data.csv"):
             project_names.append(filename[:-len(".data.csv")])
-        elif filename.endswith(".linter.csv"):
-            project_names.append(filename[:-len(".linter.csv")])
 
     # Remove duplicates
     unique_project_names: list[str] = sorted(list(set(project_names)))
@@ -37,29 +41,43 @@ def handle_project(project_name: str):
 
     for linter in get_linters(linter_frame):
         linter_introduction_time: float = (linter[0] - start_time) / (60 * 60 * 24)
-
         linter_name: str = linter[1]
 
-        columns = data_frame.columns
-        num_cols = len(columns)
+        num_cols = len(data_frame.columns)
 
-        # Choose grid size (square-ish)
-        cols = 4
-        rows = math.ceil(num_cols / cols)
-        fig, axes = pyplot.subplots(rows, cols, figsize=(8 * cols, 5 * rows))
+        # Choose grid size
+        cols = 5
+        rows = num_cols
+        fig, axes = pyplot.subplots(rows, cols, figsize=(5 * cols, 3 * rows))
         axes = axes.flatten() if num_cols > 1 else [axes]
 
-        index: int = 0
-        # Plot each column in its own subplot
-        for i, metric in enumerate(columns):
-            index = index + 1
+        # For each metric one row of plots
+        for i, metric in enumerate(data_frame.columns):
             df: DataFrame = data_frame[[metric]].reset_index()
             model = create_its_model(df, linter_introduction_time, metric)
-            plot(axes[i], df, linter_introduction_time, linter_name, metric, model)
 
-        # Remove empty plots
-        for j in range(index, len(axes)):
-            axes[j].set_visible(False)
+            plot0 = axes[cols * i]
+            plot0.hist(df[metric])
+            plot0.set_title("{0} Distribution".format(metric))
+
+            plot1 = axes[cols * i + 1]
+            plot(plot1, df, linter_introduction_time, linter_name, metric, model)
+
+            plot2 = axes[cols * i + 2]
+            plot2.hist(numpy.array(model.fittedvalues) - numpy.array(df[metric]))
+            plot2.set_title('Error Distribution')
+
+            plot3 = axes[cols * i + 3]
+            plot3.plot(numpy.array(model.fittedvalues) - numpy.array(df.dropna()[metric]))
+            plot3.axhline(linestyle="--", color="green")
+            plot3.set_title('Error over Time')
+
+            plot4 = axes[cols * i + 4]
+            sm.graphics.tsa.plot_pacf(numpy.array(model.fittedvalues) - numpy.array(df.dropna()[metric]), lags=40,
+                                      ax=plot4)
+            plot4.set_title("Partial Autocorrelation Function (PACF)")
+            plot4.set_xlabel("Lag")
+            plot4.set_ylabel("Partial Autocorrelation")
 
         # Save complete plot
         pyplot.tight_layout()
@@ -88,29 +106,33 @@ def plot(ax: Axes, data: DataFrame, linter_introduction_time: float, linter_name
     ax.plot(data['time'], model.fittedvalues, color='red', label='Fitted')
 
     # Plot title and legend
-    ax.set_title(metric)
+    ax.set_title("Observed data and fitted line")
     ax.legend(loc='upper left')
 
 
 def create_its_model(data: DataFrame, linter_introduction_time: float, metric: str) -> RegressionResults:
-    # Create two new columns
+    # Create three new columns
+    # Looks like this after: index, time, averageFileSloc, intervention, t_pre, t_post
     data['intervention'] = (data['time'] >= linter_introduction_time).astype(int)
-    data['time_after_intervention'] = (data['time'] - linter_introduction_time) * data['intervention']
+    data['t_pre'] = data['time'] * (1 - data['intervention'])
+    data['t_post'] = data['time'] * data['intervention']
 
-    dependant_variable = data[metric]
-    independent_variables = statsmodels.add_constant(data[['time', 'intervention', 'time_after_intervention']])
+    formula = '{0} ~ t_pre + t_post + intervention + 1'.format(metric)
 
+    # Fit the linear mixed-effects model
+    model = sm.GLSAR.from_formula(formula, data=data, rho=1)
+    model = model.iterative_fit(maxiter=10)
+
+    print("")
+    print (metric)
+    # print(data)
     # print(data.to_string())
     # print(data[metric].describe())
-
-    # Fit the model
-    model: RegressionResults = statsmodels.OLS(dependant_variable, independent_variables).fit()
-
     print(model.summary())
 
     return model
 
 
 if __name__ == "__main__":
-    main()
-    # handle_project("Activiti.Activiti")
+    # main()
+    handle_project("AChep.AcDisplay")

@@ -13,6 +13,7 @@ import api.model.metrics.ValueDouble;
 import api.model.metrics.ValueMapping;
 import api.model.project.Project;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.util.concurrent.Futures;
 import jakarta.inject.Inject;
 import logic.State;
 import org.apache.commons.lang3.tuple.Pair;
@@ -22,15 +23,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TeamscaleDataDownloader {
 
     private final ProjectsGetter projectsGetter;
-    private final static Semaphore SEMAPHORE = new Semaphore(4);
 
     private final ExecutorService executorService;
     private final State state;
@@ -74,19 +72,10 @@ public class TeamscaleDataDownloader {
         AtomicInteger counter = new AtomicInteger(0);
         for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
             futures.add(CompletableFuture.runAsync(() -> {
-                try {
-                    SEMAPHORE.acquire();
-
-                    state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.get() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
-                    FindingChurn findingChurn = findingChurnGetter.getFindingsChurn(repoOwner, repoName, metrics.getTimestamp());
-                    data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
-                    counter.incrementAndGet();
-
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                } finally {
-                    SEMAPHORE.release();
-                }
+                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.get() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
+                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, metrics.getTimestamp());
+                data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
+                counter.incrementAndGet();
             }, executorService));
         }
 
@@ -133,6 +122,45 @@ public class TeamscaleDataDownloader {
                 Assessment.of(nestingDepthAssessmentRed, nestingDepthAssessmentYellow, nestingDepthAssessmentGreen),
                 cloneCoverage
         );
+    }
+
+    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp) {
+        int maxRetries = 5;
+        int timeout = 10;
+        int waitTime = 5000;
+
+        int attempts = 0;
+        while (attempts < maxRetries) {
+            attempts++;
+
+            CompletableFuture<FindingChurn> future = CompletableFuture.supplyAsync(() ->
+                    findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp));
+
+            try {
+                return future.get(timeout, TimeUnit.SECONDS);
+            } catch (TimeoutException e) {
+                System.err.println("Method call timed out after " + timeout + " seconds.");
+                future.cancel(true);
+
+                if (attempts < maxRetries) {
+                    try {
+                        System.out.println("Waiting 5 seconds before retrying...");
+                        Thread.sleep(waitTime);
+                    } catch (InterruptedException ie) {
+                        Thread.currentThread().interrupt();
+                        break;
+                    }
+                }
+
+            } catch (InterruptedException | ExecutionException e) {
+                System.err.println("Execution interrupted.");
+                Thread.currentThread().interrupt();
+                future.cancel(true);
+            }
+        }
+
+        System.err.println("Failed to get FindingsChurn after " + maxRetries + " attempts.");
+        throw new RuntimeException("Could not get findings churn");
     }
 
 }
