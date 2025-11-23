@@ -21,7 +21,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeoutException;
 
 public class MainPreparePythonScript {
 
@@ -60,21 +62,21 @@ public class MainPreparePythonScript {
             String repoOwner = split[0];
             String repoName = split[1];
 
-            //futures.add(CompletableFuture.runAsync(() -> {
+
             state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
             try {
                 prepareData(repoOwner, repoName);
-            } catch (GitAPIException | IOException e) {
+            } catch (GitAPIException | IOException | ExecutionException | InterruptedException | TimeoutException e) {
                 e.printStackTrace();
             }
             state.removeFromState(Pair.of(repoOwner, repoName));
-            //}, executorService));
+
         }
 
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
     }
 
-    private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException {
+    private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);

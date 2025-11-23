@@ -25,6 +25,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Supplier;
 
 public class TeamscaleDataDownloader {
 
@@ -61,7 +62,7 @@ public class TeamscaleDataDownloader {
         }
     }
 
-    public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException {
+    public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException {
         File file = new File("data" + File.separator + repoOwner + "." + repoName + ".json");
         if (file.exists()) {
             return new ObjectMapper().readValue(file, TeamscaleData.class);
@@ -72,14 +73,14 @@ public class TeamscaleDataDownloader {
         AtomicInteger counter = new AtomicInteger(0);
         for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
             futures.add(CompletableFuture.runAsync(() -> {
-                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.get() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
+                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
                 FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, metrics.getTimestamp());
                 data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
-                counter.incrementAndGet();
             }, executorService));
         }
 
-        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).join();
+
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get(300, TimeUnit.SECONDS);
         data.sort((o1, o2) -> Math.toIntExact(o1.getMetrics().getTimestamp() / 1000 - o2.getMetrics().getTimestamp() / 1000));
 
         File folder = new File("data");
@@ -128,38 +129,27 @@ public class TeamscaleDataDownloader {
         int maxRetries = 5;
         int timeout = 10;
         int waitTime = 5000;
+        Supplier<FindingChurn> supplier = () ->
+                findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp);
 
-        int attempts = 0;
-        while (attempts < maxRetries) {
-            attempts++;
-
-            CompletableFuture<FindingChurn> future = CompletableFuture.supplyAsync(() ->
-                    findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp));
+        for (int i = 0; i < maxRetries; i++) {
 
             try {
-                return future.get(timeout, TimeUnit.SECONDS);
+                return CompletableFuture.supplyAsync(supplier).get(timeout, TimeUnit.SECONDS);
             } catch (TimeoutException e) {
-                System.err.println("Method call timed out after " + timeout + " seconds.");
-                future.cancel(true);
-
-                if (attempts < maxRetries) {
-                    try {
-                        System.out.println("Waiting 5 seconds before retrying...");
-                        Thread.sleep(waitTime);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-                }
-
+                System.out.println("Method call timed out after " + timeout + " seconds.");
             } catch (InterruptedException | ExecutionException e) {
-                System.err.println("Execution interrupted.");
-                Thread.currentThread().interrupt();
-                future.cancel(true);
+                System.out.println("Execution interrupted.");
+            }
+
+            try {
+                System.out.println("Waiting 5 seconds before retrying...");
+                Thread.sleep(waitTime);
+            } catch (InterruptedException e) {
             }
         }
 
-        System.err.println("Failed to get FindingsChurn after " + maxRetries + " attempts.");
+        System.out.println("Failed to get FindingsChurn after " + maxRetries + " attempts.");
         throw new RuntimeException("Could not get findings churn");
     }
 
