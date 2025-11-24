@@ -1,11 +1,17 @@
 import pandas
-from linearmodels.panel.results import PanelEffectsResults
+from linearmodels.panel.results import PanelEffectsResults, PanelResults
 from linearmodels import PanelOLS
 import os
 import seaborn
 from matplotlib import pyplot
 from pandas import DataFrame
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+from linearmodels import PooledOLS
+import statsmodels.api as sm
+from statsmodels.stats.diagnostic import het_white, het_breuschpagan
+from statsmodels.stats.stattools import durbin_watson
+from linearmodels import PanelOLS
+from linearmodels import RandomEffects
 
 import Util
 
@@ -56,44 +62,45 @@ def main():
         columns = pandas.read_csv("csv/{}.data.csv".format(project_names[0]), sep=',', index_col=[0]).columns
         data_frame = data_frames_per_linter[linter].sort_values(by='time')
 
-        metrics_and_models: dict[str, tuple[DataFrame, PanelEffectsResults]] = {}
+        metrics_and_models: dict[str, tuple[DataFrame, PanelResults]] = {}
         print("      * creating models")
         for index, metric in enumerate(columns):
-            data = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]].dropna()
+            try:
+                data = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]].dropna()
 
-            # remove outliers
-            Q1 = data[metric].quantile(0.25)
-            Q3 = data[metric].quantile(0.75)
-            IQR = Q3 - Q1
+                # Multi index set to 'id' and 'time'
+                data = data.set_index(['id', 'time'])
 
-            lower_bound = Q1 - 1.5 * IQR
-            upper_bound = Q3 + 1.5 * IQR
+                # create Model
+                endog: DataFrame = data[metric]
+                exog: DataFrame = data[['t_pre', 't_post', 'intervention']]
+                exog: DataFrame = sm.add_constant(exog)
 
-            data = data[(data[metric] >= lower_bound) & (data[metric] <= upper_bound)]
+                # random effects model
+                model_re: RandomEffects = RandomEffects(endog, exog)
+                re_res: PanelResults = model_re.fit()
 
-            data = data.set_index(['id', 'time'])
+                # fixed effects model
+                model_fe: PanelOLS = PanelOLS(endog, exog, entity_effects=True)
+                fe_res: PanelResults = model_fe.fit()
 
-            # create Model
-            formula = metric + ' ~ 1 + t_pre + t_post + intervention + C(id)'
-            model: PanelEffectsResults = (PanelOLS.from_formula(formula, data=data, )
-                                          .fit(cov_type='clustered', cluster_entity=True))
-
-            metrics_and_models[metric] = (data, model)
+                metrics_and_models[metric] = (data, re_res)
+            except:
+                print("Something went wrong for metric " + metric)
 
         # plot
         print("      * creating plots")
         for metric in metrics_and_models:
-            print(f"         * creating plots for {metric}")
             data: DataFrame = metrics_and_models[metric][0]
-            model: PanelEffectsResults = metrics_and_models[metric][1]
+            model: PanelResults = metrics_and_models[metric][1]
             save_individual_plots(data, linter, metric, model)
 
     print("Finished")
 
 
-def save_individual_plots(data: DataFrame, linter: str, metric: str, model: PanelEffectsResults):
+def save_individual_plots(data: DataFrame, linter: str, metric: str, results: PanelResults):
     # 1. Calculate predictions
-    data['predicted'] = model.predict()
+    data['predicted'] = results.predict()
     data_plot = data.reset_index()
 
     # Create the output directory
@@ -101,14 +108,15 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, model: Pane
     os.makedirs(output_dir, exist_ok=True)
 
     # 2. Save the Model Summary to a separate file
-    model_text = model.summary.as_text()
+    model_text = results.summary.as_text()
     summary_filepath = os.path.join(output_dir, f"_summary.txt")
     with open(summary_filepath, 'w') as f:
         f.write(model_text)
 
     # 3. Iterate and save individual plots
     unique_ids = data_plot['id'].unique()
-    # parallel_plotting(unique_ids, data_plot, metric, output_dir)
+    #print(f"         * creating plots for {metric}")
+    #parallel_plotting(unique_ids, data_plot, metric, output_dir)
 
 
 def parallel_plotting(unique_ids, data_plot, metric, output_dir):
