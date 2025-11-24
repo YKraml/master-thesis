@@ -62,7 +62,6 @@ public class MainPreparePythonScript {
             String repoOwner = split[0];
             String repoName = split[1];
 
-
             state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
             try {
                 prepareData(repoOwner, repoName);
@@ -80,6 +79,16 @@ public class MainPreparePythonScript {
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
+
+        Integer timestamp = teamscaleData.getEntries().getFirst().getMetrics().getTimestamp();
+        for (Proof.LinterWithProof linter : proof.linters()) {
+            int introductionTime = linter.introductionTime();
+
+            int secondsInTwoYears = 2 * 365 * 24 * 60 * 60;
+            if (introductionTime - (secondsInTwoYears * 0.90) < timestamp) {
+                return;
+            }
+        }
 
         writeResultAsCsv(result);
         writeProofAsCsv(proof);

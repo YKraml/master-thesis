@@ -2,16 +2,20 @@ import pandas
 from linearmodels.panel.results import PanelEffectsResults, PanelResults
 from linearmodels import PanelOLS
 import os
+import numpy
 import seaborn
 from matplotlib import pyplot
+import statsmodels.api as statsmodels
 from pandas import DataFrame
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from linearmodels import PooledOLS
 import statsmodels.api as sm
+import scipy.stats as stats
 from statsmodels.stats.diagnostic import het_white, het_breuschpagan
 from statsmodels.stats.stattools import durbin_watson
 from linearmodels import PanelOLS
 from linearmodels import RandomEffects
+import scipy.stats
 
 import Util
 
@@ -67,6 +71,7 @@ def main():
         for index, metric in enumerate(columns):
             try:
                 data = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]].dropna()
+                data["time_copy"] = data["time"]
 
                 # Multi index set to 'id' and 'time'
                 data = data.set_index(['id', 'time'])
@@ -77,14 +82,14 @@ def main():
                 exog: DataFrame = sm.add_constant(exog)
 
                 # random effects model
-                model_re: RandomEffects = RandomEffects(endog, exog)
-                re_res: PanelResults = model_re.fit()
+                # model_re: RandomEffects = RandomEffects(endog, exog)
+                # re_res: PanelResults = model_re.fit()
 
                 # fixed effects model
                 model_fe: PanelOLS = PanelOLS(endog, exog, entity_effects=True)
                 fe_res: PanelResults = model_fe.fit()
 
-                metrics_and_models[metric] = (data, re_res)
+                metrics_and_models[metric] = (data, fe_res)
             except:
                 print("Something went wrong for metric " + metric)
 
@@ -102,6 +107,8 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, results: Pa
     # 1. Calculate predictions
     data['predicted'] = results.predict()
     data_plot = data.reset_index()
+    fitted_values = results.predict().fitted_values
+    residuals = results.resids
 
     # Create the output directory
     output_dir = f"plots.fixed/{linter}/{metric}"
@@ -109,14 +116,60 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, results: Pa
 
     # 2. Save the Model Summary to a separate file
     model_text = results.summary.as_text()
-    summary_filepath = os.path.join(output_dir, f"_summary.txt")
+    summary_filepath = os.path.join(output_dir, "_fixed_effects_estimation_summary .txt")
     with open(summary_filepath, 'w') as f:
         f.write(model_text)
 
+    # 3A. Homoskedasticity
+
+    # Homoskedasticity-Plot
+    fig, ax = pyplot.subplots(figsize=(10, 10))
+    ax.scatter(fitted_values, residuals, color='blue')
+    ax.axhline(0, color='r', ls='--')
+    ax.set_xlabel('Predicted Values')
+    ax.set_ylabel('Residuals')
+    ax.set_title('Homoskedasticity Test')
+    plot_filepath = os.path.join(output_dir, "_homoskedasticity.png")
+    pyplot.tight_layout()
+    pyplot.savefig(plot_filepath, dpi=300)
+    pyplot.close(fig)
+
+    # Residuals-Distribution-Plot
+    fig, ax = pyplot.subplots(figsize=(10, 10))
+    ax.hist(residuals, bins=100, density=True, alpha=0.7)
+    ax.set_title('Residuals Distribution (Density)')
+    ax.set_xlabel('Residual')
+    ax.set_ylabel('Density')
+    plot_filepath = os.path.join(output_dir, "_residuals_distribution.png")
+    pyplot.tight_layout()
+    pyplot.savefig(plot_filepath, dpi=300)
+    pyplot.close(fig)
+
+    # QQ-Plot
+    fig, ax = pyplot.subplots(figsize=(10, 10))
+    stats.probplot(residuals, dist="norm", plot=ax)
+    ax.set_title("Q–Q Plot of Residuals")
+    pyplot.tight_layout()
+    plot_filepath = os.path.join(output_dir, "_residuals_qq.png")
+    pyplot.tight_layout()
+    pyplot.savefig(plot_filepath, dpi=300)
+    pyplot.close(fig)
+
+    # PACF-Plot
+    fig, ax = pyplot.subplots(figsize=(10, 10))
+    statsmodels.graphics.tsa.plot_pacf(residuals, lags=40, ax=ax)
+    ax.set_title("Partial Autocorrelation Function (PACF)")
+    ax.set_xlabel("Lag")
+    ax.set_ylabel("Partial Autocorrelation")
+    plot_filepath = os.path.join(output_dir, "_partial_autocorrelation_function.png")
+    pyplot.tight_layout()
+    pyplot.savefig(plot_filepath, dpi=300)
+    pyplot.close(fig)
+
     # 3. Iterate and save individual plots
     unique_ids = data_plot['id'].unique()
-    #print(f"         * creating plots for {metric}")
-    #parallel_plotting(unique_ids, data_plot, metric, output_dir)
+    # print(f"         * creating plots for {metric}")
+    # parallel_plotting(unique_ids, data_plot, metric, output_dir)
 
 
 def parallel_plotting(unique_ids, data_plot, metric, output_dir):
