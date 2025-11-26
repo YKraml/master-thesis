@@ -13,7 +13,6 @@ import api.model.metrics.ValueDouble;
 import api.model.metrics.ValueMapping;
 import api.model.project.Project;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.util.concurrent.Futures;
 import jakarta.inject.Inject;
 import logic.State;
 import org.apache.commons.lang3.tuple.Pair;
@@ -63,7 +62,7 @@ public class TeamscaleDataDownloader {
     }
 
     public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException {
-        File file = new File("data" + File.separator + repoOwner + "." + repoName + ".json");
+        File file = new File("temp" + File.separator + "data" + File.separator + repoOwner + "." + repoName + ".json");
         if (file.exists()) {
             return new ObjectMapper().readValue(file, TeamscaleData.class);
         }
@@ -74,7 +73,7 @@ public class TeamscaleDataDownloader {
         for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
             futures.add(CompletableFuture.runAsync(() -> {
                 state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
-                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, metrics.getTimestamp());
+                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, metrics.getTimestamp(), 5);
                 data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
             }, executorService));
         }
@@ -125,32 +124,21 @@ public class TeamscaleDataDownloader {
         );
     }
 
-    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp) {
-        int maxRetries = 5;
-        int timeout = 10;
-        int waitTime = 5000;
+    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retires) {
+        int timeout = 5;
+
         Supplier<FindingChurn> supplier = () ->
                 findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp);
 
-        for (int i = 0; i < maxRetries; i++) {
-
-            try {
-                return CompletableFuture.supplyAsync(supplier).get(timeout, TimeUnit.SECONDS);
-            } catch (TimeoutException e) {
-                System.out.println("Method call timed out after " + timeout + " seconds.");
-            } catch (InterruptedException | ExecutionException e) {
-                System.out.println("Execution interrupted.");
-            }
-
-            try {
-                System.out.println("Waiting 5 seconds before retrying...");
-                Thread.sleep(waitTime);
-            } catch (InterruptedException e) {
-            }
+        if (retires == 0) {
+            throw new RuntimeException("Coul not get findings churn");
         }
 
-        System.out.println("Failed to get FindingsChurn after " + maxRetries + " attempts.");
-        throw new RuntimeException("Could not get findings churn");
+        try {
+            return CompletableFuture.supplyAsync(supplier).get(timeout, TimeUnit.SECONDS);
+        } catch (TimeoutException | InterruptedException | ExecutionException e) {
+            return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, --retires);
+        }
     }
 
 }

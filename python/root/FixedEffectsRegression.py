@@ -1,21 +1,14 @@
-import pandas
-from linearmodels.panel.results import PanelEffectsResults, PanelResults
-from linearmodels import PanelOLS
 import os
-import numpy
-import seaborn
-from matplotlib import pyplot
-import statsmodels.api as statsmodels
-from pandas import DataFrame
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
-from linearmodels import PooledOLS
-import statsmodels.api as sm
+from concurrent.futures import ProcessPoolExecutor
+
+import pandas
 import scipy.stats as stats
-from statsmodels.stats.diagnostic import het_white, het_breuschpagan
-from statsmodels.stats.stattools import durbin_watson
-from linearmodels import PanelOLS
+import statsmodels.api as sm
+import statsmodels.api as statsmodels
 from linearmodels import RandomEffects
-import scipy.stats
+from linearmodels.panel.results import PanelResults
+from matplotlib import pyplot
+from pandas import DataFrame
 
 import Util
 
@@ -70,26 +63,21 @@ def main():
         print("      * creating models")
         for index, metric in enumerate(columns):
             try:
-                data = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]].dropna()
-                data["time_copy"] = data["time"]
+                data: DataFrame = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]]
+                data = data.dropna()
 
                 # Multi index set to 'id' and 'time'
                 data = data.set_index(['id', 'time'])
 
                 # create Model
-                endog: DataFrame = data[metric]
-                exog: DataFrame = data[['t_pre', 't_post', 'intervention']]
-                exog: DataFrame = sm.add_constant(exog)
+                dependent_variable: DataFrame = data[metric]
+                independent_variables: DataFrame = sm.add_constant(data[['t_pre', 't_post', 'intervention']])
 
                 # random effects model
-                # model_re: RandomEffects = RandomEffects(endog, exog)
-                # re_res: PanelResults = model_re.fit()
+                model_re: RandomEffects = RandomEffects(dependent_variable, independent_variables)
+                re_res: PanelResults = model_re.fit()
 
-                # fixed effects model
-                model_fe: PanelOLS = PanelOLS(endog, exog, entity_effects=True)
-                fe_res: PanelResults = model_fe.fit()
-
-                metrics_and_models[metric] = (data, fe_res)
+                metrics_and_models[metric] = (data, re_res)
             except:
                 print("Something went wrong for metric " + metric)
 

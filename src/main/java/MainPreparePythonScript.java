@@ -5,6 +5,7 @@ import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import io.CsvReaderWriter;
+import io.ProofReaderWriter;
 import io.TeamscaleDataDownloader;
 import logic.DataAnalyser;
 import logic.RepositoryHandler;
@@ -34,9 +35,10 @@ public class MainPreparePythonScript {
     private final TeamscaleDataDownloader teamscaleDataDownloader;
     private final ExecutorService executorService;
     private final DataAnalyser dataAnalyser;
+    private final ProofReaderWriter proofReaderWriter;
 
     @Inject
-    public MainPreparePythonScript(ProjectsGetter projectsGetter, CsvReaderWriter csvReaderWriter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, ExecutorService executorService, DataAnalyser dataAnalyser) {
+    public MainPreparePythonScript(ProjectsGetter projectsGetter, CsvReaderWriter csvReaderWriter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, ExecutorService executorService, DataAnalyser dataAnalyser, ProofReaderWriter proofReaderWriter) {
         this.projectsGetter = projectsGetter;
         this.csvReaderWriter = csvReaderWriter;
         this.state = state;
@@ -44,6 +46,7 @@ public class MainPreparePythonScript {
         this.teamscaleDataDownloader = teamscaleDataDownloader;
         this.executorService = executorService;
         this.dataAnalyser = dataAnalyser;
+        this.proofReaderWriter = proofReaderWriter;
     }
 
     public static void main(String[] args) {
@@ -62,14 +65,16 @@ public class MainPreparePythonScript {
             String repoOwner = split[0];
             String repoName = split[1];
 
+            //futures.add(CompletableFuture.runAsync(() -> {
             state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
             try {
                 prepareData(repoOwner, repoName);
-            } catch (GitAPIException | IOException | ExecutionException | InterruptedException | TimeoutException e) {
+            } catch (GitAPIException | IOException | ExecutionException | InterruptedException |
+                     TimeoutException e) {
                 e.printStackTrace();
             }
             state.removeFromState(Pair.of(repoOwner, repoName));
-
+            //}, executorService));
         }
 
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
@@ -77,6 +82,12 @@ public class MainPreparePythonScript {
 
     private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
+        //Optional<Proof> proofOptional = proofReaderWriter.getProofOfRepo(repoOwner, repoName);
+        //if (proofOptional.isEmpty()) {
+        //    return;
+        //}
+        //Proof proof = proofOptional.get();
+
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 

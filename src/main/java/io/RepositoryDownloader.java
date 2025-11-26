@@ -29,7 +29,7 @@ public class RepositoryDownloader {
     }
 
     public Git getRepo(String owner, String repoName) throws GitAPIException, IOException {
-        String folderName = "repos" + File.separator + owner + File.separator + repoName;
+        String folderName = "temp" + File.separator + "repos" + File.separator + owner + File.separator + repoName;
         File folder = new File(folderName);
 
         if (folder.exists()) {
@@ -71,7 +71,7 @@ public class RepositoryDownloader {
     }
 
     public void deleteRepo(String owner, String repoName) throws IOException {
-        String folderName = "repos" + File.separator + owner + File.separator + repoName;
+        String folderName = "temp" + File.separator + "repos" + File.separator + owner + File.separator + repoName;
         File folder = new File(folderName);
         FileUtils.deleteDirectory(folder);
     }

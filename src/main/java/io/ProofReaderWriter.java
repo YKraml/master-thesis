@@ -3,8 +3,8 @@ package io;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import jakarta.inject.Inject;
-import org.apache.commons.io.FileUtils;
 import model.Proof;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class ProofReaderWriter {
     }
 
     public File getProofFile(String repoOwner, String repoName) {
-        return new File("proofs" + File.separator + repoOwner + "." + repoName + ".json");
+        return new File("temp" + File.separator + "proofs" + File.separator + repoOwner + "." + repoName + ".json");
     }
 
     public List<Proof> readAllProofs() throws IOException {

@@ -45,7 +45,7 @@ public class ResultReaderWriter {
     }
 
     private static String getFolderName() {
-        return "results";
+        return "temp" + File.separator + "results";
     }
 
     public boolean resultFileIsPresent(String repoOwner, String repoName) {
