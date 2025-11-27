@@ -67,7 +67,7 @@ public class TeamscaleDataDownloader {
             return new ObjectMapper().readValue(file, TeamscaleData.class);
         }
 
-        List<CompletableFuture<?>> futures = Collections.synchronizedList(new ArrayList<>());
+        List<CompletableFuture<?>> futures = new ArrayList<>();
         List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
         AtomicInteger counter = new AtomicInteger(0);
         for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
@@ -124,20 +124,20 @@ public class TeamscaleDataDownloader {
         );
     }
 
-    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retires) {
+    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retries) {
         int timeout = 5;
 
         Supplier<FindingChurn> supplier = () ->
                 findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp);
 
-        if (retires == 0) {
-            throw new RuntimeException("Coul not get findings churn");
+        if (retries <= 0) {
+            throw new RuntimeException("Could not get findings churn");
         }
 
         try {
             return CompletableFuture.supplyAsync(supplier).get(timeout, TimeUnit.SECONDS);
         } catch (TimeoutException | InterruptedException | ExecutionException e) {
-            return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, --retires);
+            return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
         }
     }
 

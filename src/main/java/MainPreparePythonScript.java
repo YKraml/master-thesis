@@ -82,24 +82,22 @@ public class MainPreparePythonScript {
 
     private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
-        //Optional<Proof> proofOptional = proofReaderWriter.getProofOfRepo(repoOwner, repoName);
-        //if (proofOptional.isEmpty()) {
-        //    return;
-        //}
-        //Proof proof = proofOptional.get();
+
 
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 
         Integer timestamp = teamscaleData.getEntries().getFirst().getMetrics().getTimestamp();
-        for (Proof.LinterWithProof linter : proof.linters()) {
-            int introductionTime = linter.introductionTime();
 
-            int secondsInTwoYears = 2 * 365 * 24 * 60 * 60;
-            if (introductionTime - (secondsInTwoYears * 0.90) < timestamp) {
-                return;
-            }
-        }
+        //TODO: introduce buckets
+        //for (Proof.LinterWithProof linter : proof.linters()) {
+        //    int introductionTime = linter.introductionTime();
+        //
+        //    int secondsInTwoYears = 2 * 365 * 24 * 60 * 60;
+        //    if (introductionTime - (secondsInTwoYears * 0.90) < timestamp) {
+        //        return;
+        //    }
+        //}
 
         writeResultAsCsv(result);
         writeProofAsCsv(proof);

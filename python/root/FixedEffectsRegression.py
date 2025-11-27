@@ -3,9 +3,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 import pandas
 import scipy.stats as stats
-import statsmodels.api as sm
 import statsmodels.api as statsmodels
-from linearmodels import RandomEffects
 from linearmodels.panel.results import PanelResults
 from matplotlib import pyplot
 from pandas import DataFrame
@@ -39,6 +37,7 @@ def main():
             data_frame['t_post'] = data_frame['time'] * data_frame['intervention']
             data_frame = data_frame[(data_frame["time"] >= -730) & (data_frame["time"] <= 730)]
             data_frame['id'] = project_name
+
             all_data[linter_name].append((linter_introduction_time, data_frame))
 
     # Concat data
@@ -66,32 +65,38 @@ def main():
                 data: DataFrame = data_frame[["id", "time", metric, "intervention", "t_pre", "t_post"]]
                 data = data.dropna()
 
-                # Multi index set to 'id' and 'time'
+                # data = data.sort_values(["id", "time"])
+                output_dir = os.path.join("processed")
+                os.makedirs(output_dir, exist_ok=True)
+                path = os.path.join(output_dir, f'{linter}.{metric}.csv')
+                data.to_csv(path, index=False)
+
                 data = data.set_index(['id', 'time'])
 
                 # create Model
-                dependent_variable: DataFrame = data[metric]
-                independent_variables: DataFrame = sm.add_constant(data[['t_pre', 't_post', 'intervention']])
+                # dependent_variable: DataFrame = data[metric]
+                # independent_variables: DataFrame = statsmodels.add_constant(data[['t_pre', 't_post', 'intervention']])
+                # model_re: RandomEffects = RandomEffects(dependent_variable, independent_variables)
+                # re_res: PanelResults = model_re.fit()
 
-                # random effects model
-                model_re: RandomEffects = RandomEffects(dependent_variable, independent_variables)
-                re_res: PanelResults = model_re.fit()
-
-                metrics_and_models[metric] = (data, re_res)
+                #metrics_and_models[metric] = (data, re_res)
             except:
-                print("Something went wrong for metric " + metric)
+                print("      ! Something went wrong with: " + metric)
+
 
         # plot
         print("      * creating plots")
         for metric in metrics_and_models:
             data: DataFrame = metrics_and_models[metric][0]
             model: PanelResults = metrics_and_models[metric][1]
-            save_individual_plots(data, linter, metric, model)
+            # save_individual_plots(data, linter, metric, model)
 
     print("Finished")
 
 
 def save_individual_plots(data: DataFrame, linter: str, metric: str, results: PanelResults):
+    print(f"         * creating plots for {metric}")
+
     # 1. Calculate predictions
     data['predicted'] = results.predict()
     data_plot = data.reset_index()
@@ -99,12 +104,12 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, results: Pa
     residuals = results.resids
 
     # Create the output directory
-    output_dir = f"plots.fixed/{linter}/{metric}"
+    output_dir = f"plots/{linter}/{metric}"
     os.makedirs(output_dir, exist_ok=True)
 
     # 2. Save the Model Summary to a separate file
     model_text = results.summary.as_text()
-    summary_filepath = os.path.join(output_dir, "_fixed_effects_estimation_summary .txt")
+    summary_filepath = os.path.join(output_dir, "_summary .txt")
     with open(summary_filepath, 'w') as f:
         f.write(model_text)
 
@@ -124,7 +129,7 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, results: Pa
 
     # Residuals-Distribution-Plot
     fig, ax = pyplot.subplots(figsize=(10, 10))
-    ax.hist(residuals, bins=100, density=True, alpha=0.7)
+    ax.hist(residuals, bins=1000, density=True, alpha=0.7)
     ax.set_title('Residuals Distribution (Density)')
     ax.set_xlabel('Residual')
     ax.set_ylabel('Density')
@@ -156,7 +161,7 @@ def save_individual_plots(data: DataFrame, linter: str, metric: str, results: Pa
 
     # 3. Iterate and save individual plots
     unique_ids = data_plot['id'].unique()
-    # print(f"         * creating plots for {metric}")
+
     # parallel_plotting(unique_ids, data_plot, metric, output_dir)
 
 
