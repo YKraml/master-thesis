@@ -13,6 +13,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
+import util.Constants;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +26,6 @@ public class RepositoryHandler {
 
     private static final int SIZE_1 = 1000 * 1000; // 1 GB
     private static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
-    private static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2; // two years in seconds
 
     private final RepositoryDownloader repositoryDownloader;
     private final LinterFinder linterFinder;
@@ -127,12 +127,12 @@ public class RepositoryHandler {
         for (Proof.LinterWithProof linter : lintersWithProof) {
             int introductionTime = linter.introductionTime();
 
-            int start = introductionTime - SECONDS_IN_TWO_YEARS;
+            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
             if (start < startTime) {
                 startTime = start;
             }
 
-            int end = introductionTime + SECONDS_IN_TWO_YEARS;
+            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
             if (end > endTime) {
                 endTime = end;
             }

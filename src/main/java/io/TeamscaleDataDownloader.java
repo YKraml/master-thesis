@@ -24,12 +24,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Supplier;
 
 public class TeamscaleDataDownloader {
 
     private final ProjectsGetter projectsGetter;
-
     private final ExecutorService executorService;
     private final State state;
     private final FindingChurnGetter findingChurnGetter;
@@ -70,19 +68,19 @@ public class TeamscaleDataDownloader {
         List<CompletableFuture<?>> futures = new ArrayList<>();
         List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
         AtomicInteger counter = new AtomicInteger(0);
-        for (Metrics metrics : metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE)) {
+        List<Metrics> metricsList = metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
+        for (Metrics metrics : metricsList) {
             futures.add(CompletableFuture.runAsync(() -> {
-                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE).size());
+                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + metricsList.size());
                 FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, metrics.getTimestamp(), 5);
                 data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(metrics)));
             }, executorService));
         }
 
-
         CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get(300, TimeUnit.SECONDS);
         data.sort((o1, o2) -> Math.toIntExact(o1.getMetrics().getTimestamp() / 1000 - o2.getMetrics().getTimestamp() / 1000));
 
-        File folder = new File("data");
+        File folder = new File("temp" + File.separator + "data");
         if (!folder.exists()) {
             folder.mkdir();
         }
@@ -125,20 +123,23 @@ public class TeamscaleDataDownloader {
     }
 
     public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retries) {
-        int timeout = 5;
-
-        Supplier<FindingChurn> supplier = () ->
-                findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp);
 
         if (retries <= 0) {
             throw new RuntimeException("Could not get findings churn");
         }
 
         try {
-            return CompletableFuture.supplyAsync(supplier).get(timeout, TimeUnit.SECONDS);
+            return CompletableFuture.supplyAsync(() ->
+                    findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp)).get(5, TimeUnit.SECONDS);
         } catch (TimeoutException | InterruptedException | ExecutionException e) {
-            return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
+            try {
+                synchronized (this) {
+                    Thread.sleep(1000);
+                    return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
+                }
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
-
 }

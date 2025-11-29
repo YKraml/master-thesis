@@ -82,5 +82,7 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
                 throw new RuntimeException("Error creating CSV string", e);
             }
         }
+
+
     }
 }

@@ -14,6 +14,8 @@ import java.util.Optional;
 
 public class ProofReaderWriter {
 
+    public static final String FOLDER_NAME = "temp" + File.separator + "proofs";
+
     @Inject
     public ProofReaderWriter() {
     }
@@ -30,26 +32,25 @@ public class ProofReaderWriter {
     }
 
     public File getProofFile(String repoOwner, String repoName) {
-        return new File("temp" + File.separator + "proofs" + File.separator + repoOwner + "." + repoName + ".json");
+        return new File(FOLDER_NAME + File.separator + repoOwner + "." + repoName + ".json");
     }
 
     public List<Proof> readAllProofs() throws IOException {
         List<Proof> list = new ArrayList<>();
-        for (File file : FileUtils.listFiles(new File("proofs"), new String[]{".json"}, false)) {
+        for (File file : FileUtils.listFiles(new File(FOLDER_NAME), new String[]{".json"}, false)) {
             try {
                 list.add(new ObjectMapper().readValue(file, Proof.class));
-            } catch (MismatchedInputException e){
+            } catch (MismatchedInputException e) {
                 e.printStackTrace();
                 file.delete();
             }
-
         }
         return list;
     }
 
     public Optional<Proof> getProofOfRepo(String repoOwner, String repoName) throws IOException {
         File proofs = getProofFile(repoOwner, repoName);
-        if(!proofs.exists()){
+        if (!proofs.exists()) {
             return Optional.empty();
         }
         return Optional.ofNullable(new ObjectMapper().readValue(proofs, Proof.class));
