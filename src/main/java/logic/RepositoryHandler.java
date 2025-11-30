@@ -105,7 +105,7 @@ public class RepositoryHandler {
             return Optional.of(new Proof(
                             ownerName,
                             repoName,
-                            Language.JAVA,
+                            Constants.CURRENT_LANGUAGE,
                             "https://github.com/" + ownerName + "/" + repoName,
                             currentBranch,
                             currentCommit.getName(),

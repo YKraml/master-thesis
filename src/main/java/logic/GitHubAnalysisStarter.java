@@ -76,7 +76,7 @@ public class GitHubAnalysisStarter {
 
     private synchronized void setReposIfEmpty(AtomicReference<PagedIterator<GHRepository>> repos, GitHub github, AtomicInteger numberOfStars) {
         if (repos.get() == null || !repos.get().hasNext()) {
-            repos.set(github.searchRepositories().language("Java").stars("<=" + numberOfStars).sort(GHRepositorySearchBuilder.Sort.STARS).list().iterator());
+            repos.set(github.searchRepositories().language(Constants.CURRENT_LANGUAGE.name().toLowerCase()).stars("<=" + numberOfStars).sort(GHRepositorySearchBuilder.Sort.STARS).list().iterator());
         }
     }
 

@@ -1,5 +1,7 @@
 package util;
 
+import model.Language;
+
 public class Constants {
     public static final String TOKEN = "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";
     public static final String TEAMSCALE_ACCESS_KEY = "L0kbTK4Doo4qu5j57ewT6gGLZ6OV9nSj";
@@ -10,4 +12,5 @@ public class Constants {
     public static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2;
     public static final int SECONDS_IN_ONE_YEAR = 60 * 60 * 24 * 365 * 2;
     public static final int SECONDS_IN_ONE_MONTH = 60 * 60 * 24 * 30;
+    public static final Language CURRENT_LANGUAGE = Language.PYTHON;
 }

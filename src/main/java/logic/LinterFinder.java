@@ -1,10 +1,11 @@
 package logic;
 
 import jakarta.inject.Inject;
-import model.Language;
-import model.Linter;
 import model.FileIndicator;
+import model.Linter;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.Strings;
+import util.Constants;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class LinterFinder {
     public List<Result> findLinters(File folder) throws IOException {
         List<Result> linters = new ArrayList<>();
 
-        for (Linter linter : Linter.getLinterOfLanguage(Language.JAVA)) {
+        for (Linter linter : Linter.getLinterOfLanguage(Constants.CURRENT_LANGUAGE)) {
             searchForLinter(folder, linter, linters);
         }
 
@@ -30,10 +31,15 @@ public class LinterFinder {
     }
 
     private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
-        List<File> files = new ArrayList<>(FileUtils.listFiles(folder, Linter.getExtensionsOfLanguage(linter.getLanguage()), true));
+        List<File> files = new ArrayList<>(FileUtils.listFiles(folder, null, true));
+        String[] extensions = Linter.getExtensionsOfLanguage(linter.getLanguage());
+
         files.sort(Comparator.comparingInt((File file) -> file.getAbsolutePath().length()).thenComparing(File::getAbsolutePath));
 
         for (File file : files) {
+
+            Strings.CI.endsWithAny(file.getName(), extensions);
+
             Optional<Result> result = searchForLinter(folder, file, linter);
             if (result.isPresent()) {
                 linters.add(result.get());

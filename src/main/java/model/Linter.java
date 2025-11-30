@@ -33,8 +33,27 @@ public enum Linter {
             new FileNameEndsWithAndContentContainsFileIndicator(".gradle", ":maven-pmd-plugin:"),
             new FileNameEndsWithAndContentContainsFileIndicator(".gradle", "'pmd'"),
             new FileNameEndsWithAndContentContainsFileIndicator(".gradle", "pmd {")
-    ));
+    )),
+    PYLINT(Language.PYTHON, List.of(
+            new FileNameEndsWithFileIndicator("pylintrc"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".toml", "[tool.pylint"),
+            new FileNameEndsWithAndContentContainsFileIndicator("setup.py", "'pylint'"),
+            new FileNameEndsWithAndContentContainsFileIndicator("setup.py", "'pytest-pylint'"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".cfg", "--pylint"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".yaml", ": pylint")
+    )),
+    FLAKE8(Language.PYTHON, List.of(
+            new FileNameEndsWithFileIndicator("flake8"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".ini", "[flake8"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".cfg", "[flake8"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".ini", "[tool.flake8"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".cfg", "[tool.flake8")
 
+    )),
+    RUFF(Language.PYTHON, List.of(
+            new FileNameEndsWithAndContentContainsFileIndicator(".toml", "[tool.ruff"),
+            new FileNameEndsWithAndContentContainsFileIndicator(".yaml", ": ruff")
+    ));
 
     private final Language language;
     private final List<FileIndicator> fileIndicators;
@@ -43,7 +62,6 @@ public enum Linter {
         this.language = language;
         this.fileIndicators = fileIndicators;
     }
-
 
     public Language getLanguage() {
         return language;
@@ -60,7 +78,10 @@ public enum Linter {
     public static String[] getExtensionsOfLanguage(Language language) {
         switch (language) {
             case JAVA -> {
-                return new String[]{".xml", ".gradle"};
+                return new String[]{"xml", "gradle"};
+            }
+            case PYTHON -> {
+                return new String[]{"toml", "pylintrc", "setup.py", "cfg", "yaml", "flake8"};
             }
             default -> throw new IllegalStateException("Unexpected value: " + language);
         }

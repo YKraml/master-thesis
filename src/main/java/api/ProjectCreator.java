@@ -1,9 +1,9 @@
 package api;
 
-import util.Constants;
-import model.Proof;
+import api.model.project.Project;
 import io.ProofReaderWriter;
 import jakarta.inject.Inject;
+import model.Proof;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -11,7 +11,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import api.model.project.Project;
+import util.Constants;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -35,8 +35,8 @@ public class ProjectCreator {
                      "connectorIdentifierOptionName":"Repository identifier",
                      "options":{
                         "Repository identifier":"git",
-                        "Included file names":"**.java",
-                        "Excluded file names":"**/package-info.java, **/module-info.java",
+                        "Included file names":"%s",
+                        "Excluded file names":"%s",
                         "Account":"kraml",
                         "Path suffix":"%s",
                         "Default branch name":"%s",
@@ -128,6 +128,10 @@ public class ProjectCreator {
                 continue;
             }
 
+            if (proof.language() != Constants.CURRENT_LANGUAGE) {
+                throw new RuntimeException("Language was not expected");
+            }
+
             System.out.println();
             if (existingProjectNames.contains(proof.repoOwner() + "." + proof.repoName())) {
                 System.out.println("Skipped " + proof.link());
@@ -148,15 +152,12 @@ public class ProjectCreator {
         JFrame topFrame = new JFrame();
         topFrame.setAlwaysOnTop(true);
         topFrame.setUndecorated(true);
-        topFrame.setLocationRelativeTo(null); // center on screen
+        topFrame.setLocationRelativeTo(null);
         topFrame.setVisible(true);
 
-        String input = JOptionPane.showInputDialog(
-                topFrame,
-                "How many projects should be created?"
-        );
+        String input = JOptionPane.showInputDialog(topFrame, "How many projects should be created?");
 
-        topFrame.dispose(); // remove temp frame
+        topFrame.dispose();
 
         int numberOfProjectsToBeCreeated;
         try {
@@ -196,7 +197,7 @@ public class ProjectCreator {
             httppost.setHeader("Content-Type", "application/json");
 
             // Body
-            String request = REQUEST.formatted(projectName, suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
+            String request = REQUEST.formatted(projectName, Constants.CURRENT_LANGUAGE.getIncludedFileNames(), Constants.CURRENT_LANGUAGE.getExcludedFileNames(), suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
             StringEntity requestEntity = new StringEntity(request, StandardCharsets.UTF_8);
             httppost.setEntity(requestEntity);
 
