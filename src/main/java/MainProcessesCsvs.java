@@ -90,13 +90,18 @@ public class MainProcessesCsvs {
             }
         }
 
-        String folderName = "mixed.effects.models" + File.separator + "data";
+        if(linterTimeResults.isEmpty()){
+            System.out.println(bucketName + "/" + linter + " - Entries are empty. Throw out!");
+            return;
+        }
+
+        String folderName = "mixed.effects.models" + File.separator + "data" + File.separator + bucketName;
         new File(folderName).delete();
         new File(folderName).mkdirs();
-        File dataFile = new File(folderName + File.separator + bucketName + "." + linter.name() + ".csv");
+        File dataFile = new File(folderName + File.separator + linter.name() + ".csv");
         dataFile.createNewFile();
 
-        System.out.println("Writing file: " + dataFile.getName());
+        System.out.println("Writing file: " + bucketName + "/" + dataFile.getName());
 
         try (PrintWriter pw = new PrintWriter(dataFile)) {
             pw.println("id," + Result.Entry.csvHeader() + ",intervention,t_pre,t_post");

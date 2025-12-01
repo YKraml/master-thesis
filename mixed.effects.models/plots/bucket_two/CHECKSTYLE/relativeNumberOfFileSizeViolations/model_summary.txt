@@ -1,0 +1,33 @@
+Linear mixed-effects model fit by maximum likelihood
+  Data: data 
+        AIC       BIC   logLik
+  -389452.5 -389302.1 194741.3
+
+Random effects:
+ Formula: ~1 + t_pre + t_post + intervention | id
+ Structure: General positive-definite, Log-Cholesky parametrization
+             StdDev     Corr                
+(Intercept)  0.26232304 (Intr) t_pre  t_post
+t_pre        0.43011975  0.280              
+t_post       0.12315256 -0.493 -0.175       
+intervention 0.11829750 -0.354 -0.257  0.017
+Residual     0.07437616                     
+
+Fixed effects:  as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention")) 
+                  Value   Std.Error     DF   t-value p-value
+(Intercept)  0.25541356 0.016207831 167230 15.758651  0.0000
+t_pre        0.07624599 0.027772123 167230  2.745414  0.0060
+t_post       0.01336589 0.007859141 167230  1.700680  0.0890
+intervention 0.00352919 0.007582073 167230  0.465465  0.6416
+ Correlation: 
+             (Intr) t_pre  t_post
+t_pre         0.289              
+t_post       -0.472 -0.162       
+intervention -0.363 -0.281 -0.003
+
+Standardized Within-Group Residuals:
+          Min            Q1           Med            Q3           Max 
+-1.506239e+02 -2.094647e-01 -3.568877e-03  2.055439e-01  2.186403e+02 
+
+Number of Observations: 167500
+Number of Groups: 267 

@@ -12,5 +12,5 @@ public class Constants {
     public static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2;
     public static final int SECONDS_IN_ONE_YEAR = 60 * 60 * 24 * 365 * 2;
     public static final int SECONDS_IN_ONE_MONTH = 60 * 60 * 24 * 30;
-    public static final Language CURRENT_LANGUAGE = Language.PYTHON;
+    public static final Language CURRENT_LANGUAGE = Language.JAVA;
 }

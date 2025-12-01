@@ -14,16 +14,85 @@ library(lattice)
 
 source("R/plotting.R")
 
+
+fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
+metric <- "relativeNumberOfFileSizeViolations"
+
+
+for (fileName in fileNames) {
+  # Create folder
+  cleanedFileName <- gsub("data.", "", fileName)
+  cleanedFileName <- gsub(".csv", "", cleanedFileName)
+  folderName <- paste("plots",cleanedFileName, metric, sep = "/")
+  dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
+
+  # print current loop iteration
+  print(fileName)
+
+  # Load Data
+  dataNotClean <- read.csv(fileName)
+  data <- dataNotClean[complete.cases(dataNotClean), ]
+
+  # Create model
+  model <- lme(
+    fixed = as.formula(
+      paste0(metric, " ~ 1 + t_pre + t_post + intervention")
+    ),
+    data = data,
+    random = ~ 1 + t_pre + t_post + intervention | id,
+    method = "ML",
+    control = lmeControl(opt = "optim")
+  )
+
+  # print model results
+  capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
+  capture.output(VarCorr(model), file = file.path(folderName, "model_var_corr.txt"))
+
+  # print plots
+  plotPath <- paste(folderName, "hist.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  histPlot <- hist(
+    data[[metric]],
+    breaks = 1000,
+    main = "Histograms",
+    xlab = "Metric"
+  )
+  dev.off()
+
+  plotPath <- paste(folderName, "raneff.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  plot(ranef(model))
+  dev.off()
+
+  plotPath <- paste(folderName, "predicted.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  plot_predicted(data, model)
+  dev.off()
+
+
+  plotPath <- paste(folderName, "qq.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  plot_qq(data, model)
+  dev.off()
+
+
+  plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  plot_residuals_vs_fitted(data, model)
+  dev.off()
+
+
+  plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
+  png(plotPath, width = 1000, height = 1000)
+  plot_residuals_histogram(data, model)
+  dev.off()
+
+
+}
+
+
 dataNotClean <- read.csv('data/bucket_one.CHECKSTYLE.csv')
 data <- dataNotClean[complete.cases(dataNotClean), ]
-
-
-hist(
-  data$averageFileLoc,
-  breaks = 1000,
-  main = "Histograms",
-  xlab = "Metric"
-)
 
 
 model <- lme(
