@@ -16,78 +16,100 @@ source("R/plotting.R")
 
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
-metric <- "relativeNumberOfFileSizeViolations"
-
+metrics <- list(
+  "relativeNumberOfCodeClones",
+  "relativeNumberOfFileSizeViolations",
+  "relativeNumberOfMethodLengthViolations",
+  "relativeNumberOfNestingDepthViolations",
+  "averageFileLoc"
+  )
 
 for (fileName in fileNames) {
-  # Create folder
-  cleanedFileName <- gsub("data.", "", fileName)
-  cleanedFileName <- gsub(".csv", "", cleanedFileName)
-  folderName <- paste("plots",cleanedFileName, metric, sep = "/")
-  dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
-
-  # print current loop iteration
   print(fileName)
+  for (metric in metrics) {
+    print(paste(" -",metric))
 
-  # Load Data
-  dataNotClean <- read.csv(fileName)
-  data <- dataNotClean[complete.cases(dataNotClean), ]
+    # Create folder
+    cleanedFileName <- gsub("data.", "", fileName)
+    cleanedFileName <- gsub(".csv", "", cleanedFileName)
+    folderName <- paste("plots",cleanedFileName, metric, sep = "/")
+    dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
 
-  # Create model
-  model <- lme(
-    fixed = as.formula(
-      paste0(metric, " ~ 1 + t_pre + t_post + intervention")
-    ),
-    data = data,
-    random = ~ 1 + t_pre + t_post + intervention | id,
-    method = "ML",
-    control = lmeControl(opt = "optim")
-  )
-
-  # print model results
-  capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
-  capture.output(VarCorr(model), file = file.path(folderName, "model_var_corr.txt"))
-
-  # print plots
-  plotPath <- paste(folderName, "hist.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  histPlot <- hist(
-    data[[metric]],
-    breaks = 1000,
-    main = "Histograms",
-    xlab = "Metric"
-  )
-  dev.off()
-
-  plotPath <- paste(folderName, "raneff.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  plot(ranef(model))
-  dev.off()
-
-  plotPath <- paste(folderName, "predicted.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  plot_predicted(data, model)
-  dev.off()
+    # print current loop iteration
 
 
-  plotPath <- paste(folderName, "qq.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  plot_qq(data, model)
-  dev.off()
+    # Load Data
+    dataNotClean <- read.csv(fileName)
+    data <- dataNotClean[complete.cases(dataNotClean), ]
 
+    # Create model
+    model <- lme(
+      fixed = as.formula(
+        paste0(metric, " ~ 1 + t_pre + t_post + intervention")
+      ),
+      data = data,
+      random = ~ 1 + t_pre + t_post + intervention | id,
+      method = "ML",
+      control = lmeControl(opt = "optim")
+    )
 
-  plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  plot_residuals_vs_fitted(data, model)
-  dev.off()
+    # model <- lmer(
+    #   as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
+    #   data = data,
+    #   REML = FALSE
+    # )
 
+    # print model results
+    capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
+    capture.output(VarCorr(model), file = file.path(folderName, "model_var_corr.txt"))
 
-  plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
-  png(plotPath, width = 1000, height = 1000)
-  plot_residuals_histogram(data, model)
-  dev.off()
+    # print metric histogram
+    plotPath <- paste(folderName, "hist.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    histPlot <- hist(
+      data[[metric]],
+      breaks = 1000,
+      main = "Histograms",
+      xlab = "Metric"
+    )
+    dev.off()
 
+    # print random effects
+    re <- ranef(model)$id %>%
+      tibble::rownames_to_column("group") %>%
+      gather(effect, value, -group)
+    plotPath <- paste(folderName, "ranef.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    plot(
+      ranef(model),
+      scales = list(y = list(draw = FALSE))   # hides y-axis labels
+    )
+    dev.off()
 
+    # print fixed effects
+    plotPath <- paste(folderName, "predicted.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    plot_predicted(data, model)
+    dev.off()
+
+    # print qq of residuals
+    plotPath <- paste(folderName, "qq.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    plot_qq(data, model)
+    dev.off()
+
+    # print residuals vs fitted
+    plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    plot_residuals_vs_fitted(data, model)
+    dev.off()
+
+    # print residuals histogram
+    plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
+    png(plotPath, width = 1000, height = 1000)
+    plot_residuals_histogram(data, model)
+    dev.off()
+  }
 }
 
 
