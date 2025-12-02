@@ -7,7 +7,6 @@ import api.model.cleaned.CleanedMetrics;
 import api.model.cleaned.TeamscaleData;
 import api.model.cleaned.TeamscaleDataEntry;
 import com.google.inject.Inject;
-import io.ResultReaderWriter;
 import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -17,12 +16,10 @@ import java.util.List;
 
 public class DataAnalyser {
 
-    private final ResultReaderWriter resultReaderWriter;
     private final State state;
 
     @Inject
-    public DataAnalyser(ResultReaderWriter resultReaderWriter, State state) {
-        this.resultReaderWriter = resultReaderWriter;
+    public DataAnalyser(State state) {
         this.state = state;
     }
 
@@ -30,14 +27,7 @@ public class DataAnalyser {
         String repoOwner = data.getRepoOwner();
         String repoName = data.getRepoName();
 
-        if (resultReaderWriter.getElement(repoOwner, repoName).isPresent()) {
-            return resultReaderWriter.getElement(repoOwner, repoName).get();
-        }
-
-        Result result = new Result(repoOwner, repoName, createEntriesFromData(repoOwner, repoName, data));
-        resultReaderWriter.write(result);
-
-        return result;
+        return new Result(repoOwner, repoName, createEntriesFromData(repoOwner, repoName, data));
     }
 
     private List<Result.Entry> createEntriesFromData(String repoOwner, String repoName, TeamscaleData teamscaleData) {
