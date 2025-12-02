@@ -1,11 +1,10 @@
 package logic;
 
-import io.RepositoryDownloader;
-import model.Proof;
 import io.ProofReaderWriter;
+import io.RepositoryDownloader;
 import jakarta.inject.Inject;
-import model.Language;
 import model.Linter;
+import model.Proof;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
@@ -44,6 +43,30 @@ public class RepositoryHandler {
         this.github = github;
     }
 
+    private static Pair<Integer, Integer> getStartAndEndTime(List<Proof.LinterWithProof> lintersWithProof) {
+        int startTime = Integer.MAX_VALUE;
+        int endTime = Integer.MIN_VALUE;
+        for (Proof.LinterWithProof linter : lintersWithProof) {
+            int introductionTime = linter.introductionTime();
+
+            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
+            if (start < startTime) {
+                startTime = start;
+            }
+
+            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
+            if (end > endTime) {
+                endTime = end;
+            }
+        }
+
+        if (lintersWithProof.isEmpty()) {
+            startTime = -1;
+            endTime = -1;
+        }
+        return Pair.of(startTime, endTime);
+    }
+
     public void handleRepo(GHRepository repo) throws Exception {
         String ownerName = repo.getOwnerName();
         String repoName = repo.getName();
@@ -60,16 +83,16 @@ public class RepositoryHandler {
     public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
         Optional<Proof> proof = handleRepo2(ownerName, repoName);
         if (proof.isPresent()) {
-            proofReaderWriter.writeProof(proof.get());
+            proofReaderWriter.write(proof.get());
         }
         return proof;
     }
 
     private Optional<Proof> handleRepo2(String ownerName, String repoName) throws IOException, GitAPIException {
         //Skip if already analysed
-        File proofFile = proofReaderWriter.getProofFile(ownerName, repoName);
+        File proofFile = proofReaderWriter.getFile(ownerName, repoName);
         if (proofFile.exists()) {
-            return proofReaderWriter.getProofOfRepo(ownerName, repoName);
+            return proofReaderWriter.getElement(ownerName, repoName);
         }
 
         int numberOfStars = github.getRepository(ownerName + "/" + repoName).getStargazersCount();
@@ -119,29 +142,5 @@ public class RepositoryHandler {
                     )
             );
         }
-    }
-
-    private static Pair<Integer, Integer> getStartAndEndTime(List<Proof.LinterWithProof> lintersWithProof) {
-        int startTime = Integer.MAX_VALUE;
-        int endTime = Integer.MIN_VALUE;
-        for (Proof.LinterWithProof linter : lintersWithProof) {
-            int introductionTime = linter.introductionTime();
-
-            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
-            if (start < startTime) {
-                startTime = start;
-            }
-
-            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
-            if (end > endTime) {
-                endTime = end;
-            }
-        }
-
-        if (lintersWithProof.isEmpty()) {
-            startTime = -1;
-            endTime = -1;
-        }
-        return Pair.of(startTime, endTime);
     }
 }

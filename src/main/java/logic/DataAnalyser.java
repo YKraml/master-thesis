@@ -6,68 +6,38 @@ import api.model.cleaned.Assessment;
 import api.model.cleaned.CleanedMetrics;
 import api.model.cleaned.TeamscaleData;
 import api.model.cleaned.TeamscaleDataEntry;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
 import io.ResultReaderWriter;
 import model.Result;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
 
 public class DataAnalyser {
 
     private final ResultReaderWriter resultReaderWriter;
     private final State state;
-    private final ExecutorService executorService;
 
     @Inject
-    public DataAnalyser(ResultReaderWriter resultReaderWriter, State state, ExecutorService executorService) {
-
+    public DataAnalyser(ResultReaderWriter resultReaderWriter, State state) {
         this.resultReaderWriter = resultReaderWriter;
         this.state = state;
-        this.executorService = executorService;
-    }
-
-    public void startAnalysis() {
-        List<CompletableFuture<?>> completableFutures = new ArrayList<>();
-        Collection<File> files = FileUtils.listFiles(new File("data"), new String[]{".json"}, false);
-        for (File file : files) {
-            completableFutures.add(CompletableFuture.runAsync(() -> {
-                try {
-                    TeamscaleData data = new ObjectMapper().readValue(file, TeamscaleData.class);
-                    String repoOwner = data.getRepoOwner();
-                    String repoName = data.getRepoName();
-
-                    state.addToState(Pair.of(repoOwner, repoName), "Analysing findings");
-                    Result result = analyseTeamscaleData(data);
-                    resultReaderWriter.writeResult(result);
-
-                    state.removeFromState(Pair.of(repoOwner, repoName));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }, executorService));
-        }
-
-        CompletableFuture.allOf(completableFutures.toArray(new CompletableFuture[0])).join();
     }
 
     public Result analyseTeamscaleData(TeamscaleData data) throws IOException {
         String repoOwner = data.getRepoOwner();
         String repoName = data.getRepoName();
 
-        if (resultReaderWriter.resultFileIsPresent(repoOwner, repoName)) {
-            return resultReaderWriter.getResult(repoOwner, repoName);
+        if (resultReaderWriter.getElement(repoOwner, repoName).isPresent()) {
+            return resultReaderWriter.getElement(repoOwner, repoName).get();
         }
 
-        return new Result(repoOwner, repoName, createEntriesFromData(repoOwner, repoName, data));
+        Result result = new Result(repoOwner, repoName, createEntriesFromData(repoOwner, repoName, data));
+        resultReaderWriter.write(result);
+
+        return result;
     }
 
     private List<Result.Entry> createEntriesFromData(String repoOwner, String repoName, TeamscaleData teamscaleData) {

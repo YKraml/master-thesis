@@ -1,20 +1,13 @@
 package model;
 
 import java.lang.reflect.RecordComponent;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record Result(String repoOwner, String repoName, List<Entry> entries) {
-
-    public Result(String repoOwner, String repoName, List<Entry> entries) {
-        this.repoOwner = repoOwner;
-        this.repoName = repoName;
-        this.entries = new ArrayList<>(entries);
-    }
-
+public record Result(String repoOwner, String repoName, List<Entry> entries) implements Writable {
+   
     @Override
     public List<Entry> entries() {
         return Collections.unmodifiableList(entries);
@@ -64,7 +57,7 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
         }
 
         public static Entry getDefault() {
-            return new Result.Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            return new Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         }
 
         public String csvLine() {
@@ -82,7 +75,5 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) {
                 throw new RuntimeException("Error creating CSV string", e);
             }
         }
-
-
     }
 }

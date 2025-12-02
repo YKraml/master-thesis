@@ -2,7 +2,6 @@ package io;
 
 import api.FindingChurnGetter;
 import api.MetricsGetter;
-import api.ProjectsGetter;
 import api.model.churn.FindingChurn;
 import api.model.cleaned.Assessment;
 import api.model.cleaned.CleanedMetrics;
@@ -11,7 +10,6 @@ import api.model.cleaned.TeamscaleDataEntry;
 import api.model.metrics.Metrics;
 import api.model.metrics.ValueDouble;
 import api.model.metrics.ValueMapping;
-import api.model.project.Project;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
 import logic.State;
@@ -27,36 +25,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class TeamscaleDataDownloader {
 
-    private final ProjectsGetter projectsGetter;
     private final ExecutorService executorService;
     private final State state;
     private final FindingChurnGetter findingChurnGetter;
     private final MetricsGetter metricsGetter;
 
     @Inject
-    public TeamscaleDataDownloader(ProjectsGetter projectsGetter, ExecutorService executorService, State state, FindingChurnGetter findingChurnGetter, MetricsGetter metricsGetter) {
-        this.projectsGetter = projectsGetter;
+    public TeamscaleDataDownloader(ExecutorService executorService, State state, FindingChurnGetter findingChurnGetter, MetricsGetter metricsGetter) {
         this.executorService = executorService;
         this.state = state;
         this.findingChurnGetter = findingChurnGetter;
         this.metricsGetter = metricsGetter;
-    }
-
-    public void startDownload() {
-        List<Project> existingProjects = projectsGetter.getExistingProjects();
-        for (Project existingProject : existingProjects) {
-            try {
-                String[] split = existingProject.getName().split("\\.", 2);
-                String repoOwner = split[0];
-                String repoName = split[1];
-
-                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from Teamscale");
-                downloadDataFrom(repoOwner, repoName);
-                state.removeFromState(Pair.of(repoOwner, repoName));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException {

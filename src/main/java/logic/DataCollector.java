@@ -1,20 +1,16 @@
+package logic;
+
 import api.ProjectsGetter;
 import api.model.cleaned.TeamscaleData;
 import api.model.project.Project;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.inject.Guice;
 import com.google.inject.Inject;
-import com.google.inject.Injector;
+import io.ProofWithResultReaderWriter;
 import io.TeamscaleDataDownloader;
-import logic.DataAnalyser;
-import logic.RepositoryHandler;
-import logic.State;
 import model.Proof;
 import model.ProofWithResult;
 import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import util.GuiceModule;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,31 +18,28 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-public class MainPrepareDataForProcessing {
+public class DataCollector {
+
+    public static final String FOLDER_NAME = "temp" + File.separator + "all";
 
     private final ProjectsGetter projectsGetter;
     private final State state;
     private final RepositoryHandler repositoryHandler;
     private final TeamscaleDataDownloader teamscaleDataDownloader;
     private final DataAnalyser dataAnalyser;
+    private final ProofWithResultReaderWriter proofWithResultReaderWriter;
 
     @Inject
-    public MainPrepareDataForProcessing(ProjectsGetter projectsGetter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, DataAnalyser dataAnalyser) {
+    public DataCollector(ProjectsGetter projectsGetter, State state, RepositoryHandler repositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, DataAnalyser dataAnalyser, ProofWithResultReaderWriter proofWithResultReaderWriter) {
         this.projectsGetter = projectsGetter;
         this.state = state;
         this.repositoryHandler = repositoryHandler;
         this.teamscaleDataDownloader = teamscaleDataDownloader;
         this.dataAnalyser = dataAnalyser;
+        this.proofWithResultReaderWriter = proofWithResultReaderWriter;
     }
 
-    public static void main(String[] args) {
-        Injector injector = Guice.createInjector(new GuiceModule());
-        injector.getInstance(State.class).start();
-        injector.getInstance(MainPrepareDataForProcessing.class).prepareData();
-        injector.getInstance(State.class).end();
-    }
-
-    private void prepareData() {
+    public void startCollectingData() {
         List<Project> existingProjects = projectsGetter.getExistingProjects();
 
         for (Project existingProject : existingProjects) {
@@ -56,7 +49,7 @@ public class MainPrepareDataForProcessing {
 
             state.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
             try {
-                prepareData(repoOwner, repoName);
+                collectDataFor(repoOwner, repoName);
             } catch (GitAPIException | IOException | ExecutionException | InterruptedException | TimeoutException e) {
                 e.printStackTrace();
             }
@@ -64,16 +57,12 @@ public class MainPrepareDataForProcessing {
         }
     }
 
-    private void prepareData(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
+    private void collectDataFor(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
         Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
-
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 
-        new File("temp" + File.separator + "all").mkdirs();
-
-        File file = new File("temp" + File.separator + "all" + File.separator + repoOwner + "." + repoName + ".json");
-        ProofWithResult proofWithResult = new ProofWithResult(proof, result);
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(file, proofWithResult);
+        ProofWithResult proofWithResult = new ProofWithResult(repoOwner, repoName, proof, result);
+        proofWithResultReaderWriter.write(proofWithResult);
     }
 }

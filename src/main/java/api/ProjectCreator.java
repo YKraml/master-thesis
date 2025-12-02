@@ -104,9 +104,36 @@ public class ProjectCreator {
         this.projectsGetter = projectsGetter;
     }
 
+    private static int getNumberOfProjectsToBeCreated() {
+        JFrame topFrame = new JFrame();
+        topFrame.setAlwaysOnTop(true);
+        topFrame.setUndecorated(true);
+        topFrame.setLocationRelativeTo(null);
+        topFrame.setVisible(true);
+
+        String input = JOptionPane.showInputDialog(topFrame, "How many projects should be created?");
+
+        topFrame.dispose();
+
+        int numberOfProjectsToBeCreeated;
+        try {
+            numberOfProjectsToBeCreeated = Integer.parseInt(input);
+        } catch (Exception e) {
+            numberOfProjectsToBeCreeated = -1;
+        }
+        return numberOfProjectsToBeCreeated;
+    }
+
+    public static void addAuth(HttpRequestBase request) {
+        String auth = "kraml:" + Constants.TEAMSCALE_ACCESS_KEY;
+        byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
+        String authHeader = "Basic " + new String(encodedAuth);
+        request.setHeader("Authorization", authHeader);
+    }
+
     public void createAllProjects() throws IOException {
         System.out.println("Start reading proof files");
-        List<Proof> proofs = new ProofReaderWriter().readAllProofs();
+        List<Proof> proofs = new ProofReaderWriter().readAll();
         proofs.sort(Comparator.comparingInt(Proof::numberOfStars));
 
         System.out.println("Getting existing projects from teamscale");
@@ -146,26 +173,6 @@ public class ProjectCreator {
                 System.out.println("Finished creation");
             }
         }
-    }
-
-    private static int getNumberOfProjectsToBeCreated() {
-        JFrame topFrame = new JFrame();
-        topFrame.setAlwaysOnTop(true);
-        topFrame.setUndecorated(true);
-        topFrame.setLocationRelativeTo(null);
-        topFrame.setVisible(true);
-
-        String input = JOptionPane.showInputDialog(topFrame, "How many projects should be created?");
-
-        topFrame.dispose();
-
-        int numberOfProjectsToBeCreeated;
-        try {
-            numberOfProjectsToBeCreeated = Integer.parseInt(input);
-        } catch (Exception e) {
-            numberOfProjectsToBeCreeated = -1;
-        }
-        return numberOfProjectsToBeCreeated;
     }
 
     public void createProjectWithProof(Proof proof) {
@@ -217,12 +224,5 @@ public class ProjectCreator {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void addAuth(HttpRequestBase request) {
-        String auth = "kraml:" + Constants.TEAMSCALE_ACCESS_KEY;
-        byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
-        String authHeader = "Basic " + new String(encodedAuth);
-        request.setHeader("Authorization", authHeader);
     }
 }

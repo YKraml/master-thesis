@@ -1,4 +1,5 @@
 package model;
 
-public record ProofWithResult(Proof proof, Result result) {
+public record ProofWithResult(String repoOwner, String repoName, Proof proof, Result result) implements Writable {
+
 }
