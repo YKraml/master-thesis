@@ -10,8 +10,6 @@ import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import util.GuiceModule;
 
-import java.io.IOException;
-
 @Execution(ExecutionMode.CONCURRENT)
 class DataAnalyserTest {
 
@@ -42,7 +40,7 @@ class DataAnalyserTest {
     }
 
     @Test
-    void testAirbnbDeepLinkDispatch() throws IOException {
+    void testAirbnbDeepLinkDispatch() throws Exception {
         TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("airbnb", "DeepLinkDispatch");
         Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
@@ -54,7 +52,7 @@ class DataAnalyserTest {
     }
 
     @Test
-    void testApacheMetron() throws IOException {
+    void testApacheMetron() throws Exception {
         TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("apache", "metron");
         Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
@@ -66,7 +64,7 @@ class DataAnalyserTest {
     }
 
     @Test
-    void testTraccerTraccer() throws IOException {
+    void testTraccerTraccer() throws Exception {
         TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("traccar", "traccar");
         Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(
@@ -78,7 +76,7 @@ class DataAnalyserTest {
     }
 
     @Test
-    void testGooglePhysicalWeb() throws IOException {
+    void testGooglePhysicalWeb() throws Exception {
         TeamscaleData teamscaleData = TEAMSCALE_DATA_DOWNLOADER.downloadDataFrom("google", "physical-web");
         Result result = FINDINGS_ANALYSER.analyseTeamscaleData(teamscaleData);
         Assertions.assertAll(

@@ -35,29 +35,15 @@ for (fileName in fileNames) {
     folderName <- paste("plots",cleanedFileName, metric, sep = "/")
     dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
 
-    # print current loop iteration
-
-
     # Load Data
     dataNotClean <- read.csv(fileName)
     data <- dataNotClean[complete.cases(dataNotClean), ]
 
     # Create model
-    model <- lme(
-      fixed = as.formula(
-        paste0(metric, " ~ 1 + t_pre + t_post + intervention")
-      ),
-      data = data,
-      random = ~ 1 + t_pre + t_post + intervention | id,
-      method = "ML",
-      control = lmeControl(opt = "optim")
+    model <- lmer(
+      as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
+      data = data
     )
-
-    # model <- lmer(
-    #   as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
-    #   data = data,
-    #   REML = FALSE
-    # )
 
     # print model results
     capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
@@ -65,7 +51,7 @@ for (fileName in fileNames) {
 
     # print metric histogram
     plotPath <- paste(folderName, "hist.png", sep = "/")
-    png(plotPath, width = 1000, height = 1000)
+    png(plotPath, width = 2500, height = 2500)
     histPlot <- hist(
       data[[metric]],
       breaks = 1000,
