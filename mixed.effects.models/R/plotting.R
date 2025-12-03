@@ -1,3 +1,5 @@
+# ------------------------------------------------------------------------------
+
 plot_predicted <- function(data, model) {
 
   # Extract fixed effects and their covariance
@@ -57,6 +59,8 @@ plot_predicted <- function(data, model) {
   )
 }
 
+# ------------------------------------------------------------------------------
+
 plot_qq <- function(data, model) {
   residuals <- residuals(model)
   fitted_vals <- fitted(model)
@@ -66,6 +70,8 @@ plot_qq <- function(data, model) {
   qqnorm(residuals, main = "Q-Q Plot of Standardized Residuals")
   qqline(residuals, col = "red")
 }
+
+# ------------------------------------------------------------------------------
 
 plot_residuals_vs_fitted <- function(data, model) {
   residuals <- residuals(model)
@@ -78,6 +84,8 @@ plot_residuals_vs_fitted <- function(data, model) {
        main = "Residuals vs. Fitted Values Plot")
   abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
+
+# ------------------------------------------------------------------------------
 
 plot_residuals_histogram <- function(data, model) {
   residuals <- residuals(model)
@@ -97,6 +105,32 @@ plot_residuals_histogram <- function(data, model) {
         col = "red",
         lwd = 2,
         add = TRUE)
+}
 
+# ------------------------------------------------------------------------------
+
+plot_random_effects_histogram <- function(data, color, main) {
+  sigma <- sd(data)
+  mean <- mean(data)
+  hist(
+    data,
+    main = main,
+    xlab = "Value",
+    ylab = "Density",
+    freq = FALSE,
+    col = color,
+    border = "black",
+    breaks = 100,
+    xlim = c(mean - sigma * 2, mean + sigma * 2)
+  )
+  abline(v = mean, col = "blue", lwd = 2, lty = 2)
+  text(
+    x = mean,
+    y = max(hist(data, breaks = 100, plot = FALSE)$density) * 0.9,
+    labels = paste("fixed =", round(mean, 3)),
+    pos = 4,
+    col = "blue",
+    font = 2
+  )
 }
 
