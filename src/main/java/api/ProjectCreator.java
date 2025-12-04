@@ -125,7 +125,7 @@ public class ProjectCreator {
     }
 
     public static void addAuth(HttpRequestBase request) {
-        String auth = "kraml:" + Constants.TEAMSCALE_ACCESS_KEY;
+        String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
         byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
         String authHeader = "Basic " + new String(encodedAuth);
         request.setHeader("Authorization", authHeader);
@@ -194,7 +194,7 @@ public class ProjectCreator {
         String projectName = repoOwner + "." + repoName;
 
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpPost httppost = new HttpPost("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?skip-project-validation=false");
+            HttpPost httppost = new HttpPost(Constants.TEAMSCALE_URL + "/api/v2025.8/projects?skip-project-validation=false");
 
             // Authentication
             addAuth(httppost);

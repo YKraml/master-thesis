@@ -1,5 +1,6 @@
 package api;
 
+import api.model.churn.FindingChurn;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
@@ -8,7 +9,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import api.model.churn.FindingChurn;
+import util.Constants;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +24,7 @@ public class FindingChurnGetter {
     public FindingChurn getFindingsChurn(String repoOwner, String repoName, long time) {
 
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects/" + repoOwner + "." + repoName + "/finding-churn/list?&t=" + time + "&max=-1");
+            HttpGet httpGet = new HttpGet(Constants.TEAMSCALE_URL + "/api/v2025.8/projects/" + repoOwner + "." + repoName + "/finding-churn/list?&t=" + time + "&max=-1");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);

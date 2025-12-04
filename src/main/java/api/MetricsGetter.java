@@ -12,29 +12,23 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import util.Constants;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.Semaphore;
 
 public class MetricsGetter {
-
-    private final Semaphore semaphore = new Semaphore(4);
 
     @Inject
     public MetricsGetter() {
     }
 
-    public List<Metrics> getMetrics(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
-        return getFindingsChurnThreadSafe(repoOwner, repoName, analysisStartTime, analysisEndTime);
-    }
-
     private static List<Metrics> getFindingsChurnThreadSafe(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/projects/" + repoOwner + "." + repoName + "/metrics/history?uniform-path=&start=" + analysisStartTime + "&end=" + analysisEndTime + "&all-partitions=true&max-milliseconds=-1");
+            HttpGet httpGet = new HttpGet(Constants.TEAMSCALE_URL + "/api/projects/" + repoOwner + "." + repoName + "/metrics/history?uniform-path=&start=" + analysisStartTime + "&end=" + analysisEndTime + "&all-partitions=true&max-milliseconds=-1");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);
@@ -67,10 +61,13 @@ public class MetricsGetter {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<Metrics> getMetrics(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime) {
+        return getFindingsChurnThreadSafe(repoOwner, repoName, analysisStartTime, analysisEndTime);
     }
 }

@@ -1,11 +1,12 @@
 package api;
 
+import api.model.project.Project;
 import com.google.inject.Inject;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import api.model.project.Project;
+import util.Constants;
 
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class ProjectDeleter {
     public synchronized void deleteProject(String projectName) {
         System.out.println("Deleting: " + projectName);
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpDelete httpDelete = new HttpDelete("https://thesis-yannick.teamscale.dev/api/v2025.8/projects/" + projectName + "?force-delete=true&delete-all-assignments=true&delete-all-dashboards=true&delete-child-references=true");
+            HttpDelete httpDelete = new HttpDelete(Constants.TEAMSCALE_URL + "/api/v2025.8/projects/" + projectName + "?force-delete=true&delete-all-assignments=true&delete-all-dashboards=true&delete-child-references=true");
 
             // Authentication
             ProjectCreator.addAuth(httpDelete);

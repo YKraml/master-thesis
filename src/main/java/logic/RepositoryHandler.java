@@ -32,15 +32,17 @@ public class RepositoryHandler {
     private final ProofReaderWriter proofReaderWriter;
     private final State state;
     private final GitHub github;
+    private final FilteredManager filteredManager;
 
     @Inject
-    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state, GitHub github) {
+    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state, GitHub github, FilteredManager filteredManager) {
         this.repositoryDownloader = repositoryDownloader;
         this.linterFinder = linterFinder;
         this.linterIntroductionFinder = linterIntroductionFinder;
         this.proofReaderWriter = proofReaderWriter;
         this.state = state;
         this.github = github;
+        this.filteredManager = filteredManager;
     }
 
     private static Pair<Integer, Integer> getStartAndEndTime(List<Proof.LinterWithProof> lintersWithProof) {
@@ -68,71 +70,81 @@ public class RepositoryHandler {
     }
 
     public void handleRepo(GHRepository repo) throws Exception {
-        String ownerName = repo.getOwnerName();
+        String repoOwner = repo.getOwnerName();
         String repoName = repo.getName();
-        state.addToState(Pair.of(ownerName, repoName), "Started handling");
+        state.addToState(Pair.of(repoOwner, repoName), "Started handling");
 
         //Size limit with the data from GitHub
         if (repo.getSize() > SIZE_1) {
+            filteredManager.filterCompleteProject(repoOwner, repoName, "Repo is too large in GitHub", String.valueOf(repo.getSize()));
             return;
         }
 
-        handleRepo(ownerName, repoName);
+        handleRepo(repoOwner, repoName);
     }
 
     public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
-        Optional<Proof> proof = handleRepo2(ownerName, repoName);
+        Optional<Proof> proof = searchForProof(ownerName, repoName);
         if (proof.isPresent()) {
             proofReaderWriter.write(proof.get());
         }
         return proof;
     }
 
-    private Optional<Proof> handleRepo2(String ownerName, String repoName) throws IOException, GitAPIException {
+    private Optional<Proof> searchForProof(String repoOwner, String repoName) throws IOException, GitAPIException {
         //Skip if already analysed
-        File proofFile = proofReaderWriter.getFile(ownerName, repoName);
+        File proofFile = proofReaderWriter.getFile(repoOwner, repoName);
         if (proofFile.exists()) {
-            return proofReaderWriter.getElement(ownerName, repoName);
+            return proofReaderWriter.getElement(repoOwner, repoName);
         }
 
-        int numberOfStars = github.getRepository(ownerName + "/" + repoName).getStargazersCount();
+        int numberOfStars = github.getRepository(repoOwner + "/" + repoName).getStargazersCount();
 
-        try (Git git = repositoryDownloader.getRepo(ownerName, repoName)) {
+        try (Git git = repositoryDownloader.getRepo(repoOwner, repoName)) {
             File folder = git.getRepository().getDirectory().getParentFile();
             Iterator<RevCommit> commits = git.log().call().iterator();
             ArrayList<RevCommit> commitList = new ArrayList<>();
             commits.forEachRemaining(commitList::add);
 
             RevCommit currentCommit = commitList.getFirst();
+            int currentCommitTime = currentCommit.getCommitTime();
             RevCommit firstCommit = commitList.getLast();
             String currentBranch = git.getRepository().getBranch();
 
             //Limit again here after download. The getSize() is not very accurate.
             long size = FileUtils.sizeOfDirectory(folder);
             if (size > SIZE_2) {
+                filteredManager.filterCompleteProject(repoOwner, repoName, "Local Repo is too large", String.valueOf(size));
                 return Optional.empty();
             }
 
-            state.addToState(Pair.of(ownerName, repoName), "Searching for linter");
+            state.addToState(Pair.of(repoOwner, repoName), "Searching for linter");
             List<LinterFinder.Result> currentLinters = linterFinder.findLinters(folder);
 
             List<Proof.LinterWithProof> lintersWithProof = new ArrayList<>();
+
             for (LinterFinder.Result linter : currentLinters) {
-                state.addToState(Pair.of(ownerName, repoName), "Searching introduction of: " + linter.linterName());
+                state.addToState(Pair.of(repoOwner, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
+
+                if (currentCommitTime - Constants.SECONDS_IN_TWO_YEARS < introduction.getLeft().getCommitTime()) {
+                    filteredManager.filterProjectLinter(repoOwner, repoName, Linter.valueOf(linter.linterName()), "Linter did not exist for at least two years", String.valueOf(introduction));
+                    continue;
+                }
+
                 lintersWithProof.add(new Proof.LinterWithProof(linter.linterName(), linter.fileName(), introduction.getKey().getName(), introduction.getValue(), introduction.getLeft().getCommitTime()));
             }
 
             Pair<Integer, Integer> startAndEndTime = getStartAndEndTime(lintersWithProof);
 
             return Optional.of(new Proof(
-                            ownerName,
+                            repoOwner,
                             repoName,
                             Constants.CURRENT_LANGUAGE,
-                            "https://github.com/" + ownerName + "/" + repoName,
+                            "https://github.com/" + repoOwner + "/" + repoName,
                             currentBranch,
                             currentCommit.getName(),
-                            currentCommit.getCommitTime(),
+                            currentCommitTime,
                             firstCommit.getName(),
                             firstCommit.getCommitTime(),
                             startAndEndTime.getLeft(),

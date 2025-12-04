@@ -17,6 +17,7 @@ source("R/plotting.R")
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
+  "totalNumberOfLinesOfCode",
   "relativeNumberOfCodeClones",
   "relativeNumberOfFileSizeViolations",
   "relativeNumberOfMethodLengthViolations",
@@ -105,8 +106,23 @@ for (fileName in fileNames) {
     dev.off()
     par(mfrow = c(1, 1))
 
+    for (id in unique(data[["id"]])) {
+      # create folder
+      projectFolderName <- paste(folderName,"projects", sep = "/")
+      dir.create(file.path(projectFolderName), showWarnings = FALSE, recursive = TRUE)
+
+      # print prediction for project
+      projectPlotPath <- paste(projectFolderName, paste0(id, ".png"), sep = "/")
+      png(projectPlotPath, width = 800, height = 500)
+      plot_project(model, id, data)
+      dev.off()
+    }
+
+
+
   }
 }
+
 
 # ------------------------------------------------------------------------------
 
@@ -122,9 +138,8 @@ model <- lmer(
 summary(model)
 VarCorr(model)
 
-
-
-
+source("R/plotting.R")
+plot_project(model, "apache.commons-io", data)
 
 # ------------------------------------------------------------------------------
 
@@ -137,75 +152,6 @@ t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE)
 
 
 # ------------------------------------------------------------------------------
-
-project <- "abrensch.brouter"
-randomEffectsFromProject = ranef(model)$id[project,]
-fixedEffects <- fixef(model)
-randomEffectsFromProject <- fixedEffects + randomEffectsFromProject
-
-# compute predicted values
-x <- seq(-2, 2, by = 0.01)
-predictedData <- data.frame(
-  x = x,
-  y = ifelse(
-    x < 0,
-    randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$t_pre * x,
-    randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$intervention + randomEffectsFromProject$t_post * x
-  )
-)
-
-# scatter plot data
-projectData <- data[data$id == project, ]
-projectData <- projectData[c(metric, "t_pre", "t_post")]
-projectData <- data.frame(
-  time = ifelse(
-    projectData$t_pre != 0,
-    projectData$t_pre,
-    projectData$t_post
-  ),
-  metric = projectData[[metric]]
-)
-
-
-# limits
-ymin_all <- min(c(predictedData$y, projectData$metric))
-ymax_all <- max(c(predictedData$y, projectData$metric))
-ydiff_all <- ymax_all - ymin_all
-upper_limit <- ymax_all + ydiff_all / 5
-lower_limit <- ymin_all - ydiff_all / 5
-
-
-
-# predicted graph
-plot(
-  predictedData$x, predictedData$y,
-  type = "l", # 'l' for line
-  xlab = "Time in years",
-  ylab = paste("Metric:", metric),
-  main = paste("Project:", project),
-  xlim = c(-2, 2),
-  ylim = c(lower_limit, upper_limit),
-  lwd = 2, # Line width
-  col = "blue" # Line color
-)
-
-# scatter
-points(
-  projectData$time, projectData$metric,
-)
-
-# intervention line
-abline(v = 0, lty = 2, col = "grey")
-
-# legend
-legend("topright",
-       legend = c("Predicted Trend", "Actual Data"),
-       col = c("blue", "red"),
-       lty = c(1, NA), # Line for trend, no line for data
-       pch = c(NA, 19)) # No symbol for trend, circle for data
-
-
-
 
 
 # ------------------------------------------------------------------------------

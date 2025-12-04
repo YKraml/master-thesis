@@ -1,5 +1,6 @@
 package api;
 
+import api.model.project.Project;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
 import org.apache.http.HttpEntity;
@@ -7,7 +8,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import api.model.project.Project;
+import util.Constants;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,9 +22,9 @@ public class ProjectsGetter {
     }
 
     public List<Project> getExistingProjects() {
-
+        String responseBody = null;
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet("https://thesis-yannick.teamscale.dev/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false");
+            HttpGet httpGet = new HttpGet(Constants.TEAMSCALE_URL + "/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false");
 
             // Authentication
             ProjectCreator.addAuth(httpGet);
@@ -42,7 +43,6 @@ public class ProjectsGetter {
                     throw new IOException("Empty response entity");
                 }
 
-                String responseBody;
                 try (InputStream contentStream = entity.getContent()) {
                     responseBody = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
                 }
@@ -50,6 +50,7 @@ public class ProjectsGetter {
                 return List.of(new ObjectMapper().readValue(responseBody, Project[].class));
             }
         } catch (Exception e) {
+            System.out.println(responseBody);
             throw new RuntimeException(e);
         }
     }

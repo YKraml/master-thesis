@@ -134,3 +134,79 @@ plot_random_effects_histogram <- function(data, color, main) {
   )
 }
 
+# ------------------------------------------------------------------------------
+
+plot_project <- function(model, project, data) {
+  randomEffectsFromProject = ranef(model)$id[project,]
+  fixedEffects <- fixef(model)
+  randomEffectsFromProject <- fixedEffects + randomEffectsFromProject
+
+  # compute predicted values
+  x <- seq(-2, 2, by = 0.01)
+  predictedData <- data.frame(
+    x = x,
+    y = ifelse(
+      x < 0,
+      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$t_pre * x,
+      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$intervention + randomEffectsFromProject$t_post * x
+    )
+  )
+
+  # scatter plot data
+  projectData <- data[data$id == project, ]
+  projectData <- projectData[c(metric, "t_pre", "t_post")]
+  projectData <- data.frame(
+    time = ifelse(
+      projectData$t_pre != 0,
+      projectData$t_pre,
+      projectData$t_post
+    ),
+    metric = projectData[[metric]]
+  )
+
+  # limits
+  ymin_all <- min(c(predictedData$y, projectData$metric))
+  ymax_all <- max(c(predictedData$y, projectData$metric))
+  ydiff_all <- ymax_all - ymin_all
+  upper_limit <- ymax_all + ydiff_all / 5
+  lower_limit <- ymin_all - ydiff_all / 5
+
+  # get introduction date
+  l <- data[data$id == project, ]
+  seconds_timestamp <- l[l$intervention == 1, ][1, ]$time
+  date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
+  date <- format(date_time_object, format = "%d.%m.%Y")
+
+
+  # predicted graph
+  plot(
+    predictedData$x, predictedData$y,
+    type = "l", # 'l' for line
+    xlab = "Time in years",
+    ylab = paste("Metric:", metric),
+    main = paste("Project:", project),
+    xlim = c(-2, 2),
+    ylim = c(lower_limit, upper_limit),
+    lwd = 2, # Line width
+    col = "lightcoral" # Line color
+  )
+
+  # scatter
+  points(
+    projectData$time, projectData$metric,
+    col = "lightblue"
+  )
+
+  # intervention line
+  abline(v = 0, lty = 2, col = "darkgrey")
+
+
+  # legend
+  legend("topright",
+         legend = c("Predicted Trend", "Actual Data", paste0("Introduction: ", date)),
+         col = c("lightcoral", "lightblue", "darkgrey"),
+         lty = c(1, NA, 2), # Line for trend, no line for data
+         pch = c(NA, 19, NA)) # No symbol for trend, circle for data
+}
+
+
