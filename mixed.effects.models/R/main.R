@@ -13,16 +13,24 @@ library(sjstats)
 library(lattice)
 
 source("R/plotting.R")
+par(
+  ps = 10,                # text size (pt)
+  cex = 1,                # overall scaling
+  cex.lab = 1,            # axis labels
+  cex.axis = 1,           # axis tick labels
+  cex.main = 1,           # title
+  mar = c(3.2, 3, 2, 1)   # bottom, left, top, right margins (in lines)
+)
 
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
-  "totalNumberOfLinesOfCode",
-  "relativeNumberOfCodeClones",
+  "averageFileLoc",
   "relativeNumberOfFileSizeViolations",
   "relativeNumberOfMethodLengthViolations",
   "relativeNumberOfNestingDepthViolations",
-  "averageFileLoc"
+  "totalNumberOfLinesOfCode",
+  "relativeNumberOfCodeClones"
   )
 
 for (fileName in fileNames) {
@@ -52,14 +60,14 @@ for (fileName in fileNames) {
 
     # print metric histogram
     plotPath <- paste(folderName, "hist.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
 
     d <- data[[metric]]
     sigma <- sd(d)
     mean <- mean(d)
     hist(
       d[d <= mean + 3 * sigma],
-      breaks = 100,
+      breaks = 50,
       freq = FALSE,
       main = "Histogram",
       xlab = metric,
@@ -69,25 +77,25 @@ for (fileName in fileNames) {
 
     # print fixed effects
     plotPath <- paste(folderName, "predicted.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
     plot_predicted(data, model)
     dev.off()
 
     # print qq of residuals
     plotPath <- paste(folderName, "qq.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
     plot_qq(data, model)
     dev.off()
 
     # print residuals vs fitted
     plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
     plot_residuals_vs_fitted(data, model)
     dev.off()
 
     # print residuals histogram
     plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
     plot_residuals_histogram(data, model)
     dev.off()
 
@@ -97,8 +105,8 @@ for (fileName in fileNames) {
     absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
     plotPath <- paste(folderName, "random_effects_hist.png", sep = "/")
-    png(plotPath, width = 1600, height = 1000)
-    par(mfrow = c(2, 2))
+    png(plotPath, width = 15, height = 10 * 4, units = "cm", res = 300)
+    par(mfrow = c(4, 1))
     plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre")
     plot_random_effects_histogram(absolute_effects$t_post, "lightcoral", "t_post")
     plot_random_effects_histogram(absolute_effects$intervention, "cornsilk", "intervention")
@@ -113,7 +121,7 @@ for (fileName in fileNames) {
 
       # print prediction for project
       projectPlotPath <- paste(projectFolderName, paste0(id, ".png"), sep = "/")
-      png(projectPlotPath, width = 800, height = 500)
+      png(projectPlotPath, width = 15, height = 10, units = "cm", res = 300)
       plot_project(model, id, data)
       dev.off()
     }

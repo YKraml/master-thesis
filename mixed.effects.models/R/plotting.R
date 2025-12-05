@@ -89,22 +89,31 @@ plot_residuals_vs_fitted <- function(data, model) {
 
 plot_residuals_histogram <- function(data, model) {
   residuals <- residuals(model)
+
+  sigma <- sd(residuals)
+  mean <- mean(residuals)
+  left = mean - sigma * 2
+  right = mean + sigma * 2
+
   # Residuals histogram
-  hist(residuals,
-       main = "Histogram of Standardized Residuals",
-       xlab = "Standardized Residuals",
-       ylab = "Density",
-       col = "lightblue",
-       border = "white",
-       freq = FALSE,
-       breaks = 5000,
-       xlim = c(-10, 10)
+  hist(
+    residuals[residuals > left & residuals < right],
+    main = "Histogram of Standardized Residuals",
+    xlab = "Standardized Residuals",
+    ylab = "Density",
+    col = "lightblue",
+    border = "white",
+    freq = FALSE,
+    breaks = 50,
+    xlim = c(left, right)
   )
 
-  curve(dnorm(x, mean=mean(residuals), sd=sd(residuals)),
-        col = "red",
-        lwd = 2,
-        add = TRUE)
+  curve(
+    dnorm(x, mean=mean(residuals), sd=sd(residuals)),
+    col = "red",
+    lwd = 2,
+    add = TRUE
+    )
 }
 
 # ------------------------------------------------------------------------------
@@ -112,16 +121,17 @@ plot_residuals_histogram <- function(data, model) {
 plot_random_effects_histogram <- function(data, color, main) {
   sigma <- sd(data)
   mean <- mean(data)
+  left = mean - sigma * 2
+  right = mean + sigma * 2
   hist(
-    data,
+    data[data > left & data < right],
     main = main,
     xlab = "Value",
     ylab = "Density",
     freq = FALSE,
     col = color,
-    border = "black",
-    breaks = 100,
-    xlim = c(mean - sigma * 2, mean + sigma * 2)
+    breaks = 50,
+    xlim = c(left, right)
   )
   abline(v = mean, col = "blue", lwd = 2, lty = 2)
   text(
