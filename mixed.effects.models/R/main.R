@@ -13,15 +13,6 @@ library(sjstats)
 library(lattice)
 
 source("R/plotting.R")
-par(
-  ps = 10,                # text size (pt)
-  cex = 1,                # overall scaling
-  cex.lab = 1,            # axis labels
-  cex.axis = 1,           # axis tick labels
-  cex.main = 1,           # title
-  mar = c(3.2, 3, 2, 1)   # bottom, left, top, right margins (in lines)
-)
-
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
@@ -54,48 +45,62 @@ for (fileName in fileNames) {
       data = data
     )
 
+    random_effects <- ranef(model)[[1]]
+    fixed_effects <- fixef(model)
+    absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
+
+    # gepaarter t-test
+
+
     # print model results
     capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
     capture.output(VarCorr(model), file = file.path(folderName, "model_var_corr.txt"))
 
+    # print tests
+    capture.output(
+      t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE),
+      file = file.path(folderName, "ttest_tpre_vs_tpost.txt")
+      )
+
+    capture.output(
+      t.test(absolute_effects$intervention),
+      file = file.path(folderName, "ttest_intervention_vs_0.txt")
+    )
+
+    capture.output(
+      t.test(absolute_effects$`(Intercept)`),
+      file = file.path(folderName, "ttest_intercept_vs_0.txt")
+    )
+
+
+
     # print metric histogram
     plotPath <- paste(folderName, "hist.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
-
-    d <- data[[metric]]
-    sigma <- sd(d)
-    mean <- mean(d)
-    hist(
-      d[d <= mean + 3 * sigma],
-      breaks = 50,
-      freq = FALSE,
-      main = "Histogram",
-      xlab = metric,
-      col = "lightblue"
-    )
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
+    plot_raw_data_hist(data[[metric]], metric)
     dev.off()
 
     # print fixed effects
     plotPath <- paste(folderName, "predicted.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_predicted(data, model)
     dev.off()
 
     # print qq of residuals
     plotPath <- paste(folderName, "qq.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_qq(data, model)
     dev.off()
 
     # print residuals vs fitted
     plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_residuals_vs_fitted(data, model)
     dev.off()
 
     # print residuals histogram
     plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300)
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_residuals_histogram(data, model)
     dev.off()
 
@@ -104,28 +109,37 @@ for (fileName in fileNames) {
     fixed_effects <- fixef(model)
     absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
-    plotPath <- paste(folderName, "random_effects_hist.png", sep = "/")
-    png(plotPath, width = 15, height = 10 * 4, units = "cm", res = 300)
-    par(mfrow = c(4, 1))
+    plotPath <- paste(folderName, "random_effects_hist_t_pre.png", sep = "/")
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre")
-    plot_random_effects_histogram(absolute_effects$t_post, "lightcoral", "t_post")
-    plot_random_effects_histogram(absolute_effects$intervention, "cornsilk", "intervention")
+    dev.off()
+
+    plotPath <- paste(folderName, "random_effects_hist_t_post.png", sep = "/")
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
+    plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post")
+    dev.off()
+
+    plotPath <- paste(folderName, "random_effects_hist_intervention.png", sep = "/")
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
+    plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention")
+    dev.off()
+
+    plotPath <- paste(folderName, "random_effects_hist_intercept.png", sep = "/")
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept")
     dev.off()
-    par(mfrow = c(1, 1))
 
+    # create folder
+    projectFolderName <- paste(folderName,"projects", sep = "/")
+    dir.create(file.path(projectFolderName), showWarnings = FALSE, recursive = TRUE)
     for (id in unique(data[["id"]])) {
-      # create folder
-      projectFolderName <- paste(folderName,"projects", sep = "/")
-      dir.create(file.path(projectFolderName), showWarnings = FALSE, recursive = TRUE)
 
       # print prediction for project
-      projectPlotPath <- paste(projectFolderName, paste0(id, ".png"), sep = "/")
-      png(projectPlotPath, width = 15, height = 10, units = "cm", res = 300)
+      plotPath <- paste(projectFolderName, paste0(id, ".png"), sep = "/")
+      png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
       plot_project(model, id, data)
       dev.off()
     }
-
 
 
   }

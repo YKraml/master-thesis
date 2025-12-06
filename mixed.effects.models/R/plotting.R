@@ -45,9 +45,9 @@ plot_predicted <- function(data, model) {
   plot(
     newdata$time, newdata$pred, type = "l",
     xlab = "Time in years", ylab = "Predicted metric",
-    main = "Predicted metric with 95% CI",
     xlim = c(-2, 2),
-    ylim = c(ymin2, ymax2)
+    ylim = c(ymin2, ymax2),
+    main = "Fitted fixed effect with 95% confidence interval"
   )
 
   # Add confidence interval ribbon
@@ -67,8 +67,11 @@ plot_qq <- function(data, model) {
   residual_data <- data.frame(Fitted = fitted_vals, Residuals = residuals)
 
   # Base R Q-Q Plot
-  qqnorm(residuals, main = "Q-Q Plot of Standardized Residuals")
-  qqline(residuals, col = "red")
+  qqnorm(residuals)
+  qqline(
+    residuals,
+    col = "red"
+    )
 }
 
 # ------------------------------------------------------------------------------
@@ -78,10 +81,12 @@ plot_residuals_vs_fitted <- function(data, model) {
   fitted_vals <- fitted(model)
 
   # Base R Residuals Plot
-  plot(fitted_vals, residuals,
-       xlab = "Fitted Values",
-       ylab = "Residuals",
-       main = "Residuals vs. Fitted Values Plot")
+  plot(
+    fitted_vals, residuals,
+    xlab = "Fitted values",
+    ylab = "Residuals",
+    main = "Residuals vs fitted"
+    )
   abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
 
@@ -98,14 +103,14 @@ plot_residuals_histogram <- function(data, model) {
   # Residuals histogram
   hist(
     residuals[residuals > left & residuals < right],
-    main = "Histogram of Standardized Residuals",
-    xlab = "Standardized Residuals",
+    xlab = "Residuals",
     ylab = "Density",
     col = "lightblue",
-    border = "white",
+    border = "black",
     freq = FALSE,
-    breaks = 50,
-    xlim = c(left, right)
+    breaks = 30,
+    xlim = c(left, right),
+    main = "Hisotgram of residuals"
   )
 
   curve(
@@ -128,20 +133,21 @@ plot_random_effects_histogram <- function(data, color, main) {
     main = main,
     xlab = "Value",
     ylab = "Density",
-    freq = FALSE,
+    freq = TRUE,
     col = color,
-    breaks = 50,
+    border = "black",
+    breaks = 30,
     xlim = c(left, right)
   )
-  abline(v = mean, col = "blue", lwd = 2, lty = 2)
-  text(
-    x = mean,
-    y = max(hist(data, breaks = 100, plot = FALSE)$density) * 0.9,
-    labels = paste("fixed =", round(mean, 3)),
-    pos = 4,
-    col = "blue",
-    font = 2
-  )
+  abline(v = mean, col = "red", lwd = 2, lty = 2)
+
+  # legend
+  legend(
+    "topright",
+    legend = paste0("Fixed: ", round(mean, 3)),
+    col = c("red"),
+    lty = c(2),
+    pch = c(NA))
 }
 
 # ------------------------------------------------------------------------------
@@ -178,8 +184,8 @@ plot_project <- function(model, project, data) {
   ymin_all <- min(c(predictedData$y, projectData$metric))
   ymax_all <- max(c(predictedData$y, projectData$metric))
   ydiff_all <- ymax_all - ymin_all
-  upper_limit <- ymax_all + ydiff_all / 5
-  lower_limit <- ymin_all - ydiff_all / 5
+  upper_limit <- ymax_all + ydiff_all / 2
+  lower_limit <- ymin_all - ydiff_all / 2
 
   # get introduction date
   l <- data[data$id == project, ]
@@ -191,14 +197,14 @@ plot_project <- function(model, project, data) {
   # predicted graph
   plot(
     predictedData$x, predictedData$y,
-    type = "l", # 'l' for line
+    type = "l",
     xlab = "Time in years",
     ylab = paste("Metric:", metric),
-    main = paste("Project:", project),
     xlim = c(-2, 2),
     ylim = c(lower_limit, upper_limit),
-    lwd = 2, # Line width
-    col = "lightcoral" # Line color
+    lwd = 2,
+    col = "red",
+    main = paste0("Project: ", project)
   )
 
   # scatter
@@ -213,10 +219,26 @@ plot_project <- function(model, project, data) {
 
   # legend
   legend("topright",
-         legend = c("Predicted Trend", "Actual Data", paste0("Introduction: ", date)),
-         col = c("lightcoral", "lightblue", "darkgrey"),
-         lty = c(1, NA, 2), # Line for trend, no line for data
-         pch = c(NA, 19, NA)) # No symbol for trend, circle for data
+         legend = c("Fitted", "Actual data", paste0("Introduction: ", date)),
+         col = c("red", "lightblue", "darkgrey"),
+         lty = c(1, NA, 2),
+         pch = c(NA, 1, NA))
+}
+
+# ------------------------------------------------------------------------------
+
+plot_raw_data_hist <- function(data, metric){
+  sigma <- sd(data)
+  mean <- mean(data)
+  hist(
+    data[data <= mean + 3 * sigma],
+    breaks = 30,
+    freq = TRUE,
+    xlab = metric,
+    col = "lightblue",
+    border = "black",
+    main = paste0("Histogram of: ", metric)
+  )
 }
 
 
