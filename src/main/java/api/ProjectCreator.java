@@ -13,15 +13,17 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import util.Constants;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Base64;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ProjectCreator {
@@ -134,7 +136,7 @@ public class ProjectCreator {
     public void createAllProjects() throws IOException {
         System.out.println("Start reading proof files");
         List<Proof> proofs = new ProofReaderWriter().readAll();
-        proofs.sort(Comparator.comparingInt(Proof::numberOfStars));
+        proofs.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
 
         System.out.println("Getting existing projects from teamscale");
         List<Project> existingProjects = projectsGetter.getExistingProjects();

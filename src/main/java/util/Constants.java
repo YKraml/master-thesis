@@ -12,7 +12,7 @@ public class Constants {
     public static final int SECONDS_IN_ONE_MONTH = 60 * 60 * 24 * 30;
     public static final Language CURRENT_LANGUAGE = Language.JAVA;
 
-    public static final String TEAMSCALE_ACCESS_KEY = "GFLSmBPXSPhgq0lDWxEHt7d70gMCn76A";
-    public static final String TEAMSCALE_URL = "http://192.168.178.21:8080/";
+    public static final String TEAMSCALE_ACCESS_KEY = "zezkp4doWF1GPO9yvaKNKiZH0epatL5X";
+    public static final String TEAMSCALE_URL = "https://yannickkraml.ddnss.de/";
     public static final String TEAMSCALE_USER = "admin";
 }
