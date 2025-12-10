@@ -11,6 +11,7 @@ library(sjmisc)
 library(effects)
 library(sjstats)
 library(lattice)
+library(lmerTest)
 
 source("R/plotting.R")
 

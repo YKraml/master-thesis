@@ -83,19 +83,18 @@ public class RepositoryHandler {
         handleRepo(repoOwner, repoName);
     }
 
-    public Optional<Proof> handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
-        Optional<Proof> proof = searchForProof(ownerName, repoName);
-        if (proof.isPresent()) {
-            proofReaderWriter.write(proof.get());
-        }
+    public Proof handleRepo(String ownerName, String repoName) throws GitAPIException, IOException {
+        Proof proof = searchForProof(ownerName, repoName);
+        proofReaderWriter.write(proof);
         return proof;
     }
 
-    private Optional<Proof> searchForProof(String repoOwner, String repoName) throws IOException, GitAPIException {
+    private Proof searchForProof(String repoOwner, String repoName) throws IOException, GitAPIException {
         //Skip if already analysed
-        File proofFile = proofReaderWriter.getFile(repoOwner, repoName);
-        if (proofFile.exists()) {
-            return proofReaderWriter.getElement(repoOwner, repoName);
+
+        Optional<Proof> proof = proofReaderWriter.getElement(repoOwner, repoName);
+        if (proof.isPresent()) {
+            return proof.get();
         }
 
         int numberOfStars = github.getRepository(repoOwner + "/" + repoName).getStargazersCount();
@@ -115,7 +114,21 @@ public class RepositoryHandler {
             long size = FileUtils.sizeOfDirectory(folder);
             if (size > SIZE_2) {
                 filteredManager.filterCompleteProject(repoOwner, repoName, "Local Repo is too large", String.valueOf(size));
-                return Optional.empty();
+                return new Proof(
+                        repoOwner,
+                        repoName,
+                        Constants.CURRENT_LANGUAGE,
+                        "https://github.com/" + repoOwner + "/" + repoName,
+                        currentBranch,
+                        currentCommit.getName(),
+                        currentCommitTime,
+                        firstCommit.getName(),
+                        firstCommit.getCommitTime(),
+                        -1,
+                        -1,
+                        numberOfStars,
+                        List.of()
+                );
             }
 
             state.addToState(Pair.of(repoOwner, repoName), "Searching for linter");
@@ -137,21 +150,20 @@ public class RepositoryHandler {
 
             Pair<Integer, Integer> startAndEndTime = getStartAndEndTime(lintersWithProof);
 
-            return Optional.of(new Proof(
-                            repoOwner,
-                            repoName,
-                            Constants.CURRENT_LANGUAGE,
-                            "https://github.com/" + repoOwner + "/" + repoName,
-                            currentBranch,
-                            currentCommit.getName(),
-                            currentCommitTime,
-                            firstCommit.getName(),
-                            firstCommit.getCommitTime(),
-                            startAndEndTime.getLeft(),
-                            startAndEndTime.getRight(),
-                            numberOfStars,
-                            lintersWithProof
-                    )
+            return new Proof(
+                    repoOwner,
+                    repoName,
+                    Constants.CURRENT_LANGUAGE,
+                    "https://github.com/" + repoOwner + "/" + repoName,
+                    currentBranch,
+                    currentCommit.getName(),
+                    currentCommitTime,
+                    firstCommit.getName(),
+                    firstCommit.getCommitTime(),
+                    startAndEndTime.getLeft(),
+                    startAndEndTime.getRight(),
+                    numberOfStars,
+                    lintersWithProof
             );
         }
     }

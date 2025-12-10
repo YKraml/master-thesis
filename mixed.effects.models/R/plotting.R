@@ -237,7 +237,8 @@ plot_raw_data_hist <- function(data, metric){
     xlab = metric,
     col = "lightblue",
     border = "black",
-    main = paste0("Histogram of: ", metric)
+    main = paste0("Histogram of: ", metric),
+    xlim = c(0, mean + 3 * sigma)
   )
 }
 

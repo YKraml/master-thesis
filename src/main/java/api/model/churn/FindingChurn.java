@@ -1,4 +1,3 @@
-
 package api.model.churn;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -32,6 +31,15 @@ public class FindingChurn {
     private List<Finding> removedFindings;
     @JsonProperty("findingsRemovedInBranch")
     private List<Finding> findingsRemovedInBranch;
+
+    public FindingChurn(Commit commit, List<Finding> addedFindings, List<Finding> findingsAddedInBranch, List<Finding> findingsInChangedCode, List<Finding> removedFindings, List<Finding> findingsRemovedInBranch) {
+        this.commit = commit;
+        this.addedFindings = addedFindings;
+        this.findingsAddedInBranch = findingsAddedInBranch;
+        this.findingsInChangedCode = findingsInChangedCode;
+        this.removedFindings = removedFindings;
+        this.findingsRemovedInBranch = findingsRemovedInBranch;
+    }
 
     @JsonProperty("commit")
     public Commit getCommit() {
@@ -67,5 +75,4 @@ public class FindingChurn {
     public List<Finding> getFindingsRemovedInBranch() {
         return findingsRemovedInBranch;
     }
-
 }

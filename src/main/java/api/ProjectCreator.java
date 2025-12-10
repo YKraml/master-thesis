@@ -13,7 +13,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import util.Constants;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -64,7 +65,7 @@ public class ProjectCreator {
                         "File-size exclude":"1MB",
                         "Source library connector":"false",
                         "Run to exhaustion":"false",
-                        "Preserve empty commits":"true",
+                        "Preserve empty userWithCommits":"true",
                         "Delta size":"500",
                         "Path prefix transformation":"",
                         "Path transformation":"",
@@ -83,7 +84,7 @@ public class ProjectCreator {
                      "pathExcludes":[],
                      "contentIncludes":[],
                      "contentExcludes":[],
-                     "profile":"master-thesis-analysis-profile"
+                     "profile":"Java (default)"
                   }
                ],
                "branchingConfiguration":{

@@ -10,7 +10,6 @@ import com.google.inject.Inject;
 import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class DataAnalyser {
         this.state = state;
     }
 
-    public Result analyseTeamscaleData(TeamscaleData data) throws IOException {
+    public Result analyseTeamscaleData(TeamscaleData data) {
         String repoOwner = data.getRepoOwner();
         String repoName = data.getRepoName();
 
@@ -47,11 +46,11 @@ public class DataAnalyser {
     }
 
     private Result.Entry createEntryFromData(FindingChurn findingChurn, CleanedMetrics cleanedMetrics, Result.Entry beforeEntry) {
-        int time = Math.toIntExact(cleanedMetrics.getTimestamp());
+        int time = Math.toIntExact(cleanedMetrics.timestamp());
         int totalNumberOfContributors = -1;
-        int totalNumberOfFiles = cleanedMetrics.getTotalNumberOfFiles();
-        int totalNumberOfLinesOfCode = cleanedMetrics.getTotalNumberOfLinesOfCode();
-        int totalNumberOfSourceLinesOfCode = cleanedMetrics.getTotalNumberOfSourceLinesOfCode();
+        int totalNumberOfFiles = cleanedMetrics.totalNumberOfFiles();
+        int totalNumberOfLinesOfCode = cleanedMetrics.totalNumberOfLinesOfCode();
+        int totalNumberOfSourceLinesOfCode = cleanedMetrics.totalNumberOfSourceLinesOfCode();
         int totalNumberOfCodeClones = beforeEntry.totalNumberOfCodeClones();
         int totalNumberOfFileSizeViolations = beforeEntry.totalNumberOfFileSizeViolations();
         int totalNumberOfMethodLengthViolations = beforeEntry.totalNumberOfMethodLengthViolations();
@@ -84,17 +83,17 @@ public class DataAnalyser {
         double relativeNumberOfMethodLengthViolations = (double) totalNumberOfMethodLengthViolations / totalNumberOfLinesOfCode * 1000;
         double relativeNumberOfNestingDepthViolations = (double) totalNumberOfNestingDepthViolations / totalNumberOfLinesOfCode * 1000;
 
-        Assessment fileSizeAssessment = cleanedMetrics.getFileSizeAssessment();
+        Assessment fileSizeAssessment = cleanedMetrics.fileSizeAssessment();
         int fileSizeAssessmentRed = fileSizeAssessment.getRed();
         int fileSizeAssessmentYellow = fileSizeAssessment.getYellow();
         int fileSizeAssessmentGreen = fileSizeAssessment.getGreen();
 
-        Assessment methodLengthAssessment = cleanedMetrics.getMethodLengthAssessment();
+        Assessment methodLengthAssessment = cleanedMetrics.methodLengthAssessment();
         int methodLengthAssessmentRed = methodLengthAssessment.getRed();
         int methodLengthAssessmentYellow = methodLengthAssessment.getYellow();
         int methodLengthAssessmentGreen = methodLengthAssessment.getGreen();
 
-        Assessment nestingDepthAssessment = cleanedMetrics.getNestingDepthAssessment();
+        Assessment nestingDepthAssessment = cleanedMetrics.nestingDepthAssessment();
         int nestingDepthAssessmentRed = nestingDepthAssessment.getRed();
         int nestingDepthAssessmentYellow = nestingDepthAssessment.getYellow();
         int nestingDepthAssessmentGreen = nestingDepthAssessment.getGreen();
@@ -109,7 +108,7 @@ public class DataAnalyser {
         double relativeNestingDepthAssessmentYellow = (double) nestingDepthAssessmentYellow / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
         double relativeNestingDepthAssessmentGreen = (double) nestingDepthAssessmentGreen / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
 
-        double cloneCoverage = cleanedMetrics.getCloneCoverage();
+        double cloneCoverage = cleanedMetrics.cloneCoverage();
         double averageFileLoc = (double) totalNumberOfSourceLinesOfCode / totalNumberOfFiles;
         double averageFileSloc = (double) totalNumberOfLinesOfCode / totalNumberOfFiles;
 

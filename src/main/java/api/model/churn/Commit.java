@@ -20,6 +20,11 @@ public class Commit {
     private String branchName;
     @JsonProperty("timestamp")
     private Long timestamp;
+    public Commit(String type, String branchName, Long timestamp) {
+        this.type = type;
+        this.branchName = branchName;
+        this.timestamp = timestamp;
+    }
 
     @JsonProperty("type")
     public String getType() {
@@ -35,5 +40,4 @@ public class Commit {
     public Long getTimestamp() {
         return timestamp;
     }
-
 }

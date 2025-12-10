@@ -58,7 +58,7 @@ public class DataCollector {
     }
 
     private void collectDataFor(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
-        Proof proof = repositoryHandler.handleRepo(repoOwner, repoName).get();
+        Proof proof = repositoryHandler.handleRepo(repoOwner, repoName);
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
         Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 
