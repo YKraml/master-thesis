@@ -17,12 +17,22 @@ source("R/plotting.R")
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
-  "averageFileLoc",
-  "relativeNumberOfFileSizeViolations",
-  "relativeNumberOfMethodLengthViolations",
-  "relativeNumberOfNestingDepthViolations",
-  "totalNumberOfLinesOfCode",
-  "relativeNumberOfCodeClones"
+  # "files",
+  # "linesOfCode",
+  # "sourceLinesOfCode",
+  # "clones",
+  # "longFiles",
+  # "longMethods",
+  # "deepNesting",
+  # "findings",
+  # "clonesDensity",
+  "longFilesDensity",
+  "longMethodDensity",
+  "deepNestingDensity",
+  "findingsDensity",
+  # "cloneCoverage",
+  "averageFileLoc"
+  # "averageFileSloc"
   )
 
 for (fileName in fileNames) {
@@ -141,8 +151,6 @@ for (fileName in fileNames) {
       plot_project(model, id, data)
       dev.off()
     }
-
-
   }
 }
 

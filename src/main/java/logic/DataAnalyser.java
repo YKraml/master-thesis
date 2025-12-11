@@ -55,19 +55,19 @@ public class DataAnalyser {
         int longMethods = beforeEntry.longMethods();
         int deepNesting = beforeEntry.deepNesting();
         for (Finding finding : findingChurn.addedFindings()) {
-            switch (finding.message()) {
-                case "Clones" -> clones++;
-                case "Long File" -> longFiles++;
-                case "Long Method" -> longMethods++;
-                case "Deep Nesting" -> deepNesting++;
+            switch (finding.groupName()) {
+                case "Code Clones" -> clones++;
+                case "File Size" -> longFiles++;
+                case "Method Length" -> longMethods++;
+                case "Nesting Depth" -> deepNesting++;
             }
         }
         for (Finding finding : findingChurn.removedFindings()) {
-            switch (finding.message()) {
-                case "Clones" -> clones--;
-                case "Long File" -> longFiles--;
-                case "Long Method" -> longMethods--;
-                case "Deep Nesting" -> deepNesting--;
+            switch (finding.groupName()) {
+                case "Code Clones" -> clones--;
+                case "File Size" -> longFiles--;
+                case "Method Length" -> longMethods--;
+                case "Nesting Depth" -> deepNesting--;
             }
         }
 
