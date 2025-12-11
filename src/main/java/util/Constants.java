@@ -13,6 +13,6 @@ public class Constants {
     public static final Language CURRENT_LANGUAGE = Language.JAVA;
 
     public static final String TEAMSCALE_ACCESS_KEY = "JR62xEGhWWh7NYh2srekjo61ftAYZBYo";
-    public static final String TEAMSCALE_URL = "http://192.168.178.21:8080/";
+    public static final String TEAMSCALE_URL = "https://yannickkraml.ddnss.de/";
     public static final String TEAMSCALE_USER = "admin";
 }

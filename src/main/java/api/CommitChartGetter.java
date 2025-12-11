@@ -35,7 +35,7 @@ public class CommitChartGetter {
             // Execute the POST request
             try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
                 int statusCode = response.getStatusLine().getStatusCode();
-                System.out.println("Response Code: " + statusCode);
+                // System.out.println("Response Code: " + statusCode);
 
                 HttpEntity entity = response.getEntity();
                 if (entity == null) {

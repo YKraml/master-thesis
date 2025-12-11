@@ -2,7 +2,6 @@ package logic;
 
 import api.model.churn.Finding;
 import api.model.churn.FindingChurn;
-import api.model.cleaned.Assessment;
 import api.model.cleaned.CleanedMetrics;
 import api.model.cleaned.TeamscaleData;
 import api.model.cleaned.TeamscaleDataEntry;
@@ -47,103 +46,58 @@ public class DataAnalyser {
 
     private Result.Entry createEntryFromData(FindingChurn findingChurn, CleanedMetrics cleanedMetrics, Result.Entry beforeEntry) {
         int time = Math.toIntExact(cleanedMetrics.timestamp());
-        int totalNumberOfContributors = -1;
-        int totalNumberOfFiles = cleanedMetrics.totalNumberOfFiles();
-        int totalNumberOfLinesOfCode = cleanedMetrics.totalNumberOfLinesOfCode();
-        int totalNumberOfSourceLinesOfCode = cleanedMetrics.totalNumberOfSourceLinesOfCode();
-        int totalNumberOfCodeClones = beforeEntry.totalNumberOfCodeClones();
-        int totalNumberOfFileSizeViolations = beforeEntry.totalNumberOfFileSizeViolations();
-        int totalNumberOfMethodLengthViolations = beforeEntry.totalNumberOfMethodLengthViolations();
-        int totalNumberOfNestingDepthViolations = beforeEntry.totalNumberOfNestingDepthViolations();
+        int files = cleanedMetrics.files();
+        int linesOfCode = cleanedMetrics.linesOfCode();
+        int sourceLinesOfCode = cleanedMetrics.sourceLinesOfCode();
 
-        for (Finding finding : findingChurn.getAddedFindings()) {
-            String groupName = finding.getGroupName();
-            switch (groupName) {
-                case "Code Clones" -> totalNumberOfCodeClones++;
-                case "File Size" -> totalNumberOfFileSizeViolations++;
-                case "Method Length" -> totalNumberOfMethodLengthViolations++;
-                case "Nesting Depth" -> totalNumberOfNestingDepthViolations++;
-                default -> throw new IllegalStateException("Unexpected value: " + groupName);
+        int clones = beforeEntry.clones();
+        int longFiles = beforeEntry.longFiles();
+        int longMethods = beforeEntry.longMethods();
+        int deepNesting = beforeEntry.deepNesting();
+        for (Finding finding : findingChurn.addedFindings()) {
+            switch (finding.message()) {
+                case "Clones" -> clones++;
+                case "Long File" -> longFiles++;
+                case "Long Method" -> longMethods++;
+                case "Deep Nesting" -> deepNesting++;
+            }
+        }
+        for (Finding finding : findingChurn.removedFindings()) {
+            switch (finding.message()) {
+                case "Clones" -> clones--;
+                case "Long File" -> longFiles--;
+                case "Long Method" -> longMethods--;
+                case "Deep Nesting" -> deepNesting--;
             }
         }
 
-        for (Finding finding : findingChurn.getRemovedFindings()) {
-            String groupName = finding.getGroupName();
-            switch (groupName) {
-                case "Code Clones" -> totalNumberOfCodeClones--;
-                case "File Size" -> totalNumberOfFileSizeViolations--;
-                case "Method Length" -> totalNumberOfMethodLengthViolations--;
-                case "Nesting Depth" -> totalNumberOfNestingDepthViolations--;
-                default -> throw new IllegalStateException("Unexpected value: " + groupName);
-            }
-        }
+        int findings = (int) cleanedMetrics.numberOfFindings();
 
-        double relativeNumberOfCodeClones = (double) totalNumberOfCodeClones / totalNumberOfLinesOfCode * 1000;
-        double relativeNumberOfFileSizeViolations = (double) totalNumberOfFileSizeViolations / totalNumberOfLinesOfCode * 1000;
-        double relativeNumberOfMethodLengthViolations = (double) totalNumberOfMethodLengthViolations / totalNumberOfLinesOfCode * 1000;
-        double relativeNumberOfNestingDepthViolations = (double) totalNumberOfNestingDepthViolations / totalNumberOfLinesOfCode * 1000;
-
-        Assessment fileSizeAssessment = cleanedMetrics.fileSizeAssessment();
-        int fileSizeAssessmentRed = fileSizeAssessment.getRed();
-        int fileSizeAssessmentYellow = fileSizeAssessment.getYellow();
-        int fileSizeAssessmentGreen = fileSizeAssessment.getGreen();
-
-        Assessment methodLengthAssessment = cleanedMetrics.methodLengthAssessment();
-        int methodLengthAssessmentRed = methodLengthAssessment.getRed();
-        int methodLengthAssessmentYellow = methodLengthAssessment.getYellow();
-        int methodLengthAssessmentGreen = methodLengthAssessment.getGreen();
-
-        Assessment nestingDepthAssessment = cleanedMetrics.nestingDepthAssessment();
-        int nestingDepthAssessmentRed = nestingDepthAssessment.getRed();
-        int nestingDepthAssessmentYellow = nestingDepthAssessment.getYellow();
-        int nestingDepthAssessmentGreen = nestingDepthAssessment.getGreen();
-
-        double relativeFileSizeAssessmentRed = (double) fileSizeAssessmentRed / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
-        double relativeFileSizeAssessmentYellow = (double) fileSizeAssessmentYellow / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
-        double relativeFileSizeAssessmentGreen = (double) fileSizeAssessmentGreen / (fileSizeAssessmentRed + fileSizeAssessmentYellow + fileSizeAssessmentGreen);
-        double relativeMethodLengthAssessmentRed = (double) methodLengthAssessmentRed / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
-        double relativeMethodLengthAssessmentYellow = (double) methodLengthAssessmentYellow / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
-        double relativeMethodLengthAssessmentGreen = (double) methodLengthAssessmentGreen / (methodLengthAssessmentRed + methodLengthAssessmentYellow + methodLengthAssessmentGreen);
-        double relativeNestingDepthAssessmentRed = (double) nestingDepthAssessmentRed / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
-        double relativeNestingDepthAssessmentYellow = (double) nestingDepthAssessmentYellow / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
-        double relativeNestingDepthAssessmentGreen = (double) nestingDepthAssessmentGreen / (nestingDepthAssessmentRed + nestingDepthAssessmentYellow + nestingDepthAssessmentGreen);
-
+        double clonesDensity = (double) clones / sourceLinesOfCode * 1000;
+        double longFilesDensity = (double) longFiles / sourceLinesOfCode * 1000;
+        double longMethodDensity = (double) longMethods / sourceLinesOfCode * 1000;
+        double deepNestingDensity = (double) deepNesting / sourceLinesOfCode * 1000;
+        double findingsDensity = (double) findings / sourceLinesOfCode * 1000;
         double cloneCoverage = cleanedMetrics.cloneCoverage();
-        double averageFileLoc = (double) totalNumberOfSourceLinesOfCode / totalNumberOfFiles;
-        double averageFileSloc = (double) totalNumberOfLinesOfCode / totalNumberOfFiles;
+        double averageFileLoc = (double) sourceLinesOfCode / files;
+        double averageFileSloc = (double) linesOfCode / files;
+
 
         return new Result.Entry(
                 time,
-                totalNumberOfContributors,
-                totalNumberOfFiles,
-                totalNumberOfLinesOfCode,
-                totalNumberOfSourceLinesOfCode,
-                totalNumberOfCodeClones,
-                totalNumberOfFileSizeViolations,
-                totalNumberOfMethodLengthViolations,
-                totalNumberOfNestingDepthViolations,
-                relativeNumberOfCodeClones,
-                relativeNumberOfFileSizeViolations,
-                relativeNumberOfMethodLengthViolations,
-                relativeNumberOfNestingDepthViolations,
-                fileSizeAssessmentRed,
-                fileSizeAssessmentYellow,
-                fileSizeAssessmentGreen,
-                methodLengthAssessmentRed,
-                methodLengthAssessmentYellow,
-                methodLengthAssessmentGreen,
-                nestingDepthAssessmentRed,
-                nestingDepthAssessmentYellow,
-                nestingDepthAssessmentGreen,
-                relativeFileSizeAssessmentRed,
-                relativeFileSizeAssessmentYellow,
-                relativeFileSizeAssessmentGreen,
-                relativeMethodLengthAssessmentRed,
-                relativeMethodLengthAssessmentYellow,
-                relativeMethodLengthAssessmentGreen,
-                relativeNestingDepthAssessmentRed,
-                relativeNestingDepthAssessmentYellow,
-                relativeNestingDepthAssessmentGreen,
+                files,
+                linesOfCode,
+                sourceLinesOfCode,
+                clones,
+                longFiles,
+                longMethods,
+                deepNesting,
+                findings,
+                clonesDensity,
+                longFilesDensity,
+                longMethodDensity,
+                deepNestingDensity,
+                findingsDensity,
                 cloneCoverage,
                 averageFileLoc,
                 averageFileSloc

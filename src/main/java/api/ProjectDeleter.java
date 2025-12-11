@@ -46,6 +46,7 @@ public class ProjectDeleter {
             System.out.println("Response Code: " + statusCode);
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

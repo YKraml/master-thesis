@@ -16,9 +16,11 @@ public class MainTest {
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException, TimeoutException, GitAPIException {
         Injector injector = Guice.createInjector(new GuiceModule());
         State state = injector.getInstance(State.class);
-        state.start();
-
         TeamscaleDataDownloader teamscaleDataDownloader = injector.getInstance(TeamscaleDataDownloader.class);
+
+
+
+        state.start();
 
         String repoOwner = "gephi";
         String repoName = "gephi";
@@ -26,5 +28,7 @@ public class MainTest {
         state.removeFromState(Pair.of(repoOwner, repoName));
 
         System.out.println(teamscaleData);
+
+        state.end();
     }
 }

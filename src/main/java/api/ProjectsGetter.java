@@ -36,7 +36,7 @@ public class ProjectsGetter {
             HttpEntity entity;
             try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
                 int statusCode = response.getStatusLine().getStatusCode();
-                System.out.println("Response Code: " + statusCode);
+                // System.out.println("Response Code: " + statusCode);
                 entity = response.getEntity();
 
                 if (entity == null) {
@@ -50,7 +50,7 @@ public class ProjectsGetter {
                 return List.of(new ObjectMapper().readValue(responseBody, Project[].class));
             }
         } catch (Exception e) {
-            System.out.println(responseBody);
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

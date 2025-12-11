@@ -24,22 +24,7 @@ class DataAnalyserTest {
         TEAMSCALE_DATA_DOWNLOADER = injector.getInstance(TeamscaleDataDownloader.class);
     }
 
-    private static void assertMetricsAtEntry(Result.Entry entry, int numberOfFiles, int numberOfLinesOfCode, int numberOfSourceLinesOfCode) {
-        Assertions.assertAll(
-                () -> Assertions.assertEquals(numberOfFiles, entry.totalNumberOfFiles()),
-                () -> Assertions.assertEquals(numberOfLinesOfCode, entry.totalNumberOfLinesOfCode()),
-                () -> Assertions.assertEquals(numberOfSourceLinesOfCode, entry.totalNumberOfSourceLinesOfCode())
-        );
-    }
 
-    private static void assertFindingsAtEntry(Result.Entry entry, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
-        Assertions.assertAll(
-                () -> Assertions.assertEquals(numberOfCodeClones, entry.totalNumberOfCodeClones()),
-                () -> Assertions.assertEquals(numberOfFileSizeViolations, entry.totalNumberOfFileSizeViolations()),
-                () -> Assertions.assertEquals(numberOfMethodLengthViolations, entry.totalNumberOfMethodLengthViolations()),
-                () -> Assertions.assertEquals(numberOfNestingDepthViolations, entry.totalNumberOfNestingDepthViolations())
-        );
-    }
 
     @Test
     void testAirbnbDeepLinkDispatch() throws Exception {
@@ -86,6 +71,23 @@ class DataAnalyserTest {
                 () -> assertFindingsAtEntry(result.entries().getLast(), 21, 3, 20, 18),
                 () -> assertMetricsAtEntry(result.entries().getFirst(), 12, 2633, 1509),
                 () -> assertMetricsAtEntry(result.entries().getLast(), 63, 11524, 7217)
+        );
+    }
+
+    private static void assertMetricsAtEntry(Result.Entry entry, int numberOfFiles, int numberOfLinesOfCode, int numberOfSourceLinesOfCode) {
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(numberOfFiles, entry.files()),
+                () -> Assertions.assertEquals(numberOfLinesOfCode, entry.linesOfCode()),
+                () -> Assertions.assertEquals(numberOfSourceLinesOfCode, entry.sourceLinesOfCode())
+        );
+    }
+
+    private static void assertFindingsAtEntry(Result.Entry entry, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(numberOfCodeClones, entry.clones()),
+                () -> Assertions.assertEquals(numberOfFileSizeViolations, entry.longFiles()),
+                () -> Assertions.assertEquals(numberOfMethodLengthViolations, entry.longMethods()),
+                () -> Assertions.assertEquals(numberOfNestingDepthViolations, entry.deepNesting())
         );
     }
 }

@@ -63,6 +63,7 @@ public class MetricsGetter {
                 }
             }
         } catch (IOException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

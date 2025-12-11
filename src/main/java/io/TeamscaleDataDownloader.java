@@ -3,7 +3,6 @@ package io;
 import api.CommitChartGetter;
 import api.FindingChurnGetter;
 import api.MetricsGetter;
-import api.model.churn.Commit;
 import api.model.churn.FindingChurn;
 import api.model.cleaned.Assessment;
 import api.model.cleaned.CleanedMetrics;
@@ -53,41 +52,12 @@ public class TeamscaleDataDownloader {
         this.commitChartGetter = commitChartGetter;
     }
 
-    private static CleanedMetrics cleanMetrics(Metrics metrics) {
-        int time = Math.toIntExact(metrics.getTimestamp() / 1000);
-        int totalNumberOfFiles = (int) ((ValueDouble) metrics.getValue().get(0)).getValue();
-        int totalNumberOfLinesOfCode = (int) ((ValueDouble) metrics.getValue().get(1)).getValue();
-        int totalNumberOfSourceLinesOfCode = (int) ((ValueDouble) metrics.getValue().get(2)).getValue();
-        ValueMapping fileSizeAssessment = (ValueMapping) metrics.getValue().get(3);
-        int fileSizeAssessmentRed = (int) fileSizeAssessment.getRed();
-        int fileSizeAssessmentYellow = (int) fileSizeAssessment.getYellow();
-        int fileSizeAssessmentGreen = (int) fileSizeAssessment.getGreen();
 
-        ValueMapping methodLengthAssessment = (ValueMapping) metrics.getValue().get(5);
-        int methodLengthAssessmentRed = (int) methodLengthAssessment.getRed();
-        int methodLengthAssessmentYellow = (int) methodLengthAssessment.getYellow();
-        int methodLengthAssessmentGreen = (int) methodLengthAssessment.getGreen();
-
-        ValueMapping nestingDepthAssessment = (ValueMapping) metrics.getValue().get(7);
-        int nestingDepthAssessmentRed = (int) nestingDepthAssessment.getRed();
-        int nestingDepthAssessmentYellow = (int) nestingDepthAssessment.getYellow();
-        int nestingDepthAssessmentGreen = (int) nestingDepthAssessment.getGreen();
-
-        double cloneCoverage = ((ValueDouble) metrics.getValue().get(17)).getValue();
-
-        return new CleanedMetrics(time,
-                totalNumberOfFiles, totalNumberOfLinesOfCode, totalNumberOfSourceLinesOfCode,
-                Assessment.of(fileSizeAssessmentRed, fileSizeAssessmentYellow, fileSizeAssessmentGreen),
-                Assessment.of(methodLengthAssessmentRed, methodLengthAssessmentYellow, methodLengthAssessmentGreen),
-                Assessment.of(nestingDepthAssessmentRed, nestingDepthAssessmentYellow, nestingDepthAssessmentGreen),
-                cloneCoverage
-        );
-    }
 
     public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException, GitAPIException {
         File file = new File("temp" + File.separator + "data" + File.separator + repoOwner + "." + repoName + ".json");
         if (file.exists()) {
-            //return new ObjectMapper().readValue(file, TeamscaleData.class);
+            return new ObjectMapper().readValue(file, TeamscaleData.class);
         }
 
         List<CompletableFuture<?>> futures = new ArrayList<>();
@@ -97,7 +67,7 @@ public class TeamscaleDataDownloader {
         List<Metrics> metrics = metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
 
         // Get findings data
-        AtomicInteger counter = new AtomicInteger(0);
+        AtomicInteger counter = new AtomicInteger(1);
         int teamscaleCommitCount = metrics.size();
         for (Metrics entry : metrics) {
             futures.add(CompletableFuture.runAsync(() -> {
@@ -127,20 +97,13 @@ public class TeamscaleDataDownloader {
             }
 
             data.add(TeamscaleDataEntry.of(
-                    new FindingChurn(
-                            new Commit("INSERTED", "INSERTED", ((long) commit.getCommitTime()) * 1000),
-                            List.of(),
-                            List.of(),
-                            List.of(),
-                            List.of(),
-                            List.of()
-                    ),
+                    FindingChurn.empty(commit.getCommitTime()),
                     cleanMetrics(getMetricsAtTime(metrics, commit.getCommitTime()))
             ));
         }
 
         //Sort data by timestamp
-        data.sort(Comparator.comparing(o -> o.getFindingChurn().getCommit().getTimestamp()));
+        data.sort(Comparator.comparing(o -> o.getFindingChurn().commit().timestamp()));
 
         File folder = new File("temp" + File.separator + "data");
         if (!folder.exists()) {
@@ -196,5 +159,44 @@ public class TeamscaleDataDownloader {
                 throw new RuntimeException(ex);
             }
         }
+    }
+
+    private static CleanedMetrics cleanMetrics(Metrics metrics) {
+        ValueMapping fileSizeAssessment = (ValueMapping) metrics.getValue().get(3);
+        ValueMapping methodLengthAssessment = (ValueMapping) metrics.getValue().get(5);
+        ValueMapping nestingDepthAssessment = (ValueMapping) metrics.getValue().get(7);
+        ValueMapping commentCompletenessAssessment = (ValueMapping) metrics.getValue().get(18);
+
+        return new CleanedMetrics(
+                Math.toIntExact(metrics.getTimestamp() / 1000),
+                (int) ((ValueDouble) metrics.getValue().get(0)).getValue(),
+                (int) ((ValueDouble) metrics.getValue().get(1)).getValue(),
+                (int) ((ValueDouble) metrics.getValue().get(2)).getValue(),
+                Assessment.of((int) fileSizeAssessment.getRed(), (int) fileSizeAssessment.getYellow(), (int) fileSizeAssessment.getGreen()),
+                (int) ((ValueDouble) metrics.getValue().get(4)).getValue(),
+                Assessment.of((int) methodLengthAssessment.getRed(), (int) methodLengthAssessment.getYellow(), (int) methodLengthAssessment.getGreen()),
+                (int) ((ValueDouble) metrics.getValue().get(6)).getValue(),
+                Assessment.of((int) nestingDepthAssessment.getRed(), (int) nestingDepthAssessment.getYellow(), (int) nestingDepthAssessment.getGreen()),
+                ((ValueDouble) metrics.getValue().get(10)).getValue(),
+                ((ValueDouble) metrics.getValue().get(11)).getValue(),
+                ((ValueDouble) metrics.getValue().get(12)).getValue(),
+                ((ValueDouble) metrics.getValue().get(13)).getValue(),
+                ((ValueDouble) metrics.getValue().get(14)).getValue(),
+                ((ValueDouble) metrics.getValue().get(15)).getValue(),
+                ((ValueDouble) metrics.getValue().get(16)).getValue(),
+                ((ValueDouble) metrics.getValue().get(17)).getValue(),
+                Assessment.of((int) commentCompletenessAssessment.getRed(), (int) commentCompletenessAssessment.getYellow(), (int) commentCompletenessAssessment.getGreen()),
+                ((ValueDouble) metrics.getValue().get(19)).getValue(),
+                ((ValueDouble) metrics.getValue().get(21)).getValue(),
+                ((ValueDouble) metrics.getValue().get(22)).getValue(),
+                ((ValueDouble) metrics.getValue().get(23)).getValue(),
+                ((ValueDouble) metrics.getValue().get(24)).getValue(),
+                ((ValueDouble) metrics.getValue().get(25)).getValue(),
+                ((ValueDouble) metrics.getValue().get(26)).getValue(),
+                ((ValueDouble) metrics.getValue().get(27)).getValue(),
+                ((ValueDouble) metrics.getValue().get(28)).getValue(),
+                ((ValueDouble) metrics.getValue().get(29)).getValue(),
+                ((ValueDouble) metrics.getValue().get(30)).getValue()
+        );
     }
 }

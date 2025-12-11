@@ -1,5 +1,6 @@
 package model;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.RecordComponent;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,36 +16,19 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) imp
 
     public record Entry(
             int time,
-            int totalNumberOfContributors,
-            int totalNumberOfFiles,
-            int totalNumberOfLinesOfCode,
-            int totalNumberOfSourceLinesOfCode,
-            int totalNumberOfCodeClones,
-            int totalNumberOfFileSizeViolations,
-            int totalNumberOfMethodLengthViolations,
-            int totalNumberOfNestingDepthViolations,
-            double relativeNumberOfCodeClones,
-            double relativeNumberOfFileSizeViolations,
-            double relativeNumberOfMethodLengthViolations,
-            double relativeNumberOfNestingDepthViolations,
-            int fileSizeAssessmentRed,
-            int fileSizeAssessmentYellow,
-            int fileSizeAssessmentGreen,
-            int methodLengthAssessmentRed,
-            int methodLengthAssessmentYellow,
-            int methodLengthAssessmentGreen,
-            int nestingDepthAssessmentRed,
-            int nestingDepthAssessmentYellow,
-            int nestingDepthAssessmentGreen,
-            double relativeFileSizeAssessmentRed,
-            double relativeFileSizeAssessmentYellow,
-            double relativeFileSizeAssessmentGreen,
-            double relativeMethodLengthAssessmentRed,
-            double relativeMethodLengthAssessmentYellow,
-            double relativeMethodLengthAssessmentGreen,
-            double relativeNestingDepthAssessmentRed,
-            double relativeNestingDepthAssessmentYellow,
-            double relativeNestingDepthAssessmentGreen,
+            int files,
+            int linesOfCode,
+            int sourceLinesOfCode,
+            int clones,
+            int longFiles,
+            int longMethods,
+            int deepNesting,
+            int findings,
+            double clonesDensity,
+            double longFilesDensity,
+            double longMethodDensity,
+            double deepNestingDensity,
+            double findingsDensity,
             double cloneCoverage,
             double averageFileLoc,
             double averageFileSloc
@@ -57,7 +41,17 @@ public record Result(String repoOwner, String repoName, List<Entry> entries) imp
         }
 
         public static Entry getDefault() {
-            return new Entry(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            RecordComponent[] components = Entry.class.getRecordComponents();
+            Object[] args = new Object[components.length];
+            Arrays.fill(args, 0);
+
+            try {
+                return (Entry) Entry.class.getDeclaredConstructors()[0].newInstance(args);
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+
         }
 
         public String csvLine() {
