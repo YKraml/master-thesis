@@ -7,7 +7,7 @@ plot_predicted <- function(data, model) {
   Vb    <- vcov(model)
 
   # Create new time sequence
-  new_time <- seq(-2, 2, by = 0.01)
+  new_time <- seq(-365, 364, by = 0.01)
 
   # Build new dataframe
   newdata <- data.frame(
@@ -45,7 +45,7 @@ plot_predicted <- function(data, model) {
   plot(
     newdata$time, newdata$pred, type = "l",
     xlab = "Time in years", ylab = "Predicted metric",
-    xlim = c(-2, 2),
+    xlim = c(-365, 364),
     ylim = c(ymin2, ymax2),
     main = "Fitted fixed effect with 95% confidence interval"
   )
@@ -76,6 +76,7 @@ plot_qq <- function(data, model) {
 
 # ------------------------------------------------------------------------------
 
+# residual dependence plot
 plot_residuals_vs_fitted <- function(data, model) {
   residuals <- residuals(model)
   fitted_vals <- fitted(model)
@@ -87,6 +88,7 @@ plot_residuals_vs_fitted <- function(data, model) {
     ylab = "Residuals",
     main = "Residuals vs fitted"
     )
+
   abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
 
@@ -152,13 +154,14 @@ plot_random_effects_histogram <- function(data, color, main) {
 
 # ------------------------------------------------------------------------------
 
-plot_project <- function(model, project, data) {
-  randomEffectsFromProject = ranef(model)$id[project,]
+plot_project <- function(model, id, data) {
+  random_effects <- ranef(model)
+  randomEffectsFromProject = random_effects[id,]
   fixedEffects <- fixef(model)
   randomEffectsFromProject <- fixedEffects + randomEffectsFromProject
 
   # compute predicted values
-  x <- seq(-2, 2, by = 0.01)
+  x <- seq(-104, 103, by = 0.01)
   predictedData <- data.frame(
     x = x,
     y = ifelse(
@@ -169,7 +172,7 @@ plot_project <- function(model, project, data) {
   )
 
   # scatter plot data
-  projectData <- data[data$id == project, ]
+  projectData <- data[data$id == id, ]
   projectData <- projectData[c(metric, "t_pre", "t_post")]
   projectData <- data.frame(
     time = ifelse(
@@ -188,7 +191,7 @@ plot_project <- function(model, project, data) {
   lower_limit <- ymin_all - ydiff_all / 2
 
   # get introduction date
-  l <- data[data$id == project, ]
+  l <- data[data$id == id, ]
   seconds_timestamp <- l[l$intervention == 1, ][1, ]$time
   date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
   date <- format(date_time_object, format = "%d.%m.%Y")
@@ -200,11 +203,11 @@ plot_project <- function(model, project, data) {
     type = "l",
     xlab = "Time in years",
     ylab = paste("Metric:", metric),
-    xlim = c(-2, 2),
+    xlim = c(-365, 364),
     ylim = c(lower_limit, upper_limit),
     lwd = 2,
     col = "red",
-    main = paste0("Project: ", project)
+    main = paste0("Project: ", id)
   )
 
   # scatter

@@ -12,6 +12,10 @@ library(effects)
 library(sjstats)
 library(lattice)
 library(lmerTest)
+library(DHARMa)
+library(dplyr)
+library(glmmTMB)
+library(AICcmodavg)
 
 source("R/plotting.R")
 
@@ -37,6 +41,15 @@ metrics <- list(
 
 for (fileName in fileNames) {
   print(fileName)
+  # Load Data
+  dataNotClean <- read.csv(fileName)
+  data <- dataNotClean[complete.cases(dataNotClean), ]
+  data$cleaned_time <- ifelse(
+    data$intervention == 0,
+    data$t_pre,
+    data$t_post
+  )
+
   for (metric in metrics) {
     print(paste(" -",metric))
 
@@ -46,26 +59,36 @@ for (fileName in fileNames) {
     folderName <- paste("plots",cleanedFileName, metric, sep = "/")
     dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
 
-    # Load Data
-    dataNotClean <- read.csv(fileName)
-    data <- dataNotClean[complete.cases(dataNotClean), ]
 
     # Create model
-    model <- lmer(
-      as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
-      data = data
+    model <- lme(
+      fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
+      random = ~ 1 + t_pre + t_post + intervention| id,
+      correlation = corAR1(form = ~ cleaned_time | id),
+      data = data,
+      method="ML",
+      control = lmeControl(opt = "optim")
     )
 
-    random_effects <- ranef(model)[[1]]
+    # Create simple model without ar1
+    model_simple <- lme(
+      fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
+      random = ~ 1 + t_pre + t_post + intervention| id,
+      data = data,
+      method="ML",
+      control = lmeControl(opt = "optim")
+    )
+
+    random_effects <- ranef(model)
     fixed_effects <- fixef(model)
     absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
-    # gepaarter t-test
-
-
     # print model results
     capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
-    capture.output(VarCorr(model), file = file.path(folderName, "model_var_corr.txt"))
+    capture.output(summary(model_simple), file = file.path(folderName, "model_simple_summary.txt"))
+    capture.output(anova(model_simple, model), file = file.path(folderName, "models_anova.txt"))
+    capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folderName, "models_aictab.txt"))
+
 
     # print tests
     capture.output(
@@ -115,11 +138,6 @@ for (fileName in fileNames) {
     plot_residuals_histogram(data, model)
     dev.off()
 
-    # print random effects histograms
-    random_effects <- ranef(model)[[1]]
-    fixed_effects <- fixef(model)
-    absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
-
     plotPath <- paste(folderName, "random_effects_hist_t_pre.png", sep = "/")
     png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre")
@@ -157,61 +175,4 @@ for (fileName in fileNames) {
 
 # ------------------------------------------------------------------------------
 
-dataNotClean <- read.csv('data/bucket_one/CHECKSTYLE.csv')
-data <- dataNotClean[complete.cases(dataNotClean), ]
-metric <- "averageFileLoc"
-
-model <- lmer(
-  as.formula(paste0(metric," ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
-  data = data
-)
-
-summary(model)
-VarCorr(model)
-
-source("R/plotting.R")
-plot_project(model, "apache.commons-io", data)
-
-# ------------------------------------------------------------------------------
-
-random_effects <- ranef(model)[[1]]
-fixed_effects <- fixef(model)
-absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
-
-# gepaarter t-test
-t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE)
-
-
-# ------------------------------------------------------------------------------
-
-
-# ------------------------------------------------------------------------------
-
-plot_predicted(data, model)
-plot_qq(data, model)
-plot_residuals_vs_fitted(data, model)
-plot_residuals_histogram(data, model)
-
-# ------------------------------------------------------------------------------
-
-
-# Plotting the effect of 't_pre'
-plot(effect("t_pre", model),
-     main = "Effect of t_pre",
-     xlab = "T_Pre",
-     ylab = "Predicted averageFileLoc")
-
-# Plotting the effect of 't_post'
-plot(effect("t_post", model),
-     main = "Effect of t_post",
-     xlab = "T_Post",
-     ylab = "Predicted averageFileLoc",)
-
-# Plotting the effect of 'intervention'
-plot(effect("intervention", model),
-     main = "Effect of Intervention",
-     xlab = "Intervention Group",
-     ylab = "Predicted averageFileLoc")
-
-# ------------------------------------------------------------------------------
 

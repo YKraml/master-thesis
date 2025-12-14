@@ -7,10 +7,7 @@ import model.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static util.Constants.SECONDS_IN_ONE_MONTH;
@@ -111,16 +108,48 @@ public class CsvCreator {
                 int introductionTime = linterTimeResult.time();
                 Result result = linterTimeResult.result();
 
+                NavigableMap<Integer, Result.Entry> entryByTime = new TreeMap<>();
                 for (Result.Entry entry : result.entries()) {
+                    entryByTime.put(entry.time(), entry);
+                }
+
+                int[] points = getPoints();
+                for (int point : points) {
+                    int time = introductionTime + point * 24 * 60 * 60;
+                    Result.Entry entry = getNearestEntry(entryByTime, time);
+
                     String id = result.repoOwner() + "." + result.repoName();
-                    int intervention = entry.time() < introductionTime ? 0 : 1;
-                    double relativeTime = ((double) (entry.time() - introductionTime)) / 60 / 60 / 24 / 365;
-                    double t_pre = relativeTime * (1 - intervention);
-                    double t_post = relativeTime * intervention;
+                    int intervention = point < 0 ? 0 : 1;
+                    int t_pre = point * (1 - intervention);
+                    int t_post = point * intervention;
                     pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t_pre + "," + t_post);
                 }
             }
         }
+    }
+
+    private Result.Entry getNearestEntry(NavigableMap<Integer, Result.Entry> map, int time) {
+        Map.Entry<Integer, Result.Entry> floor = map.floorEntry(time);
+        Map.Entry<Integer, Result.Entry> ceil = map.ceilingEntry(time);
+
+        if (floor != null) {
+            return floor.getValue();
+        }
+        if (ceil != null) {
+            return ceil.getValue();
+        }
+
+        throw new RuntimeException("No floor and no ceil was found");
+    }
+
+    private int[] getPoints() {
+        int[] points = new int[52 * 2 * 2];
+
+        for (int i = 0; i < points.length; i++) {
+            points[i] = i * 7 - 2 * 52 * 7;
+        }
+
+        return points;
     }
 
     private Map<Linter, List<LinterTimeResult>> cutEndsOff(Map<Linter, List<LinterTimeResult>> linterTimeResultMap) {

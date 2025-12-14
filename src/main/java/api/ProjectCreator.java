@@ -65,7 +65,7 @@ public class ProjectCreator {
                         "File-size exclude":"1MB",
                         "Source library connector":"false",
                         "Run to exhaustion":"false",
-                        "Preserve empty userWithCommits":"true",
+                        "Preserve empty commits":"true",
                         "Delta size":"500",
                         "Path prefix transformation":"",
                         "Path transformation":"",
