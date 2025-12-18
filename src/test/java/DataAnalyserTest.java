@@ -84,7 +84,7 @@ class DataAnalyserTest {
 
     private static void assertFindingsAtEntry(Result.Entry entry, int numberOfCodeClones, int numberOfFileSizeViolations, int numberOfMethodLengthViolations, int numberOfNestingDepthViolations) {
         Assertions.assertAll(
-                () -> Assertions.assertEquals(numberOfCodeClones, entry.clones()),
+                () -> Assertions.assertEquals(numberOfCodeClones, entry.redundancy()),
                 () -> Assertions.assertEquals(numberOfFileSizeViolations, entry.longFiles()),
                 () -> Assertions.assertEquals(numberOfMethodLengthViolations, entry.longMethods()),
                 () -> Assertions.assertEquals(numberOfNestingDepthViolations, entry.deepNesting())

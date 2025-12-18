@@ -59,6 +59,7 @@ public class MetricsGetter {
                 try {
                     return Arrays.stream(mapper.readValue(responseBody, Metrics[].class)).toList();
                 } catch (IOException e) {
+                    e.printStackTrace();
                     throw new RuntimeException(e);
                 }
             }
