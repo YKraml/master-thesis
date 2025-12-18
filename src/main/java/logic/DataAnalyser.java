@@ -49,33 +49,67 @@ public class DataAnalyser {
         int files = cleanedMetrics.files();
         int linesOfCode = cleanedMetrics.linesOfCode();
         int sourceLinesOfCode = cleanedMetrics.sourceLinesOfCode();
+        int findings = (int) cleanedMetrics.numberOfFindings();
 
-        int clones = beforeEntry.clones();
+        // Finding categories
+        int comprehensibility = 0;
+        int correctness = 0;
+        int documentation = 0;
+        int efficiency = 0;
+        int errorHandling = 0;
+        int redundancy = 0;
+        int structure = 0;
+        for (Finding finding : findingChurn.removedFindings()) {
+            switch (finding.categoryName()) {
+                case "Comprehensibility" -> comprehensibility++;
+                case "Correctness" -> correctness++;
+                case "Documentation" -> documentation++;
+                case "Efficiency" -> efficiency++;
+                case "Error Handling" -> errorHandling++;
+                case "Redundancy" -> redundancy++;
+                case "Structure" -> structure++;
+                default -> throw new IllegalStateException("Unexpected value: " + finding.categoryName());
+            }
+        }
+        for (Finding finding : findingChurn.removedFindings()) {
+            switch (finding.categoryName()) {
+                case "Comprehensibility" -> comprehensibility--;
+                case "Correctness" -> correctness--;
+                case "Documentation" -> documentation--;
+                case "Efficiency" -> efficiency--;
+                case "Error Handling" -> errorHandling--;
+                case "Redundancy" -> redundancy--;
+                case "Structure" -> structure--;
+                default -> throw new IllegalStateException("Unexpected value: " + finding.categoryName());
+            }
+        }
+        int comprehensibilityDensity = comprehensibility / sourceLinesOfCode * 1000;
+        int correctnessDensity = correctness / sourceLinesOfCode * 1000;
+        int documentationDensity = documentation / sourceLinesOfCode * 1000;
+        int efficiencyDensity = efficiency / sourceLinesOfCode * 1000;
+        int errorHandlingDensity = errorHandling / sourceLinesOfCode * 1000;
+        int redundancyDensity = redundancy / sourceLinesOfCode * 1000;
+        int structureDensity = structure / sourceLinesOfCode * 1000;
+
+        // only structure category
         int longFiles = beforeEntry.longFiles();
         int longMethods = beforeEntry.longMethods();
         int deepNesting = beforeEntry.deepNesting();
         for (Finding finding : findingChurn.addedFindings()) {
             switch (finding.groupName()) {
-                case "Code Clones" -> clones++;
                 case "File Size" -> longFiles++;
                 case "Method Length" -> longMethods++;
                 case "Nesting Depth" -> deepNesting++;
-                default -> throw new IllegalStateException("Unexpected value: " + finding.groupName());
             }
         }
         for (Finding finding : findingChurn.removedFindings()) {
             switch (finding.groupName()) {
-                case "Code Clones" -> clones--;
                 case "File Size" -> longFiles--;
                 case "Method Length" -> longMethods--;
                 case "Nesting Depth" -> deepNesting--;
-                default -> throw new IllegalStateException("Unexpected value: " + finding.groupName());
             }
         }
 
-        int findings = (int) cleanedMetrics.numberOfFindings();
-
-        double clonesDensity = (double) clones / sourceLinesOfCode * 1000;
         double longFilesDensity = (double) longFiles / sourceLinesOfCode * 1000;
         double longMethodDensity = (double) longMethods / sourceLinesOfCode * 1000;
         double deepNestingDensity = (double) deepNesting / sourceLinesOfCode * 1000;
@@ -89,12 +123,24 @@ public class DataAnalyser {
                 files,
                 linesOfCode,
                 sourceLinesOfCode,
-                clones,
                 longFiles,
                 longMethods,
                 deepNesting,
                 findings,
-                clonesDensity,
+                comprehensibility,
+                correctness,
+                documentation,
+                efficiency,
+                errorHandling,
+                redundancy,
+                structure,
+                comprehensibilityDensity,
+                correctnessDensity,
+                documentationDensity,
+                efficiencyDensity,
+                errorHandlingDensity,
+                redundancyDensity,
+                structureDensity,
                 longFilesDensity,
                 longMethodDensity,
                 deepNestingDensity,
