@@ -60,6 +60,7 @@ public class DataAnalyser {
                 case "File Size" -> longFiles++;
                 case "Method Length" -> longMethods++;
                 case "Nesting Depth" -> deepNesting++;
+                default -> throw new IllegalStateException("Unexpected value: " + finding.groupName());
             }
         }
         for (Finding finding : findingChurn.removedFindings()) {
@@ -68,6 +69,7 @@ public class DataAnalyser {
                 case "File Size" -> longFiles--;
                 case "Method Length" -> longMethods--;
                 case "Nesting Depth" -> deepNesting--;
+                default -> throw new IllegalStateException("Unexpected value: " + finding.groupName());
             }
         }
 
@@ -81,7 +83,6 @@ public class DataAnalyser {
         double cloneCoverage = cleanedMetrics.cloneCoverage();
         double averageFileLoc = (double) sourceLinesOfCode / files;
         double averageFileSloc = (double) linesOfCode / files;
-
 
         return new Result.Entry(
                 time,

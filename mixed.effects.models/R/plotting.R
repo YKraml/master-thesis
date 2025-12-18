@@ -7,7 +7,7 @@ plot_predicted <- function(data, model) {
   Vb    <- vcov(model)
 
   # Create new time sequence
-  new_time <- seq(-365, 364, by = 0.01)
+  new_time <- seq(-2, 2, by = 0.01)
 
   # Build new dataframe
   newdata <- data.frame(
@@ -45,7 +45,7 @@ plot_predicted <- function(data, model) {
   plot(
     newdata$time, newdata$pred, type = "l",
     xlab = "Time in years", ylab = "Predicted metric",
-    xlim = c(-365, 364),
+    xlim = c(-2, 2),
     ylim = c(ymin2, ymax2),
     main = "Fitted fixed effect with 95% confidence interval"
   )
@@ -71,24 +71,37 @@ plot_qq <- function(data, model) {
   qqline(
     residuals,
     col = "red"
-    )
+  )
 }
 
 # ------------------------------------------------------------------------------
 
-# residual dependence plot
 plot_residuals_vs_fitted <- function(data, model) {
   residuals <- residuals(model)
   fitted_vals <- fitted(model)
 
-  # Base R Residuals Plot
   plot(
     fitted_vals, residuals,
     xlab = "Fitted values",
     ylab = "Residuals",
     main = "Residuals vs fitted"
-    )
+  )
+  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
+}
 
+# ------------------------------------------------------------------------------
+
+plot_residuals_vs_time <- function(data, model) {
+  residuals <- residuals(model)
+  fitted_vals <- fitted(model)
+
+  plot(
+    data$cleaned_time,
+    residuals,
+    xlab = "Time in years",
+    ylab = "Residuals",
+    main = "Residuals vs time"
+  )
   abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
 
@@ -120,12 +133,14 @@ plot_residuals_histogram <- function(data, model) {
     col = "red",
     lwd = 2,
     add = TRUE
-    )
+  )
+
+  abline(v = mean, col = "red", lwd = 2, lty = 2)
 }
 
 # ------------------------------------------------------------------------------
 
-plot_random_effects_histogram <- function(data, color, main) {
+plot_random_effects_histogram <- function(data, color, main, fixed) {
   sigma <- sd(data)
   mean <- mean(data)
   left = mean - sigma * 2
@@ -146,10 +161,10 @@ plot_random_effects_histogram <- function(data, color, main) {
   # legend
   legend(
     "topright",
-    legend = paste0("Fixed: ", round(mean, 3)),
-    col = c("red"),
-    lty = c(2),
-    pch = c(NA))
+    legend = c(paste0("Mean: ", round(mean, 3)), paste0("Fixed: ", round(fixed, 3))),
+    col = c("red", NA),
+    lty = c(2, NA),
+    pch = c(NA, NA))
 }
 
 # ------------------------------------------------------------------------------
@@ -161,7 +176,7 @@ plot_project <- function(model, id, data) {
   randomEffectsFromProject <- fixedEffects + randomEffectsFromProject
 
   # compute predicted values
-  x <- seq(-104, 103, by = 0.01)
+  x <- seq(-2, 2, by = 0.01)
   predictedData <- data.frame(
     x = x,
     y = ifelse(
@@ -203,7 +218,7 @@ plot_project <- function(model, id, data) {
     type = "l",
     xlab = "Time in years",
     ylab = paste("Metric:", metric),
-    xlim = c(-365, 364),
+    xlim = c(-2, 2),
     ylim = c(lower_limit, upper_limit),
     lwd = 2,
     col = "red",
@@ -245,4 +260,26 @@ plot_raw_data_hist <- function(data, metric){
   )
 }
 
+# ------------------------------------------------------------------------------
 
+plot_random_effects_vs_residuals <- function(data, model, effect) {
+  # Residuals
+  resid_df <- data.frame(
+    id = data$id,
+    residual = resid(model, type = "pearson")
+  )
+
+  # Random effects
+  ranef_df <- tibble::rownames_to_column(ranef(model), "id")
+  plot_df <- merge(resid_df, ranef_df, by = "id")
+
+  plot_df$id <- factor(plot_df$id)
+  ggplot(plot_df, aes(x = !!sym(effect), y = residual, color = id)) +
+    geom_point() +
+    labs(
+      x = paste0("Random effect of ", effect, " (by id)"),
+      y = "Residual",
+      title = paste0("Residuals vs Random Effect of ", effect)
+    ) +
+    theme(legend.position = "none")
+}

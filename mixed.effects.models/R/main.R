@@ -16,6 +16,9 @@ library(DHARMa)
 library(dplyr)
 library(glmmTMB)
 library(AICcmodavg)
+library(tibble)
+library(patchwork)
+library(RColorBrewer)
 
 source("R/plotting.R")
 
@@ -29,14 +32,14 @@ metrics <- list(
   # "longMethods",
   # "deepNesting",
   # "findings",
-  # "clonesDensity",
+  "clonesDensity",
   "longFilesDensity",
   "longMethodDensity",
   "deepNestingDensity",
   "findingsDensity",
-  # "cloneCoverage",
+  "cloneCoverage",
   "averageFileLoc"
-  # "averageFileSloc"
+  # "averageFileSloc",
   )
 
 for (fileName in fileNames) {
@@ -50,6 +53,10 @@ for (fileName in fileNames) {
     data$t_post
   )
 
+  data$t_pre <- data$t_pre / 365
+  data$t_post <- data$t_post / 365
+  data$cleaned_time <- data$cleaned_time / 365
+
   for (metric in metrics) {
     print(paste(" -",metric))
 
@@ -59,25 +66,31 @@ for (fileName in fileNames) {
     folderName <- paste("plots",cleanedFileName, metric, sep = "/")
     dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
 
+    # Create model with ar1
+    # model <- lme(
+    #   fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
+    #   random = ~ 1 + t_pre + t_post + intervention| id,
+    #   correlation = corAR1(form = ~ cleaned_time | id),
+    #   data = data,
+    #   method="ML",
+    #   control = lmeControl(opt = "optim")
+    # )
 
-    # Create model
+    # Create simple model without ar1
     model <- lme(
       fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
       random = ~ 1 + t_pre + t_post + intervention| id,
-      correlation = corAR1(form = ~ cleaned_time | id),
       data = data,
       method="ML",
       control = lmeControl(opt = "optim")
     )
 
-    # Create simple model without ar1
-    model_simple <- lme(
-      fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
-      random = ~ 1 + t_pre + t_post + intervention| id,
-      data = data,
-      method="ML",
-      control = lmeControl(opt = "optim")
-    )
+    # Create Lmer model
+    # model <- lmer(
+    #     as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
+    #     data = data,
+    #     REML = FALSE
+    # )
 
     random_effects <- ranef(model)
     fixed_effects <- fixef(model)
@@ -85,9 +98,11 @@ for (fileName in fileNames) {
 
     # print model results
     capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
-    capture.output(summary(model_simple), file = file.path(folderName, "model_simple_summary.txt"))
-    capture.output(anova(model_simple, model), file = file.path(folderName, "models_anova.txt"))
-    capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folderName, "models_aictab.txt"))
+    capture.output(getVarCov(model), file = file.path(folderName, "model_var_cov.txt"))
+    #capture.output(summary(model_lme), file = file.path(folderName, "model_lme_summary.txt"))
+    #capture.output(summary(model_simple), file = file.path(folderName, "model_simple_summary.txt"))
+    #capture.output(anova(model_simple, model), file = file.path(folderName, "models_anova.txt"))
+    #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folderName, "models_aictab.txt"))
 
 
     # print tests
@@ -132,30 +147,69 @@ for (fileName in fileNames) {
     plot_residuals_vs_fitted(data, model)
     dev.off()
 
+    # print residuals vs fitted
+    plotPath <- paste(folderName, "residuals_vs_time.png", sep = "/")
+    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
+    plot_residuals_vs_time(data, model)
+    dev.off()
+
     # print residuals histogram
     plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
     png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
     plot_residuals_histogram(data, model)
     dev.off()
 
-    plotPath <- paste(folderName, "random_effects_hist_t_pre.png", sep = "/")
+    # print Auto- and Cross- Covariance and -Correlation Function Estimation
+    plotPath <- paste(folderName, "acf.png", sep = "/")
     png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre")
+    acf(resid(model, type = "normalized"))
     dev.off()
 
-    plotPath <- paste(folderName, "random_effects_hist_t_post.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post")
+
+    # print random effects histograms
+    plotPath <- paste(folderName, "random_effects_hist.png", sep = "/")
+    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
+    par(mfrow = c(2, 2))
+    plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects[1])
+    plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects[2])
+    plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects[3])
+    plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
+    par(mfrow = c(1, 1))
     dev.off()
 
-    plotPath <- paste(folderName, "random_effects_hist_intervention.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention")
+    summary(model)
+
+    # print random effects qq-plot
+    plotPath <- paste(folderName, "random_effects_qq.png", sep = "/")
+    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
+    par(mfrow = c(2, 2))
+    qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
+    qqnorm(random_effects[, "t_pre"], main = "t_pre"); qqline(random_effects[, "t_pre"])
+    qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
+    qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
+    par(mfrow = c(1, 1))
     dev.off()
 
-    plotPath <- paste(folderName, "random_effects_hist_intercept.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept")
+    # print random effects correlation
+    plotPath <- paste(folderName, "random_effects_correlation.png", sep = "/")
+    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
+    pairs(
+      random_effects,
+      upper.panel = NULL,
+      diag.panel = function(x) {
+        par(new = TRUE)
+        hist(x, col = "lightblue", border = "black", axes = FALSE, main = "")
+      }
+    )
+    dev.off()
+
+    # print random effects vs residuals
+    effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
+    plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
+    combined_plot <- (plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])
+    plotPath <- file.path(folderName, "random_effects_vs_residuals.png")
+    png(plotPath, width = 30, height = 20, units = "cm", res = 300, pointsize = 8)
+    print(combined_plot)
     dev.off()
 
     # create folder
@@ -174,5 +228,39 @@ for (fileName in fileNames) {
 
 
 # ------------------------------------------------------------------------------
+
+
+dataNotClean <- read.csv("data/bucket_one/CHECKSTYLE.csv")
+data <- dataNotClean[complete.cases(dataNotClean), ]
+data$cleaned_time <- ifelse(
+  data$intervention == 0,
+  data$t_pre,
+  data$t_post
+)
+
+data$t_pre <- data$t_pre / 365
+data$t_post <- data$t_post / 365
+data$cleaned_time <- data$cleaned_time / 365
+
+metric <- "findingsDensity"
+
+
+model <- lme(
+  fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
+  random = ~ 1 + t_pre + t_post + intervention| id,
+  data = data,
+  method="ML",
+  control = lmeControl(opt = "optim")
+)
+
+source("R/plotting.R")
+
+
+
+
+effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
+plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
+combined_plot <- (plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])
+combined_plot
 
 

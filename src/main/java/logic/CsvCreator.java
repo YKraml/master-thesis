@@ -113,15 +113,23 @@ public class CsvCreator {
                     entryByTime.put(entry.time(), entry);
                 }
 
-                int[] points = getPoints();
-                for (int point : points) {
-                    int time = introductionTime + point * 24 * 60 * 60;
-                    Result.Entry entry = getNearestEntry(entryByTime, time);
+                //int[] points = getPoints();
+                //for (int point : points) {
+                //    int time = introductionTime + point * 24 * 60 * 60;
+                //    Result.Entry entry = getNearestEntry(entryByTime, time);
+                //    String id = result.repoOwner() + "." + result.repoName();
+                //    int intervention = point < 0 ? 0 : 1;
+                //    int t_pre = point * (1 - intervention);
+                //    int t_post = point * intervention;
+                //    pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t_pre + "," + t_post);
+                //}
 
+                for (Result.Entry entry : result.entries()) {
                     String id = result.repoOwner() + "." + result.repoName();
-                    int intervention = point < 0 ? 0 : 1;
-                    int t_pre = point * (1 - intervention);
-                    int t_post = point * intervention;
+                    int intervention = entry.time() < introductionTime ? 0 : 1;
+                    double relativeTime = ((double) (entry.time() - introductionTime)) / 60 / 60 / 24;
+                    double t_pre = relativeTime * (1 - intervention);
+                    double t_post = relativeTime * intervention;
                     pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t_pre + "," + t_post);
                 }
             }
