@@ -20,18 +20,15 @@ library(tibble)
 library(patchwork)
 library(RColorBrewer)
 
-source("R/plotting.R")
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/shared.R")
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
-  # "files",
-  # "linesOfCode",
-  # "sourceLinesOfCode",
-  # "clones",
-  # "longFiles",
-  # "longMethods",
-  # "deepNesting",
-  # "findings",
   "clonesDensity",
   "longFilesDensity",
   "longMethodDensity",
@@ -39,32 +36,21 @@ metrics <- list(
   "findingsDensity",
   "cloneCoverage",
   "averageFileLoc"
-  # "averageFileSloc",
   )
 
-for (fileName in fileNames) {
-  print(fileName)
+for (file_name in fileNames) {
+  print(file_name)
   # Load Data
-  dataNotClean <- read.csv(fileName)
-  data <- dataNotClean[complete.cases(dataNotClean), ]
-  data$cleaned_time <- ifelse(
-    data$intervention == 0,
-    data$t_pre,
-    data$t_post
-  )
-
-  data$t_pre <- data$t_pre / 365
-  data$t_post <- data$t_post / 365
-  data$cleaned_time <- data$cleaned_time / 365
+  data <- get_data_from_file(file_name)
 
   for (metric in metrics) {
     print(paste(" -",metric))
 
     # Create folder
-    cleanedFileName <- gsub("data.", "", fileName)
+    cleanedFileName <- gsub("data.", "", file_name)
     cleanedFileName <- gsub(".csv", "", cleanedFileName)
-    folderName <- paste("plots",cleanedFileName, metric, sep = "/")
-    dir.create(file.path(folderName), showWarnings = FALSE, recursive = TRUE)
+    folder_name <- paste("plots", "interrupted_time_series",cleanedFileName, metric, sep = "/")
+    dir.create(file.path(folder_name), showWarnings = FALSE, recursive = TRUE)
 
     # Create model with ar1
     # model <- lme(
@@ -78,7 +64,7 @@ for (fileName in fileNames) {
 
     # Create simple model without ar1
     model <- lme(
-      fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
+      fixed = as.formula(paste0(metric ," ~ 1 + t_pre + t_post + intervention")),
       random = ~ 1 + t_pre + t_post + intervention| id,
       data = data,
       method="ML",
@@ -97,132 +83,108 @@ for (fileName in fileNames) {
     absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
     # print model results
-    capture.output(summary(model), file = file.path(folderName, "model_summary.txt"))
-    capture.output(getVarCov(model), file = file.path(folderName, "model_var_cov.txt"))
-    #capture.output(summary(model_lme), file = file.path(folderName, "model_lme_summary.txt"))
-    #capture.output(summary(model_simple), file = file.path(folderName, "model_simple_summary.txt"))
-    #capture.output(anova(model_simple, model), file = file.path(folderName, "models_anova.txt"))
-    #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folderName, "models_aictab.txt"))
+    capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
+    capture.output(getVarCov(model), file = file.path(folder_name, "model_var_cov.txt"))
+    #capture.output(summary(model_lme), file = file.path(folder_name, "model_lme_summary.txt"))
+    #capture.output(summary(model_simple), file = file.path(folder_name, "model_simple_summary.txt"))
+    #capture.output(anova(model_simple, model), file = file.path(folder_name, "models_anova.txt"))
+    #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folder_name, "models_aictab.txt"))
 
 
     # print tests
-    capture.output(
-      t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE),
-      file = file.path(folderName, "ttest_tpre_vs_tpost.txt")
-      )
-
-    capture.output(
-      t.test(absolute_effects$intervention),
-      file = file.path(folderName, "ttest_intervention_vs_0.txt")
-    )
-
-    capture.output(
-      t.test(absolute_effects$`(Intercept)`),
-      file = file.path(folderName, "ttest_intercept_vs_0.txt")
-    )
-
-
+    capture.output(t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE),file = file.path(folder_name, "ttest_tpre_vs_tpost.txt"))
+    capture.output(t.test(absolute_effects$intervention),file = file.path(folder_name, "ttest_intervention_vs_0.txt"))
+    capture.output(expression = t.test(absolute_effects$`(Intercept)`),file = file.path(folder_name, "ttest_intercept_vs_0.txt"))
 
     # print metric histogram
-    plotPath <- paste(folderName, "hist.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_raw_data_hist(data[[metric]], metric)
-    dev.off()
+    save_png(
+      expression = plot_raw_data_hist(data[[metric]], metric),
+      file = file.path(folder_name, "hist.png")
+    )
 
     # print fixed effects
-    plotPath <- paste(folderName, "predicted.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_predicted(data, model)
-    dev.off()
+    save_png(
+      expression = plot_predicted_1(data, model),
+      file = file.path(folder_name, "predicted.png")
+    )
 
     # print qq of residuals
-    plotPath <- paste(folderName, "qq.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_qq(data, model)
-    dev.off()
+    save_png(
+      expression = plot_residuals_qq(data, model),
+      file = file.path(folder_name, "residuals_qq.png")
+    )
 
     # print residuals vs fitted
-    plotPath <- paste(folderName, "residuals_vs_fitted.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_residuals_vs_fitted(data, model)
-    dev.off()
+    save_png(
+      expression = plot_residuals_vs_fitted(data, model),
+      file = file.path(folder_name, "residuals_vs_fitted.png")
+    )
 
-    # print residuals vs fitted
-    plotPath <- paste(folderName, "residuals_vs_time.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_residuals_vs_time(data, model)
-    dev.off()
+    # print residuals vs time
+    save_png(
+      expression = plot_residuals_vs_time_1(data, model),
+      file = file.path(folder_name, "residuals_vs_time.png")
+    )
 
     # print residuals histogram
-    plotPath <- paste(folderName, "residuals_hist.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    plot_residuals_histogram(data, model)
-    dev.off()
+    save_png(
+      expression = plot_residuals_histogram(data, model),
+      file = file.path(folder_name, "residuals_hist.png")
+    )
 
     # print Auto- and Cross- Covariance and -Correlation Function Estimation
-    plotPath <- paste(folderName, "acf.png", sep = "/")
-    png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-    acf(resid(model, type = "normalized"))
-    dev.off()
-
-
-    # print random effects histograms
-    plotPath <- paste(folderName, "random_effects_hist.png", sep = "/")
-    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
-    par(mfrow = c(2, 2))
-    plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects[1])
-    plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects[2])
-    plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects[3])
-    plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
-    par(mfrow = c(1, 1))
-    dev.off()
-
-    summary(model)
-
-    # print random effects qq-plot
-    plotPath <- paste(folderName, "random_effects_qq.png", sep = "/")
-    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
-    par(mfrow = c(2, 2))
-    qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
-    qqnorm(random_effects[, "t_pre"], main = "t_pre"); qqline(random_effects[, "t_pre"])
-    qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
-    qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
-    par(mfrow = c(1, 1))
-    dev.off()
+    save_png(
+      expression = acf(resid(model, type = "normalized")),
+      file = file.path(folder_name, "acf.png")
+    )
 
     # print random effects correlation
-    plotPath <- paste(folderName, "random_effects_correlation.png", sep = "/")
-    png(plotPath, width = 30, height = 20, units = "cm", res = 300, , pointsize = 8)
-    pairs(
-      random_effects,
-      upper.panel = NULL,
-      diag.panel = function(x) {
-        par(new = TRUE)
-        hist(x, col = "lightblue", border = "black", axes = FALSE, main = "")
-      }
+    save_png(
+      expression = plot_random_effects_correlation(model),
+      file = file.path(folder_name, "random_effects_correlation.png")
     )
-    dev.off()
+
+    # print random effects histograms
+    save_multipanel_png(
+      expression = {
+        plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
+        plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects["t_pre"])
+        plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects["t_post"])
+        plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
+      },
+      file = file.path(folder_name, "random_effects_hist.png"),
+    )
+
+    # print random effects qq-plot
+    save_multipanel_png(
+      expression = {
+        qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
+        qqnorm(random_effects[, "t_pre"], main = "t_pre"); qqline(random_effects[, "t_pre"])
+        qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
+        qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
+      },
+      file = file.path(folder_name, "random_effects_qq.png"),
+    )
 
     # print random effects vs residuals
     effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
     plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
-    combined_plot <- (plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])
-    plotPath <- file.path(folderName, "random_effects_vs_residuals.png")
-    png(plotPath, width = 30, height = 20, units = "cm", res = 300, pointsize = 8)
-    print(combined_plot)
-    dev.off()
+    save_png(
+      expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),
+      file = file.path(folder_name, "random_effects_vs_residuals.png")
+    )
 
-    # create folder
-    projectFolderName <- paste(folderName,"projects", sep = "/")
-    dir.create(file.path(projectFolderName), showWarnings = FALSE, recursive = TRUE)
+    # print prediction for project
+    project_folder_name <- paste(folder_name,"projects", sep = "/")
+    dir.create(file.path(project_folder_name), showWarnings = FALSE, recursive = TRUE)
     for (id in unique(data[["id"]])) {
-
-      # print prediction for project
-      plotPath <- paste(projectFolderName, paste0(id, ".png"), sep = "/")
-      png(plotPath, width = 15, height = 10, units = "cm", res = 300, , pointsize = 8)
-      plot_project(model, id, data)
-      dev.off()
+      save_png(
+        expression = plot_project_1(model, id, data),
+        file = file.path(project_folder_name, paste0(id, ".png"))
+      )
     }
+
+
   }
 }
 
@@ -230,13 +192,7 @@ for (fileName in fileNames) {
 # ------------------------------------------------------------------------------
 
 
-dataNotClean <- read.csv("data/bucket_one/CHECKSTYLE.csv")
-data <- dataNotClean[complete.cases(dataNotClean), ]
-data$cleaned_time <- ifelse(
-  data$intervention == 0,
-  data$t_pre,
-  data$t_post
-)
+data <- get_data_from_file("data/bucket_one/CHECKSTYLE.csv")
 
 data$t_pre <- data$t_pre / 365
 data$t_post <- data$t_post / 365
