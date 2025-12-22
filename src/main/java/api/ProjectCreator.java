@@ -7,7 +7,6 @@ import model.Proof;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -100,11 +99,11 @@ public class ProjectCreator {
                ]
             }""";
 
-    private final ProjectsGetter projectsGetter;
+    private final ProjectsFetcher projectsFetcher;
 
     @Inject
-    public ProjectCreator(ProjectsGetter projectsGetter) {
-        this.projectsGetter = projectsGetter;
+    public ProjectCreator(ProjectsFetcher projectsFetcher) {
+        this.projectsFetcher = projectsFetcher;
     }
 
     private static int getNumberOfProjectsToBeCreated() {
@@ -127,20 +126,13 @@ public class ProjectCreator {
         return numberOfProjectsToBeCreeated;
     }
 
-    public static void addAuth(HttpRequestBase request) {
-        String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
-        byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
-        String authHeader = "Basic " + new String(encodedAuth);
-        request.setHeader("Authorization", authHeader);
-    }
-
     public void createAllProjects() throws IOException {
         System.out.println("Start reading proof files");
         List<Proof> proofs = new ProofReaderWriter().readAll();
         proofs.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
 
         System.out.println("Getting existing projects from teamscale");
-        List<Project> existingProjects = projectsGetter.getExistingProjects();
+        List<Project> existingProjects = projectsFetcher.getExistingProjects();
         Set<String> existingProjectNames = existingProjects.stream().map(Project::getName).collect(Collectors.toSet());
 
         System.out.println("Creating projects");
@@ -200,7 +192,10 @@ public class ProjectCreator {
             HttpPost httppost = new HttpPost(Constants.TEAMSCALE_URL + "/api/v2025.8/projects?skip-project-validation=false");
 
             // Authentication
-            addAuth(httppost);
+            String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
+            byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
+            String authHeader = "Basic " + new String(encodedAuth);
+            httppost.setHeader("Authorization", authHeader);
 
             // Headers
             httppost.setHeader("accept", "*/*");

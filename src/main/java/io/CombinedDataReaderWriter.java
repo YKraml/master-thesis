@@ -1,15 +1,15 @@
 package io;
 
 import jakarta.inject.Inject;
-import model.ProofWithResult;
+import model.CombinedData;
 
 import java.io.File;
 
-public class ProofWithResultReaderWriter extends ReaderWriter<ProofWithResult> {
+public class CombinedDataReaderWriter extends ReaderWriter<CombinedData> {
 
     @Inject
-    public ProofWithResultReaderWriter() {
-        super(ProofWithResult.class);
+    public CombinedDataReaderWriter() {
+        super(CombinedData.class);
     }
 
     @Override

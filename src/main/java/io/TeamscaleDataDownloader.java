@@ -1,8 +1,8 @@
 package io;
 
-import api.CommitChartGetter;
-import api.FindingChurnGetter;
-import api.MetricsGetter;
+import api.CommitChartFetcher;
+import api.FindingChurnFetcher;
+import api.MetricsFetcher;
 import api.model.churn.FindingChurn;
 import api.model.cleaned.Assessment;
 import api.model.cleaned.CleanedMetrics;
@@ -15,8 +15,8 @@ import api.model.metrics.ValueDouble;
 import api.model.metrics.ValueMapping;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
-import logic.RepositoryHandler;
-import logic.State;
+import logic.GitRepositoryHandler;
+import logic.StateHandler;
 import model.Proof;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -34,22 +34,22 @@ import java.util.stream.Stream;
 public class TeamscaleDataDownloader {
 
     private final ExecutorService executorService;
-    private final State state;
-    private final FindingChurnGetter findingChurnGetter;
-    private final MetricsGetter metricsGetter;
+    private final StateHandler stateHandler;
+    private final FindingChurnFetcher findingChurnFetcher;
+    private final MetricsFetcher metricsFetcher;
     private final RepositoryDownloader repositoryDownloader;
-    private final RepositoryHandler repositoryHandler;
-    private final CommitChartGetter commitChartGetter;
+    private final GitRepositoryHandler gitRepositoryHandler;
+    private final CommitChartFetcher commitChartFetcher;
 
     @Inject
-    public TeamscaleDataDownloader(ExecutorService executorService, State state, FindingChurnGetter findingChurnGetter, MetricsGetter metricsGetter, RepositoryDownloader repositoryDownloader, RepositoryHandler repositoryHandler, CommitChartGetter commitChartGetter) {
+    public TeamscaleDataDownloader(ExecutorService executorService, StateHandler stateHandler, FindingChurnFetcher findingChurnFetcher, MetricsFetcher metricsFetcher, RepositoryDownloader repositoryDownloader, GitRepositoryHandler gitRepositoryHandler, CommitChartFetcher commitChartFetcher) {
         this.executorService = executorService;
-        this.state = state;
-        this.findingChurnGetter = findingChurnGetter;
-        this.metricsGetter = metricsGetter;
+        this.stateHandler = stateHandler;
+        this.findingChurnFetcher = findingChurnFetcher;
+        this.metricsFetcher = metricsFetcher;
         this.repositoryDownloader = repositoryDownloader;
-        this.repositoryHandler = repositoryHandler;
-        this.commitChartGetter = commitChartGetter;
+        this.gitRepositoryHandler = gitRepositoryHandler;
+        this.commitChartFetcher = commitChartFetcher;
     }
 
     private static CleanedMetrics cleanMetrics(Metrics metrics) {
@@ -101,14 +101,14 @@ public class TeamscaleDataDownloader {
         List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
 
         // Get metrics data
-        List<Metrics> metrics = metricsGetter.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
+        List<Metrics> metrics = metricsFetcher.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
 
         // Get findings data
         AtomicInteger counter = new AtomicInteger(1);
         int teamscaleCommitCount = metrics.size();
         for (Metrics entry : metrics) {
             futures.add(CompletableFuture.runAsync(() -> {
-                state.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
+                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
                 FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.getTimestamp(), 5);
                 data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(entry)));
             }, executorService));
@@ -134,9 +134,9 @@ public class TeamscaleDataDownloader {
         return teamscaleData;
     }
 
-    private void addMissingData(String repoOwner, String repoName, List<TeamscaleDataEntry> data, List<Metrics> metrics) throws GitAPIException, IOException {
+    private void addMissingData(String repoOwner, String repoName, List<TeamscaleDataEntry> data, List<Metrics> metrics) throws GitAPIException, IOException, InterruptedException {
         List<RevCommit> repoCommits = getCommits(repoOwner, repoName);
-        Set<String> teamscaleCommits = commitChartGetter.getCommitChart(repoOwner, repoName)
+        Set<String> teamscaleCommits = commitChartFetcher.getCommitChart(repoOwner, repoName)
                 .getCommits()
                 .stream()
                 .flatMap((Function<UserWithCommits, Stream<Commits>>) userWithCommits -> userWithCommits.getCommits().stream())
@@ -176,7 +176,7 @@ public class TeamscaleDataDownloader {
         repositoryDownloader.getRepo(repoOwner, repoName).log().call().forEach(commits::add);
         commits = commits.reversed();
 
-        Proof proof = repositoryHandler.handleRepo(repoOwner, repoName);
+        Proof proof = gitRepositoryHandler.handleRepo(repoOwner, repoName);
         commits = commits.stream().filter(revCommit -> revCommit.getCommitTime() >= proof.analysisStartTime() && revCommit.getCommitTime() <= proof.analysisEndTime()).toList();
         return commits;
     }
@@ -189,7 +189,7 @@ public class TeamscaleDataDownloader {
 
         try {
             return CompletableFuture.supplyAsync(() ->
-                    findingChurnGetter.getFindingsChurn(repoOwner, repoName, timestamp)).get(5, TimeUnit.SECONDS);
+                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(5, TimeUnit.SECONDS);
         } catch (TimeoutException | InterruptedException | ExecutionException e) {
             try {
                 synchronized (this) {

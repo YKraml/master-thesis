@@ -16,25 +16,25 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class GitHubAnalysisStarter {
+public class GitHubRepoAnalyser {
 
     private final GitHub github;
     private final RepositoryDownloader repositoryDownloader;
-    private final RepositoryHandler repositoryHandler;
+    private final GitRepositoryHandler gitRepositoryHandler;
     private final ExecutorService executorService;
-    private final State state;
+    private final StateHandler stateHandler;
 
     @Inject
-    public GitHubAnalysisStarter(GitHub github, RepositoryDownloader repositoryDownloader, RepositoryHandler repositoryHandler, ExecutorService executorService, State state) {
+    public GitHubRepoAnalyser(GitHub github, RepositoryDownloader repositoryDownloader, GitRepositoryHandler gitRepositoryHandler, ExecutorService executorService, StateHandler stateHandler) {
         this.github = github;
         this.repositoryDownloader = repositoryDownloader;
-        this.repositoryHandler = repositoryHandler;
+        this.gitRepositoryHandler = gitRepositoryHandler;
         this.executorService = executorService;
-        this.state = state;
+        this.stateHandler = stateHandler;
     }
 
     public void start() {
-        state.start();
+        stateHandler.start();
         startAnalysis();
     }
 
@@ -48,7 +48,7 @@ public class GitHubAnalysisStarter {
             setMaxNumberOfStars(maxNumberOfStars, repo);
 
             try {
-                repositoryHandler.handleRepo(repo);
+                gitRepositoryHandler.handleRepo(repo);
             } catch (Exception e) {
                 printError(e, repo);
                 try {
@@ -57,7 +57,7 @@ public class GitHubAnalysisStarter {
                     throw new RuntimeException(ex);
                 }
             } finally {
-                state.removeFromState(Pair.of(repo.getOwnerName(), repo.getName()));
+                stateHandler.removeFromState(Pair.of(repo.getOwnerName(), repo.getName()));
             }
         };
 

@@ -14,11 +14,11 @@ import java.util.List;
 
 public class DataAnalyser {
 
-    private final State state;
+    private final StateHandler stateHandler;
 
     @Inject
-    public DataAnalyser(State state) {
-        this.state = state;
+    public DataAnalyser(StateHandler stateHandler) {
+        this.stateHandler = stateHandler;
     }
 
     public Result analyseTeamscaleData(TeamscaleData data) {
@@ -35,7 +35,7 @@ public class DataAnalyser {
         Result.Entry beforeEntry = Result.Entry.getDefault();
         for (int i = 0; i < dataEntries.size(); i++) {
             TeamscaleDataEntry datum = dataEntries.get(i);
-            state.addToState(Pair.of(repoOwner, repoName), "Converting entry from commit " + i + "/" + dataEntries.size());
+            stateHandler.addToState(Pair.of(repoOwner, repoName), "Converting entry from commit " + i + "/" + dataEntries.size());
             Result.Entry entryFromData = createEntryFromData(datum.getFindingChurn(), datum.getMetrics(), beforeEntry);
             beforeEntry = entryFromData;
             resultEntries.add(entryFromData);

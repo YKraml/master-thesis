@@ -1,34 +1,35 @@
-import api.model.cleaned.TeamscaleData;
+
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.TeamscaleDataDownloader;
-import logic.State;
-import org.apache.commons.lang3.tuple.Pair;
-import org.eclipse.jgit.api.errors.GitAPIException;
+import graphql.IssuesFetcher;
+import graphql.StarFetcher;
+import graphql.model.issues.Issue;
+import graphql.model.stars.Star;
+import org.w3c.dom.Node;
 import util.GuiceModule;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
+import java.util.List;
 
 public class MainTest {
 
-    public static void main(String[] args) throws IOException, ExecutionException, InterruptedException, TimeoutException, GitAPIException {
+    public static void main(String[] args) throws Exception {
+
         Injector injector = Guice.createInjector(new GuiceModule());
-        State state = injector.getInstance(State.class);
-        TeamscaleDataDownloader teamscaleDataDownloader = injector.getInstance(TeamscaleDataDownloader.class);
+        IssuesFetcher issuesFetcher = injector.getInstance(IssuesFetcher.class);
+        StarFetcher starFetcher = injector.getInstance(StarFetcher.class);
 
+        String owner = "cubiq";
+        String repo = "ComfyUI_Workflows";
 
+        List<Issue> issues = issuesFetcher.getIssuesOf(owner, repo);
+        System.out.println(issues.size());
+        System.out.println(issues);
 
-        state.start();
+        List<Star> stars = starFetcher.getStarsOf(owner, repo);
+        System.out.println(stars.size());
+        System.out.println(stars);
 
-        String repoOwner = "gephi";
-        String repoName = "gephi";
-        TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
-        state.removeFromState(Pair.of(repoOwner, repoName));
-
-        System.out.println(teamscaleData);
-
-        state.end();
     }
+
 }

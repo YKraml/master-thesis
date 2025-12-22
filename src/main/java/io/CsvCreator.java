@@ -1,6 +1,5 @@
-package logic;
+package io;
 
-import io.ProofWithResultReaderWriter;
 import jakarta.inject.Inject;
 import model.*;
 
@@ -15,11 +14,11 @@ import static util.Constants.SECONDS_IN_TWO_YEARS;
 
 public class CsvCreator {
 
-    private final ProofWithResultReaderWriter proofWithResultReaderWriter;
+    private final CombinedDataReaderWriter combinedDataReaderWriter;
 
     @Inject
-    public CsvCreator(ProofWithResultReaderWriter proofWithResultReaderWriter) {
-        this.proofWithResultReaderWriter = proofWithResultReaderWriter;
+    public CsvCreator(CombinedDataReaderWriter combinedDataReaderWriter) {
+        this.combinedDataReaderWriter = combinedDataReaderWriter;
     }
 
     public void startCreatingCsvs() throws IOException {
@@ -29,9 +28,9 @@ public class CsvCreator {
         }
 
         List<LinterTimeResult> linterTimeResultList = new ArrayList<>();
-        for (ProofWithResult proofWithResult : proofWithResultReaderWriter.readAll()) {
-            Proof proof = proofWithResult.proof();
-            Result result = proofWithResult.result();
+        for (CombinedData combinedData : combinedDataReaderWriter.readAll()) {
+            Proof proof = combinedData.proof();
+            Result result = combinedData.result();
 
             for (Proof.LinterWithProof linterWithProof : proof.linters()) {
                 Linter linter = Linter.valueOf(linterWithProof.linterName());

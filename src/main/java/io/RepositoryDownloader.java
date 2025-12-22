@@ -1,7 +1,7 @@
 package io;
 
 import jakarta.inject.Inject;
-import logic.State;
+import logic.StateHandler;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
@@ -20,23 +20,23 @@ public class RepositoryDownloader {
 
     private final GitHub github;
     private static final Semaphore semaphore = new Semaphore(Constants.CONCURRENT_REPO_DOWNLOADS);
-    private final State state;
+    private final StateHandler stateHandler;
 
     @Inject
-    public RepositoryDownloader(GitHub github, State state) {
+    public RepositoryDownloader(GitHub github, StateHandler stateHandler) {
         this.github = github;
-        this.state = state;
+        this.stateHandler = stateHandler;
     }
 
-    public Git getRepo(String owner, String repoName) throws GitAPIException, IOException {
-        String folderName = "temp" + File.separator + "repos" + File.separator + owner + File.separator + repoName;
+    public Git getRepo(String repoOwner, String repoName) throws GitAPIException, IOException {
+        String folderName = "temp" + File.separator + "repos" + File.separator + repoOwner + File.separator + repoName;
         File folder = new File(folderName);
 
         if (folder.exists()) {
-            return openRepoAndGoToDefaultBranch(github, owner, repoName, folderName);
+            return openRepoAndGoToDefaultBranch(github, repoOwner, repoName, folderName);
         }
 
-        return cloneRepo(owner, repoName, folderName);
+        return cloneRepo(repoOwner, repoName, folderName);
     }
 
     private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {
@@ -45,7 +45,7 @@ public class RepositoryDownloader {
 
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         try (Git git = Git.wrap(repo)) {
-            state.addToState(Pair.of(owner, repoName), "Opening existing repo");
+            stateHandler.addToState(Pair.of(owner, repoName), "Opening existing repo");
 
             GitUtil.checkout(git, defaultBranch);
             git.pull();
@@ -57,9 +57,9 @@ public class RepositoryDownloader {
 
     private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
         try {
-            state.addToState(Pair.of(owner, repoName), "Waiting for download");
+            stateHandler.addToState(Pair.of(owner, repoName), "Waiting for download");
             semaphore.acquire();
-            state.addToState(Pair.of(owner, repoName), "Downloading repository");
+            stateHandler.addToState(Pair.of(owner, repoName), "Downloading repository");
             File folder = new File(folderName);
             deleteRepo(owner, repoName);
             return Git.cloneRepository().setDirectory(folder).setURI("https://github.com/" + owner + "/" + repoName + ".git").call();

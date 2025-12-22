@@ -21,7 +21,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
-public class RepositoryHandler {
+public class GitRepositoryHandler {
 
     private static final int SIZE_1 = 1000 * 1000; // 1 GB
     private static final int SIZE_2 = 1000 * 1000 * 1000; // 1 GB
@@ -30,17 +30,17 @@ public class RepositoryHandler {
     private final LinterFinder linterFinder;
     private final LinterIntroductionFinder linterIntroductionFinder;
     private final ProofReaderWriter proofReaderWriter;
-    private final State state;
+    private final StateHandler stateHandler;
     private final GitHub github;
     private final FilteredManager filteredManager;
 
     @Inject
-    public RepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, State state, GitHub github, FilteredManager filteredManager) {
+    public GitRepositoryHandler(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, StateHandler stateHandler, GitHub github, FilteredManager filteredManager) {
         this.repositoryDownloader = repositoryDownloader;
         this.linterFinder = linterFinder;
         this.linterIntroductionFinder = linterIntroductionFinder;
         this.proofReaderWriter = proofReaderWriter;
-        this.state = state;
+        this.stateHandler = stateHandler;
         this.github = github;
         this.filteredManager = filteredManager;
     }
@@ -72,7 +72,7 @@ public class RepositoryHandler {
     public void handleRepo(GHRepository repo) throws Exception {
         String repoOwner = repo.getOwnerName();
         String repoName = repo.getName();
-        state.addToState(Pair.of(repoOwner, repoName), "Started handling");
+        stateHandler.addToState(Pair.of(repoOwner, repoName), "Started handling");
 
         //Size limit with the data from GitHub
         if (repo.getSize() > SIZE_1) {
@@ -131,13 +131,13 @@ public class RepositoryHandler {
                 );
             }
 
-            state.addToState(Pair.of(repoOwner, repoName), "Searching for linter");
+            stateHandler.addToState(Pair.of(repoOwner, repoName), "Searching for linter");
             List<LinterFinder.Result> currentLinters = linterFinder.findLinters(folder);
 
             List<Proof.LinterWithProof> lintersWithProof = new ArrayList<>();
 
             for (LinterFinder.Result linter : currentLinters) {
-                state.addToState(Pair.of(repoOwner, repoName), "Searching introduction of: " + linter.linterName());
+                stateHandler.addToState(Pair.of(repoOwner, repoName), "Searching introduction of: " + linter.linterName());
                 Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
 
                 if (currentCommitTime - Constants.SECONDS_IN_TWO_YEARS < introduction.getLeft().getCommitTime()) {

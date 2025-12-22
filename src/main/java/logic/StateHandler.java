@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 
-public class State {
+public class StateHandler {
 
     private final Map<Pair<String, String>, String> state;
     private final Map<Pair<String, String>, Integer> indices;
@@ -15,7 +15,7 @@ public class State {
     private int index = 1;
     private final Timer timer;
 
-    public State(ExecutorService executorService) {
+    public StateHandler(ExecutorService executorService) {
         this.executorService = executorService;
         state = new LinkedHashMap<>();
         indices = new LinkedHashMap<>();
