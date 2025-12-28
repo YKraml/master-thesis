@@ -1,7 +1,7 @@
+import api.teamscale.ProjectCreator;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import util.GuiceModule;
-import api.ProjectCreator;
 
 import java.io.IOException;
 

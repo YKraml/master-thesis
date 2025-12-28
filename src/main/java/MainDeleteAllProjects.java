@@ -1,6 +1,6 @@
+import api.teamscale.ProjectDeleter;
 import com.google.inject.Guice;
 import util.GuiceModule;
-import api.ProjectDeleter;
 
 public class MainDeleteAllProjects {
     public static void main(String[] args) {

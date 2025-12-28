@@ -1,7 +1,10 @@
 package io;
 
 import jakarta.inject.Inject;
-import model.*;
+import model.CombinedData;
+import model.Linter;
+import model.LinterTimeResult;
+import model.Proof;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,12 +33,11 @@ public class CsvCreator {
         List<LinterTimeResult> linterTimeResultList = new ArrayList<>();
         for (CombinedData combinedData : combinedDataReaderWriter.readAll()) {
             Proof proof = combinedData.proof();
-            Result result = combinedData.result();
 
             for (Proof.LinterWithProof linterWithProof : proof.linters()) {
                 Linter linter = Linter.valueOf(linterWithProof.linterName());
                 int introductionTime = linterWithProof.introductionTime();
-                linterTimeResultList.add(new LinterTimeResult(linter, introductionTime, result));
+                linterTimeResultList.add(new LinterTimeResult(linter, introductionTime, combinedData));
             }
         }
 
@@ -101,14 +103,14 @@ public class CsvCreator {
         System.out.println("Writing file: " + bucketName + "/" + dataFile.getName());
 
         try (PrintWriter pw = new PrintWriter(dataFile)) {
-            pw.println("id," + Result.Entry.csvHeader() + ",intervention,t_pre,t_post");
+            pw.println("id," + CombinedData.Entry.csvHeader() + ",intervention,t_pre,t_post");
 
             for (LinterTimeResult linterTimeResult : linterTimeResults) {
                 int introductionTime = linterTimeResult.time();
-                Result result = linterTimeResult.result();
+                CombinedData result = linterTimeResult.result();
 
-                NavigableMap<Integer, Result.Entry> entryByTime = new TreeMap<>();
-                for (Result.Entry entry : result.entries()) {
+                NavigableMap<Integer, CombinedData.Entry> entryByTime = new TreeMap<>();
+                for (CombinedData.Entry entry : result.entries()) {
                     entryByTime.put(entry.time(), entry);
                 }
 
@@ -123,7 +125,7 @@ public class CsvCreator {
                 //    pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t_pre + "," + t_post);
                 //}
 
-                for (Result.Entry entry : result.entries()) {
+                for (CombinedData.Entry entry : result.entries()) {
                     String id = result.repoOwner() + "." + result.repoName();
                     int intervention = entry.time() < introductionTime ? 0 : 1;
                     double relativeTime = ((double) (entry.time() - introductionTime)) / 60 / 60 / 24;
@@ -135,9 +137,9 @@ public class CsvCreator {
         }
     }
 
-    private Result.Entry getNearestEntry(NavigableMap<Integer, Result.Entry> map, int time) {
-        Map.Entry<Integer, Result.Entry> floor = map.floorEntry(time);
-        Map.Entry<Integer, Result.Entry> ceil = map.ceilingEntry(time);
+    private CombinedData.Entry getNearestEntry(NavigableMap<Integer, CombinedData.Entry> map, int time) {
+        Map.Entry<Integer, CombinedData.Entry> floor = map.floorEntry(time);
+        Map.Entry<Integer, CombinedData.Entry> ceil = map.ceilingEntry(time);
 
         if (floor != null) {
             return floor.getValue();
@@ -167,14 +169,14 @@ public class CsvCreator {
 
             for (LinterTimeResult linterTimeResult : linterTimeResults) {
                 int introductionTime = linterTimeResult.time();
-                Result result = linterTimeResult.result();
+                CombinedData result = linterTimeResult.result();
 
-                List<Result.Entry> entriesCutted = result.entries().stream().filter(entry -> entry.time() > introductionTime - SECONDS_IN_TWO_YEARS && entry.time() < introductionTime + SECONDS_IN_TWO_YEARS).collect(Collectors.toList());
+                List<CombinedData.Entry> entriesCutted = result.entries().stream().filter(entry -> entry.time() > introductionTime - SECONDS_IN_TWO_YEARS && entry.time() < introductionTime + SECONDS_IN_TWO_YEARS).collect(Collectors.toList());
 
                 if (entriesCutted.isEmpty()) {
                     System.out.println(result.repoOwner() + "/" + result.repoName() + " - Entries are empty. Throw out!");
                 } else {
-                    Result cutetdResult = new Result(result.repoOwner(), result.repoName(), entriesCutted);
+                    CombinedData cutetdResult = new CombinedData(result.repoOwner(), result.repoName(), result.proof(), entriesCutted);
                     cutted.get(linter).add(new LinterTimeResult(linter, introductionTime, cutetdResult));
                 }
             }
@@ -183,7 +185,7 @@ public class CsvCreator {
         //Assert time diff
         for (List<LinterTimeResult> value : cutted.values()) {
             for (LinterTimeResult linterTimeResult : value) {
-                List<Result.Entry> entries = linterTimeResult.result().entries();
+                List<CombinedData.Entry> entries = linterTimeResult.result().entries();
                 int firstTime = entries.getFirst().time();
                 int lastTime = entries.getLast().time();
                 int diff = lastTime - firstTime;

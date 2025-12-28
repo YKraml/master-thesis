@@ -1,14 +1,14 @@
 package logic;
 
-import api.ProjectsFetcher;
-import api.model.cleaned.TeamscaleData;
-import api.model.project.Project;
+import api.teamscale.ProjectsFetcher;
+import api.teamscale.model.cleaned.TeamscaleData;
+import api.teamscale.model.project.Project;
 import com.google.inject.Inject;
 import io.CombinedDataReaderWriter;
+import io.ProofReaderWriter;
 import io.TeamscaleDataDownloader;
 import model.CombinedData;
 import model.Proof;
-import model.Result;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
@@ -23,23 +23,27 @@ import java.util.concurrent.TimeoutException;
 
 public class DataCollector {
 
-    private final ProjectsFetcher projectsFetcher;
     private final StateHandler stateHandler;
     private final GitRepositoryHandler gitRepositoryHandler;
-    private final TeamscaleDataDownloader teamscaleDataDownloader;
-    private final DataAnalyser dataAnalyser;
-    private final CombinedDataReaderWriter combinedDataReaderWriter;
     private final ExecutorService executorService;
 
+    private final ProofReaderWriter proofReaderWriter;
+    private final CombinedDataReaderWriter combinedDataReaderWriter;
+
+    private final TeamscaleDataDownloader teamscaleDataDownloader;
+    private final ProjectsFetcher projectsFetcher;
+    private final DataCombiner dataCombiner;
+
     @Inject
-    public DataCollector(ProjectsFetcher projectsFetcher, StateHandler stateHandler, GitRepositoryHandler gitRepositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, DataAnalyser dataAnalyser, CombinedDataReaderWriter combinedDataReaderWriter, ExecutorService executorService) {
+    public DataCollector(ProjectsFetcher projectsFetcher, StateHandler stateHandler, GitRepositoryHandler gitRepositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, DataCombiner dataCombiner, CombinedDataReaderWriter combinedDataReaderWriter, ExecutorService executorService, ProofReaderWriter proofReaderWriter) {
         this.projectsFetcher = projectsFetcher;
         this.stateHandler = stateHandler;
         this.gitRepositoryHandler = gitRepositoryHandler;
         this.teamscaleDataDownloader = teamscaleDataDownloader;
-        this.dataAnalyser = dataAnalyser;
+        this.dataCombiner = dataCombiner;
         this.combinedDataReaderWriter = combinedDataReaderWriter;
         this.executorService = executorService;
+        this.proofReaderWriter = proofReaderWriter;
     }
 
     public void startCollectingData() {
@@ -73,25 +77,20 @@ public class DataCollector {
             String repoName = proof.repoName();
             stateHandler.addToState(Pair.of(repoOwner, repoName), "Start collecting data");
             try {
-                collectDataFor(proof);
-            } catch (GitAPIException | IOException | ExecutionException | InterruptedException | TimeoutException e) {
+                CombinedData combinedData = collectDataFor(repoOwner, repoName);
+                combinedDataReaderWriter.write(combinedData);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             stateHandler.removeFromState(Pair.of(repoOwner, repoName));
         }
-
     }
 
-    private CombinedData collectDataFor(Proof proof) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
-        String repoOwner = proof.repoOwner();
-        String repoName = proof.repoName();
+    private CombinedData collectDataFor(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
 
+        Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
-        Result result = dataAnalyser.analyseTeamscaleData(teamscaleData);
 
-        CombinedData combinedData = new CombinedData(repoOwner, repoName, proof, result);
-        combinedDataReaderWriter.write(combinedData);
-
-        return combinedData;
+        return dataCombiner.combineData(proof, teamscaleData);
     }
 }
