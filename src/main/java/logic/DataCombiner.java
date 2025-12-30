@@ -23,15 +23,15 @@ public class DataCombiner {
     }
 
     public CombinedData combineData(Proof proof, TeamscaleData data) {
-        String repoOwner = data.getRepoOwner();
-        String repoName = data.getRepoName();
+        String repoOwner = data.repoOwner();
+        String repoName = data.repoName();
 
         return new CombinedData(repoOwner, repoName, proof, createEntriesFromData(repoOwner, repoName, data));
     }
 
     private List<CombinedData.Entry> createEntriesFromData(String repoOwner, String repoName, TeamscaleData teamscaleData) {
         List<CombinedData.Entry> resultEntries = new ArrayList<>();
-        List<TeamscaleDataEntry> dataEntries = teamscaleData.getEntries();
+        List<TeamscaleDataEntry> dataEntries = teamscaleData.entries();
 
         CombinedData.Entry beforeEntry = CombinedData.Entry.getDefault();
         for (int i = 0; i < dataEntries.size(); i++) {
@@ -61,6 +61,7 @@ public class DataCombiner {
         int errorHandling = beforeEntry.errorHandling();
         int redundancy = beforeEntry.redundancy();
         int structure = beforeEntry.structure();
+        int security = beforeEntry.security();
         for (Finding finding : findingChurn.addedFindings()) {
             switch (finding.categoryName()) {
                 case "Comprehensibility" -> comprehensibility++;
@@ -70,6 +71,7 @@ public class DataCombiner {
                 case "Error Handling" -> errorHandling++;
                 case "Redundancy" -> redundancy++;
                 case "Structure" -> structure++;
+                case "Security" -> security++;
                 default -> throw new IllegalStateException("Unexpected value: " + finding.categoryName());
             }
         }
@@ -82,6 +84,7 @@ public class DataCombiner {
                 case "Error Handling" -> errorHandling--;
                 case "Redundancy" -> redundancy--;
                 case "Structure" -> structure--;
+                case "Security" -> security--;
                 default -> throw new IllegalStateException("Unexpected value: " + finding.categoryName());
             }
         }
@@ -92,6 +95,7 @@ public class DataCombiner {
         double errorHandlingDensity = (double) errorHandling / sourceLinesOfCode * 1000;
         double redundancyDensity = (double) redundancy / sourceLinesOfCode * 1000;
         double structureDensity = (double) structure / sourceLinesOfCode * 1000;
+        double securityDensity = (double) security / sourceLinesOfCode * 1000;
 
         // only structure category
         int longFiles = beforeEntry.longFiles();
@@ -135,6 +139,7 @@ public class DataCombiner {
                 errorHandling,
                 redundancy,
                 structure,
+                security,
                 comprehensibilityDensity,
                 correctnessDensity,
                 documentationDensity,
@@ -142,6 +147,7 @@ public class DataCombiner {
                 errorHandlingDensity,
                 redundancyDensity,
                 structureDensity,
+                securityDensity,
                 longFilesDensity,
                 longMethodDensity,
                 deepNestingDensity,

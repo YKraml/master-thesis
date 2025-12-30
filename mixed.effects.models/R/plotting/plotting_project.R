@@ -58,7 +58,8 @@ plot_project_1 <- function(model, id, data) {
   # scatter
   points(
     projectData$time, projectData$metric,
-    col = "lightblue"
+    col = "lightblue",
+    pch = 4
   )
 
   # intervention line
@@ -70,7 +71,7 @@ plot_project_1 <- function(model, id, data) {
          legend = c("Fitted", "Actual data", paste0("Introduction: ", date)),
          col = c("red", "lightblue", "darkgrey"),
          lty = c(1, NA, 2),
-         pch = c(NA, 1, NA))
+         pch = c(NA, 4, NA))
 }
 
 # ------------------------------------------------------------------------------
@@ -124,7 +125,8 @@ plot_project_2 <- function(model, id, data) {
   # scatter
   points(
     projectData$t_post, projectData[[metric]],
-    col = "lightblue"
+    col = "lightblue",
+    pch = 4
   )
 
   # intervention line
@@ -136,7 +138,7 @@ plot_project_2 <- function(model, id, data) {
          legend = c("Fitted", "Actual data", paste0("Introduction: ", date)),
          col = c("red", "lightblue", "darkgrey"),
          lty = c(1, NA, 2),
-         pch = c(NA, 1, NA))
+         pch = c(NA, 4, NA))
 }
 
 

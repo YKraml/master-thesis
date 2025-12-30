@@ -19,6 +19,7 @@ library(AICcmodavg)
 library(tibble)
 library(patchwork)
 library(RColorBrewer)
+library(ggeffects)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -29,11 +30,10 @@ source("R/shared.R")
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
-  "clonesDensity",
+  "findingsDensity",
   "longFilesDensity",
   "longMethodDensity",
   "deepNestingDensity",
-  "findingsDensity",
   "cloneCoverage",
   "averageFileLoc"
   )
@@ -52,32 +52,19 @@ for (file_name in fileNames) {
     folder_name <- paste("plots", "interrupted_time_series",cleanedFileName, metric, sep = "/")
     dir.create(file.path(folder_name), showWarnings = FALSE, recursive = TRUE)
 
-    # Create model with ar1
-    # model <- lme(
-    #   fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
-    #   random = ~ 1 + t_pre + t_post + intervention| id,
-    #   correlation = corAR1(form = ~ cleaned_time | id),
-    #   data = data,
-    #   method="ML",
-    #   control = lmeControl(opt = "optim")
-    # )
-
-    # Create simple model without ar1
+    # Create model
+    print(paste("   * Creating model"))
     model <- lme(
       fixed = as.formula(paste0(metric ," ~ 1 + t_pre + t_post + intervention")),
       random = ~ 1 + t_pre + t_post + intervention| id,
+      # correlation = corAR1(form = ~ t | id),
       data = data,
       method="ML",
       control = lmeControl(opt = "optim")
     )
+    print(paste("   * Finished model"))
 
-    # Create Lmer model
-    # model <- lmer(
-    #     as.formula(paste0(metric, " ~ 1 + t_pre + t_post + intervention + (1 + t_pre + t_post + intervention | id)")),
-    #     data = data,
-    #     REML = FALSE
-    # )
-
+    # get the effects for each project
     random_effects <- ranef(model)
     fixed_effects <- fixef(model)
     absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
@@ -85,8 +72,8 @@ for (file_name in fileNames) {
     # print model results
     capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
     capture.output(getVarCov(model), file = file.path(folder_name, "model_var_cov.txt"))
-    #capture.output(summary(model_lme), file = file.path(folder_name, "model_lme_summary.txt"))
-    #capture.output(summary(model_simple), file = file.path(folder_name, "model_simple_summary.txt"))
+
+    # comparing models
     #capture.output(anova(model_simple, model), file = file.path(folder_name, "models_anova.txt"))
     #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folder_name, "models_aictab.txt"))
 
@@ -171,7 +158,9 @@ for (file_name in fileNames) {
     plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
     save_png(
       expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),
-      file = file.path(folder_name, "random_effects_vs_residuals.png")
+      file = file.path(folder_name, "random_effects_vs_residuals.png"),
+      width = 30,
+      height = 20
     )
 
     # print prediction for project
@@ -191,12 +180,8 @@ for (file_name in fileNames) {
 
 # ------------------------------------------------------------------------------
 
-
-data <- get_data_from_file("data/bucket_one/CHECKSTYLE.csv")
-
-data$t_pre <- data$t_pre / 365
-data$t_post <- data$t_post / 365
-data$cleaned_time <- data$cleaned_time / 365
+source("R/shared.R")
+data <- get_data_from_file("data/bucket_one/ALL.csv")
 
 metric <- "findingsDensity"
 
@@ -209,14 +194,9 @@ model <- lme(
   control = lmeControl(opt = "optim")
 )
 
-source("R/plotting.R")
 
-
-
-
-effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
-plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
-combined_plot <- (plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])
-combined_plot
+source("R/plotting/plotting_fixed_effects.R")
+plot_predicted_1(data, model)
+plot_predicted_2(data, model)
 
 

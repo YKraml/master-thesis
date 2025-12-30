@@ -19,6 +19,6 @@ public class CombinedDataReaderWriter extends ReaderWriter<CombinedData> {
 
     @Override
     protected String getFolderName() {
-        return "temp" + File.separator + "all";
+        return "temp" + File.separator + "combined_data";
     }
 }

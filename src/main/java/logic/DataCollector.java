@@ -17,9 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.TimeoutException;
 
 public class DataCollector {
 
@@ -86,11 +84,9 @@ public class DataCollector {
         }
     }
 
-    private CombinedData collectDataFor(String repoOwner, String repoName) throws GitAPIException, IOException, ExecutionException, InterruptedException, TimeoutException {
-
+    private CombinedData collectDataFor(String repoOwner, String repoName) throws Exception {
         Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
-
         return dataCombiner.combineData(proof, teamscaleData);
     }
 }

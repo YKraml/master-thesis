@@ -155,7 +155,9 @@ for (file_name in file_names) {
     plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
     save_png(
       expression = print((plots[[1]] / plots[[2]])),
-      file = file.path(folder_name, "random_effects_vs_residuals.png")
+      file = file.path(folder_name, "random_effects_vs_residuals.png"),
+      width = 15,
+      height = 20
     )
 
     # print prediction for project

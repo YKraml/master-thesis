@@ -1,6 +1,5 @@
 package io;
 
-import api.teamscale.CommitChartFetcher;
 import api.teamscale.FindingChurnFetcher;
 import api.teamscale.MetricsFetcher;
 import api.teamscale.model.churn.FindingChurn;
@@ -8,28 +7,17 @@ import api.teamscale.model.cleaned.Assessment;
 import api.teamscale.model.cleaned.CleanedMetrics;
 import api.teamscale.model.cleaned.TeamscaleData;
 import api.teamscale.model.cleaned.TeamscaleDataEntry;
-import api.teamscale.model.commit.chart.Commits;
-import api.teamscale.model.commit.chart.UserWithCommits;
 import api.teamscale.model.metrics.Metrics;
 import api.teamscale.model.metrics.ValueDouble;
 import api.teamscale.model.metrics.ValueMapping;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.inject.Inject;
-import logic.GitRepositoryHandler;
 import logic.StateHandler;
-import model.Proof;
 import org.apache.commons.lang3.tuple.Pair;
-import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.revwalk.RevCommit;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TeamscaleDataDownloader {
 
@@ -37,19 +25,70 @@ public class TeamscaleDataDownloader {
     private final StateHandler stateHandler;
     private final FindingChurnFetcher findingChurnFetcher;
     private final MetricsFetcher metricsFetcher;
-    private final RepositoryDownloader repositoryDownloader;
-    private final GitRepositoryHandler gitRepositoryHandler;
-    private final CommitChartFetcher commitChartFetcher;
+    private final TeamscaleDataReaderWriter teamscaleDataReaderWriter;
 
     @Inject
-    public TeamscaleDataDownloader(ExecutorService executorService, StateHandler stateHandler, FindingChurnFetcher findingChurnFetcher, MetricsFetcher metricsFetcher, RepositoryDownloader repositoryDownloader, GitRepositoryHandler gitRepositoryHandler, CommitChartFetcher commitChartFetcher) {
+    public TeamscaleDataDownloader(ExecutorService executorService, StateHandler stateHandler, FindingChurnFetcher findingChurnFetcher, MetricsFetcher metricsFetcher, TeamscaleDataReaderWriter teamscaleDataReaderWriter) {
         this.executorService = executorService;
         this.stateHandler = stateHandler;
         this.findingChurnFetcher = findingChurnFetcher;
         this.metricsFetcher = metricsFetcher;
-        this.repositoryDownloader = repositoryDownloader;
-        this.gitRepositoryHandler = gitRepositoryHandler;
-        this.commitChartFetcher = commitChartFetcher;
+        this.teamscaleDataReaderWriter = teamscaleDataReaderWriter;
+    }
+
+    public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException {
+        Optional<TeamscaleData> element = teamscaleDataReaderWriter.getElement(repoOwner, repoName);
+        if (element.isPresent()) {
+            return element.get();
+        }
+
+        List<CompletableFuture<?>> futures = new ArrayList<>();
+        List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
+
+        // Get metrics data
+        List<Metrics> metrics = metricsFetcher.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
+
+        // Get findings data
+        AtomicInteger counter = new AtomicInteger(1);
+        int teamscaleCommitCount = metrics.size();
+        for (Metrics entry : metrics) {
+            futures.add(CompletableFuture.runAsync(() -> {
+                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
+                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.getTimestamp(), 5);
+                data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(entry)));
+            }, executorService));
+        }
+
+        // Wait here until all data is downloaded
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get(300, TimeUnit.SECONDS);
+
+        //Sort data by timestamp
+        data.sort(Comparator.comparing(o -> o.getFindingChurn().commit().timestamp()));
+
+        TeamscaleData teamscaleData = new TeamscaleData(repoOwner, repoName, data);
+        teamscaleDataReaderWriter.write(teamscaleData);
+        return teamscaleData;
+    }
+
+    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retries) {
+        if (retries <= 0) {
+            throw new RuntimeException("Could not get findings churn. Retries exceeded.");
+        }
+
+        try {
+            return CompletableFuture.supplyAsync(() ->
+                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(30, TimeUnit.SECONDS);
+        } catch (TimeoutException | InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            try {
+                synchronized (this) {
+                    Thread.sleep(1000);
+                    return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
+                }
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
     }
 
     private static CleanedMetrics cleanMetrics(Metrics metrics) {
@@ -89,116 +128,5 @@ public class TeamscaleDataDownloader {
                 ((ValueDouble) metrics.getValue().get(29)).getValue(),
                 ((ValueDouble) metrics.getValue().get(30)).getValue()
         );
-    }
-
-    public TeamscaleData downloadDataFrom(String repoOwner, String repoName) throws IOException, ExecutionException, InterruptedException, TimeoutException, GitAPIException {
-        File file = new File("temp" + File.separator + "data" + File.separator + repoOwner + "." + repoName + ".json");
-        if (file.exists()) {
-            return new ObjectMapper().readValue(file, TeamscaleData.class);
-        }
-
-        List<CompletableFuture<?>> futures = new ArrayList<>();
-        List<TeamscaleDataEntry> data = Collections.synchronizedList(new ArrayList<>());
-
-        // Get metrics data
-        List<Metrics> metrics = metricsFetcher.getMetrics(repoOwner, repoName, 1, Long.MAX_VALUE);
-
-        // Get findings data
-        AtomicInteger counter = new AtomicInteger(1);
-        int teamscaleCommitCount = metrics.size();
-        for (Metrics entry : metrics) {
-            futures.add(CompletableFuture.runAsync(() -> {
-                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
-                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.getTimestamp(), 5);
-                data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(entry)));
-            }, executorService));
-        }
-
-        // Wait here until all data is downloaded
-        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get(300, TimeUnit.SECONDS);
-
-        // Add data for missing commits
-        // addMissingData(repoOwner, repoName, data, metrics);
-
-        //Sort data by timestamp
-        data.sort(Comparator.comparing(o -> o.getFindingChurn().commit().timestamp()));
-
-        File folder = new File("temp" + File.separator + "data");
-        if (!folder.exists()) {
-            folder.mkdir();
-        }
-
-        file.createNewFile();
-        TeamscaleData teamscaleData = TeamscaleData.of(repoOwner, repoName, data);
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(file, teamscaleData);
-        return teamscaleData;
-    }
-
-    private void addMissingData(String repoOwner, String repoName, List<TeamscaleDataEntry> data, List<Metrics> metrics) throws GitAPIException, IOException, InterruptedException {
-        List<RevCommit> repoCommits = getCommits(repoOwner, repoName);
-        Set<String> teamscaleCommits = commitChartFetcher.getCommitChart(repoOwner, repoName)
-                .getCommits()
-                .stream()
-                .flatMap((Function<UserWithCommits, Stream<Commits>>) userWithCommits -> userWithCommits.getCommits().stream())
-                .sorted(Comparator.comparing(o -> o.getCommit().getTimestamp()))
-                .map(Commits::getRevision)
-                .collect(Collectors.toSet());
-
-        for (RevCommit commit : repoCommits) {
-
-            if (teamscaleCommits.contains(commit.getName())) {
-                continue;
-            }
-
-            data.add(TeamscaleDataEntry.of(
-                    FindingChurn.empty(commit.getCommitTime()),
-                    cleanMetrics(getMetricsAtTime(metrics, commit.getCommitTime()))
-            ));
-        }
-    }
-
-    private Metrics getMetricsAtTime(List<Metrics> metrics, int commitTime) {
-
-        for (int i = 1; i < metrics.size(); i++) {
-            Metrics metric = metrics.get(i);
-            int metricTime = Math.toIntExact(metric.getTimestamp() / 1000);
-
-            if (metricTime > commitTime) {
-                return metrics.get(i - 1);
-            }
-        }
-
-        return metrics.getLast();
-    }
-
-    private List<RevCommit> getCommits(String repoOwner, String repoName) throws GitAPIException, IOException {
-        List<RevCommit> commits = new ArrayList<>();
-        repositoryDownloader.getRepo(repoOwner, repoName).log().call().forEach(commits::add);
-        commits = commits.reversed();
-
-        Proof proof = gitRepositoryHandler.handleRepo(repoOwner, repoName);
-        commits = commits.stream().filter(revCommit -> revCommit.getCommitTime() >= proof.analysisStartTime() && revCommit.getCommitTime() <= proof.analysisEndTime()).toList();
-        return commits;
-    }
-
-    public FindingChurn getFindingChurnWithTimeout(String repoOwner, String repoName, long timestamp, int retries) {
-
-        if (retries <= 0) {
-            throw new RuntimeException("Could not get findings churn");
-        }
-
-        try {
-            return CompletableFuture.supplyAsync(() ->
-                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(5, TimeUnit.SECONDS);
-        } catch (TimeoutException | InterruptedException | ExecutionException e) {
-            try {
-                synchronized (this) {
-                    Thread.sleep(1000);
-                    return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
-                }
-            } catch (InterruptedException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
     }
 }

@@ -10,9 +10,9 @@ get_data_from_file <- function (file_name) {
     data$t_post
   )
 
-  # data$t_pre <- data$t_pre / 365
-  # data$t_post <- data$t_post / 365
-  # data$cleaned_time <- data$cleaned_time / 365
+  data$t_pre <- data$t_pre / 365
+  data$t_post <- data$t_post / 365
+  data$cleaned_time <- data$cleaned_time / 365
 
   return(data)
 }
