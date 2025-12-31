@@ -57,16 +57,46 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
 
 # ------------------------------------------------------------------------------
 
-plot_random_effects_correlation <- function(model){
-  pairs(
-    ranef(model),
-    upper.panel = NULL,
-    diag.panel = function(x) {
-      par(new = TRUE)
-      hist(x, col = "lightblue", border = "black", axes = FALSE, main = "")
-      }
-  )
+plot_random_effects_correlation <- function(model) {
+
+  # Panel for scatter and regression line
+  panel.cor <- function(x, y, ...) {
+
+    # scatter plot
+    points(x, y, pch = 3, col = "lightblue")
+
+    # regression line
+    abline(lm(y ~ x), col = "red", lwd = 2)
   }
+
+  # Panel for histograms
+  panel.hist <- function(x, ...) {
+    usr <- par("usr")
+    on.exit(par(usr = usr))
+
+    par(usr = c(usr[1:2], 0, 1.5))
+
+    h <- hist(x, plot = FALSE)
+    y <- h$counts / max(h$counts)
+
+    rect(
+      h$breaks[-length(h$breaks)], 0,
+      h$breaks[-1], y,
+      col = "lightblue", border = "black"
+    )
+  }
+
+  random_effects <- ranef(model)
+  fixed_effects <- fixef(model)
+  absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
+
+  pairs(
+    absolute_effects,
+    upper.panel = NULL,
+    lower.panel = panel.cor,
+    diag.panel  = panel.hist
+  )
+}
 
 
 # ------------------------------------------------------------------------------

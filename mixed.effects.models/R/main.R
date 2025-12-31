@@ -62,7 +62,7 @@ for (file_name in fileNames) {
       method="ML",
       control = lmeControl(opt = "optim")
     )
-    print(paste("   * Finished model"))
+    print(paste("   * Drawing plots"))
 
     # get the effects for each project
     random_effects <- ranef(model)
@@ -195,8 +195,7 @@ model <- lme(
 )
 
 
-source("R/plotting/plotting_fixed_effects.R")
-plot_predicted_1(data, model)
-plot_predicted_2(data, model)
+source("R/plotting/plotting_random_effects.R")
+plot_random_effects_correlation(model)
 
 
