@@ -1,5 +1,5 @@
-import api.teamscale.MetricsFetcher;
-import api.teamscale.model.metrics.Metrics;
+import io.teamscale.api.MetricsFetcher;
+import io.teamscale.api.model.metrics.Metrics;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.junit.jupiter.api.Assertions;

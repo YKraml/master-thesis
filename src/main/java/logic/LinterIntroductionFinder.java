@@ -1,8 +1,8 @@
 package logic;
 
 import jakarta.inject.Inject;
-import model.Linter;
 import model.FileIndicator;
+import model.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -29,10 +29,12 @@ import java.util.Optional;
 public class LinterIntroductionFinder {
 
     private final LinterFinder linterFinder;
+    private final GitUtil gitUtil;
 
     @Inject
-    public LinterIntroductionFinder(LinterFinder linterFinder) {
+    public LinterIntroductionFinder(LinterFinder linterFinder, GitUtil gitUtil) {
         this.linterFinder = linterFinder;
+        this.gitUtil = gitUtil;
     }
 
     public Pair<RevCommit, String> findIntroductionCommitWithProof(Git git, Linter linter) throws IOException, GitAPIException {
@@ -45,7 +47,7 @@ public class LinterIntroductionFinder {
             throw new RuntimeException("Linter introduction not found");
         }
 
-        GitUtil.checkout(git, commits.getLast().getName());
+        gitUtil.checkout(git, commits.getLast().getName());
 
         return introductionCommitWithProof.get();
     }
@@ -128,7 +130,7 @@ public class LinterIntroductionFinder {
     }
 
     private Optional<String> searchLinterInRepo(Git git, Linter linter, String commitName, LinterFinder linterFinder) throws GitAPIException, IOException {
-        GitUtil.checkout(git, commitName);
+        gitUtil.checkout(git, commitName);
         File folder = git.getRepository().getDirectory().getParentFile();
         for (LinterFinder.Result result : linterFinder.findLinters(folder)) {
             if (result.linterName().equals(linter.name())) {

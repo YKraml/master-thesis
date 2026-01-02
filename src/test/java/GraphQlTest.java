@@ -1,9 +1,9 @@
-import api.graphql.ForkFetcher;
-import api.graphql.IssueFetcher;
-import api.graphql.StarFetcher;
-import api.graphql.model.forks.Fork;
-import api.graphql.model.issues.Issue;
-import api.graphql.model.stars.Star;
+import io.git.graphql.ForkFetcher;
+import io.git.graphql.IssueFetcher;
+import io.git.graphql.StarFetcher;
+import io.git.graphql.model.forks.Fork;
+import io.git.graphql.model.issues.Issue;
+import io.git.graphql.model.stars.Star;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.junit.jupiter.api.Assertions;

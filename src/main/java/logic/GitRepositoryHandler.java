@@ -1,7 +1,7 @@
 package logic;
 
-import io.ProofReaderWriter;
-import io.RepositoryDownloader;
+import io.git.RepositoryDownloader;
+import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
 import model.Linter;
 import model.Proof;

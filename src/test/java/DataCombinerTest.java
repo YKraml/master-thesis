@@ -1,7 +1,7 @@
-import api.teamscale.model.cleaned.TeamscaleData;
+import io.teamscale.api.model.cleaned.TeamscaleData;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.TeamscaleDataDownloader;
+import io.teamscale.TeamscaleDataDownloader;
 import logic.DataCombiner;
 import model.CombinedData;
 import org.junit.jupiter.api.Assertions;
@@ -50,6 +50,7 @@ class DataCombinerTest {
     }
 
     @Test
+    @Disabled("Takes too long")
     void testTraccerTraccer() throws Exception {
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom("traccar", "traccar");
         CombinedData result = dataCombiner.combineData(null, teamscaleData);

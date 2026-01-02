@@ -1,11 +1,11 @@
 package logic;
 
-import api.teamscale.model.churn.Finding;
-import api.teamscale.model.churn.FindingChurn;
-import api.teamscale.model.cleaned.CleanedMetrics;
-import api.teamscale.model.cleaned.TeamscaleData;
-import api.teamscale.model.cleaned.TeamscaleDataEntry;
 import com.google.inject.Inject;
+import io.teamscale.api.model.churn.Finding;
+import io.teamscale.api.model.churn.FindingChurn;
+import io.teamscale.api.model.cleaned.CleanedMetrics;
+import io.teamscale.api.model.cleaned.TeamscaleData;
+import io.teamscale.api.model.cleaned.TeamscaleDataEntry;
 import model.CombinedData;
 import model.Proof;
 import org.apache.commons.lang3.tuple.Pair;

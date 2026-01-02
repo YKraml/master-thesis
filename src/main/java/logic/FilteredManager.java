@@ -1,7 +1,7 @@
 package logic;
 
-import io.FilteredProjectLinterReaderWriter;
-import io.FilteredProjectReaderWriter;
+import io.json.FilteredProjectLinterReaderWriter;
+import io.json.FilteredProjectReaderWriter;
 import jakarta.inject.Inject;
 import model.Linter;
 import model.Writable;

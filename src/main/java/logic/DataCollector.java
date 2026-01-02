@@ -1,12 +1,12 @@
 package logic;
 
-import api.teamscale.ProjectsFetcher;
-import api.teamscale.model.cleaned.TeamscaleData;
-import api.teamscale.model.project.Project;
 import com.google.inject.Inject;
-import io.CombinedDataReaderWriter;
-import io.ProofReaderWriter;
-import io.TeamscaleDataDownloader;
+import io.json.CombinedDataReaderWriter;
+import io.json.ProofReaderWriter;
+import io.teamscale.TeamscaleDataDownloader;
+import io.teamscale.api.ProjectsFetcher;
+import io.teamscale.api.model.cleaned.TeamscaleData;
+import io.teamscale.api.model.project.Project;
 import model.CombinedData;
 import model.Proof;
 import org.apache.commons.lang3.tuple.Pair;

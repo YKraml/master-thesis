@@ -1,6 +1,6 @@
-import api.teamscale.CommitChartFetcher;
-import api.teamscale.model.commit.chart.CommitChart;
-import api.teamscale.model.commit.chart.Commits;
+import io.teamscale.api.CommitChartFetcher;
+import io.teamscale.api.model.commit.chart.CommitChart;
+import io.teamscale.api.model.commit.chart.Commits;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.junit.jupiter.api.Assertions;
@@ -40,7 +40,7 @@ public class CommitChartFetcherTest {
         List<Commits> commits = commitChart
                 .getCommits()
                 .stream()
-                .flatMap(s -> s.getCommits().stream())
+                .flatMap(userWithCommits -> userWithCommits.getCommits().stream())
                 .toList();
         Assertions.assertEquals(expected, commits.size());
     }
