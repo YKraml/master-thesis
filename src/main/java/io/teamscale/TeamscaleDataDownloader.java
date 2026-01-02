@@ -54,8 +54,8 @@ public class TeamscaleDataDownloader {
         int teamscaleCommitCount = metrics.size();
         for (Metrics entry : metrics) {
             futures.add(CompletableFuture.runAsync(() -> {
-                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloading data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
                 FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.getTimestamp(), 5);
+                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloaded data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
                 data.add(TeamscaleDataEntry.of(findingChurn, cleanMetrics(entry)));
             }, executorService));
         }
@@ -78,12 +78,12 @@ public class TeamscaleDataDownloader {
 
         try {
             return CompletableFuture.supplyAsync(() ->
-                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(30, TimeUnit.SECONDS);
+                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(60, TimeUnit.SECONDS);
         } catch (TimeoutException | InterruptedException | ExecutionException e) {
             e.printStackTrace();
             try {
                 synchronized (this) {
-                    Thread.sleep(1000);
+                    Thread.sleep(10000);
                     return getFindingChurnWithTimeout(repoOwner, repoName, timestamp, retries - 1);
                 }
             } catch (InterruptedException ex) {

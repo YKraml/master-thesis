@@ -56,7 +56,7 @@ public class DataCollector {
                 String repoOwner = split[0];
                 String repoName = split[1];
 
-                stateHandler.addToState(Pair.of(repoOwner, repoName), "Prepare data for python");
+                stateHandler.addToState(Pair.of(repoOwner, repoName), "Getting proof");
                 try {
                     proofs.add(gitRepositoryHandler.handleRepo(repoOwner, repoName));
                 } catch (GitAPIException | IOException e) {

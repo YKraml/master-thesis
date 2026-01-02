@@ -131,13 +131,24 @@ for (file_name in fileNames) {
       file = file.path(folder_name, "random_effects_correlation.png")
     )
 
-    # print random effects histograms
+    # print absolute effects histograms
     save_multipanel_png(
       expression = {
         plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
         plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects["t_pre"])
         plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects["t_post"])
         plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
+      },
+      file = file.path(folder_name, "absolute_effects_hist.png"),
+    )
+
+    # print random effects histograms
+    save_multipanel_png(
+      expression = {
+        plot_random_effects_histogram(random_effects$`(Intercept)`, "lightblue", "intercept", random_effects["(Intercept)"])
+        plot_random_effects_histogram(random_effects$t_pre, "lightgreen", "t_pre", random_effects["t_pre"])
+        plot_random_effects_histogram(random_effects$t_post, "darkseagreen1", "t_post", random_effects["t_post"])
+        plot_random_effects_histogram(random_effects$intervention, "paleturquoise1", "intervention", random_effects[4])
       },
       file = file.path(folder_name, "random_effects_hist.png"),
     )
@@ -181,21 +192,47 @@ for (file_name in fileNames) {
 # ------------------------------------------------------------------------------
 
 source("R/shared.R")
-data <- get_data_from_file("data/bucket_one/ALL.csv")
+file_name <-"data/bucket_one/ALL.csv"
+data <- get_data_from_file(file_name)
 
 metric <- "findingsDensity"
+
+
+data_t0 <- subset(data, t == 0)
+
+percentiles <- quantile(data_t0[[metric]], probs = c(0.25, 0.50, 0.75))
+
+data_t0$quartile <- cut(
+  data_t0[[metric]],
+  breaks = c(-Inf, percentiles, Inf),
+  labels = c("Q1", "Q2", "Q3", "Q4")
+)
+
+ids_q1 <- data_t0$id[data_t0$quartile == "Q1"]
+ids_q2 <- data_t0$id[data_t0$quartile == "Q2"]
+ids_q3 <- data_t0$id[data_t0$quartile == "Q3"]
+ids_q4 <- data_t0$id[data_t0$quartile == "Q4"]
+
+df_q1 <- subset(data, id %in% ids_q1)
+df_q2 <- subset(data, id %in% ids_q2)
+df_q3 <- subset(data, id %in% ids_q3)
+df_q4 <- subset(data, id %in% ids_q4)
+
 
 
 model <- lme(
   fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
   random = ~ 1 + t_pre + t_post + intervention| id,
-  data = data,
+  data = df_q1,
   method="ML",
   control = lmeControl(opt = "optim")
 )
 
+summary(model)
 
-source("R/plotting/plotting_random_effects.R")
-plot_random_effects_correlation(model)
+random_effects <- ranef(model)
+fixed_effects <- fixef(model)
+absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
-
+plot_predicted_1(data, model)
+t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE)

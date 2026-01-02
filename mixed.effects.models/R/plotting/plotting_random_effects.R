@@ -28,29 +28,42 @@ plot_random_effects_vs_residuals <- function(data, model, effect) {
 
 plot_random_effects_histogram <- function(data, color, main, fixed) {
   sigma <- sd(data)
-  mean <- mean(data)
-  left = mean - sigma * 2
-  right = mean + sigma * 2
+  mu <- mean(data)
+
+  left <- mu - sigma * 3
+  right <- mu + sigma * 3
+
   hist(
     data[data > left & data < right],
     main = main,
     xlab = "Value",
     ylab = "Density",
-    freq = TRUE,
+    freq = FALSE,          # scale histogram to density
     col = color,
     border = "black",
     breaks = 30,
     xlim = c(left, right)
   )
-  abline(v = mean, col = "red", lwd = 2, lty = 2)
+
+  # normal distribution curve
+  x <- seq(left, right, length.out = 500)
+  lines(x, dnorm(x, mean = mu, sd = sigma),
+        col = "red", lwd = 2)
+
+  # vertical line at mean
+  abline(v = mu, col = "red", lwd = 2, lty = 2)
 
   # legend
   legend(
     "topright",
-    legend = c(paste0("Mean: ", round(mean, 3)), paste0("Fixed: ", round(fixed, 3))),
-    col = c("red", NA),
-    lty = c(2, NA),
-    pch = c(NA, NA))
+    legend = c(
+      paste0("Mean: ", round(mu, 3)),
+      "Normal density"
+    ),
+    col = c("red", "red"),
+    lty = c(2, 1),
+    lwd = c(2, 2),
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -65,8 +78,39 @@ plot_random_effects_correlation <- function(model) {
     # scatter plot
     points(x, y, pch = 3, col = "lightblue")
 
-    # regression line
-    abline(lm(y ~ x), col = "red", lwd = 2)
+    # linear model
+    fit <- lm(y ~ x)
+    abline(fit, col = "red", lwd = 2)
+
+    # correlation test
+    ct <- cor.test(x, y)
+
+    # extract statistics
+    r      <- unname(ct$estimate)
+    p      <- ct$p.value
+    ci     <- ct$conf.int
+    coef   <- coef(fit)
+    r2     <- summary(fit)$r.squared
+    n      <- sum(complete.cases(x, y))
+
+    # legend text
+    legend_text <- c(
+      # paste0("n = ", n),
+      paste0("r = ", round(r, 3)),
+      paste0("p = ", signif(p, 3))
+      # paste0("95% CI [", round(ci[1], 3), ", ", round(ci[2], 3), "]")
+      # paste0("slope = ", round(coef[2], 3))
+      # paste0("intercept = ", round(coef[1], 3))
+      # paste0("R² = ", round(r2, 3))
+    )
+
+    # legend
+    legend(
+      "topleft",
+      legend = legend_text,
+      cex = 0.75,
+      text.col = "black"
+    )
   }
 
   # Panel for histograms
