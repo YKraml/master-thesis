@@ -29,8 +29,14 @@ plot_predicted_1 <- function(data, model) {
   pred$lower <- pred$pred - 1.96 * pred$se
   pred$upper <- pred$pred + 1.96 * pred$se
 
+  text <- paste0(
+    "intersect = ", round(fixed_effects["(Intercept)"], digits = 3), "\n",
+    "t_pre = ", round(fixed_effects["t_pre"], digits = 3), "\n",
+    "intervention = ", round(fixed_effects["intervention"], digits = 3), "\n",
+    "t_post = ", round(fixed_effects["t_post"], digits = 3), "\n"
+  )
 
-  plot_predicted(pred$x, pred$pred, pred$lower, pred$upper)
+  plot_predicted(pred$x, pred$pred, pred$lower, pred$upper, text)
 }
 
 # ------------------------------------------------------------------------------
@@ -44,7 +50,7 @@ plot_predicted_2 <- function(data, model){
 
 # ------------------------------------------------------------------------------
 
-plot_predicted <- function(x, y, conf_low, conf_high){
+plot_predicted <- function(x, y, conf_low, conf_high, text = ""){
 
   # Calculate y range
   ymin <- min(conf_low)
@@ -62,6 +68,8 @@ plot_predicted <- function(x, y, conf_low, conf_high){
     main = "Fitted fixed effect with 95% confidence interval"
   )
 
+  text(x = -2, y = ymax2, labels = text, adj = c(0, 1))
+
   # conf int
   lines(x, conf_low, col = "lightblue", lty = 1)
   lines(x, conf_high, col = "lightblue", lty = 1)
@@ -75,4 +83,6 @@ plot_predicted <- function(x, y, conf_low, conf_high){
          col = c("red", "lightblue", "darkgrey"),
          lty = c(1, 1, 2),
          pch = c(NA, NA, NA))
+
+
 }

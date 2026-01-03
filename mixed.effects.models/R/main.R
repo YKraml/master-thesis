@@ -27,6 +27,7 @@ source("R/plotting/plotting_random_effects.R")
 source("R/plotting/plotting_residuals.R")
 source("R/plotting/plotting_general.R")
 source("R/shared.R")
+source("R/saver.R")
 
 fileNames <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
 metrics <- list(
@@ -50,7 +51,6 @@ for (file_name in fileNames) {
     cleanedFileName <- gsub("data.", "", file_name)
     cleanedFileName <- gsub(".csv", "", cleanedFileName)
     folder_name <- paste("plots", "interrupted_time_series",cleanedFileName, metric, sep = "/")
-    dir.create(file.path(folder_name), showWarnings = FALSE, recursive = TRUE)
 
     # Create model
     print(paste("   * Creating model"))
@@ -62,177 +62,98 @@ for (file_name in fileNames) {
       method="ML",
       control = lmeControl(opt = "optim")
     )
-    print(paste("   * Drawing plots"))
-
-    # get the effects for each project
-    random_effects <- ranef(model)
-    fixed_effects <- fixef(model)
-    absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
-
-    # print model results
-    capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
-    capture.output(getVarCov(model), file = file.path(folder_name, "model_var_cov.txt"))
-
-    # comparing models
-    #capture.output(anova(model_simple, model), file = file.path(folder_name, "models_anova.txt"))
-    #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folder_name, "models_aictab.txt"))
 
 
-    # print tests
-    capture.output(t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE),file = file.path(folder_name, "ttest_tpre_vs_tpost.txt"))
-    capture.output(t.test(absolute_effects$intervention),file = file.path(folder_name, "ttest_intervention_vs_0.txt"))
-    capture.output(expression = t.test(absolute_effects$`(Intercept)`),file = file.path(folder_name, "ttest_intercept_vs_0.txt"))
-
-    # print metric histogram
-    save_png(
-      expression = plot_raw_data_hist(data[[metric]], metric),
-      file = file.path(folder_name, "hist.png")
-    )
-
-    # print fixed effects
-    save_png(
-      expression = plot_predicted_1(data, model),
-      file = file.path(folder_name, "predicted.png")
-    )
-
-    # print qq of residuals
-    save_png(
-      expression = plot_residuals_qq(data, model),
-      file = file.path(folder_name, "residuals_qq.png")
-    )
-
-    # print residuals vs fitted
-    save_png(
-      expression = plot_residuals_vs_fitted(data, model),
-      file = file.path(folder_name, "residuals_vs_fitted.png")
-    )
-
-    # print residuals vs time
-    save_png(
-      expression = plot_residuals_vs_time_1(data, model),
-      file = file.path(folder_name, "residuals_vs_time.png")
-    )
-
-    # print residuals histogram
-    save_png(
-      expression = plot_residuals_histogram(data, model),
-      file = file.path(folder_name, "residuals_hist.png")
-    )
-
-    # print Auto- and Cross- Covariance and -Correlation Function Estimation
-    save_png(
-      expression = acf(resid(model, type = "normalized")),
-      file = file.path(folder_name, "acf.png")
-    )
-
-    # print random effects correlation
-    save_png(
-      expression = plot_random_effects_correlation(model),
-      file = file.path(folder_name, "random_effects_correlation.png")
-    )
-
-    # print absolute effects histograms
-    save_multipanel_png(
-      expression = {
-        plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
-        plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects["t_pre"])
-        plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects["t_post"])
-        plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
-      },
-      file = file.path(folder_name, "absolute_effects_hist.png"),
-    )
-
-    # print random effects histograms
-    save_multipanel_png(
-      expression = {
-        plot_random_effects_histogram(random_effects$`(Intercept)`, "lightblue", "intercept", random_effects["(Intercept)"])
-        plot_random_effects_histogram(random_effects$t_pre, "lightgreen", "t_pre", random_effects["t_pre"])
-        plot_random_effects_histogram(random_effects$t_post, "darkseagreen1", "t_post", random_effects["t_post"])
-        plot_random_effects_histogram(random_effects$intervention, "paleturquoise1", "intervention", random_effects[4])
-      },
-      file = file.path(folder_name, "random_effects_hist.png"),
-    )
-
-    # print random effects qq-plot
-    save_multipanel_png(
-      expression = {
-        qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
-        qqnorm(random_effects[, "t_pre"], main = "t_pre"); qqline(random_effects[, "t_pre"])
-        qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
-        qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
-      },
-      file = file.path(folder_name, "random_effects_qq.png"),
-    )
-
-    # print random effects vs residuals
-    effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
-    plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
-    save_png(
-      expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),
-      file = file.path(folder_name, "random_effects_vs_residuals.png"),
-      width = 30,
-      height = 20
-    )
-
-    # print prediction for project
-    project_folder_name <- paste(folder_name,"projects", sep = "/")
-    dir.create(file.path(project_folder_name), showWarnings = FALSE, recursive = TRUE)
-    for (id in unique(data[["id"]])) {
-      save_png(
-        expression = plot_project_1(model, id, data),
-        file = file.path(project_folder_name, paste0(id, ".png"))
-      )
-    }
-
+    save_everything(model, data, folder_name)
 
   }
 }
 
-
+# ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
 source("R/shared.R")
+source("R/saver.R")
+
+
 file_name <-"data/bucket_one/ALL.csv"
 data <- get_data_from_file(file_name)
 
 metric <- "findingsDensity"
 
 
+no_quartiles <- 4  # You can change this to any number
+
 data_t0 <- subset(data, t == 0)
 
-percentiles <- quantile(data_t0[[metric]], probs = c(0.25, 0.50, 0.75))
+# Calculate quantiles based on no_quartiles
+probs <- seq(0, 1, length.out = no_quartiles + 1)[2:no_quartiles]
+percentiles <- quantile(data_t0[[metric]], probs = probs)
+
+# Create quartile labels dynamically
+quartile_labels <- paste0("Q", 1:no_quartiles)
 
 data_t0$quartile <- cut(
   data_t0[[metric]],
   breaks = c(-Inf, percentiles, Inf),
-  labels = c("Q1", "Q2", "Q3", "Q4")
+  labels = quartile_labels
 )
 
-ids_q1 <- data_t0$id[data_t0$quartile == "Q1"]
-ids_q2 <- data_t0$id[data_t0$quartile == "Q2"]
-ids_q3 <- data_t0$id[data_t0$quartile == "Q3"]
-ids_q4 <- data_t0$id[data_t0$quartile == "Q4"]
+# Create a list to store data subsets for each quartile
+splitted_data <- lapply(quartile_labels, function(q) {
+  ids <- data_t0$id[data_t0$quartile == q]
+  subset(data, id %in% ids)
+})
 
-df_q1 <- subset(data, id %in% ids_q1)
-df_q2 <- subset(data, id %in% ids_q2)
-df_q3 <- subset(data, id %in% ids_q3)
-df_q4 <- subset(data, id %in% ids_q4)
+# Calculate grid dimensions for plotting
+plot_rows <- ceiling(sqrt(no_quartiles))
+plot_cols <- ceiling(no_quartiles / plot_rows)
 
 
+png(file.path("deleteme.png"), width = 20, height = 20, units = "cm", res = 300, pointsize = 8)
+par(mfrow = c(plot_rows, plot_cols))
+
+i <- 1
+for (data_subset in splitted_data) {
+  model <- lme(
+    fixed = as.formula(paste0(metric, " ~ t_pre + t_post + intervention")),
+    random = ~ 1 + t_pre + t_post + intervention | id,
+    data = data_subset,
+    method = "ML",
+    control = lmeControl(opt = "optim")
+  )
+
+  save_everything(model, data_subset, paste0("delete_me/", i))
+  i <- i+1
+
+}
+
+
+
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+
+
+file_name <-"data/bucket_one/ALL.csv"
+data <- get_data_from_file(file_name)
+metric <- "findingsDensity"
 
 model <- lme(
-  fixed = as.formula(paste0(metric ," ~ t_pre + t_post + intervention")),
-  random = ~ 1 + t_pre + t_post + intervention| id,
-  data = df_q1,
-  method="ML",
+  fixed = as.formula(paste0(metric, " ~ t_pre + t_post + intervention")),
+  random = ~ 1 + t_pre + t_post + intervention | id,
+  data = data,
+  method = "ML",
   control = lmeControl(opt = "optim")
 )
 
-summary(model)
+source("R/plotting/plotting_fixed_effects.R")
+plot_predicted_1(data_subset, model)
 
-random_effects <- ranef(model)
-fixed_effects <- fixef(model)
-absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
-plot_predicted_1(data, model)
-t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE)

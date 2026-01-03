@@ -17,7 +17,10 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TeamscaleDataDownloader {
@@ -61,7 +64,7 @@ public class TeamscaleDataDownloader {
         }
 
         // Wait here until all data is downloaded
-        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get(300, TimeUnit.SECONDS);
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture<?>[0])).get();
 
         //Sort data by timestamp
         data.sort(Comparator.comparing(o -> o.getFindingChurn().commit().timestamp()));
@@ -78,8 +81,8 @@ public class TeamscaleDataDownloader {
 
         try {
             return CompletableFuture.supplyAsync(() ->
-                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get(60, TimeUnit.SECONDS);
-        } catch (TimeoutException | InterruptedException | ExecutionException e) {
+                    findingChurnFetcher.getFindingsChurn(repoOwner, repoName, timestamp)).get();
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
             try {
                 synchronized (this) {

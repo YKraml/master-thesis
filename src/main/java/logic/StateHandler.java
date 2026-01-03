@@ -76,13 +76,13 @@ public class StateHandler {
     }
 
     public void end() {
-        Timer timer1 = new Timer(false);
-        timer1.schedule(new TimerTask() {
+        Timer endingTimer = new Timer(false);
+        endingTimer.schedule(new TimerTask() {
             @Override
             public void run() {
                 synchronized (state) {
                     timer.cancel();
-                    timer1.cancel();
+                    endingTimer.cancel();
                     executorService.close();
                     System.out.println("Finished");
                 }
