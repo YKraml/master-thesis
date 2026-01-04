@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 
-plot_predicted_1 <- function(data, model) {
+plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% confidence interval") {
 
   # Extract fixed effects and their covariance
   fixed_effects  <- fixef(model)
@@ -36,7 +36,7 @@ plot_predicted_1 <- function(data, model) {
     "t_post = ", round(fixed_effects["t_post"], digits = 3), "\n"
   )
 
-  plot_predicted(pred$x, pred$pred, pred$lower, pred$upper, text)
+  plot_predicted(pred$x, pred$pred, pred$lower, pred$upper, text, title)
 }
 
 # ------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ plot_predicted_2 <- function(data, model){
 
 # ------------------------------------------------------------------------------
 
-plot_predicted <- function(x, y, conf_low, conf_high, text = ""){
+plot_predicted <- function(x, y, conf_low, conf_high, text = "", title = "Fitted fixed effect with 95% confidence interval"){
 
   # Calculate y range
   ymin <- min(conf_low)
@@ -65,7 +65,7 @@ plot_predicted <- function(x, y, conf_low, conf_high, text = ""){
     xlab = "Time in years", ylab = "Predicted metric",
     ylim = c(ymin2, ymax2),
     col = "red",
-    main = "Fitted fixed effect with 95% confidence interval"
+    main = title
   )
 
   text(x = -2, y = ymax2, labels = text, adj = c(0, 1))

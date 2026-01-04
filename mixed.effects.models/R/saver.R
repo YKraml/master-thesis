@@ -3,9 +3,6 @@
 save_everything <- function(model, data, folder_name){
   dir.create(file.path(folder_name), showWarnings = FALSE, recursive = TRUE)
 
-
-  print(paste("   * Drawing plots"))
-
   # get the effects for each project
   random_effects <- ranef(model)
   fixed_effects <- fixef(model)
