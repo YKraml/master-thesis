@@ -12,13 +12,8 @@ save_everything <- function(model, data, folder_name){
   capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
   capture.output(getVarCov(model), file = file.path(folder_name, "model_var_cov.txt"))
 
-  # comparing models
-  #capture.output(anova(model_simple, model), file = file.path(folder_name, "models_anova.txt"))
-  #capture.output(aictab(list(model_simple, model), modnames = c("model", "model_simple")), file = file.path(folder_name, "models_aictab.txt"))
-
-
   # print tests
-  capture.output(t.test(absolute_effects$t_pre, absolute_effects$t_post, paired = TRUE),file = file.path(folder_name, "ttest_tpre_vs_tpost.txt"))
+  capture.output(t.test(absolute_effects$t_post),file = file.path(folder_name, "ttest_tpost_vs_0.txt"))
   capture.output(t.test(absolute_effects$intervention),file = file.path(folder_name, "ttest_intervention_vs_0.txt"))
   capture.output(expression = t.test(absolute_effects$`(Intercept)`),file = file.path(folder_name, "ttest_intercept_vs_0.txt"))
 
@@ -74,7 +69,7 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
-      plot_random_effects_histogram(absolute_effects$t_pre, "lightgreen", "t_pre", fixed_effects["t_pre"])
+      plot_random_effects_histogram(absolute_effects$cleaned_time, "lightgreen", "cleaned_time", fixed_effects["cleaned_time"])
       plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects["t_post"])
       plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
     },
@@ -85,7 +80,7 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       plot_random_effects_histogram(random_effects$`(Intercept)`, "lightblue", "intercept", random_effects["(Intercept)"])
-      plot_random_effects_histogram(random_effects$t_pre, "lightgreen", "t_pre", random_effects["t_pre"])
+      plot_random_effects_histogram(random_effects$cleaned_time, "lightgreen", "cleaned_time", random_effects["cleaned_time"])
       plot_random_effects_histogram(random_effects$t_post, "darkseagreen1", "t_post", random_effects["t_post"])
       plot_random_effects_histogram(random_effects$intervention, "paleturquoise1", "intervention", random_effects[4])
     },
@@ -96,7 +91,7 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
-      qqnorm(random_effects[, "t_pre"], main = "t_pre"); qqline(random_effects[, "t_pre"])
+      qqnorm(random_effects[, "cleaned_time"], main = "cleaned_time"); qqline(random_effects[, "cleaned_time"])
       qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
       qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
     },
@@ -104,7 +99,7 @@ save_everything <- function(model, data, folder_name){
   )
 
   # print random effects vs residuals
-  effects <- c("(Intercept)", "t_pre", "t_post", "intervention")
+  effects <- c("(Intercept)", "cleaned_time", "t_post", "intervention")
   plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
   save_png(
     expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),

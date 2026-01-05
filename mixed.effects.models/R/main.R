@@ -117,30 +117,24 @@ data <- get_data_from_file(file_name)
 metric <- "findingsDensity"
 
 model <- lme(
-  fixed = as.formula(paste0(metric, " ~ t_pre + t_post + intervention")),
-  random = ~ 1 + t_pre + t_post + intervention | id,
+  fixed = as.formula(paste0(metric, " ~ cleaned_time + t_post + intervention")),
+  random = ~ 1 + cleaned_time + t_post + intervention | id,
   data = data,
   method = "ML",
   control = lmeControl(opt = "optim")
 )
 
-re <- ranef(model)
+summary(model)
 
-plot(
-  re[,"(Intercept)"],
-  re[,"intervention"],
-  xlab = "Random Intercept",
-  ylab = "Random Intervention Effect",
-  main = "Random Intercept vs Random Intervention Effect"
-)
-abline(lm(re[,"intervention"] ~ re[,"(Intercept)"]), col = "red")
-
-VarCorr(model)
-
-cor.test(
-  re[,"(Intercept)"],
-  re[,"intervention"]
-)
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/shared.R")
+source("R/saver.R")
+source("R/quantile_splitter.R")
+save_everything(model, data, "delete_me")
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------

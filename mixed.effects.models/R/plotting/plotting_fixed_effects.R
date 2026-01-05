@@ -13,11 +13,11 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
 
   # Build new dataframe
   pred$intervention = ifelse(pred$x < 0, 0, 1)
-  pred$t_pre  <- pred$x * (1 - pred$intervention)
+  pred$cleaned_time  <- pred$x
   pred$t_post <- pred$x * pred$intervention
 
   # Create the model matrix for fixed effects
-  X <- model.matrix(~ 1 + t_pre + t_post + intervention, data = pred)
+  X <- model.matrix(~ 1 + cleaned_time + t_post + intervention, data = pred)
 
   # Predicted values (fixed effects only)
   pred$pred <- X %*% fixed_effects
@@ -31,7 +31,7 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
 
   text <- paste0(
     "intersect = ", round(fixed_effects["(Intercept)"], digits = 3), "\n",
-    "t_pre = ", round(fixed_effects["t_pre"], digits = 3), "\n",
+    "cleaned_time = ", round(fixed_effects["cleaned_time"], digits = 3), "\n",
     "intervention = ", round(fixed_effects["intervention"], digits = 3), "\n",
     "t_post = ", round(fixed_effects["t_post"], digits = 3), "\n"
   )
