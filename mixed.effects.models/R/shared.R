@@ -21,6 +21,26 @@ get_data_from_file <- function (file_name) {
 
 # ------------------------------------------------------------------------------
 
+get_data_from_file_for_linear_regression <- function (file_name) {
+  # Load Data
+  dataNotClean <- read.csv(file_name)
+  data <- na.omit(dataNotClean)
+
+  data$slope <- data$t / 365
+  data$intervention_jump <- data$intervention
+
+  data <- data[data$intervention == 1, ]
+  data$t_pre <- NULL
+  data$t_post <- NULL
+  data$intervention <- NULL
+
+  return(data)
+}
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
 save_png <- function(expression, file, width = 15, height = 10) {
   png(file, width = width, height = height, units = "cm", res = 300, pointsize = 8)
   on.exit(dev.off())

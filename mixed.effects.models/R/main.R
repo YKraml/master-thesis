@@ -74,7 +74,10 @@ for (file_name in file_names) {
       control = lmeControl(opt = "optim")
     )
 
+    message(paste("   * Drawing plots"))
+    save_everything(model, data, folder_name)
 
+    # Anova test, to see if the complete models fits better then a simplified model
     model_null <- lme(
       fixed = as.formula(paste0(metric, " ~ base_slope")),
       random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
@@ -85,11 +88,7 @@ for (file_name in file_names) {
     capture.output(anova(model, model_null), file = file.path(folder_name, "anova.txt"))
 
 
-    message(paste("   * Drawing plots"))
-    save_everything(model, data, folder_name)
-
-
-
+    # Split data into quantiles and create a model for each quantile
     models <- list()
     quantile_data <- split_data_into_quantiles(data, 4, metric)
     for (data_subset in quantile_data) {
@@ -165,10 +164,6 @@ plot_predicted_1(data, model)
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 
-
-add_diff_column <- function(data, mettric){
-
-}
 
 
 # ------------------------------------------------------------------------------

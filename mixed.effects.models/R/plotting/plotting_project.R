@@ -88,12 +88,12 @@ plot_project_2 <- function(model, id, data) {
   x <- seq(0, 2, by = 0.01)
   predictedData <- data.frame(
     x = x,
-    y = randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$intervention_slope * x
+    y = randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$slope * x
   )
 
   # scatter plot data
   projectData <- data[data$id == id, ]
-  projectData <- projectData[c(metric, "intervention_slope")]
+  projectData <- projectData[c(metric, "slope")]
 
 
   # limits
@@ -124,7 +124,7 @@ plot_project_2 <- function(model, id, data) {
 
   # scatter
   points(
-    projectData$intervention_slope, projectData[[metric]],
+    projectData$slope, projectData[[metric]],
     col = "lightblue",
     pch = 4
   )

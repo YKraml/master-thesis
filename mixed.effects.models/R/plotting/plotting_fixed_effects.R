@@ -1,5 +1,15 @@
 # ------------------------------------------------------------------------------
 
+# Helper function to format p-values nicely
+fmt_p <- function(p) {
+  if (p < 0.001) return("< 0.001")
+  return(paste0("= ", format(round(p, 3), nsmall = 3)))
+}
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
 plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% confidence interval") {
 
   # Extract fixed effects and their covariance
@@ -8,11 +18,7 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   t_table <- summary(model)$tTable
   p_values <- t_table[, "p-value"]
 
-  # Helper function to format p-values nicely
-  fmt_p <- function(p) {
-    if (p < 0.001) return("< 0.001")
-    return(paste0("= ", format(round(p, 3), nsmall = 3)))
-  }
+
 
   # Create new time sequence
   pred <- data.frame(
@@ -57,8 +63,20 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
 # ------------------------------------------------------------------------------
 
 plot_predicted_2 <- function(data, model){
-  pred <- ggpredict(model, terms = "t_post [0:2 by=0.01]")
-  plot_predicted(pred$x, pred$predicted, pred$conf.low, pred$conf.high)
+  fixed_effects  <- fixef(model)
+  t_table <- summary(model)$tTable
+  p_values <- t_table[, "p-value"]
+
+  # text in the corner
+  text <- paste0(
+    "intercept = ", round(fixed_effects["(Intercept)"], 3),
+    " (p ", fmt_p(p_values["(Intercept)"]), ")\n",
+    "base_slope = ", round(fixed_effects["slope"], 3),
+    " (p ", fmt_p(p_values["slope"])
+    )
+
+  pred <- ggpredict(model, terms = "slope [0:2 by=0.01]")
+  plot_predicted(pred$x, pred$predicted, pred$conf.low, pred$conf.high, text)
 }
 
 # ------------------------------------------------------------------------------
@@ -81,7 +99,7 @@ plot_predicted <- function(x, y, conf_low, conf_high, text = "", title = "Fitted
     main = title
   )
 
-  text(x = -2, y = ymax2, labels = text, adj = c(0, 1))
+  text(x = x[2], y = ymax2, labels = text, adj = c(0, 1))
 
   # conf int
   lines(x, conf_low, col = "lightblue", lty = 1)

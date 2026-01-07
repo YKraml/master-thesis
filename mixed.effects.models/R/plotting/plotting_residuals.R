@@ -58,7 +58,7 @@ plot_residuals_vs_time_2 <- function(data, model) {
   residuals <- residuals(model)
 
   plot(
-    data$t_post,
+    data$slope,
     residuals,
     xlab = "Time in years",
     ylab = "Residuals",
