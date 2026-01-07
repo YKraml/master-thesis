@@ -5,9 +5,14 @@ get_data_from_file <- function (file_name) {
   dataNotClean <- read.csv(file_name)
   data <- na.omit(dataNotClean)
 
-  data$cleaned_time <- data$t / 365
-  data$t_pre <- data$t_pre / 365
-  data$t_post <- data$t_post / 365
+  data$t_norm <- data$t / 365
+  data$base_slope <- data$t / 365
+  data$intervention_slope <- data$t_post / 365
+  data$intervention_jump <- data$intervention
+
+  data$t_pre <- NULL
+  data$t_post <- NULL
+  data$intervention <- NULL
 
   return(data)
 }

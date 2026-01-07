@@ -20,6 +20,7 @@ library(tibble)
 library(patchwork)
 library(RColorBrewer)
 library(ggeffects)
+library(multcomp)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -66,30 +67,39 @@ for (file_name in file_names) {
     # Create model
     message(paste("   * Creating model"))
     model <- lme(
-      fixed = as.formula(paste0(metric ," ~ 1 + t_pre + t_post + intervention")),
-      random = ~ 1 + t_pre + t_post + intervention| id,
-      # correlation = corAR1(form = ~ t | id),
+      fixed = as.formula(paste0(metric, " ~ base_slope + intervention_slope + intervention_jump")),
+      random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
       data = data,
-      method="ML",
+      method = "ML",
       control = lmeControl(opt = "optim")
     )
+
+
+    model_null <- lme(
+      fixed = as.formula(paste0(metric, " ~ base_slope")),
+      random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+      data = data,
+      method = "ML",
+      control = lmeControl(opt = "optim")
+    )
+    capture.output(anova(model, model_null), file = file.path(folder_name, "anova.txt"))
+
 
     message(paste("   * Drawing plots"))
     save_everything(model, data, folder_name)
 
 
+
     models <- list()
-    quantile_data <- split_data_into_quantiles(data, 4, "metric")
+    quantile_data <- split_data_into_quantiles(data, 4, metric)
     for (data_subset in quantile_data) {
-      model <- lme(
-        fixed = as.formula(paste0(metric, " ~ t_pre + t_post + intervention")),
-        random = ~ 1 + t_pre + t_post + intervention | id,
+      models[[length(models) + 1]] <- lme(
+        fixed = as.formula(paste0(metric, " ~ base_slope + intervention_slope + intervention_jump")),
+        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
         data = data_subset,
         method = "ML",
         control = lmeControl(opt = "optim")
       )
-
-      models[[length(models) + 1]] <- model
     }
 
     save_multipanel_png(
@@ -111,21 +121,6 @@ for (file_name in file_names) {
 
 # ------------------------------------------------------------------------------
 
-
-file_name <-"data/bucket_one/ALL.csv"
-data <- get_data_from_file(file_name)
-metric <- "findingsDensity"
-
-model <- lme(
-  fixed = as.formula(paste0(metric, " ~ cleaned_time + t_post + intervention")),
-  random = ~ 1 + cleaned_time + t_post + intervention | id,
-  data = data,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
-
-summary(model)
-
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
 source("R/plotting/plotting_random_effects.R")
@@ -134,7 +129,47 @@ source("R/plotting/plotting_general.R")
 source("R/shared.R")
 source("R/saver.R")
 source("R/quantile_splitter.R")
-save_everything(model, data, "delete_me")
+
+file_name <-"data/bucket_one/ALL.csv"
+data <- get_data_from_file(file_name)
+metric <- "findings"
+
+
+
+
+# calc diff column for findings
+data[[metric]] <- as.numeric(data[[metric]])
+data <- data[order(data$id, data$time), ]
+data$diff <- NA_real_
+for (p in unique(data$id)) {
+  idx <- which(data$id == p)
+  data$diff[idx] <- c(0, diff(data[[metric]][idx]))
+}
+
+data$diff <- data$diff / data$linesOfCode * 1000
+
+metric <- "diff"
+model <- lme(
+  fixed = as.formula(paste0(metric, " ~ base_slope + intervention_slope + intervention_jump")),
+  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+  data = data,
+  method = "ML",
+  control = lmeControl(opt = "optim")
+)
+
+plot_predicted_1(data, model)
+
+
+# save_everything(model, data, "delete_me")
+
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+
+
+add_diff_column <- function(data, mettric){
+
+}
+
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------

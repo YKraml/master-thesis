@@ -12,19 +12,19 @@ plot_project_1 <- function(model, id, data) {
     x = x,
     y = ifelse(
       x < 0,
-      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$t_pre * x,
-      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$intervention + randomEffectsFromProject$t_post * x
+      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$base_slope * x,
+      randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$base_slope * x + randomEffectsFromProject$intervention_jump + randomEffectsFromProject$intervention_slope * x
     )
   )
 
   # scatter plot data
   projectData <- data[data$id == id, ]
-  projectData <- projectData[c(metric, "t_pre", "t_post")]
+  projectData <- projectData[c(metric, "base_slope", "intervention_slope")]
   projectData <- data.frame(
     time = ifelse(
-      projectData$t_pre != 0,
-      projectData$t_pre,
-      projectData$t_post
+      projectData$base_slope != 0,
+      projectData$base_slope,
+      projectData$intervention_slope
     ),
     metric = projectData[[metric]]
   )
@@ -38,7 +38,7 @@ plot_project_1 <- function(model, id, data) {
 
   # get introduction date
   l <- data[data$id == id, ]
-  seconds_timestamp <- l[l$intervention == 1, ][1, ]$time
+  seconds_timestamp <- l[l$intervention_jump == 1, ][1, ]$time
   date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
   date <- format(date_time_object, format = "%d.%m.%Y")
 
@@ -62,7 +62,7 @@ plot_project_1 <- function(model, id, data) {
     pch = 4
   )
 
-  # intervention line
+  # intervention_jump line
   abline(v = 0, lty = 2, col = "darkgrey")
 
 
@@ -88,12 +88,12 @@ plot_project_2 <- function(model, id, data) {
   x <- seq(0, 2, by = 0.01)
   predictedData <- data.frame(
     x = x,
-    y = randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$t_post * x
+    y = randomEffectsFromProject$`(Intercept)` + randomEffectsFromProject$intervention_slope * x
   )
 
   # scatter plot data
   projectData <- data[data$id == id, ]
-  projectData <- projectData[c(metric, "t_post")]
+  projectData <- projectData[c(metric, "intervention_slope")]
 
 
   # limits
@@ -105,7 +105,7 @@ plot_project_2 <- function(model, id, data) {
 
   # get introduction date
   l <- data[data$id == id, ]
-  seconds_timestamp <- l[l$intervention == 1, ][1, ]$time
+  seconds_timestamp <- l[l$intervention_jump == 1, ][1, ]$time
   date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
   date <- format(date_time_object, format = "%d.%m.%Y")
 
@@ -124,12 +124,12 @@ plot_project_2 <- function(model, id, data) {
 
   # scatter
   points(
-    projectData$t_post, projectData[[metric]],
+    projectData$intervention_slope, projectData[[metric]],
     col = "lightblue",
     pch = 4
   )
 
-  # intervention line
+  # intervention_jump line
   abline(v = 0, lty = 2, col = "darkgrey")
 
 

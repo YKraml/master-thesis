@@ -10,12 +10,6 @@ save_everything <- function(model, data, folder_name){
 
   # print model results
   capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
-  capture.output(getVarCov(model), file = file.path(folder_name, "model_var_cov.txt"))
-
-  # print tests
-  capture.output(t.test(absolute_effects$t_post),file = file.path(folder_name, "ttest_tpost_vs_0.txt"))
-  capture.output(t.test(absolute_effects$intervention),file = file.path(folder_name, "ttest_intervention_vs_0.txt"))
-  capture.output(expression = t.test(absolute_effects$`(Intercept)`),file = file.path(folder_name, "ttest_intercept_vs_0.txt"))
 
   # print metric histogram
   save_png(
@@ -61,7 +55,7 @@ save_everything <- function(model, data, folder_name){
 
   # print random effects correlation
   save_png(
-    expression = plot_random_effects_correlation(model),
+    expression = plot_random_effects_correlation(model, metric),
     file = file.path(folder_name, "random_effects_correlation.png")
   )
 
@@ -69,9 +63,9 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
-      plot_random_effects_histogram(absolute_effects$cleaned_time, "lightgreen", "cleaned_time", fixed_effects["cleaned_time"])
-      plot_random_effects_histogram(absolute_effects$t_post, "darkseagreen1", "t_post", fixed_effects["t_post"])
-      plot_random_effects_histogram(absolute_effects$intervention, "paleturquoise1", "intervention", fixed_effects[4])
+      plot_random_effects_histogram(absolute_effects$base_slope, "lightgreen", "base_slope", fixed_effects["base_slope"])
+      plot_random_effects_histogram(absolute_effects$intervention_slope, "darkseagreen1", "intervention_slope", fixed_effects["intervention_slope"])
+      plot_random_effects_histogram(absolute_effects$intervention_jump, "paleturquoise1", "intervention_jump", fixed_effects[4])
     },
     file = file.path(folder_name, "absolute_effects_hist.png"),
   )
@@ -80,9 +74,9 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       plot_random_effects_histogram(random_effects$`(Intercept)`, "lightblue", "intercept", random_effects["(Intercept)"])
-      plot_random_effects_histogram(random_effects$cleaned_time, "lightgreen", "cleaned_time", random_effects["cleaned_time"])
-      plot_random_effects_histogram(random_effects$t_post, "darkseagreen1", "t_post", random_effects["t_post"])
-      plot_random_effects_histogram(random_effects$intervention, "paleturquoise1", "intervention", random_effects[4])
+      plot_random_effects_histogram(random_effects$base_slope, "lightgreen", "base_slope", random_effects["base_slope"])
+      plot_random_effects_histogram(random_effects$intervention_slope, "darkseagreen1", "intervention_slope", random_effects["intervention_slope"])
+      plot_random_effects_histogram(random_effects$intervention_jump, "paleturquoise1", "intervention_jump", random_effects[4])
     },
     file = file.path(folder_name, "random_effects_hist.png"),
   )
@@ -91,15 +85,15 @@ save_everything <- function(model, data, folder_name){
   save_multipanel_png(
     expression = {
       qqnorm(random_effects[, "(Intercept)"], main = "intercept"); qqline(random_effects[, "(Intercept)"])
-      qqnorm(random_effects[, "cleaned_time"], main = "cleaned_time"); qqline(random_effects[, "cleaned_time"])
-      qqnorm(random_effects[, "t_post"], main = "t_post"); qqline(random_effects[, "t_post"])
-      qqnorm(random_effects[, "intervention"], main = "intervention"); qqline(random_effects[, "intervention"])
+      qqnorm(random_effects[, "base_slope"], main = "base_slope"); qqline(random_effects[, "base_slope"])
+      qqnorm(random_effects[, "intervention_slope"], main = "intervention_slope"); qqline(random_effects[, "intervention_slope"])
+      qqnorm(random_effects[, "intervention_jump"], main = "intervention_jump"); qqline(random_effects[, "intervention_jump"])
     },
     file = file.path(folder_name, "random_effects_qq.png"),
   )
 
   # print random effects vs residuals
-  effects <- c("(Intercept)", "cleaned_time", "t_post", "intervention")
+  effects <- c("(Intercept)", "base_slope", "intervention_slope", "intervention_jump")
   plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
   save_png(
     expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),

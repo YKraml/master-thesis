@@ -70,13 +70,13 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
 
 # ------------------------------------------------------------------------------
 
-plot_random_effects_correlation <- function(model) {
+plot_random_effects_correlation <- function(model, metric) {
 
   # Panel for scatter and regression line
   panel.cor <- function(x, y, ...) {
 
     # scatter plot
-    points(x, y, pch = 3, col = "lightblue")
+    points(x, y, pch = 4, col = "lightblue")
 
     # linear model
     fit <- lm(y ~ x)
@@ -96,8 +96,8 @@ plot_random_effects_correlation <- function(model) {
     # legend text
     legend_text <- c(
       # paste0("n = ", n),
-      paste0("r = ", round(r, 3)),
-      paste0("p = ", signif(p, 3))
+      paste0("r = ", round(r, 3))
+      # paste0("p = ", signif(p, 3))
       # paste0("95% CI [", round(ci[1], 3), ", ", round(ci[2], 3), "]")
       # paste0("slope = ", round(coef[2], 3))
       # paste0("intercept = ", round(coef[1], 3))
@@ -113,33 +113,25 @@ plot_random_effects_correlation <- function(model) {
     )
   }
 
-  # Panel for histograms
-  panel.hist <- function(x, ...) {
-    usr <- par("usr")
-    on.exit(par(usr = usr))
-
-    par(usr = c(usr[1:2], 0, 1.5))
-
-    h <- hist(x, plot = FALSE)
-    y <- h$counts / max(h$counts)
-
-    rect(
-      h$breaks[-length(h$breaks)], 0,
-      h$breaks[-1], y,
-      col = "lightblue", border = "black"
-    )
-  }
-
   random_effects <- ranef(model)
-  fixed_effects <- fixef(model)
-  absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
+
+  # Calc limits
+  lims <- apply(random_effects, 2, function(z) {
+    mu <- mean(z, na.rm = TRUE)
+    s  <- sd(z, na.rm = TRUE)
+    c(mu - 3*s, mu + 3*s)
+  })
+  xlim <- range(lims, na.rm = TRUE)
 
   pairs(
-    absolute_effects,
-    upper.panel = NULL,
+    random_effects,
     lower.panel = panel.cor,
-    diag.panel  = panel.hist
+    upper.panel = NULL,
+    xlim = xlim,
+    ylim = xlim,
+    main = paste0("Correlation Matrix for: ", metric)
   )
+
 }
 
 

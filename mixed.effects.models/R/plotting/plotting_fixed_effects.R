@@ -5,6 +5,14 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   # Extract fixed effects and their covariance
   fixed_effects  <- fixef(model)
   covariance    <- vcov(model)
+  t_table <- summary(model)$tTable
+  p_values <- t_table[, "p-value"]
+
+  # Helper function to format p-values nicely
+  fmt_p <- function(p) {
+    if (p < 0.001) return("< 0.001")
+    return(paste0("= ", format(round(p, 3), nsmall = 3)))
+  }
 
   # Create new time sequence
   pred <- data.frame(
@@ -12,12 +20,12 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   )
 
   # Build new dataframe
-  pred$intervention = ifelse(pred$x < 0, 0, 1)
-  pred$cleaned_time  <- pred$x
-  pred$t_post <- pred$x * pred$intervention
+  pred$intervention_jump = ifelse(pred$x < 0, 0, 1)
+  pred$base_slope  <- pred$x
+  pred$intervention_slope <- pred$x * pred$intervention_jump
 
   # Create the model matrix for fixed effects
-  X <- model.matrix(~ 1 + cleaned_time + t_post + intervention, data = pred)
+  X <- model.matrix(~ 1 + base_slope + intervention_slope + intervention_jump, data = pred)
 
   # Predicted values (fixed effects only)
   pred$pred <- X %*% fixed_effects
@@ -29,11 +37,16 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   pred$lower <- pred$pred - 1.96 * pred$se
   pred$upper <- pred$pred + 1.96 * pred$se
 
+  # text in the corner
   text <- paste0(
-    "intersect = ", round(fixed_effects["(Intercept)"], digits = 3), "\n",
-    "cleaned_time = ", round(fixed_effects["cleaned_time"], digits = 3), "\n",
-    "intervention = ", round(fixed_effects["intervention"], digits = 3), "\n",
-    "t_post = ", round(fixed_effects["t_post"], digits = 3), "\n"
+    "intercept = ", round(fixed_effects["(Intercept)"], 3),
+    " (p ", fmt_p(p_values["(Intercept)"]), ")\n",
+    "base_slope = ", round(fixed_effects["base_slope"], 3),
+    " (p ", fmt_p(p_values["base_slope"]), ")\n",
+    "intervention_jump = ", round(fixed_effects["intervention_jump"], 3),
+    " (p ", fmt_p(p_values["intervention_jump"]), ")\n",
+    "intervention_slope = ", round(fixed_effects["intervention_slope"], 3),
+    " (p ", fmt_p(p_values["intervention_slope"]), ")\n"
   )
 
   plot_predicted(pred$x, pred$pred, pred$lower, pred$upper, text, title)

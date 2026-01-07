@@ -38,7 +38,7 @@ plot_residuals_vs_time_1 <- function(data, model) {
   fitted_vals <- fitted(model)
 
   plot(
-    data$cleaned_time,
+    data$t_norm,
     residuals,
     xlab = "Time in years",
     ylab = "Residuals",
@@ -56,7 +56,6 @@ plot_residuals_vs_time_1 <- function(data, model) {
 
 plot_residuals_vs_time_2 <- function(data, model) {
   residuals <- residuals(model)
-  fitted_vals <- fitted(model)
 
   plot(
     data$t_post,
