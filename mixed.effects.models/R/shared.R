@@ -1,7 +1,6 @@
 # ------------------------------------------------------------------------------
 
 get_data_from_file <- function (file_name) {
-  # Load Data
   dataNotClean <- read.csv(file_name)
   data <- na.omit(dataNotClean)
 
@@ -15,30 +14,13 @@ get_data_from_file <- function (file_name) {
   data$t_post <- NULL
   data$intervention <- NULL
 
-  return(data)
-}
-
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-
-get_data_from_file_for_linear_regression <- function (file_name) {
-  # Load Data
-  dataNotClean <- read.csv(file_name)
-  data <- na.omit(dataNotClean)
-
-  data$slope <- data$t / 365
-  data$intervention_jump <- data$intervention
-
-  data <- data[data$intervention == 1, ]
-  data$t_pre <- NULL
-  data$t_post <- NULL
-  data$intervention <- NULL
+  data <- data[data$relative_introduction_time >= 0, ]
 
   return(data)
 }
 
 # ------------------------------------------------------------------------------
+
 
 # ------------------------------------------------------------------------------
 

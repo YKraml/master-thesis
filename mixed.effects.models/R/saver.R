@@ -6,7 +6,6 @@ save_everything <- function(model, data, folder_name){
   # get the effects for each project
   random_effects <- ranef(model)
   fixed_effects <- fixef(model)
-  absolute_effects <- sweep(random_effects, MARGIN = 2, STATS = fixed_effects, FUN = "+")
 
   # print model results
   capture.output(summary(model), file = file.path(folder_name, "model_summary.txt"))
@@ -18,9 +17,21 @@ save_everything <- function(model, data, folder_name){
   )
 
   # print fixed effects
-  save_png(
-    expression = plot_predicted_1(data, model),
-    file = file.path(folder_name, "predicted.png")
+  save_multipanel_png(
+    expression = {
+      plot_predicted(data, model, 0.1)
+      plot_predicted(data, model, 0.5)
+      plot_predicted(data, model, 1)
+      plot_predicted(data, model, 2)
+      plot_predicted(data, model, 4)
+      plot_predicted(data, model, 6)
+      plot_predicted(data, model, 8)
+      plot_predicted(data, model, 10)
+    },
+    file = file.path(folder_name, "predicted.png"),
+    height = 15,
+    width = 40,
+    mfrow = c(2,4)
   )
 
   # print qq of residuals
@@ -59,17 +70,6 @@ save_everything <- function(model, data, folder_name){
     file = file.path(folder_name, "random_effects_correlation.png")
   )
 
-  # print absolute effects histograms
-  save_multipanel_png(
-    expression = {
-      plot_random_effects_histogram(absolute_effects$`(Intercept)`, "lightblue", "intercept", fixed_effects["(Intercept)"])
-      plot_random_effects_histogram(absolute_effects$base_slope, "lightgreen", "base_slope", fixed_effects["base_slope"])
-      plot_random_effects_histogram(absolute_effects$intervention_slope, "darkseagreen1", "intervention_slope", fixed_effects["intervention_slope"])
-      plot_random_effects_histogram(absolute_effects$intervention_jump, "paleturquoise1", "intervention_jump", fixed_effects[4])
-    },
-    file = file.path(folder_name, "absolute_effects_hist.png"),
-  )
-
   # print random effects histograms
   save_multipanel_png(
     expression = {
@@ -103,14 +103,20 @@ save_everything <- function(model, data, folder_name){
   )
 
   # print prediction for project
+  i <- 0
   project_folder_name <- paste(folder_name,"projects", sep = "/")
   dir.create(file.path(project_folder_name), showWarnings = FALSE, recursive = TRUE)
-  # for (id in unique(data[["id"]])) {
-  #   save_png(
-  #     expression = plot_project_1(model, id, data),
-  #     file = file.path(project_folder_name, paste0(id, ".png"))
-  #   )
-  # }
+  for (id in unique(data[["id"]])) {
+    save_png(
+      expression = plot_project(model, id, data),
+      file = file.path(project_folder_name, paste0(id, ".png"))
+    )
+
+    i <- i + 1
+    if(i >= 20){
+      break
+    }
+  }
 }
 
 # ------------------------------------------------------------------------------
