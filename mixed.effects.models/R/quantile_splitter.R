@@ -26,3 +26,47 @@ split_data_into_quantiles <- function(data, no_quartiles, metric){
 }
 
 # ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
+split_data_by_relative_introduction <- function(data) {
+
+
+  df1 <- data[
+    data$relative_introduction_time < 1,
+    ]
+
+  df2 <- data[
+    data$relative_introduction_time >= 1 & data$relative_introduction_time < 2,
+    ]
+
+  df3 <- data[
+    data$relative_introduction_time >= 2 & data$relative_introduction_time < 4,
+    ]
+
+  df4 <- data[
+    data$relative_introduction_time >= 4 & data$relative_introduction_time < 6,
+  ]
+
+  df5 <- data[
+    data$relative_introduction_time >= 6 & data$relative_introduction_time < 8,
+  ]
+
+  df6 <- data[
+    data$relative_introduction_time >= 8,
+  ]
+
+  # Combine into a list for easy access
+  splitted_data <- list(
+    less_then_one_year= df1,
+    between_one_and_two_years= df2,
+    between_two_and_four_years= df3,
+    between_four_and_six_years= df4,
+    between_six_and_eight_years= df5,
+    more_then_eight_years= df6
+  )
+
+  return(splitted_data)
+}
+
+# ------------------------------------------------------------------------------

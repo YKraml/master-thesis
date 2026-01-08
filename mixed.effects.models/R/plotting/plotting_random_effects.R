@@ -72,50 +72,47 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
 
 plot_random_effects_correlation <- function(model, metric) {
 
-  # Panel for scatter and regression line
-  panel.cor <- function(x, y, ...) {
-
-    # scatter plot
+  # 1. Lower Panel: Scatter plot and Regression line ONLY
+  panel.scatter <- function(x, y, ...) {
     points(x, y, pch = 4, col = "lightblue")
 
-    # linear model
     fit <- lm(y ~ x)
     abline(fit, col = "red", lwd = 2)
+  }
 
-    # correlation test
-    ct <- cor.test(x, y)
+  # 2. Upper Panel: Text Statistics ONLY
+  panel.txt <- function(x, y, ...) {
 
-    # extract statistics
-    r      <- unname(ct$estimate)
-    p      <- ct$p.value
-    ci     <- ct$conf.int
-    coef   <- coef(fit)
-    r2     <- summary(fit)$r.squared
-    n      <- sum(complete.cases(x, y))
+    # Calculate Statistics --
+    ct      <- cor.test(x, y)
+    fit     <- lm(y ~ x)
+    sum_fit <- summary(fit)
 
-    # legend text
+    r       <- unname(ct$estimate)
+    p_cor   <- ct$p.value
+
+    slope   <- coef(fit)[2]
+    p_slope <- sum_fit$coefficients[2, 4]
+
     legend_text <- c(
-      # paste0("n = ", n),
-      paste0("r = ", round(r, 3))
-      # paste0("p = ", signif(p, 3))
-      # paste0("95% CI [", round(ci[1], 3), ", ", round(ci[2], 3), "]")
-      # paste0("slope = ", round(coef[2], 3))
-      # paste0("intercept = ", round(coef[1], 3))
-      # paste0("R² = ", round(r2, 3))
+      paste0("r = ", round(r, 3)),
+      paste0("Slope = ", round(slope, 2)),
+      paste0("p ", fmt_p(p_cor))
     )
 
-    # legend
-    legend(
-      "topleft",
-      legend = legend_text,
-      cex = 0.75,
-      text.col = "black"
-    )
+    full_text <- paste(legend_text, collapse = "\n")
+
+    # Draw Text
+    usr <- par("usr")
+    on.exit(par(usr = usr))
+    par(usr = c(0, 1, 0, 1))
+    text(0.5, 0.5, full_text, cex = 1.2, col = "black")
   }
 
   random_effects <- ranef(model)
 
-  # Calc limits
+
+  # 4. Calculate Limits for the scatter plots
   lims <- apply(random_effects, 2, function(z) {
     mu <- mean(z, na.rm = TRUE)
     s  <- sd(z, na.rm = TRUE)
@@ -123,15 +120,15 @@ plot_random_effects_correlation <- function(model, metric) {
   })
   xlim <- range(lims, na.rm = TRUE)
 
+  # 5. Generate the Pairs Plot
   pairs(
     random_effects,
-    lower.panel = panel.cor,
-    upper.panel = NULL,
+    lower.panel = panel.scatter, # Scatter plots here
+    upper.panel = panel.txt,     # Text stats here
     xlim = xlim,
     ylim = xlim,
     main = paste0("Correlation Matrix for: ", metric)
   )
-
 }
 
 

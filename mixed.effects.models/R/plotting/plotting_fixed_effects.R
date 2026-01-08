@@ -1,12 +1,4 @@
-# ------------------------------------------------------------------------------
 
-# Helper function to format p-values nicely
-fmt_p <- function(p) {
-  if (p < 0.001) return("< 0.001")
-  return(paste0("= ", format(round(p, 3), nsmall = 3)))
-}
-
-# ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
 
@@ -29,9 +21,10 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   pred$intervention_jump = ifelse(pred$x < 0, 0, 1)
   pred$base_slope  <- pred$x
   pred$intervention_slope <- pred$x * pred$intervention_jump
+  pred$relative_introduction_time <- fixed_effects["relative_introduction_time"]
 
   # Create the model matrix for fixed effects
-  X <- model.matrix(~ 1 + base_slope + intervention_slope + intervention_jump, data = pred)
+  X <- model.matrix(~ 1 + relative_introduction_time * (base_slope + intervention_jump + intervention_slope), data = pred)
 
   # Predicted values (fixed effects only)
   pred$pred <- X %*% fixed_effects
@@ -56,27 +49,6 @@ plot_predicted_1 <- function(data, model, title = "Fitted fixed effect with 95% 
   )
 
   plot_predicted(pred$x, pred$pred, pred$lower, pred$upper, text, title)
-}
-
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-
-plot_predicted_2 <- function(data, model){
-  fixed_effects  <- fixef(model)
-  t_table <- summary(model)$tTable
-  p_values <- t_table[, "p-value"]
-
-  # text in the corner
-  text <- paste0(
-    "intercept = ", round(fixed_effects["(Intercept)"], 3),
-    " (p ", fmt_p(p_values["(Intercept)"]), ")\n",
-    "base_slope = ", round(fixed_effects["slope"], 3),
-    " (p ", fmt_p(p_values["slope"])
-    )
-
-  pred <- ggpredict(model, terms = "slope [0:2 by=0.01]")
-  plot_predicted(pred$x, pred$predicted, pred$conf.low, pred$conf.high, text)
 }
 
 # ------------------------------------------------------------------------------

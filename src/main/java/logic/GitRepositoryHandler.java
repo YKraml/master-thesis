@@ -108,10 +108,18 @@ public class GitRepositoryHandler {
             RevCommit currentCommit = commitList.getFirst();
             int currentCommitTime = currentCommit.getCommitTime();
             RevCommit firstCommit = commitList.getLast();
+            String firstCommitName = firstCommit.getName();
+            int firstCommitCommitTime = firstCommit.getCommitTime();
+
+            if (firstCommitCommitTime < 0) {
+                throw new RuntimeException("First commit time is negative");
+            }
+
             String currentBranch = git.getRepository().getBranch();
 
             //Limit again here after download. The getSize() is not very accurate.
             long size = FileUtils.sizeOfDirectory(folder);
+
             if (size > SIZE_2) {
                 filteredManager.filterCompleteProject(repoOwner, repoName, "Local Repo is too large", String.valueOf(size));
                 return new Proof(
@@ -122,8 +130,8 @@ public class GitRepositoryHandler {
                         currentBranch,
                         currentCommit.getName(),
                         currentCommitTime,
-                        firstCommit.getName(),
-                        firstCommit.getCommitTime(),
+                        firstCommitName,
+                        firstCommitCommitTime,
                         -1,
                         -1,
                         numberOfStars,
@@ -158,8 +166,8 @@ public class GitRepositoryHandler {
                     currentBranch,
                     currentCommit.getName(),
                     currentCommitTime,
-                    firstCommit.getName(),
-                    firstCommit.getCommitTime(),
+                    firstCommitName,
+                    firstCommitCommitTime,
                     startAndEndTime.getLeft(),
                     startAndEndTime.getRight(),
                     numberOfStars,

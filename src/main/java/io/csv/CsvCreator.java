@@ -11,9 +11,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 
-import static util.Constants.SECONDS_IN_ONE_MONTH;
-import static util.Constants.SECONDS_IN_TWO_YEARS;
-
 public class CsvCreator {
 
     private static final List<Integer> DAYS = getDays();
@@ -32,38 +29,23 @@ public class CsvCreator {
             for (Proof.LinterWithProof linterWithProof : proof.linters()) {
                 Linter linter = Linter.valueOf(linterWithProof.linterName());
                 int introductionTime = linterWithProof.introductionTime();
-                linterTimeDataList.add(new LinterTimeData(linter, introductionTime, combinedData));
+                linterTimeDataList.add(new LinterTimeData(linter, introductionTime, combinedData, proof));
             }
         }
 
         Map<Linter, List<LinterTimeData>> bucketOne = new HashMap<>();
-        Map<Linter, List<LinterTimeData>> bucketTwo = new HashMap<>();
-        Map<Linter, List<LinterTimeData>> bucketThree = new HashMap<>();
 
         for (Linter linter : Linter.values()) {
             bucketOne.put(linter, new ArrayList<>());
-            bucketTwo.put(linter, new ArrayList<>());
-            bucketThree.put(linter, new ArrayList<>());
         }
 
         for (LinterTimeData linterTimeData : linterTimeDataList) {
-            int firstTime = linterTimeData.result().entries().getFirst().time();
-            int introductionTime = linterTimeData.time();
             Linter linter = linterTimeData.linter();
-
-            if (introductionTime - firstTime > SECONDS_IN_TWO_YEARS) {
-                bucketOne.get(linter).add(linterTimeData);
-            } else if (introductionTime - firstTime > SECONDS_IN_ONE_MONTH) {
-                bucketTwo.get(linter).add(linterTimeData);
-            } else {
-                bucketThree.get(linter).add(linterTimeData);
-            }
+            bucketOne.get(linter).add(linterTimeData);
         }
 
         //save bucket
         saveBucket(bucketOne, "bucket_one");
-        saveBucket(bucketTwo, "bucket_two");
-        saveBucket(bucketThree, "bucket_three");
     }
 
     private void saveBucket(Map<Linter, List<LinterTimeData>> bucket, String bucketName) throws IOException {
@@ -91,10 +73,15 @@ public class CsvCreator {
         //Write into csv file
         System.out.println("Writing file: " + bucketName + "/" + dataFile.getName());
         try (PrintWriter pw = new PrintWriter(dataFile)) {
-            pw.println("id," + CombinedData.Entry.csvHeader() + ",intervention,t,t_pre,t_post");
+            pw.println("id," + CombinedData.Entry.csvHeader() + ",intervention,t,t_pre,t_post,relative_introduction_time");
 
             for (LinterTimeData date : linterTimeData) {
                 int introductionTime = date.time();
+                double introduction_time_relative_to_first_commit_time = (introductionTime - date.proof.firstCommitTime());
+                if (introduction_time_relative_to_first_commit_time < 0) {
+                    System.out.println();
+                }
+
                 CombinedData combinedData = date.result();
 
                 NavigableMap<Integer, CombinedData.Entry> entryByTime = new TreeMap<>();
@@ -103,6 +90,7 @@ public class CsvCreator {
                 }
 
                 for (int point : DAYS) {
+
                     int pointInSeconds = point * 24 * 60 * 60;
                     int time = introductionTime + pointInSeconds;
                     Map.Entry<Integer, CombinedData.Entry> floorEntry = entryByTime.floorEntry(time);
@@ -117,7 +105,7 @@ public class CsvCreator {
                     int t_pre = t * (1 - intervention);
                     int t_post = t * intervention;
 
-                    pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t + "," + t_pre + "," + t_post);
+                    pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t + "," + t_pre + "," + t_post + "," + introduction_time_relative_to_first_commit_time);
                 }
             }
         }
@@ -137,7 +125,7 @@ public class CsvCreator {
         return points;
     }
 
-    private record LinterTimeData(Linter linter, int time, CombinedData result) {
+    private record LinterTimeData(Linter linter, int time, CombinedData result, Proof proof) {
     }
 
 }
