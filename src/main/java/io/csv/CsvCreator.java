@@ -65,7 +65,7 @@ public class CsvCreator {
         }
 
         //create file
-        String folderName = "mixed.effects.models" + File.separator + "data" + File.separator + bucketName;
+        String folderName = "mixed.effects.models" + File.separator + "data";
         new File(folderName).mkdirs();
         File dataFile = new File(folderName + File.separator + linterName + ".csv");
         dataFile.createNewFile();
@@ -127,5 +127,4 @@ public class CsvCreator {
 
     private record LinterTimeData(Linter linter, int time, CombinedData result, Proof proof) {
     }
-
 }

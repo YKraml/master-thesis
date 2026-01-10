@@ -54,26 +54,6 @@ plot_residuals_vs_time_1 <- function(data, model) {
 
 # ------------------------------------------------------------------------------
 
-plot_residuals_vs_time_2 <- function(data, model) {
-  residuals <- residuals(model)
-
-  plot(
-    data$slope,
-    residuals,
-    xlab = "Time in years",
-    ylab = "Residuals",
-    main = "Residuals vs time",
-    col = "lightblue",
-    pch = 4
-  )
-
-  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
-}
-
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-
 plot_residuals_vs_fitted <- function(data, model) {
   residuals <- residuals(model)
   fitted_vals <- fitted(model)
@@ -87,6 +67,7 @@ plot_residuals_vs_fitted <- function(data, model) {
     col = "lightblue",
     pch = 4
   )
+
   abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
 
