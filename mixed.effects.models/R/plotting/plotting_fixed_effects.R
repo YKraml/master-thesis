@@ -2,7 +2,7 @@
 
 # ------------------------------------------------------------------------------
 
-plot_predicted <- function(data, model, relative_introduction_time) {
+plot_predicted <- function(data, model, relative_introduction_time, metric, metric_unit) {
 
   # --- 1. Helper Function for Marginal Effects ---
   # Calculates: Beta_main + (Beta_interaction * relative_time)
@@ -98,8 +98,8 @@ plot_predicted <- function(data, model, relative_introduction_time) {
   plot(
     pred$x, pred$pred,
     type = "n",
-    xlab = "Time in years",
-    ylab = "Predicted metric",
+    xlab = "Time (Years)",
+    ylab = sprintf("%s (%s)", metric, metric_unit),
     ylim = ylim,
     main = paste0("Model Prediction (Intro Time: ", relative_introduction_time, ifelse(relative_introduction_time == 1, " year)", " years)"))
   )

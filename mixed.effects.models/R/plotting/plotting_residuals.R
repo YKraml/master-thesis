@@ -40,7 +40,7 @@ plot_residuals_vs_time_1 <- function(data, model) {
   plot(
     data$t_norm,
     residuals,
-    xlab = "Time in years",
+    xlab = "Time (Years)",
     ylab = "Residuals",
     main = "Residuals vs time",
     col = "lightblue",

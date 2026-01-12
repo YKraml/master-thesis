@@ -1,13 +1,11 @@
 # ------------------------------------------------------------------------------
 
-plot_project <- function(model, id, data) {
+plot_project <- function(model, id, data, metric, metric_unit, metric_display_name) {
   projectData <- data[data$id == id, ]
   relative_introduction_time <- projectData[["relative_introduction_time"]][1]
 
   randomEffectsFromProject <- ranef(model)[id, ]
   fixedEffects <- fixef(model)
-
-
 
   intercept          <- fixedEffects["(Intercept)"]        + randomEffectsFromProject[["(Intercept)"]]        + relative_introduction_time * fixedEffects["relative_introduction_time"]
   base_slope         <- fixedEffects["base_slope"]         + randomEffectsFromProject[["base_slope"]]         + relative_introduction_time * fixedEffects["relative_introduction_time:base_slope"]
@@ -55,8 +53,8 @@ plot_project <- function(model, id, data) {
   plot(
     predictedData$x, predictedData$y,
     type = "l",
-    xlab = "Time in years",
-    ylab = paste("Metric:", metric),
+    xlab = "Time (Years)",
+    ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylim = c(lower_limit, upper_limit),
     lwd = 2,
     col = "red",
@@ -83,11 +81,11 @@ plot_project <- function(model, id, data) {
 
   # text
   plot_text <- paste0(
-    "Intercept = ",          round(intercept, 3),                  "\n",
-    "Base Slope = ",         round(base_slope, 3),                 "\n",
-    "Intervention Jump = ",  round(intervention_jump, 3),          "\n",
-    "Intervention Slope = ", round(intervention_slope, 3),         "\n",
-    "Rel. Intro. Time = ",   round(relative_introduction_time, 3), "\n"
+    "Project Age at Intro. = ", round(relative_introduction_time, 3), "\n",
+    "Intercept = ",             round(intercept, 3),                  "\n",
+    "Base Slope = ",            round(base_slope, 3),                 "\n",
+    "Intervention Jump = ",     round(intervention_jump, 3),          "\n",
+    "Intervention Slope = ",    round(intervention_slope, 3),         "\n"
   )
 
   txt_x <- max(-2, -relative_introduction_time)

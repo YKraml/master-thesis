@@ -3,12 +3,10 @@ library(performance)
 library(tidyverse)
 library(ggplot2)
 library(effects)
-library(tidyverse)
 library(cowplot)
 library(lme4)
 library(sjPlot)
 library(sjmisc)
-library(effects)
 library(sjstats)
 library(lattice)
 library(lmerTest)
@@ -30,44 +28,48 @@ source("R/plotting/plotting_general.R")
 source("R/plotting/plotting_lagged.R")
 source("R/saver.R")
 source("R/shared.R")
-source("R/saver.R")
 source("R/lagged.R")
 
 file_names <- list.files("data", pattern="*.csv", full.names=TRUE, recursive = TRUE)
+
 metrics <- list(
-  "findingsDensity",
-  "comprehensibilityDensity",
-  "correctnessDensity",
-  "documentationDensity",
-  "efficiencyDensity",
-  "errorHandlingDensity",
-  "redundancyDensity",
-  "structureDensity",
-  # "securityDensity",
-  "longFilesDensity",
-  "longMethodDensity",
-  "deepNestingDensity",
-  "cloneCoverage",
-  "averageFileLoc"
-  )
+  findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC"),
+  comprehensibilityDensity = list(name = "comprehensibilityDensity", display_name = "Comprehensibility Density", unit = "Findings per 1000 LOC"),
+  correctnessDensity       = list(name = "correctnessDensity",       display_name = "Correctness Density",       unit = "Findings per 1000 LOC"),
+  documentationDensity     = list(name = "documentationDensity",     display_name = "Documentation Density",     unit = "Findings per 1000 LOC"),
+  efficiencyDensity        = list(name = "efficiencyDensity",        display_name = "Efficiency Density",        unit = "Findings per 1000 LOC"),
+  errorHandlingDensity     = list(name = "errorHandlingDensity",     display_name = "Error Handling Density",    unit = "Findings per 1000 LOC"),
+  redundancyDensity        = list(name = "redundancyDensity",        display_name = "Redundancy Density",        unit = "Findings per 1000 LOC"),
+  structureDensity         = list(name = "structureDensity",         display_name = "Structure Density",         unit = "Findings per 1000 LOC"),
+  # securityDensity        = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1000 LOC"),
+  longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1000 files"),
+  longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1000 methods"),
+  deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1000 methods"),
+  cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
+  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC")
+)
 
-
+# ------------------------------------------------------------------------------
+# Interrupted Time Series Loop
+# ------------------------------------------------------------------------------
 
 for (input_file in file_names) {
   message("Processing: ", input_file)
-  # Load Data
   data <- get_data_from_file(input_file)
   linter_name <- gsub("data/|.csv", "", input_file)
 
-  for (metric in metrics) {
-    message(paste(" - ",metric))
+  for (metric_key in names(metrics)) {
+    metric_data         <- metrics[[metric_key]]
+    metric_name         <- metric_data$name
 
-    out_dir <- file.path("plots", "interrupted_time_series", linter_name, metric)
+    message(paste0(" - ", metric_name))
+
+    out_dir <- file.path("plots", "interrupted_time_series", linter_name, metric_name)
     dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
     # Create model
-    message("   * Creating full model")
-    f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric)
+    message("   * Creating model")
+    f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric_name)
     model <- lme(
       fixed = as.formula(f_full),
       random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
@@ -77,58 +79,30 @@ for (input_file in file_names) {
     )
 
     message("   * Drawing plots")
-    save_everything(model, data, out_dir)
+    save_everything(
+      model = model,
+      data = data,
+      out_dir = out_dir,
+      linter_name = linter_name,
+      metric_data = metric_data
+      )
 
     message("   * Calculating anova")
-    f_null <- sprintf("%s ~ base_slope * relative_introduction_time", metric)
+    f_null <- sprintf("%s ~ base_slope * relative_introduction_time", metric_name)
     model_null <- update(model, fixed = as.formula(f_null))
-    capture.output(anova(model, model_null), file = file.path(out_dir, "anova.txt"))
-
-
+    capture.output(anova(model, model_null), file = file.path(out_dir, sprintf("%s.%s.anova.txt", linter_name, metric_name)))
   }
 }
 
-# ------------------------------------------------------------------------------
 
 
-# ------------------------------------------------------------------------------
-
-
-
-file_name <-"data/bucket_one/ALL.csv"
-data <- get_data_from_file(file_name)
-data_lagged <- get_lagged_dataset(data, 18)
-metric <- "findingsDensity"
-
-model_normal <- lme(
-  fixed = as.formula(paste0(metric, " ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)")),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
-folder_name <- "delete_me/normal"
-save_everything(model_normal, data, folder_name)
-
-model_lagged <- lme(
-  fixed = as.formula(paste0(metric, " ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)")),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data_lagged,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
-
-folder_name <- "delete_me/lagged"
-save_everything(model_lagged, data, folder_name)
 
 
 
 # ------------------------------------------------------------------------------
-
-
+# Lagged Loop
 # ------------------------------------------------------------------------------
 
-# Lagged
 for (input_file in file_names) {
   message("Processing: ", input_file)
 
@@ -139,38 +113,27 @@ for (input_file in file_names) {
 
   data <- get_data_from_file(input_file)
 
-  for (metric in metrics) {
+  # UPDATED LOOP: Iterate over names(metrics)
+  for (metric_name in names(metrics)) {
+    metric_unit <- metrics[[metric_name]]
 
-    output_filename <- sprintf("lagged.%s.%s.png", linter_name, metric)
+    output_filename <- sprintf("lagged.%s.%s.png", linter_name, metric_name)
     output_path <- file.path(output_dir, output_filename)
 
     if (file.exists(output_path)) {
-      message(" - Skip: ", metric)
+      message(" - Skip: ", metric_name)
       next
     }
 
-    message(" - Generating: ", metric)
+    message(" - Generating: ", metric_name)
 
-    result_table <- compare_lagged_models(data, metric = metric, min_lag = -5, max_lag = 25)
+    # Use metric_name here
+    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 30)
 
+    # If plot_lag_comparison accepts a Y-axis label, you can use 'metric_unit' here
     save_png(
       expression = plot_lag_comparison(result_table),
       file = output_path
     )
   }
 }
-
-# ------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-# ------------------------------------------------------------------------------
-
-
-
-
