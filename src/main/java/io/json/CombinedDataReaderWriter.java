@@ -18,6 +18,11 @@ public class CombinedDataReaderWriter extends ReaderWriter<CombinedData> {
     }
 
     @Override
+    public File getFile(String id) {
+        throw new UnsupportedOperationException("Only repoOwner and repoName can be used");
+    }
+
+    @Override
     protected String getFolderName() {
         return "temp" + File.separator + "combined_data";
     }

@@ -2,7 +2,8 @@ package io.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import model.Writable;
+import model.IdWritable;
+import model.ProjectWritable;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class ReaderWriter<T extends Writable> {
+public abstract class ReaderWriter<T extends IdWritable> {
 
     private final Class<T> clazz;
 
@@ -21,6 +22,15 @@ public abstract class ReaderWriter<T extends Writable> {
 
     protected File createFile(String repoOwner, String repoName) throws IOException {
         File file = getFile(repoOwner, repoName);
+        return createFile(file);
+    }
+
+    protected File createFile(String id) throws IOException {
+        File file = getFile(id);
+        return createFile(file);
+    }
+
+    private static File createFile(File file) throws IOException {
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
         }
@@ -31,7 +41,15 @@ public abstract class ReaderWriter<T extends Writable> {
     }
 
     public void write(T element) throws IOException {
-        File proofFile = createFile(element.repoOwner(), element.repoName());
+        File proofFile = null;
+        switch (element) {
+            case ProjectWritable projectWritable ->
+                    proofFile = createFile(projectWritable.repoOwner(), projectWritable.repoName());
+            case IdWritable idWritable -> proofFile = createFile(idWritable.id());
+            case null -> {
+            }
+        }
+
         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(proofFile, element);
     }
 
@@ -57,6 +75,8 @@ public abstract class ReaderWriter<T extends Writable> {
     }
 
     public abstract File getFile(String repoOwner, String repoName);
+
+    public abstract File getFile(String id);
 
     protected abstract String getFolderName();
 }

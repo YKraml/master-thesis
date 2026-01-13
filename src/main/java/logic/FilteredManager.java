@@ -4,7 +4,7 @@ import io.json.FilteredProjectLinterReaderWriter;
 import io.json.FilteredProjectReaderWriter;
 import jakarta.inject.Inject;
 import model.Linter;
-import model.Writable;
+import model.ProjectWritable;
 
 import java.io.IOException;
 
@@ -27,10 +27,11 @@ public class FilteredManager {
         filteredProjectReaderWriter.write(new FilteredProject(repoOwner, repoName, reason, proof));
     }
 
-    public record FilteredProject(String repoOwner, String repoName, String reason, String proof) implements Writable {
+    public record FilteredProject(String repoOwner, String repoName, String reason,
+                                  String proof) implements ProjectWritable {
     }
 
     public record FilteredProjectLinter(String repoOwner, String repoName, Linter linter, String reason,
-                                        String proof) implements Writable {
+                                        String proof) implements ProjectWritable {
     }
 }

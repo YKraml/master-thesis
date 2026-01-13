@@ -20,11 +20,13 @@ public class HttpHelperTeamscale {
         this.httpClient = httpClient;
     }
 
-    public HttpResponse<String> getResponse(String url) throws IOException, InterruptedException {
-        String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
-        String authHeader = "Basic " + Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.ISO_8859_1));
-
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).header("Authorization", authHeader).header("Accept", "application/json").GET().build();
+    public HttpResponse<String> executeGetRequest(String path) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest
+                .newBuilder()
+                .uri(createUrl(path))
+                .header("Authorization", getAuthHeader()).header("Accept", "application/json")
+                .GET()
+                .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         if (response.statusCode() != 200) {
@@ -34,5 +36,53 @@ public class HttpHelperTeamscale {
         }
 
         return response;
+    }
+
+    public HttpResponse<String> executePostRequest(String path, String requestBody) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest
+                .newBuilder()
+                .uri(createUrl(path))
+                .header("Authorization", getAuthHeader())
+                .header("Accept", "*/*")
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        if (response.statusCode() != 201) {
+            RuntimeException runtimeException = new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
+            runtimeException.printStackTrace();
+            throw runtimeException;
+        }
+
+        return response;
+    }
+
+    public HttpResponse<String> executeDeleteRequest(String path) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest
+                .newBuilder()
+                .uri(createUrl(path))
+                .header("Authorization", getAuthHeader())
+                .header("Accept", "*/*")
+                .DELETE()
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        if (response.statusCode() != 204) {
+            RuntimeException runtimeException = new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
+            runtimeException.printStackTrace();
+            throw runtimeException;
+        }
+
+        return response;
+    }
+
+    private static URI createUrl(String path) {
+        return URI.create(Constants.TEAMSCALE_URL + path);
+    }
+
+    private static String getAuthHeader() {
+        String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
+        return "Basic " + Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.ISO_8859_1));
     }
 }

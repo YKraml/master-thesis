@@ -1,25 +1,14 @@
 package io.teamscale.api;
 
-import io.json.ProofReaderWriter;
 import io.teamscale.api.model.project.Project;
 import jakarta.inject.Inject;
 import model.Proof;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import util.Constants;
 
-import javax.swing.*;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.net.http.HttpResponse;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
@@ -99,56 +88,22 @@ public class ProjectCreator {
             }""";
 
     private final ProjectsFetcher projectsFetcher;
+    private final HttpHelperTeamscale httpHelperTeamscale;
 
     @Inject
-    public ProjectCreator(ProjectsFetcher projectsFetcher) {
+    public ProjectCreator(ProjectsFetcher projectsFetcher, HttpHelperTeamscale httpHelperTeamscale) {
         this.projectsFetcher = projectsFetcher;
+        this.httpHelperTeamscale = httpHelperTeamscale;
     }
 
-    private static int getNumberOfProjectsToBeCreated() {
-        JFrame topFrame = new JFrame();
-        topFrame.setAlwaysOnTop(true);
-        topFrame.setUndecorated(true);
-        topFrame.setLocationRelativeTo(null);
-        topFrame.setVisible(true);
-
-        String input = JOptionPane.showInputDialog(topFrame, "How many projects should be created?");
-
-        topFrame.dispose();
-
-        int numberOfProjectsToBeCreeated;
-        try {
-            numberOfProjectsToBeCreeated = Integer.parseInt(input);
-        } catch (Exception e) {
-            numberOfProjectsToBeCreeated = -1;
-        }
-        return numberOfProjectsToBeCreeated;
-    }
-
-    public void createAllProjects() throws IOException {
-        System.out.println("Start reading proof files");
-        List<Proof> proofs = new ProofReaderWriter().readAll();
-        proofs.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
-
+    public void createProjectsWithProofs(List<Proof> proofs, int numberOfProjectsToBeCreated) {
         System.out.println("Getting existing projects from teamscale");
-        List<Project> existingProjects = projectsFetcher.getExistingProjects();
-        Set<String> existingProjectNames = existingProjects.stream().map(Project::getName).collect(Collectors.toSet());
+        Set<String> existingProjectNames = projectsFetcher.getExistingProjects().stream().map(Project::getName).collect(Collectors.toSet());
 
         System.out.println("Creating projects");
-        createProjects(proofs, existingProjectNames);
-
-        System.out.println();
-        System.out.println("Finished");
-    }
-
-    private void createProjects(List<Proof> proofs, Set<String> existingProjectNames) {
-        int numberOfProjectsToBeCreated = getNumberOfProjectsToBeCreated();
         int i = 0;
         for (Proof proof : proofs) {
-            if (proof.linters().isEmpty()) {
-                continue;
-            }
-
+            
             if (proof.language() != Constants.CURRENT_LANGUAGE) {
                 throw new RuntimeException("Language was not expected");
             }
@@ -167,9 +122,12 @@ public class ProjectCreator {
                 System.out.println("Finished creation");
             }
         }
+
+        System.out.println();
+        System.out.println("Finished");
     }
 
-    public void createProjectWithProof(Proof proof) {
+    private void createProjectWithProof(Proof proof) {
 
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
@@ -180,47 +138,22 @@ public class ProjectCreator {
         calendar.setTimeInMillis(proof.analysisEndTime() * 1000L);
         String endDate = formatter.format(calendar.getTime());
 
-        createSingleProject(proof.repoOwner(), proof.repoName(), proof.defaultBranch(), startData, endDate);
-    }
-
-    private void createSingleProject(String repoOwner, String repoName, String defaultBranch, String startData, String endDate) {
-        String suffix = repoOwner + "/" + repoName;
-        String projectName = repoOwner + "." + repoName;
-
-        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-            HttpPost httppost = new HttpPost(Constants.TEAMSCALE_URL + "/api/v2025.8/projects?skip-project-validation=false");
-
-            // Authentication
-            String auth = Constants.TEAMSCALE_USER + ":" + Constants.TEAMSCALE_ACCESS_KEY;
-            byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.ISO_8859_1));
-            String authHeader = "Basic " + new String(encodedAuth);
-            httppost.setHeader("Authorization", authHeader);
-
-            // Headers
-            httppost.setHeader("accept", "*/*");
-            httppost.setHeader("Content-Type", "application/json");
-
-            // Body
-            String request = REQUEST.formatted(projectName, Constants.CURRENT_LANGUAGE.getIncludedFileNames(), Constants.CURRENT_LANGUAGE.getExcludedFileNames(), suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
-            StringEntity requestEntity = new StringEntity(request, StandardCharsets.UTF_8);
-            httppost.setEntity(requestEntity);
-
-            // Execute the POST request
-            try (CloseableHttpResponse response = httpclient.execute(httppost)) {
-                System.out.println("Response Code: " + response.getStatusLine().getStatusCode());
-
-                HttpEntity entity = response.getEntity();
-                if (entity == null) {
-                    throw new IOException("Empty response entity");
-                }
-
-                try (BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()))) {
-                    reader.lines().forEach(System.out::println);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        try {
+            createSingleProject(proof.repoOwner(), proof.repoName(), proof.defaultBranch(), startData, endDate);
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private void createSingleProject(String repoOwner, String repoName, String defaultBranch, String startData, String endDate) throws IOException, InterruptedException {
+        //Build request body
+        String suffix = repoOwner + "/" + repoName;
+        String projectName = repoOwner + "." + repoName;
+        String request = REQUEST.formatted(projectName, Constants.CURRENT_LANGUAGE.getIncludedFileNames(), Constants.CURRENT_LANGUAGE.getExcludedFileNames(), suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
+
+        String path = "/api/v2025.8/projects?skip-project-validation=false";
+        HttpResponse<String> response = httpHelperTeamscale.executePostRequest(path, request);
+
+        System.out.println("Status Code: " + response.statusCode());
     }
 }

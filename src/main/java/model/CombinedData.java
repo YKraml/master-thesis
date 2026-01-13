@@ -6,7 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record CombinedData(String repoOwner, String repoName, Proof proof, List<Entry> entries) implements Writable {
+public record CombinedData(String repoOwner, String repoName, Proof proof,
+                           List<Entry> entries) implements ProjectWritable {
 
     public record Entry(
             int time,

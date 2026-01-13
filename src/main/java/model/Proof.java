@@ -15,7 +15,7 @@ public record Proof(
         int analysisStartTime,
         int analysisEndTime,
         int numberOfStars,
-        List<LinterWithProof> linters) implements Writable {
+        List<LinterWithProof> linters) implements ProjectWritable {
 
     public record LinterWithProof(
             String linterName,

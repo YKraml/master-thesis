@@ -7,7 +7,6 @@ import io.teamscale.api.model.metrics.MetricValueDeserializer;
 import io.teamscale.api.model.metrics.Metrics;
 import io.teamscale.api.model.metrics.Value;
 import jakarta.inject.Inject;
-import util.Constants;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -41,13 +40,12 @@ public class MetricsFetcher {
 
     private List<Metrics> getMetricsNotSafe(String repoOwner, String repoName, long analysisStartTime, long analysisEndTime)
             throws IOException, InterruptedException {
-        String url = Constants.TEAMSCALE_URL
-                + "/api/projects/" + repoOwner + "." + repoName
+        String path = "/api/projects/" + repoOwner + "." + repoName
                 + "/metrics/history?uniform-path=&start=" + analysisStartTime
                 + "&end=" + analysisEndTime
                 + "&all-partitions=true&max-milliseconds=-1";
 
-        HttpResponse<String> response = httpHelperTeamscale.getResponse(url);
+        HttpResponse<String> response = httpHelperTeamscale.executeGetRequest(path);
 
         return Arrays.asList(createMapper().readValue(response.body(), Metrics[].class));
     }

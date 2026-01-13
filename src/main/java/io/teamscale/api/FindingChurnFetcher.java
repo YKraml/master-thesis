@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.teamscale.api.model.churn.FindingChurn;
 import jakarta.inject.Inject;
-import util.Constants;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -27,12 +26,11 @@ public class FindingChurnFetcher {
     }
 
     private FindingChurn getFindingsChurnNotSafe(String repoOwner, String repoName, long time) throws IOException, InterruptedException {
-        String url = Constants.TEAMSCALE_URL
-                + "/api/v2025.8/projects/"
+        String path = "/api/v2025.8/projects/"
                 + repoOwner + "." + repoName
                 + "/finding-churn/list?&t=" + time + "&max=-1";
 
-        HttpResponse<String> response = httpHelperTeamscale.getResponse(url);
+        HttpResponse<String> response = httpHelperTeamscale.executeGetRequest(path);
 
         return new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)

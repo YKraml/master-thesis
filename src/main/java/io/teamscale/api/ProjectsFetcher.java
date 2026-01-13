@@ -3,7 +3,6 @@ package io.teamscale.api;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.teamscale.api.model.project.Project;
 import jakarta.inject.Inject;
-import util.Constants;
 
 import java.io.IOException;
 import java.net.http.HttpResponse;
@@ -27,10 +26,10 @@ public class ProjectsFetcher {
     }
 
     private List<Project> getExistingProjectsNotSafe() throws IOException, InterruptedException {
-        String url = Constants.TEAMSCALE_URL
-                + "/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false";
+        String path
+                = "/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false";
 
-        HttpResponse<String> response = httpHelperTeamscale.getResponse(url);
+        HttpResponse<String> response = httpHelperTeamscale.executeGetRequest(path);
 
         return List.of(new ObjectMapper().readValue(response.body(), Project[].class));
     }

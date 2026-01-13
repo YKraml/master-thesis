@@ -9,10 +9,13 @@ public class Constants {
     public static final int CONCURRENT_REPO_DOWNLOADS = 4;
 
     public static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2;
-    public static final int SECONDS_IN_ONE_MONTH = 60 * 60 * 24 * 30;
     public static final Language CURRENT_LANGUAGE = Language.JAVA;
 
     public static final String TEAMSCALE_ACCESS_KEY = "JR62xEGhWWh7NYh2srekjo61ftAYZBYo";
     public static final String TEAMSCALE_URL = "https://yannickkraml.ddnss.de";
     public static final String TEAMSCALE_USER = "admin";
+
+    public static final String TEAMSCALE_CONTROL_ACCESS_KEY = "JR62xEGhWWh7NYh2srekjo61ftAYZBYo";
+    public static final String TEAMSCALE_CONTROL_URL = "https://yannickkraml.ddnss.de";
+    public static final String TEAMSCALE_CONTROL_USER = "admin";
 }

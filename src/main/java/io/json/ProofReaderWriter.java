@@ -19,6 +19,11 @@ public class ProofReaderWriter extends ReaderWriter<Proof> {
     }
 
     @Override
+    public File getFile(String id) {
+        throw new UnsupportedOperationException("Only repoOwner and repoName can be used");
+    }
+
+    @Override
     protected String getFolderName() {
         return "temp" + File.separator + "proof" + File.separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }

@@ -1,6 +1,7 @@
 # ------------------------------------------------------------------------------
 
 get_lagged_dataset <- function(df, lag_weeks) {
+
   # We start by sorting the data
   df_ordered <- df %>% arrange(id, time)
 
@@ -33,8 +34,8 @@ get_lagged_dataset <- function(df, lag_weeks) {
   # This step is common to all conditions, so we do it at the end
   df_lagged %>%
     mutate(
-      intervention_slope = intervention_jump * base_slope
-    ) %>%
+      intervention_slope = intervention_jump * (base_slope - lag_weeks / (365 / 7))
+      ) %>%
     filter(!is.na(intervention_jump)) # Safety cleanup
 }
 
