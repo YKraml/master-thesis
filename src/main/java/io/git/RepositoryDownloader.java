@@ -35,11 +35,16 @@ public class RepositoryDownloader {
         String folderName = "temp" + File.separator + "repos" + File.separator + repoOwner + File.separator + repoName;
         File folder = new File(folderName);
 
+        Git git;
         if (folder.exists()) {
-            return openRepoAndGoToDefaultBranch(github, repoOwner, repoName, folderName);
+            git = openRepoAndGoToDefaultBranch(github, repoOwner, repoName, folderName);
+        } else {
+            git = cloneRepo(repoOwner, repoName, folderName);
         }
 
-        return cloneRepo(repoOwner, repoName, folderName);
+        //TODO, go to the commit at a set date. Maybe 1.11.2025
+
+        return git;
     }
 
     private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {

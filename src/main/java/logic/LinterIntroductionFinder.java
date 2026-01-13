@@ -47,6 +47,7 @@ public class LinterIntroductionFinder {
             throw new RuntimeException("Linter introduction not found");
         }
 
+        // Go back to latest commit
         gitUtil.checkout(git, commits.getLast().getName());
 
         return introductionCommitWithProof.get();

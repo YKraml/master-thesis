@@ -3,6 +3,7 @@ import com.google.inject.Injector;
 import io.json.CemProjectReaderWriter;
 import io.json.CombinedDataReaderWriter;
 import io.json.ProofReaderWriter;
+import logic.CemMatcher;
 import model.CemProject;
 import model.CombinedData;
 import model.Proof;
@@ -21,6 +22,7 @@ public class MainCreateControlGroup {
         CombinedDataReaderWriter combinedDataReaderWriter = injector.getInstance(CombinedDataReaderWriter.class);
         ProofReaderWriter proofReaderWriter = injector.getInstance(ProofReaderWriter.class);
         CemProjectReaderWriter cemProjectReaderWriter = injector.getInstance(CemProjectReaderWriter.class);
+        CemMatcher cemMatcher = injector.getInstance(CemMatcher.class);
 
         System.out.println("Reading files");
         List<Proof> treatmentGroup = combinedDataReaderWriter.readAll().stream().map(CombinedData::proof).toList();
@@ -28,6 +30,18 @@ public class MainCreateControlGroup {
 
         System.out.println("Treatment group size: " + treatmentGroup.size());
         System.out.println("Control group size: " + controlGroupCandidates.size());
+
+        List<CemProject> treatedProjects = new ArrayList<>();
+        for (Proof proof : treatmentGroup) {
+            treatedProjects.addAll(convertToCemProjects(proof));
+        }
+
+        List<CemProject> candidatePool = new ArrayList<>();
+        for (Proof proof : controlGroupCandidates) {
+            candidatePool.add(convertToCemProjectsControl(proof));
+        }
+
+        List<CemProject> finalControlGroup = cemMatcher.match(treatedProjects, candidatePool);
 
         System.out.println("Writing CEM Projects");
         for (Proof proof : treatmentGroup) {
@@ -60,6 +74,23 @@ public class MainCreateControlGroup {
         }
 
         return cemProjects;
+    }
+
+    private static CemProject convertToCemProjectsControl(Proof proof) {
+
+        if (!proof.linters().isEmpty()) {
+            throw new RuntimeException("Linters in project: " + proof.link());
+        }
+
+        String repoOwner = proof.repoOwner();
+        String repoName = proof.repoName();
+        String id = repoOwner + "." + repoName + ".CONTROL";
+        CemProject.GroupType groupType = CemProject.GroupType.TREATMENT;
+        int numberOfStars = proof.numberOfStars();
+        double ageAtLinterIntro = -1;
+        String creationYear = String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear());
+
+        return new CemProject(id, groupType, numberOfStars, ageAtLinterIntro, creationYear);
     }
 
 }
