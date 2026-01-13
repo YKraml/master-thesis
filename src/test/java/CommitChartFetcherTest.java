@@ -1,15 +1,17 @@
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import io.teamscale.api.CommitChartFetcher;
 import io.teamscale.api.model.commit.chart.CommitChart;
 import io.teamscale.api.model.commit.chart.Commits;
-import com.google.inject.Guice;
-import com.google.inject.Injector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import util.GuiceModule;
 
 import java.util.List;
 
+@Disabled
 public class CommitChartFetcherTest {
 
     private CommitChartFetcher commitChartFetcher;

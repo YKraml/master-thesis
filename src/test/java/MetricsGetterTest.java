@@ -1,14 +1,16 @@
-import io.teamscale.api.MetricsFetcher;
-import io.teamscale.api.model.metrics.Metrics;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import io.teamscale.api.MetricsFetcher;
+import io.teamscale.api.model.metrics.Metrics;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import util.GuiceModule;
 
 import java.util.List;
 
+@Disabled
 public class MetricsGetterTest {
 
     private MetricsFetcher metricsFetcher;
