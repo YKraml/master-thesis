@@ -1,9 +1,9 @@
-import com.google.inject.Guice;
-import com.google.inject.Injector;
+package logic;
+
 import io.json.CemProjectPairReaderWriter;
-import io.teamscale.api.ProjectCreator;
+import jakarta.inject.Inject;
+import model.CemProject;
 import model.CemProjectPair;
-import util.GuiceModule;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -11,15 +11,21 @@ import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
 
-public class MainCreateProject {
+public class ProjectCreator {
 
-    public static void main(String[] args) throws IOException {
-        Injector injector = Guice.createInjector(new GuiceModule());
-        ProjectCreator projectCreator = injector.getInstance(ProjectCreator.class);
-        CemProjectPairReaderWriter projectPairReaderWriter = injector.getInstance(CemProjectPairReaderWriter.class);
+    private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
+    private final io.teamscale.api.ProjectCreator projectCreator;
 
+    @Inject
+    public ProjectCreator(CemProjectPairReaderWriter cemProjectPairReaderWriter, io.teamscale.api.ProjectCreator projectCreator) {
+
+        this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
+        this.projectCreator = projectCreator;
+    }
+
+    public void createProjects(CemProject.GroupType groupType) throws IOException {
         System.out.println("Start reading proof files");
-        List<CemProjectPair> pairs = projectPairReaderWriter
+        List<CemProjectPair> pairs = cemProjectPairReaderWriter
                 .readAll()
                 .stream()
                 .sorted(projectComparator())  // More stars -> earlier creation
@@ -31,7 +37,12 @@ public class MainCreateProject {
         for (CemProjectPair cemProject : pairs) {
             if (i < numberOfProjectsToBeCreated) {
                 try {
-                    projectCreator.createProjectWithCemProject(cemProject.control());
+
+                    switch (groupType) {
+                        case CONTROL -> projectCreator.createProjectWithCemProject(cemProject.control());
+                        case TREATMENT -> projectCreator.createProjectWithCemProject(cemProject.treated());
+                        default -> throw new IllegalStateException("Unexpected value: " + groupType);
+                    }
                 } catch (Exception e) {
                     System.err.println(e.getMessage());
                 }
