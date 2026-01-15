@@ -90,7 +90,7 @@ public class ProjectCreator {
         this.httpHelperTeamscale = httpHelperTeamscale;
     }
 
-    public void createProjectWithCemProject(CemProject cemProject) {
+    public void createProjectWithCemProject(CemProject cemProject) throws IOException, InterruptedException {
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
 
@@ -100,11 +100,7 @@ public class ProjectCreator {
         calendar.setTimeInMillis(cemProject.analysisEndTime() * 1000L);
         String endDate = formatter.format(calendar.getTime());
 
-        try {
-            createSingleProject(cemProject.repoOwner(), cemProject.repoName(), cemProject.defaultBranch(), startData, endDate);
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        createSingleProject(cemProject.repoOwner(), cemProject.repoName(), cemProject.defaultBranch(), startData, endDate);
     }
 
     private void createSingleProject(String repoOwner, String repoName, String defaultBranch, String startData, String endDate) throws IOException, InterruptedException {
@@ -125,6 +121,8 @@ public class ProjectCreator {
 
         String path = "/api/v2025.8/projects?skip-project-validation=false";
 
+        System.out.println();
+        System.out.println("Creating:" + projectName);
         HttpResponse<String> response = httpHelperTeamscale.executePostRequest(path, request);
         System.out.println("Status Code: " + response.statusCode());
     }

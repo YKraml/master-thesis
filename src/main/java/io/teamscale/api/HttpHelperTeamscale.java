@@ -50,9 +50,7 @@ public class HttpHelperTeamscale {
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         if (response.statusCode() != 201) {
-            RuntimeException runtimeException = new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
-            runtimeException.printStackTrace();
-            throw runtimeException;
+            throw new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
         }
 
         return response;

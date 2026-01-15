@@ -1,14 +1,14 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.json.CemProjectControlReaderWriter;
-import io.json.CemProjectTreatmentReaderWriter;
+import io.json.CemProjectPairReaderWriter;
 import io.teamscale.api.ProjectCreator;
-import model.CemProject;
+import model.CemProjectPair;
 import util.GuiceModule;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 
 public class MainCreateProject {
@@ -16,21 +16,25 @@ public class MainCreateProject {
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
         ProjectCreator projectCreator = injector.getInstance(ProjectCreator.class);
-
-        CemProjectTreatmentReaderWriter cemProjectTreatmentReaderWriter = injector.getInstance(CemProjectTreatmentReaderWriter.class);
-        CemProjectControlReaderWriter cemProjectControlReaderWriter = injector.getInstance(CemProjectControlReaderWriter.class);
+        CemProjectPairReaderWriter projectPairReaderWriter = injector.getInstance(CemProjectPairReaderWriter.class);
 
         System.out.println("Start reading proof files");
-        List<CemProject> cemProjects = cemProjectTreatmentReaderWriter.readAll();
+        List<CemProjectPair> pairs = projectPairReaderWriter
+                .readAll()
+                .stream()
+                .sorted(projectComparator())  // More stars -> earlier creation
+                .toList();
         System.out.println("Finished reading proof files");
-
-        cemProjects.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
 
         int numberOfProjectsToBeCreated = getNumberOfProjectsToBeCreated();
         int i = 0;
-        for (CemProject cemProject : cemProjects) {
+        for (CemProjectPair cemProject : pairs) {
             if (i < numberOfProjectsToBeCreated) {
-                projectCreator.createProjectWithCemProject(cemProject);
+                try {
+                    projectCreator.createProjectWithCemProject(cemProject.control());
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                }
             }
             i++;
         }
@@ -46,13 +50,12 @@ public class MainCreateProject {
         String input = JOptionPane.showInputDialog(topFrame, "How many projects should be created?");
 
         topFrame.dispose();
+        topFrame.requestFocus();
 
-        int numberOfProjectsToBeCreeated;
-        try {
-            numberOfProjectsToBeCreeated = Integer.parseInt(input);
-        } catch (Exception e) {
-            numberOfProjectsToBeCreeated = -1;
-        }
-        return numberOfProjectsToBeCreeated;
+        return Integer.parseInt(input);
+    }
+
+    private static Comparator<CemProjectPair> projectComparator() {
+        return (o1, o2) -> o2.treated().numberOfStars() - o1.treated().numberOfStars();
     }
 }

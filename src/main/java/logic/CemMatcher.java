@@ -16,17 +16,17 @@ public class CemMatcher {
 
     public List<CemProjectPair> match(List<CemProject> allTreatedProjects, List<CemProject> allUntreatedProjects) {
 
-        // Group ALL treated projects
+        // Group all treated projects
         Map<String, List<CemProject>> treatedStrata = allTreatedProjects.stream()
                 .collect(Collectors.groupingBy(this::generateStratumKey));
 
-        // Group ALL control projects
+        // Group all control projects
         Map<String, List<CemProject>> controlStrata = allUntreatedProjects.stream()
                 .collect(Collectors.groupingBy(this::generateStratumKey));
 
         List<CemProjectPair> finalPairs = new ArrayList<>();
 
-        // Iterate over strata that exist in the Treated set
+        // Iterate over strata that exist in the treated set
         for (String key : treatedStrata.keySet()) {
 
             List<CemProject> treatedBin = treatedStrata.get(key);

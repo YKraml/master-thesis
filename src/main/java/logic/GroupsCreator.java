@@ -1,7 +1,6 @@
 package logic;
 
-import io.json.CemProjectControlReaderWriter;
-import io.json.CemProjectTreatmentReaderWriter;
+import io.json.CemProjectPairReaderWriter;
 import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
 import model.CemProject;
@@ -18,15 +17,13 @@ import java.util.stream.Collectors;
 public class GroupsCreator {
 
     private final ProofReaderWriter proofReaderWriter;
-    private final CemProjectTreatmentReaderWriter cemProjectTreatmentReaderWriter;
-    private final CemProjectControlReaderWriter cemProjectControlReaderWriter;
+    private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
     private final CemMatcher cemMatcher;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemProjectTreatmentReaderWriter cemProjectTreatmentReaderWriter, CemProjectControlReaderWriter cemProjectControlReaderWriter, CemMatcher cemMatcher) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, CemMatcher cemMatcher) {
         this.proofReaderWriter = proofReaderWriter;
-        this.cemProjectTreatmentReaderWriter = cemProjectTreatmentReaderWriter;
-        this.cemProjectControlReaderWriter = cemProjectControlReaderWriter;
+        this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
         this.cemMatcher = cemMatcher;
     }
 
@@ -63,22 +60,9 @@ public class GroupsCreator {
                 .sorted((o1, o2) -> o2.treated().numberOfStars() - o1.treated().numberOfStars())
                 .toList();
 
-        List<CemProject> finalTreatedProjects = new ArrayList<>();
-        List<CemProject> finalControlProjects = new ArrayList<>();
-
+        cemProjectPairReaderWriter.deleteFolder();
         for (CemProjectPair pair : pairs) {
-            finalTreatedProjects.add(pair.treated());
-            finalControlProjects.add(pair.control());
-        }
-
-        cemProjectTreatmentReaderWriter.deleteFolder();
-        for (CemProject project : finalTreatedProjects) {
-            cemProjectTreatmentReaderWriter.write(project);
-        }
-
-        cemProjectControlReaderWriter.deleteFolder();
-        for (CemProject project : finalControlProjects) {
-            cemProjectControlReaderWriter.write(project);
+            cemProjectPairReaderWriter.write(pair);
         }
     }
 
