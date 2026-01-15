@@ -6,11 +6,11 @@ import util.GuiceModule;
 
 import java.io.IOException;
 
-public class MainControlCreateProjects {
+public class MainCreateTreatedProjects {
 
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
         ProjectCreatorStarter projectCreatorStarter = injector.getInstance(ProjectCreatorStarter.class);
-        projectCreatorStarter.createProjects(CemProject.GroupType.CONTROL);
+        projectCreatorStarter.createProjects(CemProject.GroupType.TREATMENT);
     }
 }

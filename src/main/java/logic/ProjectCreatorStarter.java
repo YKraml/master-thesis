@@ -1,6 +1,7 @@
 package logic;
 
 import io.json.CemProjectPairReaderWriter;
+import io.teamscale.api.ProjectCreator;
 import jakarta.inject.Inject;
 import model.CemProject;
 import model.CemProjectPair;
@@ -11,14 +12,13 @@ import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
 
-public class ProjectCreator {
+public class ProjectCreatorStarter {
 
     private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
-    private final io.teamscale.api.ProjectCreator projectCreator;
+    private final ProjectCreator projectCreator;
 
     @Inject
-    public ProjectCreator(CemProjectPairReaderWriter cemProjectPairReaderWriter, io.teamscale.api.ProjectCreator projectCreator) {
-
+    public ProjectCreatorStarter(CemProjectPairReaderWriter cemProjectPairReaderWriter, ProjectCreator projectCreator) {
         this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
         this.projectCreator = projectCreator;
     }

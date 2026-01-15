@@ -6,7 +6,7 @@ import util.GuiceModule;
 
 import java.io.IOException;
 
-public class MainControlCreateProjects {
+public class MainCreateControlProjects {
 
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
