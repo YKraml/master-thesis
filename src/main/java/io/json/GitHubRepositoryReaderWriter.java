@@ -2,6 +2,7 @@ package io.json;
 
 import jakarta.inject.Inject;
 import model.GitHubRepository;
+import util.Constants;
 
 import java.io.File;
 
@@ -19,6 +20,6 @@ public class GitHubRepositoryReaderWriter extends ReaderWriter<GitHubRepository>
 
     @Override
     protected String getFolderName() {
-        return "temp" + File.separator + "github_repos";
+        return "temp" + File.separator + "github_repos" + File.separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }
 }

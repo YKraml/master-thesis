@@ -1,11 +1,13 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.json.ProofReaderWriter;
+import io.json.CemProjectControlReaderWriter;
+import io.json.CemProjectTreatmentReaderWriter;
 import io.teamscale.api.ProjectCreator;
-import model.Proof;
+import model.CemProject;
 import util.GuiceModule;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.util.List;
 
@@ -14,17 +16,24 @@ public class MainCreateProject {
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
         ProjectCreator projectCreator = injector.getInstance(ProjectCreator.class);
-        ProofReaderWriter proofReaderWriter = injector.getInstance(ProofReaderWriter.class);
+
+        CemProjectTreatmentReaderWriter cemProjectTreatmentReaderWriter = injector.getInstance(CemProjectTreatmentReaderWriter.class);
+        CemProjectControlReaderWriter cemProjectControlReaderWriter = injector.getInstance(CemProjectControlReaderWriter.class);
 
         System.out.println("Start reading proof files");
-        List<Proof> proofs = proofReaderWriter.readAll();
+        List<CemProject> cemProjects = cemProjectTreatmentReaderWriter.readAll();
         System.out.println("Finished reading proof files");
 
-        proofs.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
-        proofs.removeIf(proof -> proof.linters().isEmpty());
+        cemProjects.sort((o1, o2) -> o2.numberOfStars() - o1.numberOfStars()); // More stars -> earlier creation
 
         int numberOfProjectsToBeCreated = getNumberOfProjectsToBeCreated();
-        projectCreator.createProjectsWithProofs(proofs, numberOfProjectsToBeCreated);
+        int i = 0;
+        for (CemProject cemProject : cemProjects) {
+            if (i < numberOfProjectsToBeCreated) {
+                projectCreator.createProjectWithCemProject(cemProject);
+            }
+            i++;
+        }
     }
 
     private static int getNumberOfProjectsToBeCreated() {
@@ -46,5 +55,4 @@ public class MainCreateProject {
         }
         return numberOfProjectsToBeCreeated;
     }
-
 }

@@ -35,6 +35,10 @@ public abstract class ReaderWriter<T extends ProjectWritable> {
         return list;
     }
 
+    public void deleteFolder() throws IOException {
+        FileUtils.deleteDirectory(new File(getFolderName()));
+    }
+
     public Iterator<T> iterator() {
         Iterator<File> fileIterator = FileUtils.listFiles(
                 new File(getFolderName()),

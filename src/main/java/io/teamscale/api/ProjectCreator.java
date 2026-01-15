@@ -1,8 +1,7 @@
 package io.teamscale.api;
 
-import io.teamscale.api.model.project.Project;
 import jakarta.inject.Inject;
-import model.Proof;
+import model.CemProject;
 import util.Constants;
 
 import java.io.IOException;
@@ -10,9 +9,6 @@ import java.net.http.HttpResponse;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class ProjectCreator {
 
@@ -87,59 +83,25 @@ public class ProjectCreator {
                ]
             }""";
 
-    private final ProjectsFetcher projectsFetcher;
     private final HttpHelperTeamscale httpHelperTeamscale;
 
     @Inject
-    public ProjectCreator(ProjectsFetcher projectsFetcher, HttpHelperTeamscale httpHelperTeamscale) {
-        this.projectsFetcher = projectsFetcher;
+    public ProjectCreator(HttpHelperTeamscale httpHelperTeamscale) {
         this.httpHelperTeamscale = httpHelperTeamscale;
     }
 
-    public void createProjectsWithProofs(List<Proof> proofs, int numberOfProjectsToBeCreated) {
-        System.out.println("Getting existing projects from teamscale");
-        Set<String> existingProjectNames = projectsFetcher.getExistingProjects().stream().map(Project::getName).collect(Collectors.toSet());
-
-        System.out.println("Creating projects");
-        int i = 0;
-        for (Proof proof : proofs) {
-            
-            if (proof.language() != Constants.CURRENT_LANGUAGE) {
-                throw new RuntimeException("Language was not expected");
-            }
-
-            System.out.println();
-            if (existingProjectNames.contains(proof.repoOwner() + "." + proof.repoName())) {
-                System.out.println("Skipped " + proof.link());
-            } else {
-                if (i == numberOfProjectsToBeCreated) {
-                    break;
-                }
-                i++;
-
-                System.out.println(i + ". Create: " + proof.link());
-                createProjectWithProof(proof);
-                System.out.println("Finished creation");
-            }
-        }
-
-        System.out.println();
-        System.out.println("Finished");
-    }
-
-    private void createProjectWithProof(Proof proof) {
-
+    public void createProjectWithCemProject(CemProject cemProject) {
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
 
-        calendar.setTimeInMillis(proof.analysisStartTime() * 1000L);
+        calendar.setTimeInMillis(cemProject.analysisStartTime() * 1000L);
         String startData = formatter.format(calendar.getTime());
 
-        calendar.setTimeInMillis(proof.analysisEndTime() * 1000L);
+        calendar.setTimeInMillis(cemProject.analysisEndTime() * 1000L);
         String endDate = formatter.format(calendar.getTime());
 
         try {
-            createSingleProject(proof.repoOwner(), proof.repoName(), proof.defaultBranch(), startData, endDate);
+            createSingleProject(cemProject.repoOwner(), cemProject.repoName(), cemProject.defaultBranch(), startData, endDate);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -149,11 +111,21 @@ public class ProjectCreator {
         //Build request body
         String suffix = repoOwner + "/" + repoName;
         String projectName = repoOwner + "." + repoName;
-        String request = REQUEST.formatted(projectName, Constants.CURRENT_LANGUAGE.getIncludedFileNames(), Constants.CURRENT_LANGUAGE.getExcludedFileNames(), suffix, defaultBranch, defaultBranch, startData, endDate, projectName);
+        String request = REQUEST.formatted(
+                projectName,
+                Constants.CURRENT_LANGUAGE.getIncludedFileNames(),
+                Constants.CURRENT_LANGUAGE.getExcludedFileNames(),
+                suffix,
+                defaultBranch,
+                defaultBranch,
+                startData,
+                endDate,
+                projectName
+        );
 
         String path = "/api/v2025.8/projects?skip-project-validation=false";
-        HttpResponse<String> response = httpHelperTeamscale.executePostRequest(path, request);
 
+        HttpResponse<String> response = httpHelperTeamscale.executePostRequest(path, request);
         System.out.println("Status Code: " + response.statusCode());
     }
 }

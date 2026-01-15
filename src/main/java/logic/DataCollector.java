@@ -22,7 +22,7 @@ import java.util.concurrent.ExecutorService;
 public class DataCollector {
 
     private final StateHandler stateHandler;
-    private final GitRepositoryHandler gitRepositoryHandler;
+    private final GitHubRepoAnalyser gitHubRepoAnalyser;
     private final ExecutorService executorService;
 
     private final ProofReaderWriter proofReaderWriter;
@@ -33,10 +33,10 @@ public class DataCollector {
     private final DataCombiner dataCombiner;
 
     @Inject
-    public DataCollector(ProjectsFetcher projectsFetcher, StateHandler stateHandler, GitRepositoryHandler gitRepositoryHandler, TeamscaleDataDownloader teamscaleDataDownloader, DataCombiner dataCombiner, CombinedDataReaderWriter combinedDataReaderWriter, ExecutorService executorService, ProofReaderWriter proofReaderWriter) {
+    public DataCollector(ProjectsFetcher projectsFetcher, StateHandler stateHandler, GitHubRepoAnalyser gitHubRepoAnalyser, TeamscaleDataDownloader teamscaleDataDownloader, DataCombiner dataCombiner, CombinedDataReaderWriter combinedDataReaderWriter, ExecutorService executorService, ProofReaderWriter proofReaderWriter) {
         this.projectsFetcher = projectsFetcher;
         this.stateHandler = stateHandler;
-        this.gitRepositoryHandler = gitRepositoryHandler;
+        this.gitHubRepoAnalyser = gitHubRepoAnalyser;
         this.teamscaleDataDownloader = teamscaleDataDownloader;
         this.dataCombiner = dataCombiner;
         this.combinedDataReaderWriter = combinedDataReaderWriter;
@@ -58,7 +58,7 @@ public class DataCollector {
 
                 stateHandler.addToState(Pair.of(repoOwner, repoName), "Getting proof");
                 try {
-                    proofs.add(gitRepositoryHandler.handleRepo(repoOwner, repoName));
+                    proofs.add(gitHubRepoAnalyser.handleRepo(repoOwner, repoName));
                 } catch (GitAPIException | IOException e) {
                     e.printStackTrace();
                 }

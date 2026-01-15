@@ -1,62 +1,70 @@
 package logic;
 
 import model.CemProject;
+import model.CemProjectPair;
+import util.Constants;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 public class CemMatcher {
 
     private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 4;
-    private static final Random RANDOM = new Random(42);
 
-    public List<CemProject> match(List<CemProject> treatedProjects, List<CemProject> candidatePool) {
+    public List<CemProjectPair> match(List<CemProject> allTreatedProjects, List<CemProject> allUntreatedProjects) {
 
-        // Group treated projects
-        Map<String, List<CemProject>> treatedStrata = treatedProjects.stream().collect(Collectors.groupingBy(this::generateStratumKey));
+        // Group ALL treated projects
+        Map<String, List<CemProject>> treatedStrata = allTreatedProjects.stream()
+                .collect(Collectors.groupingBy(this::generateStratumKey));
 
-        // Group control projects
-        Map<String, List<CemProject>> controlStrata = candidatePool.stream().collect(Collectors.groupingBy(this::generateStratumKey));
+        // Group ALL control projects
+        Map<String, List<CemProject>> controlStrata = allUntreatedProjects.stream()
+                .collect(Collectors.groupingBy(this::generateStratumKey));
 
-        // Find twins for treated projects
-        List<CemProject> finalControlGroup = new ArrayList<>();
+        List<CemProjectPair> finalPairs = new ArrayList<>();
+
+        // Iterate over strata that exist in the Treated set
         for (String key : treatedStrata.keySet()) {
-            List<CemProject> controlsBin = controlStrata.get(key);
-            List<CemProject> treatedBin = treatedStrata.get(key);
 
-            if (controlsBin == null) {
-                System.err.println("A twin could not be found for:" + key);
+            List<CemProject> treatedBin = treatedStrata.get(key);
+            List<CemProject> controlsBin = controlStrata.get(key);
+
+            // If no controls exist for this stratum, we cannot make any pairs here. Skip.
+            if (controlsBin == null || controlsBin.isEmpty()) {
                 continue;
             }
 
-            for (CemProject treated : treatedBin) {
+            // Shuffle both lists to ensure random pairing within the stratum
+            Collections.shuffle(treatedBin, Constants.RANDOM);
+            Collections.shuffle(controlsBin, Constants.RANDOM);
 
-                // Get random control with same key
-                CemProject controlTwin;
-                try {
-                    controlTwin = controlsBin.get(RANDOM.nextInt(controlsBin.size()));
-                } catch (IllegalArgumentException e) {
-                    System.err.println("A twin could not be found for:" + key);
-                    continue;
-                }
-                controlsBin.remove(controlTwin);
+            // Maximize matches: The number of pairs is the size of the smaller list
+            int numberOfMatches = Math.min(treatedBin.size(), controlsBin.size());
 
-                //Create control project and add to list
-                finalControlGroup.add(new CemProject(
-                        controlTwin.repoOwner(),
-                        controlTwin.repoName(),
-                        controlTwin.groupType(),
-                        controlTwin.numberOfStars(),
-                        treated.ageAtLinterIntros(),
-                        controlTwin.creationYear())
+            for (int i = 0; i < numberOfMatches; i++) {
+                CemProject treated = treatedBin.get(i);
+                CemProject rawControl = controlsBin.get(i);
+
+                // Create the adapted control twin (copying time windows from treated)
+                CemProject adaptedControl = new CemProject(
+                        rawControl.repoOwner(),
+                        rawControl.repoName(),
+                        rawControl.groupType(),
+                        rawControl.numberOfStars(),
+                        treated.analysisStartTime(), // Copy treated analysis start time
+                        treated.analysisEndTime(),   // Copy treated analysis end time
+                        rawControl.creationYear(),
+                        rawControl.defaultBranch()
                 );
+
+                finalPairs.add(new CemProjectPair(treated, adaptedControl));
             }
         }
 
-        return finalControlGroup;
+        return finalPairs;
     }
 
     private String generateStratumKey(CemProject project) {
