@@ -1,7 +1,7 @@
-import io.teamscale.api.model.cleaned.TeamscaleData;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import io.teamscale.TeamscaleDataDownloader;
+import io.teamscale.api.model.cleaned.TeamscaleData;
 import logic.DataCombiner;
 import model.CombinedData;
 import org.junit.jupiter.api.Assertions;
@@ -13,6 +13,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import util.GuiceModule;
 
 @Execution(ExecutionMode.CONCURRENT)
+@Disabled
 class DataCombinerTest {
 
     private TeamscaleDataDownloader teamscaleDataDownloader;

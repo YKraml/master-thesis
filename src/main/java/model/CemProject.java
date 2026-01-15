@@ -1,10 +1,13 @@
 package model;
 
-public record CemProject(String id,
+import java.util.List;
+
+public record CemProject(String repoOwner,
+                         String repoName,
                          GroupType groupType,
                          int numberOfStars,
-                         double ageAtLinterIntro,
-                         String creationYear) implements IdWritable {
+                         List<Double> ageAtLinterIntros,
+                         String creationYear) implements ProjectWritable {
 
     public enum GroupType {
         TREATMENT,

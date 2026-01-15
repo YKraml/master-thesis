@@ -7,8 +7,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
-import org.kohsuke.github.GitHub;
 import util.Constants;
 import util.GitUtil;
 
@@ -18,45 +18,55 @@ import java.util.concurrent.Semaphore;
 
 public class RepositoryDownloader {
 
-    private static final Semaphore semaphore = new Semaphore(Constants.CONCURRENT_REPO_DOWNLOADS);
+    private static final Semaphore SEMAPHORE = new Semaphore(Constants.CONCURRENT_REPO_DOWNLOADS);
 
-    private final GitHub github;
     private final StateHandler stateHandler;
     private final GitUtil gitUtil;
 
     @Inject
-    public RepositoryDownloader(GitHub github, StateHandler stateHandler, GitUtil gitUtil) {
-        this.github = github;
+    public RepositoryDownloader(StateHandler stateHandler, GitUtil gitUtil) {
         this.stateHandler = stateHandler;
         this.gitUtil = gitUtil;
     }
 
-    public Git getRepo(String repoOwner, String repoName) throws GitAPIException, IOException {
+    public Git getRepo(String repoOwner, String repoName, String defaultBranch) throws GitAPIException, IOException {
         String folderName = "temp" + File.separator + "repos" + File.separator + repoOwner + File.separator + repoName;
         File folder = new File(folderName);
 
         Git git;
         if (folder.exists()) {
-            git = openRepoAndGoToDefaultBranch(github, repoOwner, repoName, folderName);
+            git = openRepoAndGoToDefaultBranch(repoOwner, repoName, folderName, defaultBranch);
         } else {
             git = cloneRepo(repoOwner, repoName, folderName);
         }
 
-        //TODO, go to the commit at a set date. Maybe 1.11.2025
+        // Go to latest commit before Constants.ANALYSIS_TIME
+        Iterable<RevCommit> call = git.log().call();
+        for (RevCommit commit : call) {
+            if (commit.getCommitTime() < Constants.ANALYSIS_TIME) {
+                gitUtil.checkout(git, commit.getName());
+                break;
+            }
+        }
 
         return git;
     }
 
-    private Git openRepoAndGoToDefaultBranch(GitHub github, String owner, String repoName, String folderName) throws GitAPIException, IOException {
+    public void deleteRepo(String owner, String repoName) throws IOException {
+        String folderName = "temp" + File.separator + "repos" + File.separator + owner + File.separator + repoName;
+        File folder = new File(folderName);
+        FileUtils.deleteDirectory(folder);
+    }
+
+    private Git openRepoAndGoToDefaultBranch(String owner, String repoName, String folderName, String defaultBranch) throws GitAPIException, IOException {
         File gitFile = new File(folderName + File.separator + ".git");
-        String defaultBranch = github.getRepository(owner + "/" + repoName).getDefaultBranch();
 
         Repository repo = new FileRepositoryBuilder().setGitDir(gitFile).build();
         try (Git git = Git.wrap(repo)) {
             stateHandler.addToState(Pair.of(owner, repoName), "Opening existing repo");
 
             gitUtil.checkout(git, defaultBranch);
-            git.pull();
+            git.pull().call();
             return git;
         } catch (Exception e) {
             return cloneRepo(owner, repoName, folderName);
@@ -66,7 +76,7 @@ public class RepositoryDownloader {
     private Git cloneRepo(String owner, String repoName, String folderName) throws GitAPIException, IOException {
         try {
             stateHandler.addToState(Pair.of(owner, repoName), "Waiting for download");
-            semaphore.acquire();
+            SEMAPHORE.acquire();
             stateHandler.addToState(Pair.of(owner, repoName), "Downloading repository");
             File folder = new File(folderName);
             deleteRepo(owner, repoName);
@@ -74,13 +84,7 @@ public class RepositoryDownloader {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
-            semaphore.release();
+            SEMAPHORE.release();
         }
-    }
-
-    public void deleteRepo(String owner, String repoName) throws IOException {
-        String folderName = "temp" + File.separator + "repos" + File.separator + owner + File.separator + repoName;
-        File folder = new File(folderName);
-        FileUtils.deleteDirectory(folder);
     }
 }

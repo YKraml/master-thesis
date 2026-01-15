@@ -1,13 +1,8 @@
 package model;
 
-public interface ProjectWritable extends IdWritable {
+public interface ProjectWritable {
 
     String repoOwner();
 
     String repoName();
-
-    @Override
-    default String id() {
-        return repoOwner() + "." + repoName();
-    }
 }

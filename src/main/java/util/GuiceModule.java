@@ -11,8 +11,7 @@ import org.kohsuke.github.GitHubBuilder;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 public class GuiceModule implements Module {
     @Override
@@ -27,16 +26,26 @@ public class GuiceModule implements Module {
 
     @Provides
     @Singleton
-    static GitHub provideGitHub() throws IOException {
-        GitHub gitHub = new GitHubBuilder().withOAuthToken(Constants.GITHUB_TOKEN).build();
+    static GitHub provideGitHub() throws IOException, ExecutionException, InterruptedException {
+        try {
+            GitHub gitHub = CompletableFuture.supplyAsync(() -> {
+                try {
+                    return new GitHubBuilder().withOAuthToken(Constants.GITHUB_TOKEN).build();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }).get(10, TimeUnit.SECONDS);
 
-        GHRateLimit rateLimit = gitHub.getRateLimit();
-        String text = "GitHub rate limits:\n" +
-                "Core: " + rateLimit.getCore() + "\n" +
-                "GraphQL:" + rateLimit.getGraphQL() + "\n";
-        System.out.println(text);
+            GHRateLimit rateLimit = gitHub.getRateLimit();
+            String text = "GitHub rate limits:\n" +
+                    "Core: " + rateLimit.getCore() + "\n" +
+                    "GraphQL:" + rateLimit.getGraphQL() + "\n";
+            System.out.println(text);
 
-        return gitHub;
+            return gitHub;
+        } catch (TimeoutException e) {
+            throw new RuntimeException("Could not get GitHub api connection. Timeout.");
+        }
     }
 
     @Provides
@@ -52,5 +61,4 @@ public class GuiceModule implements Module {
                 .followRedirects(HttpClient.Redirect.ALWAYS)
                 .build();
     }
-
 }

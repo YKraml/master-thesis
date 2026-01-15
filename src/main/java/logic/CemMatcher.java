@@ -21,34 +21,42 @@ public class CemMatcher {
         // Group control projects
         Map<String, List<CemProject>> controlStrata = candidatePool.stream().collect(Collectors.groupingBy(this::generateStratumKey));
 
-        List<CemProject> result = new ArrayList<>();
+        // Find twins for treated projects
+        List<CemProject> finalControlGroup = new ArrayList<>();
         for (String key : treatedStrata.keySet()) {
-            List<CemProject> controlsInBin = controlStrata.get(key);
-            List<CemProject> treatedInBin = treatedStrata.get(key);
+            List<CemProject> controlsBin = controlStrata.get(key);
+            List<CemProject> treatedBin = treatedStrata.get(key);
 
-            for (CemProject treated : treatedInBin) {
+            if (controlsBin == null) {
+                System.err.println("A twin could not be found for:" + key);
+                continue;
+            }
+
+            for (CemProject treated : treatedBin) {
 
                 // Get random control with same key
                 CemProject controlTwin;
                 try {
-                    controlTwin = controlsInBin.get(RANDOM.nextInt(controlsInBin.size()));
+                    controlTwin = controlsBin.get(RANDOM.nextInt(controlsBin.size()));
                 } catch (IllegalArgumentException e) {
-                    throw new RuntimeException("A twin could not be found for:" + key);
+                    System.err.println("A twin could not be found for:" + key);
+                    continue;
                 }
-                controlsInBin.remove(controlTwin);
+                controlsBin.remove(controlTwin);
 
                 //Create control project and add to list
-                result.add(new CemProject(
-                        controlTwin.id(),
+                finalControlGroup.add(new CemProject(
+                        controlTwin.repoOwner(),
+                        controlTwin.repoName(),
                         controlTwin.groupType(),
                         controlTwin.numberOfStars(),
-                        treated.ageAtLinterIntro(),
+                        treated.ageAtLinterIntros(),
                         controlTwin.creationYear())
                 );
             }
         }
 
-        return result;
+        return finalControlGroup;
     }
 
     private String generateStratumKey(CemProject project) {

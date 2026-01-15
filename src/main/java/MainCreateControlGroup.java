@@ -33,64 +33,50 @@ public class MainCreateControlGroup {
 
         List<CemProject> treatedProjects = new ArrayList<>();
         for (Proof proof : treatmentGroup) {
-            treatedProjects.addAll(convertToCemProjects(proof));
+            treatedProjects.add(convertToCemProjects(proof, CemProject.GroupType.TREATMENT));
         }
 
         List<CemProject> candidatePool = new ArrayList<>();
         for (Proof proof : controlGroupCandidates) {
-            candidatePool.add(convertToCemProjectsControl(proof));
+            candidatePool.add(convertToCemProjects(proof, CemProject.GroupType.CONTROL));
         }
 
         List<CemProject> finalControlGroup = cemMatcher.match(treatedProjects, candidatePool);
 
-        System.out.println("Writing CEM Projects");
-        for (Proof proof : treatmentGroup) {
-            List<CemProject> cemProjects = convertToCemProjects(proof);
+        System.out.println("Finished");
 
-            for (CemProject cemProject : cemProjects) {
-                cemProjectReaderWriter.write(cemProject);
-            }
-        }
-
+        // System.out.println("Writing CEM Projects");
+        // for (Proof proof : treatmentGroup) {
+        //     List<CemProject> cemProjects = convertToCemProjects(proof, CemProject.GroupType.CONTROL);
+        //     for (CemProject cemProject : cemProjects) {
+        //         cemProjectReaderWriter.write(cemProject);
+        //     }
+        // }
     }
 
-    private static List<CemProject> convertToCemProjects(Proof proof) {
-        List<CemProject> cemProjects = new ArrayList<>();
+    private static CemProject convertToCemProjects(Proof proof, CemProject.GroupType groupType) {
 
-        if (proof.linters().isEmpty()) {
-            System.err.println("No linters in project: " + proof.link());
+        if (groupType == CemProject.GroupType.CONTROL && !proof.linters().isEmpty()) {
+            System.err.println("Linters should be empty for control projects: " + proof.link());
         }
 
+        if (groupType == CemProject.GroupType.TREATMENT && proof.linters().isEmpty()) {
+            System.err.println("Linters should be non-empty for treatment projects: " + proof.link());
+        }
+
+        List<Double> ageAtLinterIntros = new ArrayList<>();
         for (Proof.LinterWithProof linterWithProof : proof.linters()) {
-            String repoOwner = proof.repoOwner();
-            String repoName = proof.repoName();
-            String id = repoOwner + "." + repoName + "." + linterWithProof.linterName();
-            CemProject.GroupType groupType = CemProject.GroupType.TREATMENT;
-            int numberOfStars = proof.numberOfStars();
             double ageAtLinterIntro = (linterWithProof.introductionTime() - proof.firstCommitTime()) / 60d / 60d / 24d / 365d;
-            String creationYear = String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear());
-            CemProject cemProject = new CemProject(id, groupType, numberOfStars, ageAtLinterIntro, creationYear);
-            cemProjects.add(cemProject);
-        }
-
-        return cemProjects;
-    }
-
-    private static CemProject convertToCemProjectsControl(Proof proof) {
-
-        if (!proof.linters().isEmpty()) {
-            throw new RuntimeException("Linters in project: " + proof.link());
+            ageAtLinterIntros.add(ageAtLinterIntro);
         }
 
         String repoOwner = proof.repoOwner();
         String repoName = proof.repoName();
-        String id = repoOwner + "." + repoName + ".CONTROL";
-        CemProject.GroupType groupType = CemProject.GroupType.TREATMENT;
+
         int numberOfStars = proof.numberOfStars();
-        double ageAtLinterIntro = -1;
+
         String creationYear = String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear());
 
-        return new CemProject(id, groupType, numberOfStars, ageAtLinterIntro, creationYear);
+        return new CemProject(repoOwner, repoName, groupType, numberOfStars, ageAtLinterIntros, creationYear);
     }
-
 }

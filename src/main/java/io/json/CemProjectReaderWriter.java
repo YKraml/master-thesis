@@ -18,11 +18,6 @@ public class CemProjectReaderWriter extends ReaderWriter<CemProject> {
     }
 
     @Override
-    public File getFile(String id) {
-        return new File(getFolderName() + File.separator + id + ".json");
-    }
-
-    @Override
     protected String getFolderName() {
         return "temp" + File.separator + "cem";
     }
