@@ -10,7 +10,8 @@ public record CemProject(
         String creationYear,
         String defaultBranch,
         int numberOfCommits,
-        List<Commit> linterCommits) implements ProjectWritable {
+        List<Commit> linterCommits,
+        List<Commit> allCommits) implements ProjectWritable {
 
     public enum GroupType {
         TREATMENT,

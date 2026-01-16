@@ -1,7 +1,7 @@
 package logic;
 
 import io.git.BareRepositoryDownloader;
-import io.json.CemProjectPairReaderWriter;
+import io.json.CemProjectReaderWriter;
 import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
 import model.CemProject;
@@ -10,23 +10,29 @@ import model.Proof;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZoneId;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class GroupsCreator {
 
     private final ProofReaderWriter proofReaderWriter;
-    private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
     private final CemMatcher cemMatcher;
+    private final CemProjectReaderWriter cemProjectReaderWriter;
     private final BareRepositoryDownloader bareRepositoryDownloader;
+    private final ExecutorService executorService;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, CemMatcher cemMatcher, BareRepositoryDownloader bareRepositoryDownloader) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, BareRepositoryDownloader bareRepositoryDownloader, ExecutorService executorService) {
         this.proofReaderWriter = proofReaderWriter;
-        this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
         this.cemMatcher = cemMatcher;
+        this.cemProjectReaderWriter = cemProjectReaderWriter;
         this.bareRepositoryDownloader = bareRepositoryDownloader;
+        this.executorService = executorService;
     }
 
     public void createTreatmentAndControlGroups() throws IOException {
@@ -37,19 +43,37 @@ public class GroupsCreator {
 
         // Group proofs into potential-treatment and potential-control
         System.out.println("Started converting");
-        Map<CemProject, Proof> treatedCandidates = new HashMap<>();
-        Map<CemProject, Proof> controlCandidates = new HashMap<>();
+        List<Proof> treatedCandidates = new ArrayList<>();
+        List<Proof> controlCandidates = new ArrayList<>();
         allProofs.forEach(proof -> {
             if (proof.linters().isEmpty()) {
-                controlCandidates.put(convertToCemProject(proof, CemProject.GroupType.CONTROL), proof);
+                controlCandidates.add(proof);
             } else {
-                treatedCandidates.put(convertToCemProject(proof, CemProject.GroupType.TREATMENT), proof);
+                treatedCandidates.add(proof);
             }
         });
+
+        // Create CemProjects for caching
+        createCemProjectsFiles(treatedCandidates, CemProject.GroupType.TREATMENT);
+        createCemProjectsFiles(controlCandidates, CemProject.GroupType.CONTROL);
 
         // Get final treatment-control-pairs
         System.out.println("Started matching");
         cemMatcher.matchAndSafe(treatedCandidates, controlCandidates);
+    }
+
+    private void createCemProjectsFiles(List<Proof> proofs, CemProject.GroupType groupType) {
+        AtomicInteger counter = new AtomicInteger(0);
+        CompletableFuture.allOf(proofs.stream().map(proof -> CompletableFuture.runAsync(() -> {
+            try {
+                if (cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).isEmpty()) {
+                    cemProjectReaderWriter.write(convertToCemProject(proof, groupType));
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(groupType + ": " + counter.incrementAndGet() + "/" + proofs.size());
+        }, executorService)).toList().toArray(new CompletableFuture[]{})).join();
     }
 
     private CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) {
@@ -61,6 +85,7 @@ public class GroupsCreator {
             System.err.println("Linters should be non-empty for treatment projects: " + proof.link());
         }
 
+        List<CemProject.Commit> commits = bareRepositoryDownloader.getCommits(proof.repoOwner(), proof.repoName(), proof.defaultBranch());
         return new CemProject(
                 proof.repoOwner(),
                 proof.repoName(),
@@ -68,9 +93,21 @@ public class GroupsCreator {
                 proof.numberOfStars(),
                 String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear()),
                 proof.defaultBranch(),
-                -1,
-                null
+                commits.size(),
+                getTreatedLinterCommits(proof, commits),
+                commits
         );
+    }
+
+    private static List<CemProject.Commit> getTreatedLinterCommits(Proof treatedProof, List<CemProject.Commit> commits) {
+        Set<String> treatedLinterCommitNames = treatedProof.linters().stream().map(Proof.LinterWithProof::introductionCommit).collect(Collectors.toSet());
+        List<CemProject.Commit> treatedLinterCommits = new ArrayList<>();
+        for (CemProject.Commit treatedCommit : commits) {
+            if (treatedLinterCommitNames.contains(treatedCommit.name())) {
+                treatedLinterCommits.add(treatedCommit);
+            }
+        }
+        return treatedLinterCommits;
     }
 
 }

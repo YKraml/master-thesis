@@ -1,0 +1,619 @@
+{
+  "repoOwner" : "nayuki",
+  "repoName" : "Reference-arithmetic-coding",
+  "groupType" : "CONTROL",
+  "numberOfStars" : 392,
+  "creationYear" : "2011",
+  "defaultBranch" : "master",
+  "numberOfCommits" : 152,
+  "linterCommits" : [ ],
+  "allCommits" : [ {
+    "name" : "9006c72956f0511a1eeba9029432c4ef294c96ae",
+    "time" : 1312390211,
+    "index" : 0
+  }, {
+    "name" : "f12d6575e2b5bae1b9edbb94196d07e8fbe65fe3",
+    "time" : 1312414089,
+    "index" : 1
+  }, {
+    "name" : "0950f051e665010501c30bd397045fb6f0d7c22e",
+    "time" : 1312508070,
+    "index" : 2
+  }, {
+    "name" : "aa74a6d9ab042347cb702eb509e5f32106b11727",
+    "time" : 1312508200,
+    "index" : 3
+  }, {
+    "name" : "6b9bc2071b9b1062ba8f270660a4c7c911247147",
+    "time" : 1312510542,
+    "index" : 4
+  }, {
+    "name" : "8fd02ec56c09e498e2941971c70b93290b03e14a",
+    "time" : 1312513286,
+    "index" : 5
+  }, {
+    "name" : "28ee50307eb2a2e689fdccd181d9c10e9d6b4ad7",
+    "time" : 1320529096,
+    "index" : 6
+  }, {
+    "name" : "d6bb4c15a07a345c55b4182ac42e7f9061453fc2",
+    "time" : 1320683505,
+    "index" : 7
+  }, {
+    "name" : "478fa3d47058c2622575d5195b4fab2e999abc4f",
+    "time" : 1321141616,
+    "index" : 8
+  }, {
+    "name" : "cb57600739d17f3e539492207bedac3a3b803c05",
+    "time" : 1321141946,
+    "index" : 9
+  }, {
+    "name" : "612fc058537199cb466e577186977982a30ba6d1",
+    "time" : 1321142628,
+    "index" : 10
+  }, {
+    "name" : "587d5c10a007b79da44884f8eb51331302b2893a",
+    "time" : 1321142928,
+    "index" : 11
+  }, {
+    "name" : "195cb50ddc72476f58e717773920409533020a16",
+    "time" : 1321551021,
+    "index" : 12
+  }, {
+    "name" : "e4f9a489e9609f3821e14598fe43406bcad28904",
+    "time" : 1321551368,
+    "index" : 13
+  }, {
+    "name" : "72cedce442f2d9a67fff4c67f43a0d2876589b12",
+    "time" : 1321551552,
+    "index" : 14
+  }, {
+    "name" : "6f97b58d09ef61a7a7ad1c1e85dc2daa7cba58b7",
+    "time" : 1321551796,
+    "index" : 15
+  }, {
+    "name" : "dbee32e3a352f5d06b173061138db9ade2d47860",
+    "time" : 1321552794,
+    "index" : 16
+  }, {
+    "name" : "f6523de7a897e51bf8c55323fc0adbeefad48733",
+    "time" : 1321553679,
+    "index" : 17
+  }, {
+    "name" : "2934dae05f3502623d5d6902ce960e2271e72190",
+    "time" : 1361202604,
+    "index" : 18
+  }, {
+    "name" : "9d259926b8edbaced46b0490271da1e007a95aa1",
+    "time" : 1361203122,
+    "index" : 19
+  }, {
+    "name" : "f701c4b1bd01a3e8a2f71246bfdf52a79149ec65",
+    "time" : 1361203842,
+    "index" : 20
+  }, {
+    "name" : "3074c0241d5800df92266cacecaa25240bc935cf",
+    "time" : 1361205245,
+    "index" : 21
+  }, {
+    "name" : "c69f0908646a3660a230ce00774578531c57e977",
+    "time" : 1361205875,
+    "index" : 22
+  }, {
+    "name" : "64819d13575535a0714f1d6879a1bc06df4a5824",
+    "time" : 1361207546,
+    "index" : 23
+  }, {
+    "name" : "c81c920759640705c690a9ebb520d3747fe841f4",
+    "time" : 1361236881,
+    "index" : 24
+  }, {
+    "name" : "8f98c68253110337e15db716bb0fbae00ea41cc7",
+    "time" : 1361657246,
+    "index" : 25
+  }, {
+    "name" : "0227f6124c478bcf6a084eda5468b20b8535457c",
+    "time" : 1361658205,
+    "index" : 26
+  }, {
+    "name" : "fb54171e4ddd361a14db03a513a0c3563aaf6810",
+    "time" : 1416428316,
+    "index" : 27
+  }, {
+    "name" : "25514d0cd690574e6bbaad8bdf8f36d7bcfb19b4",
+    "time" : 1454710094,
+    "index" : 28
+  }, {
+    "name" : "0c630be514869942af0ee31cc6f370cc90090807",
+    "time" : 1466532282,
+    "index" : 29
+  }, {
+    "name" : "1438b43340e17b64587d1960d79e2dd1bfa12b97",
+    "time" : 1466532414,
+    "index" : 30
+  }, {
+    "name" : "e1661a817182909c5a0d784d9e54268d25ee80d5",
+    "time" : 1466532656,
+    "index" : 31
+  }, {
+    "name" : "09df5d65d9eb74783dea762bf81c544ddecbad9c",
+    "time" : 1466532934,
+    "index" : 32
+  }, {
+    "name" : "f122f696c485e69ccf81d653d4ccf98dbc0f84e9",
+    "time" : 1466533131,
+    "index" : 33
+  }, {
+    "name" : "67dd5ce9ade1d03242a6d24f3209334387925bb9",
+    "time" : 1466533318,
+    "index" : 34
+  }, {
+    "name" : "2a7bbb77712cd074dccf770168fc62950c56dcb8",
+    "time" : 1466534281,
+    "index" : 35
+  }, {
+    "name" : "4035f1cc22ec77a57c31de1c998153fec5dd17cd",
+    "time" : 1466534374,
+    "index" : 36
+  }, {
+    "name" : "a343e30b762957feef62abe20b1c0496f4ab1a89",
+    "time" : 1466535215,
+    "index" : 37
+  }, {
+    "name" : "be015e4cded1f7d23c06f440c96129cab1327e43",
+    "time" : 1466535318,
+    "index" : 38
+  }, {
+    "name" : "1aca6bd4c07ea42a974883aa9fb55003a687e527",
+    "time" : 1466535387,
+    "index" : 39
+  }, {
+    "name" : "959a9b5c2880b96c02168582ffae18fdf662dc88",
+    "time" : 1466554116,
+    "index" : 40
+  }, {
+    "name" : "42b80250c6f0b4290701e71536bdeee3c390fb22",
+    "time" : 1466554443,
+    "index" : 41
+  }, {
+    "name" : "7a39f6889420fc28ebb789f498729b7d16273fec",
+    "time" : 1466554604,
+    "index" : 42
+  }, {
+    "name" : "93bc70d4a6c7a4b1807368710fc2ff80910def0d",
+    "time" : 1466554667,
+    "index" : 43
+  }, {
+    "name" : "4f1bff34e08d341559d5a181b22fc502f8bcfbf1",
+    "time" : 1466612312,
+    "index" : 44
+  }, {
+    "name" : "60a15d72cddbbe462e72855c377799195eeb5e25",
+    "time" : 1466612455,
+    "index" : 45
+  }, {
+    "name" : "f131e399a16718858a96dd6c37ba5a53e70a2602",
+    "time" : 1466612817,
+    "index" : 46
+  }, {
+    "name" : "f641db2be8339eb42363db47f110373a54480aaf",
+    "time" : 1466613866,
+    "index" : 47
+  }, {
+    "name" : "1c54964b016311fd436ddaf0076601e840d0f681",
+    "time" : 1466614958,
+    "index" : 48
+  }, {
+    "name" : "3509234c0a6e4d9e81267bf620fc71eb9c107ada",
+    "time" : 1466615067,
+    "index" : 49
+  }, {
+    "name" : "1d2ea4771421ffbc7d82524e720be7937627ec28",
+    "time" : 1466615096,
+    "index" : 50
+  }, {
+    "name" : "e8cf78d91d51e3c975ef37120e9e8241161fbd65",
+    "time" : 1466615359,
+    "index" : 51
+  }, {
+    "name" : "51b3d61649206ae94cbe50d0aad179ec5243e447",
+    "time" : 1466616156,
+    "index" : 52
+  }, {
+    "name" : "f0994dfec59a980ac15fa6801910029132252f11",
+    "time" : 1466656936,
+    "index" : 53
+  }, {
+    "name" : "8c2726d2eeb26bcbfebd7badba0be2af9df7149f",
+    "time" : 1466657156,
+    "index" : 54
+  }, {
+    "name" : "b4a73f42101e2e8b454b7b3f9e721e3af15c7a13",
+    "time" : 1466657299,
+    "index" : 55
+  }, {
+    "name" : "ab427c716883ff11a5d742b28575c06400f515ce",
+    "time" : 1466657394,
+    "index" : 56
+  }, {
+    "name" : "5542255815800cd67e63c5d9edbe5d2402b024fa",
+    "time" : 1466657616,
+    "index" : 57
+  }, {
+    "name" : "f586abb6944a89a47b1f3ba68acc87433b7e3e6a",
+    "time" : 1466657696,
+    "index" : 58
+  }, {
+    "name" : "09b2294062b02d38d62c7ab1f411c7478a53a8b7",
+    "time" : 1473111115,
+    "index" : 59
+  }, {
+    "name" : "4c7c481f18f901b07b92003c0b89b80d97d8be1b",
+    "time" : 1475554831,
+    "index" : 60
+  }, {
+    "name" : "2e4a29c261b62c930cdd50959cf398a5464addb0",
+    "time" : 1475555363,
+    "index" : 61
+  }, {
+    "name" : "80eec25098233721ee26d348f9b35fc70713bbc4",
+    "time" : 1475555621,
+    "index" : 62
+  }, {
+    "name" : "9f91f0a5c65e8bb8d17d003eedae0998d0dd7638",
+    "time" : 1475556032,
+    "index" : 63
+  }, {
+    "name" : "e622885b7b5c9782e62984db2e263562ac9b7c01",
+    "time" : 1475562093,
+    "index" : 64
+  }, {
+    "name" : "b25ef6bf7a5b604eefecebf8c3b4b5744d5b12e5",
+    "time" : 1475607920,
+    "index" : 65
+  }, {
+    "name" : "f9b6acf4926338f5739dca387518314ea52366a7",
+    "time" : 1475609153,
+    "index" : 66
+  }, {
+    "name" : "1e95accaa812185661ddd154a6204cb75bb3a8d4",
+    "time" : 1475610123,
+    "index" : 67
+  }, {
+    "name" : "f04ad7b732eb1fa0dd921b051c3406fa515aad75",
+    "time" : 1475610222,
+    "index" : 68
+  }, {
+    "name" : "b060702e93aabe3c7d911dfdcafe0b4e7b93dcf3",
+    "time" : 1475610700,
+    "index" : 69
+  }, {
+    "name" : "3fbfaffbf8cee1019906be8e4219d9359dde1939",
+    "time" : 1475610732,
+    "index" : 70
+  }, {
+    "name" : "f9a4f56415f77810d44a0d4192e4c7608555cb91",
+    "time" : 1475610919,
+    "index" : 71
+  }, {
+    "name" : "72e696488e7964679efee179e2567222abf6f2b7",
+    "time" : 1485308149,
+    "index" : 72
+  }, {
+    "name" : "2577f21e79171d201bcce24fd78d727d778d756b",
+    "time" : 1492916802,
+    "index" : 73
+  }, {
+    "name" : "0cd3c2f5e1c40d53ff123a47fe885824301f19d6",
+    "time" : 1511710923,
+    "index" : 74
+  }, {
+    "name" : "951d80d03be87ea789ef4bde56126e8eaff20d21",
+    "time" : 1511976670,
+    "index" : 75
+  }, {
+    "name" : "a1a23848552fc1188dcfe4642b5da1a5c3cb4502",
+    "time" : 1511976754,
+    "index" : 76
+  }, {
+    "name" : "5ee2b88464f66de2606b6d0b24f50bfd33273f20",
+    "time" : 1528840016,
+    "index" : 77
+  }, {
+    "name" : "89171531fb9e6eb2308f0b2c66f0a51df2a230da",
+    "time" : 1528840178,
+    "index" : 78
+  }, {
+    "name" : "88a991c42f235aa29c3c9dc960cc1ac3eb5e2010",
+    "time" : 1528840697,
+    "index" : 79
+  }, {
+    "name" : "6aacd0156bb189133e9d62fbb5446bc2080964aa",
+    "time" : 1528841364,
+    "index" : 80
+  }, {
+    "name" : "94e17371b014edd2ad6af96af1cd8501f6410cba",
+    "time" : 1529820990,
+    "index" : 81
+  }, {
+    "name" : "034b3f888ad25c8c3983d73b61c4a1fc4bd2cd16",
+    "time" : 1529821014,
+    "index" : 82
+  }, {
+    "name" : "320d793dab54db75825e90c87cf8ee970ad9477f",
+    "time" : 1529890026,
+    "index" : 83
+  }, {
+    "name" : "fd8f8917131cd223736db19e34f908f958bcfb21",
+    "time" : 1529892395,
+    "index" : 84
+  }, {
+    "name" : "b7f31de53e2c06261836b5b406bbe40850151851",
+    "time" : 1529892483,
+    "index" : 85
+  }, {
+    "name" : "018d0f67c484d23f1c8cbc0006c9452e0af9f472",
+    "time" : 1529892738,
+    "index" : 86
+  }, {
+    "name" : "78bd47946cd1b686ad0f58c2eef86dca55bf9324",
+    "time" : 1529893957,
+    "index" : 87
+  }, {
+    "name" : "53016f35c6923376bef5d5b6ef1df196d984e802",
+    "time" : 1529894084,
+    "index" : 88
+  }, {
+    "name" : "fdddba48e81de28f6198f8b6ff6e0769c397c74e",
+    "time" : 1529894554,
+    "index" : 89
+  }, {
+    "name" : "a7b309d04179b23f0a3bbbe538fa9a6a2f1e18fd",
+    "time" : 1529894730,
+    "index" : 90
+  }, {
+    "name" : "f5bf710f39da2bdc96903021b02ecf43c136257d",
+    "time" : 1529894844,
+    "index" : 91
+  }, {
+    "name" : "ab5b4c43f5e36b3d6b79ed04633bb80eaab2f724",
+    "time" : 1529894895,
+    "index" : 92
+  }, {
+    "name" : "cc9a8173cc38a84cde160243a08930af281d3290",
+    "time" : 1529896124,
+    "index" : 93
+  }, {
+    "name" : "756798b1f4d33516cec5f914b291436fd1ee8d4d",
+    "time" : 1529997232,
+    "index" : 94
+  }, {
+    "name" : "347205c42e8ca37793c8f4d22488b87bcef3ffad",
+    "time" : 1529997356,
+    "index" : 95
+  }, {
+    "name" : "6da9271538a89062a88ebb8321a0b07e60681ab4",
+    "time" : 1529997439,
+    "index" : 96
+  }, {
+    "name" : "9cbe8945ecbec15fe89a27db01824c6eba1bc4e5",
+    "time" : 1530051259,
+    "index" : 97
+  }, {
+    "name" : "5741cbfdf1e6a3b44b12926565c3f568305004c1",
+    "time" : 1530051981,
+    "index" : 98
+  }, {
+    "name" : "074b5c0c22c41e343a86f9d52a525eadb66dacb5",
+    "time" : 1530052227,
+    "index" : 99
+  }, {
+    "name" : "eda9395f11b88bd142dbc730749c8afa658f504d",
+    "time" : 1530053321,
+    "index" : 100
+  }, {
+    "name" : "e462968c2f308b9ebfe6a013a57d5fdf0442f0cb",
+    "time" : 1530055366,
+    "index" : 101
+  }, {
+    "name" : "f863c66b2934bdf5b6e672309185975964c5869f",
+    "time" : 1530169491,
+    "index" : 102
+  }, {
+    "name" : "cf385e049007259e3da62aade6569fb89bdfbcdc",
+    "time" : 1530169796,
+    "index" : 103
+  }, {
+    "name" : "b2ada21f24c5af5dde243a795d133493d255a1cd",
+    "time" : 1530170006,
+    "index" : 104
+  }, {
+    "name" : "279d21c3ffa765b1536fcc22f74087fa64ecd464",
+    "time" : 1530170232,
+    "index" : 105
+  }, {
+    "name" : "be0993a9e64076515c823b7a903a11267e1b02fe",
+    "time" : 1530217512,
+    "index" : 106
+  }, {
+    "name" : "1c9919ebb082961cb694fa7a6e3d36fa1437cded",
+    "time" : 1530219857,
+    "index" : 107
+  }, {
+    "name" : "66241cb270e84cd3235fc6f6768a0277ba580c55",
+    "time" : 1530220070,
+    "index" : 108
+  }, {
+    "name" : "b7031d50a0fa3bff21734c5ab817b2a154b41b3b",
+    "time" : 1530220362,
+    "index" : 109
+  }, {
+    "name" : "d086bd75683995175f17abc7e1dedd75013d4989",
+    "time" : 1530220499,
+    "index" : 110
+  }, {
+    "name" : "eea4042b31b9d2024793c8a5c3afcd95eaf1696a",
+    "time" : 1530220823,
+    "index" : 111
+  }, {
+    "name" : "bec017d9aa76b561e9f1b2a70d8cb8e3e76741fa",
+    "time" : 1530221420,
+    "index" : 112
+  }, {
+    "name" : "b0617eba8e1dd5d7ac39c18fc24f118af4e54896",
+    "time" : 1530221632,
+    "index" : 113
+  }, {
+    "name" : "7077ca9275c60ee5c2ba2b9f1c59b0fbf3119123",
+    "time" : 1530221889,
+    "index" : 114
+  }, {
+    "name" : "91025ec2beabdd0ce5c713169693c0866b841394",
+    "time" : 1530222240,
+    "index" : 115
+  }, {
+    "name" : "c1ee53a498f19ccbb30c8fea4655f96393da2897",
+    "time" : 1530222566,
+    "index" : 116
+  }, {
+    "name" : "5bee5f8f8bdaf3f7dbadfa906d3201045999902e",
+    "time" : 1530222982,
+    "index" : 117
+  }, {
+    "name" : "13757336dae1d3e4cffa54df5edf233bd9ae7273",
+    "time" : 1530306313,
+    "index" : 118
+  }, {
+    "name" : "773305b9afc46adca660bc1188c1f1ce91a981ef",
+    "time" : 1530310768,
+    "index" : 119
+  }, {
+    "name" : "c9e991ebb838f08475610030226b78873d589490",
+    "time" : 1530311272,
+    "index" : 120
+  }, {
+    "name" : "8b970a4c6b554fcbd87d81002682bf10dab90984",
+    "time" : 1530339263,
+    "index" : 121
+  }, {
+    "name" : "343ea8069b2b56f831b7d1c357a95085be251260",
+    "time" : 1530380312,
+    "index" : 122
+  }, {
+    "name" : "cb04c03848f72d3ab0175b8c60452ef1eaa844ee",
+    "time" : 1530380496,
+    "index" : 123
+  }, {
+    "name" : "1e43435cdfaeced7caab5a57591910408e870bca",
+    "time" : 1530380508,
+    "index" : 124
+  }, {
+    "name" : "0379996948d601c717de0828d1ab57c1b1990c86",
+    "time" : 1530381004,
+    "index" : 125
+  }, {
+    "name" : "dedebc568bd570ec8bc30f70cb267c273972f897",
+    "time" : 1531283680,
+    "index" : 126
+  }, {
+    "name" : "68b6fc82a337be16586a01e5649c57f0a3942975",
+    "time" : 1531521987,
+    "index" : 127
+  }, {
+    "name" : "2ee80f1787cd87a95993fabf37b96050f493a1d1",
+    "time" : 1534892780,
+    "index" : 128
+  }, {
+    "name" : "1dfa7a1cf29f49df87a9f3afcb825de4095612f3",
+    "time" : 1536562958,
+    "index" : 129
+  }, {
+    "name" : "17e3d533745bf43d348ad6717fd3de25a5bff9e2",
+    "time" : 1537070913,
+    "index" : 130
+  }, {
+    "name" : "8575f3d84c1209f6726190552060b0f49ce4d331",
+    "time" : 1537071197,
+    "index" : 131
+  }, {
+    "name" : "3601ba837ea25dafd2715e6e466ab34576b58b36",
+    "time" : 1537071357,
+    "index" : 132
+  }, {
+    "name" : "a00bb0bc1c6d58b7017270c70c03d17570f49589",
+    "time" : 1537071766,
+    "index" : 133
+  }, {
+    "name" : "643474476e6b321c0f981412f79b58d5e1945147",
+    "time" : 1537072004,
+    "index" : 134
+  }, {
+    "name" : "001601bbfb441e2e8a4e2dd170bc53911708a73d",
+    "time" : 1537072897,
+    "index" : 135
+  }, {
+    "name" : "917ce91faad703ae85cd2a374717700f49dd726c",
+    "time" : 1537073470,
+    "index" : 136
+  }, {
+    "name" : "e92f08211f0d0742a0a335e78dfd366216344766",
+    "time" : 1537073612,
+    "index" : 137
+  }, {
+    "name" : "dcc02d8bbc1640ff4ed48f0a6cae40d629d4248b",
+    "time" : 1537074695,
+    "index" : 138
+  }, {
+    "name" : "259413ae649163b018913847e77714ce0d17fcfd",
+    "time" : 1537076172,
+    "index" : 139
+  }, {
+    "name" : "bac827ae7d2c814e8cbf1f4cc9077ce1397106c6",
+    "time" : 1537076236,
+    "index" : 140
+  }, {
+    "name" : "d4a11f69614fe1a0af9698d34abe8f0608b8248e",
+    "time" : 1537082418,
+    "index" : 141
+  }, {
+    "name" : "deb456ffc08f44fc1973c7836198222861bc2f87",
+    "time" : 1537128655,
+    "index" : 142
+  }, {
+    "name" : "7067bc97bf8b5d4797106632c8391dcd6ac403a3",
+    "time" : 1586834519,
+    "index" : 143
+  }, {
+    "name" : "2b03459323c3b38bfaa2623e7eaae2e3b5f3ea91",
+    "time" : 1586834664,
+    "index" : 144
+  }, {
+    "name" : "b96f3776b514dec33cb0c971a642a0711623fda8",
+    "time" : 1659975581,
+    "index" : 145
+  }, {
+    "name" : "3e18593b69844df8a91afdbdc40cbbc380b46f88",
+    "time" : 1659976685,
+    "index" : 146
+  }, {
+    "name" : "53795fe6d1ac021b8a77c463273c968a5dc2af6b",
+    "time" : 1659976777,
+    "index" : 147
+  }, {
+    "name" : "db1f07dc4fe6e9f69f94130f86b8c2cda17dc87a",
+    "time" : 1659976933,
+    "index" : 148
+  }, {
+    "name" : "f6744d9f71005313fc2cf1f9efa58a505095d7bc",
+    "time" : 1674114264,
+    "index" : 149
+  }, {
+    "name" : "7a933966b49bce07ffd0bda2934ec5569ea4fadf",
+    "time" : 1674114322,
+    "index" : 150
+  }, {
+    "name" : "fde1357935494f395b4d17ca7e9e897c226ad208",
+    "time" : 1674430609,
+    "index" : 151
+  } ]
+}

@@ -1,7 +1,7 @@
 package logic;
 
-import io.git.BareRepositoryDownloader;
 import io.json.CemProjectPairReaderWriter;
+import io.json.CemProjectReaderWriter;
 import jakarta.inject.Inject;
 import model.CemProject;
 import model.CemProjectPair;
@@ -9,34 +9,34 @@ import model.Proof;
 import util.Constants;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class CemMatcher {
 
-    private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 4;
+    private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 10;
 
-    private final BareRepositoryDownloader bareRepositoryDownloader;
     private final CemProjectPairReaderWriter projectPairReaderWriter;
+    private final CemProjectReaderWriter cemProjectReaderWriter;
 
     @Inject
-    public CemMatcher(BareRepositoryDownloader bareRepositoryDownloader, CemProjectPairReaderWriter projectPairReaderWriter) {
-        this.bareRepositoryDownloader = bareRepositoryDownloader;
+    public CemMatcher(CemProjectPairReaderWriter projectPairReaderWriter, CemProjectReaderWriter cemProjectReaderWriter) {
         this.projectPairReaderWriter = projectPairReaderWriter;
+        this.cemProjectReaderWriter = cemProjectReaderWriter;
     }
 
-    public void matchAndSafe(Map<CemProject, Proof> allTreatedProjects, Map<CemProject, Proof> allUntreatedProjects) {
+    public void matchAndSafe(List<Proof> allTreatedProofs, List<Proof> allControlProofs) throws IOException {
 
         // Group all treated projects
         System.out.println("Group all treated projects");
-        Map<String, List<CemProject>> treatedStrata = allTreatedProjects.keySet().stream()
-                .collect(Collectors.groupingBy(this::generateStratumKey));
+        Map<String, List<CemProject>> treatedStrata = createStrata(allTreatedProofs);
 
         // Group all control projects
         System.out.println("Group all control projects");
-        Map<String, List<CemProject>> controlStrata = allUntreatedProjects.keySet().stream()
-                .collect(Collectors.groupingBy(this::generateStratumKey));
+        Map<String, List<CemProject>> controlStrata = createStrata(allControlProofs);
 
         // Iterate over strata that exist in the treated set
         int k = 1;
@@ -60,56 +60,58 @@ public class CemMatcher {
             int numberOfMatches = Math.min(treatedBin.size(), controlsBin.size());
 
             // Create the twins
-            IntStream.range(0, numberOfMatches).parallel().forEach(i -> {
+            for (int i = 0; i < numberOfMatches; i++) {
                 CemProject treated = treatedBin.get(i);
                 CemProject control = controlsBin.get(i);
 
-                //Check if pair already exists
-                if (pairExists(treated)) {
-                    return;
-                }
-
-                List<CemProject.Commit> treatedCommits = bareRepositoryDownloader.getCommits(treated.repoOwner(), treated.repoName(), treated.defaultBranch());
-                List<CemProject.Commit> controlCommits = bareRepositoryDownloader.getCommits(control.repoOwner(), control.repoName(), control.defaultBranch());
-
-                List<CemProject.Commit> treatedLinterCommits = getTreatedLinterCommits(allTreatedProjects.get(treated), treatedCommits);
-                List<CemProject.Commit> controlLinterCommits = getControlLinterCommits(controlCommits, treatedCommits, treatedLinterCommits);
-
                 try {
-                    projectPairReaderWriter.write(new CemProjectPair(
-                            new CemProject(
-                                    treated.repoOwner(),
-                                    treated.repoName(),
-                                    treated.groupType(),
-                                    treated.numberOfStars(),
-                                    treated.creationYear(),
-                                    treated.defaultBranch(),
-                                    treatedCommits.size(),
-                                    treatedLinterCommits
-                            ),
-                            new CemProject(
-                                    control.repoOwner(),
-                                    control.repoName(),
-                                    control.groupType(),
-                                    control.numberOfStars(),
-                                    control.creationYear(),
-                                    control.defaultBranch(),
-                                    controlCommits.size(),
-                                    controlLinterCommits // Insert newly calculated faked linter commit list
-                            )));
+                    projectPairReaderWriter.write(createPair(treated, control));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-            });
+            }
         }
+        System.out.println("Finished loop");
     }
 
-    private boolean pairExists(CemProject treated) {
-        try {
-            return projectPairReaderWriter.getElement(treated.repoOwner(), treated.repoName()).isPresent();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    private static CemProjectPair createPair(CemProject treated, CemProject control) {
+        CemProject newTreated = new CemProject(
+                treated.repoOwner(),
+                treated.repoName(),
+                treated.groupType(),
+                treated.numberOfStars(),
+                treated.creationYear(),
+                treated.defaultBranch(),
+                treated.allCommits().size(),
+                treated.linterCommits(),
+                null
+        );
+
+        CemProject newControl = new CemProject(
+                control.repoOwner(),
+                control.repoName(),
+                control.groupType(),
+                control.numberOfStars(),
+                control.creationYear(),
+                control.defaultBranch(),
+                control.allCommits().size(),
+                getControlLinterCommits(control.allCommits(), treated.allCommits(), treated.linterCommits()), // Insert newly calculated faked linter commit list
+                null
+        );
+
+        return new CemProjectPair(newTreated, newControl);
+    }
+
+    private Map<String, List<CemProject>> createStrata(List<Proof> allTreatedProofs) {
+        return allTreatedProofs.stream()
+                .map(proof -> {
+                    try {
+                        return cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).get();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .collect(Collectors.groupingBy(this::generateStratumKey));
     }
 
     private static List<CemProject.Commit> getControlLinterCommits(List<CemProject.Commit> controlCommits, List<CemProject.Commit> treatedCommits, List<CemProject.Commit> treatedLinterCommits) {
@@ -124,41 +126,31 @@ public class CemMatcher {
         return controlLinterCommits;
     }
 
-    private static List<CemProject.Commit> getTreatedLinterCommits(Proof treatedProof, List<CemProject.Commit> treatedCommits) {
-        Set<String> treatedLinterCommitNames = treatedProof.linters().stream().map(Proof.LinterWithProof::introductionCommit).collect(Collectors.toSet());
-        List<CemProject.Commit> treatedLinterCommits = new ArrayList<>();
-        for (CemProject.Commit treatedCommit : treatedCommits) {
-            if (treatedLinterCommitNames.contains(treatedCommit.name())) {
-                treatedLinterCommits.add(treatedCommit);
-            }
-        }
-        return treatedLinterCommits;
-    }
-
     private String generateStratumKey(CemProject project) {
+
         // Group by number of stars
-        int stars = project.numberOfStars();
+        String starBin = createLogBin(project.numberOfStars());
 
-        // Log scale: 4 bins between 10 and 100, 100 and 1000, 1000 and 10.000, ...
-        String starBin;
-        if (stars < 100) {
-            starBin = "< 100";
-        } else {
-            double logValue = Math.log10(stars);
-
-            double lowerBoundExp = Math.floor(logValue * NUMBER_OF_BUCKETS_PER_POWER_OF_TEN) / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
-            double upperBoundExp = lowerBoundExp + 1 / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
-
-            long lowerBound = Math.round(Math.pow(10, lowerBoundExp));
-            long upperBound = Math.round(Math.pow(10, upperBoundExp));
-
-            starBin = lowerBound + "-" + upperBound;
-        }
+        // Group by number of commits
+        String commitsBin = createLogBin(project.numberOfCommits());
 
         // Group by year
         int year = Integer.parseInt(project.creationYear());
 
         // combine to key
-        return "STARS[" + starBin + "]_YEAR[" + year + "]";
+        return "STARS[%s]_YEAR[%d]_COMMITS[%s]".formatted(starBin, year, commitsBin);
+    }
+
+    private static String createLogBin(int commits) {
+        //Log scale: n bins between 10 and 100, 100 and 1000, 1000 and 10.000, ...
+        double logValue = Math.log10(commits);
+
+        double lowerBoundExp = Math.floor(logValue * NUMBER_OF_BUCKETS_PER_POWER_OF_TEN) / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
+        double upperBoundExp = lowerBoundExp + 1 / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
+
+        long lowerBound = Math.round(Math.pow(10, lowerBoundExp));
+        long upperBound = Math.round(Math.pow(10, upperBoundExp));
+
+        return lowerBound + "-" + upperBound;
     }
 }

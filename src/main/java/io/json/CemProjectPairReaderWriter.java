@@ -22,6 +22,6 @@ public class CemProjectPairReaderWriter extends ReaderWriter<CemProjectPair> {
 
     @Override
     protected String getFolderName() {
-        return "temp" + separator + "cem" + separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
+        return "temp" + separator + "cem_pairs" + separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }
 }
