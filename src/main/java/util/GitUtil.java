@@ -12,13 +12,15 @@ public class GitUtil {
 
     }
 
-    public void checkout(Git git, String commit) throws GitAPIException {
+    public Git checkout(Git git, String commit) throws GitAPIException {
         prepareCheckout(git);
         git.checkout().setName(commit).call();
+        return git;
     }
 
-    private void prepareCheckout(Git git) throws GitAPIException {
+    private Git prepareCheckout(Git git) throws GitAPIException {
         git.clean().setForce(true).setCleanDirectories(true).call();
         git.reset().setMode(ResetCommand.ResetType.HARD).call();
+        return git;
     }
 }

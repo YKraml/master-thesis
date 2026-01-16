@@ -1,16 +1,22 @@
 package model;
 
-public record CemProject(String repoOwner,
-                         String repoName,
-                         GroupType groupType,
-                         int numberOfStars,
-                         int analysisStartTime,
-                         int analysisEndTime,
-                         String creationYear,
-                         String defaultBranch) implements ProjectWritable {
+import java.util.List;
+
+public record CemProject(
+        String repoOwner,
+        String repoName,
+        GroupType groupType,
+        int numberOfStars,
+        String creationYear,
+        String defaultBranch,
+        int numberOfCommits,
+        List<Commit> linterCommits) implements ProjectWritable {
 
     public enum GroupType {
         TREATMENT,
         CONTROL
+    }
+
+    public record Commit(String name, int time, int index) {
     }
 }

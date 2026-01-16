@@ -1,6 +1,6 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.git.RepositoryDownloader;
+import io.git.FullRepositoryDownloader;
 import logic.LinterFinder;
 import logic.LinterIntroductionFinder;
 import model.Linter;
@@ -21,14 +21,14 @@ import java.io.IOException;
 @Execution(ExecutionMode.CONCURRENT)
 class LinterIntroductionFinderTest {
 
-    private static final RepositoryDownloader REPOSITORY_DOWNLOADER;
+    private static final FullRepositoryDownloader REPOSITORY_DOWNLOADER;
     private static final LinterFinder LINTER_FINDER;
     private static final LinterIntroductionFinder LINTER_INTRODUCTION_FINDER;
     private static final GitHub GIT_HUB;
 
     static {
         Injector injector = Guice.createInjector(new GuiceModule());
-        REPOSITORY_DOWNLOADER = injector.getInstance(RepositoryDownloader.class);
+        REPOSITORY_DOWNLOADER = injector.getInstance(FullRepositoryDownloader.class);
         LINTER_FINDER = injector.getInstance(LinterFinder.class);
         LINTER_INTRODUCTION_FINDER = injector.getInstance(LinterIntroductionFinder.class);
         GIT_HUB = injector.getInstance(GitHub.class);

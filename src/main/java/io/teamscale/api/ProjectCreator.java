@@ -9,6 +9,7 @@ import java.net.http.HttpResponse;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 
 public class ProjectCreator {
 
@@ -94,10 +95,27 @@ public class ProjectCreator {
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
 
-        calendar.setTimeInMillis(cemProject.analysisStartTime() * 1000L);
+        int analysisStartTime = Integer.MAX_VALUE;
+        int analysisEndTime = Integer.MIN_VALUE;
+        List<CemProject.Commit> linterCommits = cemProject.linterCommits();
+        for (CemProject.Commit linterCommit : linterCommits) {
+            int introductionTime = linterCommit.time();
+
+            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
+            if (start < analysisStartTime) {
+                analysisStartTime = start;
+            }
+
+            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
+            if (end > analysisEndTime) {
+                analysisEndTime = end;
+            }
+        }
+
+        calendar.setTimeInMillis(analysisStartTime * 1000L);
         String startData = formatter.format(calendar.getTime());
 
-        calendar.setTimeInMillis(cemProject.analysisEndTime() * 1000L);
+        calendar.setTimeInMillis(analysisEndTime * 1000L);
         String endDate = formatter.format(calendar.getTime());
 
         createSingleProject(cemProject.repoOwner(), cemProject.repoName(), cemProject.defaultBranch(), startData, endDate);

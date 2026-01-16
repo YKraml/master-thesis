@@ -32,6 +32,7 @@ public class ProjectDeleter {
     }
 
     public synchronized void deleteProject(String projectName) throws IOException, InterruptedException {
+        System.out.println();
         System.out.println("Deleting: " + projectName);
 
         String path = "/api/v2025.8/projects/"

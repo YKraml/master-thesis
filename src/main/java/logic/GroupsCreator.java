@@ -1,30 +1,32 @@
 package logic;
 
+import io.git.BareRepositoryDownloader;
 import io.json.CemProjectPairReaderWriter;
 import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
 import model.CemProject;
-import model.CemProjectPair;
 import model.Proof;
 
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZoneId;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 public class GroupsCreator {
 
     private final ProofReaderWriter proofReaderWriter;
     private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
     private final CemMatcher cemMatcher;
+    private final BareRepositoryDownloader bareRepositoryDownloader;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, CemMatcher cemMatcher) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, CemMatcher cemMatcher, BareRepositoryDownloader bareRepositoryDownloader) {
         this.proofReaderWriter = proofReaderWriter;
         this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
         this.cemMatcher = cemMatcher;
+        this.bareRepositoryDownloader = bareRepositoryDownloader;
     }
 
     public void createTreatmentAndControlGroups() throws IOException {
@@ -34,40 +36,23 @@ public class GroupsCreator {
         System.out.println();
 
         // Group proofs into potential-treatment and potential-control
-        List<Proof> potentialTreatmentCandidates = new ArrayList<>();
-        List<Proof> potentialControlCandidates = new ArrayList<>();
-        for (Proof proof : allProofs) {
+        System.out.println("Started converting");
+        Map<CemProject, Proof> treatedCandidates = new HashMap<>();
+        Map<CemProject, Proof> controlCandidates = new HashMap<>();
+        allProofs.forEach(proof -> {
             if (proof.linters().isEmpty()) {
-                potentialControlCandidates.add(proof);
+                controlCandidates.put(convertToCemProject(proof, CemProject.GroupType.CONTROL), proof);
             } else {
-                potentialTreatmentCandidates.add(proof);
+                treatedCandidates.put(convertToCemProject(proof, CemProject.GroupType.TREATMENT), proof);
             }
-        }
+        });
 
-        // Get final-treatment and final-control groups
-        List<CemProject> allTreatmentProjects = potentialTreatmentCandidates
-                .stream()
-                .map(proof -> convertToCemProject(proof, CemProject.GroupType.TREATMENT))
-                .toList();
-        List<CemProject> allControlProjects = potentialControlCandidates
-                .stream()
-                .map(proof -> convertToCemProject(proof, CemProject.GroupType.CONTROL))
-                .collect(Collectors.toList());
-
-        List<CemProjectPair> pairs = cemMatcher
-                .match(allTreatmentProjects, allControlProjects)
-                .stream()
-                .sorted((o1, o2) -> o2.treated().numberOfStars() - o1.treated().numberOfStars())
-                .toList();
-
-        cemProjectPairReaderWriter.deleteFolder();
-        for (CemProjectPair pair : pairs) {
-            cemProjectPairReaderWriter.write(pair);
-        }
+        // Get final treatment-control-pairs
+        System.out.println("Started matching");
+        cemMatcher.matchAndSafe(treatedCandidates, controlCandidates);
     }
 
-    private static CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) {
-
+    private CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) {
         if (groupType == CemProject.GroupType.CONTROL && !proof.linters().isEmpty()) {
             System.err.println("Linters should be empty for control projects: " + proof.link());
         }
@@ -81,10 +66,11 @@ public class GroupsCreator {
                 proof.repoName(),
                 groupType,
                 proof.numberOfStars(),
-                proof.analysisStartTime(),
-                proof.analysisEndTime(),
                 String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear()),
-                proof.defaultBranch()
+                proof.defaultBranch(),
+                -1,
+                null
         );
     }
+
 }

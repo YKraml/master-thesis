@@ -8,6 +8,6 @@ public record CemProjectPair(CemProject treated, CemProject control) implements 
 
     @Override
     public String repoName() {
-        return "(%s.%s)".formatted(treated.repoOwner(), treated.repoName());
+        return "(%s.%s)".formatted(control.repoOwner(), control.repoName());
     }
 }

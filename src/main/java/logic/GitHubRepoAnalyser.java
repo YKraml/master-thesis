@@ -1,6 +1,6 @@
 package logic;
 
-import io.git.RepositoryDownloader;
+import io.git.FullRepositoryDownloader;
 import io.json.GitHubRepositoryReaderWriter;
 import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
@@ -26,7 +26,7 @@ import static util.Constants.SIZE_2;
 
 public class GitHubRepoAnalyser {
 
-    private final RepositoryDownloader repositoryDownloader;
+    private final FullRepositoryDownloader fullRepositoryDownloader;
     private final LinterFinder linterFinder;
     private final LinterIntroductionFinder linterIntroductionFinder;
     private final ProofReaderWriter proofReaderWriter;
@@ -35,8 +35,8 @@ public class GitHubRepoAnalyser {
     private final GitHubRepositoryReaderWriter gitHubRepositoryReaderWriter;
 
     @Inject
-    public GitHubRepoAnalyser(RepositoryDownloader repositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, StateHandler stateHandler, FilteredManager filteredManager, GitHubRepositoryReaderWriter gitHubRepositoryReaderWriter) {
-        this.repositoryDownloader = repositoryDownloader;
+    public GitHubRepoAnalyser(FullRepositoryDownloader fullRepositoryDownloader, LinterFinder linterFinder, LinterIntroductionFinder linterIntroductionFinder, ProofReaderWriter proofReaderWriter, StateHandler stateHandler, FilteredManager filteredManager, GitHubRepositoryReaderWriter gitHubRepositoryReaderWriter) {
+        this.fullRepositoryDownloader = fullRepositoryDownloader;
         this.linterFinder = linterFinder;
         this.linterIntroductionFinder = linterIntroductionFinder;
         this.proofReaderWriter = proofReaderWriter;
@@ -72,7 +72,7 @@ public class GitHubRepoAnalyser {
             throw new RuntimeException("Repo too large!");
         }
 
-        try (Git git = repositoryDownloader.getRepo(repoOwner, repoName, defaultBranch)) {
+        try (Git git = fullRepositoryDownloader.getRepo(repoOwner, repoName, defaultBranch)) {
             return searchForProof(repoOwner, repoName, git, defaultBranch, numberOfStars);
         }
     }
