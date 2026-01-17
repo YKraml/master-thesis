@@ -2,18 +2,22 @@ package io.csv;
 
 import io.json.CombinedDataReaderWriter;
 import jakarta.inject.Inject;
+import model.CemProject.GroupType;
 import model.CombinedData;
-import model.Linter;
-import model.Proof;
+import model.Proof.LinterWithProof;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.stream.IntStream;
+
+import static java.io.File.separator;
+import static model.CemProject.Commit;
 
 public class TimeSeriesCsvCreator implements CsvCreator {
 
-    private static final List<Integer> DAYS = getDays();
+    private static final int[] DAYS = getDays();
     private final CombinedDataReaderWriter combinedDataReaderWriter;
 
     @Inject
@@ -23,111 +27,122 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
     @Override
     public void startCreatingCsvs() throws IOException {
-        System.out.println("Starting ProjectCsvCreator");
+        System.out.println("Starting TimeSeriesCsvCreator");
 
-        List<LinterTimeData> linterTimeDataList = new ArrayList<>();
-        for (CombinedData combinedData : combinedDataReaderWriter.readAll()) {
-            Proof proof = combinedData.proof();
+        List<CombinedData> combinedData = combinedDataReaderWriter.readAll();
 
-            for (Proof.LinterWithProof linterWithProof : proof.linters()) {
-                Linter linter = Linter.valueOf(linterWithProof.linterName());
-                int introductionTime = linterWithProof.introductionTime();
-                linterTimeDataList.add(new LinterTimeData(linter, introductionTime, combinedData, proof));
-            }
-        }
+        List<CombinedData> treatedData = combinedData.stream().filter(TimeSeriesCsvCreator::isTreatment).toList();
+        List<CombinedData> controlData = combinedData.stream().filter(TimeSeriesCsvCreator::isControl).toList();
 
-        Map<Linter, List<LinterTimeData>> bucketOne = new HashMap<>();
-
-        for (Linter linter : Linter.values()) {
-            bucketOne.put(linter, new ArrayList<>());
-        }
-
-        for (LinterTimeData linterTimeData : linterTimeDataList) {
-            Linter linter = linterTimeData.linter();
-            bucketOne.get(linter).add(linterTimeData);
-        }
-
-        //save bucket
-        saveBucket(bucketOne, "bucket_one");
+        createCsvFiles(GroupType.TREATMENT, treatedData);
+        createCsvFiles(GroupType.CONTROL, controlData);
     }
 
-    private void saveBucket(Map<Linter, List<LinterTimeData>> bucket, String bucketName) throws IOException {
-        List<LinterTimeData> all = bucket.entrySet().stream().flatMap(s -> s.getValue().stream()).toList();
-        createCsvFile(bucketName, "ALL", all);
-
-        for (Map.Entry<Linter, List<LinterTimeData>> linterListEntry : bucket.entrySet()) {
-            createCsvFile(bucketName, linterListEntry.getKey().name(), linterListEntry.getValue());
+    private void createCsvFiles(GroupType groupType, List<CombinedData> combinedDataList) throws IOException {
+        for (CombinedData combinedData : combinedDataList) {
+            createCsvFiles(groupType, combinedData);
         }
     }
 
-    private void createCsvFile(String bucketName, String linterName, List<LinterTimeData> linterTimeData) throws IOException {
+    private void createCsvFiles(GroupType groupType, CombinedData combinedData) throws IOException {
+        String repoOwner = combinedData.repoOwner();
+        String repoName = combinedData.repoName();
+
         //Ignore empty data sets
-        if (linterTimeData.isEmpty()) {
-            System.out.println(bucketName + "/" + linterName + " - Entries are empty. Throw out!");
+        if (combinedData.entries().isEmpty()) {
+            System.out.printf("No entries found in %s.%s %n", repoOwner, repoName);
             return;
         }
 
-        //create file
-        String folderName = "mixed.effects.models" + File.separator + "data" + File.separator + "time_series";
+        //create folder
+        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + groupType.name().toLowerCase();
         new File(folderName).mkdirs();
-        File dataFile = new File(folderName + File.separator + linterName + ".csv");
+
+        // Connect linter commits with proofs
+        Map<Commit, Optional<LinterWithProof>> linterCommitsWithProof = new HashMap<>();
+        for (Commit linterCommit : combinedData.cemProject().linterCommits()) {
+            Optional<LinterWithProof> linterWithProof = combinedData
+                    .proof()
+                    .linters()
+                    .stream()
+                    .filter(linter -> linter.introductionCommit().equals(linterCommit.name()))
+                    .findFirst();
+            linterCommitsWithProof.put(linterCommit, linterWithProof);
+        }
+
+        // Create file for each linter
+        int i = 0;
+        for (Map.Entry<Commit, Optional<LinterWithProof>> entry : linterCommitsWithProof.entrySet()) {
+            createFile(combinedData, entry, i, folderName);
+            i++;
+        }
+
+    }
+
+    private static void createFile(CombinedData combinedData, Map.Entry<Commit, Optional<LinterWithProof>> linterCommitWithProof, int i, String folderName) throws IOException {
+
+        // Extracting some infos from the given data
+        String repoOwner = combinedData.repoOwner();
+        String repoName = combinedData.repoName();
+
+        Commit linterCommit = linterCommitWithProof.getKey();
+        int introductionTime = linterCommit.time();
+        double introduction_time_relative_to_first_commit_time = (introductionTime - combinedData.proof().firstCommitTime()) / 60d / 60d / 24 / 365d;
+
+        // Create treemap to find latest commit at a specific time
+        NavigableMap<Integer, CombinedData.Entry> entryByTime = new TreeMap<>();
+        for (CombinedData.Entry entry : combinedData.entries()) {
+            entryByTime.put(entry.time(), entry);
+        }
+
+        // Creating id for file name and id column
+        Optional<LinterWithProof> linterWithProof = linterCommitWithProof.getValue();
+        String linterName = linterWithProof.map(LinterWithProof::linterName).orElse("CONTROL" + i);
+        String id = repoOwner + "." + repoName + "." + linterName;
+
+        // Create file
+        File dataFile = new File(folderName + separator + id + ".csv");
         dataFile.createNewFile();
 
-        //Write into csv file
-        System.out.println("Writing file: " + bucketName + "/" + dataFile.getName());
+        // Write into file
         try (PrintWriter pw = new PrintWriter(dataFile)) {
-            pw.println("id," + CombinedData.Entry.csvHeader() + ",intervention,t,t_pre,t_post,relative_introduction_time");
+            pw.println("id,relative_introduction_time," + CombinedData.Entry.csvHeader() + ",intervention,t");
 
-            for (LinterTimeData date : linterTimeData) {
-                int introductionTime = date.time();
-                double introduction_time_relative_to_first_commit_time = (introductionTime - date.proof.firstCommitTime());
-                if (introduction_time_relative_to_first_commit_time < 0) {
-                    System.out.println();
+            // For each week (two years in each direction) one row is written
+            for (int day : DAYS) {
+
+                int pointInSeconds = day * 24 * 60 * 60;
+                int time = introductionTime + pointInSeconds;
+                Map.Entry<Integer, CombinedData.Entry> floorEntry = entryByTime.floorEntry(time);
+                if (floorEntry == null) {
+                    continue;
                 }
 
-                CombinedData combinedData = date.result();
+                CombinedData.Entry floorEntryValue = floorEntry.getValue();
+                int intervention = day < 0 ? 0 : 1;
 
-                NavigableMap<Integer, CombinedData.Entry> entryByTime = new TreeMap<>();
-                for (CombinedData.Entry entry : combinedData.entries()) {
-                    entryByTime.put(entry.time(), entry);
-                }
-
-                for (int point : DAYS) {
-
-                    int pointInSeconds = point * 24 * 60 * 60;
-                    int time = introductionTime + pointInSeconds;
-                    Map.Entry<Integer, CombinedData.Entry> floorEntry = entryByTime.floorEntry(time);
-                    if (floorEntry == null) {
-                        continue;
-                    }
-                    CombinedData.Entry entry = floorEntry.getValue();
-
-                    String id = combinedData.repoOwner() + "." + combinedData.repoName() + "." + date.linter().name();
-                    int intervention = point < 0 ? 0 : 1;
-                    int t = point;
-                    int t_pre = t * (1 - intervention);
-                    int t_post = t * intervention;
-
-                    pw.println(id + "," + entry.csvLine() + "," + intervention + "," + t + "," + t_pre + "," + t_post + "," + introduction_time_relative_to_first_commit_time);
-                }
+                pw.println(id + ","
+                        + introduction_time_relative_to_first_commit_time + ","
+                        + floorEntryValue.csvLine() + ","
+                        + intervention + ","
+                        + day);
             }
         }
     }
 
-    private static List<Integer> getDays() {
-        List<Integer> points = new ArrayList<>();
-
+    private static int[] getDays() {
         int start = -1 * 7 * 52 * 2;
         int end = 7 * 52 * 2;
         int jump = 7;
 
-        for (int i = start; i <= end; i = i + jump) {
-            points.add(i);
-        }
-
-        return points;
+        return IntStream.iterate(start, i -> i <= end, i -> i + jump).toArray();
     }
 
-    private record LinterTimeData(Linter linter, int time, CombinedData result, Proof proof) {
+    private static boolean isTreatment(CombinedData project) {
+        return project.cemProject().groupType().equals(GroupType.TREATMENT);
+    }
+
+    private static boolean isControl(CombinedData project) {
+        return project.cemProject().groupType().equals(GroupType.CONTROL);
     }
 }

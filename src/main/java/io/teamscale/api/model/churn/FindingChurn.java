@@ -9,14 +9,4 @@ public record FindingChurn(
         List<Finding> findingsInChangedCode,
         List<Finding> removedFindings,
         List<Finding> findingsRemovedInBranch) {
-
-    public static FindingChurn empty(int time) {
-        return new FindingChurn(
-                new Commit("INSERTED", "INSERTED", ((long) time) * 1000),
-                List.of(),
-                List.of(),
-                List.of(),
-                List.of(),
-                List.of());
-    }
 }

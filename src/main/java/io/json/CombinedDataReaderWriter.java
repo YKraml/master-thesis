@@ -2,8 +2,11 @@ package io.json;
 
 import jakarta.inject.Inject;
 import model.CombinedData;
+import util.Constants;
 
 import java.io.File;
+
+import static java.io.File.separator;
 
 public class CombinedDataReaderWriter extends ReaderWriter<CombinedData> {
 
@@ -19,6 +22,6 @@ public class CombinedDataReaderWriter extends ReaderWriter<CombinedData> {
 
     @Override
     protected String getFolderName() {
-        return "temp" + File.separator + "combined_data";
+        return "temp" + File.separator + "combined_data" + separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }
 }

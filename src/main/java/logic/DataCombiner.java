@@ -6,6 +6,7 @@ import io.teamscale.api.model.churn.FindingChurn;
 import io.teamscale.api.model.cleaned.CleanedMetrics;
 import io.teamscale.api.model.cleaned.TeamscaleData;
 import io.teamscale.api.model.cleaned.TeamscaleDataEntry;
+import model.CemProject;
 import model.CombinedData;
 import model.Proof;
 import org.apache.commons.lang3.tuple.Pair;
@@ -22,11 +23,11 @@ public class DataCombiner {
         this.stateHandler = stateHandler;
     }
 
-    public CombinedData combineData(Proof proof, TeamscaleData data) {
+    public CombinedData combineData(Proof proof, TeamscaleData data, CemProject cemProject) {
         String repoOwner = data.repoOwner();
         String repoName = data.repoName();
 
-        return new CombinedData(repoOwner, repoName, proof, createEntriesFromData(repoOwner, repoName, data));
+        return new CombinedData(repoOwner, repoName, proof, cemProject, createEntriesFromData(repoOwner, repoName, data));
     }
 
     private List<CombinedData.Entry> createEntriesFromData(String repoOwner, String repoName, TeamscaleData teamscaleData) {

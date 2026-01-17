@@ -2,6 +2,7 @@ package io.json;
 
 import io.teamscale.api.model.cleaned.TeamscaleData;
 import jakarta.inject.Inject;
+import util.Constants;
 
 import java.io.File;
 
@@ -19,6 +20,6 @@ public class TeamscaleDataReaderWriter extends ReaderWriter<TeamscaleData> {
 
     @Override
     protected String getFolderName() {
-        return "temp" + File.separator + "teamscale_data";
+        return "temp" + File.separator + "teamscale_data" + File.separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }
 }

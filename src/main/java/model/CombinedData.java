@@ -6,7 +6,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record CombinedData(String repoOwner, String repoName, Proof proof,
+public record CombinedData(String repoOwner,
+                           String repoName,
+                           Proof proof,
+                           CemProject cemProject,
                            List<Entry> entries) implements ProjectWritable {
 
     public record Entry(

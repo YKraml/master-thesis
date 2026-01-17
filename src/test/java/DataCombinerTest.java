@@ -29,7 +29,7 @@ class DataCombinerTest {
     @Test
     void testAirbnbDeepLinkDispatch() throws Exception {
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom("airbnb", "DeepLinkDispatch");
-        CombinedData result = dataCombiner.combineData(null, teamscaleData);
+        CombinedData result = dataCombiner.combineData(null, teamscaleData, null);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 0, 0, 0, 0),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 4, 3, 12, 15),
@@ -41,7 +41,7 @@ class DataCombinerTest {
     @Test
     void testApacheMetron() throws Exception {
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom("apache", "metron");
-        CombinedData result = dataCombiner.combineData(null, teamscaleData);
+        CombinedData result = dataCombiner.combineData(null, teamscaleData, null);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 66, 5, 54, 76),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 852, 42, 266, 363),
@@ -54,7 +54,7 @@ class DataCombinerTest {
     @Disabled("Takes too long")
     void testTraccerTraccer() throws Exception {
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom("traccar", "traccar");
-        CombinedData result = dataCombiner.combineData(null, teamscaleData);
+        CombinedData result = dataCombiner.combineData(null, teamscaleData, null);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 290, 1, 67, 12),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 216, 12, 247, 162),
@@ -66,7 +66,7 @@ class DataCombinerTest {
     @Test
     void testGooglePhysicalWeb() throws Exception {
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom("google", "physical-web");
-        CombinedData result = dataCombiner.combineData(null, teamscaleData);
+        CombinedData result = dataCombiner.combineData(null, teamscaleData, null);
         Assertions.assertAll(
                 () -> assertFindingsAtEntry(result.entries().getFirst(), 2, 1, 2, 5),
                 () -> assertFindingsAtEntry(result.entries().getLast(), 21, 3, 20, 18),
