@@ -89,6 +89,8 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         int introductionTime = linterCommit.time();
         double introduction_time_relative_to_first_commit_time = (introductionTime - combinedData.proof().firstCommitTime()) / 60d / 60d / 24 / 365d;
 
+        int treated = combinedData.cemProject().groupType() == GroupType.TREATMENT ? 1 : 0;
+
         // Create treemap to find latest commit at a specific time
         NavigableMap<Integer, CombinedData.Entry> entryByTime = new TreeMap<>();
         for (CombinedData.Entry entry : combinedData.entries()) {
@@ -106,7 +108,7 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         // Write into file
         try (PrintWriter pw = new PrintWriter(dataFile)) {
-            pw.println("id,relative_introduction_time," + CombinedData.Entry.csvHeader() + ",intervention,t");
+            pw.println("id,relative_introduction_time,linter,treated," + CombinedData.Entry.csvHeader() + ",intervention,t");
 
             // For each week (two years in each direction) one row is written
             for (int day : DAYS) {
@@ -123,6 +125,8 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
                 pw.println(id + ","
                         + introduction_time_relative_to_first_commit_time + ","
+                        + linterName + ","
+                        + treated + ","
                         + floorEntryValue.csvLine() + ","
                         + intervention + ","
                         + day);

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class MainCreateControlProjects {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         Injector injector = Guice.createInjector(new GuiceModule());
         ProjectCreatorStarter projectCreatorStarter = injector.getInstance(ProjectCreatorStarter.class);
         projectCreatorStarter.createProjects(CemProject.GroupType.CONTROL);

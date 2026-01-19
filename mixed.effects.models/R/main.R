@@ -31,7 +31,15 @@ source("R/saver.R")
 source("R/shared.R")
 source("R/lagged.R")
 
-file_names <- list.files("data/time_series", pattern="*.csv", full.names=TRUE, recursive = TRUE)
+data_control <- get_data("control")
+data_treatment <- get_data("treatment")
+
+folder_name <- "treatment"
+data <- data_treatment
+
+folder_name <- "control"
+data <- data_control
+
 
 metrics <- list(
   findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC"),
@@ -54,46 +62,41 @@ metrics <- list(
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
 
-for (input_file in file_names) {
-  message("Processing: ", input_file)
-  data <- get_data_from_file(input_file)
-  linter_name <- gsub("data/time_series/|.csv", "", input_file)
+for (metric_key in names(metrics)) {
+  metric_data         <- metrics[[metric_key]]
+  metric_name         <- metric_data$name
 
-  for (metric_key in names(metrics)) {
-    metric_data         <- metrics[[metric_key]]
-    metric_name         <- metric_data$name
+  message(paste0(" - ", metric_name))
 
-    message(paste0(" - ", metric_name))
+  out_dir <- file.path("plots", "interrupted_time_series", folder_name, metric_name)
+  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
-    out_dir <- file.path("plots", "interrupted_time_series", linter_name, metric_name)
-    dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+  # Create model
+  message("   * Creating model")
+  f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric_name)
+  model <- lme(
+    fixed = as.formula(f_full),
+    random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+    data = data,
+    method = "ML",
+    control = lmeControl(opt = "optim")
+  )
 
-    # Create model
-    message("   * Creating model")
-    f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric_name)
-    model <- lme(
-      fixed = as.formula(f_full),
-      random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-      data = data,
-      method = "ML",
-      control = lmeControl(opt = "optim")
+  message("   * Drawing plots")
+  save_everything(
+    model = model,
+    data = data,
+    out_dir = out_dir,
+    linter_name = folder_name,
+    metric_data = metric_data
     )
 
-    message("   * Drawing plots")
-    save_everything(
-      model = model,
-      data = data,
-      out_dir = out_dir,
-      linter_name = linter_name,
-      metric_data = metric_data
-      )
-
-    message("   * Calculating anova")
-    f_null <- sprintf("%s ~ base_slope * relative_introduction_time", metric_name)
-    model_null <- update(model, fixed = as.formula(f_null))
-    capture.output(anova(model, model_null), file = file.path(out_dir, sprintf("%s.%s.anova.txt", linter_name, metric_name)))
-  }
+  message("   * Calculating anova")
+  f_null <- sprintf("%s ~ base_slope * relative_introduction_time", metric_name)
+  model_null <- update(model, fixed = as.formula(f_null))
+  capture.output(anova(model, model_null), file = file.path(out_dir, sprintf("%s.%s.anova.txt", folder_name, metric_name)))
 }
+
 
 
 

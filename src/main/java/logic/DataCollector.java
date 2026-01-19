@@ -15,6 +15,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
 public class DataCollector {
@@ -46,7 +47,7 @@ public class DataCollector {
 
         List<CemProject> cemProjects = projectPairReaderWriter.readAll()
                 .stream()
-                .flatMap(cemProjectPair -> Stream.of(cemProjectPair.treated(), cemProjectPair.control()))
+                .flatMap(cemProjectPair -> Stream.of(cemProjectPair.treated()))
                 .toList();
 
         // Collect data for each project
@@ -67,8 +68,17 @@ public class DataCollector {
 
     private CombinedData collectDataFor(String repoOwner, String repoName, List<CemProject> cemProjects) throws Exception {
         stateHandler.addToState(Pair.of(repoOwner, repoName), "Start collecting data");
-        Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
-        CemProject cemProject = cemProjects.stream().filter(project -> project.repoOwner().equals(repoOwner) && project.repoName().equals(repoName)).findFirst().orElseThrow();
+
+        Proof proof = proofReaderWriter
+                .getElement(repoOwner, repoName)
+                .orElseThrow(() -> new NoSuchElementException("No proof found for %s.%s".formatted(repoOwner, repoName)));
+
+        CemProject cemProject = cemProjects
+                .stream()
+                .filter(project -> project.repoOwner().equals(repoOwner) && project.repoName().equals(repoName))
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("No cem project found for %s.%s".formatted(repoOwner, repoName)));
+
         TeamscaleData teamscaleData = teamscaleDataDownloader.downloadDataFrom(repoOwner, repoName);
 
         return dataCombiner.combineData(proof, teamscaleData, cemProject);

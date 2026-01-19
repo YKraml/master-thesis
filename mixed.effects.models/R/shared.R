@@ -1,5 +1,38 @@
 # ------------------------------------------------------------------------------
 
+get_data <- function (folderName) {
+  files <- list.files(paste0("data/time_series/", folderName),
+                      pattern = "\\.csv$",  # Regex for ending in .csv
+                      full.names = TRUE,
+                      recursive = TRUE)
+
+  finalData <- NULL
+
+  for (file in files) {
+    dataNotClean <- read.csv(file)
+    data <- na.omit(dataNotClean)
+
+    data$t_norm <- data$t / 365
+    data$base_slope <- data$t / 365
+    data$intervention_slope <- data$t / 365 * data$intervention
+    data$intervention_jump <- data$intervention
+
+    data$t_pre <- NULL
+    data$t_post <- NULL
+    data$intervention <- NULL
+
+    data <- data[data$relative_introduction_time >= 0, ]
+
+    finalData <- rbind(finalData, data)
+  }
+
+  return(finalData)
+}
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
 get_data_from_file <- function (file_name) {
   dataNotClean <- read.csv(file_name)
   data <- na.omit(dataNotClean)
