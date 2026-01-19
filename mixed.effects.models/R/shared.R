@@ -1,59 +1,38 @@
 # ------------------------------------------------------------------------------
+library(data.table)
 
-get_data <- function (folderName) {
-  files <- list.files(paste0("data/time_series/", folderName),
-                      pattern = "\\.csv$",  # Regex for ending in .csv
+get_data <- function(folderName) {
+  files <- list.files(file.path("data/time_series", folderName),
+                      pattern = "\\.csv$",
                       full.names = TRUE,
                       recursive = TRUE)
 
-  finalData <- NULL
+  process_file <- function(file) {
+    dt <- fread(file)
+    dt <- na.omit(dt)
 
-  for (file in files) {
-    dataNotClean <- read.csv(file)
-    data <- na.omit(dataNotClean)
+    dt$t_norm <- dt$t / 365
+    dt$base_slope <- dt$t / 365
+    dt$intervention_slope <- dt$t / 365 * dt$intervention
+    dt$intervention_jump <- dt$intervention
 
-    data$t_norm <- data$t / 365
-    data$base_slope <- data$t / 365
-    data$intervention_slope <- data$t / 365 * data$intervention
-    data$intervention_jump <- data$intervention
+    # Delete this line later
+    dt$relative_introduction_time <- dt$relative_introduction_time / 60 / 60 / 24 / 365
 
-    data$t_pre <- NULL
-    data$t_post <- NULL
-    data$intervention <- NULL
+    dt[, c("t_pre", "t_post", "intervention") := NULL]
+    dt <- dt[dt$relative_introduction_time >= 0, ]
 
-    data <- data[data$relative_introduction_time >= 0, ]
-
-    finalData <- rbind(finalData, data)
+    return(dt)
   }
 
+  data_list <- lapply(files, process_file)
+
+  finalData <- rbindlist(data_list)
+  setDF(finalData)
   return(finalData)
 }
 
 # ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-
-get_data_from_file <- function (file_name) {
-  dataNotClean <- read.csv(file_name)
-  data <- na.omit(dataNotClean)
-
-  data$t_norm <- data$t / 365
-  data$base_slope <- data$t / 365
-  data$intervention_slope <- data$t_post / 365
-  data$intervention_jump <- data$intervention
-  data$relative_introduction_time <- data$relative_introduction_time / 60 / 60 / 24 / 365 # in years now
-
-  data$t_pre <- NULL
-  data$t_post <- NULL
-  data$intervention <- NULL
-
-  data <- data[data$relative_introduction_time >= 0, ]
-
-  return(data)
-}
-
-# ------------------------------------------------------------------------------
-
 
 # ------------------------------------------------------------------------------
 
@@ -62,6 +41,8 @@ save_png <- function(expression, file, width = 15, height = 10) {
   on.exit(dev.off())
   force(expression)
 }
+
+# ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
 
