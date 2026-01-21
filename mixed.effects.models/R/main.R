@@ -176,8 +176,94 @@ save_png(
 )
 
 
+# ------------------------------------------------------------------------------
+# CEM-Projects
+# ------------------------------------------------------------------------------
+
+control_data <- read.csv("data/cem_projects/control.csv")
+control_data$time_diff <- (control_data$linterCommitTime - control_data$firstCommitTime) / 60 / 60 / 24 / 365
+control_data$linter_intro_year <- control_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
+
+treated_data <- read.csv("data/cem_projects/treated.csv")
+treated_data$time_diff <- (treated_data$linterCommitTime - treated_data$firstCommitTime) / 60 / 60 / 24 / 365
+treated_data$linter_intro_year <- treated_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
+
+# Number of stars
+df_control <- data.frame(stars = control_data$numberOfStars, group = "Control")
+df_treated <- data.frame(stars = treated_data$numberOfStars, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = stars + 1, fill = group)) +
+  geom_density(alpha = 0.5) +
+  scale_x_log10() +
+  labs(title = "Star Count of Projects",
+       x = "Number of Stars",
+       y = "Density",
+       fill = "Group") +
+  theme_minimal()
 
 
+# Creation year
+df_control <- data.frame(year = control_data$creationYear, group = "Control")
+df_treated <- data.frame(year = treated_data$creationYear, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = year, fill = group)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Creation Years of Projects",
+       x = "Year",
+       y = "Density") +
+  theme_minimal()
+
+
+
+# Number of commits
+df_control <- data.frame(commits = control_data$numberOfCommits, group = "Control")
+df_treated <- data.frame(commits = treated_data$numberOfCommits, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = commits + 1, fill = group)) +
+  geom_density(alpha = 0.5) +
+  scale_x_log10() +
+  labs(title = "Number of Commits of Projects",
+       x = "Number of Commits",
+       y = "Density",
+       fill = "Group") +
+  theme_minimal()
+
+
+# Time between first commit and linter commit
+df_control <- data.frame(time_diff = control_data$time_diff, group = "Control")
+df_treated <- data.frame(time_diff = treated_data$time_diff, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = time_diff, fill = group)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Age at Linter Intro",
+       x = "Age at Linter Intro (Years)",
+       y = "Density") +
+  theme_minimal()
+
+# Year of linter intro (absolut)
+df_control <- data.frame(year = control_data$linter_intro_year, group = "Control")
+df_treated <- data.frame(year = treated_data$linter_intro_year, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = year, fill = group)) +
+  geom_density(alpha = 0.5) +
+  labs(title = "Introduction Year of Linter",
+       x = "Year",
+       y = "Density") +
+  theme_minimal()
+
+
+
+# Number of Commits in Analysis Window
+df_control <- data.frame(commits = control_data$numberOfCommitsInTwoYearWindow, group = "Control")
+df_treated <- data.frame(commits = treated_data$numberOfCommitsInTwoYearWindow, group = "Treated")
+combined_data <- rbind(df_control, df_treated)
+ggplot(combined_data, aes(x = commits, fill = group)) +
+  geom_density(alpha = 0.5) +
+  scale_x_log10() +
+  labs(title = "Distribution Comparison: Control vs Treated",
+       x = "Number of Commits in Analysis Window (Log Scale)",
+       y = "Density") +
+  theme_minimal()
 
 
 

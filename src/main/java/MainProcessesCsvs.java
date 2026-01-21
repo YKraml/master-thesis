@@ -1,6 +1,6 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.csv.ProjectCsvCreator;
+import io.csv.CemPairCsvCreator;
 import io.csv.TimeSeriesCsvCreator;
 import util.GuiceModule;
 
@@ -11,9 +11,9 @@ public class MainProcessesCsvs {
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
         TimeSeriesCsvCreator timeSeriesCsvCreator = injector.getInstance(TimeSeriesCsvCreator.class);
-        ProjectCsvCreator projectCsvCreator = injector.getInstance(ProjectCsvCreator.class);
-
-        projectCsvCreator.startCreatingCsvs();
+        CemPairCsvCreator cemPairCsvCreator = injector.getInstance(CemPairCsvCreator.class);
+        
         timeSeriesCsvCreator.startCreatingCsvs();
+        cemPairCsvCreator.startCreatingCsvs();
     }
 }

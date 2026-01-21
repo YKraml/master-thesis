@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import model.CemProject;
 import model.CemProjectPair;
 import model.Proof;
+import util.CemCommitsUtil;
 import util.Constants;
 
 import java.io.IOException;
@@ -21,14 +22,16 @@ public class CemMatcher {
 
     private final CemProjectPairReaderWriter projectPairReaderWriter;
     private final CemProjectReaderWriter cemProjectReaderWriter;
+    private final CemCommitsUtil cemCommitsUtil;
 
     @Inject
-    public CemMatcher(CemProjectPairReaderWriter projectPairReaderWriter, CemProjectReaderWriter cemProjectReaderWriter) {
+    public CemMatcher(CemProjectPairReaderWriter projectPairReaderWriter, CemProjectReaderWriter cemProjectReaderWriter, CemCommitsUtil cemCommitsUtil) {
         this.projectPairReaderWriter = projectPairReaderWriter;
         this.cemProjectReaderWriter = cemProjectReaderWriter;
+        this.cemCommitsUtil = cemCommitsUtil;
     }
 
-    public void matchAndSafe(List<Proof> allTreatedProofs, List<Proof> allControlProofs) throws IOException {
+    public void matchAndSafe(List<Proof> allTreatedProofs, List<Proof> allControlProofs) {
 
         // Group all treated projects
         System.out.println("Group all treated projects");
@@ -74,7 +77,7 @@ public class CemMatcher {
         System.out.println("Finished loop");
     }
 
-    private static CemProjectPair createPair(CemProject treated, CemProject control) {
+    private CemProjectPair createPair(CemProject treated, CemProject control) {
         CemProject newTreated = new CemProject(
                 treated.repoOwner(),
                 treated.repoName(),
@@ -114,14 +117,17 @@ public class CemMatcher {
                 .collect(Collectors.groupingBy(this::generateStratumKey));
     }
 
-    private static List<CemProject.Commit> getControlLinterCommits(List<CemProject.Commit> controlCommits, List<CemProject.Commit> treatedCommits, List<CemProject.Commit> treatedLinterCommits) {
-        List<CemProject.Commit> controlLinterCommits = new ArrayList<>();
+    private List<CemProject.LinterCommit> getControlLinterCommits(List<CemProject.Commit> controlCommits, List<CemProject.Commit> treatedCommits, List<CemProject.LinterCommit> treatedLinterCommits) {
+        List<CemProject.LinterCommit> controlLinterCommits = new ArrayList<>();
 
-        for (CemProject.Commit linterCommit : treatedLinterCommits) {
+        for (CemProject.LinterCommit linterCommit : treatedLinterCommits) {
             int index = linterCommit.index() * controlCommits.size() / treatedCommits.size();
-            String name = controlCommits.get(index).name();
-            int time = controlCommits.get(index).time();
-            controlLinterCommits.add(new CemProject.Commit(name, time, index));
+            CemProject.Commit fakedLinterCommit = controlCommits.get(index);
+            String name = fakedLinterCommit.name();
+            int time = fakedLinterCommit.time();
+            String linterName = "CONTROL";
+            int numberOfCommitsInTwoYearWindow = cemCommitsUtil.calcNumberOfCommitsInAnalysisWindow(controlCommits, fakedLinterCommit);
+            controlLinterCommits.add(new CemProject.LinterCommit(name, time, index, linterName, numberOfCommitsInTwoYearWindow));
         }
         return controlLinterCommits;
     }

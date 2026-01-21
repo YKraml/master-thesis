@@ -10,7 +10,7 @@ public record CemProject(
         String creationYear,
         String defaultBranch,
         int numberOfCommits,
-        List<Commit> linterCommits,
+        List<LinterCommit> linterCommits,
         List<Commit> allCommits) implements ProjectWritable {
 
     public enum GroupType {
@@ -19,5 +19,9 @@ public record CemProject(
     }
 
     public record Commit(String name, int time, int index) {
+    }
+
+    public record LinterCommit(String name, int time, int index, String linterName,
+                               int numberOfCommitsInTwoYearWindow) {
     }
 }

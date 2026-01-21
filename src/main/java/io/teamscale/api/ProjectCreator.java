@@ -97,16 +97,16 @@ public class ProjectCreator {
 
         int analysisStartTime = Integer.MAX_VALUE;
         int analysisEndTime = Integer.MIN_VALUE;
-        List<CemProject.Commit> linterCommits = cemProject.linterCommits();
-        for (CemProject.Commit linterCommit : linterCommits) {
+        List<CemProject.LinterCommit> linterCommits = cemProject.linterCommits();
+        for (CemProject.LinterCommit linterCommit : linterCommits) {
             int introductionTime = linterCommit.time();
 
-            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
+            int start = introductionTime - Constants.ANALYSIS_WINDOW_IN_SECONDS;
             if (start < analysisStartTime) {
                 analysisStartTime = start;
             }
 
-            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
+            int end = introductionTime + Constants.ANALYSIS_WINDOW_IN_SECONDS;
             if (end > analysisEndTime) {
                 analysisEndTime = end;
             }

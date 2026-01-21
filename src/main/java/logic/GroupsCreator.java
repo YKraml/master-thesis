@@ -6,17 +6,18 @@ import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
 import model.CemProject;
 import model.Proof;
+import util.CemCommitsUtil;
 
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 public class GroupsCreator {
 
@@ -25,14 +26,16 @@ public class GroupsCreator {
     private final CemProjectReaderWriter cemProjectReaderWriter;
     private final BareRepositoryDownloader bareRepositoryDownloader;
     private final ExecutorService executorService;
+    private final CemCommitsUtil cemCommitsUtil;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, BareRepositoryDownloader bareRepositoryDownloader, ExecutorService executorService) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, BareRepositoryDownloader bareRepositoryDownloader, ExecutorService executorService, CemCommitsUtil cemCommitsUtil) {
         this.proofReaderWriter = proofReaderWriter;
         this.cemMatcher = cemMatcher;
         this.cemProjectReaderWriter = cemProjectReaderWriter;
         this.bareRepositoryDownloader = bareRepositoryDownloader;
         this.executorService = executorService;
+        this.cemCommitsUtil = cemCommitsUtil;
     }
 
     public void createTreatmentAndControlGroups() throws IOException {
@@ -85,7 +88,13 @@ public class GroupsCreator {
             System.err.println("Linters should be non-empty for treatment projects: " + proof.link());
         }
 
-        List<CemProject.Commit> commits = bareRepositoryDownloader.getCommits(proof.repoOwner(), proof.repoName(), proof.defaultBranch());
+        List<CemProject.Commit> commits;
+        try {
+            commits = bareRepositoryDownloader.getCommits(proof.repoOwner(), proof.repoName(), proof.defaultBranch());
+        } catch (Exception e) {
+            commits = new ArrayList<>();
+        }
+        
         return new CemProject(
                 proof.repoOwner(),
                 proof.repoName(),
@@ -99,12 +108,24 @@ public class GroupsCreator {
         );
     }
 
-    private static List<CemProject.Commit> getTreatedLinterCommits(Proof treatedProof, List<CemProject.Commit> commits) {
-        Set<String> treatedLinterCommitNames = treatedProof.linters().stream().map(Proof.LinterWithProof::introductionCommit).collect(Collectors.toSet());
-        List<CemProject.Commit> treatedLinterCommits = new ArrayList<>();
+    private List<CemProject.LinterCommit> getTreatedLinterCommits(Proof treatedProof, List<CemProject.Commit> commits) {
+        Map<String, String> treatedLinterCommitNames = new HashMap<>();
+        for (Proof.LinterWithProof linterWithProof : treatedProof.linters()) {
+            String introductionCommit = linterWithProof.introductionCommit();
+            treatedLinterCommitNames.put(introductionCommit, linterWithProof.linterName());
+        }
+
+        List<CemProject.LinterCommit> treatedLinterCommits = new ArrayList<>();
         for (CemProject.Commit treatedCommit : commits) {
-            if (treatedLinterCommitNames.contains(treatedCommit.name())) {
-                treatedLinterCommits.add(treatedCommit);
+            String commitName = treatedCommit.name();
+            if (treatedLinterCommitNames.containsKey(commitName)) {
+
+                int commitTime = treatedCommit.time();
+                int commitIndex = treatedCommit.index();
+                String linterName = treatedLinterCommitNames.get(commitName);
+                int numberOfCommitsInAnalysisWindow = cemCommitsUtil.calcNumberOfCommitsInAnalysisWindow(commits, treatedCommit);
+
+                treatedLinterCommits.add(new CemProject.LinterCommit(commitName, commitTime, commitIndex, linterName, numberOfCommitsInAnalysisWindow));
             }
         }
         return treatedLinterCommits;

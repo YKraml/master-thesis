@@ -2,6 +2,7 @@ package io.csv;
 
 import io.json.CombinedDataReaderWriter;
 import jakarta.inject.Inject;
+import model.CemProject;
 import model.CemProject.GroupType;
 import model.CombinedData;
 import model.Proof.LinterWithProof;
@@ -13,7 +14,6 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 import static java.io.File.separator;
-import static model.CemProject.Commit;
 
 public class TimeSeriesCsvCreator implements CsvCreator {
 
@@ -59,8 +59,8 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         new File(folderName).mkdirs();
 
         // Connect linter commits with proofs
-        Map<Commit, Optional<LinterWithProof>> linterCommitsWithProof = new HashMap<>();
-        for (Commit linterCommit : combinedData.cemProject().linterCommits()) {
+        Map<CemProject.LinterCommit, Optional<LinterWithProof>> linterCommitsWithProof = new HashMap<>();
+        for (CemProject.LinterCommit linterCommit : combinedData.cemProject().linterCommits()) {
             Optional<LinterWithProof> linterWithProof = combinedData
                     .proof()
                     .linters()
@@ -72,20 +72,20 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         // Create file for each linter
         int i = 0;
-        for (Map.Entry<Commit, Optional<LinterWithProof>> entry : linterCommitsWithProof.entrySet()) {
+        for (Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> entry : linterCommitsWithProof.entrySet()) {
             createFile(combinedData, entry, i, folderName);
             i++;
         }
 
     }
 
-    private static void createFile(CombinedData combinedData, Map.Entry<Commit, Optional<LinterWithProof>> linterCommitWithProof, int i, String folderName) throws IOException {
+    private static void createFile(CombinedData combinedData, Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> linterCommitWithProof, int i, String folderName) throws IOException {
 
         // Extracting some infos from the given data
         String repoOwner = combinedData.repoOwner();
         String repoName = combinedData.repoName();
 
-        Commit linterCommit = linterCommitWithProof.getKey();
+        CemProject.LinterCommit linterCommit = linterCommitWithProof.getKey();
         int introductionTime = linterCommit.time();
         double introduction_time_relative_to_first_commit_time = (introductionTime - combinedData.proof().firstCommitTime()) / 60d / 60d / 24 / 365d;
 

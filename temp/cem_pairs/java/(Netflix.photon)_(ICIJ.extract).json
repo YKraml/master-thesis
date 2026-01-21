@@ -1,0 +1,36 @@
+{
+  "treated" : {
+    "repoOwner" : "Netflix",
+    "repoName" : "photon",
+    "groupType" : "TREATMENT",
+    "numberOfStars" : 248,
+    "creationYear" : "2015",
+    "defaultBranch" : "master",
+    "numberOfCommits" : 875,
+    "linterCommits" : [ {
+      "name" : "ae1254e0b7f4adc5a6724e920824c8e0eff69386",
+      "time" : 1449710139,
+      "index" : 0,
+      "linterName" : "PMD",
+      "numberOfCommitsInTwoYearWindow" : 623
+    } ],
+    "allCommits" : null
+  },
+  "control" : {
+    "repoOwner" : "ICIJ",
+    "repoName" : "extract",
+    "groupType" : "CONTROL",
+    "numberOfStars" : 249,
+    "creationYear" : "2015",
+    "defaultBranch" : "master",
+    "numberOfCommits" : 889,
+    "linterCommits" : [ {
+      "name" : "fde853420906a3c507db0df2013e1c4de0ea782f",
+      "time" : 1431015941,
+      "index" : 0,
+      "linterName" : "CONTROL",
+      "numberOfCommitsInTwoYearWindow" : 425
+    } ],
+    "allCommits" : null
+  }
+}

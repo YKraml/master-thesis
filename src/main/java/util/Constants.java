@@ -12,7 +12,7 @@ public class Constants {
     public static final int CONCURRENT_BARE_REPO_DOWNLOADS = 16;
     public static final int CONCURRENT_REPO_DOWNLOADS = 4;
 
-    public static final int SECONDS_IN_TWO_YEARS = 60 * 60 * 24 * 365 * 2;
+    public static final int ANALYSIS_WINDOW_IN_SECONDS = 60 * 60 * 24 * 365 * 2;
     public static final Language CURRENT_LANGUAGE = Language.JAVA;
 
     public static final String TEAMSCALE_ACCESS_KEY = "JR62xEGhWWh7NYh2srekjo61ftAYZBYo";

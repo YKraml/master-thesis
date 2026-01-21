@@ -109,7 +109,7 @@ public class GitHubRepoAnalyser {
             stateHandler.addToState(Pair.of(repoOwner, repoName), "Searching introduction of: " + linter.linterName());
             Pair<RevCommit, String> introduction = linterIntroductionFinder.findIntroductionCommitWithProof(git, Linter.valueOf(linter.linterName()));
 
-            if (currentCommitTime - Constants.SECONDS_IN_TWO_YEARS < introduction.getLeft().getCommitTime()) {
+            if (currentCommitTime - Constants.ANALYSIS_WINDOW_IN_SECONDS < introduction.getLeft().getCommitTime()) {
                 filteredManager.filterProjectLinter(repoOwner, repoName, Linter.valueOf(linter.linterName()), "Linter did not exist for at least two years", String.valueOf(introduction));
                 continue;
             }
@@ -142,12 +142,12 @@ public class GitHubRepoAnalyser {
         for (Proof.LinterWithProof linter : lintersWithProof) {
             int introductionTime = linter.introductionTime();
 
-            int start = introductionTime - Constants.SECONDS_IN_TWO_YEARS;
+            int start = introductionTime - Constants.ANALYSIS_WINDOW_IN_SECONDS;
             if (start < startTime) {
                 startTime = start;
             }
 
-            int end = introductionTime + Constants.SECONDS_IN_TWO_YEARS;
+            int end = introductionTime + Constants.ANALYSIS_WINDOW_IN_SECONDS;
             if (end > endTime) {
                 endTime = end;
             }
