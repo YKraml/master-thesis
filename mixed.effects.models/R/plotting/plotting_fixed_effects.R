@@ -2,7 +2,7 @@
 
 # ------------------------------------------------------------------------------
 
-plot_predicted <- function(data, model, relative_introduction_time, metric, metric_unit) {
+plot_predicted <- function(data, model, relative_introduction_time, metric, metric_unit, transition_n_days) {
 
   # --- 1. Helper Function for Marginal Effects ---
   # Calculates: Beta_main + (Beta_interaction * relative_time)
@@ -67,6 +67,8 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
 
   # --- 4. Create Prediction Data ---
   pred <- data.frame(x = seq(max(-2, -relative_introduction_time), 2, by = 0.01))
+  pred <- subset(pred, x < 0 | x > transition_n_days / 365)
+
   pred$intervention_jump  <- ifelse(pred$x < 0, 0, 1)
   pred$base_slope         <- pred$x
   pred$intervention_slope <- pred$x * pred$intervention_jump
@@ -89,31 +91,69 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
     "Intervention Slope = ", round(res_intslope$est, 3), " (p ", fmt_p(res_intslope$p), ")\n"
   )
 
-  # --- 7. Plotting ---
+  # --- 7. Plotting (Enhanced) ---
+
+  # Setup Data & Limits
   ymin <- min(pred$lower, na.rm = TRUE)
   ymax <- max(pred$upper, na.rm = TRUE)
   yrange <- ymax - ymin
-  ylim <- c(ymin - yrange * 0.1, ymax + yrange * 0.4)
+  # Increase top margin slightly for phase labels
+  ylim <- c(ymin - yrange * 0.1, ymax + yrange * 0.5)
 
+  gap_end <- transition_n_days / 365
+
+  # Split data indices
+  idx_pre <- which(pred$x <= 0)
+  idx_post <- which(pred$x >= gap_end)
+
+  # Initialize Plot
+  par(mar = c(5, 5, 4, 2) + 0.1) # Add a little margin room
   plot(
     pred$x, pred$pred,
     type = "n",
     xlab = "Time (Years)",
     ylab = sprintf("%s (%s)", metric, metric_unit),
     ylim = ylim,
-    main = paste0("Model Prediction (Intro Time: ", relative_introduction_time, ifelse(relative_introduction_time == 1, " year)", " years)"))
+    main = paste0("Model Prediction (Intro Time: ", relative_introduction_time, ifelse(relative_introduction_time == 1, " year)", " years)")),
+    cex.main = 1.1, cex.lab = 1.1, las = 1
   )
 
-  polygon(
-    c(pred$x, rev(pred$x)),
-    c(pred$lower, rev(pred$upper)),
-    col = rgb(173, 216, 230, max = 255, alpha = 80),
+  # Add Grid (Optional, but helps readability)
+  grid(nx = NULL, ny = NULL, col = "gray90", lty = "dotted")
+
+  # Highlight the "Transition Phase" (The Gap)
+  rect(
+    xleft = 0,
+    ybottom = par("usr")[3], # extend to bottom of plot area
+    xright = gap_end,
+    ytop = par("usr")[4],    # extend to top of plot area
+    col = rgb(0.9, 0.9, 0.9, alpha = 0.4), # Very light grey
     border = NA
   )
 
-  lines(pred$x, pred$pred, col = "red", lwd = 2)
-  abline(v = 0, lty = 2, col = "darkgrey", lwd = 1.5)
+  # Draw Confidence Intervals (Split)
+  polygon(
+    c(pred$x[idx_pre], rev(pred$x[idx_pre])),
+    c(pred$lower[idx_pre], rev(pred$upper[idx_pre])),
+    col = rgb(173, 216, 230, max = 255, alpha = 120), # Slightly more opaque
+    border = NA
+  )
+  polygon(
+    c(pred$x[idx_post], rev(pred$x[idx_post])),
+    c(pred$lower[idx_post], rev(pred$upper[idx_post])),
+    col = rgb(173, 216, 230, max = 255, alpha = 120),
+    border = NA
+  )
 
+  # Draw Fitted Lines (Split) - Using 'firebrick' for a pro look
+  lines(pred$x[idx_pre], pred$pred[idx_pre], col = "red", lwd = 2.5)
+  lines(pred$x[idx_post], pred$pred[idx_post], col = "red", lwd = 2.5)
+
+  # Intervention Lines
+  abline(v = 0, lty = 2, col = "darkgrey", lwd = 1.5)
+  abline(v = gap_end , lty = 2, col = "darkgrey", lwd = 1.5)
+
+  # Stats Box
   txt_x <- min(pred$x)
   txt_y <- ylim[2]
   txt_w <- strwidth(plot_text, cex = 0.8)
@@ -126,15 +166,18 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
     col     = "white",
     border  = NA
   )
+
   text(x = txt_x, y = txt_y, labels = plot_text, adj = c(0, 1), cex = 0.8)
 
+  # Legend
   legend(
     "topright",
-    legend = c("Fitted Line", "95% CI", "Intervention"),
-    col = c("red", rgb(173, 216, 230, max = 255, alpha = 80), "darkgrey"),
-    lty = c(1, 1, 2),
-    lwd = c(2, 10, 1.5)
-    )
+    legend = c("Fitted Line", "95% CI", "Transition Start & End", "Transition"),
+    col = c("red", rgb(173, 216, 230, max = 255, alpha = 120), "darkgrey", rgb(0.9, 0.9, 0.9, alpha = 0.4)),
+    lty = c(1, 1, 2, 1),
+    lwd = c(2.5, 10, 1.5, 10),
+    cex = 0.9
+  )
 }
 
 # ------------------------------------------------------------------------------

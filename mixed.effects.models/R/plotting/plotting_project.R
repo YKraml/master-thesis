@@ -1,6 +1,8 @@
 # ------------------------------------------------------------------------------
 
-plot_project <- function(model, id, data, metric, metric_unit, metric_display_name) {
+plot_project <- function(model, id, data, metric, metric_unit, metric_display_name, transition_n_days) {
+  gap_end <- transition_n_days / 365
+
   projectData <- data[data$id == id, ]
   relative_introduction_time <- projectData[["relative_introduction_time"]][1]
 
@@ -22,6 +24,7 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
       intercept + base_slope * x + intervention_jump + intervention_slope * x
     )
   )
+  predictedData <- subset(predictedData, x < 0 | x > transition_n_days / 365)
 
   # scatter plot data
   projectData <- data[data$id == id, ]
@@ -48,18 +51,23 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
   date <- format(date_time_object, format = "%d.%m.%Y")
 
+  idx_pre <- which(predictedData$x <= 0)
+  idx_post <- which(predictedData$x >= gap_end)
+
 
   # predicted graph
   plot(
     predictedData$x, predictedData$y,
-    type = "l",
+    type = "n",
     xlab = "Time (Years)",
     ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylim = c(lower_limit, upper_limit),
-    lwd = 2,
-    col = "red",
-    main = paste0("Project: ", id)
+    main = paste0("Project: ", id),
+    cex.main = 1.1, cex.lab = 1.1, las = 1
   )
+  lines(predictedData$x[idx_pre], predictedData$y[idx_pre], col = "red", lwd = 2.5)
+  lines(predictedData$x[idx_post], predictedData$y[idx_post], col = "red", lwd = 2.5)
+
 
   # scatter
   points(
@@ -71,13 +79,16 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   # intervention_jump line
   abline(v = 0, lty = 2, col = "darkgrey")
 
-
   # legend
-  legend("topright",
-         legend = c("Fitted", "Weekly Data", "Linter Intro."),
-         col = c("red", "lightblue", "darkgrey"),
-         lty = c(1, NA, 2),
-         pch = c(NA, 4, NA))
+  legend(
+    "topright",
+    legend = c("Fitted Line", "Weekly Data", "Transition Start & End", "Transition"),
+    col = c("red", "lightblue", "darkgrey", rgb(0.9, 0.9, 0.9, alpha = 0.4)),
+    lty = c(1, NA, 2, 1),
+    pch = c(NA, 4, NA, NA),
+    lwd = c(1, 1, 1, 10)
+  )
+
 
   # text
   plot_text <- paste0(
@@ -87,6 +98,19 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
     "Intervention Jump = ",     round(intervention_jump, 3),          "\n",
     "Intervention Slope = ",    round(intervention_slope, 3),         "\n"
   )
+
+  # Intervention Lines
+  abline(v = 0, lty = 2, col = "darkgrey", lwd = 1.5)
+  abline(v = gap_end , lty = 2, col = "darkgrey", lwd = 1.5)
+  rect(
+    xleft = 0,
+    ybottom = par("usr")[3], # extend to bottom of plot area
+    xright = gap_end,
+    ytop = par("usr")[4],    # extend to top of plot area
+    col = rgb(0.9, 0.9, 0.9, alpha = 0.4), # Very light grey
+    border = NA
+  )
+
 
   txt_x <- max(-2, -relative_introduction_time)
   txt_y <- upper_limit

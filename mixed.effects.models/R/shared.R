@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 library(data.table)
 
-get_data <- function(folderName) {
+get_data <- function(folderName, transition_n_days) {
   files <- list.files(file.path("data/time_series", folderName),
                       pattern = "\\.csv$",
                       full.names = TRUE,
@@ -19,8 +19,11 @@ get_data <- function(folderName) {
     # Delete this line later
     dt$relative_introduction_time <- dt$relative_introduction_time / 60 / 60 / 24 / 365
 
+    dt$intervention_jump[dt$t == 0] <- 0
+
     dt[, c("t_pre", "t_post", "intervention") := NULL]
     dt <- dt[dt$relative_introduction_time >= 0, ]
+    dt <- dt[dt$t <= 0 | t >= transition_n_days]
 
     return(dt)
   }
@@ -29,6 +32,10 @@ get_data <- function(folderName) {
 
   finalData <- rbindlist(data_list)
   setDF(finalData)
+
+  finalData <- finalData %>%
+    distinct(id, t, .keep_all = TRUE)
+
   return(finalData)
 }
 

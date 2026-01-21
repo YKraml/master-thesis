@@ -31,14 +31,15 @@ source("R/saver.R")
 source("R/shared.R")
 source("R/lagged.R")
 
-data_control <- get_data("control")
-data_treatment <- get_data("treatment")
+data_control <- get_data("control", 90)
+data_treatment <- get_data("treatment", 90)
 
 folder_name <- "treatment"
 data <- data_treatment
 
 folder_name <- "control"
 data <- data_control
+
 
 
 metrics <- list(
@@ -58,10 +59,11 @@ metrics <- list(
   averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC")
 )
 
+
+
 # ------------------------------------------------------------------------------
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
-
 for (metric_key in names(metrics)) {
   metric_data         <- metrics[[metric_key]]
   metric_name         <- metric_data$name
@@ -78,9 +80,12 @@ for (metric_key in names(metrics)) {
     fixed = as.formula(f_full),
     random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
     data = data,
+    # correlation = corAR1(form = ~ t | id),
     method = "ML",
     control = lmeControl(opt = "optim")
   )
+
+  head(data)
 
   message("   * Drawing plots")
   save_everything(
@@ -180,8 +185,37 @@ save_png(
 # Testing
 # ------------------------------------------------------------------------------
 
+metric_name <- "findingsDensity"
+metric_display_name <- "Findings Density"
+metric_unit <- "Findings per 1000 LOC"
+f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric_name)
+model <- lme(
+  fixed = as.formula(f_full),
+  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+  data = data,
+  method = "ML",
+  control = lmeControl(opt = "optim")
+)
 
+transition_n_days <- 90
 
+source("R/plotting/plotting_fixed_effects.R")
+save_multipanel_png(
+  expression = {
+    plot_predicted(data, model,  0.1, metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  0.5, metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  1  , metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  2  , metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  4  , metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days)
+    plot_predicted(data, model, 10  , metric_display_name, metric_unit, transition_n_days)
+  },
+  file = file.path("delete_me", "predicted.png"),
+  height = 15,
+  width = 40,
+  mfrow = c(2,4)
+)
 
 
 

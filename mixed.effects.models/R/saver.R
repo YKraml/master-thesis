@@ -3,6 +3,8 @@
 save_everything <- function(model, data, out_dir, linter_name, metric_data){
   dir.create(file.path(out_dir), showWarnings = FALSE, recursive = TRUE)
 
+  transition_n_days <- 90
+
   metric_name         <- metric_data$name
   metric_display_name <- metric_data$display_name
   metric_unit         <- metric_data$unit
@@ -24,14 +26,14 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
   # print fixed effects
   save_multipanel_png(
     expression = {
-      plot_predicted(data, model,  0.1, metric_display_name, metric_unit)
-      plot_predicted(data, model,  0.5, metric_display_name, metric_unit)
-      plot_predicted(data, model,  1  , metric_display_name, metric_unit)
-      plot_predicted(data, model,  2  , metric_display_name, metric_unit)
-      plot_predicted(data, model,  4  , metric_display_name, metric_unit)
-      plot_predicted(data, model,  6  , metric_display_name, metric_unit)
-      plot_predicted(data, model,  8  , metric_display_name, metric_unit)
-      plot_predicted(data, model, 10  , metric_display_name, metric_unit)
+      plot_predicted(data, model,  0.1, metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  0.5, metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  1  , metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  2  , metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  4  , metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days)
+      plot_predicted(data, model, 10  , metric_display_name, metric_unit, transition_n_days)
     },
     file = file.path(out_dir, sprintf("%s.%s.predicted.png", linter_name, metric_name)),
     height = 15,
@@ -113,13 +115,13 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
   dir.create(file.path(project_out_dir), showWarnings = FALSE, recursive = TRUE)
   for (id in unique(data[["id"]])) {
     save_png(
-      expression = plot_project(model, id, data, metric_name, metric_unit, metric_display_name),
+      expression = plot_project(model, id, data, metric_name, metric_unit, metric_display_name, transition_n_days),
       file = file.path(project_out_dir, sprintf("%s.%s.%s.png", linter_name, metric_name, id))
     )
 
     i <- i + 1
     if(i >= 30){
-    #   break
+       # break
     }
   }
 }
