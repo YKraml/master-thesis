@@ -16,9 +16,6 @@ public class MainCreateTreatedAndControlGroups {
         GroupsCreator groupsCreator = injector.getInstance(GroupsCreator.class);
         ExecutorService executorService = injector.getInstance(ExecutorService.class);
 
-        //stateHandler.start();
         groupsCreator.createTreatmentAndControlGroups();
-        stateHandler.end();
     }
-
 }

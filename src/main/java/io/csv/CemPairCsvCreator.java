@@ -63,7 +63,9 @@ public class CemPairCsvCreator implements CsvCreator {
                     "linterCommitTime" + "," +
                     "linterCommitIndex" + "," +
                     "linterName" + "," +
-                    "numberOfCommitsInTwoYearWindow");
+                    "numberOfCommitsInTwoYearWindow" + "," +
+                    "loc" + "," +
+                    "sloc");
 
             for (CemProject cemProject : cemProjects) {
                 String repoOwner = cemProject.repoOwner();
@@ -73,6 +75,9 @@ public class CemPairCsvCreator implements CsvCreator {
                 String creationYear = cemProject.creationYear();
                 String defaultBranch = cemProject.defaultBranch();
                 int numberOfCommits = cemProject.numberOfCommits();
+                int loc = cemProject.loc();
+                int sloc = cemProject.sloc();
+
                 List<CemProject.LinterCommit> linterCommits = cemProject.linterCommits();
                 Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
 
@@ -98,11 +103,11 @@ public class CemPairCsvCreator implements CsvCreator {
                             time + "," +
                             index + "," +
                             linterName + "," +
-                            numberOfCommitsInTwoYearWindow);
+                            numberOfCommitsInTwoYearWindow + "," +
+                            loc + "," +
+                            sloc);
                 }
-
             }
-
         }
     }
 }

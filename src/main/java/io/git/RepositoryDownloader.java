@@ -44,6 +44,12 @@ public abstract class RepositoryDownloader {
         return goToLatestCommit(git);
     }
 
+    public Git getRepoFast(String repoOwner, String repoName) throws GitAPIException, IOException {
+        String folderName = getFolderName(repoOwner, repoName);
+        File gitFile = new File(folderName + File.separator + ".git");
+        return Git.open(gitFile);
+    }
+
     public void deleteRepo(String owner, String repoName) {
         String folderName = getFolderName(owner, repoName);
         File folder = new File(folderName);
@@ -54,20 +60,43 @@ public abstract class RepositoryDownloader {
         }
     }
 
+    /**
+     * This method does not ensure, that the repo is in the correct state.
+     * It just gets the commits at the current state of the repo.
+     */
     public List<CemProject.Commit> getCommits(String repoOwner, String repoName, String defaultBranch) {
-        List<CemProject.Commit> commits = new ArrayList<>();
-        try (Git git = getRepo(repoOwner, repoName, defaultBranch)) {
-            Iterator<RevCommit> iterator = git.log().call().iterator();
-            List<RevCommit> revCommits = new ArrayList<>();
-            iterator.forEachRemaining(revCommits::add);
-            List<RevCommit> reversed = revCommits.reversed();
-            for (int i = 0; i < reversed.size(); i++) {
-                RevCommit commit = reversed.get(i);
-                commits.add(new CemProject.Commit(commit.getName(), commit.getCommitTime(), i, commit.getAuthorIdent().getEmailAddress()));
-            }
+
+        try {
+            //Try fast
+            Git git = getRepoFast(repoOwner, repoName);
+            List<CemProject.Commit> commits = getCommits(git);
+            git.close();
+            return commits;
         } catch (GitAPIException | IOException e) {
-            throw new RuntimeException(e);
+            //Do slow
+            try {
+                Git git = getRepo(repoOwner, repoName, defaultBranch);
+                List<CemProject.Commit> commits = getCommits(git);
+                git.close();
+                return commits;
+            } catch (GitAPIException | IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
+    }
+
+    public List<CemProject.Commit> getCommits(Git git) throws GitAPIException {
+        List<CemProject.Commit> commits = new ArrayList<>();
+
+        Iterator<RevCommit> iterator = git.log().call().iterator();
+        List<RevCommit> revCommits = new ArrayList<>();
+        iterator.forEachRemaining(revCommits::add);
+        List<RevCommit> reversed = revCommits.reversed();
+        for (int i = 0; i < reversed.size(); i++) {
+            RevCommit commit = reversed.get(i);
+            commits.add(new CemProject.Commit(commit.getName(), commit.getCommitTime(), i, commit.getAuthorIdent().getEmailAddress()));
+        }
+
         return commits;
     }
 

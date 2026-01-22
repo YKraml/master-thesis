@@ -33,5 +33,5 @@ public class Constants {
 
     public static final int NUMBER_OF_PROJECTS_PER_LANGUAGE = 1000;
     public static final Random RANDOM = new Random(42);
-    public static final String SCC = "C:\\Users\\yanni\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BenBoyter.scc_Microsoft.Winget.Source_8wekyb3d8bbwe\\scc.exe";
+    public static final String SCC = "C:/ProgramData/chocolatey/lib/scc/tools/scc.exe";
 }

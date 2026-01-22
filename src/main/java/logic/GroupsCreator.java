@@ -71,23 +71,30 @@ public class GroupsCreator {
         createCemProjectsFiles(treatedCandidates, CemProject.GroupType.TREATMENT);
         createCemProjectsFiles(controlCandidates, CemProject.GroupType.CONTROL);
 
+        stateHandler.end();
+
         // Get final treatment-control-pairs
         System.out.println("Started matching");
         cemMatcher.matchAndSafe(treatedCandidates, controlCandidates);
     }
 
     private void createCemProjectsFiles(List<Proof> proofs, CemProject.GroupType groupType) {
-        List<CompletableFuture<Void>> futures = proofs.stream().map(proof -> CompletableFuture.runAsync(() -> {
-            stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Converting to cem project");
-            try {
-                if (cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).isEmpty()) {
-                    cemProjectReaderWriter.write(convertToCemProject(proof, groupType));
+        List<CompletableFuture<Void>> futures = new ArrayList<>();
+        for (Proof proof : proofs) {
+            CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+                stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Converting to cem project");
+                try {
+                    if (cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).isEmpty()) {
+                        cemProjectReaderWriter.write(convertToCemProject(proof, groupType));
+                    }
+                } catch (IOException | GitAPIException e) {
+                    throw new RuntimeException(e);
+                } finally {
+                    stateHandler.removeFromState(Pair.of(proof.repoOwner(), proof.repoName()));
                 }
-            } catch (IOException | GitAPIException e) {
-                throw new RuntimeException(e);
-            }
-            stateHandler.removeFromState(Pair.of(proof.repoOwner(), proof.repoName()));
-        }, executorService)).toList();
+            }, executorService);
+            futures.add(future);
+        }
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[]{})).join();
     }
 
@@ -104,9 +111,11 @@ public class GroupsCreator {
         String repoName = proof.repoName();
 
         // Fetch commits
+        stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Getting commits");
         List<CemProject.Commit> commits = fullRepositoryDownloader.getCommits(repoOwner, repoName, proof.defaultBranch());
 
         //Count lines
+        stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Counting lines");
         List<SccObject> sccObjects = sccExecutor.execute(fullRepositoryDownloader.getFolderName(repoOwner, repoName));
         int loc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Lines).sum();
         int sloc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Code).sum();
@@ -149,5 +158,4 @@ public class GroupsCreator {
         }
         return treatedLinterCommits;
     }
-
 }

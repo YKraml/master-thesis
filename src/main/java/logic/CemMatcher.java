@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 public class CemMatcher {
 
-    private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 10;
+    private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 3;
 
     private final CemProjectPairReaderWriter projectPairReaderWriter;
     private final CemProjectReaderWriter cemProjectReaderWriter;
@@ -138,18 +138,13 @@ public class CemMatcher {
     }
 
     private String generateStratumKey(CemProject project) {
-
-        // Group by number of stars
         String starBin = createLogBin(project.numberOfStars());
-
-        // Group by number of commits
         String commitsBin = createLogBin(project.numberOfCommits());
-
-        // Group by year
         int year = Integer.parseInt(project.creationYear());
+        String slocBin = createLogBin(project.sloc());
 
         // combine to key
-        return "STARS[%s]_YEAR[%d]_COMMITS[%s]".formatted(starBin, year, commitsBin);
+        return "STARS[%s]_YEAR[%d]_COMMITS[%s]_SLOC[%s]".formatted(starBin, year, commitsBin, slocBin);
     }
 
     private static String createLogBin(int commits) {
