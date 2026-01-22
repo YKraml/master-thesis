@@ -86,6 +86,8 @@ public class CemMatcher {
                 treated.creationYear(),
                 treated.defaultBranch(),
                 treated.allCommits().size(),
+                treated.loc(),
+                treated.sloc(),
                 treated.linterCommits(),
                 null
         );
@@ -98,6 +100,8 @@ public class CemMatcher {
                 control.creationYear(),
                 control.defaultBranch(),
                 control.allCommits().size(),
+                control.loc(),
+                control.sloc(),
                 getControlLinterCommits(control.allCommits(), treated.allCommits(), treated.linterCommits()), // Insert newly calculated faked linter commit list
                 null
         );
@@ -127,7 +131,8 @@ public class CemMatcher {
             int time = fakedLinterCommit.time();
             String linterName = "CONTROL";
             int numberOfCommitsInTwoYearWindow = cemCommitsUtil.calcNumberOfCommitsInAnalysisWindow(controlCommits, fakedLinterCommit);
-            controlLinterCommits.add(new CemProject.LinterCommit(name, time, index, linterName, numberOfCommitsInTwoYearWindow));
+            String user = fakedLinterCommit.user();
+            controlLinterCommits.add(new CemProject.LinterCommit(name, time, index, linterName, user, numberOfCommitsInTwoYearWindow));
         }
         return controlLinterCommits;
     }

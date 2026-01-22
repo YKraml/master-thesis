@@ -21,12 +21,12 @@ library(ggeffects)
 library(multcomp)
 
 source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_projects.R")
 source("R/plotting/plotting_fixed_effects.R")
 source("R/plotting/plotting_random_effects.R")
 source("R/plotting/plotting_residuals.R")
 source("R/plotting/plotting_general.R")
 source("R/plotting/plotting_lagged.R")
+source("R/plotting/plotting_cem_projects.R")
 source("R/saver.R")
 source("R/shared.R")
 source("R/lagged.R")
@@ -109,72 +109,33 @@ for (metric_key in names(metrics)) {
 
 
 # ------------------------------------------------------------------------------
-# Lagged Loop
+# Data at t = 0
 # ------------------------------------------------------------------------------
 
-for (input_file in file_names) {
-  message("Processing: ", input_file)
 
-  linter_name <- gsub("data/time_series/|.csv", "", input_file)
+data_control <- get_data("control", 90)
+data_control <- data_control[data_control$t == 0, ]
 
-  output_dir <- file.path("plots", "lagged", linter_name)
-  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+data_treatment <- get_data("treatment", 90)
+data_treatment <- data_treatment[data_treatment$t == 0, ]
 
-  data <- get_data_from_file(input_file)
 
-  # UPDATED LOOP: Iterate over names(metrics)
-  for (metric_name in names(metrics)) {
-    metric_unit <- metrics[[metric_name]]
+plot_at_zero_loc(data_treatment)
 
-    output_filename <- sprintf("lagged.%s.%s.png", linter_name, metric_name)
-    output_path <- file.path(output_dir, output_filename)
 
-    if (file.exists(output_path)) {
-      message(" - Skip: ", metric_name)
-      next
-    }
 
-    message(" - Generating: ", metric_name)
 
-    # Use metric_name here
-    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 30)
-
-    # If plot_lag_comparison accepts a Y-axis label, you can use 'metric_unit' here
-    save_png(
-      expression = plot_lag_comparison(result_table),
-      file = output_path
-    )
-  }
+plot_at_zero_loc <- function(data){
+  hist(log10(data_treatment$linesOfCode + 1),
+       xaxt = "n",
+       col = "lightblue",
+       border = "black",
+       xlab = "Lines of Code (Log Scale)",
+       ylab = "Number of Projects",
+       main = "Project Sizes")
+  log_ticks <- 0:10
+  axis(1, at = log_ticks, labels = 10^log_ticks)
 }
-
-
-
-
-
-# ------------------------------------------------------------------------------
-# Projects
-# ------------------------------------------------------------------------------
-
-data <- read.csv("data/project_data/projects.csv")
-
-output_dir <- file.path("plots", "projects")
-dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-
-save_png(
-  expression = plot_number_of_stars_hist(data),
-  file = file.path(output_dir, "number_of_stars.png")
-)
-
-save_png(
-  expression = plot_age_at_intro_hist(data),
-  file = file.path(output_dir, "project_age_at_intro.png")
-)
-
-save_png(
-  expression = plot_project_creation_year_hist(data),
-  file = file.path(output_dir, "project_creation_dates.png")
-)
-
 
 # ------------------------------------------------------------------------------
 # CEM-Projects
@@ -188,120 +149,55 @@ treated_data <- read.csv("data/cem_projects/treated.csv")
 treated_data$time_diff <- (treated_data$linterCommitTime - treated_data$firstCommitTime) / 60 / 60 / 24 / 365
 treated_data$linter_intro_year <- treated_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
 
-# Number of stars
-df_control <- data.frame(stars = control_data$numberOfStars, group = "Control")
-df_treated <- data.frame(stars = treated_data$numberOfStars, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = stars + 1, fill = group)) +
-  geom_density(alpha = 0.5) +
-  scale_x_log10() +
-  labs(title = "Star Count of Projects",
-       x = "Number of Stars",
-       y = "Density",
-       fill = "Group") +
-  theme_minimal()
+capture.output(wilcox.test(control_data$numberOfStars, treated_data$numberOfStars), file = file.path("plots/cem_projects", "wilcox_test_star_counts.png.txt"))
+capture.output(wilcox.test(control_data$creationYear, treated_data$creationYear), file = file.path("plots/cem_projects", "wilcox_test_project_creation_years.png.txt"))
+capture.output(wilcox.test(control_data$numberOfCommits, treated_data$numberOfCommits), file = file.path("plots/cem_projects", "wilcox_test_commit_counts.png.txt"))
+capture.output(wilcox.test(control_data$time_diff, treated_data$time_diff), file = file.path("plots/cem_projects", "wilcox_test_linter_ages.png.txt"))
+capture.output(wilcox.test(control_data$linter_intro_year, treated_data$linter_intro_year), file = file.path("plots/cem_projects", "wilcox_test_linter_introduction_years.png.txt"))
+capture.output(wilcox.test(control_data$numberOfCommitsInTwoYearWindow, treated_data$numberOfCommitsInTwoYearWindow), file = file.path("plots/cem_projects", "wilcox_test_commit_counts_in_analysis_window.png.txt"))
+capture.output(wilcox.test(control_data$linterCommitIndex, treated_data$linterCommitIndex), file = file.path("plots/cem_projects", "wilcox_test_commit_counts_in_analysis_window.png.txt"))
 
 
-# Creation year
-df_control <- data.frame(year = control_data$creationYear, group = "Control")
-df_treated <- data.frame(year = treated_data$creationYear, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = year, fill = group)) +
-  geom_density(alpha = 0.5) +
-  labs(title = "Creation Years of Projects",
-       x = "Year",
-       y = "Density") +
-  theme_minimal()
+source("R/plotting/plotting_cem_projects.R")
+save_png(
+  expression = plot_star_count(control_data, treated_data),
+  file = file.path("plots/cem_projects", "star_counts.png")
+)
 
+save_png(
+  expression = plot_creation_year(control_data, treated_data),
+  file = file.path("plots/cem_projects", "project_creation_years.png")
+)
 
+save_png(
+  expression = plot_commit_count(control_data, treated_data),
+  file = file.path("plots/cem_projects", "commit_counts.png")
+)
 
-# Number of commits
-df_control <- data.frame(commits = control_data$numberOfCommits, group = "Control")
-df_treated <- data.frame(commits = treated_data$numberOfCommits, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = commits + 1, fill = group)) +
-  geom_density(alpha = 0.5) +
-  scale_x_log10() +
-  labs(title = "Number of Commits of Projects",
-       x = "Number of Commits",
-       y = "Density",
-       fill = "Group") +
-  theme_minimal()
+save_png(
+  expression = plot_linter_age(control_data, treated_data),
+  file = file.path("plots/cem_projects", "linter_ages.png")
+)
 
+save_png(
+  expression = plot_linter_intro_year(control_data, treated_data),
+  file = file.path("plots/cem_projects", "linter_introduction_years.png")
+)
 
-# Time between first commit and linter commit
-df_control <- data.frame(time_diff = control_data$time_diff, group = "Control")
-df_treated <- data.frame(time_diff = treated_data$time_diff, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = time_diff, fill = group)) +
-  geom_density(alpha = 0.5) +
-  labs(title = "Age at Linter Intro",
-       x = "Age at Linter Intro (Years)",
-       y = "Density") +
-  theme_minimal()
+save_png(
+  expression = plot_window_commits(control_data, treated_data),
+  file = file.path("plots/cem_projects", "commit_counts_in_analysis_window.png")
+)
 
-# Year of linter intro (absolut)
-df_control <- data.frame(year = control_data$linter_intro_year, group = "Control")
-df_treated <- data.frame(year = treated_data$linter_intro_year, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = year, fill = group)) +
-  geom_density(alpha = 0.5) +
-  labs(title = "Introduction Year of Linter",
-       x = "Year",
-       y = "Density") +
-  theme_minimal()
-
-
-
-# Number of Commits in Analysis Window
-df_control <- data.frame(commits = control_data$numberOfCommitsInTwoYearWindow, group = "Control")
-df_treated <- data.frame(commits = treated_data$numberOfCommitsInTwoYearWindow, group = "Treated")
-combined_data <- rbind(df_control, df_treated)
-ggplot(combined_data, aes(x = commits, fill = group)) +
-  geom_density(alpha = 0.5) +
-  scale_x_log10() +
-  labs(title = "Distribution Comparison: Control vs Treated",
-       x = "Number of Commits in Analysis Window (Log Scale)",
-       y = "Density") +
-  theme_minimal()
-
-
+save_png(
+  expression = plot_linter_commit_indicies(control_data, treated_data),
+  file = file.path("plots/cem_projects", "commit_indices.png")
+)
 
 # ------------------------------------------------------------------------------
 # Testing
 # ------------------------------------------------------------------------------
 
-metric_name <- "findingsDensity"
-metric_display_name <- "Findings Density"
-metric_unit <- "Findings per 1000 LOC"
-f_full <- sprintf("%s ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)", metric_name)
-model <- lme(
-  fixed = as.formula(f_full),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
-
-transition_n_days <- 90
-
-source("R/plotting/plotting_fixed_effects.R")
-save_multipanel_png(
-  expression = {
-    plot_predicted(data, model,  0.1, metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  0.5, metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  1  , metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  2  , metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  4  , metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days)
-    plot_predicted(data, model, 10  , metric_display_name, metric_unit, transition_n_days)
-  },
-  file = file.path("delete_me", "predicted.png"),
-  height = 15,
-  width = 40,
-  mfrow = c(2,4)
-)
 
 
 

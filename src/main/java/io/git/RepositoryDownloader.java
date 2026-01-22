@@ -44,23 +44,26 @@ public abstract class RepositoryDownloader {
         return goToLatestCommit(git);
     }
 
-    public void deleteRepo(String owner, String repoName) throws IOException {
+    public void deleteRepo(String owner, String repoName) {
         String folderName = getFolderName(owner, repoName);
         File folder = new File(folderName);
-        FileUtils.deleteDirectory(folder);
+        try {
+            FileUtils.deleteDirectory(folder);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public List<CemProject.Commit> getCommits(String repoOwner, String repoName, String defaultBranch) {
         List<CemProject.Commit> commits = new ArrayList<>();
-        try {
-            Git git = getRepo(repoOwner, repoName, defaultBranch);
+        try (Git git = getRepo(repoOwner, repoName, defaultBranch)) {
             Iterator<RevCommit> iterator = git.log().call().iterator();
             List<RevCommit> revCommits = new ArrayList<>();
             iterator.forEachRemaining(revCommits::add);
             List<RevCommit> reversed = revCommits.reversed();
             for (int i = 0; i < reversed.size(); i++) {
                 RevCommit commit = reversed.get(i);
-                commits.add(new CemProject.Commit(commit.getName(), commit.getCommitTime(), i));
+                commits.add(new CemProject.Commit(commit.getName(), commit.getCommitTime(), i, commit.getAuthorIdent().getEmailAddress()));
             }
         } catch (GitAPIException | IOException e) {
             throw new RuntimeException(e);

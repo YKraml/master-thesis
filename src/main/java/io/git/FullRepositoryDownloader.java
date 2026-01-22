@@ -39,8 +39,8 @@ public class FullRepositoryDownloader extends RepositoryDownloader {
     }
 
     @Override
-    protected String getFolderName(String repoOwner, String repoName) {
-        return "temp" + File.separator + "repos" + File.separator + repoOwner + File.separator + repoName;
+    public String getFolderName(String repoOwner, String repoName) {
+        return "temp" + File.separator + "repos_full" + File.separator + repoOwner + File.separator + repoName;
     }
 
     @Override

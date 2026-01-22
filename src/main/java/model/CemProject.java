@@ -10,6 +10,8 @@ public record CemProject(
         String creationYear,
         String defaultBranch,
         int numberOfCommits,
+        int loc,
+        int sloc,
         List<LinterCommit> linterCommits,
         List<Commit> allCommits) implements ProjectWritable {
 
@@ -18,10 +20,10 @@ public record CemProject(
         CONTROL
     }
 
-    public record Commit(String name, int time, int index) {
+    public record Commit(String name, int time, int index, String user) {
     }
 
-    public record LinterCommit(String name, int time, int index, String linterName,
+    public record LinterCommit(String name, int time, int index, String user, String linterName,
                                int numberOfCommitsInTwoYearWindow) {
     }
 }

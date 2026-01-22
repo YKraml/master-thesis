@@ -1,12 +1,17 @@
 package logic;
 
-import io.git.BareRepositoryDownloader;
+import io.git.FullRepositoryDownloader;
 import io.json.CemProjectReaderWriter;
 import io.json.ProofReaderWriter;
+import io.scc.SccExecutor;
+import io.scc.SccObject;
 import jakarta.inject.Inject;
 import model.CemProject;
 import model.Proof;
+import org.apache.commons.lang3.tuple.Pair;
+import org.eclipse.jgit.api.errors.GitAPIException;
 import util.CemCommitsUtil;
+import util.Constants;
 
 import java.io.IOException;
 import java.time.Instant;
@@ -17,25 +22,30 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class GroupsCreator {
 
     private final ProofReaderWriter proofReaderWriter;
-    private final CemMatcher cemMatcher;
     private final CemProjectReaderWriter cemProjectReaderWriter;
-    private final BareRepositoryDownloader bareRepositoryDownloader;
+    private final CemMatcher cemMatcher;
+
+    private final FullRepositoryDownloader fullRepositoryDownloader;
+
     private final ExecutorService executorService;
     private final CemCommitsUtil cemCommitsUtil;
+    private final SccExecutor sccExecutor;
+    private final StateHandler stateHandler;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, BareRepositoryDownloader bareRepositoryDownloader, ExecutorService executorService, CemCommitsUtil cemCommitsUtil) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, FullRepositoryDownloader fullRepositoryDownloader, ExecutorService executorService, CemCommitsUtil cemCommitsUtil, SccExecutor sccExecutor, StateHandler stateHandler) {
         this.proofReaderWriter = proofReaderWriter;
         this.cemMatcher = cemMatcher;
         this.cemProjectReaderWriter = cemProjectReaderWriter;
-        this.bareRepositoryDownloader = bareRepositoryDownloader;
+        this.fullRepositoryDownloader = fullRepositoryDownloader;
         this.executorService = executorService;
         this.cemCommitsUtil = cemCommitsUtil;
+        this.sccExecutor = sccExecutor;
+        this.stateHandler = stateHandler;
     }
 
     public void createTreatmentAndControlGroups() throws IOException {
@@ -44,8 +54,9 @@ public class GroupsCreator {
         System.out.println("Finished reading proof files");
         System.out.println();
 
+        stateHandler.start();
+
         // Group proofs into potential-treatment and potential-control
-        System.out.println("Started converting");
         List<Proof> treatedCandidates = new ArrayList<>();
         List<Proof> controlCandidates = new ArrayList<>();
         allProofs.forEach(proof -> {
@@ -66,20 +77,21 @@ public class GroupsCreator {
     }
 
     private void createCemProjectsFiles(List<Proof> proofs, CemProject.GroupType groupType) {
-        AtomicInteger counter = new AtomicInteger(0);
-        CompletableFuture.allOf(proofs.stream().map(proof -> CompletableFuture.runAsync(() -> {
+        List<CompletableFuture<Void>> futures = proofs.stream().map(proof -> CompletableFuture.runAsync(() -> {
+            stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Converting to cem project");
             try {
                 if (cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).isEmpty()) {
                     cemProjectReaderWriter.write(convertToCemProject(proof, groupType));
                 }
-            } catch (IOException e) {
+            } catch (IOException | GitAPIException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(groupType + ": " + counter.incrementAndGet() + "/" + proofs.size());
-        }, executorService)).toList().toArray(new CompletableFuture[]{})).join();
+            stateHandler.removeFromState(Pair.of(proof.repoOwner(), proof.repoName()));
+        }, executorService)).toList();
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture[]{})).join();
     }
 
-    private CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) {
+    private CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) throws GitAPIException, IOException {
         if (groupType == CemProject.GroupType.CONTROL && !proof.linters().isEmpty()) {
             System.err.println("Linters should be empty for control projects: " + proof.link());
         }
@@ -88,21 +100,27 @@ public class GroupsCreator {
             System.err.println("Linters should be non-empty for treatment projects: " + proof.link());
         }
 
-        List<CemProject.Commit> commits;
-        try {
-            commits = bareRepositoryDownloader.getCommits(proof.repoOwner(), proof.repoName(), proof.defaultBranch());
-        } catch (Exception e) {
-            commits = new ArrayList<>();
-        }
-        
+        String repoOwner = proof.repoOwner();
+        String repoName = proof.repoName();
+
+        // Fetch commits
+        List<CemProject.Commit> commits = fullRepositoryDownloader.getCommits(repoOwner, repoName, proof.defaultBranch());
+
+        //Count lines
+        List<SccObject> sccObjects = sccExecutor.execute(fullRepositoryDownloader.getFolderName(repoOwner, repoName));
+        int loc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Lines).sum();
+        int sloc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Code).sum();
+
         return new CemProject(
-                proof.repoOwner(),
-                proof.repoName(),
+                repoOwner,
+                repoName,
                 groupType,
                 proof.numberOfStars(),
                 String.valueOf(Instant.ofEpochSecond(proof.firstCommitTime()).atZone(ZoneId.of("UTC")).getYear()),
                 proof.defaultBranch(),
                 commits.size(),
+                loc,
+                sloc,
                 getTreatedLinterCommits(proof, commits),
                 commits
         );
@@ -124,8 +142,9 @@ public class GroupsCreator {
                 int commitIndex = treatedCommit.index();
                 String linterName = treatedLinterCommitNames.get(commitName);
                 int numberOfCommitsInAnalysisWindow = cemCommitsUtil.calcNumberOfCommitsInAnalysisWindow(commits, treatedCommit);
+                String user = treatedCommit.user();
 
-                treatedLinterCommits.add(new CemProject.LinterCommit(commitName, commitTime, commitIndex, linterName, numberOfCommitsInAnalysisWindow));
+                treatedLinterCommits.add(new CemProject.LinterCommit(commitName, commitTime, commitIndex, linterName, user, numberOfCommitsInAnalysisWindow));
             }
         }
         return treatedLinterCommits;

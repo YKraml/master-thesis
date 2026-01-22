@@ -40,7 +40,7 @@ public class IssueFetcher extends GraphQlFetcher<IssueRoot, Issue> {
     }
 
     @Override
-    public String getQuery() {
+    protected String getQuery() {
         return QUERY;
     }
 
