@@ -1,24 +1,25 @@
 package io.csv;
 
-import io.json.CemProjectReaderWriter;
+import io.json.CemProjectPairReaderWriter;
 import io.json.GitHubDataReaderWriter;
 import io.json.ProofReaderWriter;
 import io.json.TeamscaleDataReaderWriter;
 import io.teamscale.api.model.cleaned.TeamscaleData;
 import jakarta.inject.Inject;
 import logic.DataCombiner;
-import model.CemProject;
-import model.CemProject.GroupType;
-import model.CombinedData;
-import model.GitHubData;
-import model.Proof;
-import model.Proof.LinterWithProof;
+import model.writable.CemProject;
+import model.writable.CemProject.GroupType;
+import model.writable.CombinedData;
+import model.writable.GitHubData;
+import model.writable.Proof;
+import model.writable.Proof.LinterWithProof;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.io.File.separator;
 
@@ -31,58 +32,52 @@ public class TimeSeriesCsvCreator implements CsvCreator {
     private final GitHubDataReaderWriter gitHubDataReaderWriter;
     private final TeamscaleDataReaderWriter teamscaleDataReaderWriter;
     private final ProofReaderWriter proofReaderWriter;
-    private final CemProjectReaderWriter cemProjectReaderWriter;
+    private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
 
     @Inject
-    public TimeSeriesCsvCreator(DataCombiner dataCombiner, GitHubDataReaderWriter gitHubDataReaderWriter, TeamscaleDataReaderWriter teamscaleDataReaderWriter, ProofReaderWriter proofReaderWriter, CemProjectReaderWriter cemProjectReaderWriter) {
+    public TimeSeriesCsvCreator(DataCombiner dataCombiner, GitHubDataReaderWriter gitHubDataReaderWriter, TeamscaleDataReaderWriter teamscaleDataReaderWriter, ProofReaderWriter proofReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter) {
         this.dataCombiner = dataCombiner;
         this.gitHubDataReaderWriter = gitHubDataReaderWriter;
         this.teamscaleDataReaderWriter = teamscaleDataReaderWriter;
         this.proofReaderWriter = proofReaderWriter;
-        this.cemProjectReaderWriter = cemProjectReaderWriter;
+        this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
     }
 
     @Override
     public void startCreatingCsvs() throws IOException {
         System.out.println("Starting TimeSeriesCsvCreator\n");
 
-        System.out.println("Reading teamscale data");
-        List<TeamscaleData> teamscaleData = teamscaleDataReaderWriter.readAll();
-        System.out.println("Finished\n");
+        System.out.println("Reading cem pair data");
+        List<CemProject> cemProjects = cemProjectPairReaderWriter.readAll().stream().flatMap(pair -> Stream.of(pair.control(), pair.treated())).toList();
+        System.out.println("Finished reading cem pair data\n");
 
         System.out.println("Combining data");
-        List<CombinedData> combinedData = new ArrayList<>();
-        for (TeamscaleData teamscaleDatum : teamscaleData) {
-            String repoOwner = teamscaleDatum.repoOwner();
-            String repoName = teamscaleDatum.repoName();
-            
+        List<CombinedData> combinedDataList = new ArrayList<>();
+        for (CemProject cemProject : cemProjects) {
+            String repoOwner = cemProject.repoOwner();
+            String repoName = cemProject.repoName();
+
             try {
-                Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
-                CemProject cemProject = cemProjectReaderWriter.getElement(repoOwner, repoName).orElseThrow();
-                GitHubData gitHubData = gitHubDataReaderWriter.getElement(repoOwner, repoName).orElseThrow();
-                combinedData.add(dataCombiner.combineData(proof, teamscaleDatum, cemProject, gitHubData));
+                Proof proof = proofReaderWriter.read(repoOwner, repoName).orElseThrow();
+                TeamscaleData teamscaleData = teamscaleDataReaderWriter.read(repoOwner, repoName).orElseThrow();
+                GitHubData gitHubData = gitHubDataReaderWriter.read(repoOwner, repoName).orElseThrow();
+                combinedDataList.add(dataCombiner.combineData(proof, teamscaleData, cemProject, gitHubData));
             } catch (NoSuchElementException e) {
                 System.err.printf("Could not get data for %s.%s%n", repoOwner, repoName);
                 e.printStackTrace();
                 System.err.println("\n");
             }
         }
-        System.out.println("Finished\n");
+        System.out.println("Finished combining data\n");
 
-        List<CombinedData> treatedData = combinedData.stream().filter(TimeSeriesCsvCreator::isTreatment).toList();
-        List<CombinedData> controlData = combinedData.stream().filter(TimeSeriesCsvCreator::isControl).toList();
-
-        createCsvFiles(GroupType.TREATMENT, treatedData);
-        createCsvFiles(GroupType.CONTROL, controlData);
-    }
-
-    private void createCsvFiles(GroupType groupType, List<CombinedData> combinedDataList) throws IOException {
+        System.out.println("Creating files");
         for (CombinedData combinedData : combinedDataList) {
-            createCsvFiles(groupType, combinedData);
+            createCsvFiles(combinedData);
         }
+        System.out.println("Finished creating files\n");
     }
 
-    private void createCsvFiles(GroupType groupType, CombinedData combinedData) throws IOException {
+    private void createCsvFiles(CombinedData combinedData) throws IOException {
         String repoOwner = combinedData.repoOwner();
         String repoName = combinedData.repoName();
 
@@ -93,7 +88,7 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         }
 
         //create folder
-        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + groupType.name().toLowerCase();
+        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + combinedData.cemProject().groupType().name().toLowerCase();
         new File(folderName).mkdirs();
 
         // Connect linter commits with proofs

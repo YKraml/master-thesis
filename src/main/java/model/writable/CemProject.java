@@ -1,4 +1,4 @@
-package model;
+package model.writable;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public record CemProject(
         int sloc,
         int numberOfContributors,
         List<LinterCommit> linterCommits,
-        List<Commit> allCommits) implements ProjectWritable {
+        List<Commit> allCommits) implements Writable {
 
     public enum GroupType {
         TREATMENT,

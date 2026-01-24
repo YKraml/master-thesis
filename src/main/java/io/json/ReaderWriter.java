@@ -2,14 +2,17 @@ package io.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import model.ProjectWritable;
+import model.writable.Writable;
 import org.apache.commons.io.FileUtils;
+import util.Constants;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
-public abstract class ReaderWriter<T extends ProjectWritable> {
+public abstract class ReaderWriter<T extends Writable> {
 
     private final Class<T> clazz;
 
@@ -18,13 +21,13 @@ public abstract class ReaderWriter<T extends ProjectWritable> {
     }
 
     public void write(T element) throws IOException {
-        File proofFile = createFile(element.repoOwner(), element.repoName());
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(proofFile, element);
+        File file = createFile(element.repoOwner(), element.repoName());
+        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(file, element);
     }
 
     public List<T> readAll() throws IOException {
         List<T> list = new ArrayList<>();
-        for (File file : FileUtils.listFiles(new File(getFolderName()), new String[]{".json"}, false)) {
+        for (File file : FileUtils.listFiles(getFolder(), new String[]{".json"}, false)) {
             try {
                 list.add(new ObjectMapper().readValue(file, clazz));
             } catch (MismatchedInputException e) {
@@ -36,57 +39,10 @@ public abstract class ReaderWriter<T extends ProjectWritable> {
     }
 
     public void deleteFolder() throws IOException {
-        FileUtils.deleteDirectory(new File(getFolderName()));
+        FileUtils.deleteDirectory(getFolder());
     }
 
-    public Iterator<T> iterator() {
-        Iterator<File> fileIterator = FileUtils.listFiles(
-                new File(getFolderName()),
-                new String[]{"json"},
-                false
-        ).iterator();
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        return new Iterator<>() {
-            private T nextElement = null;
-
-            @Override
-            public boolean hasNext() {
-                if (nextElement != null) {
-                    return true;
-                }
-                findNext();
-                return nextElement != null;
-            }
-
-            @Override
-            public T next() {
-                if (!hasNext()) {
-                    throw new NoSuchElementException();
-                }
-                T result = nextElement;
-                nextElement = null;
-                return result;
-            }
-
-            private void findNext() {
-                while (nextElement == null && fileIterator.hasNext()) {
-                    File file = fileIterator.next();
-                    try {
-                        nextElement = mapper.readValue(file, clazz);
-                    } catch (MismatchedInputException e) {
-                        e.printStackTrace();
-                        file.delete();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-    }
-
-    public Optional<T> getElement(String repoOwner, String repoName) throws IOException {
+    public Optional<T> read(String repoOwner, String repoName) throws IOException {
         File proofs = getFile(repoOwner, repoName);
         if (!proofs.exists()) {
             return Optional.empty();
@@ -94,9 +50,15 @@ public abstract class ReaderWriter<T extends ProjectWritable> {
         return Optional.ofNullable(new ObjectMapper().readValue(proofs, clazz));
     }
 
-    public abstract File getFile(String repoOwner, String repoName);
+    private File getFolder() {
+        return new File(getCompleteFolderName());
+    }
 
-    protected File createFile(String repoOwner, String repoName) throws IOException {
+    private File getFile(String repoOwner, String repoName) {
+        return new File(getCompleteFolderName() + File.separator + repoOwner + "." + repoName + ".json");
+    }
+
+    private File createFile(String repoOwner, String repoName) throws IOException {
         File file = getFile(repoOwner, repoName);
         return createFile(file);
     }
@@ -109,6 +71,10 @@ public abstract class ReaderWriter<T extends ProjectWritable> {
             file.createNewFile();
         }
         return file;
+    }
+
+    private String getCompleteFolderName() {
+        return "temp" + File.separator + getFolderName() + File.separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
     }
 
     protected abstract String getFolderName();

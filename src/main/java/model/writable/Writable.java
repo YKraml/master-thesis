@@ -1,6 +1,6 @@
-package model;
+package model.writable;
 
-public interface ProjectWritable {
+public interface Writable {
 
     String repoOwner();
 

@@ -1,13 +1,15 @@
 package logic;
 
 import io.git.FullRepositoryDownloader;
+import io.json.CemProjectPairReaderWriter;
 import io.json.CemProjectReaderWriter;
 import io.json.ProofReaderWriter;
 import io.scc.SccExecutor;
 import io.scc.SccObject;
 import jakarta.inject.Inject;
-import model.CemProject;
-import model.Proof;
+import model.writable.CemProject;
+import model.writable.CemProjectPair;
+import model.writable.Proof;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import util.CemCommitsUtil;
@@ -27,20 +29,21 @@ public class GroupsCreator {
 
     private final ProofReaderWriter proofReaderWriter;
     private final CemProjectReaderWriter cemProjectReaderWriter;
-    private final CemMatcher cemMatcher;
-
+    private final CemProjectPairReaderWriter cemProjectPairReaderWriter;
     private final FullRepositoryDownloader fullRepositoryDownloader;
 
+    private final CemMatcher cemMatcher;
     private final ExecutorService executorService;
     private final CemCommitsUtil cemCommitsUtil;
     private final SccExecutor sccExecutor;
     private final StateHandler stateHandler;
 
     @Inject
-    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, FullRepositoryDownloader fullRepositoryDownloader, ExecutorService executorService, CemCommitsUtil cemCommitsUtil, SccExecutor sccExecutor, StateHandler stateHandler) {
+    public GroupsCreator(ProofReaderWriter proofReaderWriter, CemMatcher cemMatcher, CemProjectReaderWriter cemProjectReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, FullRepositoryDownloader fullRepositoryDownloader, ExecutorService executorService, CemCommitsUtil cemCommitsUtil, SccExecutor sccExecutor, StateHandler stateHandler) {
         this.proofReaderWriter = proofReaderWriter;
         this.cemMatcher = cemMatcher;
         this.cemProjectReaderWriter = cemProjectReaderWriter;
+        this.cemProjectPairReaderWriter = cemProjectPairReaderWriter;
         this.fullRepositoryDownloader = fullRepositoryDownloader;
         this.executorService = executorService;
         this.cemCommitsUtil = cemCommitsUtil;
@@ -54,7 +57,10 @@ public class GroupsCreator {
         System.out.println("Finished reading proof files");
         System.out.println();
 
+        // Create CemProjects for caching
         stateHandler.start();
+        createCemProjectsFiles(allProofs);
+        stateHandler.end();
 
         // Group proofs into potential-treatment and potential-control
         List<Proof> treatedCandidates = new ArrayList<>();
@@ -67,25 +73,23 @@ public class GroupsCreator {
             }
         });
 
-        // Create CemProjects for caching
-        createCemProjectsFiles(treatedCandidates, CemProject.GroupType.TREATMENT);
-        createCemProjectsFiles(controlCandidates, CemProject.GroupType.CONTROL);
-
-        stateHandler.end();
-
-        // Get final treatment-control-pairs
+        // Get final treatment-control-pairs and save them
         System.out.println("Started matching");
-        cemMatcher.matchAndSafe(treatedCandidates, controlCandidates);
+        List<CemProjectPair> pairs = cemMatcher.match(treatedCandidates, controlCandidates);
+        cemProjectPairReaderWriter.deleteFolder();
+        for (CemProjectPair pair : pairs) {
+            cemProjectPairReaderWriter.write(pair);
+        }
     }
 
-    private void createCemProjectsFiles(List<Proof> proofs, CemProject.GroupType groupType) {
+    private void createCemProjectsFiles(List<Proof> proofs) {
         List<CompletableFuture<Void>> futures = new ArrayList<>();
         for (Proof proof : proofs) {
             CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
                 stateHandler.addToState(Pair.of(proof.repoOwner(), proof.repoName()), "Converting to cem project");
                 try {
-                    if (cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).isEmpty()) {
-                        cemProjectReaderWriter.write(convertToCemProject(proof, groupType));
+                    if (cemProjectReaderWriter.read(proof.repoOwner(), proof.repoName()).isEmpty()) {
+                        cemProjectReaderWriter.write(convertToCemProject(proof));
                     }
                 } catch (IOException | GitAPIException e) {
                     throw new RuntimeException(e);
@@ -98,14 +102,8 @@ public class GroupsCreator {
         CompletableFuture.allOf(futures.toArray(new CompletableFuture[]{})).join();
     }
 
-    private CemProject convertToCemProject(Proof proof, CemProject.GroupType groupType) throws GitAPIException, IOException {
-        if (groupType == CemProject.GroupType.CONTROL && !proof.linters().isEmpty()) {
-            System.err.println("Linters should be empty for control projects: " + proof.link());
-        }
-
-        if (groupType == CemProject.GroupType.TREATMENT && proof.linters().isEmpty()) {
-            System.err.println("Linters should be non-empty for treatment projects: " + proof.link());
-        }
+    private CemProject convertToCemProject(Proof proof) throws GitAPIException, IOException {
+        CemProject.GroupType groupType = proof.linters().isEmpty() ? CemProject.GroupType.CONTROL : CemProject.GroupType.TREATMENT;
 
         String repoOwner = proof.repoOwner();
         String repoName = proof.repoName();

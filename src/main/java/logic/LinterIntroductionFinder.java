@@ -1,8 +1,8 @@
 package logic;
 
 import jakarta.inject.Inject;
-import model.FileIndicator;
-import model.Linter;
+import model.linting.FileIndicator;
+import model.linting.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;

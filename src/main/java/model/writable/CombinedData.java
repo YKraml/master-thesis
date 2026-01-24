@@ -1,4 +1,4 @@
-package model;
+package model.writable;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.RecordComponent;
@@ -10,7 +10,7 @@ public record CombinedData(String repoOwner,
                            String repoName,
                            Proof proof,
                            CemProject cemProject,
-                           List<Entry> entries) implements ProjectWritable {
+                           List<Entry> entries) implements Writable {
 
     public record Entry(
             int time,
@@ -63,7 +63,6 @@ public record CombinedData(String repoOwner,
             try {
                 return (Entry) Entry.class.getDeclaredConstructors()[0].newInstance(args);
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-                e.printStackTrace();
                 throw new RuntimeException(e);
             }
         }

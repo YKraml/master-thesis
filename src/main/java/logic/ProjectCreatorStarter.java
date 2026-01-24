@@ -5,10 +5,11 @@ import io.teamscale.api.ProjectCreator;
 import io.teamscale.api.ProjectsFetcher;
 import io.teamscale.api.model.project.Project;
 import jakarta.inject.Inject;
-import model.CemProject;
-import model.CemProjectPair;
+import model.writable.CemProject;
+import model.writable.CemProjectPair;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
@@ -40,7 +41,7 @@ public class ProjectCreatorStarter {
         Set<String> existingProjects = projectsFetcher
                 .getExistingProjects()
                 .stream()
-                .map(Project::getName)
+                .map(Project::name)
                 .collect(Collectors.toSet());
 
         int numberOfProjectsToBeCreated = getNumberOfProjectsToBeCreated();

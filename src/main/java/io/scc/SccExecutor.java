@@ -23,7 +23,7 @@ public class SccExecutor {
     public List<SccObject> execute(String folder) {
         try {
             ProcessBuilder builder = new ProcessBuilder();
-            builder.command(Constants.SCC, "-f", "json");
+            builder.command(Constants.SCC_EXE, "-f", "json");
             builder.directory(new File(folder));
 
             Process process = builder.start();
@@ -46,5 +46,4 @@ public class SccExecutor {
             throw new RuntimeException(e);
         }
     }
-
 }

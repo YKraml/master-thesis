@@ -21,7 +21,7 @@ public class ProjectDeleter {
     public void deleteAllProjects() {
         List<Project> existingProjects = projectsFetcher.getExistingProjects();
         for (Project existingProject : existingProjects) {
-            String name = existingProject.getName();
+            String name = existingProject.name();
 
             try {
                 deleteProject(name);
@@ -41,7 +41,5 @@ public class ProjectDeleter {
         HttpResponse<String> response = httpHelperTeamscale.executeDeleteRequest(path);
 
         System.out.println("Status Code: " + response.statusCode());
-
     }
-
 }

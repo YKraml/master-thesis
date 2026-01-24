@@ -1,4 +1,4 @@
-package model;
+package model.linting;
 
 import org.eclipse.jgit.diff.DiffEntry;
 

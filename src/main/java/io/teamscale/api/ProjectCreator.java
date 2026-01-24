@@ -1,7 +1,7 @@
 package io.teamscale.api;
 
 import jakarta.inject.Inject;
-import model.CemProject;
+import model.writable.CemProject;
 import util.Constants;
 
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class ProjectCreator {
                         "Excluded branches":"",
                         "Start revision":"%s",
                         "Content exclude":"",
-                        "Polling interval":"3600",
+                        "Polling interval":"86400",
                         "Include files stored via Git LFS":"false",
                         "Important Branches":"",
                         "Include Submodules":"false",
@@ -68,7 +68,7 @@ public class ProjectCreator {
                      "pathExcludes":[],
                      "contentIncludes":[],
                      "contentExcludes":[],
-                     "profile":"Java (default)"
+                     "profile":"%s"
                   }
                ],
                "branchingConfiguration":{
@@ -134,6 +134,7 @@ public class ProjectCreator {
                 defaultBranch,
                 startData,
                 endDate,
+                Constants.CURRENT_LANGUAGE.getAnalysisProfile(),
                 projectName
         );
 

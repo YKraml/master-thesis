@@ -3,9 +3,9 @@ package io.csv;
 import io.json.CemProjectPairReaderWriter;
 import io.json.ProofReaderWriter;
 import jakarta.inject.Inject;
-import model.CemProject;
-import model.CemProjectPair;
-import model.Proof;
+import model.writable.CemProject;
+import model.writable.CemProjectPair;
+import model.writable.Proof;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,6 @@ public class CemPairCsvCreator implements CsvCreator {
 
     @Override
     public void startCreatingCsvs() throws IOException {
-
         System.out.println("Starting CemPairCsvCreator");
 
         List<CemProjectPair> cemProjectPairs = cemProjectPairReaderWriter.readAll();
@@ -38,11 +37,13 @@ public class CemPairCsvCreator implements CsvCreator {
             control.add(cemProjectPair.control());
         }
 
-        createFiles("treated", treated);
-        createFiles("control", control);
+        createFile("treated", treated);
+        createFile("control", control);
+
+        System.out.println("Finished CemPairCsvCreator");
     }
 
-    private void createFiles(String string, List<CemProject> cemProjects) throws IOException {
+    private void createFile(String string, List<CemProject> cemProjects) throws IOException {
         //create file
         String folderName = "mixed.effects.models" + File.separator + "data" + File.separator + "cem_projects";
         new File(folderName).mkdirs();
@@ -81,7 +82,7 @@ public class CemPairCsvCreator implements CsvCreator {
                 int numberOfContributors = cemProject.numberOfContributors();
 
                 List<CemProject.LinterCommit> linterCommits = cemProject.linterCommits();
-                Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
+                Proof proof = proofReaderWriter.read(repoOwner, repoName).orElseThrow();
 
                 for (int i = 0; i < linterCommits.size(); i++) {
                     CemProject.LinterCommit linterCommit = linterCommits.get(i);

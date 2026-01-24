@@ -2,7 +2,6 @@ package io.json;
 
 import jakarta.inject.Inject;
 import logic.FilteredManager;
-import util.Constants;
 
 import java.io.File;
 
@@ -14,12 +13,7 @@ public class FilteredProjectReaderWriter extends ReaderWriter<FilteredManager.Fi
     }
 
     @Override
-    public File getFile(String repoOwner, String repoName) {
-        return new File(getFolderName() + File.separator + "project." + repoOwner + "." + repoName + ".json");
-    }
-
-    @Override
     protected String getFolderName() {
-        return "temp" + File.separator + "filtered" + File.separator + Constants.CURRENT_LANGUAGE.name().toLowerCase();
+        return "filtered" + File.separator + "filtered_project";
     }
 }

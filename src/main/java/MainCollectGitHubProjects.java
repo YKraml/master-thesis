@@ -2,6 +2,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import logic.GitHubRepoSelector;
 import logic.StateHandler;
+import util.Constants;
 import util.GuiceModule;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class MainCollectGitHubProjects {
         GitHubRepoSelector gitHubRepoSelector = injector.getInstance(GitHubRepoSelector.class);
 
         stateHandler.start();
-        gitHubRepoSelector.start(20000);
+        gitHubRepoSelector.start(Constants.NUMBER_OF_REPOS);
         stateHandler.end();
     }
 }

@@ -2,7 +2,7 @@ package logic;
 
 import io.json.GitHubRepositoryReaderWriter;
 import jakarta.inject.Inject;
-import model.GitHubRepository;
+import model.writable.GitHubRepository;
 import org.apache.commons.lang3.tuple.Pair;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GHRepositorySearchBuilder;
@@ -48,7 +48,7 @@ public class GitHubRepoSelector {
 
                 currentNumberOfStars.set(stargazersCount);
 
-                if (gitHubRepositoryReaderWriter.getElement(repoOwner, repoName).isPresent()) {
+                if (gitHubRepositoryReaderWriter.read(repoOwner, repoName).isPresent()) {
                     continue;
                 }
 

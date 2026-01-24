@@ -1,11 +1,10 @@
 package logic;
 
-import io.json.CemProjectPairReaderWriter;
 import io.json.CemProjectReaderWriter;
 import jakarta.inject.Inject;
-import model.CemProject;
-import model.CemProjectPair;
-import model.Proof;
+import model.writable.CemProject;
+import model.writable.CemProjectPair;
+import model.writable.Proof;
 import util.CemCommitsUtil;
 import util.Constants;
 
@@ -18,18 +17,17 @@ import java.util.stream.Collectors;
 
 public class CemMatcher {
 
-    private final CemProjectPairReaderWriter projectPairReaderWriter;
     private final CemProjectReaderWriter cemProjectReaderWriter;
     private final CemCommitsUtil cemCommitsUtil;
 
     @Inject
-    public CemMatcher(CemProjectPairReaderWriter projectPairReaderWriter, CemProjectReaderWriter cemProjectReaderWriter, CemCommitsUtil cemCommitsUtil) {
-        this.projectPairReaderWriter = projectPairReaderWriter;
+    public CemMatcher(CemProjectReaderWriter cemProjectReaderWriter, CemCommitsUtil cemCommitsUtil) {
         this.cemProjectReaderWriter = cemProjectReaderWriter;
         this.cemCommitsUtil = cemCommitsUtil;
     }
 
-    public void matchAndSafe(List<Proof> allTreatedProofs, List<Proof> allControlProofs) {
+    public List<CemProjectPair> match(List<Proof> allTreatedProofs, List<Proof> allControlProofs) {
+        List<CemProjectPair> result = new ArrayList<>();
 
         // Group all treated projects
         System.out.println("Group all treated projects");
@@ -64,15 +62,13 @@ public class CemMatcher {
             for (int i = 0; i < numberOfMatches; i++) {
                 CemProject treated = treatedBin.get(i);
                 CemProject control = controlsBin.get(i);
-
-                try {
-                    projectPairReaderWriter.write(createPair(treated, control));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                CemProjectPair pair = createPair(treated, control);
+                result.add(pair);
             }
         }
         System.out.println("Finished loop");
+
+        return result;
     }
 
     private CemProjectPair createPair(CemProject treated, CemProject control) {
@@ -109,11 +105,11 @@ public class CemMatcher {
         return new CemProjectPair(newTreated, newControl);
     }
 
-    private Map<String, List<CemProject>> createStrata(List<Proof> allTreatedProofs) {
-        return allTreatedProofs.stream()
+    private Map<String, List<CemProject>> createStrata(List<Proof> proofs) {
+        return proofs.stream()
                 .map(proof -> {
                     try {
-                        return cemProjectReaderWriter.getElement(proof.repoOwner(), proof.repoName()).get();
+                        return cemProjectReaderWriter.read(proof.repoOwner(), proof.repoName()).orElseThrow();
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -121,6 +117,9 @@ public class CemMatcher {
                 .collect(Collectors.groupingBy(this::generateStratumKey));
     }
 
+    /**
+     * Create fake linter commits for control project.
+     */
     private List<CemProject.LinterCommit> getControlLinterCommits(List<CemProject.Commit> controlCommits, List<CemProject.Commit> treatedCommits, List<CemProject.LinterCommit> treatedLinterCommits) {
         List<CemProject.LinterCommit> controlLinterCommits = new ArrayList<>();
 

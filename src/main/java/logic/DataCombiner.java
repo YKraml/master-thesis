@@ -8,10 +8,10 @@ import io.teamscale.api.model.churn.FindingChurn;
 import io.teamscale.api.model.cleaned.CleanedMetrics;
 import io.teamscale.api.model.cleaned.TeamscaleData;
 import io.teamscale.api.model.cleaned.TeamscaleDataEntry;
-import model.CemProject;
-import model.CombinedData;
-import model.GitHubData;
-import model.Proof;
+import model.writable.CemProject;
+import model.writable.CombinedData;
+import model.writable.GitHubData;
+import model.writable.Proof;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.time.Instant;
@@ -45,8 +45,8 @@ public class DataCombiner {
         for (TeamscaleDataEntry teamscaleDataEntry : teamscaleDataEntries) {
             CombinedData.Entry entryFromData = createEntryFromData(
                     beforeEntry,
-                    teamscaleDataEntry.getFindingChurn(),
-                    teamscaleDataEntry.getMetrics(),
+                    teamscaleDataEntry.findingChurn(),
+                    teamscaleDataEntry.metrics(),
                     gitHubData.forks(),
                     gitHubData.issues(),
                     cemProject.allCommits());

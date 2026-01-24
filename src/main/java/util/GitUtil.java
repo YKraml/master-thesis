@@ -13,14 +13,9 @@ public class GitUtil {
     }
 
     public Git checkout(Git git, String commit) throws GitAPIException {
-        prepareCheckout(git);
-        git.checkout().setName(commit).call();
-        return git;
-    }
-
-    private Git prepareCheckout(Git git) throws GitAPIException {
         git.clean().setForce(true).setCleanDirectories(true).call();
         git.reset().setMode(ResetCommand.ResetType.HARD).call();
+        git.checkout().setName(commit).call();
         return git;
     }
 }

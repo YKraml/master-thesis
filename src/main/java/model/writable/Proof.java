@@ -1,4 +1,6 @@
-package model;
+package model.writable;
+
+import model.linting.Language;
 
 import java.util.List;
 
@@ -15,7 +17,7 @@ public record Proof(
         int analysisStartTime,
         int analysisEndTime,
         int numberOfStars,
-        List<LinterWithProof> linters) implements ProjectWritable {
+        List<LinterWithProof> linters) implements Writable {
 
     public record LinterWithProof(
             String linterName,

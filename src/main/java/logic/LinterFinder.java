@@ -1,8 +1,8 @@
 package logic;
 
 import jakarta.inject.Inject;
-import model.FileIndicator;
-import model.Linter;
+import model.linting.FileIndicator;
+import model.linting.Linter;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.Strings;
 import util.Constants;
@@ -30,6 +30,15 @@ public class LinterFinder {
         return linters;
     }
 
+    public Optional<Result> searchForLinter(File folder, File file, Linter linter) throws IOException {
+        for (FileIndicator fileIndicator : linter.getIndicators()) {
+            if (fileIndicator.test(file)) {
+                return Optional.of(new Result(folder.toPath().relativize(file.toPath()).toString(), linter.name()));
+            }
+        }
+        return Optional.empty();
+    }
+
     private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
         List<File> files = new ArrayList<>(FileUtils.listFiles(folder, null, true));
         String[] extensions = Linter.getExtensionsOfLanguage(linter.getLanguage());
@@ -46,15 +55,6 @@ public class LinterFinder {
                 return;
             }
         }
-    }
-
-    public Optional<Result> searchForLinter(File folder, File file, Linter linter) throws IOException {
-        for (FileIndicator fileIndicator : linter.getIndicators()) {
-            if (fileIndicator.test(file)) {
-                return Optional.of(new Result(folder.toPath().relativize(file.toPath()).toString(), linter.name()));
-            }
-        }
-        return Optional.empty();
     }
 
     public record Result(String fileName, String linterName) {

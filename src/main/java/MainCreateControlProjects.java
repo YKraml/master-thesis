@@ -1,7 +1,7 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import logic.ProjectCreatorStarter;
-import model.CemProject;
+import model.writable.CemProject;
 import util.GuiceModule;
 
 import java.io.IOException;

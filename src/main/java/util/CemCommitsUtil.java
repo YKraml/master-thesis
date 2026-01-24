@@ -1,7 +1,7 @@
 package util;
 
 import jakarta.inject.Inject;
-import model.CemProject;
+import model.writable.CemProject;
 
 import java.util.List;
 
@@ -22,5 +22,4 @@ public class CemCommitsUtil {
 
         return numberOfCommitsInAnalysisWindow;
     }
-
 }

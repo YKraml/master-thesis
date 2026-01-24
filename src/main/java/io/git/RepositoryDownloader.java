@@ -2,7 +2,7 @@ package io.git;
 
 import jakarta.inject.Inject;
 import logic.StateHandler;
-import model.CemProject;
+import model.writable.CemProject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;

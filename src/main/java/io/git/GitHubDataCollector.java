@@ -8,8 +8,8 @@ import io.json.CemProjectPairReaderWriter;
 import io.json.GitHubDataReaderWriter;
 import jakarta.inject.Inject;
 import logic.StateHandler;
-import model.CemProject;
-import model.GitHubData;
+import model.writable.CemProject;
+import model.writable.GitHubData;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class GitHubDataCollector {
 
             stateHandler.addToState(Pair.of(repoOwner, repoName), "Collecting data from GitHub");
 
-            if (gitHubDataReaderWriter.getElement(repoOwner, repoName).isEmpty()) {
+            if (gitHubDataReaderWriter.read(repoOwner, repoName).isEmpty()) {
                 List<Issue> issues = issueFetcher.fetch(repoOwner, repoName);
                 List<Fork> forks = forkFetcher.fetch(repoOwner, repoName);
                 gitHubDataReaderWriter.write(new GitHubData(repoOwner, repoName, forks, issues));

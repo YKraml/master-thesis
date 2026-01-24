@@ -26,11 +26,8 @@ public class ProjectsFetcher {
     }
 
     private List<Project> getExistingProjectsNotSafe() throws IOException, InterruptedException {
-        String path
-                = "/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false";
-
+        String path = "/api/v2025.8/projects?include-deleting=false&include-reanalyzing=false";
         HttpResponse<String> response = httpHelperTeamscale.executeGetRequest(path);
-
         return List.of(new ObjectMapper().readValue(response.body(), Project[].class));
     }
 }

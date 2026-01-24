@@ -3,8 +3,8 @@ package logic;
 import io.json.FilteredProjectLinterReaderWriter;
 import io.json.FilteredProjectReaderWriter;
 import jakarta.inject.Inject;
-import model.Linter;
-import model.ProjectWritable;
+import model.linting.Linter;
+import model.writable.Writable;
 
 import java.io.IOException;
 
@@ -27,11 +27,10 @@ public class FilteredManager {
         filteredProjectReaderWriter.write(new FilteredProject(repoOwner, repoName, reason, proof));
     }
 
-    public record FilteredProject(String repoOwner, String repoName, String reason,
-                                  String proof) implements ProjectWritable {
+    public record FilteredProject(String repoOwner, String repoName, String reason, String proof) implements Writable {
     }
 
     public record FilteredProjectLinter(String repoOwner, String repoName, Linter linter, String reason,
-                                        String proof) implements ProjectWritable {
+                                        String proof) implements Writable {
     }
 }

@@ -1,6 +1,6 @@
-package model;
+package model.writable;
 
-public record CemProjectPair(CemProject treated, CemProject control) implements ProjectWritable {
+public record CemProjectPair(CemProject treated, CemProject control) implements Writable {
     @Override
     public String repoOwner() {
         return "(%s.%s)".formatted(treated.repoOwner(), treated.repoName());

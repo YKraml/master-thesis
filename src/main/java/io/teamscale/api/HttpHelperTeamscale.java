@@ -28,14 +28,7 @@ public class HttpHelperTeamscale {
                 .GET()
                 .build();
 
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() != 200) {
-            RuntimeException runtimeException = new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
-            runtimeException.printStackTrace();
-            throw runtimeException;
-        }
-
-        return response;
+        return httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
     public HttpResponse<String> executePostRequest(String path, String requestBody) throws IOException, InterruptedException {
@@ -48,12 +41,7 @@ public class HttpHelperTeamscale {
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .build();
 
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() != 201) {
-            throw new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
-        }
-
-        return response;
+        return httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
     public HttpResponse<String> executeDeleteRequest(String path) throws IOException, InterruptedException {
@@ -65,14 +53,7 @@ public class HttpHelperTeamscale {
                 .DELETE()
                 .build();
 
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() != 204) {
-            RuntimeException runtimeException = new RuntimeException("HTTP " + response.statusCode() + ": " + response.body());
-            runtimeException.printStackTrace();
-            throw runtimeException;
-        }
-
-        return response;
+        return httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
     private static URI createUrl(String path) {

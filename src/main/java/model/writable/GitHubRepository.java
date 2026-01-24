@@ -1,4 +1,4 @@
-package model;
+package model.writable;
 
 public record GitHubRepository(
         String repoOwner,
@@ -6,5 +6,5 @@ public record GitHubRepository(
         int numberOfStars,
         String defaultBranch,
         int size
-) implements ProjectWritable {
+) implements Writable {
 }

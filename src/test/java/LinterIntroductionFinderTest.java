@@ -3,7 +3,7 @@ import com.google.inject.Injector;
 import io.git.FullRepositoryDownloader;
 import logic.LinterFinder;
 import logic.LinterIntroductionFinder;
-import model.Linter;
+import model.linting.Linter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;

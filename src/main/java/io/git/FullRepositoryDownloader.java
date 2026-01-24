@@ -21,6 +21,11 @@ public class FullRepositoryDownloader extends RepositoryDownloader {
     }
 
     @Override
+    public String getFolderName(String repoOwner, String repoName) {
+        return "temp" + File.separator + "repos_full" + File.separator + repoOwner + File.separator + repoName;
+    }
+
+    @Override
     protected Semaphore getSemaphore() {
         return SEMAPHORE;
     }
@@ -36,11 +41,6 @@ public class FullRepositoryDownloader extends RepositoryDownloader {
             }
         }
         return git;
-    }
-
-    @Override
-    public String getFolderName(String repoOwner, String repoName) {
-        return "temp" + File.separator + "repos_full" + File.separator + repoOwner + File.separator + repoName;
     }
 
     @Override
