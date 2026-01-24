@@ -1,0 +1,1337 @@
+{
+  "treated" : {
+    "repoOwner" : "amazon-archives",
+    "repoName" : "dynamodb-janusgraph-storage-backend",
+    "groupType" : "TREATMENT",
+    "numberOfStars" : 447,
+    "creationYear" : "2015",
+    "defaultBranch" : "master",
+    "numberOfCommits" : 151,
+    "loc" : 11402,
+    "sloc" : 7216,
+    "numberOfContributors" : 17,
+    "linterCommits" : [ {
+      "name" : "0dee9ebbc8e6f7956b8bfb32aa6b1cce11124838",
+      "time" : 1499531819,
+      "index" : 120,
+      "user" : "PMD",
+      "linterName" : "amcp@mit.edu",
+      "numberOfCommitsInTwoYearWindow" : 147
+    }, {
+      "name" : "5a470fc9ced987092401328c2fa7bd8a224a4aab",
+      "time" : 1499674622,
+      "index" : 121,
+      "user" : "CHECKSTYLE",
+      "linterName" : "amcp@amazon.co.jp",
+      "numberOfCommitsInTwoYearWindow" : 147
+    }, {
+      "name" : "3db96c769f376a414ebabd6eec9104b385f4b511",
+      "time" : 1499762960,
+      "index" : 123,
+      "user" : "SPOTBUGS",
+      "linterName" : "amcp@amazon.co.jp",
+      "numberOfCommitsInTwoYearWindow" : 147
+    } ],
+    "allCommits" : [ {
+      "name" : "2586e9cbccd68782b0b5df11afa40937c0fe0e34",
+      "time" : 1440029809,
+      "index" : 0,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "02aac03d8f7f5d11feb76610c635e69833b3db90",
+      "time" : 1440031249,
+      "index" : 1,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "cd15b03632e2410ee1fd8902294239b96cb8bc6d",
+      "time" : 1440090765,
+      "index" : 2,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "7a5efd0cb6065a2e855df7753ab27cbe7a90edee",
+      "time" : 1440115844,
+      "index" : 3,
+      "user" : "ajlyon@gmail.com"
+    }, {
+      "name" : "894ab58c3d52183b20cb3bc06b33004b5ac741d1",
+      "time" : 1440177995,
+      "index" : 4,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "58e1cd92cb697223ac53004f2b179427ac5e01c2",
+      "time" : 1440186093,
+      "index" : 5,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "5582ab2666417691814f5986e086981c6d4587f9",
+      "time" : 1440353173,
+      "index" : 6,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "58a91e14771d9c6a39703b4a56ec8700b089a807",
+      "time" : 1440751054,
+      "index" : 7,
+      "user" : "yoshinori.yoshida@gree.net"
+    }, {
+      "name" : "cb4d44388315b480f241e0d4a91ea1563eb0b75e",
+      "time" : 1440751144,
+      "index" : 8,
+      "user" : "yoshinori.yoshida@gree.net"
+    }, {
+      "name" : "e7e2f8b5ae14c6accfb256ed14a9ca52b8ec0ad2",
+      "time" : 1441001313,
+      "index" : 9,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f7f44ef7e7b2391c77ab1e1faa86d75f85db6fac",
+      "time" : 1441001326,
+      "index" : 10,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "fcc793707fba860171a8cea782cac8854aa8103c",
+      "time" : 1444937036,
+      "index" : 11,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "d0e732e6ac12953778f0b61791a06a7f0a57168b",
+      "time" : 1449319428,
+      "index" : 12,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "87ed814daa9ca277bd3ef32f71232d03aaf173ca",
+      "time" : 1449428081,
+      "index" : 13,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f35148903670e2869cfd3ce4b8a2ef20a6fca33a",
+      "time" : 1449800146,
+      "index" : 14,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "cbc46456e21bafd8cc0ac39818da51b4699617a9",
+      "time" : 1450115138,
+      "index" : 15,
+      "user" : "alexp@amazon.com"
+    }, {
+      "name" : "d1a59624dcef796b835e7ffb41f0a3f007008d63",
+      "time" : 1450169175,
+      "index" : 16,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e975abcbdeaaef43d54f5a2304c50e94147074ad",
+      "time" : 1461011142,
+      "index" : 17,
+      "user" : "mike.rodrigues.dias@gmail.com"
+    }, {
+      "name" : "8e5fe653a00210cbfb1b03ab08a441dde844283c",
+      "time" : 1486183270,
+      "index" : 18,
+      "user" : "apivovarov@gmail.com"
+    }, {
+      "name" : "516009fd795102a47a5b01db995426ad5559bda4",
+      "time" : 1486862482,
+      "index" : 19,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "fca213e4deef3592259958cc3ed820292cd8a410",
+      "time" : 1486862524,
+      "index" : 20,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "ea3d646b54ffb8efd3a0cefac704352b3b29e281",
+      "time" : 1486863771,
+      "index" : 21,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "5a4a8b933cfb493a024d76388d9f6d28085b7d38",
+      "time" : 1486865602,
+      "index" : 22,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "5289174f9f01b6d01e5400e19ad0e134f0b47a8c",
+      "time" : 1486869889,
+      "index" : 23,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "7dc6e6a706ac409aa98424c205e192d56c6a184b",
+      "time" : 1487292890,
+      "index" : 24,
+      "user" : "pivovaa@amazon.com"
+    }, {
+      "name" : "3ad65981bacde98b0f5bf47ecdd886d46ea618c0",
+      "time" : 1487293196,
+      "index" : 25,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "944bd77de77898ad41307a957e471a79596af152",
+      "time" : 1488131401,
+      "index" : 26,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "0ef3b5829151aea5e0ddc2026c1b9b30ef193c73",
+      "time" : 1488132577,
+      "index" : 27,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "3c13fa587a185b793e94248666b5f71f1f663260",
+      "time" : 1488132616,
+      "index" : 28,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e54409a3ac91eff917733123f9454cd900395659",
+      "time" : 1488141656,
+      "index" : 29,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "a8b05b7c44029ea27ad4f4ec022088cf9d6388a0",
+      "time" : 1488141684,
+      "index" : 30,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "87cd31800f88464167e53b67aaf4713780c8b637",
+      "time" : 1488153047,
+      "index" : 31,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "137c6444e5cfee0e4daad4bacaf2617344de4138",
+      "time" : 1488153107,
+      "index" : 32,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "d9f1c6d71e4eb6e9c28e9a4b00323b6531b12e39",
+      "time" : 1488237942,
+      "index" : 33,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "aea8b5ed5d57f07cebc1d077ef7f169b8a904dcd",
+      "time" : 1488246086,
+      "index" : 34,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "2173069fd0a999bfe1f9100cb2acad9cb35f6fbb",
+      "time" : 1488275881,
+      "index" : 35,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "89fa05bc4faefd28b0fe149196ee1316866726cf",
+      "time" : 1488283223,
+      "index" : 36,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e3d9da28f8302eba77859646899694300a6a1551",
+      "time" : 1488551873,
+      "index" : 37,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "c3de93ec146955f50198c6cc3f9ca93759f14536",
+      "time" : 1488563496,
+      "index" : 38,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "fc94ba0a02faf8637cb5b2b100aaee63a8be8d67",
+      "time" : 1488569366,
+      "index" : 39,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "c0cb4785247758100e08811d0d812b7b68efd718",
+      "time" : 1488570141,
+      "index" : 40,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "6ce1ae09c755f48391f25a3804edc78694a26fbc",
+      "time" : 1490009468,
+      "index" : 41,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "4edd148cd80fcc37d973e5b855ad89671e5b898c",
+      "time" : 1490009528,
+      "index" : 42,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "ce3b29df8e01642e9e9c014ec12495ac4f248c66",
+      "time" : 1491886378,
+      "index" : 43,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "be00196d539cfb9aa917c9525b773a01884535d4",
+      "time" : 1491886479,
+      "index" : 44,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e43a92b088ec6a12cfd93f46ced6e537bac2b3d6",
+      "time" : 1491890999,
+      "index" : 45,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "3a23363a925d606fc42abc4ac65d417e602e2096",
+      "time" : 1491894274,
+      "index" : 46,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "526150fe3c7de21f7ffe33785b9993e09cc1a400",
+      "time" : 1492218478,
+      "index" : 47,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "988321bda641a5f3248663fda3e4f6be4ee2121c",
+      "time" : 1492610590,
+      "index" : 48,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "b1883f2d72cc1935401b097060a891b47291b2df",
+      "time" : 1492611976,
+      "index" : 49,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "60b1987312d55c97fa3ca398aa0fcacdb8a1edaa",
+      "time" : 1492613390,
+      "index" : 50,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "9a34e5f36f8e0230c96fffcfd42ee5a55b7f3bff",
+      "time" : 1492774108,
+      "index" : 51,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "3ad5618b06fc1772700a0df46350224c25378270",
+      "time" : 1492778863,
+      "index" : 52,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "39388bb36c9d485863b87369cff6c046f07c0ff9",
+      "time" : 1493112880,
+      "index" : 53,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "e6435601107303cc9c33ade1a18678da05aa1183",
+      "time" : 1493143721,
+      "index" : 54,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "f4a48bc41140efd3cea254449f540073e20a79d8",
+      "time" : 1493436545,
+      "index" : 55,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "ac9e7ce0d578a2b5b5e06baf1b4e6f9388cce627",
+      "time" : 1493436545,
+      "index" : 56,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "5edeea542962f8061572d829c36706a20e050a73",
+      "time" : 1493436545,
+      "index" : 57,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "89730e607ede6ce0539c0f0bb2955b8ad8136568",
+      "time" : 1493436545,
+      "index" : 58,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "5b60a8ac311c3fefc8c60696fd32703695537f9b",
+      "time" : 1493436545,
+      "index" : 59,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "782c586177bcd522f3a9b4a19db4325842e83a99",
+      "time" : 1493436545,
+      "index" : 60,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "0d79c5850509fadf2c6a63a5e710914fb49c360d",
+      "time" : 1493436545,
+      "index" : 61,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "b15347b07fed202883132182d5d764adfc524239",
+      "time" : 1493436545,
+      "index" : 62,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "4fa904e3fbf95b5ff3eda075e53b6455ae413d01",
+      "time" : 1493436545,
+      "index" : 63,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "7dbeeb76188b7a511ac48e59e6e817d6b5642fe4",
+      "time" : 1493455705,
+      "index" : 64,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "de01aee7dc9fb2d4e9f876a76024b3114aa9d396",
+      "time" : 1493455853,
+      "index" : 65,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "d7fc55741520e6ea039004b07ce627ab4990889e",
+      "time" : 1493472734,
+      "index" : 66,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "ebd570d13e29390768b8629c348be3349262bf3c",
+      "time" : 1493790961,
+      "index" : 67,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "1fe4905d412fa11258327b8e3bb4b0c2a38c9d6b",
+      "time" : 1493790961,
+      "index" : 68,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "44c06b0ff69e5e63d5900f586bc68ab86301ca44",
+      "time" : 1493790961,
+      "index" : 69,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "b5866bbde69565e2fd1fb2f897d96ea545d7aaae",
+      "time" : 1493790961,
+      "index" : 70,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "c4f99a6255d4cea2dc4bf25f7b2008516ec01fc9",
+      "time" : 1493790961,
+      "index" : 71,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "3b20506c3798ab90a43aaf6b6dc07e4a3bf4977a",
+      "time" : 1493790961,
+      "index" : 72,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "7bfe6d5e8a9daafc1edd361702420534a4db0982",
+      "time" : 1493790961,
+      "index" : 73,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "dc8f8627297d4af869cfc1911203d68b0b68c9c0",
+      "time" : 1493790961,
+      "index" : 74,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "34273433308545815900c59e2055b599c15ed95d",
+      "time" : 1493790961,
+      "index" : 75,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "d78541ef3de5c0b5df9138f258a000d3a00eb395",
+      "time" : 1493790961,
+      "index" : 76,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f6f6d0a21120b0b61c214e2aa8fa8794ce3c6efd",
+      "time" : 1493790961,
+      "index" : 77,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "b871f0e0e3ef61732b716e553c64dd406ef03cbf",
+      "time" : 1493790961,
+      "index" : 78,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "d33ec125ef25191fc9154006d3ae0d8e3eaa1953",
+      "time" : 1493790961,
+      "index" : 79,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f91fe82ae72388c3fccdb5ec489c359a7e3959a3",
+      "time" : 1493790961,
+      "index" : 80,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e4f3e267551c9449b8dc9867a7d763be77019b55",
+      "time" : 1493790961,
+      "index" : 81,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "f56dd0ce59bb9fe0e31e267276fb68e5fc3a471d",
+      "time" : 1493790961,
+      "index" : 82,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "9ab46b65177e016238cf44ab5cc44c0c265783ef",
+      "time" : 1493790961,
+      "index" : 83,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "70075b95475f467264efdc6bd34413fe0adfa8d1",
+      "time" : 1493790961,
+      "index" : 84,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "446b0f1898689a9925f4da01e54bb7e7e2fec483",
+      "time" : 1493790961,
+      "index" : 85,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "ede2496986f91ad3e2b0fc6dcddb7896fca8393c",
+      "time" : 1493790961,
+      "index" : 86,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "c0c27cc314358febd29f570a823b2fe313db0253",
+      "time" : 1493790961,
+      "index" : 87,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "dda13feabc7a6c00ea58b33995c4758fa4794f31",
+      "time" : 1493790961,
+      "index" : 88,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "50ec9aff9de4705acfd7844265de52e1476ce63a",
+      "time" : 1493790961,
+      "index" : 89,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "abf48912c4dec21d1be11b0aaa96e1975b41d98f",
+      "time" : 1493790961,
+      "index" : 90,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "16cbff9b647de1537e0314308d90ba6bf0669f90",
+      "time" : 1493790961,
+      "index" : 91,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "bda40a841d80d159d7117ee3b975469bdd729cac",
+      "time" : 1493810087,
+      "index" : 92,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f7ebe18fb5a8352e2c5ade926a6e68f8b2985148",
+      "time" : 1493814608,
+      "index" : 93,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "f0aae9e8f362d1e628910ec24454c1dd99130857",
+      "time" : 1493817996,
+      "index" : 94,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "7409b5864f52488851422d93a1269d9abd2b57c8",
+      "time" : 1493819291,
+      "index" : 95,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "80fb0862741242e7446557f1a0f0638c33fba8f7",
+      "time" : 1493823548,
+      "index" : 96,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "72d17774d2215212112aee3b53abb5f7838d6a3d",
+      "time" : 1493824565,
+      "index" : 97,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "77bb6a903ee6e38ea3e4c88a97d098a0eaaa6b4c",
+      "time" : 1493826108,
+      "index" : 98,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "9e2d76cab3213cce6e8a097b07c0ca0c8fe25cfa",
+      "time" : 1493827092,
+      "index" : 99,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "a07fcdee946b3fc107aa298a06016701cb04e8c2",
+      "time" : 1493827716,
+      "index" : 100,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "cc988497079903c0d4214a48a6bc2e7b87abe5c4",
+      "time" : 1493868824,
+      "index" : 101,
+      "user" : "johanjcbs@gmail.com"
+    }, {
+      "name" : "f38b801e0d45eb8ff16e08a5f0e0086f5b0abe66",
+      "time" : 1493991427,
+      "index" : 102,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "540e473812088d2c28baad86787be1fef59dde70",
+      "time" : 1493991843,
+      "index" : 103,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "01386e4845de3ff595ec48b38f474a8db60d7fab",
+      "time" : 1493992054,
+      "index" : 104,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "91efb557bcc1fb32a32844c0d9c5f79182ca90e2",
+      "time" : 1493992204,
+      "index" : 105,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "2d161e2e330e4dd9cd5581c0bad2cbef17417acc",
+      "time" : 1494168905,
+      "index" : 106,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "e079c98c93e6d67def257532ef2f2f7e8feb1a47",
+      "time" : 1495986927,
+      "index" : 107,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "5603ad301e724cf0721a3d64deeaf30e16925d99",
+      "time" : 1496050635,
+      "index" : 108,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "67045487be2a24e4138ce29c8734e2abe7a398bf",
+      "time" : 1497484361,
+      "index" : 109,
+      "user" : "nelsonw2014@gmail.com"
+    }, {
+      "name" : "6fdee1a5a8151f012b983ea292963a7374f82fed",
+      "time" : 1497484361,
+      "index" : 110,
+      "user" : "nelsonw2014@gmail.com"
+    }, {
+      "name" : "209212a66f843ff7e77b97eb1553fdbc8fdbfd7d",
+      "time" : 1498487934,
+      "index" : 111,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "e53abb4f04c12c1869b53d1958baa967f4ed1b43",
+      "time" : 1498497024,
+      "index" : 112,
+      "user" : "addisonslabaugh@addisons-air.attlocal.net"
+    }, {
+      "name" : "8faefcd4619a39198f1b58c3859c03a45dba05c1",
+      "time" : 1498497024,
+      "index" : 113,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "743cdb163577aad134df25a65a1d7bc45c9854d2",
+      "time" : 1499259328,
+      "index" : 114,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "254b398e0b708f54f9c9e81bf0ca97c219367256",
+      "time" : 1499311620,
+      "index" : 115,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "81d3a501334c61cf269c3e64e72ca8dc4349fc90",
+      "time" : 1499315766,
+      "index" : 116,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "27f19f746a4c20e94b9a2b79f9ecd233e32f12b9",
+      "time" : 1499334470,
+      "index" : 117,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "8628c8584dc4845013c1c6afb092960129cbf61f",
+      "time" : 1499335114,
+      "index" : 118,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "32bb819adbf54ead25bf4e0d78ebb6ba4f73bda3",
+      "time" : 1499413244,
+      "index" : 119,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "0dee9ebbc8e6f7956b8bfb32aa6b1cce11124838",
+      "time" : 1499531819,
+      "index" : 120,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "5a470fc9ced987092401328c2fa7bd8a224a4aab",
+      "time" : 1499674622,
+      "index" : 121,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "f97810894b31196e98efed1aa04fe5dfd194a11f",
+      "time" : 1499715282,
+      "index" : 122,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "3db96c769f376a414ebabd6eec9104b385f4b511",
+      "time" : 1499762960,
+      "index" : 123,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "91827a8d4198210113749bc9bb3256c8b476a7f4",
+      "time" : 1499775903,
+      "index" : 124,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "385fe057e61adf19e67964a143e3cda47034bafd",
+      "time" : 1500973585,
+      "index" : 125,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "2b13e0c93dd2f3cd3c1e295ad4db82073ebd28b1",
+      "time" : 1501426440,
+      "index" : 126,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "39d49b8361e53a6ee3a2ec20d0d47ed166029d4d",
+      "time" : 1509359042,
+      "index" : 127,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "034d5e546ef56adb67b47230f1f34238f4cd72e6",
+      "time" : 1509359181,
+      "index" : 128,
+      "user" : "ngrigoriev@gmail.com"
+    }, {
+      "name" : "fca509ddd4ae830fce0f2a118a94f678e3f06640",
+      "time" : 1509359181,
+      "index" : 129,
+      "user" : "ngrigoriev@gmail.com"
+    }, {
+      "name" : "22541e3a427c075663f8100354da7a6ce22bb466",
+      "time" : 1509359954,
+      "index" : 130,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "0e7a1d1187cbe1e082d7545b562eacf0f43932f5",
+      "time" : 1509368422,
+      "index" : 131,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "85c69ba1ad2387ee24c6cc6ea20d73122a3ffaec",
+      "time" : 1509402733,
+      "index" : 132,
+      "user" : "amcp@amazon.com"
+    }, {
+      "name" : "45a0c11e7a9c89c14df7befa8b935a20ad4c2db2",
+      "time" : 1519116294,
+      "index" : 133,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "09a6ccc5d7a9260e52654f87e38d44ff80c15558",
+      "time" : 1519151753,
+      "index" : 134,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "bd08d5f5d0571212343b096cdf3c2397fa677d44",
+      "time" : 1519171735,
+      "index" : 135,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "a70bd7377a21a1d58419656a3b82f194e58b95bd",
+      "time" : 1519925665,
+      "index" : 136,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "07dd8945b4a32ed3b6f7091dbc13c1b58a094c04",
+      "time" : 1520540110,
+      "index" : 137,
+      "user" : "amcp@mit.edu"
+    }, {
+      "name" : "09010083c5ca94add7db0dacbbe23549f8a34916",
+      "time" : 1521236773,
+      "index" : 138,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "77e2a51b729ac4446920e382c6629c6e4a4593f8",
+      "time" : 1527318891,
+      "index" : 139,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "fb2a36e06ae2a508f0a3497d574a0b4e653db2e6",
+      "time" : 1531918580,
+      "index" : 140,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "6146f33aa85cb146521eafedb2f6b9ca6e9135f7",
+      "time" : 1531919005,
+      "index" : 141,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "927213139b3fa734f0d1b48242f8181b8a4b2157",
+      "time" : 1531919278,
+      "index" : 142,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "c1968e056a28b951619546a700aa24472e55c625",
+      "time" : 1531921699,
+      "index" : 143,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "e42c7db16ae6cc86a6507afa89077b1f2ba9fb9f",
+      "time" : 1531922011,
+      "index" : 144,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "be51ad205bfe6f8762ffa693e95e8284e71e4fa8",
+      "time" : 1531922415,
+      "index" : 145,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "e7ba180d2c40d8ea777e320d9a542725a5229fc0",
+      "time" : 1531922895,
+      "index" : 146,
+      "user" : "amcp@amazon.co.jp"
+    }, {
+      "name" : "b13caa617525757a3ab6d397526825719cf3a7c4",
+      "time" : 1580415061,
+      "index" : 147,
+      "user" : "49699333+dependabot[bot]@users.noreply.github.com"
+    }, {
+      "name" : "89fa5e8765d279847ecf98a8fad015ebe4756c3a",
+      "time" : 1586306006,
+      "index" : 148,
+      "user" : "43578872+khanshariquem@users.noreply.github.com"
+    }, {
+      "name" : "ad467f96f63be5efe7284c69285bfd9f8a6a3528",
+      "time" : 1601062930,
+      "index" : 149,
+      "user" : "tangming@amazon.com"
+    }, {
+      "name" : "4d05028e1b5991c545a5bc8f7bcd45799c24d5a0",
+      "time" : 1601312630,
+      "index" : 150,
+      "user" : "tangmh1996@gmail.com"
+    } ]
+  },
+  "control" : {
+    "repoOwner" : "HomeAdvisor",
+    "repoName" : "Kafdrop",
+    "groupType" : "CONTROL",
+    "numberOfStars" : 395,
+    "creationYear" : "2015",
+    "defaultBranch" : "master",
+    "numberOfCommits" : 102,
+    "loc" : 7786,
+    "sloc" : 5404,
+    "numberOfContributors" : 10,
+    "linterCommits" : [ {
+      "name" : "d7e992f94707c6d03b06801fab86fec5b8e7b774",
+      "time" : 1542215097,
+      "index" : 81,
+      "user" : "CONTROL",
+      "linterName" : "luc.cary@gmail.com",
+      "numberOfCommitsInTwoYearWindow" : 57
+    }, {
+      "name" : "d7e992f94707c6d03b06801fab86fec5b8e7b774",
+      "time" : 1542215097,
+      "index" : 81,
+      "user" : "CONTROL",
+      "linterName" : "luc.cary@gmail.com",
+      "numberOfCommitsInTwoYearWindow" : 57
+    }, {
+      "name" : "2f5621a6e39e5f96465492f132405bd7ea2ef380",
+      "time" : 1542216471,
+      "index" : 83,
+      "user" : "CONTROL",
+      "linterName" : "luc.cary@gmail.com",
+      "numberOfCommitsInTwoYearWindow" : 57
+    } ],
+    "allCommits" : [ {
+      "name" : "ec75c303c48035112021173bf3b20631333d02d7",
+      "time" : 1444143324,
+      "index" : 0,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "f1befdbdd23af3cbe05ebe39e3b4154a44f5d180",
+      "time" : 1447194477,
+      "index" : 1,
+      "user" : "dhay@mac-dev-dhay.local"
+    }, {
+      "name" : "57106d19a6b301c83e28107e597a6727d12604b5",
+      "time" : 1447445931,
+      "index" : 2,
+      "user" : "teret@homeadvisor.com"
+    }, {
+      "name" : "92fcef23955048bd3245e80340da11c2619e326c",
+      "time" : 1447446085,
+      "index" : 3,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "922b7da246a5434ed9c04e19c855f77885106159",
+      "time" : 1447446085,
+      "index" : 4,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "746a33e9ccd2a8ecb253eb17b542e37fb769fbdd",
+      "time" : 1448404982,
+      "index" : 5,
+      "user" : "dhay@mac-dev-dhay.local"
+    }, {
+      "name" : "40d7dada3d426a96f81930bd8305654deeb413bf",
+      "time" : 1448405032,
+      "index" : 6,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "fe962ae3a9783895fb093500b1e970e0dc53af4b",
+      "time" : 1448405035,
+      "index" : 7,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "053685da224d6da14adbd323fc86ea139d43f0b5",
+      "time" : 1449767804,
+      "index" : 8,
+      "user" : "dhay@mac-dev-dhay.local"
+    }, {
+      "name" : "ddcb960d7e907331aca56074ae9bf5ac5b654c34",
+      "time" : 1449767991,
+      "index" : 9,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "07117b967240a2f1e1b18995c853c5cf37da08ee",
+      "time" : 1449767995,
+      "index" : 10,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "f9dec8f4ab1539779672c6612c791e6b29bcc321",
+      "time" : 1452726318,
+      "index" : 11,
+      "user" : "dhay@mac-dev-dhay.local"
+    }, {
+      "name" : "2fe3fcc1b7a0404fc1e029e0e6428aa047da1dc7",
+      "time" : 1452726322,
+      "index" : 12,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "7a96ba7ab880b2ea5f4935b924a081bbbc73016f",
+      "time" : 1452726322,
+      "index" : 13,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "c940480cbf410824f6e525827c2f3ab8671a556a",
+      "time" : 1456952707,
+      "index" : 14,
+      "user" : "dhay@mac-dev-dhay.local"
+    }, {
+      "name" : "98102ef6e42be1f812f9648e3272b7b1603bf837",
+      "time" : 1456955964,
+      "index" : 15,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "b6d13299f67b2820941837663fec9cc41d195cff",
+      "time" : 1456955964,
+      "index" : 16,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "aef8676753c19aa23fbe6d07c4edb8f06ef2456a",
+      "time" : 1458654852,
+      "index" : 17,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "0477314b97c36a4d81d6ea08c409825940f0ec83",
+      "time" : 1458655489,
+      "index" : 18,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "69aa2f49eb9ad9f4b5d76753bfed639d629786a3",
+      "time" : 1458847981,
+      "index" : 19,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "8e56a2c81c575fe4fe1447e941e578210003974b",
+      "time" : 1458848171,
+      "index" : 20,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "5a982a6585dbb9d384a78c0118d5be62eb08f439",
+      "time" : 1458848245,
+      "index" : 21,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "5a6732d7b5006d0030712c9731d4583b64f1d288",
+      "time" : 1458848246,
+      "index" : 22,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "2dafddb3d739f73dcdf33c13049c506d1fffbe9a",
+      "time" : 1458854898,
+      "index" : 23,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "9702a39370556c0451a2c2c1f0b02afcde1ca512",
+      "time" : 1458854993,
+      "index" : 24,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "03fe09b36e0e5552eb8e607844644692a0427fce",
+      "time" : 1458857091,
+      "index" : 25,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "f5e15c8f9d359233d5aae75d88c31cbc646ad622",
+      "time" : 1458860932,
+      "index" : 26,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "189ff96229dfc875323311f1188c103e1eaa11b4",
+      "time" : 1467067350,
+      "index" : 27,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "970f6368217bab1c5dbfe4d80499e92b978ae90f",
+      "time" : 1467067403,
+      "index" : 28,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "eac123fb9e4aaa3d0f9df6e131404fcf27af43c0",
+      "time" : 1467067404,
+      "index" : 29,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "ca0333631756f7c6eaa4d38a39c928a66f7ab3f8",
+      "time" : 1469633624,
+      "index" : 30,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "2d6fa955c45d8b6be19e821b920fc9fbaf4d6c7c",
+      "time" : 1469633728,
+      "index" : 31,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "c6716759b045acf4c2f830847ef91023b770d901",
+      "time" : 1469633729,
+      "index" : 32,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "3772a5758d872d886c4118f801c547e53f6a6ecc",
+      "time" : 1469633971,
+      "index" : 33,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "f966bb0fda259ddd624e28c077b858115508b54d",
+      "time" : 1470841520,
+      "index" : 34,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "198def63be1a094397596bc28ccd34bca6cd9770",
+      "time" : 1470841653,
+      "index" : 35,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "9e5b386d01a9eeb7830aafd0a9cacd7939ea4b29",
+      "time" : 1470841654,
+      "index" : 36,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "e463d2d38aaa132818f25510e1265bbf0698fbbb",
+      "time" : 1472511286,
+      "index" : 37,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "2c09682e81f6f5f093ad28a588d82fa6db489dc9",
+      "time" : 1473286402,
+      "index" : 38,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "87ebf5c30f134b2bc875757286612d81b57c9866",
+      "time" : 1473368032,
+      "index" : 39,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "38468443152579c6870de3636b734f84d9d6ce03",
+      "time" : 1473368035,
+      "index" : 40,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "cb8e166b4604b7ed1a8e85b37fa9627fb868d979",
+      "time" : 1474038225,
+      "index" : 41,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "c66e38e621995af223faf9cc0409381f0211552c",
+      "time" : 1474038554,
+      "index" : 42,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "8954e5e266c8dd2685a3369d2ed914f349f325f5",
+      "time" : 1474038694,
+      "index" : 43,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "351a8498aaab1b71b722bcb0aa7df5cb053668fb",
+      "time" : 1474038697,
+      "index" : 44,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "7553586c00604756d60b97024ab7cad8dc3c50d5",
+      "time" : 1479225348,
+      "index" : 45,
+      "user" : "bmcdonie@integrity-apps.com"
+    }, {
+      "name" : "6636cc03a677e6b4a899c866c5952515eb66cadc",
+      "time" : 1479225967,
+      "index" : 46,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "3a14c5fd44f1a0315d1ce0123493977ba5aff0d2",
+      "time" : 1479238725,
+      "index" : 47,
+      "user" : "bmcdonie@integrity-apps.com"
+    }, {
+      "name" : "1c140e135e6b67a554f585ab248b713e1721bbd7",
+      "time" : 1479487788,
+      "index" : 48,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "6f669434e6d83c755c7afaa16f569abf45ae8462",
+      "time" : 1479488231,
+      "index" : 49,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "43e4ec465a0b45fd83e476be521106fee4d51ed7",
+      "time" : 1479488340,
+      "index" : 50,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "a4166f93fbb8ef4f5a7e2a1583cbe93c9378eab4",
+      "time" : 1498061051,
+      "index" : 51,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "09e3ee8932c916301f74ba42412148f8feef3ec9",
+      "time" : 1498061051,
+      "index" : 52,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "9bc00182d3bf115505cddf4d84661378ffcf2922",
+      "time" : 1498061165,
+      "index" : 53,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "23f154d5d6d74d1ab2b70c0f1b32d9949419dd2a",
+      "time" : 1498061173,
+      "index" : 54,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "987978e4a8dbd73ecf8bd606d6c3473d7c3d6fe7",
+      "time" : 1498065855,
+      "index" : 55,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "51cf978a09fa01c9a6d02b819e04137b3af53c32",
+      "time" : 1498066797,
+      "index" : 56,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "7fb5884d4490642098976119e724babc3f8c44bc",
+      "time" : 1498066896,
+      "index" : 57,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "9c0385d64c8da2efad0280a6fd0a02726b8c6513",
+      "time" : 1507237188,
+      "index" : 58,
+      "user" : "kkirkham@homeadvisor.com"
+    }, {
+      "name" : "765699572d1426af65b01fc7b4339628b7bee664",
+      "time" : 1507237171,
+      "index" : 59,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "f718c41c173e3274ce44772735edc1060fbc8935",
+      "time" : 1507237175,
+      "index" : 60,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "9a579786240754ddcb0e58e56f36af5168bfe2e7",
+      "time" : 1507672240,
+      "index" : 61,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "38bf57742c2a27f8c1101f5199bbc1f31898fa31",
+      "time" : 1507672470,
+      "index" : 62,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "ebe6f1cc80f9e3b6d13b6002a2bab4247aeed515",
+      "time" : 1507672474,
+      "index" : 63,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "53ba4f6903d9daf80a7e1685af6ed81e86ff1cc9",
+      "time" : 1508859267,
+      "index" : 64,
+      "user" : "mpratt@homeadvisor.com"
+    }, {
+      "name" : "3df841ebf6e88e4810a2901bd4c1d2d7807286cc",
+      "time" : 1508859567,
+      "index" : 65,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "6191275fc0cb747f1afe422254a350c3b334378f",
+      "time" : 1508859570,
+      "index" : 66,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "b2257002bd65763cbf39fc99a3f7aa76e31704a6",
+      "time" : 1512513663,
+      "index" : 67,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "355ad6a728bf2c126b1388ffa835266ba3f874be",
+      "time" : 1512513869,
+      "index" : 68,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "2d32c3baede3e4964fa35dacbcd6c38b08918c40",
+      "time" : 1512513873,
+      "index" : 69,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "bd3c612d59386755dcda5875d60344b2dc304f29",
+      "time" : 1512690111,
+      "index" : 70,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "c92697d4fd1630372f9937ecd7cda652b3493a32",
+      "time" : 1512690269,
+      "index" : 71,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "90695e9c6cf8d9e2988bcf6b8a894fec09ad3157",
+      "time" : 1512690272,
+      "index" : 72,
+      "user" : "buildmonkey@homeadvisor.com"
+    }, {
+      "name" : "06b42d545d8d5a7367622f886ff41899b2260ec6",
+      "time" : 1518021954,
+      "index" : 73,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "932da95b730a460fea06776ae02798637db31b62",
+      "time" : 1541959467,
+      "index" : 74,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "a9626132ca0c0208478e25bdd045bc799a798269",
+      "time" : 1542212775,
+      "index" : 75,
+      "user" : "lc3326@columbia.edu"
+    }, {
+      "name" : "8f6697253fd71f6ea1188f4909c7ceef1997354f",
+      "time" : 1542212787,
+      "index" : 76,
+      "user" : "lc3326@columbia.edu"
+    }, {
+      "name" : "46dfcdbc53671c78f37a74fa23edf2471bd9405a",
+      "time" : 1542212808,
+      "index" : 77,
+      "user" : "lc3326@columbia.edu"
+    }, {
+      "name" : "a08b3ccf2467db11aed828b8eaa724b40861ff58",
+      "time" : 1542213169,
+      "index" : 78,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "9439427a7dc765a426119dc27af193725e738cb7",
+      "time" : 1542213211,
+      "index" : 79,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "04c363a109f5f5493e9e7fb801998a061d4e9bbe",
+      "time" : 1542214180,
+      "index" : 80,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "d7e992f94707c6d03b06801fab86fec5b8e7b774",
+      "time" : 1542215097,
+      "index" : 81,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "3f7cee50e4d9e99555a17eab185aa4ba1329c546",
+      "time" : 1542215838,
+      "index" : 82,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "2f5621a6e39e5f96465492f132405bd7ea2ef380",
+      "time" : 1542216471,
+      "index" : 83,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "d353fa1a7f29bd0a9a080eb89690d2d038d8b6a1",
+      "time" : 1542216564,
+      "index" : 84,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "4c079edccbada1cb9cb34e458cb1726a5cd40d7c",
+      "time" : 1544669719,
+      "index" : 85,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "e738ca994db7a957de2f93ce687cb2f28fef6cdb",
+      "time" : 1544673614,
+      "index" : 86,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "efd0f89f91f1cf8d36e16208b132939e6e168e06",
+      "time" : 1544674685,
+      "index" : 87,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "2c935cba5c4057ee144dc28cfdbca22d5f15b943",
+      "time" : 1544675265,
+      "index" : 88,
+      "user" : "luc.cary@gmail.com"
+    }, {
+      "name" : "16eca46b37bd6936e64a21999f75d7c89c508659",
+      "time" : 1545235018,
+      "index" : 89,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "7ac181b9d9cedac1ca51f0f8f3d01fbf05f666c9",
+      "time" : 1552594067,
+      "index" : 90,
+      "user" : "fabian@kneissl-web.net"
+    }, {
+      "name" : "ce7e947d55001a943039318703c2b1cb047ea94f",
+      "time" : 1552594078,
+      "index" : 91,
+      "user" : "fabian@kneissl-web.net"
+    }, {
+      "name" : "50002251fe8ccc1204cb5b8cec7cfd7f59c3c132",
+      "time" : 1563312539,
+      "index" : 92,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "0be62afbc2268c0b6ba212f4ab8c54dbdffbd1e3",
+      "time" : 1563312563,
+      "index" : 93,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "e2c21d6cffdf35a0c72f079aa2cf275536d78a15",
+      "time" : 1563312600,
+      "index" : 94,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "b0c55bf12f102aab8e83801200b25ab41c6ef77c",
+      "time" : 1563313138,
+      "index" : 95,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "63bbc7103359e62a4fa70056c46751ddfa169d73",
+      "time" : 1576253420,
+      "index" : 96,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "ec351d27b8b6e1008817cd2a3816a269ff1b9bb7",
+      "time" : 1576254887,
+      "index" : 97,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "ec7324c211faece7a090e0c4d847e4a5aa06e788",
+      "time" : 1576257854,
+      "index" : 98,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "a5287536e959fb16a96c960c80eb50a97e52e355",
+      "time" : 1576258153,
+      "index" : 99,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "dbd8751ac5d8db0d3ae90103bf095dc537154cf6",
+      "time" : 1579709541,
+      "index" : 100,
+      "user" : "dhay@homeadvisor.com"
+    }, {
+      "name" : "ea27d99c2822367de4239ad8f82851058c0bb163",
+      "time" : 1579711077,
+      "index" : 101,
+      "user" : "dhay@homeadvisor.com"
+    } ]
+  }
+}

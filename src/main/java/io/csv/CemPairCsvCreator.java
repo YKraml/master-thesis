@@ -59,13 +59,14 @@ public class CemPairCsvCreator implements CsvCreator {
                     "firstCommitTime" + "," +
                     "defaultBranch" + "," +
                     "numberOfCommits" + "," +
+                    "loc" + "," +
+                    "sloc" + "," +
+                    "numberOfContributors" + "," +
                     "linterCommitName" + "," +
                     "linterCommitTime" + "," +
                     "linterCommitIndex" + "," +
                     "linterName" + "," +
-                    "numberOfCommitsInTwoYearWindow" + "," +
-                    "loc" + "," +
-                    "sloc");
+                    "numberOfCommitsInTwoYearWindow");
 
             for (CemProject cemProject : cemProjects) {
                 String repoOwner = cemProject.repoOwner();
@@ -77,6 +78,7 @@ public class CemPairCsvCreator implements CsvCreator {
                 int numberOfCommits = cemProject.numberOfCommits();
                 int loc = cemProject.loc();
                 int sloc = cemProject.sloc();
+                int numberOfContributors = cemProject.numberOfContributors();
 
                 List<CemProject.LinterCommit> linterCommits = cemProject.linterCommits();
                 Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
@@ -99,13 +101,14 @@ public class CemPairCsvCreator implements CsvCreator {
                             proof.firstCommitTime() + "," +
                             defaultBranch + "," +
                             numberOfCommits + "," +
+                            loc + "," +
+                            sloc + "," +
+                            numberOfContributors + "," +
                             name + "," +
                             time + "," +
                             index + "," +
                             linterName + "," +
-                            numberOfCommitsInTwoYearWindow + "," +
-                            loc + "," +
-                            sloc);
+                            numberOfCommitsInTwoYearWindow);
                 }
             }
         }

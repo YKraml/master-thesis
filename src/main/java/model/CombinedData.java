@@ -43,7 +43,10 @@ public record CombinedData(String repoOwner,
             double findingsDensity,
             double cloneCoverage,
             double averageFileLoc,
-            double averageFileSloc
+            double averageFileSloc,
+            int numberOfForks,
+            int numberOfIssues,
+            int numberOfContributors
     ) {
 
         public static String csvHeader() {
@@ -52,7 +55,7 @@ public record CombinedData(String repoOwner,
                     .collect(Collectors.joining(","));
         }
 
-        public static Entry getDefault() {
+        public static Entry getEmptyEntry() {
             RecordComponent[] components = Entry.class.getRecordComponents();
             Object[] args = new Object[components.length];
             Arrays.fill(args, 0);

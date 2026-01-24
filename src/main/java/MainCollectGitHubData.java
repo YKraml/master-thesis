@@ -1,6 +1,6 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import logic.GitHubDataCollector;
+import io.git.GitHubDataCollector;
 import logic.StateHandler;
 import util.GuiceModule;
 

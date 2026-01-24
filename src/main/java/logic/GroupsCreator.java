@@ -120,6 +120,9 @@ public class GroupsCreator {
         int loc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Lines).sum();
         int sloc = sccObjects.stream().filter(sccObject -> Constants.CURRENT_LANGUAGE.getSccFileEndings().contains(sccObject.Name())).mapToInt(SccObject::Code).sum();
 
+        //Count contributors
+        int numberOfContributors = Math.toIntExact(commits.stream().map(CemProject.Commit::user).distinct().count());
+
         return new CemProject(
                 repoOwner,
                 repoName,
@@ -130,6 +133,7 @@ public class GroupsCreator {
                 commits.size(),
                 loc,
                 sloc,
+                numberOfContributors,
                 getTreatedLinterCommits(proof, commits),
                 commits
         );

@@ -1,10 +1,17 @@
 package io.csv;
 
-import io.json.CombinedDataReaderWriter;
+import io.json.CemProjectReaderWriter;
+import io.json.GitHubDataReaderWriter;
+import io.json.ProofReaderWriter;
+import io.json.TeamscaleDataReaderWriter;
+import io.teamscale.api.model.cleaned.TeamscaleData;
 import jakarta.inject.Inject;
+import logic.DataCombiner;
 import model.CemProject;
 import model.CemProject.GroupType;
 import model.CombinedData;
+import model.GitHubData;
+import model.Proof;
 import model.Proof.LinterWithProof;
 
 import java.io.File;
@@ -18,18 +25,49 @@ import static java.io.File.separator;
 public class TimeSeriesCsvCreator implements CsvCreator {
 
     private static final int[] DAYS = getDays();
-    private final CombinedDataReaderWriter combinedDataReaderWriter;
+
+    private final DataCombiner dataCombiner;
+
+    private final GitHubDataReaderWriter gitHubDataReaderWriter;
+    private final TeamscaleDataReaderWriter teamscaleDataReaderWriter;
+    private final ProofReaderWriter proofReaderWriter;
+    private final CemProjectReaderWriter cemProjectReaderWriter;
 
     @Inject
-    public TimeSeriesCsvCreator(CombinedDataReaderWriter combinedDataReaderWriter) {
-        this.combinedDataReaderWriter = combinedDataReaderWriter;
+    public TimeSeriesCsvCreator(DataCombiner dataCombiner, GitHubDataReaderWriter gitHubDataReaderWriter, TeamscaleDataReaderWriter teamscaleDataReaderWriter, ProofReaderWriter proofReaderWriter, CemProjectReaderWriter cemProjectReaderWriter) {
+        this.dataCombiner = dataCombiner;
+        this.gitHubDataReaderWriter = gitHubDataReaderWriter;
+        this.teamscaleDataReaderWriter = teamscaleDataReaderWriter;
+        this.proofReaderWriter = proofReaderWriter;
+        this.cemProjectReaderWriter = cemProjectReaderWriter;
     }
 
     @Override
     public void startCreatingCsvs() throws IOException {
-        System.out.println("Starting TimeSeriesCsvCreator");
+        System.out.println("Starting TimeSeriesCsvCreator\n");
 
-        List<CombinedData> combinedData = combinedDataReaderWriter.readAll();
+        System.out.println("Reading teamscale data");
+        List<TeamscaleData> teamscaleData = teamscaleDataReaderWriter.readAll();
+        System.out.println("Finished\n");
+
+        System.out.println("Combining data");
+        List<CombinedData> combinedData = new ArrayList<>();
+        for (TeamscaleData teamscaleDatum : teamscaleData) {
+            String repoOwner = teamscaleDatum.repoOwner();
+            String repoName = teamscaleDatum.repoName();
+            
+            try {
+                Proof proof = proofReaderWriter.getElement(repoOwner, repoName).orElseThrow();
+                CemProject cemProject = cemProjectReaderWriter.getElement(repoOwner, repoName).orElseThrow();
+                GitHubData gitHubData = gitHubDataReaderWriter.getElement(repoOwner, repoName).orElseThrow();
+                combinedData.add(dataCombiner.combineData(proof, teamscaleDatum, cemProject, gitHubData));
+            } catch (NoSuchElementException e) {
+                System.err.printf("Could not get data for %s.%s%n", repoOwner, repoName);
+                e.printStackTrace();
+                System.err.println("\n");
+            }
+        }
+        System.out.println("Finished\n");
 
         List<CombinedData> treatedData = combinedData.stream().filter(TimeSeriesCsvCreator::isTreatment).toList();
         List<CombinedData> controlData = combinedData.stream().filter(TimeSeriesCsvCreator::isControl).toList();
@@ -76,7 +114,6 @@ public class TimeSeriesCsvCreator implements CsvCreator {
             createFile(combinedData, entry, i, folderName);
             i++;
         }
-
     }
 
     private static void createFile(CombinedData combinedData, Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> linterCommitWithProof, int i, String folderName) throws IOException {

@@ -18,8 +18,6 @@ import java.util.stream.Collectors;
 
 public class CemMatcher {
 
-    private static final double NUMBER_OF_BUCKETS_PER_POWER_OF_TEN = 3;
-
     private final CemProjectPairReaderWriter projectPairReaderWriter;
     private final CemProjectReaderWriter cemProjectReaderWriter;
     private final CemCommitsUtil cemCommitsUtil;
@@ -88,8 +86,9 @@ public class CemMatcher {
                 treated.allCommits().size(),
                 treated.loc(),
                 treated.sloc(),
+                treated.numberOfContributors(),
                 treated.linterCommits(),
-                null
+                treated.allCommits()
         );
 
         CemProject newControl = new CemProject(
@@ -102,8 +101,9 @@ public class CemMatcher {
                 control.allCommits().size(),
                 control.loc(),
                 control.sloc(),
+                control.numberOfContributors(),
                 getControlLinterCommits(control.allCommits(), treated.allCommits(), treated.linterCommits()), // Insert newly calculated faked linter commit list
-                null
+                control.allCommits()
         );
 
         return new CemProjectPair(newTreated, newControl);
@@ -138,21 +138,22 @@ public class CemMatcher {
     }
 
     private String generateStratumKey(CemProject project) {
-        String starBin = createLogBin(project.numberOfStars());
-        String commitsBin = createLogBin(project.numberOfCommits());
-        int year = Integer.parseInt(project.creationYear());
-        String slocBin = createLogBin(project.sloc());
+        String starBin = createLogBin(project.numberOfStars(), 2);
+        String commitsBin = createLogBin(project.numberOfCommits(), 2);
+        int yearBin = Integer.parseInt(project.creationYear());
+        String slocBin = createLogBin(project.sloc(), 2);
+        String contributorsBin = createLogBin(project.numberOfContributors(), 2);
 
         // combine to key
-        return "STARS[%s]_YEAR[%d]_COMMITS[%s]_SLOC[%s]".formatted(starBin, year, commitsBin, slocBin);
+        return "STARS[%s]_YEAR[%d]_COMMITS[%s]_SLOC[%s]_CONTRIBUTORS[%s]".formatted(starBin, yearBin, commitsBin, slocBin, contributorsBin);
     }
 
-    private static String createLogBin(int commits) {
+    private static String createLogBin(int commits, double base) {
         //Log scale: n bins between 10 and 100, 100 and 1000, 1000 and 10.000, ...
         double logValue = Math.log10(commits);
 
-        double lowerBoundExp = Math.floor(logValue * NUMBER_OF_BUCKETS_PER_POWER_OF_TEN) / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
-        double upperBoundExp = lowerBoundExp + 1 / NUMBER_OF_BUCKETS_PER_POWER_OF_TEN;
+        double lowerBoundExp = Math.floor(logValue * base) / base;
+        double upperBoundExp = lowerBoundExp + 1 / base;
 
         long lowerBound = Math.round(Math.pow(10, lowerBoundExp));
         long upperBound = Math.round(Math.pow(10, upperBoundExp));

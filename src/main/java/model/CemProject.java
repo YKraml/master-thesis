@@ -12,6 +12,7 @@ public record CemProject(
         int numberOfCommits,
         int loc,
         int sloc,
+        int numberOfContributors,
         List<LinterCommit> linterCommits,
         List<Commit> allCommits) implements ProjectWritable {
 

@@ -1,6 +1,6 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import logic.DataCollector;
+import io.teamscale.TeamscaleDataCollector;
 import logic.StateHandler;
 import util.GuiceModule;
 
@@ -11,10 +11,10 @@ public class MainCollectData {
     public static void main(String[] args) throws IOException {
         Injector injector = Guice.createInjector(new GuiceModule());
         StateHandler stateHandler = injector.getInstance(StateHandler.class);
-        DataCollector dataCollector = injector.getInstance(DataCollector.class);
+        TeamscaleDataCollector teamscaleDataCollector = injector.getInstance(TeamscaleDataCollector.class);
 
         stateHandler.start();
-        dataCollector.startCollectingData();
+        teamscaleDataCollector.startCollecting();
         stateHandler.end();
     }
 }

@@ -305,11 +305,11 @@ plot_linter_commit_indicies <- function(control_data, treated_data) {
 # ------------------------------------------------------------------------------
 
 plot_sloc <- function(control_data, treated_data) {
-  control_commits <- log10(control_data$sloc + 1)
-  treated_commits <- log10(treated_data$sloc + 1)
+  control_sloc <- log10(control_data$sloc + 1)
+  treated_sloc <- log10(treated_data$sloc + 1)
 
-  d_control <- density(control_commits)
-  d_treated <- density(treated_commits)
+  d_control <- density(control_sloc)
+  d_treated <- density(treated_sloc)
 
   gg_red  <- rgb(248, 118, 109, maxColorValue = 255, alpha = 128)
   gg_blue <- rgb(0, 191, 196, maxColorValue = 255, alpha = 128)
@@ -323,6 +323,52 @@ plot_sloc <- function(control_data, treated_data) {
   plot(d_control,
        main = "Source Lines of Code",
        xlab = "SLOC (Log Scale)",
+       ylab = "Density",
+       xlim = x_lim,
+       ylim = y_lim,
+       type = "n",
+       bty = "l",
+       xaxt = "n")
+
+  major_ticks <- seq(floor(x_lim[1]), ceiling(x_lim[2]), by = 1)
+  tick_labels <- formatC(10^major_ticks, format = "f", digits = 0, big.mark = "")
+  axis(side = 1, at = major_ticks, labels = tick_labels)
+
+  grid(nx = NULL, ny = NULL, col = "gray90", lty = "dotted")
+
+  polygon(d_control, col = gg_red, border = border_red)
+  polygon(d_treated, col = gg_blue, border = border_blue)
+
+  legend("topright",
+         legend = c("Control", "Treated"),
+         fill = c(gg_red, gg_blue),
+         border = c(border_red, border_blue)
+  )
+}
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
+plot_number_of_contributors <- function(control_data, treated_data) {
+  control_contributors <- log10(control_data$numberOfContributors + 1)
+  treated_contributors <- log10(treated_data$numberOfContributors + 1)
+
+  d_control <- density(control_contributors)
+  d_treated <- density(treated_contributors)
+
+  gg_red  <- rgb(248, 118, 109, maxColorValue = 255, alpha = 128)
+  gg_blue <- rgb(0, 191, 196, maxColorValue = 255, alpha = 128)
+
+  border_red  <- rgb(248, 118, 109, maxColorValue = 255)
+  border_blue <- rgb(0, 191, 196, maxColorValue = 255)
+
+  x_lim <- range(c(d_control$x, d_treated$x))
+  y_lim <- range(c(d_control$y, d_treated$y))
+
+  plot(d_control,
+       main = "Number of Contributors",
+       xlab = "Number of Contributors (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
        ylim = y_lim,
