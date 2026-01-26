@@ -121,7 +121,7 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
 
     i <- i + 1
     if(i >= 30){
-       # break
+       break
     }
   }
 }

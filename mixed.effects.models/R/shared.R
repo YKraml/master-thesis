@@ -33,9 +33,6 @@ get_data <- function(folderName, transition_n_days) {
   finalData <- rbindlist(data_list)
   setDF(finalData)
 
-  finalData <- finalData %>%
-    distinct(id, t, .keep_all = TRUE)
-
   return(finalData)
 }
 
