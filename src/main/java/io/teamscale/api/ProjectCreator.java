@@ -144,5 +144,6 @@ public class ProjectCreator {
         System.out.println("Creating:" + projectName);
         HttpResponse<String> response = httpHelperTeamscale.executePostRequest(path, request);
         System.out.println("Status Code: " + response.statusCode());
+        System.out.println("Body: " + response.body());
     }
 }

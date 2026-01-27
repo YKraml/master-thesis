@@ -48,7 +48,11 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         System.out.println("Starting TimeSeriesCsvCreator\n");
 
         System.out.println("Reading cem pair data");
-        List<CemProject> cemProjects = cemProjectPairReaderWriter.readAll().stream().flatMap(pair -> Stream.of(pair.control(), pair.treated())).toList();
+        List<CemProject> cemProjects = cemProjectPairReaderWriter
+                .readAll()
+                .stream()
+                .flatMap(pair -> Stream.of(pair.control(), pair.treated()))
+                .toList();
         System.out.println("Finished reading cem pair data\n");
 
         System.out.println("Combining data");
@@ -88,7 +92,8 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         }
 
         //create folder
-        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + combinedData.cemProject().groupType().name().toLowerCase();
+        GroupType groupType = combinedData.cemProject().groupType();
+        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + groupType.name().toLowerCase();
         new File(folderName).mkdirs();
 
         // Connect linter commits with proofs
@@ -174,11 +179,4 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         return IntStream.iterate(start, i -> i <= end, i -> i + jump).toArray();
     }
 
-    private static boolean isTreatment(CombinedData project) {
-        return project.cemProject().groupType().equals(GroupType.TREATMENT);
-    }
-
-    private static boolean isControl(CombinedData project) {
-        return project.cemProject().groupType().equals(GroupType.CONTROL);
-    }
 }
