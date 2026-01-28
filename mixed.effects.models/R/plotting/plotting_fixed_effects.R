@@ -131,48 +131,43 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
 
 # ------------------------------------------------------------------------------
 
-get_predicted <- function(model, relative_introduction_time, base_slope, intervention_jump, intervention_slope){
+get_predicted <- function(model, relative_introduction_time, base_slope, intervention_jump, intervention_slope) {
+  # 1. Calculate the transformed time variable used in the model
+  time_saturated <- 1 - exp(-1 * relative_introduction_time)
 
-  # 1. Prepare New Data with the input parameters
-  # We extract the response variable name to prevent errors in model.frame construction
-  resp_name <- all.vars(formula(model))[1]
-
-  newdata <- data.frame(
-    relative_introduction_time = relative_introduction_time,
-    base_slope = base_slope,
-    intervention_jump = intervention_jump,
-    intervention_slope = intervention_slope,
-    id = "dummy" # Required for lme structure, but value is ignored for population predictions
+  # 2. Create the design vector (X) matching the order of fixed effects:
+  # (Intercept), time_saturated, base_slope, intervention_jump, intervention_slope,
+  # time_saturated:base_slope, time_saturated:intervention_jump, time_saturated:intervention_slope
+  new_data_vec <- c(
+    1,                                 # (Intercept)
+    time_saturated,                    # time_saturated
+    base_slope,                        # base_slope
+    intervention_jump,                 # intervention_jump
+    intervention_slope,                # intervention_slope
+    time_saturated * base_slope,       # time_saturated:base_slope
+    time_saturated * intervention_jump,# time_saturated:intervention_jump
+    time_saturated * intervention_slope# time_saturated:intervention_slope
   )
 
-  # Add the dummy response variable
-  newdata[[resp_name]] <- 0
+  # 3. Get fixed effects coefficients and variance-covariance matrix
+  beta <- nlme::fixef(model)
+  V_cov <- vcov(model)
 
-  # 2. Create the Design Matrix (X)
-  # This automatically handles the spline generation and interaction terms
-  X <- model.matrix(terms(model), data = newdata)
+  # 4. Calculate point prediction: y = X * beta
+  prediction <- sum(new_data_vec * beta)
 
-  # 3. Calculate Prediction (Point Estimate)
-  # Prediction = Design Matrix * Coefficients
-  beta <- fixef(model)
-  prediction <- as.numeric(X %*% beta)
+  # 5. Calculate Standard Error for the prediction: SE = sqrt(X %*% V %*% t(X))
+  # This accounts for the correlations between the fixed effects coefficients
+  se_pred <- sqrt(t(new_data_vec) %*% V_cov %*% new_data_vec)
 
-  # 4. Calculate Confidence Intervals
-  # Variance of prediction = X * V * X_transpose
-  V <- vcov(model)
-  se <- sqrt(as.numeric(diag(X %*% V %*% t(X))))
+  # 6. Calculate 95% CI (using 1.96 for normal approximation)
+  upper <- prediction + (1.96 * se_pred)
+  lower <- prediction - (1.96 * se_pred)
 
-  # Get Degrees of Freedom (same logic as previous function)
-  df <- tryCatch(summary(model)$tTable[1, "DF"], error = function(e) model$df.residual)
-
-  # T-critical value for 95% CI (two-tailed)
-  t_crit <- qt(0.975, df = df)
-
-  # 5. Return List
   return(list(
-    prediction = prediction,
-    conf_upper = prediction + (t_crit * se),
-    conf_lower = prediction - (t_crit * se)
+    prediction = as.numeric(prediction),
+    upper = as.numeric(upper),
+    lower = as.numeric(lower)
   ))
 }
 
@@ -183,94 +178,53 @@ get_predicted <- function(model, relative_introduction_time, base_slope, interve
 
 
 get_parameters <- function(model, relative_introduction_time) {
+  library(nlme)
 
-  # 1. Extract Fixed Effects (Coefficients) and Variance-Covariance Matrix
+  # 1. Transform the input time to the saturated scale used in the model
+  t_sat <- 1 - exp(-1 * relative_introduction_time)
+
+  # 2. Extract fixed effects coefficients
   beta <- fixef(model)
+
+  # 3. Define the "Effective" Values
+  # Each parameter is: Main_Effect + (Interaction_Effect * t_sat)
+  params <- c(
+    intercept          = beta["(Intercept)"] + beta["time_saturated"] * t_sat,
+    base_slope         = beta["base_slope"] + beta["time_saturated:base_slope"] * t_sat,
+    intervention_jump  = beta["intervention_jump"] + beta["time_saturated:intervention_jump"] * t_sat,
+    intervention_slope = beta["intervention_slope"] + beta["time_saturated:intervention_slope"] * t_sat
+  )
+
+  # 4. Calculate Standard Errors and P-values
+  # We use the Delta Method logic: Var(A + k*B) = Var(A) + k^2*Var(B) + 2*k*Cov(A,B)
   V <- vcov(model)
+  df <- model$fixDF$X # Degrees of freedom from the model
 
-  # 2. Identify the response variable name (needed to satisfy model.matrix structure)
-  # We extract the variable name from the left side of the formula
-  resp_name <- all.vars(formula(model))[1]
-
-  # 3. Create a 'newdata' frame representing 4 scenarios at the specific time t:
-  #   Row 1: The Reference/Baseline (all dummies = 0)
-  #   Row 2: Base Slope Active (base_slope = 1)
-  #   Row 3: Intervention Jump Active (intervention_jump = 1)
-  #   Row 4: Intervention Slope Active (intervention_slope = 1)
-
-  newdata <- data.frame(
-    relative_introduction_time = rep(relative_introduction_time, 4),
-    base_slope = c(0, 1, 0, 0),
-    intervention_jump = c(0, 0, 1, 0),
-    intervention_slope = c(0, 0, 0, 1),
-    id = "dummy_id" # Required for lme object structure, value doesn't matter here
+  # Mapping parameters to their component indices in the vcov matrix
+  mapping <- list(
+    intercept          = c("(Intercept)", "time_saturated"),
+    base_slope         = c("base_slope", "time_saturated:base_slope"),
+    intervention_jump  = c("intervention_jump", "time_saturated:intervention_jump"),
+    intervention_slope = c("intervention_slope", "time_saturated:intervention_slope")
   )
 
-  # Add the response variable (set to 0) to prevent model.frame errors
-  newdata[[resp_name]] <- 0
+  results <- data.frame(Parameter = names(params), Value = as.numeric(params), Std.Error = NA, p_value = NA)
 
-  # 4. Generate the Model Matrix (Design Matrix)
-  # CRITICAL: We use terms(model) so that 'ns()' uses the EXACT same knots
-  # and boundaries as the fitted model.
-  X <- model.matrix(terms(model), data = newdata)
+  for (i in seq_along(mapping)) {
+    p_main <- mapping[[i]][1]
+    p_inter <- mapping[[i]][2]
 
-  # 5. Define Contrasts (Linear Combinations)
-  # The "Value" of a parameter is the difference between the Active state and the Reference state.
+    # Calculate combined variance
+    combined_var <- V[p_main, p_main] + (t_sat^2 * V[p_inter, p_inter]) + (2 * t_sat * V[p_main, p_inter])
+    se <- sqrt(combined_var)
 
-  # Contrast for Intercept (The baseline value at time t)
-  L_intercept <- X[1, ]
+    # Calculate t-stat and p-value
+    t_val <- params[i] / se
+    p_val <- 2 * pt(abs(t_val), df = df[p_main], lower.tail = FALSE)
 
-  # Contrast for Base Slope (Difference between Row 2 and Row 1)
-  L_base_slope <- X[2, ] - X[1, ]
-
-  # Contrast for Intervention Jump (Difference between Row 3 and Row 1)
-  L_intervention_jump <- X[3, ] - X[1, ]
-
-  # Contrast for Intervention Slope (Difference between Row 4 and Row 1)
-  L_intervention_slope <- X[4, ] - X[1, ]
-
-  # Combine into a matrix L
-  L <- rbind(
-    "(Intercept)" = L_intercept,
-    "base_slope" = L_base_slope,
-    "intervention_jump" = L_intervention_jump,
-    "intervention_slope" = L_intervention_slope
-  )
-
-  # 6. Calculate Estimates, Standard Errors, and P-values
-  # Estimate = L * beta
-  estimates <- L %*% beta
-
-  # Variance of linear combination = L * V * L_transpose
-  # Standard Error = sqrt(Variance)
-  se <- sqrt(diag(L %*% V %*% t(L)))
-
-  # t-values
-  t_vals <- estimates / se
-
-  # Degrees of Freedom (DF)
-  # For LME with large N, we can usually use the residual DF or the term DF.
-  # Given your table has ~204,817 DF, we extract the Intercept DF as a safe approximation.
-  # If extraction fails, we default to the residual DF.
-  df_used <- tryCatch(summary(model)$tTable[1, "DF"], error = function(e) model$df.residual)
-
-  # p-values (2-tailed)
-  p_vals <- 2 * (1 - pt(abs(t_vals), df = df_used))
-
-  # 7. Format the output
-  results <- data.frame(
-    Parameter = rownames(L),
-    Value = as.numeric(estimates),
-    Std.Error = as.numeric(se),
-    DF = df_used,
-    t_value = as.numeric(t_vals),
-    p_value = as.numeric(p_vals)
-  )
-
-  # Optional: Rounding for cleaner display
-  results$p_value <- round(results$p_value, 5)
+    results$Std.Error[i] <- se
+    results$p_value[i] <- p_val
+  }
 
   return(results)
 }
-
-

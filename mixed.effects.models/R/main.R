@@ -32,6 +32,7 @@ source("R/plotting/plotting_general.R")
 source("R/plotting/plotting_lagged_transition_time.R")
 source("R/plotting/plotting_lagged_day_zero.R")
 source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
 
 source("R/saver.R")
 source("R/shared.R")
@@ -42,7 +43,32 @@ source("R/lagged_day_zero.R")
 # Shared
 # ------------------------------------------------------------------------------
 
-metrics <- list(
+metrics_absolute <- list(
+  # All findings
+  findings                 = list(name = "findings",          display_name = "Findings",          unit = "Findings"),
+
+  # Findings groups
+  comprehensibility        = list(name = "comprehensibility", display_name = "Comprehensibility", unit = "Findings"),
+  correctness              = list(name = "correctness",       display_name = "Correctness",       unit = "Findings"),
+  documentation            = list(name = "documentation",     display_name = "Documentation",     unit = "Findings"),
+  efficiency               = list(name = "efficiency",        display_name = "Efficiency",        unit = "Findings"),
+  errorHandling            = list(name = "errorHandling",     display_name = "Error Handling",    unit = "Findings"),
+  redundancy               = list(name = "redundancy",        display_name = "Redundancy",        unit = "Findings"),
+  structure                = list(name = "structure",         display_name = "Structure",         unit = "Findings"),
+  security                 = list(name = "security",          display_name = "Security",          unit = "Findings"),
+
+  # Structure metrics
+  longFiles                = list(name = "longFiles",         display_name = "Long Files",        unit = "Findings"),
+  longMethod               = list(name = "longMethod",        display_name = "Long Method",       unit = "Findings"),
+  deepNesting              = list(name = "deepNesting",       display_name = "Deep Nesting",      unit = "Findings"),
+
+  # Git metrics
+  numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
+  numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
+  numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
+)
+
+metrics_relative <- list(
   # All findings
   findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC"),
 
@@ -61,12 +87,7 @@ metrics <- list(
   longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1000 LOC"),
   deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1000 LOC"),
   cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
-  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC"),
-
-  # Git metrics
-  numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
-  numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
-  numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
+  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC")
   )
 
 
@@ -85,8 +106,8 @@ data_all <- list(
   control   = data_control
 )
 
-for (metric_key in names(metrics)) {
-  metric_data         <- metrics[[metric_key]]
+for (metric_key in names(metrics_relative)) {
+  metric_data         <- metrics_relative[[metric_key]]
   metric_name         <- metric_data$name
   message(metric_name)
 
@@ -106,9 +127,10 @@ for (metric_key in names(metrics)) {
       if (nrow(data) == 0) stop("Data has 0 rows")
 
       message("   * Creating model")
-      f_full <- sprintf("%s ~ ns(relative_introduction_time, df=3) * (base_slope + intervention_jump + intervention_slope)", metric_name)
+      data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
+      formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric_name)
       model <- lme(
-        fixed = as.formula(f_full),
+        fixed = as.formula(formula),
         random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
         data = data,
         method = "ML",
@@ -283,9 +305,8 @@ for (metric_name in names(metrics)) {
 
 
 # ------------------------------------------------------------------------------
-# Testing
+# Model comparison
 # ------------------------------------------------------------------------------
-
 
 transition_n_days <- 90
 relative_introduction_time <- 4
@@ -293,75 +314,143 @@ metric <- "findingsDensity"
 metric_unit <- "XXX"
 data <- get_data("treatment", transition_n_days)
 
-f_spline <- sprintf("%s ~ ns(relative_introduction_time, df=3) * (base_slope + intervention_jump + intervention_slope)", metric)
+data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
+data$log_time <- log(data$relative_introduction_time + 1) # +1 to avoid log(0)
+
+
+formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
 model <- lme(
-  fixed = as.formula(f_spline),
+  fixed = as.formula(formula),
   random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
   data = data,
   method = "ML",
   control = lmeControl(opt = "optim")
 )
 
-summary(model)
+models <- list()
+models[["exponential"]] <- model
 
-source("R/plotting/plotting_fixed_effects.R")
-par(mfrow = c(2, 2))
-plot_predicted(data, model, 0.1, metric, metric_unit, transition_n_days)
-plot_predicted(data, model, 1, metric, metric_unit, transition_n_days)
-plot_predicted(data, model, 2, metric, metric_unit, transition_n_days)
-plot_predicted(data, model, 4, metric, metric_unit, transition_n_days)
+# 2. Logarithmic Model
+formula_log <- sprintf("%s ~ log_time * (base_slope + intervention_jump + intervention_slope)", metric)
+models[["log"]] <- update(model, fixed = as.formula(formula_log))
+
+# 3. Polynomial Models (Degrees 1 to 4)
+for (i in 1:4) {
+  f_poly <- sprintf("%s ~ poly(relative_introduction_time, %d) * (base_slope + intervention_jump + intervention_slope)", metric, i)
+  models[[paste0("poly_", i)]] <- update(model, fixed = as.formula(f_poly))
+}
+
+# 4. Natural Spline Models (Degrees of Freedom 1 to 4)
+# Note: ns(df=1) is essentially a linear fit
+for (i in 1:4) {
+  f_spline <- sprintf("%s ~ ns(relative_introduction_time, df = %d) * (base_slope + intervention_jump + intervention_slope)", metric, i)
+  models[[paste0("spline_", i)]] <- update(model, fixed = as.formula(f_spline))
+}
+
+
+
+anova(models[[1]], models[[2]], models[[3]], models[[4]], models[[5]], models[[6]], models[[7]], models[[8]], models[[9]], models[[10]])
+
+
+
+# ------------------------------------------------------------------------------
+# Testing
+# ------------------------------------------------------------------------------
+
+
+transition_n_days <- 90
+relative_introduction_time <- 4
+metric <- "errorHandling"
+metric_unit <- "XXX"
+data <- get_data("treatment", transition_n_days)
+
+data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
+formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
+model <- lme(
+  fixed = as.formula(formula),
+  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+  data = data,
+  method = "ML",
+  control = lmeControl(opt = "optim")
+)
+
+
+
+
+# 1. Extract Normalized Residuals and Fitted Values
+# We use type="normalized" to account for the random effects covariance structure
+res <- residuals(model, type = "normalized")
+fit <- fitted(model)
+
+# 2. Set up the graphics window to show plots side-by-side
+par(mfrow = c(1, 2))
+
+# --- Plot A: Residuals vs. Fitted Values ---
+# This checks for Homoscedasticity (constant variance)
+plot(x = fit, y = res,
+     main = "Residuals vs. Fitted",
+     xlab = "Fitted Values (Predicted Metric)",
+     ylab = "Normalized Residuals",
+     pch = 20, col = "gray30") # Dark gray dots
+abline(h = 0, col = "red", lty = 2, lwd = 2) # Zero reference line
+
+# --- Plot B: Residuals vs. Independent Variable ---
+# This checks for Independence relative to your time component
+plot(x = data$time_saturated, y = res,
+     main = "Residuals vs. Time Saturated",
+     xlab = "Time Saturated (1 - exp(...))",
+     ylab = "Normalized Residuals",
+     pch = 20, col = "gray30")
+abline(h = 0, col = "red", lty = 2, lwd = 2)
+
+# Reset graphics parameter to default
 par(mfrow = c(1, 1))
 
 
-get_parameters(model, 8)
+# ------------------------------------------------------------------------------
 
 
+metric_name <- "longFilesDensity"
+data <- get_data("treatment", 90)
+data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
 
 
-plot_model_sensitivity <- function(model) {
-  time_points = 100
+formula_fixed <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric_name)
+full_formula <- as.formula(
+  paste(formula_fixed, "+ (1 + base_slope + intervention_slope + intervention_jump | id)")
+)
 
-  # 1. Define time values
-  time_values <- seq(0.01, 10, length.out = time_points)
+# 3. Fit the Tweedie Model
+model_tweedie <- glmmTMB(
+  formula = full_formula,
+  data = data,
+  family = tweedie(link = "log"),
+  control = glmmTMBControl(
+    optimizer = nlminb,
+    optCtrl = list(iter.max = 1000, eval.max = 1000)
+  )
+)
 
-  # 2. Iterate and collect parameters
-  # Assuming get_parameters() is available in your global environment
-  param_list <- lapply(time_values, function(t) {
-    params <- get_parameters(model, t)
-    params$time <- t
-    return(params)
-  })
-
-  # 3. Combine into a single data frame
-  plot_data <- do.call(rbind, param_list)
-
-  # 4. Setup Plotting Grid
-  # Determine how many unique parameters we have to create the facets
-  unique_params <- unique(plot_data$Parameter)
-
-  # Save original par settings and set new ones
-
-  par(mfrow = c(2, 2))
-
-  # 5. Loop through each parameter and plot
-  for (p in unique_params) {
-    sub_data <- plot_data[plot_data$Parameter == p, ]
-
-    # Create the base line plot
-    plot(sub_data$time, sub_data$Value, type = "l", lwd = 2,
-         xlab = "Project Age at Linter Introduction (Years)",
-         ylab = "Parameter Estimate",
-         main = p, # Facet title
-         col = "red")
-
-    grid(nx = NULL, ny = NULL, col = "gray90", lty = "dotted")
-  }
+summary(model_tweedie)
+plot_residuals_vs_fitted(data, model_tweedie)
 
 
+plot_residuals_vs_fitted <- function(data, model) {
+  residuals <- residuals(model)
+  fitted_vals <- fitted(model)
 
-  par(mfrow = c(1,1))
+  plot(
+    fitted_vals,
+    residuals,
+    xlab = "Fitted values",
+    ylab = "Residuals",
+    main = "Residuals vs fitted",
+    col = "lightblue",
+    pch = 4
+  )
+
+  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
 }
 
-plot_model_sensitivity(model)
 
 

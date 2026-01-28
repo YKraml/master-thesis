@@ -17,9 +17,8 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
   # print model results
   capture.output(summary(model), file = file.path(out_dir, sprintf("%s.%s.model_summary.txt", linter_name, metric_display_name)))
 
-
   # print anova
-  f_null <- sprintf("%s ~ base_slope * ns(relative_introduction_time, df=3)", metric_name)
+  f_null <- sprintf("%s ~ base_slope * time_saturated", metric_name)
   model_null <- update(model, fixed = as.formula(f_null))
   anova_file <- file.path(out_dir, sprintf("%s.%s.anova.txt", folder_name, metric_name))
   capture.output(anova(model, model_null), file = anova_file)
@@ -135,7 +134,7 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
     )
 
     i <- i + 1
-    if(i >= 30){
+    if(i >= 100){
        break
     }
   }

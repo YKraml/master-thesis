@@ -3,8 +3,6 @@
 plot_project <- function(model, id, data, metric, metric_unit, metric_display_name, transition_n_days) {
   gap_end <- transition_n_days / 365
 
-  id <- "Kong.unirest-java.CHECKSTYLE"
-
   projectData <- data[data$id == id, ]
   relative_introduction_time <- projectData[["relative_introduction_time"]][1]
 
