@@ -3,16 +3,20 @@
 plot_project <- function(model, id, data, metric, metric_unit, metric_display_name, transition_n_days) {
   gap_end <- transition_n_days / 365
 
+  id <- "Kong.unirest-java.CHECKSTYLE"
+
   projectData <- data[data$id == id, ]
   relative_introduction_time <- projectData[["relative_introduction_time"]][1]
 
   randomEffectsFromProject <- ranef(model)[id, ]
   fixedEffects <- fixef(model)
 
-  intercept          <- fixedEffects["(Intercept)"]        + randomEffectsFromProject[["(Intercept)"]]        + relative_introduction_time * fixedEffects["relative_introduction_time"]
-  base_slope         <- fixedEffects["base_slope"]         + randomEffectsFromProject[["base_slope"]]         + relative_introduction_time * fixedEffects["relative_introduction_time:base_slope"]
-  intervention_jump  <- fixedEffects["intervention_jump"]  + randomEffectsFromProject[["intervention_jump"]]  + relative_introduction_time * fixedEffects["relative_introduction_time:intervention_jump"]
-  intervention_slope <- fixedEffects["intervention_slope"] + randomEffectsFromProject[["intervention_slope"]] + relative_introduction_time * fixedEffects["relative_introduction_time:intervention_slope"]
+  parameters <- get_parameters(model, relative_introduction_time)
+
+  intercept          <- randomEffectsFromProject[["(Intercept)"]]        + parameters$Value[1]
+  base_slope         <- randomEffectsFromProject[["base_slope"]]         + parameters$Value[2]
+  intervention_jump  <- randomEffectsFromProject[["intervention_jump"]]  + parameters$Value[3]
+  intervention_slope <- randomEffectsFromProject[["intervention_slope"]] + parameters$Value[4]
 
   # compute predicted values
   x <- seq(max(-2, -relative_introduction_time), 2, by = 0.01)

@@ -4,68 +4,7 @@
 
 plot_predicted <- function(data, model, relative_introduction_time, metric, metric_unit, transition_n_days) {
 
-  # --- 1. Helper Function for Marginal Effects ---
-  # Calculates: Beta_main + (Beta_interaction * relative_time)
-  # And computes the correct new Standard Error and P-value
-  get_marginal <- function(main_term, interact_term, val_rel_time, model_fixef, model_vcov, model_df) {
 
-    # 1. Get Coefficients
-    b_main   <- if(main_term %in% names(model_fixef)) model_fixef[[main_term]] else 0
-    b_inter  <- if(interact_term %in% names(model_fixef)) model_fixef[[interact_term]] else 0
-
-    # 2. Calculate the combined estimate (The "Effective Slope/Intercept")
-    estimate <- b_main + (b_inter * val_rel_time)
-
-    # 3. Calculate Variance for SE
-    # Var(A + Bx) = Var(A) + x^2*Var(B) + 2x*Cov(A,B)
-    var_main  <- if(main_term %in% rownames(model_vcov)) model_vcov[main_term, main_term] else 0
-    var_inter <- if(interact_term %in% rownames(model_vcov)) model_vcov[interact_term, interact_term] else 0
-    cov_mi    <- if(main_term %in% rownames(model_vcov) && interact_term %in% rownames(model_vcov)) model_vcov[main_term, interact_term] else 0
-
-    variance <- var_main + (val_rel_time^2 * var_inter) + (2 * val_rel_time * cov_mi)
-    se       <- sqrt(variance)
-
-    # 4. Calculate P-value
-    t_stat <- estimate / se
-    # We use the DF from the main term as a safe approximation
-    df     <- if(main_term %in% rownames(model_df)) model_df[main_term, "DF"] else 100
-    p_val  <- 2 * (1 - pt(abs(t_stat), df))
-
-    return(list(est = estimate, p = p_val))
-  }
-
-  # --- 2. Extract Model Data ---
-  fixed_effects <- fixef(model)
-  covariance    <- vcov(model)
-  t_table       <- summary(model)$tTable # Used for Degrees of Freedom (DF)
-
-  # --- 3. Calculate Marginal Effects ---
-  # Note: R might name interactions "A:B" or "B:A". We check both.
-  find_interaction <- function(term1, term2) {
-    n1 <- paste0(term1, ":", term2)
-    n2 <- paste0(term2, ":", term1)
-    if(n1 %in% names(fixed_effects)) return(n1)
-    if(n2 %in% names(fixed_effects)) return(n2)
-    return(NULL) # Return NULL if no interaction found
-  }
-
-  # A. Intercept
-  # (The "Interaction" for the intercept is the main effect of relative_introduction_time itself)
-  res_intercept <- get_marginal("(Intercept)", "relative_introduction_time", relative_introduction_time, fixed_effects, covariance, t_table)
-
-  # B. Base Slope
-  int_name <- find_interaction("base_slope", "relative_introduction_time")
-  res_base <- get_marginal("base_slope", int_name, relative_introduction_time, fixed_effects, covariance, t_table)
-
-  # C. Intervention Jump
-  int_name <- find_interaction("intervention_jump", "relative_introduction_time")
-  res_jump <- get_marginal("intervention_jump", int_name, relative_introduction_time, fixed_effects, covariance, t_table)
-
-  # D. Intervention Slope
-  int_name <- find_interaction("intervention_slope", "relative_introduction_time")
-  res_intslope <- get_marginal("intervention_slope", int_name, relative_introduction_time, fixed_effects, covariance, t_table)
-
-  # --- 4. Create Prediction Data ---
   pred <- data.frame(x = seq(max(-2, -relative_introduction_time), 2, by = 0.01))
   pred <- subset(pred, x < 0 | x > transition_n_days / 365)
 
@@ -74,21 +13,29 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
   pred$intervention_slope <- pred$x * pred$intervention_jump
   pred$relative_introduction_time <- relative_introduction_time
 
-  # --- 5. Generate Predictions ---
-  terms_no_response <- delete.response(terms(model))
-  X <- model.matrix(terms_no_response, data = pred)
 
-  pred$pred <- X %*% fixed_effects
-  pred$se <- sqrt(diag(X %*% covariance %*% t(X)))
-  pred$lower <- pred$pred - 1.96 * pred$se
-  pred$upper <- pred$pred + 1.96 * pred$se
+  results <- mapply(function(rit, bs, ij, is) {
+    get_predicted(model, rit, bs, ij, is)
+  }, pred$relative_introduction_time, pred$base_slope, pred$intervention_jump, pred$intervention_slope)
+
+
+  pred$pred  <- unlist(results[1, ])
+  pred$lower <- unlist(results[3, ])
+  pred$upper <- unlist(results[2, ])
+
+  parameters <- get_parameters(model, relative_introduction_time)
+
+  # 2. Extract values into a named list or vector for easier access
+  # We use indexing based on the order: Intercept (1), Base (2), Jump (3), Slope (4)
+  vals <- parameters$Value
+  ps   <- parameters$p_value
 
   # --- 6. Prepare Plot Labels (Using the MARGINAL results) ---
   plot_text <- paste0(
-    "Intercept = ",        round(res_intercept$est, 3), " (p ", fmt_p(res_intercept$p), ")\n",
-    "Base Slope = ",       round(res_base$est, 3),      " (p ", fmt_p(res_base$p), ")\n",
-    "Intervention Jump = ", round(res_jump$est, 3),      " (p ", fmt_p(res_jump$p), ")\n",
-    "Intervention Slope = ", round(res_intslope$est, 3), " (p ", fmt_p(res_intslope$p), ")\n"
+    "Intercept = ",           round(vals[1], 3), " (p ", fmt_p(ps[1]), ")\n",
+    "Base Slope = ",          round(vals[2], 3), " (p ", fmt_p(ps[2]), ")\n",
+    "Intervention Jump = ",   round(vals[3], 3), " (p ", fmt_p(ps[3]), ")\n",
+    "Intervention Slope = ",  round(vals[4], 3), " (p ", fmt_p(ps[4]), ")\n"
   )
 
   # --- 7. Plotting (Enhanced) ---
@@ -181,5 +128,149 @@ plot_predicted <- function(data, model, relative_introduction_time, metric, metr
 }
 
 # ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
+get_predicted <- function(model, relative_introduction_time, base_slope, intervention_jump, intervention_slope){
+
+  # 1. Prepare New Data with the input parameters
+  # We extract the response variable name to prevent errors in model.frame construction
+  resp_name <- all.vars(formula(model))[1]
+
+  newdata <- data.frame(
+    relative_introduction_time = relative_introduction_time,
+    base_slope = base_slope,
+    intervention_jump = intervention_jump,
+    intervention_slope = intervention_slope,
+    id = "dummy" # Required for lme structure, but value is ignored for population predictions
+  )
+
+  # Add the dummy response variable
+  newdata[[resp_name]] <- 0
+
+  # 2. Create the Design Matrix (X)
+  # This automatically handles the spline generation and interaction terms
+  X <- model.matrix(terms(model), data = newdata)
+
+  # 3. Calculate Prediction (Point Estimate)
+  # Prediction = Design Matrix * Coefficients
+  beta <- fixef(model)
+  prediction <- as.numeric(X %*% beta)
+
+  # 4. Calculate Confidence Intervals
+  # Variance of prediction = X * V * X_transpose
+  V <- vcov(model)
+  se <- sqrt(as.numeric(diag(X %*% V %*% t(X))))
+
+  # Get Degrees of Freedom (same logic as previous function)
+  df <- tryCatch(summary(model)$tTable[1, "DF"], error = function(e) model$df.residual)
+
+  # T-critical value for 95% CI (two-tailed)
+  t_crit <- qt(0.975, df = df)
+
+  # 5. Return List
+  return(list(
+    prediction = prediction,
+    conf_upper = prediction + (t_crit * se),
+    conf_lower = prediction - (t_crit * se)
+  ))
+}
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+
+
+
+get_parameters <- function(model, relative_introduction_time) {
+
+  # 1. Extract Fixed Effects (Coefficients) and Variance-Covariance Matrix
+  beta <- fixef(model)
+  V <- vcov(model)
+
+  # 2. Identify the response variable name (needed to satisfy model.matrix structure)
+  # We extract the variable name from the left side of the formula
+  resp_name <- all.vars(formula(model))[1]
+
+  # 3. Create a 'newdata' frame representing 4 scenarios at the specific time t:
+  #   Row 1: The Reference/Baseline (all dummies = 0)
+  #   Row 2: Base Slope Active (base_slope = 1)
+  #   Row 3: Intervention Jump Active (intervention_jump = 1)
+  #   Row 4: Intervention Slope Active (intervention_slope = 1)
+
+  newdata <- data.frame(
+    relative_introduction_time = rep(relative_introduction_time, 4),
+    base_slope = c(0, 1, 0, 0),
+    intervention_jump = c(0, 0, 1, 0),
+    intervention_slope = c(0, 0, 0, 1),
+    id = "dummy_id" # Required for lme object structure, value doesn't matter here
+  )
+
+  # Add the response variable (set to 0) to prevent model.frame errors
+  newdata[[resp_name]] <- 0
+
+  # 4. Generate the Model Matrix (Design Matrix)
+  # CRITICAL: We use terms(model) so that 'ns()' uses the EXACT same knots
+  # and boundaries as the fitted model.
+  X <- model.matrix(terms(model), data = newdata)
+
+  # 5. Define Contrasts (Linear Combinations)
+  # The "Value" of a parameter is the difference between the Active state and the Reference state.
+
+  # Contrast for Intercept (The baseline value at time t)
+  L_intercept <- X[1, ]
+
+  # Contrast for Base Slope (Difference between Row 2 and Row 1)
+  L_base_slope <- X[2, ] - X[1, ]
+
+  # Contrast for Intervention Jump (Difference between Row 3 and Row 1)
+  L_intervention_jump <- X[3, ] - X[1, ]
+
+  # Contrast for Intervention Slope (Difference between Row 4 and Row 1)
+  L_intervention_slope <- X[4, ] - X[1, ]
+
+  # Combine into a matrix L
+  L <- rbind(
+    "(Intercept)" = L_intercept,
+    "base_slope" = L_base_slope,
+    "intervention_jump" = L_intervention_jump,
+    "intervention_slope" = L_intervention_slope
+  )
+
+  # 6. Calculate Estimates, Standard Errors, and P-values
+  # Estimate = L * beta
+  estimates <- L %*% beta
+
+  # Variance of linear combination = L * V * L_transpose
+  # Standard Error = sqrt(Variance)
+  se <- sqrt(diag(L %*% V %*% t(L)))
+
+  # t-values
+  t_vals <- estimates / se
+
+  # Degrees of Freedom (DF)
+  # For LME with large N, we can usually use the residual DF or the term DF.
+  # Given your table has ~204,817 DF, we extract the Intercept DF as a safe approximation.
+  # If extraction fails, we default to the residual DF.
+  df_used <- tryCatch(summary(model)$tTable[1, "DF"], error = function(e) model$df.residual)
+
+  # p-values (2-tailed)
+  p_vals <- 2 * (1 - pt(abs(t_vals), df = df_used))
+
+  # 7. Format the output
+  results <- data.frame(
+    Parameter = rownames(L),
+    Value = as.numeric(estimates),
+    Std.Error = as.numeric(se),
+    DF = df_used,
+    t_value = as.numeric(t_vals),
+    p_value = as.numeric(p_vals)
+  )
+
+  # Optional: Rounding for cleaner display
+  results$p_value <- round(results$p_value, 5)
+
+  return(results)
+}
 
 
