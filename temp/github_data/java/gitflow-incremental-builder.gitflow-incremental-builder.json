@@ -1,0 +1,860 @@
+{
+  "repoOwner" : "gitflow-incremental-builder",
+  "repoName" : "gitflow-incremental-builder",
+  "forks" : [ {
+    "createdAt" : "2016-07-26T11:19:10Z"
+  }, {
+    "createdAt" : "2016-08-15T15:53:08Z"
+  }, {
+    "createdAt" : "2016-11-11T05:39:12Z"
+  }, {
+    "createdAt" : "2017-02-21T20:10:14Z"
+  }, {
+    "createdAt" : "2017-06-24T19:48:55Z"
+  }, {
+    "createdAt" : "2017-07-24T10:31:43Z"
+  }, {
+    "createdAt" : "2017-09-05T13:53:17Z"
+  }, {
+    "createdAt" : "2017-11-23T12:41:55Z"
+  }, {
+    "createdAt" : "2017-11-24T06:03:56Z"
+  }, {
+    "createdAt" : "2017-12-19T11:19:32Z"
+  }, {
+    "createdAt" : "2018-12-10T17:04:56Z"
+  }, {
+    "createdAt" : "2019-01-18T23:17:51Z"
+  }, {
+    "createdAt" : "2019-12-25T23:17:39Z"
+  }, {
+    "createdAt" : "2020-06-17T14:28:12Z"
+  }, {
+    "createdAt" : "2020-08-26T01:56:59Z"
+  }, {
+    "createdAt" : "2020-08-28T08:43:57Z"
+  }, {
+    "createdAt" : "2020-12-19T09:27:53Z"
+  }, {
+    "createdAt" : "2020-12-28T08:05:10Z"
+  }, {
+    "createdAt" : "2021-02-12T21:48:31Z"
+  }, {
+    "createdAt" : "2021-04-26T15:47:27Z"
+  }, {
+    "createdAt" : "2021-10-20T19:41:21Z"
+  }, {
+    "createdAt" : "2022-10-18T08:27:12Z"
+  }, {
+    "createdAt" : "2022-11-09T01:09:21Z"
+  }, {
+    "createdAt" : "2022-11-15T15:06:01Z"
+  }, {
+    "createdAt" : "2023-06-06T12:13:56Z"
+  }, {
+    "createdAt" : "2023-07-11T19:39:14Z"
+  }, {
+    "createdAt" : "2025-10-28T08:40:53Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Fetch using ssh key identification.",
+    "createdAt" : "2016-02-09T21:25:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Refactor to use Google Guice.",
+    "createdAt" : "2016-02-09T21:28:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Enable in Maven using property.",
+    "createdAt" : "2016-04-17T20:43:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Read properties into maven extension as well.",
+    "createdAt" : "2016-04-17T20:50:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Prevent nullpointer when reference branch is checked out.",
+    "createdAt" : "2016-05-01T13:37:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Allow also-build dependencies.",
+    "createdAt" : "2016-05-01T13:37:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Allow skipping dependencies tests",
+    "createdAt" : "2016-05-28T16:04:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Impossible to disable using POM",
+    "createdAt" : "2016-08-15T20:19:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "gitflow-incremental-builder incompatible with git worktree",
+    "createdAt" : "2016-11-01T01:30:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Support for test-jar dependencies",
+    "createdAt" : "2016-11-08T18:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Fix issues with test-jar building",
+    "createdAt" : "2016-12-28T11:49:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Fails on -am and -amd together",
+    "createdAt" : "2016-12-28T12:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Make tests run green on Travis CI",
+    "createdAt" : "2016-12-30T10:20:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "gitflow-incremental-builder and tycho OSGI",
+    "createdAt" : "2017-01-30T15:40:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Default behaviour when Git context not present?",
+    "createdAt" : "2017-02-10T06:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "gerrit support",
+    "createdAt" : "2017-04-19T15:43:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Filter changed files using regex",
+    "createdAt" : "2017-04-19T18:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Migrate from extension to plugin pom setup",
+    "createdAt" : "2017-07-30T10:24:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "'Changed file outside build project' on mount device",
+    "createdAt" : "2018-01-12T19:34:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Document Differences to Forks in README.md",
+    "createdAt" : "2018-02-06T14:44:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Add License",
+    "createdAt" : "2018-03-13T14:36:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Provide more documentation of properties",
+    "createdAt" : "2018-03-15T19:29:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Causes massive delay for larger projects with many modules when root pom.xml is modified (or similar)",
+    "createdAt" : "2018-05-25T13:54:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Support checking for untracked files",
+    "createdAt" : "2018-06-23T16:52:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Support skipping branch comparison (to just check for uncommitted/untracked)",
+    "createdAt" : "2018-06-23T17:08:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Upgrade JGit",
+    "createdAt" : "2018-06-24T11:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Upgrade Guice from 4.0 to 4.2",
+    "createdAt" : "2018-06-24T12:22:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Introduce additional Travis job with Maven 3.5",
+    "createdAt" : "2018-06-24T12:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "DifferentFilesTest is flaky",
+    "createdAt" : "2018-06-24T16:12:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Release version 3.5",
+    "createdAt" : "2018-06-24T19:23:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Introduce additional Travis jobs to cover all relevant Maven versions",
+    "createdAt" : "2018-06-25T07:57:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Introduce addArgsForNotImpactedModules to further reduce overhead (e.g. skip Checkstyle and Enforcer)",
+    "createdAt" : "2018-07-06T10:41:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "DifferentFilesTest: [WARNING] close() called when useCnt is already zero for Repository[...]",
+    "createdAt" : "2018-07-08T19:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "When using -am more modules are built than the user might expect",
+    "createdAt" : "2018-07-08T19:57:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Introduce gib.forceBuildModules to selectively build modules even if unchanged",
+    "createdAt" : "2018-07-15T15:44:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Release 3.6",
+    "createdAt" : "2018-07-19T21:05:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "argsForNotImpactedModules default value documentation is wrong",
+    "createdAt" : "2018-09-04T21:06:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "NullPointerException with multi module maven build inside IntelliJ",
+    "createdAt" : "2018-10-04T09:07:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "MavenInstallRunningIntegrationTest should be running in phase \"integration-test\", not in in \"test\"",
+    "createdAt" : "2018-10-04T16:42:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Add ability to filter out \"impacted modules\" by packaging type",
+    "createdAt" : "2018-10-04T17:12:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Just log a warning and exit if ProjectDependencyGraph is missing",
+    "createdAt" : "2018-10-04T21:05:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Update dependencies for release 3.7",
+    "createdAt" : "2018-10-15T21:17:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "DifferentFilesTest & ChangedProjectsTest fail @Travis: \"JGit unsupported separate worktree checkout detected\"",
+    "createdAt" : "2018-10-16T17:38:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "DifferentFilesTest: Sporadic \"WARNING: Failed to visit /tmp/junit[...]/tmp/repo/.git/gc.log.lock.[...] java.nio.file.NoSuchFileException: [...]",
+    "createdAt" : "2018-10-31T18:32:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Support wildcards in forceBuildModules",
+    "createdAt" : "2018-10-31T22:15:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Release 3.7",
+    "createdAt" : "2018-11-04T15:08:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Move to JUnit 5",
+    "createdAt" : "2018-11-04T15:14:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Leverage Maven-provided JSR330 dependency injection instead of custom Guice setup",
+    "createdAt" : "2018-11-11T19:13:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Print version of GIB",
+    "createdAt" : "2018-11-11T19:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Reconsider logging setup, especially for tests",
+    "createdAt" : "2018-11-13T22:18:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Check out the Codacy!",
+    "createdAt" : "2018-12-12T19:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Untracked or uncommitted changes are not tested against excludePathRegex",
+    "createdAt" : "2019-01-13T22:52:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Update dependencies and plugins for release 3.8",
+    "createdAt" : "2019-01-19T16:30:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Readme: \"Requirements: Maven version 3+\" is most likely incorrect",
+    "createdAt" : "2019-01-19T17:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Release 3.8",
+    "createdAt" : "2019-01-20T16:53:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "JGit-based tests are not isolated from system and user config",
+    "createdAt" : "2019-01-25T22:48:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "partial builds (proper -pl support)",
+    "createdAt" : "2019-03-06T15:48:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Congrats, you broke my IDE :-) :: IntelliJ IDEA is incompatible with GIB 3.8+",
+    "createdAt" : "2019-03-28T14:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "excludePathRegex is tested against absoulte path instead of just the repo path",
+    "createdAt" : "2019-04-08T21:15:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Deleted Files Not Seen as Diff",
+    "createdAt" : "2019-06-19T17:27:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Dependency and Plugin updates for Release 3.8.1",
+    "createdAt" : "2019-12-29T22:32:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Introduce maven-release-plugin",
+    "createdAt" : "2019-12-31T00:19:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Release 3.8.1",
+    "createdAt" : "2019-12-31T01:04:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "forceBuildModules always come first, reactor order is not retained",
+    "createdAt" : "2020-01-08T21:25:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "fetch*Branch fails if Git remote repo URL is set to http(s) and repo requires credentials",
+    "createdAt" : "2020-01-08T21:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Reduce typing effort when using -Dgib.[...]",
+    "createdAt" : "2020-01-10T16:24:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Release 3.9.0",
+    "createdAt" : "2020-01-13T09:17:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Upgrade to Mockito 3",
+    "createdAt" : "2020-01-20T22:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "fetch*Branch + SSH: support private key in non-default locations",
+    "createdAt" : "2020-02-09T18:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "fetch*Branch + SSH: support passphrase protected private key",
+    "createdAt" : "2020-02-09T18:13:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Your .dependabot/config.yml contained invalid details",
+    "createdAt" : "2020-02-13T23:46:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Intermittent failure of MavenIntegrationTest.logChanges()",
+    "createdAt" : "2020-02-23T17:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Optionally buildAll if nothing has changed",
+    "createdAt" : "2020-03-26T22:04:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "\"Impacted\"/downstream module wrongly receives *ForUpstreamModules properties in certain cases",
+    "createdAt" : "2020-03-29T15:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Rename excludeTransitiveModulesPackagedAs to excludeDownstreamModulesPackagedAs",
+    "createdAt" : "2020-03-30T19:02:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Consider handling -f similar to -pl",
+    "createdAt" : "2020-03-30T19:06:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Changed non-reactor module is wrongly mapped to the closest reactor module",
+    "createdAt" : "2020-04-01T20:57:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Introduce includePathRegex",
+    "createdAt" : "2020-04-01T21:11:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Write impacted modules to a configurable \"logfile\"",
+    "createdAt" : "2020-04-26T16:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Relax name constraint when fetching branches",
+    "createdAt" : "2020-04-26T20:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Module that is \"deselected\" via -pl !... is built if changed",
+    "createdAt" : "2020-05-02T17:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "GIB should handle -N similar to -pl (and -f)",
+    "createdAt" : "2020-05-19T11:45:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Migrate integration test to maven-invoker-plugin",
+    "createdAt" : "2020-05-24T13:03:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "hash versions instead of gitflow",
+    "createdAt" : "2020-05-31T15:07:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Plugin parameters don't show up in Eclipse editor",
+    "createdAt" : "2020-07-16T22:45:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "GIB 3.11 throws NPE in IntelliJ during project import",
+    "createdAt" : "2020-07-23T12:34:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Remove deprecated property 'enabled'",
+    "createdAt" : "2020-07-26T20:22:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "\"Git branch of name 'HEAD' not found.\" and other annoyances when adding GIB early to a new Git repo",
+    "createdAt" : "2020-07-26T22:11:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Rethink property source priority for plugin usage scenario",
+    "createdAt" : "2020-07-27T21:49:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "local test execution blocks build",
+    "createdAt" : "2020-07-28T06:48:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Add CONTRIBUTING.md/.adoc",
+    "createdAt" : "2020-07-29T07:54:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 237,
+    "title" : "Remove deprecated property name 'uncommited'",
+    "createdAt" : "2020-08-24T21:53:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Support BOM incremental changes",
+    "createdAt" : "2020-08-26T18:11:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Fully migrate from Junit5 assertions to AssertJ",
+    "createdAt" : "2020-08-30T18:09:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Use NIO Path instead of File in tests",
+    "createdAt" : "2020-08-30T19:05:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Fewer modules are built with GIB than without it when -rf is used",
+    "createdAt" : "2020-09-02T10:24:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Support BOM incremental changes part 2",
+    "createdAt" : "2020-09-07T21:29:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 253,
+    "title" : "Project Icon: Maven feathers + Git sign",
+    "createdAt" : "2020-09-09T16:48:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Some (all?) integration tests complain about \"build is platform dependent!\"",
+    "createdAt" : "2020-09-13T18:14:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Consider building upstream modules regardless of being changed or not when using -pl and -am",
+    "createdAt" : "2020-10-02T21:45:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Finalize switch from Travis CI to GH actions",
+    "createdAt" : "2021-01-18T22:26:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Small CI adjustments",
+    "createdAt" : "2021-01-24T21:16:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Move to Github organization",
+    "createdAt" : "2021-01-24T21:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Consider moving template.zip to separate GH repo",
+    "createdAt" : "2021-02-09T21:41:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 309,
+    "title" : "Consider dropping \"Regex\" suffix from various properties",
+    "createdAt" : "2021-02-15T20:42:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "CI: Cache Codacy reporter jar?",
+    "createdAt" : "2021-02-16T14:34:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 314,
+    "title" : "Consider changing com.vackosar package prefix to io.github or similar",
+    "createdAt" : "2021-02-22T12:31:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Module \"depending\" on BOM is not built (fully) when BOM is not selected",
+    "createdAt" : "2021-03-04T12:36:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Drop support for Maven 3.6.2 or older",
+    "createdAt" : "2021-03-13T14:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Skip sub-projects of deselected projects",
+    "createdAt" : "2021-03-15T16:29:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 331,
+    "title" : "Don't build downstream modules if just \"src/test\" contains changes",
+    "createdAt" : "2021-03-24T16:10:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Warning:  Detected Maven 3.8.1 was not tested with gitflow-incremental-builder.",
+    "createdAt" : "2021-04-06T10:33:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "CI: try out GH `concurrency` and `cancel-in-progress`",
+    "createdAt" : "2021-04-19T21:49:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Please clarify what \"Usage as a Maven extension\" means",
+    "createdAt" : "2021-04-23T07:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Relativize entries in `logImpactedTo` file to repo path",
+    "createdAt" : "2021-05-18T20:48:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Introduce disableIfReferenceBranchMatches",
+    "createdAt" : "2021-05-25T14:38:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "*Matches/Matching properties are not applied to the full string (e.g. current branch)",
+    "createdAt" : "2021-05-28T11:06:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "sshkey with `@` in name",
+    "createdAt" : "2021-06-10T21:19:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Support for \"changes on the same branch\" ",
+    "createdAt" : "2021-06-16T11:30:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Tolerate modules in same directory",
+    "createdAt" : "2021-06-23T19:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Maven modules embedded in test resources don't result in containing module being detected as changed",
+    "createdAt" : "2021-06-23T22:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "lacking understanding on how to match paths/files in `-Dgib.excludePathsMatching` or `-Dgib.skipIfPathMatches`",
+    "createdAt" : "2021-07-27T13:10:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "How to run a command before incremental builder runs on mvn clean install",
+    "createdAt" : "2021-08-03T05:37:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Codacy is not displaying (receiving?) converage data anymore",
+    "createdAt" : "2021-08-03T09:15:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Suggest checking out reference branch before build when reference branch is not found",
+    "createdAt" : "2021-08-03T12:40:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Ability to include precursor projects in reactor only when certain projects are included",
+    "createdAt" : "2021-10-19T08:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "Drop support for Java 8",
+    "createdAt" : "2021-10-28T21:45:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "CI: Update to Maven 3.8.4",
+    "createdAt" : "2021-10-28T23:08:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Support `fetch my-remote my-branch:my-branch`-style fetches",
+    "createdAt" : "2021-11-07T23:55:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 433,
+    "title" : "Support fetching tags",
+    "createdAt" : "2021-11-08T17:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "Changes are ignored when whole project is in a `src` subdir.",
+    "createdAt" : "2021-12-16T10:43:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "NPE when merge base is not found",
+    "createdAt" : "2021-12-17T14:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "Replace `jsch.agentproxy` with built-in \"SSH Agent Support\" of JGit 6",
+    "createdAt" : "2021-12-27T22:02:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 488,
+    "title" : "Using buildDownstream causes builds beyond a test-scoped dependency to build",
+    "createdAt" : "2022-02-15T14:31:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 493,
+    "title" : "Consider renaming `master` to `main`",
+    "createdAt" : "2022-02-20T20:46:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "skip when --resume-from",
+    "createdAt" : "2022-03-17T11:24:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "class cast with v4.1.0 and Maven 3.8.6",
+    "createdAt" : "2022-06-14T13:54:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 544,
+    "title" : "How to selectively build impacted modules",
+    "createdAt" : "2022-06-21T13:00:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 550,
+    "title" : "excludePathsMatching documentation is missleading",
+    "createdAt" : "2022-07-20T10:00:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 562,
+    "title" : "Properties for unchanged downstream Modules",
+    "createdAt" : "2022-08-15T20:59:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Missing Maven goal",
+    "createdAt" : "2022-09-15T07:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Avoid: [WARNING] Ignoring changed file outside build project... ",
+    "createdAt" : "2022-10-17T12:27:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 579,
+    "title" : "Getting IllegalArgumentException on trying to use the extension",
+    "createdAt" : "2022-10-22T16:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "Javadoc warnings with Java 17",
+    "createdAt" : "2022-11-01T00:31:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "enable / disable mechanism for logging of files, which is outside of project",
+    "createdAt" : "2022-11-02T10:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 591,
+    "title" : "Try Maven 4",
+    "createdAt" : "2022-11-03T20:04:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 603,
+    "title" : "Selected project is not built when non-selected upstream project is changed and `disableSelectedProjectsHandling` is `true`",
+    "createdAt" : "2022-11-10T18:48:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 610,
+    "title" : "Log module names for which tests will be executed ",
+    "createdAt" : "2022-11-22T10:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 637,
+    "title" : "Support/check Maven 3.9.0",
+    "createdAt" : "2023-01-18T17:34:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 678,
+    "title" : "Consider renaming `skipIfPathMatches` to `disableIfPathMatches`",
+    "createdAt" : "2023-03-28T16:10:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 723,
+    "title" : "gitflow-incremental-builder beeing ignored using maven wrapper",
+    "createdAt" : "2023-08-29T15:51:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 740,
+    "title" : "Question: Is it possible to determine what dependencies have changed from a parent module?",
+    "createdAt" : "2023-10-23T11:32:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 791,
+    "title" : "Improved transitive downstream detection can cause build failures",
+    "createdAt" : "2024-02-06T14:54:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 846,
+    "title" : "Compare with previous commit",
+    "createdAt" : "2024-06-26T19:45:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "Allow filtering of Maven lifecycle phases",
+    "createdAt" : "2024-11-05T12:09:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1003,
+    "title" : "Change detection not working as expected for child projects of modules selected with `-f` or `cd` (so they are not built)",
+    "createdAt" : "2025-02-26T12:57:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1037,
+    "title" : "Migrate to the Sonatype Central Portal",
+    "createdAt" : "2025-06-18T08:51:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1047,
+    "title" : "Include test-only note in changes summary",
+    "createdAt" : "2025-07-08T07:29:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1105,
+    "title" : "Exclude downstream builds for specific modules",
+    "createdAt" : "2025-10-21T10:58:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1136,
+    "title" : "[QA] Is it possible to leverage the module change detection capabilities of this project to skip unit tests for modules that haven't been changed?",
+    "createdAt" : "2026-01-04T05:38:39Z",
+    "state" : "CLOSED"
+  } ]
+}

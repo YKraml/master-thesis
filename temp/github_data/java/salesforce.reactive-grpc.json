@@ -1,0 +1,916 @@
+{
+  "repoOwner" : "salesforce",
+  "repoName" : "reactive-grpc",
+  "forks" : [ {
+    "createdAt" : "2017-11-09T11:36:52Z"
+  }, {
+    "createdAt" : "2017-12-01T15:27:15Z"
+  }, {
+    "createdAt" : "2017-12-06T15:57:55Z"
+  }, {
+    "createdAt" : "2017-12-14T15:50:11Z"
+  }, {
+    "createdAt" : "2017-12-27T10:55:45Z"
+  }, {
+    "createdAt" : "2018-01-16T13:53:42Z"
+  }, {
+    "createdAt" : "2018-02-03T18:30:31Z"
+  }, {
+    "createdAt" : "2018-02-07T08:03:07Z"
+  }, {
+    "createdAt" : "2018-02-13T07:11:57Z"
+  }, {
+    "createdAt" : "2018-02-16T13:35:33Z"
+  }, {
+    "createdAt" : "2018-05-30T17:40:17Z"
+  }, {
+    "createdAt" : "2018-07-12T15:44:56Z"
+  }, {
+    "createdAt" : "2018-08-05T11:52:37Z"
+  }, {
+    "createdAt" : "2018-08-09T00:59:43Z"
+  }, {
+    "createdAt" : "2018-08-20T08:38:29Z"
+  }, {
+    "createdAt" : "2018-09-18T13:00:00Z"
+  }, {
+    "createdAt" : "2018-10-05T20:20:27Z"
+  }, {
+    "createdAt" : "2018-11-05T04:10:37Z"
+  }, {
+    "createdAt" : "2018-12-20T23:11:45Z"
+  }, {
+    "createdAt" : "2018-12-28T11:24:56Z"
+  }, {
+    "createdAt" : "2019-02-22T15:41:33Z"
+  }, {
+    "createdAt" : "2019-03-10T09:30:30Z"
+  }, {
+    "createdAt" : "2019-03-13T17:06:22Z"
+  }, {
+    "createdAt" : "2019-03-14T03:04:54Z"
+  }, {
+    "createdAt" : "2019-03-28T07:46:37Z"
+  }, {
+    "createdAt" : "2019-04-30T21:32:57Z"
+  }, {
+    "createdAt" : "2019-05-08T10:40:30Z"
+  }, {
+    "createdAt" : "2019-05-20T09:47:11Z"
+  }, {
+    "createdAt" : "2019-05-30T20:25:45Z"
+  }, {
+    "createdAt" : "2019-06-03T03:54:46Z"
+  }, {
+    "createdAt" : "2019-06-09T12:07:28Z"
+  }, {
+    "createdAt" : "2019-06-11T07:02:44Z"
+  }, {
+    "createdAt" : "2019-06-21T08:49:44Z"
+  }, {
+    "createdAt" : "2019-06-27T07:04:36Z"
+  }, {
+    "createdAt" : "2019-07-04T14:19:55Z"
+  }, {
+    "createdAt" : "2019-07-07T06:40:15Z"
+  }, {
+    "createdAt" : "2019-07-14T12:30:55Z"
+  }, {
+    "createdAt" : "2019-07-14T13:28:33Z"
+  }, {
+    "createdAt" : "2019-08-06T04:28:51Z"
+  }, {
+    "createdAt" : "2019-08-13T09:36:21Z"
+  }, {
+    "createdAt" : "2019-08-16T06:23:35Z"
+  }, {
+    "createdAt" : "2019-09-17T09:23:30Z"
+  }, {
+    "createdAt" : "2019-10-16T14:18:13Z"
+  }, {
+    "createdAt" : "2019-12-28T03:58:02Z"
+  }, {
+    "createdAt" : "2020-01-02T00:50:13Z"
+  }, {
+    "createdAt" : "2020-01-07T07:47:17Z"
+  }, {
+    "createdAt" : "2020-02-01T15:22:06Z"
+  }, {
+    "createdAt" : "2020-02-28T23:45:13Z"
+  }, {
+    "createdAt" : "2020-03-17T23:40:16Z"
+  }, {
+    "createdAt" : "2020-04-08T10:41:31Z"
+  }, {
+    "createdAt" : "2020-04-14T00:40:12Z"
+  }, {
+    "createdAt" : "2020-04-18T02:58:59Z"
+  }, {
+    "createdAt" : "2020-04-23T15:15:13Z"
+  }, {
+    "createdAt" : "2020-04-29T13:25:16Z"
+  }, {
+    "createdAt" : "2020-05-16T19:00:44Z"
+  }, {
+    "createdAt" : "2020-06-04T17:29:16Z"
+  }, {
+    "createdAt" : "2020-06-11T12:35:04Z"
+  }, {
+    "createdAt" : "2020-06-24T02:33:55Z"
+  }, {
+    "createdAt" : "2020-08-05T01:38:11Z"
+  }, {
+    "createdAt" : "2020-08-08T22:35:06Z"
+  }, {
+    "createdAt" : "2020-09-14T05:26:29Z"
+  }, {
+    "createdAt" : "2020-09-20T10:03:01Z"
+  }, {
+    "createdAt" : "2020-09-23T14:57:03Z"
+  }, {
+    "createdAt" : "2020-09-25T04:25:12Z"
+  }, {
+    "createdAt" : "2020-09-27T07:45:04Z"
+  }, {
+    "createdAt" : "2020-10-16T06:29:29Z"
+  }, {
+    "createdAt" : "2020-10-18T07:25:41Z"
+  }, {
+    "createdAt" : "2020-10-28T00:56:53Z"
+  }, {
+    "createdAt" : "2020-11-02T12:48:49Z"
+  }, {
+    "createdAt" : "2020-11-18T06:45:21Z"
+  }, {
+    "createdAt" : "2021-01-06T03:41:55Z"
+  }, {
+    "createdAt" : "2021-01-15T17:33:36Z"
+  }, {
+    "createdAt" : "2021-03-09T05:18:29Z"
+  }, {
+    "createdAt" : "2021-03-12T11:59:34Z"
+  }, {
+    "createdAt" : "2021-04-13T01:22:22Z"
+  }, {
+    "createdAt" : "2021-04-21T20:11:28Z"
+  }, {
+    "createdAt" : "2021-04-26T08:25:13Z"
+  }, {
+    "createdAt" : "2021-06-05T15:28:04Z"
+  }, {
+    "createdAt" : "2021-06-09T23:23:24Z"
+  }, {
+    "createdAt" : "2021-06-25T13:44:47Z"
+  }, {
+    "createdAt" : "2021-06-26T16:34:16Z"
+  }, {
+    "createdAt" : "2021-08-05T19:35:12Z"
+  }, {
+    "createdAt" : "2021-08-08T01:27:51Z"
+  }, {
+    "createdAt" : "2021-08-16T03:09:55Z"
+  }, {
+    "createdAt" : "2021-09-15T11:42:36Z"
+  }, {
+    "createdAt" : "2021-09-21T04:30:52Z"
+  }, {
+    "createdAt" : "2022-01-31T08:08:10Z"
+  }, {
+    "createdAt" : "2022-02-14T11:54:07Z"
+  }, {
+    "createdAt" : "2022-02-24T11:21:10Z"
+  }, {
+    "createdAt" : "2022-03-02T12:33:03Z"
+  }, {
+    "createdAt" : "2022-03-09T20:18:51Z"
+  }, {
+    "createdAt" : "2022-04-07T12:00:30Z"
+  }, {
+    "createdAt" : "2022-05-31T15:13:49Z"
+  }, {
+    "createdAt" : "2022-07-11T09:21:32Z"
+  }, {
+    "createdAt" : "2022-07-12T18:44:45Z"
+  }, {
+    "createdAt" : "2022-08-15T04:11:50Z"
+  }, {
+    "createdAt" : "2022-08-19T03:18:45Z"
+  }, {
+    "createdAt" : "2022-08-28T20:00:28Z"
+  }, {
+    "createdAt" : "2022-09-13T09:35:09Z"
+  }, {
+    "createdAt" : "2022-11-02T06:30:18Z"
+  }, {
+    "createdAt" : "2022-11-24T23:20:06Z"
+  }, {
+    "createdAt" : "2022-12-12T14:11:35Z"
+  }, {
+    "createdAt" : "2023-01-25T15:17:49Z"
+  }, {
+    "createdAt" : "2023-03-13T02:00:22Z"
+  }, {
+    "createdAt" : "2023-05-23T03:40:20Z"
+  }, {
+    "createdAt" : "2023-10-24T13:42:26Z"
+  }, {
+    "createdAt" : "2023-11-23T12:27:42Z"
+  }, {
+    "createdAt" : "2023-12-28T04:45:09Z"
+  }, {
+    "createdAt" : "2024-04-23T10:25:58Z"
+  }, {
+    "createdAt" : "2024-05-14T16:18:31Z"
+  }, {
+    "createdAt" : "2024-07-20T17:11:26Z"
+  }, {
+    "createdAt" : "2024-08-14T14:01:37Z"
+  }, {
+    "createdAt" : "2024-09-15T05:13:36Z"
+  }, {
+    "createdAt" : "2024-12-16T19:08:16Z"
+  }, {
+    "createdAt" : "2025-01-04T00:04:18Z"
+  }, {
+    "createdAt" : "2025-03-24T14:18:25Z"
+  }, {
+    "createdAt" : "2025-04-02T06:24:33Z"
+  }, {
+    "createdAt" : "2025-08-05T02:58:37Z"
+  }, {
+    "createdAt" : "2025-10-06T18:27:07Z"
+  }, {
+    "createdAt" : "2025-11-05T08:55:48Z"
+  } ],
+  "issues" : [ {
+    "number" : 6,
+    "title" : "Implement Reactor support",
+    "createdAt" : "2017-11-09T00:57:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Fix code coverage",
+    "createdAt" : "2017-11-10T02:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Make *ImplBase classes stand-alone",
+    "createdAt" : "2017-11-10T02:49:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Perf testing",
+    "createdAt" : "2017-11-10T18:48:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Add demo for Reactor",
+    "createdAt" : "2017-11-10T18:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "BackpressureIntegrationTest failing",
+    "createdAt" : "2017-11-13T16:35:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Test required_spec317_mustNotSignalOnErrorWhenPendingAboveLongMaxValue random failure",
+    "createdAt" : "2017-11-21T16:49:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Kotlin demo",
+    "createdAt" : "2017-11-21T16:52:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Release 0.7.0",
+    "createdAt" : "2017-11-22T04:20:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Gradle support",
+    "createdAt" : "2017-11-27T04:00:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Gradle Plugin fails when importing protobufs with underscore in filename",
+    "createdAt" : "2017-12-01T17:23:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Wrong uppercasing of method names",
+    "createdAt" : "2017-12-04T11:08:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Update grpc-java-contrib README.md",
+    "createdAt" : "2017-12-06T15:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Best way to retry on a reactive-grpc stream after an error",
+    "createdAt" : "2018-01-11T10:46:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Lambda expressions break Android",
+    "createdAt" : "2018-01-16T14:01:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Grpc 1.9.0",
+    "createdAt" : "2018-01-19T16:38:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Depracated API in grpc 1.9.0",
+    "createdAt" : "2018-02-01T03:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Release 0.8.0",
+    "createdAt" : "2018-02-02T06:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Cannot add Interceptor to delegate stub",
+    "createdAt" : "2018-02-15T15:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Code generator uses proto directory hierarchy as part of the outer class name",
+    "createdAt" : "2018-02-16T10:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "delegateStub methods return void, but Rx*Grpc expects return type StreamObserver",
+    "createdAt" : "2018-02-21T15:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Codify gRPC Context propagation for Reactor",
+    "createdAt" : "2018-02-21T16:52:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "NetworkOnMainThreadException on two way stream.",
+    "createdAt" : "2018-02-22T12:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Backpressure",
+    "createdAt" : "2018-02-26T13:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "ReactiveExecutor overrides NettyServerBuilder.executor?",
+    "createdAt" : "2018-02-28T19:04:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Request flux subscription is not canceled when channel disconnects.",
+    "createdAt" : "2018-03-02T11:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Convert Reactor code to fluent style",
+    "createdAt" : "2018-03-08T08:34:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Underscores in RPC name breaks code generation",
+    "createdAt" : "2018-03-09T17:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Error signal not propagated because canceling subscription throws exception",
+    "createdAt" : "2018-03-14T06:46:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Backpressure is not respected",
+    "createdAt" : "2018-03-20T08:03:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Warning on Android Studio 3.1 gradle when generating proto",
+    "createdAt" : "2018-03-29T09:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Unary call blocks indefinitely if the server completes empty",
+    "createdAt" : "2018-04-02T08:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Non-Mono overload for a non-streamable argument",
+    "createdAt" : "2018-04-26T12:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Request timeout",
+    "createdAt" : "2018-05-10T09:32:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "gRPC 1.12 fails unit tests",
+    "createdAt" : "2018-05-22T15:08:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Customize delegateStub",
+    "createdAt" : "2018-06-05T17:07:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Receive UNKNOWN: Exception was thrown by handler",
+    "createdAt" : "2018-06-07T15:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Java ➜ GoLang Interop Testing",
+    "createdAt" : "2018-06-11T17:05:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Java ➜ C# Interop Testing",
+    "createdAt" : "2018-06-11T17:07:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Can I use this with SBT ?",
+    "createdAt" : "2018-06-21T16:08:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Ready for production?",
+    "createdAt" : "2018-06-26T08:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Codegeneration is incorrect for nested message types",
+    "createdAt" : "2018-07-04T07:35:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Reactor ChainedCallIntegrationTest is flaky.",
+    "createdAt" : "2018-07-12T16:51:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Java 9 implementation",
+    "createdAt" : "2018-07-22T06:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Create a Reactive-gRPC Spring starter",
+    "createdAt" : "2018-07-22T06:41:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "memory synchronisation problem",
+    "createdAt" : "2018-07-27T10:20:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Generated code is not compilable in demos/gradle",
+    "createdAt" : "2018-07-30T11:12:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "mvn clean install gives error",
+    "createdAt" : "2018-10-06T14:35:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "backpressure-demo \"queue full?!\" exception with concatMap",
+    "createdAt" : "2018-10-06T19:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "NPE at ReactiveStreamObserverPublisherSubscriptionBase.request",
+    "createdAt" : "2018-10-23T08:22:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Generator does not convert filenames into java names consistently with the vanilla grpc generator",
+    "createdAt" : "2018-10-23T09:15:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "ReactorStub hangs on streaming calls when used with an in-process-channel",
+    "createdAt" : "2018-10-25T06:30:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Backpressure not being respected",
+    "createdAt" : "2018-11-15T13:59:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "(rxgrpc) Splitting a stream into first and rest cancels the whole stream when first is consumed",
+    "createdAt" : "2018-12-14T08:09:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Manifest file missing osgi headers ",
+    "createdAt" : "2018-12-28T12:02:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Compose operator usage for RxJava2 implementation",
+    "createdAt" : "2019-01-09T12:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Demo Application is failing",
+    "createdAt" : "2019-01-10T08:28:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Request by one and compatibility with Reactor's switchOnFirst",
+    "createdAt" : "2019-01-30T18:00:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Flapping Reactor tests",
+    "createdAt" : "2019-02-14T08:02:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Any interest in C# versions?",
+    "createdAt" : "2019-02-19T06:41:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Project does not build with JDK 11",
+    "createdAt" : "2019-03-06T13:31:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Rewrite backpressure integration tests for better determinism",
+    "createdAt" : "2019-03-11T19:40:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 162,
+    "title" : "Backpressure Demo has sporadic exception",
+    "createdAt" : "2019-03-24T07:14:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Release a ready to run rxgrpc generator",
+    "createdAt" : "2019-03-28T15:22:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Bazel integration",
+    "createdAt" : "2019-03-28T21:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Explain how metadata can be accessed at the server side",
+    "createdAt" : "2019-04-01T19:33:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Guava 27 not allowed",
+    "createdAt" : "2019-04-17T10:41:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Add missing CallOptions constructors",
+    "createdAt" : "2019-05-09T18:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "GRPC deadline context propagation ",
+    "createdAt" : "2019-05-31T22:50:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Reactive ServerInterceptor?",
+    "createdAt" : "2019-06-28T22:24:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Status CANCELLED under load",
+    "createdAt" : "2019-07-03T12:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Recommended Scheduler Implementations",
+    "createdAt" : "2019-07-11T11:01:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "[reactor-grpc] Returning empty Mono blocks indefinitely",
+    "createdAt" : "2019-08-12T14:53:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Need help in using reactor-grpc with gradle in windows",
+    "createdAt" : "2019-08-13T07:25:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Fix Gradle packaging for Windows",
+    "createdAt" : "2019-08-17T00:19:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Release 1.0.0",
+    "createdAt" : "2019-08-17T00:25:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "reactor-grpc-1.0.0.jar contains guava classes",
+    "createdAt" : "2019-08-30T10:22:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Support of gRPC version 1.23.0",
+    "createdAt" : "2019-09-11T13:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "[reactor-grpc] Cancel signal should be ignored once Complete has been seen",
+    "createdAt" : "2019-10-01T14:04:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 195,
+    "title" : "[reactor-grpc] Reactor context does not propagate if stub is used",
+    "createdAt" : "2019-10-11T15:33:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 196,
+    "title" : "add deadline to delegatestub",
+    "createdAt" : "2019-12-01T08:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Question about call cancellation mechanism",
+    "createdAt" : "2020-01-16T15:12:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Unable to build with Bazel with plaintext HTTP Maven URLs",
+    "createdAt" : "2020-01-28T13:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "RxJava 3",
+    "createdAt" : "2020-02-20T02:52:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Usage of Mono.compose and Mono.as in README is misleading",
+    "createdAt" : "2020-03-09T14:31:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "rxgrpc-1.0.0-linux-s390_64.exe is not available",
+    "createdAt" : "2020-05-26T07:57:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Don't break the chain [Question]",
+    "createdAt" : "2020-06-02T15:05:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Caching the Mean of a Vector\n\n",
+    "createdAt" : "2020-06-08T08:08:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "reactor fails to generate gRPC stub in latest version",
+    "createdAt" : "2020-06-09T12:19:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Shade and relocate dependencies in reactor-grpc and rx-grpc plugin",
+    "createdAt" : "2020-06-09T15:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Is Java 7 supported?",
+    "createdAt" : "2020-08-04T04:31:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "[reactor-grpc][question] grpc context in subscriber context",
+    "createdAt" : "2020-08-07T13:50:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 220,
+    "title" : "[Reactor-grpc] Got problem using many to one",
+    "createdAt" : "2020-08-13T08:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "NullPointerException in server side during closing stream",
+    "createdAt" : "2020-08-31T08:20:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "[BUG] Requests with Grpc Reactive Client are completed at the end of the flow",
+    "createdAt" : "2020-09-01T09:49:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 223,
+    "title" : "[Canteen] Executable doesn't work with asdf-java on macOS",
+    "createdAt" : "2020-09-11T17:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Dependency conflicts on io.netty:netty-common, leading to inconsistent program behaviors",
+    "createdAt" : "2020-09-23T07:27:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "reactor-grpc-1.0.1-linux-aarch_64.exe availability for aarch64",
+    "createdAt" : "2020-10-15T13:15:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Support optional feature",
+    "createdAt" : "2020-11-03T08:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Java execution error: exec: \"java\": executable file not found in %PATH%",
+    "createdAt" : "2020-11-29T12:18:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Reactor Core 3.4.x (Europium) compatibility",
+    "createdAt" : "2021-01-04T09:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Set error code and error message?",
+    "createdAt" : "2021-02-18T15:39:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 239,
+    "title" : "Reactor Plugin Doesn't Generate Stub On Recent Versions",
+    "createdAt" : "2021-05-26T16:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Support field presence API in Proto 3",
+    "createdAt" : "2021-06-23T14:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "NPE in scheduler thread when use publishOn",
+    "createdAt" : "2021-07-27T12:36:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Update grpc-java version to 1.39.0 for next release (1.2?)",
+    "createdAt" : "2021-08-05T19:43:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Dependency to io.reactivex.rxjava3.internal packages",
+    "createdAt" : "2021-08-24T01:56:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "How do you configure how much data is buffered on the producer side?",
+    "createdAt" : "2021-09-17T16:51:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 260,
+    "title" : "Wrong manifest main class rx3grpc",
+    "createdAt" : "2021-10-05T15:51:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Backpressure Demo has compile error on Windows",
+    "createdAt" : "2022-01-19T07:24:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "stub.invoke().retry() throws exception",
+    "createdAt" : "2022-01-25T05:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Async resource cleanup failed after onComplete / call already closed",
+    "createdAt" : "2022-02-13T12:32:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 292,
+    "title" : "Add onDiscard hook support to AbstractStreamObserverAndPublisher",
+    "createdAt" : "2022-02-13T17:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "host_javabase is deprecated",
+    "createdAt" : "2022-02-23T18:02:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 295,
+    "title" : "Possible to have non-publisher for RPC method parameter?",
+    "createdAt" : "2022-06-14T14:12:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "In ManyToOne and ManyToMany, remote method is called before the client subscribe",
+    "createdAt" : "2022-08-09T13:38:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "project still active？",
+    "createdAt" : "2022-09-26T07:47:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "UnsupportedOperationException thrown in the generated stub with Java 17",
+    "createdAt" : "2022-10-20T15:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Unexpedted error log",
+    "createdAt" : "2022-10-28T06:37:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Dropped Error on Bidi Stream After Broken TCP Connection",
+    "createdAt" : "2022-12-12T12:48:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Subscription Should be Cancelled on Interceptor Close",
+    "createdAt" : "2022-12-14T13:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "How about a new stable release?",
+    "createdAt" : "2023-01-25T15:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Migrate reactive-grpc to grpc-ecosystem",
+    "createdAt" : "2023-04-12T13:51:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 314,
+    "title" : "Indeterminate cancel or error when streaming bidirectionally",
+    "createdAt" : "2023-05-22T18:35:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 323,
+    "title" : "Question: how can Spring reactive-grpc support credentials on server",
+    "createdAt" : "2023-08-17T19:33:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Bazel demo does not compile",
+    "createdAt" : "2023-09-25T13:32:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 327,
+    "title" : "How to customize ClientInterceptor and ServerInterceptor",
+    "createdAt" : "2024-01-04T06:27:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "`reactor-grpc-1.2.4-osx-x86_64.exe` is removed from mac on intel",
+    "createdAt" : "2024-03-29T12:43:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 330,
+    "title" : "Need a way to adapt gRPC context with Reactor Context for Reactor generated stubs",
+    "createdAt" : "2024-08-07T18:22:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 331,
+    "title" : "Gradle example fails on linux",
+    "createdAt" : "2025-01-17T14:28:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 332,
+    "title" : "Generated code uses javax annotations",
+    "createdAt" : "2025-01-17T15:08:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 333,
+    "title" : "proto3 file that contains optional fields, but code generator protoc-gen-reactor hasn't been updated to support optional fields in proto3.",
+    "createdAt" : "2025-03-04T12:59:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 334,
+    "title" : "update dependencies",
+    "createdAt" : "2025-03-06T00:49:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 337,
+    "title" : "REACTIVE-GRPC IS EFFECTIVELY PAUSED",
+    "createdAt" : "2025-04-18T14:43:29Z",
+    "state" : "OPEN"
+  } ]
+}

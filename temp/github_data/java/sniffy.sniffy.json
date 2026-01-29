@@ -1,0 +1,1618 @@
+{
+  "repoOwner" : "sniffy",
+  "repoName" : "sniffy",
+  "forks" : [ {
+    "createdAt" : "2015-05-15T17:48:39Z"
+  }, {
+    "createdAt" : "2015-06-07T05:05:03Z"
+  }, {
+    "createdAt" : "2015-08-08T09:51:35Z"
+  }, {
+    "createdAt" : "2015-12-16T20:51:34Z"
+  }, {
+    "createdAt" : "2016-03-08T12:40:07Z"
+  }, {
+    "createdAt" : "2016-03-25T22:44:08Z"
+  }, {
+    "createdAt" : "2016-04-27T15:17:41Z"
+  }, {
+    "createdAt" : "2016-05-05T19:23:07Z"
+  }, {
+    "createdAt" : "2017-04-04T11:42:56Z"
+  }, {
+    "createdAt" : "2019-03-04T11:52:50Z"
+  }, {
+    "createdAt" : "2019-05-06T12:59:03Z"
+  }, {
+    "createdAt" : "2019-06-13T02:38:38Z"
+  }, {
+    "createdAt" : "2019-09-25T22:58:15Z"
+  }, {
+    "createdAt" : "2020-07-07T22:36:00Z"
+  }, {
+    "createdAt" : "2021-02-12T12:04:51Z"
+  }, {
+    "createdAt" : "2022-06-29T12:06:33Z"
+  }, {
+    "createdAt" : "2022-08-16T19:29:27Z"
+  }, {
+    "createdAt" : "2023-02-27T13:04:26Z"
+  }, {
+    "createdAt" : "2023-10-31T23:29:55Z"
+  }, {
+    "createdAt" : "2024-05-05T14:01:31Z"
+  }, {
+    "createdAt" : "2025-01-10T05:39:18Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "jdbc-sniffer does not work on Java 6",
+    "createdAt" : "2014-12-17T10:27:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "JDBC Sniffer converts database exceptions to InvocationException",
+    "createdAt" : "2014-12-22T21:11:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "OtherThreadsSniffer",
+    "createdAt" : "2014-12-24T20:31:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "New @Rule which will not allow queries by default",
+    "createdAt" : "2014-12-30T13:59:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Support TestNG and other frameworks",
+    "createdAt" : "2015-01-01T10:53:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "New API based on try-with-resource statement",
+    "createdAt" : "2015-01-01T10:53:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Nested counters support",
+    "createdAt" : "2015-01-22T05:19:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Support validation query",
+    "createdAt" : "2015-01-23T07:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "OSGi Bundle",
+    "createdAt" : "2015-04-08T04:34:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Print the actual queries if expectation was violated",
+    "createdAt" : "2015-04-13T20:48:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "DropWizard Metrics integration",
+    "createdAt" : "2015-04-19T15:55:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 30,
+    "title" : "Log executed queries",
+    "createdAt" : "2015-04-24T06:43:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 33,
+    "title" : "ScalaTest integration",
+    "createdAt" : "2015-04-27T21:14:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 34,
+    "title" : "Spring TestExecutionListener integration",
+    "createdAt" : "2015-04-27T21:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Count insert, update, delete and select statements sepratelly",
+    "createdAt" : "2015-04-28T19:48:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Capture additional information and use hamcrest for validating it",
+    "createdAt" : "2015-05-20T21:08:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 41,
+    "title" : "Improve expectations based on query types",
+    "createdAt" : "2015-05-22T19:04:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 42,
+    "title" : "Spring integration doesn't work with spring 3",
+    "createdAt" : "2015-06-30T08:57:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Sniffer shows queries from all threads on error",
+    "createdAt" : "2015-06-30T08:58:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "NPE when calling executeBatch on PS without calling addBatch",
+    "createdAt" : "2015-06-30T12:31:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Spring integration does not work if there methods wo sniffer annotations",
+    "createdAt" : "2015-07-01T13:46:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "jdbc-sniffer should NEVER break existing code",
+    "createdAt" : "2015-07-01T17:10:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Servlet Filter recording the number of SQL queries",
+    "createdAt" : "2015-07-26T11:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "[filter] View executed queries",
+    "createdAt" : "2015-08-01T10:50:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Support excludes in filter",
+    "createdAt" : "2015-08-02T16:29:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "[filter] View queries from AJAX requests",
+    "createdAt" : "2015-08-02T22:00:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "[filter] use version in all resources to avoid cache problems",
+    "createdAt" : "2015-08-02T22:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "[filter] transparent back in UI intercepts clicks",
+    "createdAt" : "2015-08-04T08:23:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "[filter] shows 2 queries in the icon, but the list is empty when I click on them",
+    "createdAt" : "2015-08-04T08:23:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "[filter] Track requests by current session (or other cookie) to track redirects e.t.c.",
+    "createdAt" : "2015-08-04T08:24:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 62,
+    "title" : "Implement  browser extension for better UI experience",
+    "createdAt" : "2015-08-04T08:26:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 63,
+    "title" : "copy sql-queries to clipboard",
+    "createdAt" : "2015-08-04T12:58:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Do not inject sniffer to XML documents",
+    "createdAt" : "2015-08-04T13:25:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "[filter] add ability to filter out requests",
+    "createdAt" : "2015-08-04T13:36:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Sniffer Filter requires Servlet 2.5+",
+    "createdAt" : "2015-08-04T20:42:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "JSON with queries contains unescaped data in strings",
+    "createdAt" : "2015-08-05T13:38:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "excludes-filter disabled the SnifferServlet as well",
+    "createdAt" : "2015-08-05T14:49:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Show stack trace for all executed queries",
+    "createdAt" : "2015-08-08T09:41:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Open sniffer UI in an iframe in order to avoid JS/CSS conflicts with parent page",
+    "createdAt" : "2015-08-08T10:53:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Show query parameters in Sniffer UI",
+    "createdAt" : "2015-08-09T13:20:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 80,
+    "title" : "crappy UX in IE10",
+    "createdAt" : "2015-08-29T08:52:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Capture time spent in getConnection() method",
+    "createdAt" : "2015-08-29T19:04:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "JdbcSniffer spoils the global js context",
+    "createdAt" : "2015-08-31T17:11:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "UI must be enableble using request parameter",
+    "createdAt" : "2015-10-16T08:59:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Track AJAX queries generated during page load",
+    "createdAt" : "2015-10-25T19:54:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "NPE in SnifferFilter",
+    "createdAt" : "2015-10-26T08:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "If Ajax query is done to another context, Sniffer won't load the exact queries",
+    "createdAt" : "2015-10-28T11:51:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Track all socket outbound connections - not only JDBC",
+    "createdAt" : "2015-10-28T16:40:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Capture queries from iframes even if they are not visible",
+    "createdAt" : "2015-10-28T20:19:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 92,
+    "title" : "Counter in sniffer UI is invisible",
+    "createdAt" : "2015-10-30T08:22:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Return server response time",
+    "createdAt" : "2015-11-17T20:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Make filter enableable using query parameter",
+    "createdAt" : "2015-11-17T20:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Load main sniffy UI in a separate cacheable request",
+    "createdAt" : "2015-11-17T20:55:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 98,
+    "title" : "Implement dark theme for sniffy",
+    "createdAt" : "2015-11-17T20:56:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "setHeader('Content-Length') is not supported",
+    "createdAt" : "2015-11-29T19:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Sniffy must be injected after meta tags",
+    "createdAt" : "2015-12-02T10:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Sniffy should parse HTML when injecting widget",
+    "createdAt" : "2015-12-05T15:59:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 104,
+    "title" : "Sniffy hides application exception and returns 200",
+    "createdAt" : "2015-12-16T20:53:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "sniffy maven pulls bower dependencies",
+    "createdAt" : "2016-01-23T11:05:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Support Servlet 3.0 spec",
+    "createdAt" : "2016-02-26T20:16:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 113,
+    "title" : "Sniffy doesn't support async requests",
+    "createdAt" : "2016-02-26T20:17:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Sniffy doesn't inject JS to XHTML documents",
+    "createdAt" : "2016-03-09T04:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Sniffy UI - Add UI effect on increasing the counter",
+    "createdAt" : "2016-03-13T08:26:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Sniffy - stack trace is missing line breaks",
+    "createdAt" : "2016-03-13T10:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Sniffy widget not rendered in IE10 Win7",
+    "createdAt" : "2016-03-17T14:03:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Sniffy UI: last row is sometimes hidden underneath the footer",
+    "createdAt" : "2016-03-20T07:52:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Spring Boot support",
+    "createdAt" : "2016-03-20T07:52:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Refused to get unsafe header \"X-Sql-Queries\"",
+    "createdAt" : "2016-03-21T12:59:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Print server log generated for current request",
+    "createdAt" : "2016-03-22T16:21:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 130,
+    "title" : "WrongNumberOfQueriesError doesn't contain information about query type",
+    "createdAt" : "2016-03-22T16:27:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Print sniffy version in UI widget footer",
+    "createdAt" : "2016-03-22T17:23:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Scroller isn't triggered if Ajax requests are made when widget is open",
+    "createdAt" : "2016-03-24T10:39:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Query counter is larger than number of queries shown in sniffy",
+    "createdAt" : "2016-03-31T09:03:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Sniffy should provide JS map for debugging",
+    "createdAt" : "2016-03-31T09:04:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Sniffy.io download link is incorrect",
+    "createdAt" : "2016-04-05T09:22:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Error in browser console",
+    "createdAt" : "2016-04-06T07:41:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Expose request elapsed server time in header",
+    "createdAt" : "2016-04-07T11:36:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Memory profiling",
+    "createdAt" : "2016-04-07T21:31:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 142,
+    "title" : "Disable sniffy from widget",
+    "createdAt" : "2016-04-23T10:29:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 143,
+    "title" : "Sniffy writes garbage to console.log",
+    "createdAt" : "2016-04-25T12:35:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Automatically add sniffy to Spring Boot datasources",
+    "createdAt" : "2016-04-26T21:21:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Inconsisten HTTP method case in sniffy",
+    "createdAt" : "2016-04-28T07:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Sniffy widget should be dragable or minimizeable",
+    "createdAt" : "2016-04-29T15:57:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Implement CPU profiling using thread trace sampler",
+    "createdAt" : "2016-05-03T17:07:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 148,
+    "title" : "Implement YSlow-like checks",
+    "createdAt" : "2016-05-03T21:28:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 149,
+    "title" : "Console error with Firefox",
+    "createdAt" : "2016-05-04T09:23:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Do not show socket operations made by JDBC",
+    "createdAt" : "2016-05-04T11:36:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Time spent in SQL query is shown in microseconds instead of milliseconds ",
+    "createdAt" : "2016-05-04T11:37:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Sniffy consumes a lot of memory under load",
+    "createdAt" : "2016-05-04T18:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Add sniffy version to sniffy requests",
+    "createdAt" : "2016-05-04T22:21:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 156,
+    "title" : "Intercept mail",
+    "createdAt" : "2016-05-05T10:06:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 159,
+    "title" : "Store RequestStats results on disk",
+    "createdAt" : "2016-05-05T22:50:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 161,
+    "title" : "Widget: indicate active Ajax requests",
+    "createdAt" : "2016-05-06T14:13:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 162,
+    "title" : "Show server to server HTTP requests",
+    "createdAt" : "2016-05-06T18:34:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 164,
+    "title" : "Report metrics to InfluxDB/Graphite + Grafana Dashboard",
+    "createdAt" : "2016-05-08T00:00:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 165,
+    "title" : "Network Issues simulation",
+    "createdAt" : "2016-05-08T19:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Add clear data button to the widget",
+    "createdAt" : "2016-05-09T19:03:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Socket sniffering should be disableable",
+    "createdAt" : "2016-05-09T21:21:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "NPE on PreparedStatement.executeUpdate()",
+    "createdAt" : "2016-05-10T10:18:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Compare interned strings by object refrence",
+    "createdAt" : "2016-05-10T13:40:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Time units are inconsistent",
+    "createdAt" : "2016-05-11T12:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "View stack trace link takes too much space on the screen",
+    "createdAt" : "2016-05-11T12:59:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 178,
+    "title" : "Capturing stack traces is too expensive",
+    "createdAt" : "2016-05-19T14:01:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 179,
+    "title" : "Spy creates a map even if no sql or sockets will be created",
+    "createdAt" : "2016-05-19T14:02:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 180,
+    "title" : "Thread local network firewall",
+    "createdAt" : "2016-05-19T21:40:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "To be deleted",
+    "createdAt" : "2016-05-21T08:48:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Incorrect SQL formatting (missing spaces)",
+    "createdAt" : "2016-05-31T20:58:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Sniffy breaks character encoding ",
+    "createdAt" : "2016-06-07T14:37:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Servlet 3.1 support",
+    "createdAt" : "2016-09-14T12:56:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "DataSource wrapper implementation",
+    "createdAt" : "2016-09-14T12:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Network calls aren't grouped under SniffyDataSource.getConnection",
+    "createdAt" : "2016-09-15T13:33:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Add ability to add latency to JDBC calls",
+    "createdAt" : "2016-09-16T08:27:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 191,
+    "title" : "X-Request-Details contains absolute URLs",
+    "createdAt" : "2016-09-16T12:56:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "NPE in Driver.connect() method",
+    "createdAt" : "2016-09-20T08:21:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Filter out too fast requests",
+    "createdAt" : "2016-09-20T08:57:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 196,
+    "title" : "Improve integration",
+    "createdAt" : "2016-09-20T08:58:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 197,
+    "title" : "show network time in the report",
+    "createdAt" : "2016-09-20T14:12:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 200,
+    "title" : "Stop using X- headers",
+    "createdAt" : "2016-09-28T17:37:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Fiddler plugin",
+    "createdAt" : "2016-09-30T15:57:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 202,
+    "title" : "Wrapper for OraclaDataSource",
+    "createdAt" : "2016-10-02T18:39:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 203,
+    "title" : "Capture errors from the database and show them in sniffy UI",
+    "createdAt" : "2016-10-12T16:57:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 204,
+    "title" : "NPE in Sniffy.Driver.connect method",
+    "createdAt" : "2016-10-24T09:24:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "NPE when servlet context is not available and init() method is not called",
+    "createdAt" : "2016-10-24T09:26:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Sniffy doesn't work behind a reverse proxy changing the context",
+    "createdAt" : "2016-10-24T10:03:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Sniffy widget depends on app css",
+    "createdAt" : "2016-10-24T14:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Make Sniffy 100% disableable",
+    "createdAt" : "2016-10-24T23:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "JS Map does not work",
+    "createdAt" : "2016-10-24T23:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "java.lang.IndexOutOfBoundsException: Index: 0, Size: -1",
+    "createdAt" : "2016-10-25T13:45:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Add font-family to sniffy widget CSS",
+    "createdAt" : "2016-10-26T10:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Wrap BLOBs with Sniffy",
+    "createdAt" : "2016-10-26T10:09:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 218,
+    "title" : "Ability to disable connectivity on datasource level, not only host/port",
+    "createdAt" : "2016-10-26T16:36:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Ability to simulate timeouts",
+    "createdAt" : "2016-10-26T16:37:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Persist fault tolerance testing for application restart",
+    "createdAt" : "2016-10-26T22:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Sniffy release procedure makes two staging repositories in nexus",
+    "createdAt" : "2016-10-26T23:16:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 223,
+    "title" : "Gather network statistics on per-host basis",
+    "createdAt" : "2016-10-27T18:33:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 224,
+    "title" : "Disable network connectivity in unit tests",
+    "createdAt" : "2016-10-29T19:48:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Close sniffy UI on ESC",
+    "createdAt" : "2016-10-30T13:44:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 228,
+    "title" : "Sniffy doesn't work for some URL's",
+    "createdAt" : "2016-11-17T07:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Sniffy tries to profile requests to other domains",
+    "createdAt" : "2016-11-21T13:53:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Sniffy doesn't handle redirects in XHR correctly",
+    "createdAt" : "2016-11-21T18:21:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 236,
+    "title" : "Sniffy doesn't inject content correctly if flush() is called in the application explicitly",
+    "createdAt" : "2016-12-13T14:31:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 237,
+    "title" : "Spockframework integration",
+    "createdAt" : "2016-12-18T09:49:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 238,
+    "title" : "JUnit5 integration",
+    "createdAt" : "2016-12-18T09:49:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 239,
+    "title" : "Sniffy UI: method should be always in upper case; add response code",
+    "createdAt" : "2016-12-22T12:34:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Spring XML namespace handler",
+    "createdAt" : "2017-01-08T08:37:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 242,
+    "title" : "Simulate network failures in unit tests",
+    "createdAt" : "2017-01-15T16:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "High contention in Sniffy.hasSpies method",
+    "createdAt" : "2017-01-18T15:43:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Use SocketImpl.setSocket / setServerSocket for server socket detection",
+    "createdAt" : "2017-01-18T16:15:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Cannot disable/enable datasource with slash in connection URL",
+    "createdAt" : "2017-02-01T09:49:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Sniffy relative URLs are incorrect if web site is accessed without trailing slash",
+    "createdAt" : "2017-02-01T22:04:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Sniffy release binaries are not released automatically to maven central",
+    "createdAt" : "2017-02-01T22:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "NPE in ConnectionsRegistry",
+    "createdAt" : "2017-02-03T16:02:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Make Sniffy disableable using HTTP header or user-agen",
+    "createdAt" : "2017-02-03T16:03:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "stop capturing multiple stack traces for network operations",
+    "createdAt" : "2017-02-08T17:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Support JUnit @Test(expected = ...) attribute",
+    "createdAt" : "2017-02-08T21:38:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 255,
+    "title" : "Distributed monitoring",
+    "createdAt" : "2017-02-11T07:17:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 260,
+    "title" : "Error pages are missing Sniffy",
+    "createdAt" : "2017-02-12T16:34:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Expose fault-tolerance-current-request in @EnableSniffy",
+    "createdAt" : "2017-02-12T16:41:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 264,
+    "title" : "ClassNotFoundException when using @EnableSniffy with params and without adapter",
+    "createdAt" : "2017-02-15T12:18:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Sniffy XHR wrapper is not compatible with zone.js",
+    "createdAt" : "2017-02-16T11:02:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Sniffy uber jar doesn't come with sources in maven central",
+    "createdAt" : "2017-02-16T12:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Track sent email",
+    "createdAt" : "2017-02-17T09:49:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 270,
+    "title" : "Wrap window.fetch API",
+    "createdAt" : "2017-02-17T12:12:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 272,
+    "title" : "Sniffy widget is not rendered when AUT is behind a reverse proxy which changes paths",
+    "createdAt" : "2017-02-28T12:34:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Group JDBC operations by SQL query",
+    "createdAt" : "2017-02-28T17:22:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 274,
+    "title" : "spring mvc test integration",
+    "createdAt" : "2017-02-28T18:00:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 275,
+    "title" : "Sniffy filter is called twice in case of request forwarding",
+    "createdAt" : "2017-03-12T06:28:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Sniffy can shown wrong information on cached pages",
+    "createdAt" : "2017-03-12T08:46:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 280,
+    "title" : "Show exceptions raised on server side",
+    "createdAt" : "2017-03-12T10:05:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Explain database queries",
+    "createdAt" : "2017-03-12T22:24:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 285,
+    "title" : "Support custom rules in reverse proxies",
+    "createdAt" : "2017-03-13T22:47:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 286,
+    "title" : "IE11 - scrollbar overlaps sniffy",
+    "createdAt" : "2017-03-13T23:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Show exceptions handled by Spring @ExceptionHandler controllers",
+    "createdAt" : "2017-03-14T10:07:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 288,
+    "title" : "Provide a version of SniffyFilter which is disabled by default",
+    "createdAt" : "2017-03-14T14:02:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Parse Content-Type from setHeader/addHeader methods",
+    "createdAt" : "2017-03-17T15:22:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Produce JBoss module / update documentation",
+    "createdAt" : "2017-03-17T15:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Calculate Top slowest queries across all requests",
+    "createdAt" : "2017-03-17T17:26:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Sniffy call getParameter() and cleans the request inputStream/reader",
+    "createdAt" : "2017-03-18T17:57:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Sniffy doesn't work with Angular1 ng-include directive",
+    "createdAt" : "2017-03-18T18:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Sniffy shows response time with leading zeroes",
+    "createdAt" : "2017-03-19T11:05:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Backslashes are not escaped in connection registry",
+    "createdAt" : "2017-03-19T11:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "excludePattern should manage injectHtml instead of enabled",
+    "createdAt" : "2017-03-19T12:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Top SQL queries tab - add sorting and clear button",
+    "createdAt" : "2017-03-19T14:03:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Sniffy UI improvements",
+    "createdAt" : "2017-03-19T15:13:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 308,
+    "title" : "Exception is not tracked if it is thrown before committing the response",
+    "createdAt" : "2017-03-19T15:13:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 309,
+    "title" : "@EnableSniffy does not support \"system\" value",
+    "createdAt" : "2017-03-19T15:14:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 310,
+    "title" : "webjar isn't added to shaded sources jar",
+    "createdAt" : "2017-03-19T15:15:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "@SniffyAdvancedConfiguration(topSqlCapacity = \"...\") doesn't work",
+    "createdAt" : "2017-03-19T23:09:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "SnifferSoketImplFactory can be installed multiple times if called from different classloaders",
+    "createdAt" : "2017-03-20T16:06:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 315,
+    "title" : "Add \"on-demand\" configuration value",
+    "createdAt" : "2017-03-21T08:37:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 316,
+    "title" : "Support multiple-classloaders",
+    "createdAt" : "2017-03-21T08:40:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 317,
+    "title" : "SnifferSocket check for allowed connection is not efficient",
+    "createdAt" : "2017-03-21T08:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Don't inject Sniffy UI if response is not HTML despite content-type header",
+    "createdAt" : "2017-03-22T13:19:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 319,
+    "title" : "Sniffy is injected incorrectly to pages with query parametes",
+    "createdAt" : "2017-03-22T15:08:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 321,
+    "title" : "Sniffy doesn't work with base tag",
+    "createdAt" : "2017-03-25T15:47:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "Sniffy Chrome Extension breaks certain Angular1 apps",
+    "createdAt" : "2017-03-25T19:55:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "Support fault-tolerance testing for non-servlet applications",
+    "createdAt" : "2017-03-26T12:10:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Firefox widget position shifted",
+    "createdAt" : "2017-03-26T12:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Calculate top N HTTP requests",
+    "createdAt" : "2017-03-29T14:25:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 331,
+    "title" : "StackOverflowError when executing queries with large IN() clause",
+    "createdAt" : "2017-04-06T19:20:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Monitor UDP connections",
+    "createdAt" : "2017-05-26T14:36:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 334,
+    "title" : "Request header field Sniffy-Inject-Html-Enabled is not allowed by Access-Control-Allow-Headers in preflight response.",
+    "createdAt" : "2017-07-14T09:06:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "SQL query counter doesn't support repeated queryes",
+    "createdAt" : "2017-08-05T09:30:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 337,
+    "title" : "executeBatch might return negative number of affected rows",
+    "createdAt" : "2017-09-28T11:13:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "UI glitch: No new line characters in long SQL queries",
+    "createdAt" : "2017-10-02T17:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Add latency when user switched from reading to writing and vice-verca",
+    "createdAt" : "2017-10-02T17:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Disable keep settings on restart doesn't work correctly",
+    "createdAt" : "2017-10-25T16:25:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 344,
+    "title" : "@SingleConnection helper annotation for testing database with Hystrix ",
+    "createdAt" : "2017-10-30T17:42:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "SQL/TCP expectations with Thread name regexp",
+    "createdAt" : "2017-11-01T15:43:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 346,
+    "title" : "Support NIO & NIO2",
+    "createdAt" : "2017-11-05T09:32:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Support testing fault tolerance in micro-services deployment",
+    "createdAt" : "2017-11-05T09:32:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 348,
+    "title" : "Support target JDBC schemas in SniffyDriver",
+    "createdAt" : "2017-11-10T18:46:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 349,
+    "title" : "Change SniffyDriver prefix",
+    "createdAt" : "2017-11-12T08:38:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 353,
+    "title" : "Sniffy chrome extension - support by site state",
+    "createdAt" : "2017-12-04T08:00:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 354,
+    "title" : "Widget: update on AJAX response",
+    "createdAt" : "2018-04-24T16:28:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 355,
+    "title" : "Idea: track number of active (open) sockets/file descriptors",
+    "createdAt" : "2018-05-25T13:01:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 356,
+    "title" : "Sniffy Test: add ignore construct",
+    "createdAt" : "2018-09-02T15:16:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 357,
+    "title" : "Sniffy extension doesn't work for CORS requests",
+    "createdAt" : "2019-01-30T09:56:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "honor socket timeout properties when simulating network outages",
+    "createdAt" : "2019-02-21T11:35:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 359,
+    "title" : "Simulate network outages in kubernetes environments",
+    "createdAt" : "2019-03-18T14:31:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 361,
+    "title" : "Poll - how do you use Sniffy?",
+    "createdAt" : "2019-07-27T11:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "SniffySocketImpl doesn't work on Java 13",
+    "createdAt" : "2020-05-04T17:03:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Sniffy provide Java API for managing connectivity in remote app via REST",
+    "createdAt" : "2020-10-09T08:16:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 372,
+    "title" : "Sniffy sometimes reports one byte less than was actually sent or recevied",
+    "createdAt" : "2020-10-11T08:10:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Implement logging framework in Sniffy",
+    "createdAt" : "2020-11-09T21:01:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Intercept server sockets and server socket channels",
+    "createdAt" : "2020-11-09T21:28:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 378,
+    "title" : "Execute NIO test in compatibility mode on Java 8",
+    "createdAt" : "2020-11-09T22:44:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Support SctpChannel",
+    "createdAt" : "2020-11-09T22:46:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 380,
+    "title" : "Support ANIO",
+    "createdAt" : "2020-11-09T23:44:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 381,
+    "title" : "Make Sniffy a first-class citizen chaos engineering tool",
+    "createdAt" : "2020-11-10T00:05:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 382,
+    "title" : "Support NIO on Java 6 and 7 properly",
+    "createdAt" : "2020-11-10T00:10:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 383,
+    "title" : "Check new SocketImpl and SocketChannel methods added in newer versions of JAva",
+    "createdAt" : "2020-11-10T00:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Support Kotest framework",
+    "createdAt" : "2020-11-10T01:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "Implement modules in order to allow extending sniffy",
+    "createdAt" : "2020-11-10T07:44:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 386,
+    "title" : "NIO filtering is enabled in Spring despite default \"false\" setting",
+    "createdAt" : "2020-11-10T12:15:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 387,
+    "title" : "Deadlock with Sniffy NIO",
+    "createdAt" : "2020-11-10T13:23:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "No request method and response code shown for main non-AJAX request",
+    "createdAt" : "2020-11-10T19:07:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Optimize IO/NIO - overhead should be minimal",
+    "createdAt" : "2020-11-10T19:56:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Publish of releae artifacts to GitHub packages fails on sniffy-kotest",
+    "createdAt" : "2020-11-11T07:39:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 393,
+    "title" : "Cannot disable datasource via REST cause parameter contains encoded slash",
+    "createdAt" : "2020-11-11T21:36:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Setup retry in maven CI to fix flickering builds in GitHub CI",
+    "createdAt" : "2020-11-19T10:15:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 399,
+    "title" : "Host names discovered by Sniffy are case sensitive",
+    "createdAt" : "2020-12-07T21:59:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 400,
+    "title" : "Store captured traffic; add configuration to enable/disable traffic capturing",
+    "createdAt" : "2021-01-22T17:14:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "Capture traffic sent via plain Java network stack",
+    "createdAt" : "2021-01-22T17:16:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Capture traffic sent via Java NIO network stack",
+    "createdAt" : "2021-01-22T17:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "Deploy of sniffy-kotest to GitHub packages fails",
+    "createdAt" : "2021-01-25T07:52:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Deploy of sniffy-documentation to MAven central fails intermittently",
+    "createdAt" : "2021-01-25T09:03:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Setup Sniffy Driver automatically",
+    "createdAt" : "2021-01-27T14:18:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "Support skip and mark methods properly during traffic capture",
+    "createdAt" : "2021-02-02T00:47:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Monitor zero-copy operations using transferTo and similar calls",
+    "createdAt" : "2021-02-08T22:51:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "Sniffy captures incorrect traffic in conversation-based protocols",
+    "createdAt" : "2021-02-09T18:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Socket.sendUrgentData should be intercepted by Sniffy when Socket created from Channel",
+    "createdAt" : "2021-02-09T21:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Discover and disable connections made via HTTP Proxies",
+    "createdAt" : "2021-02-12T09:23:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Race condition in traffic capture - if packets are sent within same millisecond they are incorrectly merged",
+    "createdAt" : "2021-02-12T19:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Decrypt TLS traffic sent via SSLSocketFactory",
+    "createdAt" : "2021-03-09T23:07:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Verify stack traces in NIO, NIO2, SSL, etc and cover with test automation",
+    "createdAt" : "2021-03-10T01:03:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 432,
+    "title" : "converge Spy.getNetworkTraffic and Spy.getDecryptedNetworkTraffic",
+    "createdAt" : "2021-03-10T01:03:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Make a global sequence/generator for connection ids",
+    "createdAt" : "2021-03-10T01:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "Cover all methods in SSLSocketAdapter with tests",
+    "createdAt" : "2021-03-10T01:04:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 435,
+    "title" : "Enabled in-place SSL Provider updates and add tests with BouncyCastle (and others potentially)",
+    "createdAt" : "2021-03-10T01:05:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "Implement SniffySSLEngine and match encrypted payloads with what is put on the wire later",
+    "createdAt" : "2021-03-10T01:06:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "Evaluate SSL provider parameters and aliases",
+    "createdAt" : "2021-03-10T01:07:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Support SSLSocket.sendUrgentData and other methods",
+    "createdAt" : "2021-03-10T01:07:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "Support custom SSLSocketFactory (theFactory)",
+    "createdAt" : "2021-03-10T01:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "Speedup build ",
+    "createdAt" : "2021-03-10T01:13:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 444,
+    "title" : "Sniffy should never break main functionality",
+    "createdAt" : "2021-03-29T09:54:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 446,
+    "title" : "Wrap JSSE providers with Sniffy even if they were added after Sniffy initialization",
+    "createdAt" : "2021-03-31T21:11:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Test on IBM J9",
+    "createdAt" : "2021-03-31T22:27:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "Test on various architectures using QEMU",
+    "createdAt" : "2021-04-07T23:36:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Sniffy break sendBufferSize / receiveBufferSize properties at least in SSLSocket implementation",
+    "createdAt" : "2021-04-13T17:28:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "Optimize Sniffy.getEffectiveSpyConfiguration()",
+    "createdAt" : "2021-04-20T18:27:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 461,
+    "title" : "TCP Window in network delay simulations should scale",
+    "createdAt" : "2021-04-20T18:29:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 462,
+    "title" : "Refactor SniffyNetworkConnection and TrafficCapturingNetworkConnection",
+    "createdAt" : "2021-04-20T18:55:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 463,
+    "title" : "Support SocketOption on Java 7+ everywhere",
+    "createdAt" : "2021-04-20T18:56:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 465,
+    "title" : "Implement Server Timing API",
+    "createdAt" : "2021-04-22T20:51:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "Document pitfalls like Sniffy being initialized after obtaining SocketFactory etc",
+    "createdAt" : "2021-04-27T18:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Initialize Sniffy using ServiceLoader and say interface sun.util.locale.provider.LocaleDataMetaInfo",
+    "createdAt" : "2021-04-27T18:41:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "Support TLS renegotiation / additional handshakes",
+    "createdAt" : "2021-04-27T20:43:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 471,
+    "title" : "Support frameworks like webflux, quarkus, micronaut and vert.x",
+    "createdAt" : "2021-04-28T10:29:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 474,
+    "title" : "Add SCM revision to sniffy manifest and log it on startup ",
+    "createdAt" : "2021-05-08T10:16:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "Log with trace level when SSLEngine was invoked after hadnshake for wrap or unwrap for unknown connection",
+    "createdAt" : "2021-05-08T10:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "Newly installed security providers aren't wrapped by Sniffy without explicit reinitialize",
+    "createdAt" : "2021-05-11T18:06:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 483,
+    "title" : "Implicit narrowing conversion in compound assignment",
+    "createdAt" : "2021-05-12T21:09:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 485,
+    "title" : "Support GraalVM",
+    "createdAt" : "2021-05-18T22:15:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 488,
+    "title" : "Export captured HTTP traffic in har format",
+    "createdAt" : "2021-05-19T14:26:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 489,
+    "title" : "Intercept DNS queries",
+    "createdAt" : "2021-05-19T15:11:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 490,
+    "title" : "If @DisableSockets is applied to the whole test class it should be effective before context initialization",
+    "createdAt" : "2021-05-20T07:02:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 491,
+    "title" : "Allow to ignore localhost in @DisableSockets",
+    "createdAt" : "2021-05-20T07:02:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 497,
+    "title" : "Customize folder for storing sniffy local cache",
+    "createdAt" : "2021-07-12T09:17:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 498,
+    "title" : "java.lang.IllegalArgumentException: null  from SniffySocketChannelAdapter.write(SniffySocketChannelAdapter.java:119)",
+    "createdAt" : "2021-10-06T13:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "How to access sniffy ui when deployed on wildfly following steps mentioned on confluence under \"Use Sniffy with WildFly\"",
+    "createdAt" : "2021-10-11T06:57:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 500,
+    "title" : "load sniffy dynamically",
+    "createdAt" : "2021-12-27T16:17:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 501,
+    "title" : "Possible bug?",
+    "createdAt" : "2021-12-28T18:17:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "Flaky builds",
+    "createdAt" : "2022-01-28T21:46:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "Traffic captured with Sniffy is incorrectly splitted into packets",
+    "createdAt" : "2022-06-06T13:10:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Do not test against google.com in CI/CD",
+    "createdAt" : "2022-06-11T20:37:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 536,
+    "title" : "sniffy traffic capture breaks xnio",
+    "createdAt" : "2022-06-17T11:45:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "ConcurrentModificationException while getting captured network traffic",
+    "createdAt" : "2022-06-18T14:29:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 539,
+    "title" : "CancelledKeyException with XNIO traffic capture",
+    "createdAt" : "2022-06-20T07:44:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "ClassNotFoundException when building stack trace",
+    "createdAt" : "2022-06-21T16:20:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Allow connection registry manipulation without PATH parameters",
+    "createdAt" : "2022-10-05T16:35:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 545,
+    "title" : "intermittent ArrayIndexOutOfBoundsException in DecryptLocalhostHttpsTrafficXNIOTest",
+    "createdAt" : "2022-10-30T12:31:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "flickering tests on JDK 10 Ubuntu 22.04",
+    "createdAt" : "2022-10-30T12:32:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 559,
+    "title" : "Show headers as seen by server",
+    "createdAt" : "2023-02-01T13:04:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 565,
+    "title" : "support spring boot 3.x",
+    "createdAt" : "2023-06-22T08:55:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 566,
+    "title" : "Support jakarta servlet API",
+    "createdAt" : "2025-09-05T15:12:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 568,
+    "title" : "✨ Set up Copilot instructions",
+    "createdAt" : "2025-09-05T15:29:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "update github actions and runners",
+    "createdAt" : "2025-09-05T15:49:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 581,
+    "title" : "Fix deploy github actions workflow",
+    "createdAt" : "2025-09-06T08:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "Drop support of Java 6 and Java 7",
+    "createdAt" : "2025-09-06T10:43:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "fix gpg signature",
+    "createdAt" : "2025-09-06T11:58:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 591,
+    "title" : "bump version to 3.2.0-SNAPSHOT",
+    "createdAt" : "2025-09-06T12:03:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 593,
+    "title" : "3.2.0 release preparation",
+    "createdAt" : "2025-09-06T14:41:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "migrate to new maven central repository",
+    "createdAt" : "2025-09-06T15:58:38Z",
+    "state" : "OPEN"
+  } ]
+}

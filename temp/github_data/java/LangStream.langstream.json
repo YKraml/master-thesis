@@ -1,0 +1,944 @@
+{
+  "repoOwner" : "LangStream",
+  "repoName" : "langstream",
+  "forks" : [ {
+    "createdAt" : "2023-08-18T12:40:03Z"
+  }, {
+    "createdAt" : "2023-08-23T20:43:13Z"
+  }, {
+    "createdAt" : "2023-08-28T09:30:57Z"
+  }, {
+    "createdAt" : "2023-09-14T15:57:14Z"
+  }, {
+    "createdAt" : "2023-09-28T08:23:31Z"
+  }, {
+    "createdAt" : "2023-09-28T09:30:30Z"
+  }, {
+    "createdAt" : "2023-10-03T15:21:29Z"
+  }, {
+    "createdAt" : "2023-10-04T21:42:29Z"
+  }, {
+    "createdAt" : "2023-10-04T22:43:46Z"
+  }, {
+    "createdAt" : "2023-10-05T05:59:29Z"
+  }, {
+    "createdAt" : "2023-10-07T21:00:01Z"
+  }, {
+    "createdAt" : "2023-10-10T19:01:11Z"
+  }, {
+    "createdAt" : "2023-10-19T13:06:25Z"
+  }, {
+    "createdAt" : "2023-10-26T13:28:56Z"
+  }, {
+    "createdAt" : "2023-10-26T14:29:47Z"
+  }, {
+    "createdAt" : "2023-11-07T19:52:10Z"
+  }, {
+    "createdAt" : "2023-11-17T05:12:01Z"
+  }, {
+    "createdAt" : "2023-11-21T02:59:57Z"
+  }, {
+    "createdAt" : "2023-11-24T10:27:15Z"
+  }, {
+    "createdAt" : "2023-11-28T19:27:21Z"
+  }, {
+    "createdAt" : "2023-12-04T19:37:55Z"
+  }, {
+    "createdAt" : "2023-12-11T10:54:16Z"
+  }, {
+    "createdAt" : "2024-01-10T20:08:09Z"
+  }, {
+    "createdAt" : "2024-02-13T05:57:54Z"
+  }, {
+    "createdAt" : "2024-03-12T22:32:24Z"
+  }, {
+    "createdAt" : "2024-05-08T13:02:02Z"
+  }, {
+    "createdAt" : "2024-05-13T17:18:25Z"
+  }, {
+    "createdAt" : "2024-06-27T11:17:34Z"
+  }, {
+    "createdAt" : "2024-11-15T19:28:36Z"
+  }, {
+    "createdAt" : "2024-11-19T11:57:49Z"
+  }, {
+    "createdAt" : "2025-01-23T06:19:28Z"
+  }, {
+    "createdAt" : "2025-02-05T23:29:35Z"
+  }, {
+    "createdAt" : "2025-03-20T13:20:21Z"
+  }, {
+    "createdAt" : "2025-09-11T01:26:37Z"
+  } ],
+  "issues" : [ {
+    "number" : 47,
+    "title" : "[cli] App lists should not show an empty \"secret\"",
+    "createdAt" : "2023-07-14T09:05:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Operator: cannot delete an app that has problems during deployment",
+    "createdAt" : "2023-07-14T09:08:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Create a default tenant",
+    "createdAt" : "2023-07-14T13:02:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Ensure application deletion cleans up all the app/agents k8s resource",
+    "createdAt" : "2023-07-14T15:18:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Handle headers/properties in GenAIToolKitAgent",
+    "createdAt" : "2023-07-14T17:33:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 64,
+    "title" : "Agent runtime: implement liveness and readiness probes",
+    "createdAt" : "2023-07-18T13:41:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Deployer runtime: implement liveness and readiness probes",
+    "createdAt" : "2023-07-18T13:41:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 70,
+    "title" : "CodeStorage: handle credentials with secrets",
+    "createdAt" : "2023-07-19T13:15:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Add a way to send the logs of the agents to a Topic",
+    "createdAt" : "2023-07-19T15:15:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 79,
+    "title" : "Kafka Connect provides some Netty libraries, not imported into the Cassandra Sink",
+    "createdAt" : "2023-07-20T11:08:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Support application versioning and rollbacks",
+    "createdAt" : "2023-07-21T09:12:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 92,
+    "title" : "How to Extract Text Page by Page with PDFBox",
+    "createdAt" : "2023-07-21T17:21:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 94,
+    "title" : "Ensure secrets are not resolved inside the Agent custom resource",
+    "createdAt" : "2023-07-21T21:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Improve deployer jobs timing",
+    "createdAt" : "2023-07-21T21:44:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Add LangChain and OpenAI client in the runtime image",
+    "createdAt" : "2023-07-21T22:00:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Improve code download security",
+    "createdAt" : "2023-07-21T23:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Split application zip into three: application, instance and secrets",
+    "createdAt" : "2023-07-24T14:44:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "CLI usability improvements",
+    "createdAt" : "2023-07-24T22:50:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Application upsert/apply",
+    "createdAt" : "2023-07-24T22:52:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 114,
+    "title" : "S3 code storage: keys authentication",
+    "createdAt" : "2023-07-25T09:30:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Do not store secrets in the code storage application",
+    "createdAt" : "2023-07-25T09:30:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Add endpoint to download code of an application",
+    "createdAt" : "2023-07-25T09:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Rate limit S3 Source",
+    "createdAt" : "2023-07-25T14:06:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Require to reference an AI Service Provider configuration",
+    "createdAt" : "2023-07-25T19:13:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 134,
+    "title" : "Add \"apps init\" option to CLI, to stub out a development environment",
+    "createdAt" : "2023-07-26T18:26:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 136,
+    "title" : "How to Use Lucene Analyzers",
+    "createdAt" : "2023-07-26T22:51:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 139,
+    "title" : "Use fix versions for NLTK packages",
+    "createdAt" : "2023-07-27T08:54:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 142,
+    "title" : "Control plane and Api gateway take up to 1 minute to startup",
+    "createdAt" : "2023-07-27T10:45:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Query agent: allow to return the first row instead of a list of rows",
+    "createdAt" : "2023-08-01T12:08:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Declare an application using a Python DSL",
+    "createdAt" : "2023-08-01T12:10:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 160,
+    "title" : "Query agent: allow to echo results",
+    "createdAt" : "2023-08-01T12:19:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Simplify cluster setup by only specifying the sga-runtime image once",
+    "createdAt" : "2023-08-05T19:16:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Applications have a name length limitation due to pod names are at most 63 characters",
+    "createdAt" : "2023-08-07T18:42:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Better order the sga helm chart to deploy the pods in the best order",
+    "createdAt" : "2023-08-07T18:47:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Application misconfiguration causes deployer to have errors and retry pods and possibly fail completely.",
+    "createdAt" : "2023-08-07T18:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Packaging of the app occurs before downloading dependencies",
+    "createdAt" : "2023-08-09T13:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Make secrets optional when updating application",
+    "createdAt" : "2023-08-09T17:59:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Skip download of dependency if already exists",
+    "createdAt" : "2023-08-09T19:56:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Use maven license plugin to verify files license",
+    "createdAt" : "2023-08-11T07:43:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "CLI: add --wait option to the deploy to wait the application to be fully deployed/failed",
+    "createdAt" : "2023-08-11T08:06:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 194,
+    "title" : "Split runtime images in Java and Python",
+    "createdAt" : "2023-08-11T13:26:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 207,
+    "title" : "Status of deployed app is always ERROR_DEPLOYING",
+    "createdAt" : "2023-08-16T07:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Check for bad text-splitter agent config",
+    "createdAt" : "2023-08-16T18:35:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 213,
+    "title" : "Better error when no app is found",
+    "createdAt" : "2023-08-16T19:18:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Add agent context to Python",
+    "createdAt" : "2023-08-18T10:18:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "CLI: Introduce profiles",
+    "createdAt" : "2023-08-21T11:54:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Control plane/CLI: get apps secrets",
+    "createdAt" : "2023-08-21T11:57:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 246,
+    "title" : "Step 2 of Deploy Your First Application needs Google Client-id",
+    "createdAt" : "2023-08-22T12:29:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Add an info endpoint on control plane",
+    "createdAt" : "2023-08-22T17:58:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 254,
+    "title" : "Webcrawler agent enhancements",
+    "createdAt" : "2023-08-23T13:00:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Give precisions on the auto-completion setup",
+    "createdAt" : "2023-08-23T14:16:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Add endpoint to restart application",
+    "createdAt" : "2023-08-23T15:37:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 261,
+    "title" : "Logs CLI command gets stuck",
+    "createdAt" : "2023-08-23T22:54:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Log filtering doesn't seem to work",
+    "createdAt" : "2023-08-24T14:09:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Control plane should stop creating app in tenant which is being deleted",
+    "createdAt" : "2023-08-24T15:27:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Runtime code download: enable retries",
+    "createdAt" : "2023-08-25T14:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Propose moving the examples folder to a new repo",
+    "createdAt" : "2023-08-27T13:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 281,
+    "title" : "[cli] Error while updating an application without passing \"-i\"",
+    "createdAt" : "2023-08-28T09:24:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Cli: allow to deploy applications from a remote source (via http or git protocol)",
+    "createdAt" : "2023-08-29T07:41:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "Proposal to split agents from langstream source",
+    "createdAt" : "2023-08-29T21:33:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 304,
+    "title" : "Proposal for tenant resources guardrails",
+    "createdAt" : "2023-08-30T09:34:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "Web crawler enhancements",
+    "createdAt" : "2023-08-30T17:44:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 310,
+    "title" : "Cannot use templating for topic names",
+    "createdAt" : "2023-08-30T20:30:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Text normalizer should remove line breaks",
+    "createdAt" : "2023-08-30T21:26:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 313,
+    "title" : "Enforce agent resource limits",
+    "createdAt" : "2023-08-31T09:55:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "[BUG] document-to-json agent copy-properties option not copying correct value",
+    "createdAt" : "2023-08-31T13:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "[agents] Chat Completion: implement Streaming responses for Vertex AI",
+    "createdAt" : "2023-09-01T12:25:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 325,
+    "title" : "CLI should return a version",
+    "createdAt" : "2023-09-01T13:49:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Switch to the OpenAI Async client",
+    "createdAt" : "2023-09-05T10:24:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Configure Python log format to be coherent with Java",
+    "createdAt" : "2023-09-05T10:48:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Gateway consumer websocket implement ping handler",
+    "createdAt" : "2023-09-05T13:58:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 352,
+    "title" : "Introduce events system backed by streaming topics",
+    "createdAt" : "2023-09-05T14:02:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "[feature] Add a way to configure init jobs to setup tables on Vector Databases and other resources (implements Assets)",
+    "createdAt" : "2023-09-05T14:31:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Topics/assets: creation/deletion should run in a dedicated job",
+    "createdAt" : "2023-09-06T11:59:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "Support AVRO in Python Kafka connector",
+    "createdAt" : "2023-09-06T16:00:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "Support shema.type: json",
+    "createdAt" : "2023-09-07T09:20:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 402,
+    "title" : "langstream deployment issues on Azure AKS",
+    "createdAt" : "2023-09-13T10:44:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Error while testing OpenAI-completions application?",
+    "createdAt" : "2023-09-14T07:39:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Delete code from code storage when the application is deleted ",
+    "createdAt" : "2023-09-15T05:27:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 423,
+    "title" : "Add support for ChromaDB vector store",
+    "createdAt" : "2023-09-15T18:23:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 425,
+    "title" : "Assets don't support mustache templating",
+    "createdAt" : "2023-09-15T19:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Downloading files from GH with docker run doesn't work on Linux",
+    "createdAt" : "2023-09-15T22:00:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 427,
+    "title" : "CLI: gateway consume `-n` option should handle stream messages",
+    "createdAt" : "2023-09-18T07:38:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 428,
+    "title" : "Agent ai-chat-completions: option `stream` is unused",
+    "createdAt" : "2023-09-18T07:42:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Should plugably support external sources",
+    "createdAt" : "2023-09-18T08:29:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 431,
+    "title" : "Table creation should be compatible with CassIO tables",
+    "createdAt" : "2023-09-18T09:36:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 432,
+    "title" : "Prompt templates should be pluggable",
+    "createdAt" : "2023-09-18T09:42:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 439,
+    "title" : "Parse exceptions when using Azure OpenAI only",
+    "createdAt" : "2023-09-18T20:44:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Add support for the OpenAI completion API",
+    "createdAt" : "2023-09-19T12:44:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Add re-ranking agent",
+    "createdAt" : "2023-09-19T17:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Add agent for calling external APIs",
+    "createdAt" : "2023-09-19T18:41:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "[cli] langstream apps logs enters a loop when a pod is in error state",
+    "createdAt" : "2023-09-20T10:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "Add agent that can write to one of many possible topics",
+    "createdAt" : "2023-09-20T10:28:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "Error when outputting map to streaming topic ",
+    "createdAt" : "2023-09-22T15:33:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Enhanced LangChain and Llamaindex examples",
+    "createdAt" : "2023-09-25T14:19:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 487,
+    "title" : "Flaky test on CI",
+    "createdAt" : "2023-09-26T15:49:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 494,
+    "title" : "URL for openai-text-completions needs /tree ",
+    "createdAt" : "2023-09-27T14:40:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "Add an easy way to use LangChain components wiithout writing Python code",
+    "createdAt" : "2023-09-28T07:13:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 500,
+    "title" : "Generate agents config documentation automatically",
+    "createdAt" : "2023-09-28T08:49:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 510,
+    "title" : "Refactor config properties to kebab case",
+    "createdAt" : "2023-10-02T13:07:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 512,
+    "title" : "Full support for Pulsar in LangStream",
+    "createdAt" : "2023-10-02T14:28:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 514,
+    "title" : "support selection of similarity metrics for diversity and relevancy in MMR",
+    "createdAt" : "2023-10-02T15:44:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 516,
+    "title" : "Forbidden paths gives null pointer exception when processing a URL with no path",
+    "createdAt" : "2023-10-02T17:25:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Compose Python agents in the Python runtime",
+    "createdAt" : "2023-10-03T18:55:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 523,
+    "title" : "CLI Command to generate a mermaid chart from the application definition",
+    "createdAt" : "2023-10-03T20:57:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "Add support for AWS Bedrock",
+    "createdAt" : "2023-10-03T21:20:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Create Windows distribution for the CLI",
+    "createdAt" : "2023-10-04T09:27:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Command gateway chat history",
+    "createdAt" : "2023-10-04T11:49:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 532,
+    "title" : "Cli: add command to resolve placeholders locally ",
+    "createdAt" : "2023-10-05T06:28:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Generate CLI commands documentation automatically",
+    "createdAt" : "2023-10-05T07:41:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 535,
+    "title" : "Generate services configuration documentation automatically",
+    "createdAt" : "2023-10-05T07:42:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 538,
+    "title" : "Build an example about the FLARE pattern",
+    "createdAt" : "2023-10-05T10:21:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "WebCrawler: handle-cookies is not used",
+    "createdAt" : "2023-10-05T13:35:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 541,
+    "title" : "Fix CVE in LangChain",
+    "createdAt" : "2023-10-05T14:15:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Default helm install uses a broken code storage",
+    "createdAt" : "2023-10-05T16:07:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 544,
+    "title" : "Introduce logging level for pipelines",
+    "createdAt" : "2023-10-06T07:34:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 545,
+    "title" : "Run simple gateway UI from CLI",
+    "createdAt" : "2023-10-06T07:52:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "Configure default infrastructure and secrets file for a CLI profile",
+    "createdAt" : "2023-10-06T17:51:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 549,
+    "title" : "Drop transform throws NumberFormatException",
+    "createdAt" : "2023-10-06T20:10:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 554,
+    "title" : "Stateful agents: design proposal",
+    "createdAt" : "2023-10-09T13:44:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "Create an application for postgres sink",
+    "createdAt" : "2023-10-10T15:07:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Integrate with Apache Solr as vector database",
+    "createdAt" : "2023-10-11T11:06:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "VertexAI embeddings error: X instance(s) is allowed per prediction. Actual: y",
+    "createdAt" : "2023-10-12T07:55:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 571,
+    "title" : "OpenSearch datasource integration (vector)",
+    "createdAt" : "2023-10-12T10:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 572,
+    "title" : "CLI setup script failing due to cannot find zip file",
+    "createdAt" : "2023-10-12T12:43:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Vector DB Sink configuration is not documented and validated",
+    "createdAt" : "2023-10-12T22:00:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 578,
+    "title" : "Gateway: validate the topic exists in the application",
+    "createdAt" : "2023-10-13T09:58:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 579,
+    "title" : "Create CLI profile \"docker run\" when running langstream docker run",
+    "createdAt" : "2023-10-13T10:38:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 581,
+    "title" : "org.apache.avro.SchemaParseException: Illegal character in: query-result",
+    "createdAt" : "2023-10-13T11:00:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 582,
+    "title" : "Using syntax value.xx, key.xxx on a primitive schema has no effect",
+    "createdAt" : "2023-10-13T11:04:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "Quick start docker run doesn't work on 0.2.0",
+    "createdAt" : "2023-10-13T20:40:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "Error message can be improved for missing configuration resource",
+    "createdAt" : "2023-10-16T15:17:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 600,
+    "title" : "Query agent: add support for DML (Data Manipulation Language) statements",
+    "createdAt" : "2023-10-17T12:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 606,
+    "title" : "Need to handle AstraDB timeouts",
+    "createdAt" : "2023-10-17T18:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 610,
+    "title" : "[feature] Avro support for Pulsar",
+    "createdAt" : "2023-10-18T11:42:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 611,
+    "title" : "[feature] KeyValue support in Pulsar",
+    "createdAt" : "2023-10-18T11:42:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 612,
+    "title" : "Add an example application about how to properly deal with stale documents on the vector database",
+    "createdAt" : "2023-10-18T12:13:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 630,
+    "title" : "[gateway] Support HTTP request/reply interactions",
+    "createdAt" : "2023-10-20T08:33:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 635,
+    "title" : "[feature] Support Kafka Connect connectors with Pulsar",
+    "createdAt" : "2023-10-20T13:24:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 638,
+    "title" : "Apps in the ERROR_DEPLOYING state cannot be deleted and logs aren't avaliable",
+    "createdAt" : "2023-10-20T14:35:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "[docker] Add a way to run LangStream components in docker as a deamon",
+    "createdAt" : "2023-10-20T15:42:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 640,
+    "title" : "add a flag to the http-request agent to log the URL and the body of the request",
+    "createdAt" : "2023-10-20T20:19:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 641,
+    "title" : "CLI UI: option for using a well known port",
+    "createdAt" : "2023-10-23T07:56:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Custom python agents: add support for writing to a topic",
+    "createdAt" : "2023-10-25T15:42:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 650,
+    "title" : "Incorrect error message for authentication failure in Kafka",
+    "createdAt" : "2023-10-26T03:24:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 651,
+    "title" : "null safety for VectorDatabaseWriterProviderRegistry",
+    "createdAt" : "2023-10-26T05:50:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 664,
+    "title" : "Add support for LangServe",
+    "createdAt" : "2023-10-28T13:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 671,
+    "title" : "No AgentCodeProvider found for type python-function",
+    "createdAt" : "2023-10-31T01:12:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "Add support for serving web applications",
+    "createdAt" : "2023-10-31T06:13:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 678,
+    "title" : "Cannot crawl website with bad sitemap at all",
+    "createdAt" : "2023-11-01T21:13:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Issue with running simple python example on our remote dev environment on k8s (python directory seems empty)",
+    "createdAt" : "2023-11-06T21:02:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 697,
+    "title" : "Langstream CLI tool fails if ${HOME}/.langstream is a symlink instead of a directory",
+    "createdAt" : "2023-11-07T17:43:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 698,
+    "title" : "mini-langstream start hangs after HerdDB - service langstream/langstream-control-plane has no node port",
+    "createdAt" : "2023-11-07T18:47:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 703,
+    "title" : "mini-langstream delete fails if other minikube clusters are defined",
+    "createdAt" : "2023-11-08T11:11:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 704,
+    "title" : "mini-langstream getting started (deploy sample app) fails with: Missing required option: '--instance=<instanceFilePath>'",
+    "createdAt" : "2023-11-08T11:44:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 705,
+    "title" : "mini-langstream start suggestion fails to deploy due to incorrect path",
+    "createdAt" : "2023-11-08T11:54:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 707,
+    "title" : "[Feature request] Add more automatic configuration for LangChain LLMs for Python processors",
+    "createdAt" : "2023-11-09T08:50:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 708,
+    "title" : "[Feature request] Toggle for showing credentials in log",
+    "createdAt" : "2023-11-09T10:20:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 709,
+    "title" : "langstream apps deploy should provide more beginner friendly help if it can't connect to annot connect to http://localhost:8090/api/applications/",
+    "createdAt" : "2023-11-09T10:40:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 710,
+    "title" : "java.lang.RuntimeException: Missing some input keys: {'query'} for source record KafkaRecord.KafkaConsumerRecord",
+    "createdAt" : "2023-11-09T11:11:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 715,
+    "title" : "LangStream pipeline UI has disconnect when LangChain is used",
+    "createdAt" : "2023-11-13T11:54:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 716,
+    "title" : "LangStream has no Windows support",
+    "createdAt" : "2023-11-13T11:57:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 718,
+    "title" : "PGVector as vector db",
+    "createdAt" : "2023-11-14T00:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 724,
+    "title" : "ProduceConsumeHandlerTest.testSendEvents is flaky",
+    "createdAt" : "2023-11-16T17:12:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 727,
+    "title" : "write-to-astra sink to support JSON API",
+    "createdAt" : "2023-11-19T03:51:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 737,
+    "title" : "Langstream does not work on windows.",
+    "createdAt" : "2023-11-24T20:05:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 738,
+    "title" : "redirection to a forbidden domain happened without slash suffix character in the web crawler",
+    "createdAt" : "2023-11-27T16:52:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 741,
+    "title" : "Provisioned disks for custom agent permission denied",
+    "createdAt" : "2023-12-09T16:35:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "RESOURCE_EXHAUSTED in python-source agent",
+    "createdAt" : "2023-12-12T11:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "Allow runtime upgrade of existing applications",
+    "createdAt" : "2023-12-15T13:44:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 751,
+    "title" : "Copy artifacts into the container before compiling",
+    "createdAt" : "2023-12-21T14:58:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 752,
+    "title" : "langstream python run-tests should quote all arguments",
+    "createdAt" : "2023-12-22T16:17:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 758,
+    "title" : "Support GPU in Kubernetes cluster",
+    "createdAt" : "2024-02-01T13:39:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 760,
+    "title" : "SimpleHeader values not decoding properly in log-event agent",
+    "createdAt" : "2024-02-26T16:48:10Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,908 @@
+{
+  "repoOwner" : "pcal43",
+  "repoName" : "fastback",
+  "forks" : [ {
+    "createdAt" : "2022-09-18T19:35:43Z"
+  }, {
+    "createdAt" : "2022-10-11T15:55:04Z"
+  }, {
+    "createdAt" : "2023-01-27T13:17:02Z"
+  }, {
+    "createdAt" : "2023-06-30T04:17:56Z"
+  }, {
+    "createdAt" : "2023-07-05T19:02:40Z"
+  }, {
+    "createdAt" : "2023-07-22T15:57:36Z"
+  }, {
+    "createdAt" : "2023-07-29T10:25:21Z"
+  }, {
+    "createdAt" : "2023-08-25T00:34:07Z"
+  }, {
+    "createdAt" : "2023-08-27T23:40:54Z"
+  }, {
+    "createdAt" : "2023-09-13T09:03:57Z"
+  }, {
+    "createdAt" : "2023-11-13T22:59:10Z"
+  }, {
+    "createdAt" : "2023-12-16T14:45:10Z"
+  }, {
+    "createdAt" : "2024-02-28T19:06:51Z"
+  }, {
+    "createdAt" : "2024-04-09T16:38:36Z"
+  }, {
+    "createdAt" : "2024-04-13T11:12:53Z"
+  }, {
+    "createdAt" : "2024-05-31T06:44:23Z"
+  }, {
+    "createdAt" : "2024-07-25T06:56:09Z"
+  }, {
+    "createdAt" : "2024-09-02T20:16:21Z"
+  }, {
+    "createdAt" : "2024-11-16T11:30:44Z"
+  }, {
+    "createdAt" : "2024-12-13T21:41:03Z"
+  }, {
+    "createdAt" : "2025-05-17T06:25:36Z"
+  }, {
+    "createdAt" : "2025-06-09T09:26:37Z"
+  }, {
+    "createdAt" : "2025-06-29T07:59:13Z"
+  }, {
+    "createdAt" : "2025-07-29T19:26:37Z"
+  }, {
+    "createdAt" : "2025-08-06T01:24:29Z"
+  }, {
+    "createdAt" : "2025-08-23T07:28:01Z"
+  }, {
+    "createdAt" : "2025-08-31T09:46:02Z"
+  }, {
+    "createdAt" : "2025-12-10T18:54:00Z"
+  }, {
+    "createdAt" : "2025-12-17T12:27:15Z"
+  }, {
+    "createdAt" : "2025-12-19T01:23:33Z"
+  }, {
+    "createdAt" : "2025-12-26T11:23:42Z"
+  } ],
+  "issues" : [ {
+    "number" : 17,
+    "title" : "world rolls back at the end of a long /backup now",
+    "createdAt" : "2022-09-08T06:24:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "add a world startup message reminding them to /backup enable ",
+    "createdAt" : "2022-09-08T06:35:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "auto-enable backup on new worlds?  mod-level configuration?",
+    "createdAt" : "2022-09-08T06:36:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "status updates to net.minecraft.client.gui.screen.MessageScreen",
+    "createdAt" : "2022-09-08T07:24:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "add git config setting for setting snapshot restore dir",
+    "createdAt" : "2022-09-08T16:11:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "add `restore-remote` command",
+    "createdAt" : "2022-09-09T01:22:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "add /backup config",
+    "createdAt" : "2022-09-09T01:29:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "add annotation to snapshot branch name",
+    "createdAt" : "2022-09-09T01:31:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 27,
+    "title" : "add /backup gc",
+    "createdAt" : "2022-09-09T02:16:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "add tab completion for snapshots in /backup restore",
+    "createdAt" : "2022-09-09T03:43:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "figure out how to get progress bar updates during long commits/pushes",
+    "createdAt" : "2022-09-09T04:32:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "encourage/require shutdown backup first time",
+    "createdAt" : "2022-09-09T04:34:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 33,
+    "title" : "fully disable mc's autosave to allow safe backups of a live world",
+    "createdAt" : "2022-09-09T04:41:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "add /backup remote-info",
+    "createdAt" : "2022-09-09T05:20:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 40,
+    "title" : "`info` should display world size as well as backup size",
+    "createdAt" : "2022-09-10T20:44:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "add /backup help",
+    "createdAt" : "2022-09-10T21:18:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "ditch last-pushed, just ls-remote and take the most recent",
+    "createdAt" : "2022-09-12T07:17:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "noclassdef on shutdown backup",
+    "createdAt" : "2022-09-13T09:49:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "add mod-level config to change sub/command names",
+    "createdAt" : "2022-09-15T05:09:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "add allowlist for restricting access to /backup to specific users",
+    "createdAt" : "2022-09-15T15:45:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "add title screen UI to manage/restore backups",
+    "createdAt" : "2022-09-17T23:27:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 56,
+    "title" : "`gc` only repacks, does not delete loose objects",
+    "createdAt" : "2022-09-17T23:33:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "provide workaround for gc issues",
+    "createdAt" : "2022-09-17T23:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "finish i18n",
+    "createdAt" : "2022-09-18T21:35:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "/backup list outputs full git branch names",
+    "createdAt" : "2022-09-18T22:34:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "add tab completion when choosing target directory for file remote",
+    "createdAt" : "2022-09-19T01:11:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 69,
+    "title" : "Use filesystem level snapshots to 'freeze' the game directory before a backup",
+    "createdAt" : "2022-09-20T01:22:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "`purge` should delete remote branches as well",
+    "createdAt" : "2022-09-20T03:03:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "consolidate shutdown and remote enablement into 'enable' command",
+    "createdAt" : "2022-09-20T16:02:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "add .DS_Store to boilerplate .gitignore",
+    "createdAt" : "2022-09-21T00:37:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "fix `gc` so that it actually frees up space",
+    "createdAt" : "2022-09-21T04:38:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "`gc` should provide progress updates",
+    "createdAt" : "2022-09-21T06:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "display backup progress updates in hud ",
+    "createdAt" : "2022-09-21T06:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "add automatic purging strategies",
+    "createdAt" : "2022-09-21T07:13:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "scheduled backups",
+    "createdAt" : "2022-09-21T07:14:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Game crash on startup",
+    "createdAt" : "2022-09-21T13:15:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "rename `status` to `info`, absorb `uuid` and `version`",
+    "createdAt" : "2022-09-25T00:02:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "rename `remote` to `set-remote`",
+    "createdAt" : "2022-09-25T00:32:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "create enum of schedulable actions, make target of 'on-shutdown' event",
+    "createdAt" : "2022-09-25T02:05:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "dedicated server can hang on shutdown",
+    "createdAt" : "2022-09-25T06:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "pre-commit world save randomly fails sometimes",
+    "createdAt" : "2022-09-26T09:38:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "pruning should always preserve the 'smart push' snapshot",
+    "createdAt" : "2022-09-26T18:45:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "ensure /temp branches get cleaned up",
+    "createdAt" : "2022-09-26T18:48:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "remote tracking branches are not getting cleaned up",
+    "createdAt" : "2022-09-26T18:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "messages are not localized on dedicated server",
+    "createdAt" : "2022-09-26T23:45:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "trigger backup after standard autosave",
+    "createdAt" : "2022-09-27T02:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "support 'hourly' autosave action",
+    "createdAt" : "2022-09-27T08:10:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "saving should preempt backups, not the other way around",
+    "createdAt" : "2022-09-28T07:43:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 137,
+    "title" : "How to load a backup from deleted world ?",
+    "createdAt" : "2022-10-02T13:05:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "ssh connections with `ed25519` keys fail with \"Auth fail\"",
+    "createdAt" : "2022-10-05T02:24:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Can't push to Github",
+    "createdAt" : "2022-10-05T10:22:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "add config switches for disabling updates to `.gitignore` and `.gitattributes`",
+    "createdAt" : "2022-10-15T20:18:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "add `remote-prune` and `set-remote-retention` for pruning remote snapshots",
+    "createdAt" : "2022-10-16T06:53:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "add git config setting for setting snapshot restore dir ",
+    "createdAt" : "2022-10-17T07:01:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Error enabling backups: Unable to load resource world\\dot-gitignore",
+    "createdAt" : "2022-10-19T14:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "daily retention policy broken",
+    "createdAt" : "2022-10-23T07:04:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "maintain world git config via template, including disablement option, including disabling gpgkey by default",
+    "createdAt" : "2022-10-24T15:24:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "error on shutdown if backups not enabled on world",
+    "createdAt" : "2022-10-30T02:32:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "retention policy to retain a snapshot for every n of time",
+    "createdAt" : "2022-11-03T00:40:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 169,
+    "title" : "stray `Pruning...` status message is sometimes left lying around onscreen",
+    "createdAt" : "2022-11-03T01:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Server Console | Incorrect Argument Despite Correct Formulation",
+    "createdAt" : "2022-11-03T03:02:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "LockFailedException On Auto-Backup",
+    "createdAt" : "2022-11-03T10:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "garbage collection progress can run twice",
+    "createdAt" : "2022-11-07T04:04:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 175,
+    "title" : "create-file-remote ",
+    "createdAt" : "2022-11-07T18:24:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "running `backup set-remote ...` then `backup full` fails",
+    "createdAt" : "2023-01-02T05:45:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "1.18.2 backport?",
+    "createdAt" : "2023-01-08T06:50:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 179,
+    "title" : "[feature request] Actual Config File",
+    "createdAt" : "2023-01-17T04:43:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Appears to Creates Bare Branches rather than branching off from previous",
+    "createdAt" : "2023-01-27T20:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "add GFS retention strategy",
+    "createdAt" : "2023-02-23T08:14:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "remote tracking branches are not getting deleted after push",
+    "createdAt" : "2023-02-23T09:37:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "NPE when running `purge` without policy set",
+    "createdAt" : "2023-03-05T22:48:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Pipe Closed/Command execution failed: No space left on device",
+    "createdAt" : "2023-03-26T18:15:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "add a way to restore a backup on top of running world?",
+    "createdAt" : "2023-04-09T18:21:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 196,
+    "title" : "Documentation doesn't mention where restored backups are saved on dedicated server",
+    "createdAt" : "2023-04-13T18:58:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "remove remote",
+    "createdAt" : "2023-04-19T05:42:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "the restored file was not saved normally and the path was not given",
+    "createdAt" : "2023-05-01T03:02:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 200,
+    "title" : "Feature - Ability to disable / limit log messages",
+    "createdAt" : "2023-05-10T11:10:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Server crashes on slow disks",
+    "createdAt" : "2023-06-13T18:16:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 205,
+    "title" : "change 'skipping backup' log info to debug",
+    "createdAt" : "2023-06-25T07:21:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "No output to chat",
+    "createdAt" : "2023-07-03T15:52:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 209,
+    "title" : "provide option for dealing with orphaned index.log",
+    "createdAt" : "2023-07-20T22:01:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Ability to run a partial restore",
+    "createdAt" : "2023-07-29T19:13:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 212,
+    "title" : "Push remote separately",
+    "createdAt" : "2023-07-29T19:35:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Alert server clients when a backup is about to take place",
+    "createdAt" : "2023-08-04T19:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "shutdown action failed and unable to restore",
+    "createdAt" : "2023-08-14T21:07:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Can't back up the map",
+    "createdAt" : "2023-08-15T22:18:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 216,
+    "title" : "remote pushes can fail due to ClassNotFound on `CancelOption` in apache sshd",
+    "createdAt" : "2023-08-16T04:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "provide more informative error message about missing command parameters",
+    "createdAt" : "2023-08-19T22:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "display elapsed time in chat at end of operation",
+    "createdAt" : "2023-08-23T05:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Backup fails because of missing file?",
+    "createdAt" : "2023-08-23T07:10:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "provide global configration in fastback.properties",
+    "createdAt" : "2023-08-23T18:14:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "add a main branch with a README.md when new repo is inited",
+    "createdAt" : "2023-08-24T02:33:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 234,
+    "title" : "add a uuid/<their uuid branch> and get rid of the uui prefix in snapshot names",
+    "createdAt" : "2023-08-24T02:33:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "move fastback to .fastback",
+    "createdAt" : "2023-08-24T02:33:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : " add way to clean up the index.lock file.  or maybe just always delete it.",
+    "createdAt" : "2023-08-24T02:34:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "add option to backup mods and minecraft configuration",
+    "createdAt" : "2023-08-26T18:19:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "native check fails on '-v' check on git < 2.37",
+    "createdAt" : "2023-08-28T03:23:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Separate scheduling option for 'full-gc'",
+    "createdAt" : "2023-08-28T14:34:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 259,
+    "title" : "implement locking with SessionLock rather than the dorky way we do it now",
+    "createdAt" : "2023-08-31T05:12:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "ed25519 keys are not support in fasback-forge",
+    "createdAt" : "2023-08-31T05:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "`autoback` (backup after autosaves) is not currently supported on Forge",
+    "createdAt" : "2023-08-31T08:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "permissions-api not supported in forge (e.g., for luckperms)",
+    "createdAt" : "2023-09-01T02:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "make backups cancellable",
+    "createdAt" : "2023-09-01T06:05:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "run git lfs dedupe as part of gc command",
+    "createdAt" : "2023-09-03T05:54:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 267,
+    "title" : "\"Cannot commit on a repo with state: MERGING\"",
+    "createdAt" : "2023-09-04T03:31:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "disable jgit-mode 'smart push' by default.",
+    "createdAt" : "2023-09-04T21:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "`set retention-policy` doc is out of date",
+    "createdAt" : "2023-09-05T09:42:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "deal better with case where native user hasn't configures user.name/email",
+    "createdAt" : "2023-09-07T01:09:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Not able to restore local backups.",
+    "createdAt" : "2023-09-07T13:01:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "add git-native implementation of `gc` command",
+    "createdAt" : "2023-09-08T04:15:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "add git-native implementation of `restore`",
+    "createdAt" : "2023-09-09T21:38:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "cleanup `FIXME i18n`'s",
+    "createdAt" : "2023-09-16T21:36:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 282,
+    "title" : "Restore fails due to \"Error downloading object: DIM-1/data/raids.dat\"",
+    "createdAt" : "2023-09-17T17:53:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "updateNativeLfsInstallation tries to call native `git-lfs` even if they have it disabled in config",
+    "createdAt" : "2023-09-21T22:52:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Mod can't find native git",
+    "createdAt" : "2023-09-28T20:27:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "[Crash] Fabric 1.20.2 Crash with this mod enabled",
+    "createdAt" : "2023-09-30T20:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Why is there no garbage collection remotely?",
+    "createdAt" : "2023-10-03T15:08:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Persistent configuration",
+    "createdAt" : "2023-10-06T03:46:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 294,
+    "title" : "Redundant dependency ",
+    "createdAt" : "2023-10-09T13:21:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Unability to use SSH keys from OpenSSH authentication agent",
+    "createdAt" : "2023-10-09T14:19:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Restoration seems too old. ",
+    "createdAt" : "2023-10-12T18:10:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 298,
+    "title" : "Feature request: Customize backup & restore directory for an easier file management",
+    "createdAt" : "2023-11-26T07:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Using Git directly results in better compression than fastback",
+    "createdAt" : "2023-12-07T17:53:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 300,
+    "title" : "[enhancement] allow pointing to native git executable",
+    "createdAt" : "2023-12-07T17:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Restore not working, no files in the restore directory given",
+    "createdAt" : "2023-12-18T00:50:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 311,
+    "title" : "Wiki Suggestion",
+    "createdAt" : "2023-12-31T06:06:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 312,
+    "title" : "`/backup local` is a no-op in 0.17.1",
+    "createdAt" : "2024-01-07T22:39:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "serverside messages are not localized on forge",
+    "createdAt" : "2024-01-09T16:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "exclude files, for example, ledger database",
+    "createdAt" : "2024-01-28T08:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "git-lfs fails to install when it's already installed",
+    "createdAt" : "2024-02-12T01:38:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Backups fail - fatal: confused by unstable object source data for example",
+    "createdAt" : "2024-03-03T20:43:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 319,
+    "title" : "Restore failed. Object too large",
+    "createdAt" : "2024-03-26T20:30:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 320,
+    "title" : "Can't restore: missing protocol: \"<unknown>\"",
+    "createdAt" : "2024-03-27T03:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "[collection of issues] Issues noticed during work on modifying",
+    "createdAt" : "2024-04-20T07:48:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "any command causes to run `git --version` and `git lfs --version` multiple times",
+    "createdAt" : "2024-04-20T12:42:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 328,
+    "title" : "Backups always fail, just stating that commit has failed.",
+    "createdAt" : "2024-05-11T17:31:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "`/backup list` empty",
+    "createdAt" : "2024-06-13T01:10:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 333,
+    "title" : "re-enable forge support",
+    "createdAt" : "2024-06-29T21:21:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 336,
+    "title" : "NPE on `full-gc` when nothing pruned",
+    "createdAt" : "2024-07-04T17:37:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "Fabric Only??",
+    "createdAt" : "2024-07-08T16:04:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "1.21 Build",
+    "createdAt" : "2024-07-10T13:36:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Completely unusable due to missing protocol: \"<unknown>\"",
+    "createdAt" : "2024-07-15T05:12:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Install instructions really lacking clarity. ",
+    "createdAt" : "2024-07-21T02:09:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Can I set a milestone so that it will not be automatically cleared?",
+    "createdAt" : "2024-07-30T17:50:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 348,
+    "title" : "Retention-policy not respected",
+    "createdAt" : "2024-08-08T03:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "incompatibility with chunky when generating chunks ",
+    "createdAt" : "2024-08-17T12:27:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 351,
+    "title" : "[BUG] Fastback try to backup the whole server when using Mohist as server software.",
+    "createdAt" : "2024-09-17T15:06:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 352,
+    "title" : "Restore failed.",
+    "createdAt" : "2024-10-01T09:03:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 353,
+    "title" : "Mod Config (config folder) backup",
+    "createdAt" : "2024-10-06T14:32:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 354,
+    "title" : "[1.21.3] Crashes on start",
+    "createdAt" : "2024-11-02T03:20:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "update to 1.21.4?",
+    "createdAt" : "2024-12-26T02:53:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "When run inside of a Docker container, remote doesn't work",
+    "createdAt" : "2024-12-30T11:33:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "Local backup succeeded but remote backup failed (Running as a systemd service)",
+    "createdAt" : "2025-01-15T14:13:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 364,
+    "title" : "Dont understand \"fastback.chat.commit-failed\"",
+    "createdAt" : "2025-02-21T15:58:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "The admins do not seem to be notified in-game when a backup fails",
+    "createdAt" : "2025-04-08T15:00:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 368,
+    "title" : "Signs disconnects players on Fabric 1.21.5 Server",
+    "createdAt" : "2025-04-22T13:04:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Compatibility with Distant Horizons",
+    "createdAt" : "2025-05-05T02:28:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 371,
+    "title" : "Truly Modular Crash",
+    "createdAt" : "2025-06-11T12:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "SUGGESTION 7-zip backup",
+    "createdAt" : "2025-06-24T14:00:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 378,
+    "title" : "Git-LFS fails to install - exits with code 128",
+    "createdAt" : "2025-07-11T08:43:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Some texts are missing when executing `/backup help <subcommands>`",
+    "createdAt" : "2025-07-28T09:22:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Some texts are hard-coded instead of using `en_us.json`",
+    "createdAt" : "2025-07-28T09:28:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "Allow full-gc to prune both local and remote snapshots",
+    "createdAt" : "2025-09-04T12:22:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 384,
+    "title" : "Does fastback support ssh passphrases?",
+    "createdAt" : "2025-09-07T10:58:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 392,
+    "title" : "Weird error from server log when using command on client",
+    "createdAt" : "2025-10-17T17:45:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 394,
+    "title" : "Weird backup restore error",
+    "createdAt" : "2025-11-26T04:55:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 395,
+    "title" : "System Messages Forced to English in Non-English Environments",
+    "createdAt" : "2025-12-01T14:31:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 397,
+    "title" : "FastBack fails when worlds use Voxy - cannot index storage/LOCK",
+    "createdAt" : "2025-12-25T12:53:27Z",
+    "state" : "OPEN"
+  } ]
+}

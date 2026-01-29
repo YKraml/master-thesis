@@ -1,0 +1,859 @@
+{
+  "repoOwner" : "Rollczi",
+  "repoName" : "LiteCommands",
+  "forks" : [ {
+    "createdAt" : "2022-07-18T20:00:13Z"
+  }, {
+    "createdAt" : "2022-12-14T17:47:31Z"
+  }, {
+    "createdAt" : "2022-12-29T13:44:19Z"
+  }, {
+    "createdAt" : "2023-01-14T14:43:20Z"
+  }, {
+    "createdAt" : "2023-01-19T10:33:51Z"
+  }, {
+    "createdAt" : "2023-07-22T19:46:17Z"
+  }, {
+    "createdAt" : "2023-10-10T16:17:04Z"
+  }, {
+    "createdAt" : "2023-10-15T03:30:57Z"
+  }, {
+    "createdAt" : "2024-02-19T19:13:54Z"
+  }, {
+    "createdAt" : "2024-07-22T22:13:58Z"
+  }, {
+    "createdAt" : "2024-09-16T22:31:47Z"
+  }, {
+    "createdAt" : "2024-10-06T17:52:21Z"
+  }, {
+    "createdAt" : "2024-10-08T12:14:07Z"
+  }, {
+    "createdAt" : "2024-10-17T15:09:55Z"
+  }, {
+    "createdAt" : "2024-11-12T00:11:09Z"
+  }, {
+    "createdAt" : "2024-11-13T00:50:48Z"
+  }, {
+    "createdAt" : "2024-11-25T08:29:24Z"
+  }, {
+    "createdAt" : "2024-11-27T03:27:29Z"
+  }, {
+    "createdAt" : "2025-01-03T15:24:21Z"
+  }, {
+    "createdAt" : "2025-01-21T09:42:07Z"
+  }, {
+    "createdAt" : "2025-03-05T16:28:43Z"
+  }, {
+    "createdAt" : "2025-03-07T10:22:06Z"
+  }, {
+    "createdAt" : "2025-03-19T21:45:14Z"
+  }, {
+    "createdAt" : "2025-05-09T01:55:23Z"
+  }, {
+    "createdAt" : "2025-06-07T12:40:28Z"
+  }, {
+    "createdAt" : "2025-07-12T14:06:24Z"
+  }, {
+    "createdAt" : "2025-09-18T00:50:12Z"
+  }, {
+    "createdAt" : "2025-09-20T13:58:01Z"
+  }, {
+    "createdAt" : "2025-11-22T08:10:42Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "Move to google guice DI (or other)",
+    "createdAt" : "2021-11-17T02:55:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Support lite commands on Minecraft Bukkit platform.",
+    "createdAt" : "2021-11-17T03:31:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Placeholders for annotations.",
+    "createdAt" : "2021-11-25T23:45:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Sections with sub arguments (spaces) in one annotation.",
+    "createdAt" : "2021-11-27T01:32:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Improve api of `LiteCommandsBuilder#message()`",
+    "createdAt" : "2021-12-21T00:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : " Improve the api of argument handler.",
+    "createdAt" : "2021-12-21T12:07:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Improve API of ValidationCommandException. (custom messages)",
+    "createdAt" : "2021-12-21T14:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Auto-complete arguments only if they're starting with the current subcommand or argument.",
+    "createdAt" : "2022-01-22T11:55:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Add option to implement message formatter yourself before send message to sender in `LiteSender#sendMessage();`",
+    "createdAt" : "2022-01-22T12:13:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Add aliases to `@Execute` annotation.",
+    "createdAt" : "2022-02-06T20:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Support multi handlers for same class.",
+    "createdAt" : "2022-02-11T01:35:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Add support for optional arguments.",
+    "createdAt" : "2022-02-11T01:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Perms while autocomplete",
+    "createdAt" : "2022-02-12T11:08:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Annotation @Joiner to join unknow argmunets.",
+    "createdAt" : "2022-02-12T12:23:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Create interface for DI ",
+    "createdAt" : "2022-02-13T05:50:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Tab complate in 2 args command",
+    "createdAt" : "2022-02-14T11:33:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Add UsageMessage annotation for list",
+    "createdAt" : "2022-03-07T21:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Add auto priority or enum for priority.",
+    "createdAt" : "2022-03-18T01:15:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Add custom name of argument.",
+    "createdAt" : "2022-03-23T07:26:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Velocity first argument suggestion bug",
+    "createdAt" : "2022-04-26T21:13:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "LiteCommands 2.0",
+    "createdAt" : "2022-05-14T00:25:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Auto Completion does not complete if the first letter of an argument is capital",
+    "createdAt" : "2022-06-15T20:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Block autocomplete for no permitted players",
+    "createdAt" : "2022-06-15T21:24:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Dependency Dashboard",
+    "createdAt" : "2022-08-16T06:29:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 129,
+    "title" : "dodanie argumentu ktory ma dwie częsci ",
+    "createdAt" : "2022-08-27T21:09:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Add support BigDecimal",
+    "createdAt" : "2022-09-16T21:13:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Add support Duration Instant and other time java types",
+    "createdAt" : "2022-09-16T21:13:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Separate suggestions domain to other classes.",
+    "createdAt" : "2022-09-16T21:14:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "naprawić inne statyczne clasy w classie",
+    "createdAt" : "2022-09-23T14:23:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Reformat example plugin",
+    "createdAt" : "2022-10-22T16:50:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Add editor configuration",
+    "createdAt" : "2022-10-22T16:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Add support for adventure shipped with adventure-platform.",
+    "createdAt" : "2022-10-24T17:48:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "add support slash commands - JDA",
+    "createdAt" : "2022-10-30T16:31:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "dodanie do README pluginu kakuszCode/NameMC",
+    "createdAt" : "2022-11-07T18:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Minestom Platform Support",
+    "createdAt" : "2023-01-19T20:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Add `buildSrc` module and java conventions",
+    "createdAt" : "2023-01-22T00:26:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Release 2.8.0",
+    "createdAt" : "2023-01-23T15:09:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Add option to create all commands in one class. (root route)",
+    "createdAt" : "2023-01-29T20:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Add async arguments and completable arguments",
+    "createdAt" : "2023-01-30T01:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Add @Opt(strict = true)",
+    "createdAt" : "2023-01-30T18:49:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Gradle 8 and better flags for build performance.",
+    "createdAt" : "2023-03-01T18:23:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Fix codeql",
+    "createdAt" : "2023-03-01T19:04:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Enable org.gradle.unsafe.configuration-cache",
+    "createdAt" : "2023-03-03T00:02:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 200,
+    "title" : "[Bug] Suggestion subcommands without permission. ",
+    "createdAt" : "2023-03-05T22:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Error: Caused by: dev.rollczi.litecommands.injector.MissingBindException: Have you added type bind or contextual bind? CometCommand#find(Player sender) [org.bukkit.entity.Player]",
+    "createdAt" : "2023-04-03T17:31:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Error when tab-complete or execute invalid boolean argument",
+    "createdAt" : "2023-04-04T12:15:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "BungeeCord strange no-permission message",
+    "createdAt" : "2023-04-09T18:52:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Add exception handling to async commands",
+    "createdAt" : "2023-05-11T20:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Argument error message does not print",
+    "createdAt" : "2023-05-11T22:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Custom command sender type",
+    "createdAt" : "2023-08-18T22:51:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Flag with an argument",
+    "createdAt" : "2023-08-25T09:25:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 220,
+    "title" : "Add @Default annotation for execute (ignore too many arguments) ",
+    "createdAt" : "2023-10-09T22:27:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "Add Enum argument resolver",
+    "createdAt" : "2023-10-09T22:41:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Add Duration/Period etc... argument resolvers",
+    "createdAt" : "2023-10-09T22:42:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "[Bug] Two same executors in @RootCommand",
+    "createdAt" : "2023-10-09T22:48:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Better error printing when annotations @Context or @Arg are missing.",
+    "createdAt" : "2023-10-09T22:50:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Better solution for named requirements. ",
+    "createdAt" : "2023-10-09T22:53:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 229,
+    "title" : "Support Nukkit platform (minecraft bedrock edition) ",
+    "createdAt" : "2023-10-10T19:21:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Support Sponge platform (server and client)",
+    "createdAt" : "2023-10-10T19:23:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Support Javacord platform (discord client)",
+    "createdAt" : "2023-10-10T19:26:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 232,
+    "title" : "Support Forge platform (minecraft modding api)",
+    "createdAt" : "2023-10-10T19:30:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 233,
+    "title" : "Add Instatnt argument resolver support",
+    "createdAt" : "2023-10-10T19:40:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Add BigInteger and BigDecimal argument support",
+    "createdAt" : "2023-10-11T09:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Update the plugin to the latest build. And updated for LiteCommands 3.x",
+    "createdAt" : "2023-10-12T15:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Option to ignore case suggestions",
+    "createdAt" : "2023-10-16T21:55:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Generic argument resolvers for temporal amount and temporal accessor",
+    "createdAt" : "2023-10-20T22:04:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Release 3.0.0",
+    "createdAt" : "2023-10-21T20:56:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "Add option to set permission for optional arguments ",
+    "createdAt" : "2023-10-24T09:02:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 263,
+    "title" : "Add better API for argument validators based on annotations",
+    "createdAt" : "2023-10-27T13:46:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "TypeSafeWrap cannot be cast to class java.lang.String ",
+    "createdAt" : "2023-10-29T15:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Add LocalDateTime argument resolver support",
+    "createdAt" : "2023-10-31T17:53:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Add result handler for embed (JDA)",
+    "createdAt" : "2023-11-03T14:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Add optiona alliases that are not suggested to the player",
+    "createdAt" : "2023-11-26T15:07:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 305,
+    "title" : "Considering support `@OptionalArg` to mark a Optional argument instead of using `Optional<?>`.",
+    "createdAt" : "2023-11-26T18:19:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Support generic \"Argument Registery\" to facilitate multi-plugin development.",
+    "createdAt" : "2023-11-26T18:37:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Support Fabric Platform",
+    "createdAt" : "2023-11-26T21:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "VarArgs Support",
+    "createdAt" : "2023-11-26T21:32:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Support for Quoted String and Flag",
+    "createdAt" : "2023-11-27T17:42:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Png in README file does not work",
+    "createdAt" : "2023-11-27T22:39:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Make SchematicGeneratorSimpleImpl more `protected` ",
+    "createdAt" : "2023-12-02T17:22:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "illegalargumentexception",
+    "createdAt" : "2023-12-03T11:18:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Multilevel shortcuts",
+    "createdAt" : "2023-12-04T19:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "LiteCommands does not support multiple arguments",
+    "createdAt" : "2023-12-09T21:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Add support for jakarta's validation",
+    "createdAt" : "2023-12-11T22:43:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Add @Range Annotation",
+    "createdAt" : "2023-12-11T22:44:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Add post validation api",
+    "createdAt" : "2023-12-22T16:12:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Add executor invoker API",
+    "createdAt" : "2023-12-22T16:12:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "add ability to disable suggesting subcommand alias ",
+    "createdAt" : "2023-12-27T22:51:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 348,
+    "title" : "LiteCommands suggest double in integer-based argument.",
+    "createdAt" : "2023-12-28T01:54:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Know issue with brigadier :/",
+    "createdAt" : "2023-12-29T14:24:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 356,
+    "title" : "Unsupported return type. Cannot find handler for result type",
+    "createdAt" : "2024-01-04T17:50:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Support a `@ExecuteDefault` in command clasases to show usage originally",
+    "createdAt" : "2024-01-05T02:37:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Better suport for Minestom ",
+    "createdAt" : "2024-01-21T17:11:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "MultipleArgumentResolver with ",
+    "createdAt" : "2024-01-22T22:17:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Deployment failed ",
+    "createdAt" : "2024-02-02T18:58:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Drop java 8 support. Bump to java 17",
+    "createdAt" : "2024-02-13T11:11:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 377,
+    "title" : "List Argument Suggestions only provide suggestion for first Argument",
+    "createdAt" : "2024-02-18T01:32:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "OptionalArg don't support collections types",
+    "createdAt" : "2024-02-18T19:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "java.lang.IllegalArgumentException: Max cannot be less than min [Programmatic]",
+    "createdAt" : "2024-02-19T17:47:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "@Delimiter(\",\") for collections",
+    "createdAt" : "2024-02-20T12:22:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Add pattern for subcommands",
+    "createdAt" : "2024-02-20T12:23:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 385,
+    "title" : "Multiple OptionalArg",
+    "createdAt" : "2024-02-23T18:52:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 387,
+    "title" : "Add rawinput view etc to make rawinput more flexible",
+    "createdAt" : "2024-03-01T10:58:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Improve BungeeCord support",
+    "createdAt" : "2024-03-04T17:53:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "My temporary absence (Rollczi)",
+    "createdAt" : "2024-03-06T21:01:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Bug. LiteCommands still suggests a subcommand when a player doesn't have permissions for it.",
+    "createdAt" : "2024-04-05T15:59:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Add @Cooldown feature",
+    "createdAt" : "2024-04-05T16:16:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Commandblock Support",
+    "createdAt" : "2024-04-28T06:40:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Add command/subcommands rate-limit",
+    "createdAt" : "2024-05-07T07:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "Check all arguments types on startup",
+    "createdAt" : "2024-05-20T12:04:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 402,
+    "title" : "Allow the ability to use aliases without requiring a name in @Execute",
+    "createdAt" : "2024-06-08T02:18:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 405,
+    "title" : "Can we use @OptionalArg and @Join in one argument?",
+    "createdAt" : "2024-07-09T16:38:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "Description meta not added to children commands?",
+    "createdAt" : "2024-07-20T06:17:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Implement 'context menus' to 'litecommands-jda'",
+    "createdAt" : "2024-07-23T13:46:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "Annotation '@OptionalArg' is not working in 'litecommands-jda'.",
+    "createdAt" : "2024-07-23T14:04:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Problems and suggestions on dependency management",
+    "createdAt" : "2024-07-29T16:18:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "support i18n ",
+    "createdAt" : "2024-08-07T12:18:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 416,
+    "title" : "NFE in JDAPlatform",
+    "createdAt" : "2024-08-15T18:59:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "IOOBE in Suggestion",
+    "createdAt" : "2024-08-15T19:06:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Folia support",
+    "createdAt" : "2024-09-08T22:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "Async context and arguments",
+    "createdAt" : "2024-09-08T22:26:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 428,
+    "title" : "argumentFlag not work for programmatic api ",
+    "createdAt" : "2024-09-09T21:49:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Support \"OR\" behavior for permissions.",
+    "createdAt" : "2024-09-14T08:25:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Use a Versioning Catalog (like as `Versions` object)",
+    "createdAt" : "2024-09-16T22:12:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "Add shared minecraft module",
+    "createdAt" : "2024-09-27T14:54:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 437,
+    "title" : " Clean up shchedulers",
+    "createdAt" : "2024-09-29T22:22:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "[bukkit] [adventure platform] Command executed from rcon client doesnt got answer",
+    "createdAt" : "2024-10-01T22:12:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 442,
+    "title" : "Concurrent Modification Exception",
+    "createdAt" : "2024-10-07T13:58:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Parsing desynchronization too early",
+    "createdAt" : "2024-10-10T07:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "NullPointerException: Cannot read field \"value\" because \"s1\" is null",
+    "createdAt" : "2024-10-13T11:29:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Update links in readme.md (now we refer to old documentation)",
+    "createdAt" : "2024-10-13T12:17:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Delete this repository!",
+    "createdAt" : "2024-10-13T13:57:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "LiteCommands Merch",
+    "createdAt" : "2024-10-20T22:32:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 459,
+    "title" : " Support literal arguments",
+    "createdAt" : "2024-10-23T17:52:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "no parser for channel jda",
+    "createdAt" : "2024-10-28T11:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "JDA String Command Argument errors",
+    "createdAt" : "2024-10-28T17:08:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 470,
+    "title" : "Logger API",
+    "createdAt" : "2024-10-30T10:35:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 471,
+    "title" : "JDA conversion of STRING to INTEGER issue.",
+    "createdAt" : "2024-10-30T14:29:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "IncompatibleClassChangeError when parsing a custom argument",
+    "createdAt" : "2024-10-31T08:02:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 474,
+    "title" : "Improve suggestions - Tooltips",
+    "createdAt" : "2024-10-31T18:08:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : " CompletableFuture in SuggestionResult as in ParseResult",
+    "createdAt" : "2024-11-02T22:46:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 489,
+    "title" : "[Fabric] Class file for net.minecraft.class_2168 not found",
+    "createdAt" : "2024-11-26T07:24:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "Parser supports access to already parsed results",
+    "createdAt" : "2024-11-28T03:04:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 507,
+    "title" : "JDA registration speed on the jda vs on a guild",
+    "createdAt" : "2024-12-30T12:47:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "multi command cooldown",
+    "createdAt" : "2025-01-30T00:28:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Add support for the permission requirement for flags",
+    "createdAt" : "2025-01-31T18:53:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 522,
+    "title" : "Wrong LiteMessages response when 2 commands that overload eachother have dedicated @Permission annotation",
+    "createdAt" : "2025-02-20T10:09:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "Changing the JDA event manager breaks SlashCommandController",
+    "createdAt" : "2025-03-19T22:27:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "feat(flag): Support alias for `@Flag`.",
+    "createdAt" : "2025-04-13T17:14:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "@Shortcut Not restricted by nativePermissions",
+    "createdAt" : "2025-04-19T10:10:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 531,
+    "title" : "Add support for User-Installable Commands in JDA module",
+    "createdAt" : "2025-05-20T15:50:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Add slash examples",
+    "createdAt" : "2025-06-02T21:43:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 533,
+    "title" : "OfflinePlayerArgument NPE when using \"load: STARTUP\" in plugin.yml",
+    "createdAt" : "2025-06-04T11:35:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "3.10.x is Incompatible with Bukkit 1.8.8-R0.1",
+    "createdAt" : "2025-08-23T00:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 628,
+    "title" : "Folia issue",
+    "createdAt" : "2025-11-22T08:05:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 637,
+    "title" : "Feature: Support case-insensitive enum resolution",
+    "createdAt" : "2025-12-13T15:01:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 641,
+    "title" : "BungeeCord players see commands in tab-complete without permissions",
+    "createdAt" : "2025-12-17T14:47:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 645,
+    "title" : "LiteCommands 3.10.5 and 3.10.6 have issues with folia.",
+    "createdAt" : "2025-12-28T12:58:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Adding Hytale support",
+    "createdAt" : "2026-01-10T15:26:57Z",
+    "state" : "OPEN"
+  } ]
+}

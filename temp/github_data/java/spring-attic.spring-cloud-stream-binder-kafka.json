@@ -1,0 +1,4424 @@
+{
+  "repoOwner" : "spring-attic",
+  "repoName" : "spring-cloud-stream-binder-kafka",
+  "forks" : [ {
+    "createdAt" : "2016-06-22T21:41:56Z"
+  }, {
+    "createdAt" : "2016-06-22T22:35:57Z"
+  }, {
+    "createdAt" : "2016-06-23T10:34:04Z"
+  }, {
+    "createdAt" : "2016-07-11T16:00:37Z"
+  }, {
+    "createdAt" : "2016-07-18T21:39:01Z"
+  }, {
+    "createdAt" : "2016-07-27T22:20:01Z"
+  }, {
+    "createdAt" : "2016-07-28T13:28:26Z"
+  }, {
+    "createdAt" : "2016-09-05T12:54:49Z"
+  }, {
+    "createdAt" : "2016-09-12T09:00:36Z"
+  }, {
+    "createdAt" : "2016-09-15T16:56:58Z"
+  }, {
+    "createdAt" : "2016-09-20T19:25:28Z"
+  }, {
+    "createdAt" : "2016-09-21T21:33:04Z"
+  }, {
+    "createdAt" : "2016-10-29T17:49:56Z"
+  }, {
+    "createdAt" : "2016-11-08T14:58:57Z"
+  }, {
+    "createdAt" : "2017-01-19T07:20:02Z"
+  }, {
+    "createdAt" : "2017-02-11T18:27:44Z"
+  }, {
+    "createdAt" : "2017-02-13T04:33:45Z"
+  }, {
+    "createdAt" : "2017-02-14T21:47:56Z"
+  }, {
+    "createdAt" : "2017-02-23T15:05:41Z"
+  }, {
+    "createdAt" : "2017-03-08T06:38:31Z"
+  }, {
+    "createdAt" : "2017-03-14T16:15:00Z"
+  }, {
+    "createdAt" : "2017-03-15T07:14:50Z"
+  }, {
+    "createdAt" : "2017-03-23T14:28:30Z"
+  }, {
+    "createdAt" : "2017-04-03T12:54:54Z"
+  }, {
+    "createdAt" : "2017-05-17T01:19:03Z"
+  }, {
+    "createdAt" : "2017-05-23T18:46:04Z"
+  }, {
+    "createdAt" : "2017-05-26T09:21:14Z"
+  }, {
+    "createdAt" : "2017-07-20T04:32:39Z"
+  }, {
+    "createdAt" : "2017-07-20T07:55:15Z"
+  }, {
+    "createdAt" : "2017-07-22T04:15:41Z"
+  }, {
+    "createdAt" : "2017-07-31T19:51:22Z"
+  }, {
+    "createdAt" : "2017-08-03T07:29:55Z"
+  }, {
+    "createdAt" : "2017-08-23T13:37:46Z"
+  }, {
+    "createdAt" : "2017-09-21T15:53:23Z"
+  }, {
+    "createdAt" : "2017-10-12T03:42:42Z"
+  }, {
+    "createdAt" : "2017-10-16T18:21:18Z"
+  }, {
+    "createdAt" : "2017-10-18T13:10:34Z"
+  }, {
+    "createdAt" : "2017-10-18T22:15:38Z"
+  }, {
+    "createdAt" : "2017-11-16T16:57:30Z"
+  }, {
+    "createdAt" : "2017-12-06T06:20:25Z"
+  }, {
+    "createdAt" : "2017-12-11T11:27:23Z"
+  }, {
+    "createdAt" : "2017-12-13T17:20:34Z"
+  }, {
+    "createdAt" : "2017-12-24T05:55:41Z"
+  }, {
+    "createdAt" : "2017-12-27T01:49:15Z"
+  }, {
+    "createdAt" : "2018-01-08T14:05:49Z"
+  }, {
+    "createdAt" : "2018-01-10T22:38:48Z"
+  }, {
+    "createdAt" : "2018-02-08T16:52:32Z"
+  }, {
+    "createdAt" : "2018-02-13T18:17:50Z"
+  }, {
+    "createdAt" : "2018-02-14T19:01:15Z"
+  }, {
+    "createdAt" : "2018-03-02T20:28:04Z"
+  }, {
+    "createdAt" : "2018-03-08T06:14:23Z"
+  }, {
+    "createdAt" : "2018-03-08T09:05:21Z"
+  }, {
+    "createdAt" : "2018-03-16T19:57:51Z"
+  }, {
+    "createdAt" : "2018-03-19T22:51:32Z"
+  }, {
+    "createdAt" : "2018-03-21T15:41:41Z"
+  }, {
+    "createdAt" : "2018-04-02T16:43:53Z"
+  }, {
+    "createdAt" : "2018-04-04T17:31:22Z"
+  }, {
+    "createdAt" : "2018-04-10T17:22:41Z"
+  }, {
+    "createdAt" : "2018-04-11T13:57:12Z"
+  }, {
+    "createdAt" : "2018-04-22T03:51:22Z"
+  }, {
+    "createdAt" : "2018-04-24T08:23:03Z"
+  }, {
+    "createdAt" : "2018-04-24T16:42:27Z"
+  }, {
+    "createdAt" : "2018-04-26T05:54:32Z"
+  }, {
+    "createdAt" : "2018-05-05T12:58:54Z"
+  }, {
+    "createdAt" : "2018-05-27T15:40:35Z"
+  }, {
+    "createdAt" : "2018-06-06T07:48:47Z"
+  }, {
+    "createdAt" : "2018-06-07T14:52:56Z"
+  }, {
+    "createdAt" : "2018-06-11T12:39:18Z"
+  }, {
+    "createdAt" : "2018-06-13T14:55:58Z"
+  }, {
+    "createdAt" : "2018-06-23T06:31:58Z"
+  }, {
+    "createdAt" : "2018-07-06T05:46:43Z"
+  }, {
+    "createdAt" : "2018-08-01T15:49:21Z"
+  }, {
+    "createdAt" : "2018-08-06T07:08:25Z"
+  }, {
+    "createdAt" : "2018-08-14T16:32:39Z"
+  }, {
+    "createdAt" : "2018-09-11T12:16:36Z"
+  }, {
+    "createdAt" : "2018-09-24T15:56:34Z"
+  }, {
+    "createdAt" : "2018-10-01T23:06:20Z"
+  }, {
+    "createdAt" : "2018-10-22T21:02:58Z"
+  }, {
+    "createdAt" : "2018-10-29T15:25:13Z"
+  }, {
+    "createdAt" : "2018-11-07T18:26:48Z"
+  }, {
+    "createdAt" : "2018-11-23T09:30:45Z"
+  }, {
+    "createdAt" : "2018-12-05T18:01:20Z"
+  }, {
+    "createdAt" : "2018-12-12T07:55:09Z"
+  }, {
+    "createdAt" : "2018-12-17T01:07:50Z"
+  }, {
+    "createdAt" : "2019-01-08T14:14:49Z"
+  }, {
+    "createdAt" : "2019-01-15T03:00:13Z"
+  }, {
+    "createdAt" : "2019-01-17T19:24:37Z"
+  }, {
+    "createdAt" : "2019-01-20T04:42:45Z"
+  }, {
+    "createdAt" : "2019-01-21T11:09:07Z"
+  }, {
+    "createdAt" : "2019-01-23T08:51:50Z"
+  }, {
+    "createdAt" : "2019-01-24T03:35:29Z"
+  }, {
+    "createdAt" : "2019-02-06T14:47:38Z"
+  }, {
+    "createdAt" : "2019-03-05T09:34:04Z"
+  }, {
+    "createdAt" : "2019-03-08T04:15:52Z"
+  }, {
+    "createdAt" : "2019-03-11T08:11:10Z"
+  }, {
+    "createdAt" : "2019-03-11T17:47:33Z"
+  }, {
+    "createdAt" : "2019-03-16T05:00:59Z"
+  }, {
+    "createdAt" : "2019-03-17T06:59:07Z"
+  }, {
+    "createdAt" : "2019-03-22T12:34:08Z"
+  }, {
+    "createdAt" : "2019-03-23T07:34:03Z"
+  }, {
+    "createdAt" : "2019-03-26T13:47:04Z"
+  }, {
+    "createdAt" : "2019-04-15T17:41:07Z"
+  }, {
+    "createdAt" : "2019-04-16T06:13:03Z"
+  }, {
+    "createdAt" : "2019-04-19T05:33:17Z"
+  }, {
+    "createdAt" : "2019-04-23T11:44:46Z"
+  }, {
+    "createdAt" : "2019-04-24T10:06:05Z"
+  }, {
+    "createdAt" : "2019-04-28T14:53:30Z"
+  }, {
+    "createdAt" : "2019-05-07T09:50:09Z"
+  }, {
+    "createdAt" : "2019-05-09T04:21:49Z"
+  }, {
+    "createdAt" : "2019-05-12T18:40:15Z"
+  }, {
+    "createdAt" : "2019-05-20T12:33:44Z"
+  }, {
+    "createdAt" : "2019-05-22T05:35:58Z"
+  }, {
+    "createdAt" : "2019-05-28T14:51:00Z"
+  }, {
+    "createdAt" : "2019-06-03T16:39:33Z"
+  }, {
+    "createdAt" : "2019-06-22T03:53:29Z"
+  }, {
+    "createdAt" : "2019-07-02T15:39:48Z"
+  }, {
+    "createdAt" : "2019-07-15T04:35:14Z"
+  }, {
+    "createdAt" : "2019-07-30T02:24:57Z"
+  }, {
+    "createdAt" : "2019-08-08T09:09:49Z"
+  }, {
+    "createdAt" : "2019-08-25T12:08:40Z"
+  }, {
+    "createdAt" : "2019-09-27T12:16:50Z"
+  }, {
+    "createdAt" : "2019-10-09T04:41:18Z"
+  }, {
+    "createdAt" : "2019-10-09T07:13:15Z"
+  }, {
+    "createdAt" : "2019-10-16T15:08:46Z"
+  }, {
+    "createdAt" : "2019-10-22T15:54:47Z"
+  }, {
+    "createdAt" : "2019-10-24T18:33:42Z"
+  }, {
+    "createdAt" : "2019-11-18T11:09:12Z"
+  }, {
+    "createdAt" : "2019-11-20T08:25:44Z"
+  }, {
+    "createdAt" : "2019-11-26T01:56:38Z"
+  }, {
+    "createdAt" : "2019-12-02T09:16:14Z"
+  }, {
+    "createdAt" : "2019-12-08T07:52:28Z"
+  }, {
+    "createdAt" : "2019-12-17T06:22:48Z"
+  }, {
+    "createdAt" : "2019-12-30T13:55:00Z"
+  }, {
+    "createdAt" : "2020-01-28T04:49:48Z"
+  }, {
+    "createdAt" : "2020-01-29T10:56:06Z"
+  }, {
+    "createdAt" : "2020-02-02T05:31:39Z"
+  }, {
+    "createdAt" : "2020-02-03T14:22:51Z"
+  }, {
+    "createdAt" : "2020-02-06T23:50:07Z"
+  }, {
+    "createdAt" : "2020-02-17T01:36:04Z"
+  }, {
+    "createdAt" : "2020-03-02T22:24:56Z"
+  }, {
+    "createdAt" : "2020-03-10T01:45:31Z"
+  }, {
+    "createdAt" : "2020-03-10T08:01:13Z"
+  }, {
+    "createdAt" : "2020-03-20T19:06:20Z"
+  }, {
+    "createdAt" : "2020-03-26T07:57:37Z"
+  }, {
+    "createdAt" : "2020-04-03T03:02:45Z"
+  }, {
+    "createdAt" : "2020-04-05T12:56:12Z"
+  }, {
+    "createdAt" : "2020-04-22T07:12:30Z"
+  }, {
+    "createdAt" : "2020-04-26T01:49:35Z"
+  }, {
+    "createdAt" : "2020-04-27T15:09:45Z"
+  }, {
+    "createdAt" : "2020-04-30T13:37:56Z"
+  }, {
+    "createdAt" : "2020-05-09T06:56:00Z"
+  }, {
+    "createdAt" : "2020-05-15T20:03:49Z"
+  }, {
+    "createdAt" : "2020-05-21T15:24:48Z"
+  }, {
+    "createdAt" : "2020-05-22T06:49:08Z"
+  }, {
+    "createdAt" : "2020-05-27T17:04:42Z"
+  }, {
+    "createdAt" : "2020-05-27T23:34:39Z"
+  }, {
+    "createdAt" : "2020-06-03T02:38:58Z"
+  }, {
+    "createdAt" : "2020-06-06T08:36:49Z"
+  }, {
+    "createdAt" : "2020-07-03T06:19:38Z"
+  }, {
+    "createdAt" : "2020-07-23T09:08:06Z"
+  }, {
+    "createdAt" : "2020-07-28T17:30:50Z"
+  }, {
+    "createdAt" : "2020-07-30T20:30:39Z"
+  }, {
+    "createdAt" : "2020-08-07T09:50:22Z"
+  }, {
+    "createdAt" : "2020-08-14T11:19:26Z"
+  }, {
+    "createdAt" : "2020-09-07T07:04:45Z"
+  }, {
+    "createdAt" : "2020-09-10T05:35:51Z"
+  }, {
+    "createdAt" : "2020-09-25T08:03:25Z"
+  }, {
+    "createdAt" : "2020-10-02T19:06:18Z"
+  }, {
+    "createdAt" : "2020-10-05T02:36:04Z"
+  }, {
+    "createdAt" : "2020-10-23T03:52:42Z"
+  }, {
+    "createdAt" : "2020-10-27T03:01:01Z"
+  }, {
+    "createdAt" : "2020-11-05T01:55:57Z"
+  }, {
+    "createdAt" : "2020-11-11T16:22:19Z"
+  }, {
+    "createdAt" : "2020-11-17T22:29:12Z"
+  }, {
+    "createdAt" : "2020-11-18T15:01:09Z"
+  }, {
+    "createdAt" : "2020-11-18T18:37:19Z"
+  }, {
+    "createdAt" : "2020-11-24T13:45:35Z"
+  }, {
+    "createdAt" : "2020-11-26T05:12:17Z"
+  }, {
+    "createdAt" : "2020-12-09T09:34:37Z"
+  }, {
+    "createdAt" : "2020-12-13T18:40:28Z"
+  }, {
+    "createdAt" : "2020-12-16T10:48:26Z"
+  }, {
+    "createdAt" : "2020-12-29T14:09:14Z"
+  }, {
+    "createdAt" : "2020-12-30T00:56:03Z"
+  }, {
+    "createdAt" : "2020-12-30T00:57:38Z"
+  }, {
+    "createdAt" : "2021-01-06T09:48:52Z"
+  }, {
+    "createdAt" : "2021-01-12T13:00:39Z"
+  }, {
+    "createdAt" : "2021-01-22T14:40:48Z"
+  }, {
+    "createdAt" : "2021-01-26T14:37:40Z"
+  }, {
+    "createdAt" : "2021-02-12T20:46:20Z"
+  }, {
+    "createdAt" : "2021-02-19T10:53:24Z"
+  }, {
+    "createdAt" : "2021-02-26T05:20:17Z"
+  }, {
+    "createdAt" : "2021-03-10T07:34:53Z"
+  }, {
+    "createdAt" : "2021-03-20T03:34:10Z"
+  }, {
+    "createdAt" : "2021-04-07T07:17:00Z"
+  }, {
+    "createdAt" : "2021-04-10T17:29:35Z"
+  }, {
+    "createdAt" : "2021-04-22T13:03:56Z"
+  }, {
+    "createdAt" : "2021-05-01T17:23:45Z"
+  }, {
+    "createdAt" : "2021-05-10T19:29:58Z"
+  }, {
+    "createdAt" : "2021-05-12T03:39:49Z"
+  }, {
+    "createdAt" : "2021-05-13T05:54:12Z"
+  }, {
+    "createdAt" : "2021-05-25T08:56:13Z"
+  }, {
+    "createdAt" : "2021-05-28T02:25:09Z"
+  }, {
+    "createdAt" : "2021-06-01T02:09:17Z"
+  }, {
+    "createdAt" : "2021-06-18T12:22:13Z"
+  }, {
+    "createdAt" : "2021-06-23T01:39:06Z"
+  }, {
+    "createdAt" : "2021-07-03T04:46:41Z"
+  }, {
+    "createdAt" : "2021-07-29T05:32:33Z"
+  }, {
+    "createdAt" : "2021-08-04T14:21:27Z"
+  }, {
+    "createdAt" : "2021-08-05T06:04:20Z"
+  }, {
+    "createdAt" : "2021-08-11T18:59:59Z"
+  }, {
+    "createdAt" : "2021-08-19T14:20:55Z"
+  }, {
+    "createdAt" : "2021-09-06T02:09:26Z"
+  }, {
+    "createdAt" : "2021-09-11T19:11:53Z"
+  }, {
+    "createdAt" : "2021-09-13T07:00:59Z"
+  }, {
+    "createdAt" : "2021-09-13T12:05:10Z"
+  }, {
+    "createdAt" : "2021-09-17T07:36:33Z"
+  }, {
+    "createdAt" : "2021-09-17T22:01:54Z"
+  }, {
+    "createdAt" : "2021-09-19T01:42:47Z"
+  }, {
+    "createdAt" : "2021-10-02T04:15:40Z"
+  }, {
+    "createdAt" : "2021-10-03T16:03:56Z"
+  }, {
+    "createdAt" : "2021-10-04T15:59:56Z"
+  }, {
+    "createdAt" : "2021-10-05T06:25:53Z"
+  }, {
+    "createdAt" : "2021-10-11T21:42:11Z"
+  }, {
+    "createdAt" : "2021-10-14T14:28:36Z"
+  }, {
+    "createdAt" : "2021-10-18T08:36:55Z"
+  }, {
+    "createdAt" : "2021-10-22T12:04:34Z"
+  }, {
+    "createdAt" : "2021-10-25T12:49:59Z"
+  }, {
+    "createdAt" : "2021-10-27T03:13:06Z"
+  }, {
+    "createdAt" : "2021-10-31T18:03:05Z"
+  }, {
+    "createdAt" : "2021-11-16T09:47:15Z"
+  }, {
+    "createdAt" : "2021-12-06T23:05:20Z"
+  }, {
+    "createdAt" : "2021-12-10T11:09:37Z"
+  }, {
+    "createdAt" : "2021-12-21T08:55:47Z"
+  }, {
+    "createdAt" : "2021-12-21T11:51:36Z"
+  }, {
+    "createdAt" : "2021-12-25T00:06:10Z"
+  }, {
+    "createdAt" : "2021-12-25T11:08:20Z"
+  }, {
+    "createdAt" : "2022-01-06T15:02:18Z"
+  }, {
+    "createdAt" : "2022-01-07T16:02:43Z"
+  }, {
+    "createdAt" : "2022-01-09T06:22:50Z"
+  }, {
+    "createdAt" : "2022-01-12T15:26:59Z"
+  }, {
+    "createdAt" : "2022-01-22T00:56:12Z"
+  }, {
+    "createdAt" : "2022-01-26T11:16:55Z"
+  }, {
+    "createdAt" : "2022-01-26T12:47:46Z"
+  }, {
+    "createdAt" : "2022-02-01T13:44:34Z"
+  }, {
+    "createdAt" : "2022-02-01T21:53:11Z"
+  }, {
+    "createdAt" : "2022-02-05T15:30:32Z"
+  }, {
+    "createdAt" : "2022-02-05T16:33:14Z"
+  }, {
+    "createdAt" : "2022-02-18T05:43:28Z"
+  }, {
+    "createdAt" : "2022-03-01T06:20:53Z"
+  }, {
+    "createdAt" : "2022-03-30T18:35:34Z"
+  }, {
+    "createdAt" : "2022-04-25T17:48:19Z"
+  }, {
+    "createdAt" : "2022-04-27T03:37:54Z"
+  }, {
+    "createdAt" : "2022-05-08T09:21:20Z"
+  }, {
+    "createdAt" : "2022-05-27T12:35:14Z"
+  }, {
+    "createdAt" : "2022-06-10T02:09:45Z"
+  }, {
+    "createdAt" : "2022-06-10T04:07:50Z"
+  }, {
+    "createdAt" : "2022-06-23T03:14:57Z"
+  }, {
+    "createdAt" : "2022-06-28T01:15:27Z"
+  }, {
+    "createdAt" : "2022-06-30T06:52:32Z"
+  }, {
+    "createdAt" : "2022-07-25T06:17:11Z"
+  }, {
+    "createdAt" : "2022-07-31T11:22:05Z"
+  }, {
+    "createdAt" : "2022-08-12T02:16:22Z"
+  }, {
+    "createdAt" : "2022-08-27T14:08:17Z"
+  }, {
+    "createdAt" : "2022-10-04T14:47:56Z"
+  }, {
+    "createdAt" : "2022-10-07T16:40:16Z"
+  }, {
+    "createdAt" : "2022-10-18T16:55:53Z"
+  }, {
+    "createdAt" : "2022-10-27T10:08:23Z"
+  }, {
+    "createdAt" : "2022-11-02T15:34:49Z"
+  }, {
+    "createdAt" : "2022-11-10T00:13:26Z"
+  }, {
+    "createdAt" : "2022-11-30T15:29:47Z"
+  }, {
+    "createdAt" : "2022-12-06T23:34:33Z"
+  }, {
+    "createdAt" : "2023-01-06T06:17:57Z"
+  }, {
+    "createdAt" : "2023-01-12T01:48:35Z"
+  }, {
+    "createdAt" : "2023-02-08T03:53:16Z"
+  }, {
+    "createdAt" : "2023-03-03T09:44:32Z"
+  }, {
+    "createdAt" : "2023-03-15T14:09:46Z"
+  }, {
+    "createdAt" : "2023-03-27T06:00:15Z"
+  }, {
+    "createdAt" : "2023-03-28T10:11:52Z"
+  }, {
+    "createdAt" : "2023-03-29T18:38:46Z"
+  }, {
+    "createdAt" : "2023-04-04T14:29:01Z"
+  }, {
+    "createdAt" : "2023-04-12T09:09:18Z"
+  }, {
+    "createdAt" : "2023-04-24T02:32:26Z"
+  }, {
+    "createdAt" : "2023-04-29T21:39:02Z"
+  }, {
+    "createdAt" : "2023-06-17T05:27:49Z"
+  }, {
+    "createdAt" : "2023-08-17T19:29:06Z"
+  }, {
+    "createdAt" : "2023-09-01T02:50:58Z"
+  }, {
+    "createdAt" : "2024-03-08T10:05:34Z"
+  }, {
+    "createdAt" : "2024-04-24T22:59:21Z"
+  }, {
+    "createdAt" : "2024-05-29T15:30:52Z"
+  }, {
+    "createdAt" : "2024-06-07T18:38:58Z"
+  }, {
+    "createdAt" : "2024-06-25T14:51:45Z"
+  }, {
+    "createdAt" : "2024-08-06T01:15:53Z"
+  }, {
+    "createdAt" : "2024-10-12T15:15:22Z"
+  }, {
+    "createdAt" : "2025-03-01T17:50:31Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Kafka Binder should support listening to specific partitions ",
+    "createdAt" : "2016-06-20T18:55:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Add 0.9 Kafka binder",
+    "createdAt" : "2016-06-21T16:18:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Verify IT tests for 0.9 SCSt-Kafka binder",
+    "createdAt" : "2016-06-21T16:19:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Move documentation from `spring-cloud-stream`",
+    "createdAt" : "2016-06-22T13:26:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Add topic cleanup for the Kafka Binder tests",
+    "createdAt" : "2016-07-11T15:38:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Apply refactoring changes from core",
+    "createdAt" : "2016-07-11T15:46:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Create common test infrastructure for kafka binder variants",
+    "createdAt" : "2016-07-11T15:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Missing Spring core version",
+    "createdAt" : "2016-07-12T15:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Spring Core null version",
+    "createdAt" : "2016-07-12T16:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Test against kerberized Kafka environments",
+    "createdAt" : "2016-07-14T12:21:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Support late binding for Kafka",
+    "createdAt" : "2016-07-14T21:23:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Configuration of instanceIndex and instanceCount per topic",
+    "createdAt" : "2016-07-22T13:04:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Add support for arbitrary configuration properties for producer/consumer",
+    "createdAt" : "2016-07-26T22:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "KafkaBinderHealthIndicator - KafKaConsumer properties problem - spring-cloud-stream-binder-kafka version 1.1.0.BUILD-SNAPSHOT",
+    "createdAt" : "2016-08-06T12:25:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Test against Spring Kafka 1.1.0.M1",
+    "createdAt" : "2016-08-12T21:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Add the ability to reset offset",
+    "createdAt" : "2016-08-15T15:52:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Document how to re-process messages from DLQ",
+    "createdAt" : "2016-08-15T15:57:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Add documentation on setting up kerberized environments",
+    "createdAt" : "2016-08-22T21:31:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Add reactive kafka support",
+    "createdAt" : "2016-08-31T14:57:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Add KStreams support",
+    "createdAt" : "2016-08-31T14:57:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Reinstate static partitioning in Kafka biner",
+    "createdAt" : "2016-09-01T00:09:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Kafka DLQ forwarding should add error information in headers (if mode is not `raw`)",
+    "createdAt" : "2016-09-06T16:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Allow setting a message key for the Kafka binder",
+    "createdAt" : "2016-09-06T16:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Support listening to specific partitions in the Kafka binder",
+    "createdAt" : "2016-09-06T17:00:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Making AdminUtils and topic creation optional in Kafka binder",
+    "createdAt" : "2016-09-08T16:49:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Support for new Producer/Consumer without Zookeeper connection",
+    "createdAt" : "2016-09-12T10:52:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Add support for programmatic JAAS configuration",
+    "createdAt" : "2016-09-12T15:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Add Raw mode Kafka tests for 0.10 tests.",
+    "createdAt" : "2016-09-14T17:38:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Auto partition assignment issue when there are more consumers than there are partitions",
+    "createdAt" : "2016-09-14T20:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Creating a DLQ fails if group name does not pass topic name validations",
+    "createdAt" : "2016-09-18T11:12:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "autoCommitOffset set to false does not allow manual acknowledgment",
+    "createdAt" : "2016-09-19T18:42:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Documentation doesn't explain how `startOffsets` works for anon groups",
+    "createdAt" : "2016-09-26T14:19:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Kafka ProducerListener disabled in Camden.RELEASE",
+    "createdAt" : "2016-09-27T13:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Kafka DLQ partitioning should match partition specifics of the original topic",
+    "createdAt" : "2016-09-27T15:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Allow setting a message key for the Kafka binder",
+    "createdAt" : "2016-09-27T18:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Lots of obsolete logging when perfoming health checks",
+    "createdAt" : "2016-09-28T12:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Add documentation for specifying generic properties for kafka producer/consumer",
+    "createdAt" : "2016-10-04T12:37:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Add support for Avro messages encoded with Confluent's (de)serializer (and other alternative (de)serializers)",
+    "createdAt" : "2016-10-09T19:32:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Set default log levels for Zookeeper client (on the Kafka binder) to `ERROR`",
+    "createdAt" : "2016-10-10T16:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Add the ability to configure the DLQ producer properties",
+    "createdAt" : "2016-10-12T17:47:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Race condition in kafka binder CI builds",
+    "createdAt" : "2016-10-14T17:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Do not use Spring Cloud Stream Parent as parent",
+    "createdAt" : "2016-10-17T13:59:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Revisit if KafkaTestBinder.TupleRegistrar is still needed",
+    "createdAt" : "2016-10-19T14:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Allow resetting to arbitrary offsets in the Kafka binder",
+    "createdAt" : "2016-10-19T14:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "REST API for spring cloud stream consumer of Kafka Topic",
+    "createdAt" : "2016-10-19T15:23:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Move CI infrastructure from Bamboo to Jenkins",
+    "createdAt" : "2016-10-26T17:44:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "java.io.IOException: Packet len352518912 is out of range!",
+    "createdAt" : "2016-10-31T17:37:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Kafka consumer property 'resetOffsets' has no effect",
+    "createdAt" : "2016-11-01T10:54:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Booting up application without Kafka or Zookeeper",
+    "createdAt" : "2016-11-03T11:33:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Add batching support for consumer applications",
+    "createdAt" : "2016-11-10T21:36:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Poor performance",
+    "createdAt" : "2016-11-17T22:21:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Use a docker image for kafka on CI environment to run tests. ",
+    "createdAt" : "2016-12-08T17:03:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Support Boot 1.5 configuration properties for Kafka",
+    "createdAt" : "2016-12-14T01:36:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Consume standardized additional kafka properties from Boot",
+    "createdAt" : "2016-12-16T17:38:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Allow custom configuration of partition metadata producer",
+    "createdAt" : "2016-12-19T13:36:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "`s.c.st.k.bindings.producer.bufferSize` is ignored ",
+    "createdAt" : "2017-01-04T23:01:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "KafkaBinderHealthIndicator doesn't work with SSL",
+    "createdAt" : "2017-01-11T18:08:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Test the binder implementation with different kafka releases",
+    "createdAt" : "2017-01-17T20:03:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Sporadic `TopicExistsException` at start with 0.10.1.1 cluster",
+    "createdAt" : "2017-01-24T16:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "spring-integration-kafka included twice",
+    "createdAt" : "2017-01-31T13:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Separate binding from queue provisioning",
+    "createdAt" : "2017-01-31T15:15:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Cannot configure Kafka through java API",
+    "createdAt" : "2017-02-01T16:02:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Starting with 1.2, starter baseline should be Kafka 0.10.1",
+    "createdAt" : "2017-02-01T19:59:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "KafkaMessageChannelBinder DlqProducer doesn't work with SSL",
+    "createdAt" : "2017-02-07T11:53:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Incorrect property name for producer batch size",
+    "createdAt" : "2017-02-08T11:24:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "spring cloud-stream kafka disable check for kafka and zookeeper instance running on application startup",
+    "createdAt" : "2017-02-10T06:41:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Add support for Avro GenericData Record to DLQ ErrorHandler()",
+    "createdAt" : "2017-02-13T21:26:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Spring boot startup loop",
+    "createdAt" : "2017-02-16T15:27:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Reinstate `spring-cloud-stream-binder-kafka-test-support` artifact",
+    "createdAt" : "2017-02-18T10:13:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "JUnit dependency should be excluded",
+    "createdAt" : "2017-02-19T16:43:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Make the name of the Kafka DLQ configurable",
+    "createdAt" : "2017-03-03T14:57:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Add support for LZ4 compression in producer",
+    "createdAt" : "2017-03-10T21:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Scaling consumers on PCF doesn't work as expected",
+    "createdAt" : "2017-03-29T17:01:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Wrong reference in Kafka properties section ",
+    "createdAt" : "2017-03-29T17:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Regression: `TopicExistsException` reported again after provisioning changes",
+    "createdAt" : "2017-03-31T16:26:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Consuming from topics with higher consumer count than partition count not possible though auto rebalancing enabled",
+    "createdAt" : "2017-04-03T12:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Increase isolation between Kafka tests",
+    "createdAt" : "2017-04-04T15:40:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Kafka Binder POM contains repository info",
+    "createdAt" : "2017-04-06T16:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Binding Properties Should Override Equivalent Boot (Default) Properties",
+    "createdAt" : "2017-04-13T13:51:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Health Indicator is been created with wrong properties",
+    "createdAt" : "2017-04-14T15:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "enable-auto-commit is not working",
+    "createdAt" : "2017-04-14T15:35:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Default spring boot console logging pattern corruption",
+    "createdAt" : "2017-05-03T09:40:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "KafkaBinderConfigurationProperties does not handle dot-named kafka configuration properties",
+    "createdAt" : "2017-05-03T11:55:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Kafka producer should support SpEL expressions to indicate target topic",
+    "createdAt" : "2017-05-10T12:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Remove log format setting in KafkaBinderEnvironmentPostProcessor",
+    "createdAt" : "2017-05-11T18:08:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Add support for setting the message key via SpEL",
+    "createdAt" : "2017-05-12T03:12:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Move UnexpectedPartitionCountHandling out of Provisioner implementation",
+    "createdAt" : "2017-05-12T20:00:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Create new branch for 1.2.x",
+    "createdAt" : "2017-05-17T15:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Update master to 1.3.0.BUILD-SNAPSHOT",
+    "createdAt" : "2017-05-17T15:21:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Create CI plan for 1.2.x branch",
+    "createdAt" : "2017-05-17T15:24:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Problem with Serializers and Deserializers during channel binding",
+    "createdAt" : "2017-05-19T21:12:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Move KStream binder to the main kafka binder repo",
+    "createdAt" : "2017-05-23T15:39:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Honour `startOffsets` setting and don't hardcode `auto.offset.reset`",
+    "createdAt" : "2017-05-23T17:28:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "kafka sync producer takes longer time on the first request ",
+    "createdAt" : "2017-05-25T06:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Make it possible to use a different ProducerFactory/ConsumerFactory from the KafkaMessageChannelBinder ",
+    "createdAt" : "2017-05-31T02:44:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Group ID from Spring Boot configuration is overridden with anonymous",
+    "createdAt" : "2017-05-31T17:12:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Current runtime scaling status",
+    "createdAt" : "2017-06-02T07:00:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Add consumer lag metrics",
+    "createdAt" : "2017-06-08T03:57:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "It should be possible to set retention.bytes or retention.ms when creating a topic",
+    "createdAt" : "2017-06-09T11:58:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Consumer stops receiving messages after group rebalance",
+    "createdAt" : "2017-06-13T10:45:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Unused parameter log messages when health endpoint is called",
+    "createdAt" : "2017-06-15T16:11:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Drop Boot 1.4 support and simplify current code",
+    "createdAt" : "2017-06-16T13:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Topic validation should indicate the topic name that caused the error",
+    "createdAt" : "2017-06-18T14:49:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Add documentation for KStream binder",
+    "createdAt" : "2017-06-21T18:27:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Add test module for 0.10.2 version of Kafka",
+    "createdAt" : "2017-06-21T18:27:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Drop Kafka 0.9 test module and support in 1.3",
+    "createdAt" : "2017-06-21T18:28:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "spring cloud sleuth stream kafka",
+    "createdAt" : "2017-06-22T08:49:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Add more comprehensive test coverage for KStream binder",
+    "createdAt" : "2017-06-22T14:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "React to consumer rebalance",
+    "createdAt" : "2017-06-29T08:42:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "How to write a smoke test for the using of this project with embedded kafka?",
+    "createdAt" : "2017-07-05T15:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Investigate SLF4J duplication issues",
+    "createdAt" : "2017-07-11T19:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Partitioning should use the existing partition count",
+    "createdAt" : "2017-07-11T20:57:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Remove `resetOffsets` as a consumer option",
+    "createdAt" : "2017-07-12T14:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "application unable to start, when @cacheable and spring-cloud-stream-binder-kafka 1.3.0.BUILD-SNAPSHOT are used together",
+    "createdAt" : "2017-07-24T10:23:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "auto.offset.reset policy cannot be changed",
+    "createdAt" : "2017-08-07T09:07:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Refactor and adapt to core's error-handling strategy",
+    "createdAt" : "2017-08-10T15:02:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "DLQ Producer is Missing Some Properties",
+    "createdAt" : "2017-08-11T18:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Configure bootstrap servers instead of brokers and zookeeper",
+    "createdAt" : "2017-08-12T00:43:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Set default SpEL to configure partition key expression for outbound messages",
+    "createdAt" : "2017-08-17T09:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Revisit the use and naming for \"autoCommitOffset\" and \"autoCommitOnError\" properties",
+    "createdAt" : "2017-08-22T18:02:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Upgrading to Kafka 11.0.0 client",
+    "createdAt" : "2017-08-26T15:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Add support for Kafka 0.11 ",
+    "createdAt" : "2017-09-01T15:39:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Provide TimeWindow operation properties in KStream as first class binder properties",
+    "createdAt" : "2017-09-08T03:44:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "KStream binder: Default key or value Serde for producer",
+    "createdAt" : "2017-09-09T01:56:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Sync 2.0 branch ",
+    "createdAt" : "2017-09-13T13:42:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Is spring-cloud-kafka currenlty supporting backpressure?",
+    "createdAt" : "2017-09-18T17:04:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Add kafka-header property to accept trusted packages",
+    "createdAt" : "2017-09-18T17:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Update KStream docs to include the 1.3 RC1 features",
+    "createdAt" : "2017-09-18T17:12:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Broker Leader Change is not Handled",
+    "createdAt" : "2017-09-20T18:51:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Fix KafkaBinderMetrics in 2.0 branch",
+    "createdAt" : "2017-09-21T19:46:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Refactor Kafka binder test-module",
+    "createdAt" : "2017-09-21T23:58:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Investigate why \"Kafka Metrics\" section is missing from the generated docs",
+    "createdAt" : "2017-09-22T14:37:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Consumer Provisioning Leaves Dangling Consumer",
+    "createdAt" : "2017-09-28T13:08:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Refactor bootstrap server configuration",
+    "createdAt" : "2017-09-28T21:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "TopicExistsException check improvement in KafkaTopicProvisioner",
+    "createdAt" : "2017-09-28T21:19:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "KafkaTestBinder: Ensure error infrastructure beans are unique",
+    "createdAt" : "2017-09-28T21:23:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Reevaluate the use of PropertyPlaceholderAutoConfiguration in KafkaBinderConfiguration",
+    "createdAt" : "2017-09-28T21:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Ensure that partition count is handled properly in Kafka binder",
+    "createdAt" : "2017-09-28T21:26:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Consider using KStreamBuilderFactoryBean from Spring Kafka",
+    "createdAt" : "2017-09-28T21:29:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Making KStream application ID configurable",
+    "createdAt" : "2017-09-28T21:30:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "KafkaBinderHealthIndicator blocking application without timeout",
+    "createdAt" : "2017-09-29T06:47:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "[Kafka-Binder-0.11] Upgrade to Spring Kafka 1.3.0.RELEASE",
+    "createdAt" : "2017-10-02T16:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "increasing of max.request.size parameter does not affect on version 3.3.0",
+    "createdAt" : "2017-10-02T17:11:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "spring-cloud-stream-binder-kafka11 breaks deserialization of avro encoded messages with NPE",
+    "createdAt" : "2017-10-10T10:36:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Document partitioning workflow when scaling characteristics is applied",
+    "createdAt" : "2017-10-10T13:05:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Document transaction configuration",
+    "createdAt" : "2017-10-11T15:03:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Consider adding exception information to Headers in the Kafka11 binder",
+    "createdAt" : "2017-10-13T13:41:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "spring-cloud-stream-binder-kafka 2.0.0.M1 can't receive event message",
+    "createdAt" : "2017-10-16T02:50:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Number of expected partitions mismatch",
+    "createdAt" : "2017-10-16T11:42:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Consider reusing the Kafka consumer in health indicator",
+    "createdAt" : "2017-10-16T17:33:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Investigate 0.10 and 0.11 broker compatibility with SCSt 1.3 and 2.0 apps",
+    "createdAt" : "2017-10-20T15:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Refactor AbstractTestBinder to interact with actual interceptors instead of relying on test channels",
+    "createdAt" : "2017-10-25T19:04:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Kafka11 Starter pulls in kafka binder not kafka11 binder",
+    "createdAt" : "2017-10-27T02:25:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Unable to pass consumer configuration to Kafka",
+    "createdAt" : "2017-10-27T09:36:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Where to see Kafka Event Acknowledgment ",
+    "createdAt" : "2017-10-27T15:17:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "kafka binder logs consumer config every time when doing health check",
+    "createdAt" : "2017-10-30T06:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Verify that kafka-binder and kstream-binder can coexist in the same application",
+    "createdAt" : "2017-10-30T18:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Investigate Kafka 1.0 compatibility",
+    "createdAt" : "2017-11-01T14:43:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Adapt to deprecated KStream APIs when upgrading to Kafka 1.0",
+    "createdAt" : "2017-11-05T23:55:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "@ConfigurationProperties metadata missing from jar file",
+    "createdAt" : "2017-11-07T13:43:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Fix binder tests for content type changes",
+    "createdAt" : "2017-11-07T16:54:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Kafka binder metrics not showing up in /metrics in spring boot actuator",
+    "createdAt" : "2017-11-07T21:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "We need properties to configure the inbound MessagingMessageConverter",
+    "createdAt" : "2017-11-08T15:52:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "ReplicationFactor not properly set when deleting topic at runtime",
+    "createdAt" : "2017-11-13T14:37:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "Add Kafka 1.0 compatibility",
+    "createdAt" : "2017-11-15T15:40:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "pausing and resuming consumption",
+    "createdAt" : "2017-11-16T12:27:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Support for KStream branch and split",
+    "createdAt" : "2017-11-22T15:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "kstream11 with Kafka 0.11.0.1 not working but kstream with Kafka 0.10.1.1 works.",
+    "createdAt" : "2017-12-23T04:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "serializer error with Kafka 1.0.0",
+    "createdAt" : "2017-12-23T04:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Cannot run two kstream apps simultaneously with one Kafka instance",
+    "createdAt" : "2017-12-25T21:53:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Spring Cloud Stream Kafka Binder: “Invalid transition attempted from state IN_TRANSACTION to state IN_TRANSACTION”",
+    "createdAt" : "2018-01-05T17:20:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Support deserialization exception handler: LogAndContinueExceptionHandler",
+    "createdAt" : "2018-01-06T22:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Backport producer-only transactions to 0.11 branch",
+    "createdAt" : "2018-01-08T15:48:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Add support for DeferredAcknowledgmentMessageSource",
+    "createdAt" : "2018-01-08T18:02:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Add data processing support for branched KStream predicates",
+    "createdAt" : "2018-01-08T19:26:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Please bring in log4j",
+    "createdAt" : "2018-01-09T17:07:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Kakfa Streams binder inbound message conversion",
+    "createdAt" : "2018-01-14T23:10:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Kafka11 Binder does not work with the 1.0.0 client",
+    "createdAt" : "2018-01-17T16:15:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "spring-cloud-stream with new kafka-clients missing features",
+    "createdAt" : "2018-01-18T09:55:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Resolve the Kafka Broker and zookeeper node from service discovery",
+    "createdAt" : "2018-01-19T06:44:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Kafka Stream binder: Revisit manual instantiation of Serde classes",
+    "createdAt" : "2018-01-22T18:45:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Magic v1 does not support record headers using spring boot 2.0 and kafka client 0.11.x",
+    "createdAt" : "2018-01-27T23:33:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "kafka metrics tests are failing",
+    "createdAt" : "2018-01-29T22:47:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Revisit KStream binder documentation",
+    "createdAt" : "2018-01-29T22:52:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "KStreamListenerParameterAdapter crashes with NPE on Kafka tombstones records",
+    "createdAt" : "2018-01-31T19:58:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Fix tests to comply with double-conversion fixes in core",
+    "createdAt" : "2018-02-03T13:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "application.properties syntax",
+    "createdAt" : "2018-02-04T04:30:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Kafka inserting messages to wrong topic",
+    "createdAt" : "2018-02-04T06:21:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Kafka streams binder multiple input bindings",
+    "createdAt" : "2018-02-05T14:32:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Kafka Streams binder - multiple streamlistener/streamconfig support",
+    "createdAt" : "2018-02-05T14:33:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "Provisioner should apply other binder kafka properties",
+    "createdAt" : "2018-02-08T17:53:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "ClassCast exception when  testing a KStream application",
+    "createdAt" : "2018-02-12T10:32:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Rework KMCB.ProducerConfigurationMessageHandler",
+    "createdAt" : "2018-02-13T23:40:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "ClassCastException with the latest snapshot build",
+    "createdAt" : "2018-02-14T11:36:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "Doesnt build, KafkaMessageChannelBinder.handleMessageInternal overrides final method",
+    "createdAt" : "2018-02-14T14:42:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "PartitionHandler unaware of Kafka partition count",
+    "createdAt" : "2018-02-14T16:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "Revisit KStream docs",
+    "createdAt" : "2018-02-20T15:38:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "KafkaBinderMetrics are not exported with Spring Boot 2.0",
+    "createdAt" : "2018-02-27T12:41:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Bump version of SIK and SK",
+    "createdAt" : "2018-02-27T16:29:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Make KafkaBinderHealthIndicator a conditional on HealthIndicator to avoid CNFE",
+    "createdAt" : "2018-03-01T20:48:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Allow to disable Micrometer metrics",
+    "createdAt" : "2018-03-02T14:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "KafkaProperties is not found when explicit binder configuration is used",
+    "createdAt" : "2018-03-03T00:04:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "DefaultKafkaHeaderMapper$NonTrustedHeaderType encountered with a minimal SCS pipeline",
+    "createdAt" : "2018-03-05T12:37:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Make KafkaBinderMetrics as @ConditionalOnClass(MeterRegistry.class)",
+    "createdAt" : "2018-03-05T16:01:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Set custom topic configs in NewTopic object at KafkaTopicProvisioner.class",
+    "createdAt" : "2018-03-06T14:10:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Add ackEachRecord property",
+    "createdAt" : "2018-03-08T15:09:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "Add support for topic name wildcards",
+    "createdAt" : "2018-03-14T10:09:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Allow state store creation when using process/transform method in DSL",
+    "createdAt" : "2018-03-18T17:53:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Address NPE in kafka streams binder",
+    "createdAt" : "2018-03-21T20:54:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "DLQs do not work with headerMode: raw in spring-cloud-stream-binder-kafka v1.3.2 as KafkaMessageChannelBinder.getErrorMessageHandler always uses EmbeddedHeaderUtils when it encounters a Throwable payload.",
+    "createdAt" : "2018-03-22T19:41:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "why spring.cloud.stream.default.consumer.concurrency=5 is not work",
+    "createdAt" : "2018-03-28T03:12:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "Kafka Streams binder: IllegalAccessException in non-public classes with StreamListener method",
+    "createdAt" : "2018-03-28T22:55:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Port #350 to master",
+    "createdAt" : "2018-04-02T16:24:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "KTable binding in Kafka Streams binder",
+    "createdAt" : "2018-04-02T21:32:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Study abstraction for lower level Serdes in Kafka Streams",
+    "createdAt" : "2018-04-02T23:06:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Consumer concurrency not working (all consumed message by same thread)",
+    "createdAt" : "2018-04-05T10:12:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Kafka streams binder creates a -repartition topic even though no key modifying operations are done by client code",
+    "createdAt" : "2018-04-11T12:50:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Bad link in Error Channels doc section",
+    "createdAt" : "2018-04-11T15:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "Kafka producer config issue",
+    "createdAt" : "2018-04-12T09:30:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "spring-cloud-stream-binder-kafka-streams does not support consuming from multiple kafka topics",
+    "createdAt" : "2018-04-14T11:53:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "Allow to set AckMode if autoCommitOffset is disabled",
+    "createdAt" : "2018-04-16T19:24:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "One of stream is not working when QueryableStoreRegistry autowired in more than one classes with same project",
+    "createdAt" : "2018-04-22T04:57:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "Infer SerDes used on input/output when possible",
+    "createdAt" : "2018-04-25T22:12:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Interactive query issues when multiple Kafka Streams instances are used",
+    "createdAt" : "2018-04-28T21:01:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Upgrade Kafka Client to 1.1",
+    "createdAt" : "2018-04-30T14:55:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Use Kafka 2.0 Test Support for KStreams Binder",
+    "createdAt" : "2018-04-30T14:56:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Extend multiplex support to Kafka binder",
+    "createdAt" : "2018-05-03T02:39:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Could not reset offsets to earliest to get the stream from beginning for KTable",
+    "createdAt" : "2018-05-05T01:28:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Kafka streams binder: Introduce a way to consumer offset reset from the application",
+    "createdAt" : "2018-05-05T15:41:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "binder-kafka-streams: Unable to configure AdminClient - bootstrap.servers = [kafka:9092]",
+    "createdAt" : "2018-05-08T11:44:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Can't set 'schema.registry.url' in application.yml file",
+    "createdAt" : "2018-05-09T23:38:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "spring-cloud-stream-binder-kafka: duplicated \"spring-cloud-stream-binder-test\" in pom.xml",
+    "createdAt" : "2018-05-13T06:07:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Add binding support for GlobalKTable",
+    "createdAt" : "2018-05-15T13:45:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "KafkaBinderProperties does not override with the KafkaBinderConfigurationProperties",
+    "createdAt" : "2018-05-20T16:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Serde with custom aggregater ",
+    "createdAt" : "2018-05-21T11:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "May I use the aws sqs with the binder?",
+    "createdAt" : "2018-05-22T08:47:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Unable to configure bootstrap-servers",
+    "createdAt" : "2018-06-04T14:28:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Add s.c.s.kafka.binding.<channel>.topic.properties",
+    "createdAt" : "2018-06-04T20:47:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Update Kafka Streams binder documentation",
+    "createdAt" : "2018-06-08T15:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Document Kafka 1.1 setup instruction in wiki",
+    "createdAt" : "2018-06-11T14:43:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Backport fixes from master",
+    "createdAt" : "2018-06-11T15:00:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "Wrong comparsion in JaasLoginModuleConfiguration",
+    "createdAt" : "2018-06-14T08:25:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 395,
+    "title" : "Binder throws MessageHandlingException when destination.errors is configured",
+    "createdAt" : "2018-06-14T17:23:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Expose StreamsBuilderFactoryBean thru Application context to Kafka Streams application",
+    "createdAt" : "2018-06-18T17:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Binder configuration error",
+    "createdAt" : "2018-06-20T21:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Incorporate changes that resulted from GH-139 in Rabbit binder",
+    "createdAt" : "2018-06-26T16:20:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 400,
+    "title" : "Wrong prefix listed under KStreams binder configuration",
+    "createdAt" : "2018-06-26T22:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "Provide an easy option to apply same connection credentials for Kafka and KStreams binders",
+    "createdAt" : "2018-06-26T22:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Add additional meta-data to DLQ message headers",
+    "createdAt" : "2018-06-29T19:40:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "Kafka Health actuator indicator fail randomly",
+    "createdAt" : "2018-07-04T12:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "Use Spring Boot autoconfigure-processor to optimize auto-configurations",
+    "createdAt" : "2018-07-05T21:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "Error while trying to send a message to a topic with key",
+    "createdAt" : "2018-07-06T05:01:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Kafka Spring Cloud consumer issue - Cannot convert message",
+    "createdAt" : "2018-07-16T15:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "KStreamBinderConfiguration cannot find KafkaProperties when using multi-binder configuration",
+    "createdAt" : "2018-07-17T17:35:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Streams get flagged for re-partitioning even when unnecessary.",
+    "createdAt" : "2018-07-19T20:55:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Add ability to disable calling KafkaStreams.cleanUp() on shutdown",
+    "createdAt" : "2018-07-19T21:11:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Support SpEL expression for producer destination names",
+    "createdAt" : "2018-07-22T22:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Unable to set arbitrary properties on Consumer or Producer",
+    "createdAt" : "2018-07-24T13:29:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "Fix JAAS initializer with missing properties",
+    "createdAt" : "2018-07-26T21:33:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Deprecate JaasLoginModuleConfiguration in 2.1",
+    "createdAt" : "2018-07-27T17:10:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Exposing lag metrics",
+    "createdAt" : "2018-08-01T13:30:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "KafkaMessageChannelBinder should support setting the topic name per message through the use of KafkaHeaders.TOPIC (i.e. \"kafka_topic\" header)",
+    "createdAt" : "2018-08-01T14:57:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Upgrade to Spring Boot 2.1",
+    "createdAt" : "2018-08-03T14:48:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "trying to use the jks file inside classpath",
+    "createdAt" : "2018-08-07T23:11:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "spring-cloud-config does not work with spring-cloud-stream-binder-kafka 2.0.1.RELEASE",
+    "createdAt" : "2018-08-08T10:08:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 428,
+    "title" : "Kafka Streams with Spring Cloud Function",
+    "createdAt" : "2018-08-15T16:12:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Make HealthIndicator conditional on missing KafkaBinderHealthIndicatorConfiguration ",
+    "createdAt" : "2018-08-16T20:19:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Pattern-based topic names breaks Kafka healthchecks (KafkaBinderHealthIndicator.java)",
+    "createdAt" : "2018-08-16T21:02:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Binding level key serde not working for me",
+    "createdAt" : "2018-08-22T11:04:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Remove deprecation warnings in kafka-streams tests",
+    "createdAt" : "2018-08-29T21:43:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 435,
+    "title" : "Can't set useNativeEncoding as default when using transactional binder.",
+    "createdAt" : "2018-09-03T13:58:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "how to set \"max.request.size\" for a Stream producer thread?",
+    "createdAt" : "2018-09-06T10:34:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "renew Kerberos tickets ",
+    "createdAt" : "2018-09-07T03:38:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "Use default consumer-group for multiple bindings",
+    "createdAt" : "2018-09-07T13:53:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 442,
+    "title" : "Address deprecations in kafka streams binder",
+    "createdAt" : "2018-09-07T19:52:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 443,
+    "title" : "Add docs for GlobalKTable binding",
+    "createdAt" : "2018-09-07T22:04:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Setting default configuration for all kafka consumers/producers",
+    "createdAt" : "2018-09-10T16:25:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Consider using ImportBeanDefinitionRegistrar in the binder",
+    "createdAt" : "2018-09-12T22:51:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "Kafka consumer, lag on topic metric unit is wrong?",
+    "createdAt" : "2018-09-14T09:32:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Kafka Streams binder- application id checking precedence order",
+    "createdAt" : "2018-09-18T21:13:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Add support for wiring a custom rebalance listener",
+    "createdAt" : "2018-09-25T12:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "Unable to turn off kafka health indicator",
+    "createdAt" : "2018-09-26T07:42:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "@StreamListener with the Kafka Binder should handle Kafka tombstone records",
+    "createdAt" : "2018-09-26T09:48:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 456,
+    "title" : "ContentType header value inconsistent between Kafka and Kafka Streams binders",
+    "createdAt" : "2018-10-02T15:47:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "Incorrect property validation in JassLoginModuleConfiguration",
+    "createdAt" : "2018-10-08T17:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "Not able to connect to kafka stream",
+    "createdAt" : "2018-10-09T15:49:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 464,
+    "title" : "Streams binder \"Message\" Conversion should really refer to record values, not messages",
+    "createdAt" : "2018-10-11T16:40:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 467,
+    "title" : "startOffset not honored by KStream/KTable creation",
+    "createdAt" : "2018-10-11T21:44:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "messages getting lost when autoCommitOffset is set to true and autoCommitOnError to false",
+    "createdAt" : "2018-10-12T05:51:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Kafka Streams and Spring Cloud Stream Schema Registry",
+    "createdAt" : "2018-10-12T22:02:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 470,
+    "title" : "Adjust/refactor properties merge logic based on updates in core via boot",
+    "createdAt" : "2018-10-13T13:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 474,
+    "title" : "Consumer Concurrency property has no effect",
+    "createdAt" : "2018-10-18T18:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "Microservice cannot be up when kafka is down",
+    "createdAt" : "2018-10-22T13:12:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "consumer.pause(Collection<TopicPartition> var1) is delayed ",
+    "createdAt" : "2018-10-23T09:44:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Broken logic in resetOffsets() in KafkaMessageChannelBinder",
+    "createdAt" : "2018-10-29T14:22:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Address checkstyle warnings in spring-cloud-stream-binder-kafka-core",
+    "createdAt" : "2018-11-02T18:43:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 487,
+    "title" : "Address checkstyle warnings in spring-cloud-stream-binder-kafka",
+    "createdAt" : "2018-11-06T01:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 489,
+    "title" : "Address checkstyle warnings for Kafka Streams",
+    "createdAt" : "2018-11-06T15:35:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 491,
+    "title" : "Fix TODO for Initial Seeks",
+    "createdAt" : "2018-11-06T20:10:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "missing log statement in the logandcontinue handler",
+    "createdAt" : "2018-11-07T18:31:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "KafkaBinderHealthIndicator ignores binder creation failures",
+    "createdAt" : "2018-11-08T14:53:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "spring.cloud.stream.kafka.binder.autoCreateTopics false is not honored",
+    "createdAt" : "2018-11-09T15:09:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 498,
+    "title" : "Kafka metrics not appearing on Actuator ",
+    "createdAt" : "2018-11-16T11:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "Fix ignored tests",
+    "createdAt" : "2018-11-17T17:17:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "KafkaStreamsBinderBootstrapTest takes longer time to complete",
+    "createdAt" : "2018-11-17T17:18:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "Add coverage to configure partition-count > 1 with no partition-key strategy",
+    "createdAt" : "2018-11-21T17:18:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Multibinder with Kafka Streams not work",
+    "createdAt" : "2018-11-22T09:17:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "Change of bind name giving error",
+    "createdAt" : "2018-11-22T13:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "spring-cloud-stream-binder-kafka:2.1.0.RC4 throw exception with spring-boot-2.1.2.RELEASE",
+    "createdAt" : "2018-11-28T07:25:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "\"Unknown type for contentType header\" after upgrading release train from Finchley to Greenwich",
+    "createdAt" : "2018-11-29T14:47:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "Avoid unnecessary assertions on listened parttions",
+    "createdAt" : "2018-12-06T15:21:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 513,
+    "title" : "Handling Errors when Topics dont exist",
+    "createdAt" : "2018-12-10T19:52:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Testing kafka streams app, it fails",
+    "createdAt" : "2018-12-14T11:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "spring.application.name seems to always override the consumer group in 2.1.0.RC2",
+    "createdAt" : "2018-12-14T20:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 518,
+    "title" : "NonTrustedHeaderType cannot be cast to java.util.Map",
+    "createdAt" : "2018-12-17T17:07:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "unable to set ssl.endpoint.identification.algorithm to empty",
+    "createdAt" : "2018-12-20T17:02:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "Support multiple PollableMessageSource",
+    "createdAt" : "2018-12-24T22:17:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "No way to get at Kafka SendResult",
+    "createdAt" : "2018-12-28T20:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Support channel specific group name for PollableMessageSource",
+    "createdAt" : "2019-01-03T04:26:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "spring-cloud-stream-binder-kafka unable to create producer binding",
+    "createdAt" : "2019-01-04T04:04:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "Multiple error loggers installed by default",
+    "createdAt" : "2019-01-08T03:32:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "add support for zstd compression",
+    "createdAt" : "2019-01-13T10:26:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 531,
+    "title" : "Support Tombstones on input and output",
+    "createdAt" : "2019-01-18T17:53:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Investigate the difference in InteractiveQueryService.WindowStore between v2.0 and v2.1 releases",
+    "createdAt" : "2019-01-18T18:29:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 533,
+    "title" : "Kafka binder seems to ignore group property.",
+    "createdAt" : "2019-01-21T16:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Documentation Error about Kafka Binder Properties",
+    "createdAt" : "2019-01-23T06:35:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 535,
+    "title" : "Unable to run this test in a separate spring boot project that I created using the initializr",
+    "createdAt" : "2019-01-24T16:22:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "KTable as input binding doesn't work if @input is not specified at parameter level",
+    "createdAt" : "2019-01-24T16:51:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Checkstyle upgrade",
+    "createdAt" : "2019-02-04T23:10:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Kafka partitioning configuration and skipped messages",
+    "createdAt" : "2019-02-11T15:05:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "Investigate Micrometer integration for KStream apps",
+    "createdAt" : "2019-02-12T15:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 544,
+    "title" : "Actuator health for Kafka Streams binder",
+    "createdAt" : "2019-02-12T20:35:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 545,
+    "title" : "Support wiring in a custom (or non-default) ErrorHandler",
+    "createdAt" : "2019-02-12T21:09:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "Kafka metrics not working with a multi binder configuration",
+    "createdAt" : "2019-02-12T21:32:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "ClassCastException in stream aggregation",
+    "createdAt" : "2019-02-13T06:48:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "Is it possible to use multiple stream processor?",
+    "createdAt" : "2019-02-13T14:44:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 550,
+    "title" : "Tests for KTable and GlobalKTable actuator health checks.",
+    "createdAt" : "2019-02-14T21:35:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "KafkaStreamsStateStore annotation when using multiple consumer binders",
+    "createdAt" : "2019-02-21T13:28:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "Boot's Actuator Health is down with Kafka and KStreams binders in the classpath",
+    "createdAt" : "2019-02-27T16:44:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "KafkaBinderHealthIndicator with KafkaMessageChannelBinder when only KStream Binder",
+    "createdAt" : "2019-03-01T09:58:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 556,
+    "title" : "KafkaStreamsStateStore annotation when using multiple Stores per consumer binder",
+    "createdAt" : "2019-03-07T16:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "Spring Cloud Stream + Kafka application fails to start when spring.cloud.stream.kafka.binder.required-acks is set to 'all'",
+    "createdAt" : "2019-03-12T07:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 559,
+    "title" : "Migrate docs to new style",
+    "createdAt" : "2019-03-13T15:31:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 560,
+    "title" : "Reuse  Kafka consumer in KafkaBinderMetrics",
+    "createdAt" : "2019-03-15T08:41:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 585,
+    "title" : "Add configuration property for raw String header mapping",
+    "createdAt" : "2019-03-21T18:24:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 588,
+    "title" : "Exception when using kafka and kafka-stream binders in the same app",
+    "createdAt" : "2019-03-25T20:35:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "Kafka streams - two processors in the same app causing a bean creation conflict when both of them use the same method name. ",
+    "createdAt" : "2019-03-25T20:36:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 621,
+    "title" : "Kafka connection timeout and inability to send messages",
+    "createdAt" : "2019-03-29T10:56:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 622,
+    "title" : "How do I get an exception parameter in the ErrorMessage？",
+    "createdAt" : "2019-03-31T08:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 623,
+    "title" : "Binder creates its own KTM instead of injecting Boot's",
+    "createdAt" : "2019-04-01T16:57:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 624,
+    "title" : "Use partitioning with the default topic partition-count when the property is not set.",
+    "createdAt" : "2019-04-03T09:00:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 625,
+    "title" : "Enhance application-id usage in kafka streams binder",
+    "createdAt" : "2019-04-03T14:41:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 626,
+    "title" : "Dynamic destinations don't work with a transactional binder",
+    "createdAt" : "2019-04-03T19:27:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 627,
+    "title" : "Allow for custom StateStoreSupplier",
+    "createdAt" : "2019-04-06T22:09:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 628,
+    "title" : "Allow for custom partition count in DLQ",
+    "createdAt" : "2019-04-08T10:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 629,
+    "title" : "Document the configuration of relevant properties when connecting to/from existing message-broker infrastructure",
+    "createdAt" : "2019-04-08T15:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 630,
+    "title" : "Document the configuration of relevant properties when connecting to/from existing message-broker infrastructure",
+    "createdAt" : "2019-04-08T15:54:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 632,
+    "title" : "Is it possible to configure multibinder multi kstream application?",
+    "createdAt" : "2019-04-09T14:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 633,
+    "title" : "Document KStreams + SCFn + SCSt interoperability",
+    "createdAt" : "2019-04-09T16:13:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "Kafka streams binder - multiple input bindings and Json Serde",
+    "createdAt" : "2019-04-09T20:24:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 635,
+    "title" : "Deserialization error handler fails if message contains a key",
+    "createdAt" : "2019-04-12T08:44:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 636,
+    "title" : "Kafka Streams multiple function issues",
+    "createdAt" : "2019-04-12T14:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 638,
+    "title" : "I Got Error ifno Magic v1 does not support record headers, failedMessage=GenericMessage",
+    "createdAt" : "2019-04-17T16:02:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "stream kafka support apache plusar ?",
+    "createdAt" : "2019-04-22T13:18:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 640,
+    "title" : "Allow custom timestamp extractor per binding",
+    "createdAt" : "2019-04-22T16:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 641,
+    "title" : "Kafka Streams binder does not allow autoStartup to false",
+    "createdAt" : "2019-04-22T20:24:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "Custom state stores in Kafka Streams functional support ",
+    "createdAt" : "2019-04-22T21:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 644,
+    "title" : "Make KeyValueSerdeResolver public",
+    "createdAt" : "2019-04-22T22:52:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 646,
+    "title" : "spring cloud stream kafka client excetion",
+    "createdAt" : "2019-04-23T07:25:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 650,
+    "title" : "I got Error info: Magic v1 does not support record headers",
+    "createdAt" : "2019-04-29T14:49:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 651,
+    "title" : "Consider making native serialization/deserialization the default in Kafka Streams binder",
+    "createdAt" : "2019-05-01T21:53:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 652,
+    "title" : "Consider removing BinderHeaderMapper",
+    "createdAt" : "2019-05-02T03:09:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 654,
+    "title" : "Could not intercept message  in ChannelInterceptor while using Kstream Type",
+    "createdAt" : "2019-05-06T08:07:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 655,
+    "title" : "Producer initiated Kafka Transactional Producer doesn't include group,topic,partition in transactional.id",
+    "createdAt" : "2019-05-08T13:23:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 656,
+    "title" : "Allow InteractiveQueryService used in external applications",
+    "createdAt" : "2019-05-10T15:33:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 657,
+    "title" : "Error messages are never sent to the DLQ",
+    "createdAt" : "2019-05-17T08:44:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "With Kafka Streams Binder, creation of multiple application contexts causes problems with spring-cloud-vault-aws-config",
+    "createdAt" : "2019-05-17T12:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 659,
+    "title" : "Non-native serialization/deserialization for KTable operations",
+    "createdAt" : "2019-05-21T08:18:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 660,
+    "title" : "Too many open files using spring cloud stream 2.1 + Kafka",
+    "createdAt" : "2019-05-24T15:11:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 662,
+    "title" : "stream-binder-kafka 1.3.2 can not get Acknowledgment",
+    "createdAt" : "2019-05-29T03:15:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 663,
+    "title" : "Obtaining the aggregated result when a session window closes when using .suppress()",
+    "createdAt" : "2019-05-30T15:00:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 664,
+    "title" : "Avoiding a rebalance if you need to wait longer than the heartbeat",
+    "createdAt" : "2019-05-31T22:29:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 666,
+    "title" : "I get error info ：java.lang.IllegalArgumentException: Magic v1 does not support record headers",
+    "createdAt" : "2019-06-06T02:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 667,
+    "title" : "Sleuth trace not working when using native way",
+    "createdAt" : "2019-06-06T16:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 668,
+    "title" : "Unable to connect to kafka brokers by ssl",
+    "createdAt" : "2019-06-08T12:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 671,
+    "title" : "Excessive logging with SASL and Kerberos",
+    "createdAt" : "2019-06-13T13:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 673,
+    "title" : "[Feature request] Programatically set DLQ topic name",
+    "createdAt" : "2019-06-14T11:58:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 674,
+    "title" : "Kafka streams binder - refactor duplicate methods",
+    "createdAt" : "2019-06-14T15:32:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 676,
+    "title" : "KafkaStreamsStateStore not working when the store value is an Avro SpecificRecord",
+    "createdAt" : "2019-06-17T23:03:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 677,
+    "title" : "Concurrency>1 with ResetOffsets to true seems not working",
+    "createdAt" : "2019-06-18T14:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 680,
+    "title" : "Dispatcher has no subscribers",
+    "createdAt" : "2019-06-19T07:01:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "(Global)KTableBinderConfiguration cannot find KafkaProperties when using multi-binder configuration ",
+    "createdAt" : "2019-06-20T08:15:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 682,
+    "title" : "Spring Cloud Stream Kafka Streams produces complicated topologies when using Scs serializer/deserializers",
+    "createdAt" : "2019-06-20T13:54:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 683,
+    "title" : "Add KafkaExpressionEvaluatingInterceptor",
+    "createdAt" : "2019-06-20T16:17:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 685,
+    "title" : "JsonSerializer/JsonDeserializer appends a new header (header keys are not unique, and duplicates are allowed).",
+    "createdAt" : "2019-06-21T02:22:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 684,
+    "title" : "Topic provisioning for producers ignores topic.properties settings",
+    "createdAt" : "2019-06-21T04:49:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 686,
+    "title" : "Map Kafka producer/consumer properties into Spring Cloud Stream properties automatically",
+    "createdAt" : "2019-06-24T05:10:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 687,
+    "title" : "Topic provisioning for consumers ignores topic.properties settings if binding type is KTable or GlobalKTable",
+    "createdAt" : "2019-06-24T22:42:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Functional model enhancements in Kafka Streams binder",
+    "createdAt" : "2019-06-25T15:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 689,
+    "title" : "Support transactions for producer-only bindings",
+    "createdAt" : "2019-06-27T13:46:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 690,
+    "title" : "Introduce the ability to write BiFunction based apps with Kafka Streams binder",
+    "createdAt" : "2019-06-27T18:41:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 691,
+    "title" : "Consumer receive message in kafka cluster, HA  failed.",
+    "createdAt" : "2019-06-28T10:50:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "Add support to provide a mechanism to track Send Result Metadata",
+    "createdAt" : "2019-07-02T14:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Revise KStreams docs to adapt to functional model",
+    "createdAt" : "2019-07-02T14:55:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 696,
+    "title" : "Versions of kafka, spring-kafka, and spring-integration-kafka should be in sync",
+    "createdAt" : "2019-07-02T15:34:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "Add hooks to the stream binder to allow custom processors/transformers to be applied",
+    "createdAt" : "2019-07-03T13:23:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 701,
+    "title" : "Joining 2 input KStreams",
+    "createdAt" : "2019-07-09T18:27:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 702,
+    "title" : "Kafka Streams binder - provide a Serde implementation for Collection types. ",
+    "createdAt" : "2019-07-11T21:07:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 703,
+    "title" : "Document functional Kafka Streams programming model",
+    "createdAt" : "2019-07-17T17:01:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 705,
+    "title" : "Exception after moving to spring 2.1 java.lang.ClassCastException: com.sun.proxy.$Proxy175 cannot be cast to org.apache.kafka.streams.kstream.internals.KStreamImpl",
+    "createdAt" : "2019-07-19T13:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 706,
+    "title" : "Improve InteractiveQueryService.getQueryableStore handling of InvalidStateStoreException",
+    "createdAt" : "2019-07-21T11:14:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "package java.net should be included in the DEFAULT_TRUSTED_PACKAGES",
+    "createdAt" : "2019-07-23T15:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 709,
+    "title" : "can you help me?",
+    "createdAt" : "2019-07-31T10:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 710,
+    "title" : "spring.cloud.stream.bindings.<channelName>.group not work, can you help me ?",
+    "createdAt" : "2019-07-31T10:54:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 713,
+    "title" : "Add a test to verify an output binding participates in an input binding transaction",
+    "createdAt" : "2019-08-07T14:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 715,
+    "title" : "Binder DLQ/Retry cannot be used with transactions",
+    "createdAt" : "2019-08-08T13:56:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 716,
+    "title" : "Kafka Streams BiConsumer support",
+    "createdAt" : "2019-08-09T01:19:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 718,
+    "title" : "Kafka Streams application id changes",
+    "createdAt" : "2019-08-09T15:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 722,
+    "title" : "banner - log -output triggered a second time by child-application (due to org.springframework.cloud.stream.binder.DefaultBinderFactory)",
+    "createdAt" : "2019-08-14T14:25:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 724,
+    "title" : "Support sendTimeoutExpression for synchronous producer",
+    "createdAt" : "2019-08-17T07:43:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 726,
+    "title" : "Kafka Streams binder functional support and autowiring",
+    "createdAt" : "2019-08-20T22:38:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 727,
+    "title" : "KTable don't auto convert as input channel",
+    "createdAt" : "2019-08-22T18:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 729,
+    "title" : "Can't commit Kafka transaction before Database transaction",
+    "createdAt" : "2019-08-25T13:11:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 733,
+    "title" : "Spring Cloud Stream Kafka Producer ERROR - no subscribers for channel",
+    "createdAt" : "2019-09-03T00:48:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 734,
+    "title" : "Race condition when multiple functions are present in a Kafka Streams application ",
+    "createdAt" : "2019-09-03T23:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 735,
+    "title" : "Multiple Kafka Streams functions and application ID",
+    "createdAt" : "2019-09-03T23:40:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 736,
+    "title" : "Serdes as beans in a Kafka Streams binder application",
+    "createdAt" : "2019-09-03T23:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 739,
+    "title" : "KafkaBindingProperties has no documentation (so no popup help in IDE)",
+    "createdAt" : "2019-09-06T14:09:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 741,
+    "title" : "Provide an extension point for setting offsets before starting container",
+    "createdAt" : "2019-09-09T13:44:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 742,
+    "title" : "Accept multiple ListenerContainerCustomizers",
+    "createdAt" : "2019-09-10T13:46:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 743,
+    "title" : "\"Disposable\" receive/position utilities in KakfaTestUtils",
+    "createdAt" : "2019-09-10T14:08:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "Remove deprecated KafkaMessageSource constructor",
+    "createdAt" : "2019-09-12T18:29:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "Remove all the previously deprecated properties/methods before the 3.0 release",
+    "createdAt" : "2019-09-12T21:30:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 747,
+    "title" : "Fixing sonar bugs",
+    "createdAt" : "2019-09-12T21:31:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 749,
+    "title" : "Consider making the default `DefaultKafkaHeaderMapper` a bean",
+    "createdAt" : "2019-09-18T13:59:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "KafkaBinderConfigurationProperties is not showing up in the generated JSON for config props",
+    "createdAt" : "2019-09-23T14:00:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 751,
+    "title" : "Failed to create consumer binding",
+    "createdAt" : "2019-09-24T07:25:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 752,
+    "title" : "Revise Kafka docs to include the latest client dependencies",
+    "createdAt" : "2019-09-24T14:26:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 755,
+    "title" : "Function binding names need to use dot character in Kafka Streams binder.",
+    "createdAt" : "2019-09-27T19:43:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 757,
+    "title" : "Multiple functions configuration (kafka streams binder)",
+    "createdAt" : "2019-09-28T19:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 759,
+    "title" : "Support CloudEvents Kafka Transport Binding Spec",
+    "createdAt" : "2019-09-29T12:24:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 760,
+    "title" : "Allow same binding names be reused from multiple StreamListener methods in Kafka Streams binder",
+    "createdAt" : "2019-10-01T17:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 761,
+    "title" : "Kafka Streams binder DLQ enhancements",
+    "createdAt" : "2019-10-03T02:43:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 763,
+    "title" : "Kafka Streams DLQ - more fine grained partitions control",
+    "createdAt" : "2019-10-03T14:21:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 764,
+    "title" : "Authentication error even when JAAS is disabled",
+    "createdAt" : "2019-10-04T11:46:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 766,
+    "title" : "Kafka Streams binder fails to bind with default naming convention",
+    "createdAt" : "2019-10-07T17:11:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 767,
+    "title" : "Naming kstreams binder causes startup failure if a consumer binding of type GlobalKTable is used",
+    "createdAt" : "2019-10-08T01:06:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 769,
+    "title" : "Replication factor option for Kafka Stream binder",
+    "createdAt" : "2019-10-15T11:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 770,
+    "title" : "Consumer pause & resume not working with multiple Kafka binders",
+    "createdAt" : "2019-10-16T09:55:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "Kafka Streams binder health indicator issues",
+    "createdAt" : "2019-10-17T19:09:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 772,
+    "title" : "Kafka + Websocket bean incompatibility",
+    "createdAt" : "2019-10-21T08:30:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 774,
+    "title" : "Null value in KStream.map causing IllegalArgumentException: Payload must not be null",
+    "createdAt" : "2019-10-22T09:22:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 775,
+    "title" : "Kafka + Websocket bean incompatibility",
+    "createdAt" : "2019-10-22T14:45:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 779,
+    "title" : "BindersHealthContributor throws NPE when access by actuate endpoint(health)",
+    "createdAt" : "2019-10-23T03:00:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 782,
+    "title" : "Allow Kafka Streams producer binding to plug in custom StreamPartitioner.",
+    "createdAt" : "2019-10-24T00:01:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 783,
+    "title" : "When multiple functions are present, require spring.cloud.stream.function.definition property for Kafka Streams functions",
+    "createdAt" : "2019-10-24T04:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 784,
+    "title" : "Enable customization on StreamsBuilderFactoryBean",
+    "createdAt" : "2019-10-24T13:34:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 785,
+    "title" : "State store is registered for each input binding with functional definition",
+    "createdAt" : "2019-10-24T13:37:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 787,
+    "title" : "Availability for version 3.0",
+    "createdAt" : "2019-10-25T11:25:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 788,
+    "title" : "kafka-stream binder won't start when prometheus meterRegistry is present",
+    "createdAt" : "2019-10-29T05:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 789,
+    "title" : "how to set only custom/user headers as native header",
+    "createdAt" : "2019-10-29T21:10:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 790,
+    "title" : "Producer converterBeanName support",
+    "createdAt" : "2019-10-29T22:20:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 791,
+    "title" : "Stream Binder Health Indicator creates Admin client every times",
+    "createdAt" : "2019-10-30T09:52:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 793,
+    "title" : "Getting error in configuring default binder while configuring with Multiple binders",
+    "createdAt" : "2019-11-05T17:20:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 795,
+    "title" : "Allow Kafka Streams binding to use Kotlin lambdas",
+    "createdAt" : "2019-11-06T15:34:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 796,
+    "title" : "Re-introduce BinderHeaderMapper",
+    "createdAt" : "2019-11-06T23:46:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 800,
+    "title" : "Fine grained dlq control per input binding in Kafka Streams",
+    "createdAt" : "2019-11-12T20:10:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 803,
+    "title" : "Actuator checks for binders fail",
+    "createdAt" : "2019-11-20T07:42:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 805,
+    "title" : "KafkaConsumerProperties and KafkaProducerProperties configuration randomness",
+    "createdAt" : "2019-11-20T17:24:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 806,
+    "title" : "Failed to convert to message NPE at deserialization",
+    "createdAt" : "2019-11-21T01:05:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 807,
+    "title" : "Ability to map to complex object while batching",
+    "createdAt" : "2019-11-22T17:02:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "Enhancement: Support Coercing `replication-factor` when default and Broker defines a policy",
+    "createdAt" : "2019-11-26T02:17:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 809,
+    "title" : "KafkaBinderMetrics.computeUnconsumedMessages blocks prometheus actuator",
+    "createdAt" : "2019-11-26T13:44:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 810,
+    "title" : "about serializer and deserializer config bug",
+    "createdAt" : "2019-12-02T07:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 812,
+    "title" : "Kafka Streams ObjectMapper modules",
+    "createdAt" : "2019-12-11T15:16:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 813,
+    "title" : "KafkaStreamsBinderMetrics throws java.lang.ClassCastException",
+    "createdAt" : "2019-12-12T09:14:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 814,
+    "title" : "KafkaStreamsBinderMetrics throws ClassCastException",
+    "createdAt" : "2019-12-12T09:22:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 815,
+    "title" : "Kafka Streams binder not scanning properties from multi binder configuration",
+    "createdAt" : "2019-12-12T22:56:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 817,
+    "title" : "Kafka Binder switches over to localhost",
+    "createdAt" : "2019-12-13T10:05:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 818,
+    "title" : "Kafka partitions do not get created if non-native apps used",
+    "createdAt" : "2019-12-13T10:10:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 819,
+    "title" : "Kafka partitions do not get created if relaunching a stream",
+    "createdAt" : "2019-12-13T10:15:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 820,
+    "title" : "Kafka Streams Binder fails when destination is a pattern",
+    "createdAt" : "2019-12-16T07:34:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 822,
+    "title" : "Spring cloud stream producer and consumer unable to create Topic and Partitions  in Confluent Kafka",
+    "createdAt" : "2019-12-18T13:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 823,
+    "title" : "Update Kafka Client compatibility matrix",
+    "createdAt" : "2019-12-23T19:25:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 879,
+    "title" : "Bug: Two BinderConfigurationPropertiesBeans are created",
+    "createdAt" : "2019-12-27T12:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 825,
+    "title" : "List names of all internal topics?",
+    "createdAt" : "2020-01-09T09:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 826,
+    "title" : "Sleuth headers get lost at the KStream output",
+    "createdAt" : "2020-01-09T20:09:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 827,
+    "title" : "Broken documentation links",
+    "createdAt" : "2020-01-09T23:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 828,
+    "title" : "Study the possibility of adding Kotlin support in Kafka Streams binder",
+    "createdAt" : "2020-01-14T15:50:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 830,
+    "title" : "Enable usage of spring-kafka's authorizationExceptionRetryInterval",
+    "createdAt" : "2020-01-16T09:35:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 832,
+    "title" : "Don't reuse consumer group from `spring.kafka.consumer`",
+    "createdAt" : "2020-01-16T16:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 833,
+    "title" : "Make InteractiveQueryService be able to return all metadata for specific store",
+    "createdAt" : "2020-01-22T17:59:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 834,
+    "title" : "How to update replication-factors for created topic?",
+    "createdAt" : "2020-01-27T11:15:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 835,
+    "title" : "Backport Kafka auth issue fixes to 2.x.x",
+    "createdAt" : "2020-01-30T21:07:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 836,
+    "title" : "Value serde not properly initialized when using @KafkaStreamsStateStore",
+    "createdAt" : "2020-02-02T18:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 837,
+    "title" : "Consider changing the default serdes of @KafkaStreamsStateStore",
+    "createdAt" : "2020-02-02T18:15:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 838,
+    "title" : "Deserialization of contentType header fails when tracing is enabled",
+    "createdAt" : "2020-02-03T07:59:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 839,
+    "title" : "KafkaStreamsBinderMetrics throws class cast exception",
+    "createdAt" : "2020-02-05T09:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 841,
+    "title" : "Kafka Streams same input and output destination causes already defined error",
+    "createdAt" : "2020-02-07T08:25:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 842,
+    "title" : "Kafka Streams binder health indicator overwrites partition info",
+    "createdAt" : "2020-02-11T00:39:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 844,
+    "title" : "Kafka streams concurrency settings unintentionally taking previous values",
+    "createdAt" : "2020-02-11T17:37:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 847,
+    "title" : "Kafka Asynchronous Producer Message Time Out Exception",
+    "createdAt" : "2020-02-13T03:59:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "min-partition-count not considered upon topic creation",
+    "createdAt" : "2020-02-14T07:51:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 849,
+    "title" : "How to kafka streams pause and resume?",
+    "createdAt" : "2020-02-18T08:58:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 850,
+    "title" : "Why doesn't KStreamBinder have a lifecycle for DefaultBinding?",
+    "createdAt" : "2020-02-19T01:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 851,
+    "title" : "Kafka Stream Topology visualization",
+    "createdAt" : "2020-02-20T17:59:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 852,
+    "title" : "branch method publishes to only one topic",
+    "createdAt" : "2020-02-24T16:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 853,
+    "title" : "Do not propagate \"internal\" headers to output dest",
+    "createdAt" : "2020-02-25T16:21:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 856,
+    "title" : "Issues setting configuration",
+    "createdAt" : "2020-02-27T19:48:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 857,
+    "title" : "Multiple ApplicationIds Issue",
+    "createdAt" : "2020-02-28T09:47:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 858,
+    "title" : "Using transaction-id-prefix removes deliveryAttempt field in Kafka Header",
+    "createdAt" : "2020-03-02T15:36:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 859,
+    "title" : "ClassCastException casting to String",
+    "createdAt" : "2020-03-06T20:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 861,
+    "title" : "Add the ability for the binder to detect ChainedKafkaTransactionManager bean",
+    "createdAt" : "2020-03-10T16:28:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 862,
+    "title" : "Metrics Issue with Multiple Consumer Threads and Partitions",
+    "createdAt" : "2020-03-11T15:55:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 863,
+    "title" : "IllegalArgumentException: Unknown type for contentType header value: class [B",
+    "createdAt" : "2020-03-12T05:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 864,
+    "title" : "Manual commit - acknowledge() returns void and CommitFailedException happens after acknowledge() has already been called",
+    "createdAt" : "2020-03-12T14:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 865,
+    "title" : "Metric names are mutated/sanitized for Kafka Micrometer non-universally",
+    "createdAt" : "2020-03-13T14:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 866,
+    "title" : "DefaultAfterRollbackProcessor retries are not limited to 10 by default",
+    "createdAt" : "2020-03-16T11:01:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 867,
+    "title" : "Example in the Doc yields Exception",
+    "createdAt" : "2020-03-16T19:11:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 869,
+    "title" : "Kakfa message is committed before database transaction",
+    "createdAt" : "2020-03-18T10:03:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 870,
+    "title" : "Using DLQ in Spring Cloud Stream Binder Kafka does not commit offsets",
+    "createdAt" : "2020-03-20T06:35:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 872,
+    "title" : "java.lang.ClassCastException: class io.confluent.kafka.serializers.KafkaAvroDeserializer",
+    "createdAt" : "2020-03-26T16:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 874,
+    "title" : "bind different type of topics in the same broker not working",
+    "createdAt" : "2020-03-30T18:01:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 875,
+    "title" : "Overriding \"(consumer|producer)Properties.bootstrap.servers\" should be prohibited",
+    "createdAt" : "2020-03-31T22:04:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 876,
+    "title" : "Spring Cloud Stream default config for manual commit does not work as described in the doc",
+    "createdAt" : "2020-04-02T14:21:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 877,
+    "title" : "Deprecate/Rename autoCommitOffset - much confusion with enable.auto.commit",
+    "createdAt" : "2020-04-02T14:34:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 880,
+    "title" : "Metrics Issue with Multiple Consumer concurrency",
+    "createdAt" : "2020-04-14T18:43:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1005,
+    "title" : "Documentation inconsistency regarding programming model",
+    "createdAt" : "2020-04-15T09:56:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 882,
+    "title" : "Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration",
+    "createdAt" : "2020-04-17T20:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 883,
+    "title" : "kafka stream memory leak",
+    "createdAt" : "2020-04-20T05:39:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 884,
+    "title" : "Setting ProducerListener<K, V> in Customizer always gives byte[]",
+    "createdAt" : "2020-04-20T09:46:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 885,
+    "title" : "Verify transactions with Kafka Streams binder",
+    "createdAt" : "2020-04-21T15:07:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 886,
+    "title" : "Dlq error handling not working in TransformerSupplier for Avro Messages",
+    "createdAt" : "2020-04-28T19:08:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 888,
+    "title" : "Error in KafkaTopicProvisioner",
+    "createdAt" : "2020-05-01T13:42:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 889,
+    "title" : "Spring cloud Streams Kafka manual Acknowledge is not working intermittently. ",
+    "createdAt" : "2020-05-05T17:35:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 890,
+    "title" : "Using classpath in location of ssl configs for Kafka producer/consumer",
+    "createdAt" : "2020-05-06T17:37:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 891,
+    "title" : "Allow the configuration of the Kafka producer close timeout",
+    "createdAt" : "2020-05-07T13:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 892,
+    "title" : "batch-mode doesn't work when using 3.x",
+    "createdAt" : "2020-05-13T10:16:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 893,
+    "title" : "Partition selector name not apply for functional bindings",
+    "createdAt" : "2020-05-13T13:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 895,
+    "title" : "Hoxton.SR4 Kafka Streams and Spring Boot WebFlux 2.2.6 Actuator is not compatible",
+    "createdAt" : "2020-05-15T10:24:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 896,
+    "title" : "Spring Cloud Kafka Streams and Cloud Zipkin hide actuator metrics.",
+    "createdAt" : "2020-05-15T13:27:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 897,
+    "title" : "StateStore Beans will only be added to function bindings having at least one KStream parameter",
+    "createdAt" : "2020-05-18T08:34:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 898,
+    "title" : "stream-binder-kafka 3.0.3 and spring kafka2.3.4.releasse conflict in Haxton.M3 release train",
+    "createdAt" : "2020-05-19T14:59:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 899,
+    "title" : "num.stream.threads not taking effect",
+    "createdAt" : "2020-05-19T15:08:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 900,
+    "title" : "Support AddNotRetryableException to DefaultAfterRollbackProcessor",
+    "createdAt" : "2020-05-20T06:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 902,
+    "title" : "Consuming Batch documentation error",
+    "createdAt" : "2020-05-21T07:40:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 905,
+    "title" : "Revisit/Refactor how we handle concurrency in Kafka Streams binder",
+    "createdAt" : "2020-05-22T16:27:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 906,
+    "title" : "Missing records with Consumer<Flux<Message<?>>>",
+    "createdAt" : "2020-05-22T22:25:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 910,
+    "title" : "Out of Sync documentation",
+    "createdAt" : "2020-05-28T00:08:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 913,
+    "title" : "Dynamic destinations with mutiple binders:",
+    "createdAt" : "2020-05-28T13:58:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 914,
+    "title" : "Micrometer Meters Missing with Boot 2.3",
+    "createdAt" : "2020-06-10T13:49:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 915,
+    "title" : "Clean up Javadocs",
+    "createdAt" : "2020-06-10T20:47:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 918,
+    "title" : "Messages Not Sending to DLQ",
+    "createdAt" : "2020-06-17T10:12:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 919,
+    "title" : "Kafka brokers resolve DNS",
+    "createdAt" : "2020-06-19T08:43:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 920,
+    "title" : "Dynamic Kafka host URI",
+    "createdAt" : "2020-06-19T08:43:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 921,
+    "title" : "Dynamic URI Kafka cluster",
+    "createdAt" : "2020-06-19T08:43:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 922,
+    "title" : "Add \"kafka-streams\" dependency in \"spring-cloud-starter-stream-kafka\"",
+    "createdAt" : "2020-06-20T17:18:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 923,
+    "title" : "Different values for secret with several topics",
+    "createdAt" : "2020-06-22T10:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 924,
+    "title" : "Multi binder Multi Cluster kerberos jaas configuration fails with KRBError",
+    "createdAt" : "2020-06-25T20:25:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 925,
+    "title" : "Missing documentation on KeyValueSerdeResolver functionality",
+    "createdAt" : "2020-06-29T10:11:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 926,
+    "title" : "OOM often appears in the process of use. When analyzing the dump file, we found that a large number of MessageHeader class objects could not be recovered, and the version we used was 2.0.1",
+    "createdAt" : "2020-07-03T10:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 927,
+    "title" : "Reference and API docs links broken on project page",
+    "createdAt" : "2020-07-04T09:28:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 928,
+    "title" : "Synchronous Producer is not fully synchronous since it returns after 10s by default",
+    "createdAt" : "2020-07-06T07:36:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 929,
+    "title" : "applicationId issue on Multiple Inputs",
+    "createdAt" : "2020-07-06T12:02:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 930,
+    "title" : "Incompatibility between Spring Boot 2.2.8.RELEASE and Spring-Cloud Hoxton.SR6",
+    "createdAt" : "2020-07-06T12:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 932,
+    "title" : "Enable zstd compression type",
+    "createdAt" : "2020-07-07T05:03:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 933,
+    "title" : "Customise objectmapper used by JsonSerde",
+    "createdAt" : "2020-07-08T15:07:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 935,
+    "title" : "KafkaNullConverter should support MimeTypeUtils.ALL",
+    "createdAt" : "2020-07-12T13:36:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 937,
+    "title" : "Serde For stream Producer.",
+    "createdAt" : "2020-07-18T23:10:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 938,
+    "title" : "KTable materialization - messages sometimes missing",
+    "createdAt" : "2020-07-20T15:27:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 939,
+    "title" : "Healthcheck not working properly when used in reactive context (Webflux)",
+    "createdAt" : "2020-07-27T07:28:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 941,
+    "title" : "Upgrade KafkaStreams API usage for InteractiveQueryService ",
+    "createdAt" : "2020-07-30T11:49:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 942,
+    "title" : "Expanding InteractiveQueryService API to act as StreamsMetadataState proxy",
+    "createdAt" : "2020-07-30T12:17:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 943,
+    "title" : "Misconfigured Kafka Micrometer for MultiBinder",
+    "createdAt" : "2020-07-30T17:20:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 944,
+    "title" : "Unable to create to multiple binders with SASL_SSL protocol.",
+    "createdAt" : "2020-07-31T12:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 945,
+    "title" : "Retry and exponential backoff configuration in the latest release.",
+    "createdAt" : "2020-08-03T04:35:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 946,
+    "title" : "Using DeadLetterPublishingRecoverer with DefaultAfterRollbackProcessor in transactional StreamListener does not commit offset",
+    "createdAt" : "2020-08-03T09:16:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 949,
+    "title" : "Verify Micrometer instrumentation for Kafka Streams with Spring Boot 2.3.x ",
+    "createdAt" : "2020-08-11T14:52:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 951,
+    "title" : "Update Topic configuration from topic.properties on topic provisioning",
+    "createdAt" : "2020-08-14T07:24:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 952,
+    "title" : "KafkaMessageChannelBinder sets retries to 0",
+    "createdAt" : "2020-08-18T14:15:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 954,
+    "title" : "Clarification on autoCreateTopics",
+    "createdAt" : "2020-08-22T20:44:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 959,
+    "title" : "Duplicate messages while consuming events from kafka enabled azure event hub",
+    "createdAt" : "2020-09-06T19:19:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 960,
+    "title" : "Configure the consumer properties programatically",
+    "createdAt" : "2020-09-15T12:17:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 961,
+    "title" : "destinationIsPattern: true using @StreamListener not picking up new topics with matching pattern (KafkaStreamsBinder)",
+    "createdAt" : "2020-09-17T05:33:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 962,
+    "title" : "Unable to override default confluent monitoring interceptor properties",
+    "createdAt" : "2020-09-18T12:21:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 964,
+    "title" : "NPE during consumer-binding",
+    "createdAt" : "2020-09-23T08:58:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 966,
+    "title" : "Support supplying custom destination resolver when sending to DLQ",
+    "createdAt" : "2020-10-01T02:04:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 967,
+    "title" : "spring.kafka.bootstrap-servers overrides brokers configuration of every binder.",
+    "createdAt" : "2020-10-07T13:52:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 968,
+    "title" : "NPE when using mixed reactive kafka/streams bindings in spring boot 2.3.4",
+    "createdAt" : "2020-10-08T15:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 971,
+    "title" : "ApplicationContext not set in KafkaMessageListenerContainer -> leads to NPE when using nativeDecoding",
+    "createdAt" : "2020-10-13T11:29:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 972,
+    "title" : "Kafka key is not populated when using kafka-binding with Flux",
+    "createdAt" : "2020-10-13T14:41:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 973,
+    "title" : "Dispatcher has no subscribers when value serializer is set for reactive producer in Spring boot 2.3.3",
+    "createdAt" : "2020-10-13T14:44:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 974,
+    "title" : "When using kstream with actuator in the classpath application never exits in case of exceptions",
+    "createdAt" : "2020-10-15T11:46:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 977,
+    "title" : "KafkaStreams Binder Cannot Configure Interceptors Individually",
+    "createdAt" : "2020-10-20T16:00:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 979,
+    "title" : "Move ConfluentSchemaRegistryClient from spring-cloud/spring-cloud-schema-registry",
+    "createdAt" : "2020-10-27T14:52:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 981,
+    "title" : "org.springframework.cloud.stream.binding.BindingService - Failed to create consumer binding",
+    "createdAt" : "2020-11-04T13:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1022,
+    "title" : "java.lang.ClassCastException: class java.lang.Object cannot be cast to class com.example.Sensor",
+    "createdAt" : "2020-11-05T02:23:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 982,
+    "title" : "Can we consume messages from multiple topics?",
+    "createdAt" : "2020-11-06T05:59:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "Can we consume messages from multiple topics?",
+    "createdAt" : "2020-11-06T05:59:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 984,
+    "title" : "KafkaStreamBrancher - How to direct to multiple topics?",
+    "createdAt" : "2020-11-06T16:29:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 985,
+    "title" : "Copy truststore/keystore from classpath to file-system",
+    "createdAt" : "2020-11-10T15:59:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 986,
+    "title" : "Broken documentation link (1.4. Error Channels)",
+    "createdAt" : "2020-11-11T07:21:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 987,
+    "title" : "Wrong documentation for kafka streams concurrency on binder level",
+    "createdAt" : "2020-11-11T17:23:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 990,
+    "title" : "Support allowNonTransactional config for ProducerConfigurationMessageHandler ",
+    "createdAt" : "2020-11-16T09:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1021,
+    "title" : "Kafka not working after upgrading to Hoxton.SR9",
+    "createdAt" : "2020-11-18T15:59:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 993,
+    "title" : "Spring cloud stream kafka transaction configuration",
+    "createdAt" : "2020-11-23T11:26:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 994,
+    "title" : "Serde inference issues with multiple functions",
+    "createdAt" : "2020-11-30T22:36:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 997,
+    "title" : "binder's consumerProperties and producerProperties are not used, only configuration is applied",
+    "createdAt" : "2020-12-01T16:24:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 995,
+    "title" : "How can I disable the creation of the \"KafkaBinderMetrics\" bean from \"KafkaBinderConfiguration\" Configuration for a multi-binder context?",
+    "createdAt" : "2020-12-02T16:01:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 996,
+    "title" : "Suggestion: Possibility to customize the value of the client.id property for consumer and producers factories",
+    "createdAt" : "2020-12-02T17:57:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1000,
+    "title" : "How to configure batch consumption？",
+    "createdAt" : "2020-12-04T09:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1003,
+    "title" : "Integration of message router in Kafka Streams applications",
+    "createdAt" : "2020-12-08T17:40:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1006,
+    "title" : "HealthIndicator always returning UNKNOWN status even if connected",
+    "createdAt" : "2020-12-10T22:16:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1007,
+    "title" : "Unable to set Kafka consumer property ",
+    "createdAt" : "2020-12-11T19:20:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1011,
+    "title" : "multiple Flux suppliers don't work",
+    "createdAt" : "2020-12-30T16:56:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1012,
+    "title" : "Method composition not work",
+    "createdAt" : "2021-01-08T20:07:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1020,
+    "title" : "Apache Kafka Multiple Processor not working, Error while fetching metadata with correlation id xx",
+    "createdAt" : "2021-01-08T20:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1013,
+    "title" : "Exception - y: java.lang.NoClassDefFoundError: io/confluent/kafka/serializers/AbstractKafkaSchemaSerDe",
+    "createdAt" : "2021-01-14T01:25:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1019,
+    "title" : "Upgrade to Spring Cloud 2020.0.0 - KafkaBinderMetrics - ConcurrentModificationException",
+    "createdAt" : "2021-01-15T14:50:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1014,
+    "title" : "unable to customize AdminClientConfig programmatically",
+    "createdAt" : "2021-01-18T14:23:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1015,
+    "title" : "Help exposing KafkaBinderHealthIndicator / KafkaStreamsBinderHealthIndicator",
+    "createdAt" : "2021-01-18T14:56:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1016,
+    "title" : "Consumer Group Picks Messages from Beginning",
+    "createdAt" : "2021-01-21T12:00:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1025,
+    "title" : "Support Instrumentation of Spring Cloud Stream Kafka Streams Binder",
+    "createdAt" : "2021-01-29T09:14:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1024,
+    "title" : "Customize binder names in AdminClientConfigCustomizer",
+    "createdAt" : "2021-02-03T00:01:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1026,
+    "title" : "Restore autoCommitOffset behavior",
+    "createdAt" : "2021-02-09T22:02:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1029,
+    "title" : "Documentation of kafka client-broker compatibility",
+    "createdAt" : "2021-02-19T06:12:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1030,
+    "title" : "KStream function detection",
+    "createdAt" : "2021-02-22T16:16:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1031,
+    "title" : "Provide a Mechanism to Hook a Custom DLPR to the Binding's DLQ",
+    "createdAt" : "2021-02-24T15:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1032,
+    "title" : "Consuming Batch property name error",
+    "createdAt" : "2021-02-25T01:44:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1034,
+    "title" : "KafkaProducers aren't properly closed",
+    "createdAt" : "2021-03-02T17:38:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1036,
+    "title" : "RecordMetadata channel not found when custom converter is used",
+    "createdAt" : "2021-03-05T22:12:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1037,
+    "title" : "How to reuse stream function destination in Spring Stream Kafka Processing",
+    "createdAt" : "2021-03-09T08:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1038,
+    "title" : "Add support to stop/start Kafka Streams binding",
+    "createdAt" : "2021-03-09T16:03:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1040,
+    "title" : "Remove StreamsListener (for KafkaStreams micrometer metrics)",
+    "createdAt" : "2021-03-11T20:32:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1043,
+    "title" : "Set custom BatchMessageConverter for consumer binding in batch mode",
+    "createdAt" : "2021-03-13T16:33:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1044,
+    "title" : ".branch() with Kotlin Array<KStream<..>> fail with 'Attempted to reify generic array type'",
+    "createdAt" : "2021-03-16T08:37:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1046,
+    "title" : "Refactor DlqSender to Wait For the SendResultFuture to Complete",
+    "createdAt" : "2021-03-18T21:02:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1047,
+    "title" : "APM support",
+    "createdAt" : "2021-03-19T12:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1049,
+    "title" : "Spring cloud bus and cloud stream kafka simultaneous usage conflict",
+    "createdAt" : "2021-03-23T15:41:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1050,
+    "title" : "Support customize message before sending to DLQ",
+    "createdAt" : "2021-03-24T08:40:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1051,
+    "title" : "When destinationIsPattern: true ,kafka stream bind ignore binding level Sede setting",
+    "createdAt" : "2021-03-24T14:00:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1053,
+    "title" : "spring cloud stream kafka streams DLQ",
+    "createdAt" : "2021-03-25T00:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1055,
+    "title" : "Cannot run application using kafka-streams 2.7.0",
+    "createdAt" : "2021-03-26T06:35:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1056,
+    "title" : "Update Kafka Binder Configuration at runtime",
+    "createdAt" : "2021-03-26T09:31:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1057,
+    "title" : "EmbeddedKafka for KafkaStreams Integration testing",
+    "createdAt" : "2021-03-31T07:39:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1058,
+    "title" : "Intermittent `TopicAuthorizationException` only while rebalancing",
+    "createdAt" : "2021-04-05T19:46:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1059,
+    "title" : "Healthcheck is not showing actual status of consumer",
+    "createdAt" : "2021-04-09T17:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1060,
+    "title" : "Duplicate consumption on multithreaded scenario (concurrency > 1)",
+    "createdAt" : "2021-04-15T09:48:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1061,
+    "title" : "Enable Kafka binder for Graal Native compilation",
+    "createdAt" : "2021-04-20T15:31:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1062,
+    "title" : "Upgrade spring-kafka to 2.7.0",
+    "createdAt" : "2021-04-25T09:12:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1063,
+    "title" : "How to configure kafka broker programmatically",
+    "createdAt" : "2021-04-26T04:50:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1064,
+    "title" : "Enable Kafka Streams binder for Graal native compilation",
+    "createdAt" : "2021-04-28T00:56:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1065,
+    "title" : "Kafka Streams Binder error using interceptor.classes for Consumer or Producer",
+    "createdAt" : "2021-04-28T14:47:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1068,
+    "title" : "Verify multi-binder behavior with native changes in the binder",
+    "createdAt" : "2021-04-28T16:28:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1069,
+    "title" : "Verify Kafka binder metrics behavior with the native changes. ",
+    "createdAt" : "2021-04-28T16:29:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1075,
+    "title" : "Supporting reactor-kafka",
+    "createdAt" : "2021-05-04T15:57:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1071,
+    "title" : "Error for kstream Inclusion (listener' cannot be null)",
+    "createdAt" : "2021-05-04T21:12:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1072,
+    "title" : "ConsumerConfigCustomizer/ProducerConfigCustomizer in Cloud Binder for  kafka-streams",
+    "createdAt" : "2021-05-05T20:02:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1073,
+    "title" : "KTable not deduplicating the incoming records with same keys",
+    "createdAt" : "2021-05-07T22:41:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1074,
+    "title" : "Dynamically changing the instanceindex with spring cloud stream kafka",
+    "createdAt" : "2021-05-10T07:06:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1076,
+    "title" : "Kafka Message Key Header is dropped for Supplier functions",
+    "createdAt" : "2021-05-11T15:53:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1077,
+    "title" : "dlqProducerProperties not work",
+    "createdAt" : "2021-05-13T08:10:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1078,
+    "title" : "Spring Kafka overriding custom header pattern and removes id from Producer Record Header",
+    "createdAt" : "2021-05-18T10:54:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1079,
+    "title" : "Consumer creation invokes a method that doesn't exist in ContainerProperties from spring-kafka:2.7.1",
+    "createdAt" : "2021-05-20T17:06:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1080,
+    "title" : "The problem with testing state store using Interactive Query Service",
+    "createdAt" : "2021-05-21T09:32:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1081,
+    "title" : "Suspicious multiplication of ScheduledExecutorService in the method \"bindTo\" of class \"KafkaBinderMetrics\"",
+    "createdAt" : "2021-05-21T14:51:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1084,
+    "title" : "Support set kafkaTemplate for afterRollbackProcessor",
+    "createdAt" : "2021-05-27T15:33:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1085,
+    "title" : "Unable to start processor when using KTable as output",
+    "createdAt" : "2021-05-31T18:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1087,
+    "title" : "Add batchMode value in ContainerProperties",
+    "createdAt" : "2021-06-07T09:33:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1088,
+    "title" : "Explore function composition options in Kafka Streams binder",
+    "createdAt" : "2021-06-08T21:53:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1089,
+    "title" : "cannot fully disable kafka binder and cloud stack for testing",
+    "createdAt" : "2021-06-11T07:24:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1090,
+    "title" : "kafka consumer attempts to acquire info from a partition that is no longer assigned to it",
+    "createdAt" : "2021-06-14T08:13:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1092,
+    "title" : "Fix issues with Kafka Streams binder JAAS configuration",
+    "createdAt" : "2021-06-22T20:26:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1094,
+    "title" : "Investigate why jaas initializer tests are failing on CI",
+    "createdAt" : "2021-06-23T21:45:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1095,
+    "title" : "Can't provision  topic consumer property from bindings",
+    "createdAt" : "2021-06-25T14:44:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1096,
+    "title" : "Support named components in source and sink components in Kafka Streams",
+    "createdAt" : "2021-07-01T23:19:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1099,
+    "title" : "Timeout in KafkaTransactionManager",
+    "createdAt" : "2021-07-07T17:57:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1100,
+    "title" : "broker is shutdown, MessageChannel send return true",
+    "createdAt" : "2021-07-09T02:55:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1101,
+    "title" : "How to use sendSuccessChannel?",
+    "createdAt" : "2021-07-10T07:12:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1102,
+    "title" : "Document KStreams + Sleuth integration",
+    "createdAt" : "2021-07-13T15:33:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1103,
+    "title" : "Investigate test failures",
+    "createdAt" : "2021-07-13T23:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1104,
+    "title" : "spring.cloud.stream.kafka.binder.brokers is ignored",
+    "createdAt" : "2021-07-14T12:17:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1106,
+    "title" : "Binding application-id is failing after adding spring-cloud-starter-* dependency.",
+    "createdAt" : "2021-07-17T08:07:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1107,
+    "title" : "A lot of logs are produced due to metrics",
+    "createdAt" : "2021-07-18T15:16:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1108,
+    "title" : "DlqDestinationResolver not working using functional style",
+    "createdAt" : "2021-07-21T19:38:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "Fix failing tests in Kafka Streams binder",
+    "createdAt" : "2021-07-28T00:03:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1110,
+    "title" : "Address Kafka Streams state machine changes introduced in KIP-696",
+    "createdAt" : "2021-07-28T22:58:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1112,
+    "title" : "KafkaMessageChannelBinder.DlqSender.sendToDlq()  causes OutOfMemory exceptions for large messages",
+    "createdAt" : "2021-08-02T07:40:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1113,
+    "title" : "auto-create-topics does not set allow.auto.create.topics property",
+    "createdAt" : "2021-08-02T19:12:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1114,
+    "title" : "Messages aren't sent to DLQ using Spring Cloud Stream in batch mode",
+    "createdAt" : "2021-08-04T09:12:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1116,
+    "title" : "Functional style does not support producer serdes",
+    "createdAt" : "2021-08-05T10:59:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1117,
+    "title" : "Kafka Custom Batch Message Converter and target type of Records",
+    "createdAt" : "2021-08-09T08:11:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1118,
+    "title" : "Kafka messages are being lost on INVALID_FETCH_SESSION_EPOCH ",
+    "createdAt" : "2021-08-11T14:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1119,
+    "title" : "Kafka Streams binder health indicator issues",
+    "createdAt" : "2021-08-11T21:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1120,
+    "title" : "Kafka Streams binder interactive query issue",
+    "createdAt" : "2021-08-11T22:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1121,
+    "title" : "Function with batch producer fails during Kafka Avro serialization",
+    "createdAt" : "2021-08-12T09:35:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1122,
+    "title" : "What's the polling logic behind the scene by using reactive consumer and consuming in parallel?",
+    "createdAt" : "2021-08-17T14:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1126,
+    "title" : "Streams Binder does not honor the binding autostartup property",
+    "createdAt" : "2021-08-19T19:35:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1129,
+    "title" : "Avoid blocking committed() call in KafkaBinderMetrics",
+    "createdAt" : "2021-08-23T20:07:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1132,
+    "title" : "Remove duplicated tests in Kafka Streams binder",
+    "createdAt" : "2021-08-25T18:13:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1133,
+    "title" : "Kafka Streams 2.8 branching changes",
+    "createdAt" : "2021-08-25T22:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1147,
+    "title" : "Cannot convert from [[B] to [com.example.DummyMessage] for GenericMessage",
+    "createdAt" : "2021-08-27T06:46:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1134,
+    "title" : "auto topic creation setting does not work",
+    "createdAt" : "2021-08-30T10:02:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1135,
+    "title" : "Disable Container Retries (by default) When Binding Retries are Enabled Without EnableDlq",
+    "createdAt" : "2021-08-30T13:16:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1157,
+    "title" : "Processing of Kotlin Lambda Functions broken when using KStreams - spring boot fails to start",
+    "createdAt" : "2021-08-30T13:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1137,
+    "title" : "Example in Doc Still Refers to Deprecated Property",
+    "createdAt" : "2021-09-03T14:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1138,
+    "title" : "Healthcheck is down when consumers are not running",
+    "createdAt" : "2021-09-06T06:50:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1139,
+    "title" : "Random generated client id for the pollable consumers",
+    "createdAt" : "2021-09-08T03:35:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1140,
+    "title" : "Problem setting the BatchErrorHandler with the ListenerContainerCustomizer",
+    "createdAt" : "2021-09-08T15:14:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1141,
+    "title" : "Streams Documentation Regarding CleanUp Default is Out of Date",
+    "createdAt" : "2021-09-13T16:49:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1145,
+    "title" : "Reconsider Destroying Producer Factory",
+    "createdAt" : "2021-09-15T16:37:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1148,
+    "title" : "More native changes recommended for native compilation",
+    "createdAt" : "2021-09-21T22:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1149,
+    "title" : "streamConfigGlobalProperties overriden for subsequent functions",
+    "createdAt" : "2021-09-22T14:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1150,
+    "title" : "InvalidStateStoreException when REPLACE_THREAD is used in StreamsUncaughtExceptionHandler",
+    "createdAt" : "2021-09-22T22:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1152,
+    "title" : "Default properties not working when extended consumer/producer properties exist.",
+    "createdAt" : "2021-09-23T12:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1153,
+    "title" : "RangeAssignor doesn't work as expected.",
+    "createdAt" : "2021-09-25T07:43:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1154,
+    "title" : "Can't convert value of class java.lang.String to class org.apache.kafka.common.serialization.ByteArraySerializer specified in value.serializer, failedMessage=GenericMessage",
+    "createdAt" : "2021-09-26T12:24:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1155,
+    "title" : "Producer callback in Spring Cloud Stream with reactor core publisher",
+    "createdAt" : "2021-09-27T07:14:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1156,
+    "title" : "Cannot invoke \"org.springframework.core.ResolvableType.getType()\" because \"types[0]\" is null",
+    "createdAt" : "2021-09-27T08:00:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1159,
+    "title" : "Getting NPE for binding bean creation with multiple binding functions (one of them isn't streams app)",
+    "createdAt" : "2021-10-12T22:15:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1160,
+    "title" : "Setting own bootstrap.server/Kafka cluster for the DLT of a binding",
+    "createdAt" : "2021-10-19T02:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1161,
+    "title" : "InteractiveQueryService breaks Streams Application Isolation if mutliple Stream Apps using same Store Name",
+    "createdAt" : "2021-10-19T10:30:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1163,
+    "title" : "Error creating bean with name 'functionBindingRegistrar' defined in class path resource",
+    "createdAt" : "2021-10-29T14:39:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1164,
+    "title" : "Dynamic routing by KafkaBinder",
+    "createdAt" : "2021-11-03T12:13:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1165,
+    "title" : "Make health indicator configurable by the users",
+    "createdAt" : "2021-11-04T09:35:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1167,
+    "title" : "Question: how to send messages to multiple topics?",
+    "createdAt" : "2021-11-09T06:11:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1168,
+    "title" : "Kafka streams application not able to pickup the custom serde provided",
+    "createdAt" : "2021-11-10T09:03:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1170,
+    "title" : "Classpath reference doesn't work for arbitrary consumerProperties",
+    "createdAt" : "2021-11-19T14:46:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1173,
+    "title" : "Migrate recipes from samples repo to the main docs",
+    "createdAt" : "2021-11-29T17:02:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1176,
+    "title" : "KeyValueSerdeResolver uses streamConfigGlobalProperties and ignores extended consumer/producer properties",
+    "createdAt" : "2021-12-10T10:30:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1178,
+    "title" : "AdminClient / KafkaAdmin with merged standard kafka and binder properties",
+    "createdAt" : "2021-12-13T11:58:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1180,
+    "title" : "Spring Cloud Stream binder",
+    "createdAt" : "2021-12-22T06:25:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1181,
+    "title" : "publishing to incorrect partition in DLQ",
+    "createdAt" : "2021-12-23T11:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1182,
+    "title" : "Cannot disable nativeEncoding/nativeDecoding in general for Kafka Streams binder",
+    "createdAt" : "2021-12-28T17:10:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1183,
+    "title" : "A Topic lost a subscription node during run time",
+    "createdAt" : "2021-12-30T06:22:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1184,
+    "title" : "Repeated consumption of a previous successful consumption every 5 minutes for half an hour",
+    "createdAt" : "2021-12-30T07:23:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1185,
+    "title" : "Spring Boot web endpoints are queryable before HostInfo becomes available",
+    "createdAt" : "2022-01-04T03:08:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1186,
+    "title" : "Topic and header will be omitted when using event type based routing",
+    "createdAt" : "2022-01-05T09:03:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1187,
+    "title" : "Wrong type header information when using Function",
+    "createdAt" : "2022-01-11T12:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1190,
+    "title" : "Kafka creating more partitions than hardcoded in the properties file",
+    "createdAt" : "2022-01-24T09:44:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1191,
+    "title" : "Inbound KTable (and possibly GlobalKTable) ignoring nativeDecoding=false",
+    "createdAt" : "2022-01-25T11:49:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1192,
+    "title" : "Use of @EmbeddedKafka with Kafka Streams binder",
+    "createdAt" : "2022-01-26T09:09:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1194,
+    "title" : "2 Consumers of same topic",
+    "createdAt" : "2022-01-27T00:00:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1195,
+    "title" : "Fix Pause/Resume Documentation",
+    "createdAt" : "2022-02-05T07:59:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1196,
+    "title" : "@EmbeddedKafka not working properly with GlobalKTable and transformer",
+    "createdAt" : "2022-02-07T12:51:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1198,
+    "title" : "Live producer threads and dynamic-destination-cache-size property",
+    "createdAt" : "2022-02-08T14:31:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1199,
+    "title" : "How to wait for future inside Kafka Stream map()?",
+    "createdAt" : "2022-02-11T06:29:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1200,
+    "title" : "DefaultErrorHandler not exists",
+    "createdAt" : "2022-02-16T03:09:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1201,
+    "title" : "ClassCastException in pipeline: Kafka Streams Function -> Kafka Function -> Kafka Streams Consumer",
+    "createdAt" : "2022-02-18T09:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1202,
+    "title" : "NOT_ENOUGH_REPLICAS Errors After Upgrading The Spring Boot And Spring Cloud Version",
+    "createdAt" : "2022-02-24T19:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1203,
+    "title" : "KafkaBinderMetrics prevent JVM shutdown due to not shutting down scheduler thread pool!",
+    "createdAt" : "2022-03-03T09:15:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1204,
+    "title" : "Kafka bindings from previous test class remains active in the next test class",
+    "createdAt" : "2022-03-03T12:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1205,
+    "title" : "Kafka Streams Serdes having nested generic doesn't work",
+    "createdAt" : "2022-03-06T10:25:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1206,
+    "title" : "Support for DLQ in batch mode",
+    "createdAt" : "2022-03-18T15:04:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1207,
+    "title" : "spring.cloud.stream.bindings.process-in-0.consumer.concurrency not working in case of UpperCase letter in process name",
+    "createdAt" : "2022-03-24T12:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1208,
+    "title" : "ListenerContainerWithDlqAndRetryCustomizer template points to localhost:9092",
+    "createdAt" : "2022-03-29T14:02:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1214,
+    "title" : "Looking for a sample with AWS MSK IAM ",
+    "createdAt" : "2022-05-09T20:37:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1217,
+    "title" : "[Feature Request] Allow to accept a list of customizers instead of a unique one for KafkaMessageChannelBinder",
+    "createdAt" : "2022-06-08T02:26:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1219,
+    "title" : "spring-kafka-test is compile (not test) dependency of spring-cloud-stream-binder-kafka-streams:3.2.3 and 3.2.4 ",
+    "createdAt" : "2022-06-10T07:46:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1221,
+    "title" : "Batch mode is not working",
+    "createdAt" : "2022-10-18T22:06:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1224,
+    "title" : "Unknown Autoconfigured KafkaAvroSerializer and KafkaAvroDeSerializers ",
+    "createdAt" : "2022-12-27T15:26:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1225,
+    "title" : "Spring Cloud stream binder kafka DLQ Handling for Batching doesn't work",
+    "createdAt" : "2023-02-01T07:21:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1226,
+    "title" : "Enable DLQ with destinations as pattern",
+    "createdAt" : "2023-02-07T11:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1234,
+    "title" : "Fetch message timestamp",
+    "createdAt" : "2024-04-18T15:18:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1235,
+    "title" : "Health Check for Binders Always Shows 'UNKNOWN' Status Due to Empty binderHealthContributors Map (Missing Bean Configuration for ReactorKafkaBinderHealthIndicator?)",
+    "createdAt" : "2024-05-13T14:52:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1237,
+    "title" : "Unable to start spring boot application  when using KTable as output , KStream as output and KTable as Input ",
+    "createdAt" : "2024-08-19T22:24:20Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,1400 @@
+{
+  "repoOwner" : "openrewrite",
+  "repoName" : "rewrite-maven-plugin",
+  "forks" : [ {
+    "createdAt" : "2020-06-23T21:23:32Z"
+  }, {
+    "createdAt" : "2020-10-06T09:24:37Z"
+  }, {
+    "createdAt" : "2020-10-20T18:05:08Z"
+  }, {
+    "createdAt" : "2021-04-30T12:22:01Z"
+  }, {
+    "createdAt" : "2021-05-25T07:18:09Z"
+  }, {
+    "createdAt" : "2021-06-20T15:36:44Z"
+  }, {
+    "createdAt" : "2021-10-01T19:55:57Z"
+  }, {
+    "createdAt" : "2021-10-13T06:14:39Z"
+  }, {
+    "createdAt" : "2021-10-26T22:43:32Z"
+  }, {
+    "createdAt" : "2021-12-10T10:30:19Z"
+  }, {
+    "createdAt" : "2021-12-30T13:12:51Z"
+  }, {
+    "createdAt" : "2022-02-19T03:31:03Z"
+  }, {
+    "createdAt" : "2022-02-28T12:24:04Z"
+  }, {
+    "createdAt" : "2022-03-28T14:48:05Z"
+  }, {
+    "createdAt" : "2022-04-18T09:46:19Z"
+  }, {
+    "createdAt" : "2022-04-28T10:56:19Z"
+  }, {
+    "createdAt" : "2022-06-16T13:35:54Z"
+  }, {
+    "createdAt" : "2022-06-20T15:20:58Z"
+  }, {
+    "createdAt" : "2022-06-23T19:31:00Z"
+  }, {
+    "createdAt" : "2022-06-30T03:53:01Z"
+  }, {
+    "createdAt" : "2022-07-21T19:19:19Z"
+  }, {
+    "createdAt" : "2022-07-28T19:07:52Z"
+  }, {
+    "createdAt" : "2022-12-27T16:11:39Z"
+  }, {
+    "createdAt" : "2023-01-15T20:24:19Z"
+  }, {
+    "createdAt" : "2023-01-18T02:28:01Z"
+  }, {
+    "createdAt" : "2023-01-19T16:36:54Z"
+  }, {
+    "createdAt" : "2023-01-27T12:55:12Z"
+  }, {
+    "createdAt" : "2023-02-06T20:36:07Z"
+  }, {
+    "createdAt" : "2023-02-23T13:42:30Z"
+  }, {
+    "createdAt" : "2023-03-02T00:28:13Z"
+  }, {
+    "createdAt" : "2023-03-25T21:16:47Z"
+  }, {
+    "createdAt" : "2023-04-12T05:55:58Z"
+  }, {
+    "createdAt" : "2023-04-12T10:44:48Z"
+  }, {
+    "createdAt" : "2023-04-17T13:46:06Z"
+  }, {
+    "createdAt" : "2023-05-12T16:57:22Z"
+  }, {
+    "createdAt" : "2023-05-18T03:43:07Z"
+  }, {
+    "createdAt" : "2023-05-18T18:56:07Z"
+  }, {
+    "createdAt" : "2023-06-02T19:12:10Z"
+  }, {
+    "createdAt" : "2023-06-06T16:55:58Z"
+  }, {
+    "createdAt" : "2023-06-17T19:36:47Z"
+  }, {
+    "createdAt" : "2023-08-07T00:43:09Z"
+  }, {
+    "createdAt" : "2023-08-08T17:42:43Z"
+  }, {
+    "createdAt" : "2023-09-09T14:14:54Z"
+  }, {
+    "createdAt" : "2023-09-15T08:55:33Z"
+  }, {
+    "createdAt" : "2023-10-04T21:40:33Z"
+  }, {
+    "createdAt" : "2023-10-20T09:54:01Z"
+  }, {
+    "createdAt" : "2023-11-09T13:36:17Z"
+  }, {
+    "createdAt" : "2023-11-09T22:44:18Z"
+  }, {
+    "createdAt" : "2023-11-21T06:21:45Z"
+  }, {
+    "createdAt" : "2023-12-29T03:47:18Z"
+  }, {
+    "createdAt" : "2023-12-31T09:00:48Z"
+  }, {
+    "createdAt" : "2024-01-16T13:16:53Z"
+  }, {
+    "createdAt" : "2024-01-25T02:59:57Z"
+  }, {
+    "createdAt" : "2024-02-09T13:15:34Z"
+  }, {
+    "createdAt" : "2024-02-20T16:14:00Z"
+  }, {
+    "createdAt" : "2024-02-23T15:50:21Z"
+  }, {
+    "createdAt" : "2024-02-25T10:56:08Z"
+  }, {
+    "createdAt" : "2024-04-07T20:20:43Z"
+  }, {
+    "createdAt" : "2024-05-02T17:20:11Z"
+  }, {
+    "createdAt" : "2024-06-17T10:02:52Z"
+  }, {
+    "createdAt" : "2024-07-08T17:31:21Z"
+  }, {
+    "createdAt" : "2024-08-13T05:56:06Z"
+  }, {
+    "createdAt" : "2024-08-31T20:49:14Z"
+  }, {
+    "createdAt" : "2024-09-05T17:34:13Z"
+  }, {
+    "createdAt" : "2024-09-10T12:35:55Z"
+  }, {
+    "createdAt" : "2024-09-25T17:22:14Z"
+  }, {
+    "createdAt" : "2024-10-26T11:58:40Z"
+  }, {
+    "createdAt" : "2024-10-31T09:49:06Z"
+  }, {
+    "createdAt" : "2024-11-20T09:50:46Z"
+  }, {
+    "createdAt" : "2024-11-26T18:19:08Z"
+  }, {
+    "createdAt" : "2024-12-07T14:17:46Z"
+  }, {
+    "createdAt" : "2025-01-19T10:33:56Z"
+  }, {
+    "createdAt" : "2025-02-22T09:31:42Z"
+  }, {
+    "createdAt" : "2025-03-07T11:22:27Z"
+  }, {
+    "createdAt" : "2025-03-11T09:56:32Z"
+  }, {
+    "createdAt" : "2025-03-28T22:00:31Z"
+  }, {
+    "createdAt" : "2025-03-29T05:56:05Z"
+  }, {
+    "createdAt" : "2025-03-29T17:11:32Z"
+  }, {
+    "createdAt" : "2025-04-23T02:23:54Z"
+  }, {
+    "createdAt" : "2025-05-11T21:27:57Z"
+  }, {
+    "createdAt" : "2025-07-18T21:15:40Z"
+  }, {
+    "createdAt" : "2025-07-28T05:51:07Z"
+  }, {
+    "createdAt" : "2025-09-18T06:06:37Z"
+  }, {
+    "createdAt" : "2025-10-26T09:33:16Z"
+  }, {
+    "createdAt" : "2025-10-31T13:13:40Z"
+  }, {
+    "createdAt" : "2025-12-15T10:10:16Z"
+  }, {
+    "createdAt" : "2026-01-13T14:48:55Z"
+  } ],
+  "issues" : [ {
+    "number" : 28,
+    "title" : "Add a \"Discover\" goal that lists all of the Recipes available on the classpath",
+    "createdAt" : "2020-08-13T01:09:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Maven plugin should not bundle any recipe dependencies, such as spring-rewrite ",
+    "createdAt" : "2020-08-13T01:13:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Set MavenModel.transitiveDependenciesByScope with dependencies from Mojo Project",
+    "createdAt" : "2020-08-21T20:10:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Update Maven Plugin's RewriteFixMojo to deal with generated or deleted files",
+    "createdAt" : "2020-09-07T19:18:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Maven Rewrite config location should be a list, allow URLs as well as file paths",
+    "createdAt" : "2020-09-09T21:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Test fails",
+    "createdAt" : "2020-10-06T09:50:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Ineffeciency: rewrite:warn runs when rewrite:fix has been requested, doing the same work twice",
+    "createdAt" : "2020-10-20T19:49:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Maven plugin crashes when no rewrite.yml is present in the project",
+    "createdAt" : "2020-10-20T20:00:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "rewrite:publish fails for projects with parents that are not in Maven Central",
+    "createdAt" : "2020-10-23T20:36:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Maven plugin should not duplicate work between rewrite:warn and rewrite:fix",
+    "createdAt" : "2020-12-10T20:09:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "MavenParser NPE when invoked from child module in multi-module build, e.g.: spring-cloud-netflix-eureka-server",
+    "createdAt" : "2020-12-11T22:00:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Populate maven wrapper on MavenParser",
+    "createdAt" : "2020-12-16T00:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Checkstyle did not work following the docs",
+    "createdAt" : "2021-01-07T16:42:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Automate publishing of the plugin to maven central",
+    "createdAt" : "2021-01-19T18:32:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Evaluate cutting releases off git tags pushed to remote",
+    "createdAt" : "2021-01-27T18:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Migrate Maven plugin to Rewrite 7.x",
+    "createdAt" : "2021-02-02T22:43:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Search results display usability improvements and integration into maven and gradle plugins",
+    "createdAt" : "2021-02-21T20:26:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "CycloneDX bom can't be imported into dependency track",
+    "createdAt" : "2021-02-22T19:35:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Update secrets references to use org-wide secrets instead of repo-level secrets",
+    "createdAt" : "2021-03-02T19:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "publish maven plugin as snapshot to ossrh snapshots repository",
+    "createdAt" : "2021-03-18T16:56:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Move single-project/multi-module-project integration tests off bintray and checkstyle.xml",
+    "createdAt" : "2021-03-18T18:53:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Investigate a better solution to running the maven plugin from a multi-module project.",
+    "createdAt" : "2021-03-25T18:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "NoSuchFileException when creating a CycloneDx bom for multi-module project",
+    "createdAt" : "2021-03-26T01:51:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Try to rewrite:fix  result: Recipes not found: rg.openwrite.java.RemoveAnnotation. The similar situation  with other recipes from the library (ChangeMethodName etc). Maven plugin version 3.0.0",
+    "createdAt" : "2021-03-26T12:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Maven plugin should print SearchResult markers as comments",
+    "createdAt" : "2021-04-01T01:49:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "rename rewrite:warn to rewrite:dryRun and rewrite:fix to rewrite:run",
+    "createdAt" : "2021-04-01T01:58:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "rewrite:dryRun should default to showing what the actual changes would be, similar to git diff",
+    "createdAt" : "2021-04-07T01:24:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "leverage maven integration testing framework as alternative to invoker-plugin and groovy scripts",
+    "createdAt" : "2021-04-07T07:10:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Alternative `PomCache` directories",
+    "createdAt" : "2021-04-09T21:46:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Fail when `configLocation` is explicitly defined but not found",
+    "createdAt" : "2021-04-14T16:18:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Fall back to InMemoryPomCache if RocksdbMavenPomCache for any reason fails to initialize",
+    "createdAt" : "2021-04-14T18:21:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Don't use internal property `maven.multiModuleProjectDirectory`",
+    "createdAt" : "2021-04-21T17:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "rewrite:discover should only show top-level recipes by default",
+    "createdAt" : "2021-04-21T18:27:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Error message log output of `expecting empty but was...` (potential parser issue?)",
+    "createdAt" : "2021-04-21T18:55:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Move logging-related configuration from raw env resolution to Mojo property",
+    "createdAt" : "2021-04-21T20:15:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "General (but specifically, discovery) UI usability enhancements",
+    "createdAt" : "2021-04-21T20:24:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Configuration for failOnWarning (or failOnChanges, etc.)",
+    "createdAt" : "2021-04-21T21:03:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Value of metrics currently wired up",
+    "createdAt" : "2021-04-21T21:09:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Ignore recipes that cannot be parsed",
+    "createdAt" : "2021-04-22T00:57:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Help goal content generation",
+    "createdAt" : "2021-04-22T04:27:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Do not instantiate `log` in Mojo classes",
+    "createdAt" : "2021-04-22T07:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Use maven-provided Settings resolution for mavenParser",
+    "createdAt" : "2021-04-25T20:41:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Changes should show tree of where changes came from",
+    "createdAt" : "2021-04-26T15:51:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Two search result comments for every one result",
+    "createdAt" : "2021-05-09T19:19:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "`javax.batch.operations.JobOperator` source file not added to sourceFiles",
+    "createdAt" : "2021-06-21T16:11:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Performance improvement: only parse files needed by active recipes",
+    "createdAt" : "2021-06-24T22:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Stacktrace in output: NoSuchMethodException: org.openrewrite.config.Environment$CompositeRecipe.getVisitor()",
+    "createdAt" : "2021-06-26T21:31:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Show exceptions in log",
+    "createdAt" : "2021-07-09T15:10:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Add JavaProvenance information to ASTs parsed by the maven plugin",
+    "createdAt" : "2021-07-22T17:19:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Warning org.apache.commons:commons-io has been relocated",
+    "createdAt" : "2021-10-12T13:06:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Add ability to configure min/max cycles in the build plugin",
+    "createdAt" : "2021-10-14T15:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Recipes in project dependencies not detected / usable",
+    "createdAt" : "2021-10-18T19:38:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Problems running the maven plugin",
+    "createdAt" : "2021-10-19T13:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "org.openrewrite.maven.AddDependency only does not work",
+    "createdAt" : "2021-10-19T13:55:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Problems add a dependency after upgrade parent",
+    "createdAt" : "2021-10-22T09:06:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Generated sources in target folder should be ignored",
+    "createdAt" : "2021-10-22T11:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Cast warnings",
+    "createdAt" : "2021-10-22T14:41:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Document skipMavenParsing option",
+    "createdAt" : "2021-10-28T06:45:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Recipes invoked by the rewrite-maven-plugin throw IllegalArgument exceptions when initializing a JavaParsers classpath.",
+    "createdAt" : "2021-10-28T19:31:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "ReplaceJavaxJaxbWithJakarta and ReplaceJavaxJaxwsWithJakarta do not update managed dependencies",
+    "createdAt" : "2021-11-02T18:31:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Add Mojos to add, configure & remove rewrite-maven-plugin",
+    "createdAt" : "2021-11-06T08:02:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Nullpointer resolving maven setting.xml where there is a system property",
+    "createdAt" : "2021-12-01T14:50:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Dependency hygiene polishing",
+    "createdAt" : "2021-12-01T23:48:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "rewrite-maven-plugin snapshots to ossrh",
+    "createdAt" : "2021-12-09T19:46:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Ability to resolve encrypted maven server credentials",
+    "createdAt" : "2021-12-14T18:19:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "rewrite-maven-plugin:4.17.0-SNAPSHOT:dryRun failed.: NullPointerException",
+    "createdAt" : "2021-12-15T14:50:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Re-use MavenPomCache across sub-modules and address memory pressure",
+    "createdAt" : "2021-12-16T02:11:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "MavenOpts message about adding exports should have proper spacing",
+    "createdAt" : "2021-12-16T03:10:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "RocksDb caching can persist temporary repository unavailability indefinitely",
+    "createdAt" : "2021-12-21T21:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Update MavenOpsHelper to use the RuntimeMxBean",
+    "createdAt" : "2022-02-10T16:38:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Error: Maven visitors should not be visiting XML documents without a Maven marker",
+    "createdAt" : "2022-02-16T10:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Problem with JDK 8 32 bits",
+    "createdAt" : "2022-02-16T22:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Mac M1 dies with JNI linking error",
+    "createdAt" : "2022-02-22T00:06:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Raname directory when its path name case has changed, e.g. refactor camle-case package to lower case.",
+    "createdAt" : "2022-02-22T21:18:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "No version provided for dependency org.junit.jupiter:junit-jupiter-api",
+    "createdAt" : "2022-03-03T00:27:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "Run specific recipe regardless of the configuration in activeRecipes",
+    "createdAt" : "2022-03-18T18:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Duplicated recipes in logs",
+    "createdAt" : "2022-04-08T04:34:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Feature request : aggregate applied recipes in a multi module project and print them at the end",
+    "createdAt" : "2022-04-08T17:01:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "No fork goals",
+    "createdAt" : "2022-04-12T07:49:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Provide a better mechanism for discovering and executing recipes that are available through the build plugins",
+    "createdAt" : "2022-04-15T03:18:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Regarding RocksdbMavenPomCache",
+    "createdAt" : "2022-04-19T15:43:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Add option to revert changes that break the build",
+    "createdAt" : "2022-04-21T22:16:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Suggestion: run recipes with arguments",
+    "createdAt" : "2022-04-29T11:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Add `Quark` support to scoop up any missed files within a Maven project. ",
+    "createdAt" : "2022-04-30T17:43:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Maven plugin should apply recipe to all sub modules in one pass",
+    "createdAt" : "2022-05-04T18:25:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 350,
+    "title" : "Rewrite DryRunNoForkMojo is set to the LifecyclePhase.Compile",
+    "createdAt" : "2022-05-06T15:47:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "parseMaven returns a `Maven` Xml.Document with a different sourcePath than the current MavenProject",
+    "createdAt" : "2022-05-06T16:26:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "The last scan for resource files in `MavenMojoProjectParser` scans all maven projects.",
+    "createdAt" : "2022-05-06T16:50:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Cannot construct instance of `org.openrewrite.maven.internal.RawPom$PluginManagement`",
+    "createdAt" : "2022-05-08T20:23:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Java files should be added to already parsed.",
+    "createdAt" : "2022-05-09T17:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "Use a HashSet to collect poms in parseMaven",
+    "createdAt" : "2022-05-09T17:49:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "Make max cycles and min cycles configruable options",
+    "createdAt" : "2022-05-12T20:04:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "Moving Quark SourceFiles throws an exception since the charset is unknown",
+    "createdAt" : "2022-05-17T15:17:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "Passing -DactiveRecipe seems to have no effect",
+    "createdAt" : "2022-05-23T21:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "`Files.newBufferedWriter` constructor should pass in the `result.getAfter` encoding.",
+    "createdAt" : "2022-05-24T17:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Add option to reset the `JavaTypeCache`",
+    "createdAt" : "2022-06-08T23:24:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Include parameters in the Maven commands \"mvn rewrite:run\" or \"mvn rewrite:dryRun\"",
+    "createdAt" : "2022-06-09T11:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Autoformat does not detect correct two-space indent",
+    "createdAt" : "2022-06-14T20:47:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "PluginExecution Exception",
+    "createdAt" : "2022-06-23T13:14:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Discover goal behaviour is not optimal for multi-module projects / no projects",
+    "createdAt" : "2022-06-23T19:28:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Correctly calculate `baseDirectory` in a multi-module maven project",
+    "createdAt" : "2022-07-07T00:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "Checkstyle & Java Compatibility",
+    "createdAt" : "2022-07-08T18:40:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 395,
+    "title" : "Disable checkstyle handling",
+    "createdAt" : "2022-07-12T14:51:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Recipe not applied to sub modules",
+    "createdAt" : "2022-07-15T10:38:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Run plugin only for specific files",
+    "createdAt" : "2022-07-18T15:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "AddPlugin Reports: Illegal character in path at index 72",
+    "createdAt" : "2022-07-20T15:36:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 400,
+    "title" : "Suddenly getting: Unable to download dependency",
+    "createdAt" : "2022-07-20T16:45:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Provide rewrite as an extension instead of or in addition to a plugin",
+    "createdAt" : "2022-08-01T16:34:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Remove empty folders that are a result of running a recipe.",
+    "createdAt" : "2022-08-17T18:44:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "mvn rewrite:remove IndexofBoundException if no plugin into pom",
+    "createdAt" : "2022-09-19T12:46:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Error when i want to exec rewrite:remove since version 4.34.0",
+    "createdAt" : "2022-09-30T09:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 428,
+    "title" : "Marker with NPE instead of build failure or migration in jakartaee/data",
+    "createdAt" : "2022-10-10T19:45:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "JavaTemplate stubs are not available when using ConfigurableRewriteMojo",
+    "createdAt" : "2022-10-11T17:00:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Parsing source files from an excluded module",
+    "createdAt" : "2022-10-11T17:46:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Extend the list of files that will be parsed as plain text",
+    "createdAt" : "2022-11-07T17:48:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Support URL in the config location",
+    "createdAt" : "2022-11-08T16:50:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Fail if depends on code generation",
+    "createdAt" : "2022-11-11T06:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "rewrite:run gives StackOverflowError",
+    "createdAt" : "2022-11-11T06:44:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "-Drewrite.recipeArtifactCoordinates should include transitive dependencies",
+    "createdAt" : "2022-11-14T13:48:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Upgrade commons-text-1.9.jar",
+    "createdAt" : "2022-11-17T08:12:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "The configure/remove mojos are not correctly using the maven settings",
+    "createdAt" : "2022-11-28T15:24:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 443,
+    "title" : "Stuck at \"Resolving Poms\"",
+    "createdAt" : "2022-11-30T15:45:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Maven visitors should not be visiting XML documents without a Maven marker",
+    "createdAt" : "2022-12-01T10:16:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Dependency Dashboard",
+    "createdAt" : "2023-01-10T22:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Build is stuck when there are problems reading the `.rewrite-cache`",
+    "createdAt" : "2023-01-12T18:47:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "Problem with resolving rewrite plugin on parent pom",
+    "createdAt" : "2023-01-18T12:05:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "MavenDownloadingExceptions for netty-transport-native-* through artemis-core-client 2.16.0",
+    "createdAt" : "2023-01-18T15:49:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Stream closed error when using a URL in the config location",
+    "createdAt" : "2023-01-23T13:21:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "Performance issues printing Result / Recipe Stack summary",
+    "createdAt" : "2023-01-31T21:32:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 490,
+    "title" : "Link to blog post is wrong",
+    "createdAt" : "2023-02-06T20:39:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "Remove not needed dependency to org.twdata.maven:mojo-executor",
+    "createdAt" : "2023-02-06T20:51:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "The integration test ConfigureMojoITNoActiveRecipe is currently not being executed",
+    "createdAt" : "2023-02-06T21:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 496,
+    "title" : "Remove public modifier from integration tests classes",
+    "createdAt" : "2023-02-06T22:16:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "Remove unused dependency maven-compat",
+    "createdAt" : "2023-02-07T19:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Using BOM's for dependencies",
+    "createdAt" : "2023-02-11T22:05:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Integration Tests BasicIT is failing with message about RocksdbMavenPomCache",
+    "createdAt" : "2023-02-12T13:33:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Maven bulid plugin should not assume that build root is repository root",
+    "createdAt" : "2023-02-24T00:47:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Do not print markers like <!--~~(No version provided)~~>-->",
+    "createdAt" : "2023-03-07T08:17:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 523,
+    "title" : "No reporting of regular markers as differences",
+    "createdAt" : "2023-03-10T13:57:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "Support `maven.compiler.release` property",
+    "createdAt" : "2023-03-13T13:22:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Respect Java compatibility in `maven-compiler-plugin`",
+    "createdAt" : "2023-03-13T14:25:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Add support for parsing `Kotlin` sources",
+    "createdAt" : "2023-03-13T17:35:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Failed to resolve dependencies with range",
+    "createdAt" : "2023-03-23T08:56:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "`MavenParser` fails on `WindowsPath.relativize` with `'other' has different root`, when using multiple disks",
+    "createdAt" : "2023-03-30T06:31:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 533,
+    "title" : "run failed: 'other' has different root in spring-petclinic-migration",
+    "createdAt" : "2023-03-30T06:39:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "Add KotlinParser to the maven plugin.",
+    "createdAt" : "2023-04-05T22:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Unable to resolve CI-friendly versions",
+    "createdAt" : "2023-04-12T08:23:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "OpenRewrite's Maven resolution does not use the proxy configuration from the settings.xml",
+    "createdAt" : "2023-04-17T14:09:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 544,
+    "title" : "Honor maven debug mode to log progress",
+    "createdAt" : "2023-04-17T15:59:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "dryRun - Split patch file for each recipe",
+    "createdAt" : "2023-05-09T09:11:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 555,
+    "title" : "Add support for printing datatables",
+    "createdAt" : "2023-05-12T12:34:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "maven.plugin.validation warning about usage of plexus-container-default",
+    "createdAt" : "2023-05-19T08:18:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 566,
+    "title" : "Wrong version of `io.netty:netty-handler` is reported in the SBOM of `Selenese Runner Java`",
+    "createdAt" : "2023-05-31T17:48:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Disable nested recipe",
+    "createdAt" : "2023-06-05T20:28:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 579,
+    "title" : "Incorrect classifier reported for `pom` packaging",
+    "createdAt" : "2023-06-07T11:59:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 591,
+    "title" : "Provenance markers missing on `pom.xml` source file",
+    "createdAt" : "2023-07-03T11:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 593,
+    "title" : "`java.specification.version` should be used when no java version for Maven source and target can be retrieved",
+    "createdAt" : "2023-07-04T11:55:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "Run recipes blocking",
+    "createdAt" : "2023-07-07T08:08:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 600,
+    "title" : "Order of parsed Maven modules is sometimes not correct",
+    "createdAt" : "2023-07-18T10:48:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 602,
+    "title" : "Investigate automating docs",
+    "createdAt" : "2023-07-18T15:30:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 605,
+    "title" : "Execute the rewrite-maven-plugin over a no maven target directory (no necesary existing pom file) ",
+    "createdAt" : "2023-07-25T13:04:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 612,
+    "title" : "Support negative matchers on exclusions, to force inclusion after a broader exclude",
+    "createdAt" : "2023-08-04T07:32:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 613,
+    "title" : "Add logging of the used version/module/...",
+    "createdAt" : "2023-08-05T10:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 617,
+    "title" : "file with .yaml extension is not recognized as custom rewrite yaml  ",
+    "createdAt" : "2023-08-16T06:16:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 620,
+    "title" : "init goal no longer available",
+    "createdAt" : "2023-08-22T07:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 621,
+    "title" : "Openwrite ignores profile dependent modules in maven multi module projects",
+    "createdAt" : "2023-08-31T10:41:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 622,
+    "title" : "Parsing events not published for resources parsed with ResourceParser",
+    "createdAt" : "2023-09-01T11:21:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 630,
+    "title" : "Sort output of discover",
+    "createdAt" : "2023-09-26T18:34:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "Should ignore Tycho generated POMs",
+    "createdAt" : "2023-09-30T12:18:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 636,
+    "title" : "RocksdbMavenPomCache failure in tests",
+    "createdAt" : "2023-10-01T17:09:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 643,
+    "title" : "Restrict the rewriting to specific file types",
+    "createdAt" : "2023-10-18T14:18:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 670,
+    "title" : "No detailed explanation if java-file is failed to be parsed",
+    "createdAt" : "2023-10-25T20:57:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Incompatibility with Maven Polyglot leads to `ParseError`",
+    "createdAt" : "2023-11-01T16:41:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 650,
+    "title" : "Cant' exclude dependency-reduced-pom.xml",
+    "createdAt" : "2023-11-09T14:08:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 651,
+    "title" : "No plugin found for prefix 'rewrite' while trying to upgrade the java 8 to java 17",
+    "createdAt" : "2023-11-10T12:18:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 657,
+    "title" : "Not print equal ParseError leads to ClassCastException for POMs",
+    "createdAt" : "2023-11-14T10:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "Kotlin parser failures on project without Kotlin sources",
+    "createdAt" : "2023-11-16T08:02:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 659,
+    "title" : "Recipesnot found in multimodule when parent is specified",
+    "createdAt" : "2023-11-16T10:23:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 662,
+    "title" : "Add support for parsing Groovy sources (incl. Jenkinsfiles)",
+    "createdAt" : "2023-11-21T19:58:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 664,
+    "title" : "Exceptions cannot be traced back to failing recipe",
+    "createdAt" : "2023-11-23T07:24:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 667,
+    "title" : "Do not parse generated sources as source files, but only as compiled classes",
+    "createdAt" : "2023-11-28T10:35:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 671,
+    "title" : "Have default excludes for known binary file types or disable maven resource folder parsing",
+    "createdAt" : "2023-12-02T10:29:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "feat: Add support for variables in checkstyle config file",
+    "createdAt" : "2023-12-24T18:35:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 703,
+    "title" : "Unresolvable dependency leading to hard to debug issues",
+    "createdAt" : "2024-01-04T15:37:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 704,
+    "title" : "Add exclusions configuration maven as parameter",
+    "createdAt" : "2024-01-05T15:28:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "Disable value property resolution in `org.openrewrite.maven.AddProperty`",
+    "createdAt" : "2024-01-07T15:52:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 719,
+    "title" : "Delaying execution to the end of multi-module project",
+    "createdAt" : "2024-01-22T20:34:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 722,
+    "title" : "Refactor the Maven plugin 'rewrite.activeRecipes' property",
+    "createdAt" : "2024-01-28T21:44:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 727,
+    "title" : "Upgrade to Maven Wrapper 3.9.6",
+    "createdAt" : "2024-02-01T07:20:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 734,
+    "title" : "Mistake in detecting encoding of pom.xml",
+    "createdAt" : "2024-02-06T08:48:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 742,
+    "title" : "Resolution Errors after updating to 5.23.1",
+    "createdAt" : "2024-02-23T10:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 745,
+    "title" : "Maven plugin `5.23.2` fails to run maven recipes.",
+    "createdAt" : "2024-02-26T16:10:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 755,
+    "title" : "Rewrite sources added through `build-helper-maven-plugin`",
+    "createdAt" : "2024-03-14T10:57:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 780,
+    "title" : "`ConcurrentModificationException` while running `dryRun` with `mvnd`",
+    "createdAt" : "2024-04-13T20:39:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 776,
+    "title" : "Please give insight on how to best debug `Recipes not found` for user supplied recipe that is in user specified dependency",
+    "createdAt" : "2024-04-24T13:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 781,
+    "title" : "Sum and show time saved from running recipes, similar to Gradle plugin",
+    "createdAt" : "2024-05-02T18:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 785,
+    "title" : "Getting failed to parse pom error(malformed comment) during Java 17 upgrade",
+    "createdAt" : "2024-05-07T16:46:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 799,
+    "title" : "Pass arguments from the command line into a single configurable recipe",
+    "createdAt" : "2024-06-14T16:32:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 801,
+    "title" : "Exclusions resolve wrong base path on multimodule projects",
+    "createdAt" : "2024-06-16T23:47:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 804,
+    "title" : "Ability to rewrite breaking changes",
+    "createdAt" : "2024-06-17T10:02:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 821,
+    "title" : "Running a recipe that wraps recipes from other Maven artifacts with parameters from the command line",
+    "createdAt" : "2024-07-18T06:28:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 825,
+    "title" : "Running rewrite rules gets errors in other goals if run with java 17",
+    "createdAt" : "2024-07-25T20:21:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 829,
+    "title" : "Support Reading `<configuration>` Tag from settings.xml in `MavenMojoProjectParser.buildSettings()` so that config like connection timeout can be passed to rewrite-maven module",
+    "createdAt" : "2024-08-03T22:22:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 834,
+    "title" : "rewrite-maven-plugin no longer compatible with Java 17",
+    "createdAt" : "2024-08-09T02:59:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 837,
+    "title" : "StringIndexOutOfBoundsException",
+    "createdAt" : "2024-08-12T12:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 849,
+    "title" : "Recipe parameter validation broken in 5.39.2",
+    "createdAt" : "2024-08-29T11:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 850,
+    "title" : "Recipe org.openrewrite.text.FindAndReplace ignores files that have \"build\" or \"out\" directories in its path",
+    "createdAt" : "2024-08-29T15:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 851,
+    "title" : "Later build phases depending on earlier rewrite:runNoFork not supported in multi module Maven project",
+    "createdAt" : "2024-08-30T18:58:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 853,
+    "title" : "Configurable log-level for changes made by recipes",
+    "createdAt" : "2024-08-31T23:01:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 862,
+    "title" : "Failed to resolve dependencies",
+    "createdAt" : "2024-09-14T19:44:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 866,
+    "title" : "ChangeDependencyGroupIdAndArtifactId can duplicate new dependency",
+    "createdAt" : "2024-09-23T08:42:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 867,
+    "title" : "Duplicate key org.openrewrite.config.DeclarativeRecipe",
+    "createdAt" : "2024-09-23T10:01:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 876,
+    "title" : "Can I configure the maven repository myself",
+    "createdAt" : "2024-10-11T04:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 886,
+    "title" : "Incompatible with multiple test roots",
+    "createdAt" : "2024-10-29T04:07:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 894,
+    "title" : "5.44.0 Breaking change: AddDependency onlyIfUsing not working for pom",
+    "createdAt" : "2024-11-11T22:01:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 900,
+    "title" : "Default behavior should be to print some basic heartbeat in console",
+    "createdAt" : "2024-11-25T17:18:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 901,
+    "title" : "allow optional exclude list of maven repository urls",
+    "createdAt" : "2024-11-26T18:18:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 909,
+    "title" : "Automatically exclude `.gitignore` content by adopting OmniParser",
+    "createdAt" : "2024-12-07T08:55:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 915,
+    "title" : "Artifact is resolved incorrectly  - v5.46.3",
+    "createdAt" : "2024-12-20T15:04:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 916,
+    "title" : "Integrate CVE checks into the build ",
+    "createdAt" : "2024-12-20T16:30:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 920,
+    "title" : "Within a multi-module build, the 'run' goal doesn't resolve a dependency to an 'ejb' packaging-type artifact (unless it's been installed locally)",
+    "createdAt" : "2024-12-23T16:40:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 936,
+    "title" : "Kotlin source files under src/main/java should be detected",
+    "createdAt" : "2025-01-23T14:46:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 940,
+    "title" : "Some errors logged only with Maven DEBUG log level",
+    "createdAt" : "2025-02-01T13:46:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 944,
+    "title" : "Maven build failed with java.lang.OutOfMemoryError: Java heap space",
+    "createdAt" : "2025-02-10T09:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 945,
+    "title" : "Custom Recipe library - Running Recipes without modifying build issue",
+    "createdAt" : "2025-02-13T23:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 966,
+    "title" : "pom.xml is not modified for Migration to Jakarta 10",
+    "createdAt" : "2025-03-24T06:42:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 968,
+    "title" : "Scan the generated sources but not apply change",
+    "createdAt" : "2025-03-26T06:13:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 973,
+    "title" : "Add `excludeRecipes` option",
+    "createdAt" : "2025-04-07T07:47:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 980,
+    "title" : "When executing against a file encoded in Windows-31J (MS932), a java.nio.charset.UnmappableCharacterException occurs.",
+    "createdAt" : "2025-05-02T05:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 981,
+    "title" : "`MavenDownloadingException: No version provided for direct dependency` with latest 6.7.0 plugin version",
+    "createdAt" : "2025-05-06T14:32:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "Improve diagnostic: “No version provided for direct dependency” should include full dependency coordinates",
+    "createdAt" : "2025-05-11T08:49:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 985,
+    "title" : "Could not parse as Java",
+    "createdAt" : "2025-05-12T11:21:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 989,
+    "title" : "The upgrade to OpenRewrite v8.50.0 in the Maven plugin v6.5.0 has broken declarative recipe validation",
+    "createdAt" : "2025-05-28T09:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 991,
+    "title" : "Recipe org.openrewrite.maven.UpgradeParentVersion doesn't work since 6.0.2 plugin version",
+    "createdAt" : "2025-05-29T10:31:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1010,
+    "title" : "incorrectly resolves ${project.version} in dependencyManagement sections",
+    "createdAt" : "2025-07-09T10:03:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1019,
+    "title" : "Sources added by build-helper-maven-plugin are ignored",
+    "createdAt" : "2025-08-08T13:05:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1032,
+    "title" : "rewrite-maven-plugin not picking up checkstyle XML config",
+    "createdAt" : "2025-08-29T11:23:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1038,
+    "title" : "java25parser is executing on java 24 and causing failures",
+    "createdAt" : "2025-09-15T02:24:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1039,
+    "title" : "resolvePropertiesInYaml does not respect Maven user properties (-D...)",
+    "createdAt" : "2025-09-15T08:57:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1066,
+    "title" : "Hierarchical multi-module Maven projects exclude all child module resources",
+    "createdAt" : "2025-10-27T16:58:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1072,
+    "title" : "IndexOutOfBoundsException when running rewrite-maven-plugin 6.22.1",
+    "createdAt" : "2025-11-03T11:50:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1080,
+    "title" : "OpenRewrite fails when multi-module project has an annotation processor dependency on one of the submodules",
+    "createdAt" : "2025-11-26T08:48:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1097,
+    "title" : "Profiles in child POMs are not considered active",
+    "createdAt" : "2026-01-14T00:39:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1100,
+    "title" : "YAML property substitution not disabled by resolvePropertiesInYaml=false",
+    "createdAt" : "2026-01-23T21:50:58Z",
+    "state" : "OPEN"
+  } ]
+}

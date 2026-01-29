@@ -1,0 +1,3069 @@
+{
+  "repoOwner" : "cryostatio",
+  "repoName" : "cryostat-legacy",
+  "forks" : [ {
+    "createdAt" : "2019-06-11T23:07:09Z"
+  }, {
+    "createdAt" : "2019-07-22T12:31:15Z"
+  }, {
+    "createdAt" : "2019-07-25T16:52:32Z"
+  }, {
+    "createdAt" : "2019-09-19T15:31:13Z"
+  }, {
+    "createdAt" : "2020-05-19T19:43:42Z"
+  }, {
+    "createdAt" : "2020-06-10T14:36:29Z"
+  }, {
+    "createdAt" : "2020-11-01T11:21:07Z"
+  }, {
+    "createdAt" : "2020-11-05T19:25:03Z"
+  }, {
+    "createdAt" : "2020-12-07T15:52:04Z"
+  }, {
+    "createdAt" : "2021-02-12T16:58:31Z"
+  }, {
+    "createdAt" : "2021-02-15T10:22:46Z"
+  }, {
+    "createdAt" : "2021-04-20T19:24:03Z"
+  }, {
+    "createdAt" : "2021-05-21T19:05:55Z"
+  }, {
+    "createdAt" : "2021-09-09T16:51:53Z"
+  }, {
+    "createdAt" : "2021-10-15T16:58:18Z"
+  }, {
+    "createdAt" : "2022-01-21T15:39:20Z"
+  }, {
+    "createdAt" : "2022-04-01T06:36:57Z"
+  }, {
+    "createdAt" : "2022-05-24T17:37:29Z"
+  }, {
+    "createdAt" : "2022-05-24T17:39:30Z"
+  }, {
+    "createdAt" : "2022-06-06T11:29:27Z"
+  }, {
+    "createdAt" : "2022-09-12T14:16:31Z"
+  }, {
+    "createdAt" : "2022-09-30T13:41:50Z"
+  }, {
+    "createdAt" : "2022-10-08T14:48:07Z"
+  }, {
+    "createdAt" : "2022-10-25T15:30:47Z"
+  }, {
+    "createdAt" : "2023-01-17T10:15:36Z"
+  }, {
+    "createdAt" : "2023-03-07T22:10:55Z"
+  }, {
+    "createdAt" : "2023-04-28T09:05:17Z"
+  }, {
+    "createdAt" : "2023-05-19T20:05:36Z"
+  }, {
+    "createdAt" : "2023-05-19T20:18:21Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Use s2i for containerized image builds",
+    "createdAt" : "2019-06-14T18:38:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Update documentation with requirements for containers",
+    "createdAt" : "2019-06-25T17:46:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Verify minimal set of JVM flags for remote JMX connection",
+    "createdAt" : "2019-06-26T13:02:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "SSL and Auth handling for remote JMX connections",
+    "createdAt" : "2019-06-26T13:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Network-accessing classes need to be testable",
+    "createdAt" : "2019-06-26T13:10:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7,
+    "title" : "\"JMCConnection\" classes should be renamed to JFR",
+    "createdAt" : "2019-06-26T13:11:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "HTML Reports generation (`GET /reports/foo`) can cause OOM",
+    "createdAt" : "2019-06-28T20:55:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Communication channels must be secured",
+    "createdAt" : "2019-06-28T20:56:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Connections should require some form of authentication",
+    "createdAt" : "2019-06-28T20:59:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Rules Report should allow linking to pertinent Grafana visualizations",
+    "createdAt" : "2019-09-03T13:34:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 35,
+    "title" : "Recording summary reports show as plain text",
+    "createdAt" : "2019-10-02T19:35:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "rh-jmc-team#43 broke unit tests",
+    "createdAt" : "2019-10-15T16:00:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "upload-recording command does not accept recording names ending in .jfr",
+    "createdAt" : "2019-11-01T19:40:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Archived recordings have no indication of which target JVM they came from",
+    "createdAt" : "2019-11-01T20:16:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "JFR files should be re-uploadable into storage",
+    "createdAt" : "2019-11-05T14:01:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "When saving files into archive, filenames should be automatically updated to avoid clobbering old data",
+    "createdAt" : "2019-11-05T14:09:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "container-jfr seems to hang when connecting to itself while running in Minishift",
+    "createdAt" : "2019-11-05T20:08:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "ALL org.openjdk.jmc classes should be refactored into -core and abstracted",
+    "createdAt" : "2019-11-05T20:14:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 60,
+    "title" : "Project is missing a style guide and/or editorconfig",
+    "createdAt" : "2019-11-05T21:16:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Project is missing checkstyle or other style/formatting tooling",
+    "createdAt" : "2019-11-05T21:16:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Investigate Vert.x webserver recording streaming performance",
+    "createdAt" : "2019-11-06T20:27:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Unit test failures",
+    "createdAt" : "2019-11-06T20:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "A minimal/\"headless\" container image should be provided",
+    "createdAt" : "2019-11-14T16:45:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Project should be modularized",
+    "createdAt" : "2019-11-20T19:37:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 75,
+    "title" : "Recording downloads and reports do not work when SSL is enabled",
+    "createdAt" : "2019-11-21T14:43:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Reports and downloads links are broken when running behind SSL proxy",
+    "createdAt" : "2019-12-05T19:24:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Cannot upload to Grafana when datasource uses SSL and an untrusted (ex. self-signed) cert",
+    "createdAt" : "2019-12-05T19:26:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Should minimal mode respond 200 on grafana_dashboard_url and grafana_datasource_url ?",
+    "createdAt" : "2019-12-05T20:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Platform auth managers should have tailored messages for users",
+    "createdAt" : "2019-12-24T16:13:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "\"Debug\" logging should be enabled via runtime env var, not separate container image",
+    "createdAt" : "2019-12-24T16:16:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "README.md references possibly private Trello board",
+    "createdAt" : "2020-01-03T16:19:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "WebSocket auth token should be expected as a websocket subprotocol, not query param",
+    "createdAt" : "2020-01-09T17:00:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "AuthManagers should be configurable",
+    "createdAt" : "2020-01-21T14:33:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Implement a \"basic\" auth manager",
+    "createdAt" : "2020-01-21T14:34:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Grafana upload closes recording",
+    "createdAt" : "2020-01-23T15:03:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Update readme with docker/npm/node versions",
+    "createdAt" : "2020-01-24T17:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Uncaught NPE when sent an empty websocket message with auth",
+    "createdAt" : "2020-01-24T22:07:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "upload-recording command validation failures contain \"%s\" format token, not recording name",
+    "createdAt" : "2020-01-27T20:05:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "upload-recording command does not buffer disk reads",
+    "createdAt" : "2020-01-27T20:25:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "ConcurrentModificationException on WS message handling",
+    "createdAt" : "2020-01-30T15:19:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Messages/responses should be uniquely identified",
+    "createdAt" : "2020-02-03T16:34:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "OpenShift platform not detected",
+    "createdAt" : "2020-02-04T22:02:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Maven build",
+    "createdAt" : "2020-02-25T17:00:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Intermittent unit test failure",
+    "createdAt" : "2020-03-06T20:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Integration tests sometimes hang",
+    "createdAt" : "2020-03-10T14:44:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "401 Unauthorized responses should include WWW-Authenticate header",
+    "createdAt" : "2020-03-12T18:25:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "WebSocket ConcurrentModificationException",
+    "createdAt" : "2020-03-13T16:56:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Users should be able to specify event templates for recordings",
+    "createdAt" : "2020-03-18T17:26:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Users should be able to specify remote target VM templates",
+    "createdAt" : "2020-03-18T17:27:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Users should be able to create custom event templates",
+    "createdAt" : "2020-03-18T17:28:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Users should be able to download templates from target",
+    "createdAt" : "2020-04-15T15:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "OpenShift target discovery sees load-balanced Pods",
+    "createdAt" : "2020-04-22T17:54:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "[Meta] Message Interleaving, User Sessions, Multiple Target Connections, Statefulness",
+    "createdAt" : "2020-04-23T16:57:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "[Idea] Batch meta-command",
+    "createdAt" : "2020-04-23T18:25:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "All commands should specify target",
+    "createdAt" : "2020-04-23T20:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Platform discovery should not require polling",
+    "createdAt" : "2020-05-08T19:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "`list` command is missing some information",
+    "createdAt" : "2020-05-15T20:34:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Remove Apache HttpClient",
+    "createdAt" : "2020-05-20T18:25:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "`upload-recording` command should assume datasource URL",
+    "createdAt" : "2020-05-26T14:22:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Tab-Separated Output in Terminal Should be Properly Aligned",
+    "createdAt" : "2020-06-01T15:48:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Archiving commands unavailable",
+    "createdAt" : "2020-06-03T16:24:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Archive path should be configurable",
+    "createdAt" : "2020-06-03T17:24:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "`upload-recording` command is broken since Connectionless API changes",
+    "createdAt" : "2020-06-03T21:04:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Add endpoint for health status",
+    "createdAt" : "2020-06-04T16:58:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Reports for archived recordings should be cached",
+    "createdAt" : "2020-06-04T19:06:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "[Question] Reports caching",
+    "createdAt" : "2020-06-04T19:16:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Cannot build due a missing dependenc",
+    "createdAt" : "2020-06-09T13:58:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Update Jib build plugin",
+    "createdAt" : "2020-06-10T20:24:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "PlatformClients should report JMX Service URLs",
+    "createdAt" : "2020-06-16T19:40:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "list-saved interactive output does not include download/report URLs",
+    "createdAt" : "2020-06-17T20:05:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "CORS origin should be configurable",
+    "createdAt" : "2020-06-22T18:43:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Archive path is read from environment multiple times at runtime",
+    "createdAt" : "2020-06-23T17:50:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "WebServer \"low memory pressure\" log message is emitted twice",
+    "createdAt" : "2020-06-23T17:51:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Response Message from a Failed `validate()` Should be Changed",
+    "createdAt" : "2020-06-30T14:55:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "/health endpoint responses hang when configured",
+    "createdAt" : "2020-07-03T14:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "build-images.sh fails integration tests",
+    "createdAt" : "2020-07-03T20:07:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "[API] Serialized command arguments should be map, not array",
+    "createdAt" : "2020-07-14T20:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "[packaging] Base image digest should be specified",
+    "createdAt" : "2020-07-14T20:57:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "`demos/print_help` Doesn't Work After the Connectionless API Changes",
+    "createdAt" : "2020-07-17T18:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Null Arguments Cause a NPE in `validate()`",
+    "createdAt" : "2020-07-20T20:12:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Questions About `upload-recording` Behaviour",
+    "createdAt" : "2020-07-24T21:18:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "`upload-recording` Hangs When Datasource URL is Invalid",
+    "createdAt" : "2020-07-24T23:17:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "`upload-recording` Throws NPE When Datasource URL is Invalid",
+    "createdAt" : "2020-07-24T23:17:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "`upload-recording` Sometimes Causes CJFR to Hang",
+    "createdAt" : "2020-07-27T18:18:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Can't delete duplicate/renamed saved recording",
+    "createdAt" : "2020-07-27T21:04:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "entrypoint RJMX credentials should be configurable",
+    "createdAt" : "2020-07-28T18:05:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Spotbugs fails with EQ_COMPARETO_USE_OBJECT_EQUALS issues",
+    "createdAt" : "2020-08-04T20:35:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Errors Related to `HttpStatusException` When Running Unit Tests",
+    "createdAt" : "2020-08-06T19:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Recording Upload HTTP Handlers Should Check Server Response's Status Code",
+    "createdAt" : "2020-08-11T20:25:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "HTTP API documentation",
+    "createdAt" : "2020-08-13T21:13:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Integration tests fail",
+    "createdAt" : "2020-08-21T17:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "(Optionally) use generated self-signed cert to enable WebServer SSL",
+    "createdAt" : "2020-08-24T19:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "HTTP API should support recording options",
+    "createdAt" : "2020-08-24T20:00:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "When HTTPS is enabled, HTTP requests should be redirected",
+    "createdAt" : "2020-08-25T20:52:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 252,
+    "title" : "RecordingOptionsCustomizer.java should be ported into Core",
+    "createdAt" : "2020-08-25T21:07:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Recording Upload Handlers Should Use `UrlValidator`",
+    "createdAt" : "2020-08-31T19:39:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "Having Trouble Running `run.sh`",
+    "createdAt" : "2020-09-08T16:36:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "target JVMs report a different default \"toDisk\" value from actual value used in new recordings",
+    "createdAt" : "2020-09-11T15:59:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 264,
+    "title" : "GET RecordingOptions response contains only String types",
+    "createdAt" : "2020-09-11T16:11:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Snapshot API response is not JSON-encoded",
+    "createdAt" : "2020-09-16T22:06:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Client \"Failed to fetch\"",
+    "createdAt" : "2020-09-17T18:57:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Recording creation event type validation is too strict",
+    "createdAt" : "2020-09-23T22:06:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Allow clients to upload trusted target SSL certs",
+    "createdAt" : "2020-09-24T19:07:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Port to Quarkus",
+    "createdAt" : "2020-09-24T19:12:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 277,
+    "title" : "Grafana configuration requires explicit port number broken in OpenShift",
+    "createdAt" : "2020-09-25T14:26:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Grafana URL handling requires reachability from both inside and outside deployment",
+    "createdAt" : "2020-09-25T19:32:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Additional fields for ServiceRefs",
+    "createdAt" : "2020-09-30T17:31:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "[Task] DefaultPlatformClient should support discovery by jvmstat/hsperfdata",
+    "createdAt" : "2020-09-30T17:45:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 282,
+    "title" : "KubeApiPlatformClient should discover via Endpoints, not Services",
+    "createdAt" : "2020-10-01T14:40:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Update to base image with JDK 11.0.9+",
+    "createdAt" : "2020-10-07T21:26:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "HTTP responses should automatically time out",
+    "createdAt" : "2020-10-07T21:31:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Recording renaming",
+    "createdAt" : "2020-10-09T18:04:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Archived recording names don't match up to web-client dropdown",
+    "createdAt" : "2020-10-15T17:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "HTTP V2 API handler equivalent to ListRecordingOptionsCommand",
+    "createdAt" : "2020-10-15T21:59:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "HTTP V2 API handler equivalent to SearchEventsCommand",
+    "createdAt" : "2020-10-15T22:00:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Remove interactive and TCP socket modes",
+    "createdAt" : "2020-10-20T15:47:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Update spotbugs plugin",
+    "createdAt" : "2020-10-21T20:21:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Verify acceptable certificate upload formats",
+    "createdAt" : "2020-10-23T14:57:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 306,
+    "title" : "KubeApiPlatformStrategy needs a real AuthManager implementation",
+    "createdAt" : "2020-10-23T14:59:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 307,
+    "title" : "When target certificate is not accepted, requests fail with 404",
+    "createdAt" : "2020-10-23T15:09:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Certificate POST is undocumented",
+    "createdAt" : "2020-10-23T19:12:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Investigate whether HTTP handlers are all correctly async",
+    "createdAt" : "2020-10-26T15:49:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Some Handlers in HTTP_API.md Should Not Have `427` Response Code",
+    "createdAt" : "2020-10-26T21:42:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Design JSON API response format",
+    "createdAt" : "2020-10-29T15:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Exceptions caught by WebServer failureHandler should write payloads to body, not status message",
+    "createdAt" : "2020-11-05T18:00:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Apply available memory-based heuristic when forking report subproces",
+    "createdAt" : "2020-11-06T16:27:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "Update jib plugin",
+    "createdAt" : "2020-11-13T17:20:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Create customized base image",
+    "createdAt" : "2020-11-19T17:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Customized base image should import system certs into store in advance",
+    "createdAt" : "2020-11-19T18:03:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Customized base image should create self-signed certificate in advance",
+    "createdAt" : "2020-11-19T18:27:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 343,
+    "title" : "\"verifyZeroInteractions(Object...) in Mockito has been deprecated\"",
+    "createdAt" : "2020-11-25T17:10:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Manual selection of deployment platform results in PlatformClient not started",
+    "createdAt" : "2020-11-25T17:48:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Async target discovery using OpenShift Watch",
+    "createdAt" : "2020-11-26T16:46:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Async target discovery using Kubernetes Watch",
+    "createdAt" : "2020-11-26T16:47:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Status Code for Target-Not-Found Response Doesn't Match HTTP API Doc",
+    "createdAt" : "2020-12-04T16:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "Notifications on all \"state\" changes",
+    "createdAt" : "2020-12-10T21:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Automatic recording rules/triggers",
+    "createdAt" : "2020-12-10T21:47:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "Don't use String.format inside log statements",
+    "createdAt" : "2020-12-14T03:44:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "SubprocessReportGenerator failure to refresh report for active recording",
+    "createdAt" : "2020-12-21T17:00:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "Investigate other Dependency Injection",
+    "createdAt" : "2020-12-21T19:19:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Replace io.kubernetes:client-java with io.fabric8:kubernetes-client",
+    "createdAt" : "2020-12-23T21:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Remove target CHANGED notification?",
+    "createdAt" : "2021-01-11T19:16:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Document automatic rules API",
+    "createdAt" : "2021-02-05T15:50:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Tree view for Targets",
+    "createdAt" : "2021-03-15T19:30:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 435,
+    "title" : "API exception responses should contain more detail",
+    "createdAt" : "2021-04-14T15:23:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "[Task] Update to Vert.x 4",
+    "createdAt" : "2021-04-15T22:45:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 461,
+    "title" : "Add custom JFR events to self",
+    "createdAt" : "2021-04-20T13:55:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 468,
+    "title" : "Users should be able to manually add targets",
+    "createdAt" : "2021-04-26T15:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Support other protocols than RMI",
+    "createdAt" : "2021-04-26T15:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "API pagination",
+    "createdAt" : "2021-04-29T13:34:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 474,
+    "title" : "Integration test API coverage",
+    "createdAt" : "2021-04-29T14:16:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 478,
+    "title" : "/api/v1/command should be renamed /api/v1/notifications",
+    "createdAt" : "2021-05-07T17:20:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "Remove event specifier string syntax",
+    "createdAt" : "2021-05-18T15:32:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Update order of build steps in README",
+    "createdAt" : "2021-05-21T19:35:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "View in Grafana not working with smoketest.sh",
+    "createdAt" : "2021-05-25T21:07:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 485,
+    "title" : "Add API support for uploading client libraries",
+    "createdAt" : "2021-05-26T18:21:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "Uploading invalid SSL cert creates empty file in truststore",
+    "createdAt" : "2021-06-04T14:35:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "API changes for ServiceRef/batch operations",
+    "createdAt" : "2021-06-04T15:19:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "Refactor and create unit tests for webServer failureHandler",
+    "createdAt" : "2021-06-04T18:41:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 501,
+    "title" : "ConnectToExternalTargetsIT does not properly clean up",
+    "createdAt" : "2021-06-04T20:27:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "Some unit test failures are unreported, or tests do not run",
+    "createdAt" : "2021-06-07T17:13:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Invalid test cases when testing target recording options ",
+    "createdAt" : "2021-06-07T21:34:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Enhanced Custom Templates",
+    "createdAt" : "2021-06-10T14:44:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 510,
+    "title" : "New intermittent unit test failure in TargetConnectionManagerTest",
+    "createdAt" : "2021-06-11T13:54:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 517,
+    "title" : "Remove remnants of Command Channel",
+    "createdAt" : "2021-06-16T14:51:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "[Epic] Explore non-JMX connection options",
+    "createdAt" : "2021-06-17T15:37:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Conditionally disable ClientAssetsIT on minimal builds",
+    "createdAt" : "2021-06-18T18:39:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "UploadRecordingIT is incomplete",
+    "createdAt" : "2021-06-21T22:27:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Update maven jib plugin",
+    "createdAt" : "2021-06-22T14:26:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Auto-Rules JSON creation does not validate numeric values",
+    "createdAt" : "2021-06-22T15:36:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Auto rules should offer matching on more than mainClass/targetAlias",
+    "createdAt" : "2021-06-24T19:30:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Automatic Rules PeriodicArchiver should scan existing archives on startup",
+    "createdAt" : "2021-06-25T17:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "Automatic Rules PeriodicArchiver should not use HTTP requests to self",
+    "createdAt" : "2021-06-25T17:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "TargetsPostHandler has hardcoded annotations structure prefixes",
+    "createdAt" : "2021-07-06T15:56:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 548,
+    "title" : "is there a good way to determine this prefix from the structure of the",
+    "createdAt" : "2021-07-06T15:56:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "Use OAuth token for Kubernetes client",
+    "createdAt" : "2021-07-06T20:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "FlightRecorderException: Could not create a recording!",
+    "createdAt" : "2021-07-09T19:29:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 565,
+    "title" : "CredentialsManager should be able to persist credentials to disk",
+    "createdAt" : "2021-07-09T22:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 566,
+    "title" : "Abstract setPosixFilePermissions into FileSystem",
+    "createdAt" : "2021-07-09T22:04:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Extract TempFileProvider to FileSysten",
+    "createdAt" : "2021-07-09T22:05:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 568,
+    "title" : "TargetRecordingGetHandler should use Vertx async io",
+    "createdAt" : "2021-07-09T22:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 569,
+    "title" : "Remove `500` codes from HTT_API.md",
+    "createdAt" : "2021-07-12T16:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "Posting empty JSON rule returns HTTP 500",
+    "createdAt" : "2021-07-13T18:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 572,
+    "title" : "itests should not hardcode 0.0.0.0",
+    "createdAt" : "2021-07-14T15:34:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Add kubernetes-server-mock test dependency",
+    "createdAt" : "2021-07-16T13:36:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 576,
+    "title" : "[Epic] Agent Plugin Integration",
+    "createdAt" : "2021-07-16T21:14:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 577,
+    "title" : "[Task] Implement HTTP API support for Agent Plugin functionality",
+    "createdAt" : "2021-07-16T21:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 578,
+    "title" : "[Task] Implement target probe handlers",
+    "createdAt" : "2021-07-16T21:18:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 579,
+    "title" : "[Task] Implement probe template handlers",
+    "createdAt" : "2021-07-16T21:20:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 580,
+    "title" : "Create issue and PR templates",
+    "createdAt" : "2021-07-19T18:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "Create /api/beta",
+    "createdAt" : "2021-07-19T19:15:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 586,
+    "title" : "API responses should contain Content-Type headers",
+    "createdAt" : "2021-07-19T20:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "Notifications channel subscribers should need to authenticate before receiving messages",
+    "createdAt" : "2021-07-20T17:58:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 592,
+    "title" : "NPE if ACCEPT header is not set",
+    "createdAt" : "2021-07-22T15:36:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "CI should only tag latest on main branch",
+    "createdAt" : "2021-07-22T18:57:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 596,
+    "title" : "Deleting a non-existent recording returns HTTP 500",
+    "createdAt" : "2021-07-22T21:03:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "Posting an invalid XML file as a template results in HTTP 200",
+    "createdAt" : "2021-07-23T21:57:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 603,
+    "title" : "Posting empty file as SSL certificate returns HTTP 500",
+    "createdAt" : "2021-07-26T16:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 610,
+    "title" : "PRs must reference Issues",
+    "createdAt" : "2021-07-27T20:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 611,
+    "title" : "PRs must have labels corresponding to conventional commits",
+    "createdAt" : "2021-07-27T20:55:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 613,
+    "title" : "Getting a report with a non-existent recording name throws HTTP 500",
+    "createdAt" : "2021-07-28T16:50:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 617,
+    "title" : "Kubernetes namespace NoSuchFileException on startup in non-Kubernetes environments",
+    "createdAt" : "2021-08-03T17:48:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 620,
+    "title" : "Notification Categories are inconsistent",
+    "createdAt" : "2021-08-04T16:01:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 622,
+    "title" : "V2 EventsSearch should use query param, not path param",
+    "createdAt" : "2021-08-04T19:20:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 625,
+    "title" : "[Task] Update fabric8-client to 5.5.0+ and remove KUBERNETES_AUTH_TRYKUBECONFIG_SYSTEM_PROPERTY",
+    "createdAt" : "2021-08-05T13:37:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 627,
+    "title" : "HTTP 500 on timeout when requesting invalid URL on minimal image",
+    "createdAt" : "2021-08-05T20:27:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 629,
+    "title" : "GET targets/:targetId/templates in JSON format with event listing",
+    "createdAt" : "2021-08-06T13:23:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 630,
+    "title" : "ReportIT sometimes hangs on NullPointerException",
+    "createdAt" : "2021-08-06T20:12:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 632,
+    "title" : "ReportIT fails due to empty recording",
+    "createdAt" : "2021-08-09T13:25:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 633,
+    "title" : "CI itest failures result in hanging run",
+    "createdAt" : "2021-08-09T14:57:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "itest failures due to ordering, failed/lack of cleanup",
+    "createdAt" : "2021-08-09T15:07:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 635,
+    "title" : "Fine-tune Kubernetes/OpenShift RBAC permissions",
+    "createdAt" : "2021-08-09T20:42:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 636,
+    "title" : "itest FlightRecorderException: Failed updating the recording options for Snapshot",
+    "createdAt" : "2021-08-10T13:50:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 637,
+    "title" : "Connection cache size and TTL should be configurable",
+    "createdAt" : "2021-08-10T14:11:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "Deleting a rule definition should optionally remove active recordings from targets",
+    "createdAt" : "2021-08-12T19:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 643,
+    "title" : "POST JSON Rule definition can result in NPE",
+    "createdAt" : "2021-08-12T19:28:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 645,
+    "title" : "Users should be able to create \"one-shot\"/\"instant\" Rule definitions",
+    "createdAt" : "2021-08-16T18:55:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Build should include git tag/hash as resource",
+    "createdAt" : "2021-08-19T00:29:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 652,
+    "title" : "Cryostat template not included in assembly",
+    "createdAt" : "2021-08-19T21:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 657,
+    "title" : "Update cryostat-core dependency to 2.3.1",
+    "createdAt" : "2021-08-24T19:19:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 659,
+    "title" : "Remove some KubernetesNodeTypes",
+    "createdAt" : "2021-08-25T21:22:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 661,
+    "title" : "matchExpression should validate \"target\" object member accesses",
+    "createdAt" : "2021-08-25T22:25:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 663,
+    "title" : "MainModule and ConfigurationModule both provide configuration directory paths",
+    "createdAt" : "2021-08-26T20:34:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 665,
+    "title" : "Failure to archive recordings for certain targets",
+    "createdAt" : "2021-08-26T21:57:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 666,
+    "title" : "HTTP 500: NPE during report generation",
+    "createdAt" : "2021-08-27T19:12:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 667,
+    "title" : "Revitalize upstream documentation",
+    "createdAt" : "2021-08-27T20:02:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 670,
+    "title" : "run.sh does not set RMI_PORT env var",
+    "createdAt" : "2021-08-31T16:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "Update main branch to 2.1.0-SNAPSHOT",
+    "createdAt" : "2021-09-01T21:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 674,
+    "title" : "Mergify should target backports to v2 branch",
+    "createdAt" : "2021-09-01T21:43:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 676,
+    "title" : "Update web-client to latest 2.0.0-BETA1",
+    "createdAt" : "2021-09-01T22:26:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 680,
+    "title" : "Pre/post integration test steps should be skipped if skipITs is true",
+    "createdAt" : "2021-09-09T14:26:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 683,
+    "title" : "[Story] Jolokia Compatibility",
+    "createdAt" : "2021-09-14T14:13:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 684,
+    "title" : "Smoketest error --replace podman flag",
+    "createdAt" : "2021-09-17T08:23:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 687,
+    "title" : "Insufficient permissions cause login page loop",
+    "createdAt" : "2021-09-24T19:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Group name for permissions check is incorrect",
+    "createdAt" : "2021-09-24T21:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 691,
+    "title" : "Authorization check failure results in Internal Server Error",
+    "createdAt" : "2021-09-28T21:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "Remove Kubernetes exception handling from abstract auth handler",
+    "createdAt" : "2021-09-28T21:28:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 697,
+    "title" : "Report generation should not use EpsilonGC",
+    "createdAt" : "2021-10-01T17:17:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "NPE building ServiceRef",
+    "createdAt" : "2021-10-01T23:59:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 702,
+    "title" : "HTTP request timeout should not apply to every request",
+    "createdAt" : "2021-10-06T17:21:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 704,
+    "title" : "Implement user info retrieval on auth",
+    "createdAt" : "2021-10-06T20:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 705,
+    "title" : "Some file download handlers do not include Content-Length and/or Content-Type headers",
+    "createdAt" : "2021-10-07T19:34:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "run.sh does not create conf.d subdirectories",
+    "createdAt" : "2021-10-08T01:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 709,
+    "title" : "Improved Handling of Active and Archived Recordings",
+    "createdAt" : "2021-10-08T19:06:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 710,
+    "title" : "Create API version 2.1",
+    "createdAt" : "2021-10-12T14:33:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 712,
+    "title" : "Maven multi-module build",
+    "createdAt" : "2021-10-12T18:05:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 713,
+    "title" : "HTTP exception logs should contain more detail",
+    "createdAt" : "2021-10-12T18:21:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 715,
+    "title" : "Cleanly handle Snapshots taken when there is no source data",
+    "createdAt" : "2021-10-12T19:08:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 716,
+    "title" : "Gracefully handle actions upon 0-length recordings",
+    "createdAt" : "2021-10-12T19:13:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 717,
+    "title" : "OAuth Redirect Authentication flow",
+    "createdAt" : "2021-10-12T20:16:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 718,
+    "title" : "Implement API handlers for downloading resources (reports, recordings, templates) using JWT",
+    "createdAt" : "2021-10-14T21:25:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 720,
+    "title" : "Release version 2.0.0",
+    "createdAt" : "2021-10-15T19:08:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 725,
+    "title" : "CI workflow should trigger on release branches",
+    "createdAt" : "2021-10-15T22:39:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 729,
+    "title" : "NoopAuthManager reports authentication scheme as Basic",
+    "createdAt" : "2021-10-18T19:41:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 732,
+    "title" : "[Task] Compression for Archived Recordings",
+    "createdAt" : "2021-10-19T16:13:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 733,
+    "title" : "Decode Bearer token",
+    "createdAt" : "2021-10-20T23:03:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 735,
+    "title" : "Use/report relative URLs",
+    "createdAt" : "2021-10-26T15:18:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 736,
+    "title" : "HTTP timeout handler should not apply to all API requests",
+    "createdAt" : "2021-10-26T21:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 740,
+    "title" : "POST /api/v1/recordings of uploaded file consumes more memory than expected",
+    "createdAt" : "2021-10-27T17:59:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 741,
+    "title" : "Error starting with podman on mac os 10.15.7",
+    "createdAt" : "2021-10-28T16:59:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "Run-as-local-process and hot-reload development server",
+    "createdAt" : "2021-11-03T17:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 749,
+    "title" : "Devserver does not have complete classpath/assets",
+    "createdAt" : "2021-11-05T17:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "Add container compose file to replace/supplement run.sh/smoketest.sh",
+    "createdAt" : "2021-11-10T22:52:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 751,
+    "title" : "`run.sh` mounted volumes permissions result in AccessDeniedExceptions",
+    "createdAt" : "2021-11-12T18:49:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 753,
+    "title" : "[Task] Remove previously uploaded jfr-datasource files when uploading the next",
+    "createdAt" : "2021-11-12T23:22:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 754,
+    "title" : "Update base image",
+    "createdAt" : "2021-11-19T19:16:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 756,
+    "title" : "`TargetConnectionManager` can evict cached connections prematurely",
+    "createdAt" : "2021-11-30T15:08:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 757,
+    "title" : "WebSocket keepalive/pings",
+    "createdAt" : "2021-11-30T21:55:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 759,
+    "title" : "Report generation may fail due to connection cache eviction",
+    "createdAt" : "2021-12-01T14:08:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 760,
+    "title" : "[Story] Implement cross namespace discovery",
+    "createdAt" : "2021-12-01T14:29:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 761,
+    "title" : "`pom.xml` still references `listen` env var",
+    "createdAt" : "2021-12-01T19:06:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 762,
+    "title" : "`pom.xml` uses incorrect/outdated connection cache size env var name",
+    "createdAt" : "2021-12-01T19:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 767,
+    "title" : "HTTP 500: ClassCastException during report generation",
+    "createdAt" : "2021-12-01T22:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 768,
+    "title" : "`repeated-integration-tests.sh` does not detect test failures",
+    "createdAt" : "2021-12-02T17:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 770,
+    "title" : "Integration test should check all container readiness in pod before starting",
+    "createdAt" : "2021-12-02T17:40:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 772,
+    "title" : "`pom.xml` uses outdated jfr-datasource and cryostat-grafana-dashboard images for itests",
+    "createdAt" : "2021-12-02T21:28:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 773,
+    "title" : "[Story] Enable/disable Automated Rules",
+    "createdAt" : "2021-12-03T19:41:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 775,
+    "title" : "HTTP 500: org.openjdk.jmc.rjmx.services.jfr.FlightRecorderException: Could not retrieve the attribute Recordings!",
+    "createdAt" : "2021-12-04T00:05:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 776,
+    "title" : "Should each itest class spin up a fresh Cryostat instance?",
+    "createdAt" : "2021-12-06T16:46:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 777,
+    "title" : "Investigate JDK16+ RemoteRecordingStream for monitoring capabilities",
+    "createdAt" : "2021-12-06T17:30:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 780,
+    "title" : "\"Recording Stopped\" notification on explicit stoppage",
+    "createdAt" : "2021-12-09T19:42:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 781,
+    "title" : "\"Recording Stopped\" notification on implied stop",
+    "createdAt" : "2021-12-09T19:45:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 782,
+    "title" : "[Task] Replace TokenReview with User self-query",
+    "createdAt" : "2021-12-09T22:00:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 784,
+    "title" : "V1 RecordingsPostHandler does not delete improperly-named files",
+    "createdAt" : "2021-12-10T22:16:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 785,
+    "title" : "Deleting archived recording does not remove its cached report",
+    "createdAt" : "2021-12-10T22:22:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 788,
+    "title" : "Integrate jfr-analytics",
+    "createdAt" : "2021-12-29T15:31:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 789,
+    "title" : "Update README with proper cgroups configuration for local podman setup",
+    "createdAt" : "2022-01-10T23:51:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 791,
+    "title" : "The \"Token Authentication\" section in https://cryostat.io/get-started/ should also be updated when this OAuth feature becomes available in the next Cryostat release.",
+    "createdAt" : "2022-01-11T22:45:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 793,
+    "title" : "Worker/background thread pools should use daemon threads",
+    "createdAt" : "2022-01-13T15:20:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 795,
+    "title" : "Remote report generator deficiencies",
+    "createdAt" : "2022-01-13T21:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 799,
+    "title" : "README should mention xpath required for run.sh/smoketest.sh",
+    "createdAt" : "2022-01-21T15:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 802,
+    "title" : "Template download fails with message \"Needs Authorization\"",
+    "createdAt" : "2022-01-24T18:26:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 803,
+    "title" : "JDP should be optional",
+    "createdAt" : "2022-01-26T22:27:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 805,
+    "title" : "devserver fails to start",
+    "createdAt" : "2022-01-28T21:25:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "Add `JAVA_OPTIONS` env var for configuring generic JVM flags",
+    "createdAt" : "2022-02-01T15:50:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 812,
+    "title" : "Sporadic KubeApiPlatformClient unit test failure on websocket notification",
+    "createdAt" : "2022-02-04T19:09:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 813,
+    "title" : "SpotBugs is out of date",
+    "createdAt" : "2022-02-07T22:56:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 815,
+    "title" : "devserver is missing jfr-datasource/grafana",
+    "createdAt" : "2022-02-09T13:43:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 818,
+    "title" : "GraphQL mutations should have a consistent prefix to identify them",
+    "createdAt" : "2022-02-11T12:48:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 819,
+    "title" : "GraphiQL handler should only be available in an explicit dev mode",
+    "createdAt" : "2022-02-11T12:51:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 820,
+    "title" : "[Story] GraphQL query filters",
+    "createdAt" : "2022-02-11T12:52:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 821,
+    "title" : "GraphQL targetNodes query filters",
+    "createdAt" : "2022-02-11T12:54:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 822,
+    "title" : "GraphQL descendantTargets query filters",
+    "createdAt" : "2022-02-11T12:56:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 823,
+    "title" : "GraphQL active recordings query filters",
+    "createdAt" : "2022-02-11T12:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 824,
+    "title" : "GraphQL discovery query should be renamed",
+    "createdAt" : "2022-02-11T13:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 825,
+    "title" : "GraphQL filtering strategy",
+    "createdAt" : "2022-02-11T13:17:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 826,
+    "title" : "Promote `/api/beta/discovery` to `/api/v2.1`",
+    "createdAt" : "2022-02-11T13:34:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 827,
+    "title" : "Promote `/api/beta/auth/token` to `/api/v2.1`",
+    "createdAt" : "2022-02-11T13:36:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 828,
+    "title" : "Promote JWT asset download handlers from `/api/beta` to `/api/v2.1`",
+    "createdAt" : "2022-02-11T13:38:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 829,
+    "title" : "Event upload notification reports local filesystem temp filename instead of template name",
+    "createdAt" : "2022-02-11T18:33:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 830,
+    "title" : "WebSocket notification channel maximum and default connections should be increased",
+    "createdAt" : "2022-02-11T18:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 836,
+    "title" : "Notifications when Automated Rules are created and deleted",
+    "createdAt" : "2022-02-17T19:44:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 840,
+    "title" : "TargetsPostHandler (Custom Target creation) is undocumented",
+    "createdAt" : "2022-02-28T19:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 842,
+    "title" : "Allow separate internal/external dashboard URLs",
+    "createdAt" : "2022-03-02T22:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 844,
+    "title" : "`minimal` deployments should not check for jfr-datasource/grafana-dashboard reachability on `/health`",
+    "createdAt" : "2022-03-03T19:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 846,
+    "title" : "GraphQL environmentNodes query filters",
+    "createdAt" : "2022-03-04T14:24:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "CORS dev server setup does not allow HTTP `Content-Type` header",
+    "createdAt" : "2022-03-09T15:31:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 849,
+    "title" : "Bump nimbus-jose-jwt to 9.16.1",
+    "createdAt" : "2022-03-09T18:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 851,
+    "title" : "HTTP_API.md for `GET /health` is out of date",
+    "createdAt" : "2022-03-09T20:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 853,
+    "title" : "GraphQL and Discovery API disagree on nodes' names",
+    "createdAt" : "2022-03-09T22:13:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 854,
+    "title" : "Abstract SetPosixFilePermissions into FileSystem",
+    "createdAt" : "2022-03-10T16:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 859,
+    "title" : "Label recordings starting by automated rules",
+    "createdAt" : "2022-03-13T03:30:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 860,
+    "title" : "Recordings should have labels for recording settings",
+    "createdAt" : "2022-03-13T03:31:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 865,
+    "title" : "Recording labels should disallow whitespace, allow other characters",
+    "createdAt" : "2022-03-17T17:55:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 869,
+    "title" : "Smoketest setup can OOM",
+    "createdAt" : "2022-03-18T18:18:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 870,
+    "title" : "`devserver.sh` should allow enabling (Basic) auth",
+    "createdAt" : "2022-03-22T21:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 873,
+    "title" : "Label for recording template/type is incompatible with GraphQL filtering/k8s label selectors",
+    "createdAt" : "2022-03-25T20:37:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 876,
+    "title" : "Update cryostat-base image version",
+    "createdAt" : "2022-04-01T17:03:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 878,
+    "title" : "[Task] Documentation for GraphQL",
+    "createdAt" : "2022-04-05T16:34:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 879,
+    "title" : "[Task] Integration tests for GraphQL",
+    "createdAt" : "2022-04-05T16:42:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 880,
+    "title" : "[Task] Machine-processable automated analysis results endpoint",
+    "createdAt" : "2022-04-06T16:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 881,
+    "title" : "OpenShift OAuth server is not trusted",
+    "createdAt" : "2022-04-07T19:32:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 883,
+    "title" : "Use cached client instances when communicating with OpenShift API server",
+    "createdAt" : "2022-04-08T14:46:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 885,
+    "title" : "CI configs should be updated for 2.1 release branch",
+    "createdAt" : "2022-04-11T20:16:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 887,
+    "title" : "GraphQLPostHandler requires incorrect platform permissions",
+    "createdAt" : "2022-04-12T14:17:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 890,
+    "title" : "Event Templates with multi-word Labels cannot be used",
+    "createdAt" : "2022-04-12T19:37:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 894,
+    "title" : "Update web-client to latest",
+    "createdAt" : "2022-04-13T20:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 895,
+    "title" : "[Story] Stored credentials should be able to match multiple targets",
+    "createdAt" : "2022-04-14T18:41:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 897,
+    "title" : "Cryostat Core 2.9.1 has been released",
+    "createdAt" : "2022-04-19T20:41:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 902,
+    "title" : "Update submodule for 2.1 release",
+    "createdAt" : "2022-04-25T19:34:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 904,
+    "title" : "[Story] Rename \"minimal\" to \"headless\"",
+    "createdAt" : "2022-04-25T20:15:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 907,
+    "title" : "Build fails if NPM not installed",
+    "createdAt" : "2022-04-26T15:02:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 911,
+    "title" : "Recording Deleted notification issued during empty snapshot handling",
+    "createdAt" : "2022-04-26T21:43:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 913,
+    "title" : "Generate `NotFound` page from `routes`",
+    "createdAt" : "2022-04-27T15:31:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 914,
+    "title" : "[Task] Startup-blocking exceptions should log detailed messages",
+    "createdAt" : "2022-04-27T20:14:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 916,
+    "title" : "Snapshot creation notification handling should be delegated to the backend. ",
+    "createdAt" : "2022-04-27T22:16:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 918,
+    "title" : "[Task] API requests should be able to specify which rules to evaluate",
+    "createdAt" : "2022-05-03T22:07:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 919,
+    "title" : "Bump version to 2.2.0-SNAPSHOT",
+    "createdAt" : "2022-05-04T17:13:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 921,
+    "title" : "[Task] Report continues to show incomplete results after recording stops",
+    "createdAt" : "2022-05-04T19:55:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 922,
+    "title" : "Healthcheck error after provision on Openshift 4.10",
+    "createdAt" : "2022-05-05T18:18:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 923,
+    "title" : "[Task] Enable revamp/redesign of the -web \"All Archives\" view",
+    "createdAt" : "2022-05-11T17:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 925,
+    "title" : "Release version 2.1.0",
+    "createdAt" : "2022-05-12T13:59:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 927,
+    "title" : "Requests can hang if specified targetId is not reachable/resolvable",
+    "createdAt" : "2022-05-12T14:01:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 928,
+    "title" : "[Task] JMC Agent Probe handlers are in V2 API version but 'beta' package",
+    "createdAt" : "2022-05-12T15:35:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 929,
+    "title" : "[Task] Concurrent API Requests can become blocked",
+    "createdAt" : "2022-05-12T17:29:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 935,
+    "title" : "[Task] Discovery API handler is in V2.1 API version but documented as Beta",
+    "createdAt" : "2022-05-13T14:13:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 936,
+    "title" : "[Epic] Pluggable Discovery Services",
+    "createdAt" : "2022-05-13T14:18:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 937,
+    "title" : "[Story] Pluggable Discovery Database",
+    "createdAt" : "2022-05-13T14:24:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 938,
+    "title" : "[Task] Pluggable Discovery In-Place Model Updates",
+    "createdAt" : "2022-05-13T14:27:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 939,
+    "title" : "[Story] Pluggable Discovery API",
+    "createdAt" : "2022-05-13T14:31:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 940,
+    "title" : "[Story] Pluggable Discovery Microservices",
+    "createdAt" : "2022-05-13T14:36:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 941,
+    "title" : "[Task] Investigate DB types for Service Discovery",
+    "createdAt" : "2022-05-13T14:44:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 942,
+    "title" : "[Task] Add Services Discovery Database",
+    "createdAt" : "2022-05-13T14:46:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 943,
+    "title" : "[Task] Store existing Discovered Targets in Database",
+    "createdAt" : "2022-05-13T14:47:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 944,
+    "title" : "[Task] Update to JDK17",
+    "createdAt" : "2022-05-17T19:18:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 945,
+    "title" : "[Epic] Dashboard overview",
+    "createdAt" : "2022-05-17T20:03:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 946,
+    "title" : "[Story] Automated Analysis Scores in Dashboard",
+    "createdAt" : "2022-05-17T20:13:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 947,
+    "title" : "[Task] Unit tests for GraphQL",
+    "createdAt" : "2022-05-17T20:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 948,
+    "title" : "[Meta] Unify labels across repos",
+    "createdAt" : "2022-05-17T20:52:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 950,
+    "title" : "[Task] Add local-only healthcheck endpoint",
+    "createdAt" : "2022-05-19T14:19:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 951,
+    "title" : "[Task] Empty archive directories are not removed",
+    "createdAt" : "2022-05-19T18:36:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 960,
+    "title" : "[Task] Query responses for Recordings can exclude present Labels",
+    "createdAt" : "2022-05-27T22:25:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 961,
+    "title" : "[Task] New health/liveness endpoint should be documented under the V2 API ",
+    "createdAt" : "2022-05-27T22:35:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 964,
+    "title" : "[Story] Archived recordings should have a visible size field",
+    "createdAt" : "2022-05-31T13:27:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 966,
+    "title" : "CI builds have an incomplete version string",
+    "createdAt" : "2022-05-31T21:47:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 967,
+    "title" : "[Task] V2 response handlers should be able to respond with \"raw\" responses, not always JSON wrapped",
+    "createdAt" : "2022-06-01T18:36:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 969,
+    "title" : "[Task] Create v2.2 API",
+    "createdAt" : "2022-06-01T20:40:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 970,
+    "title" : "[Task] Promote GraphQL out of beta API",
+    "createdAt" : "2022-06-01T20:41:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 972,
+    "title" : "[Task] Aliased target-specific archives doesn't display recordings created with different connectUrl",
+    "createdAt" : "2022-06-02T18:17:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 973,
+    "title" : "Image tags must be lowercase",
+    "createdAt" : "2022-06-02T20:56:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 979,
+    "title" : "[Task] Select default permissions that do not use FlightRecorder/Recording",
+    "createdAt" : "2022-06-03T19:37:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "[Meta] Add `build` label",
+    "createdAt" : "2022-06-07T14:29:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 984,
+    "title" : "[Meta] `web-client` submodule should track branch, not just commit hash",
+    "createdAt" : "2022-06-07T16:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 986,
+    "title" : "[Task] Allow ArchivedRecordings to include target field in archivedRecording notifications",
+    "createdAt" : "2022-06-08T22:26:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 987,
+    "title" : "[Task] `smoketest.sh` should always use latest peripheral containers",
+    "createdAt" : "2022-06-09T18:08:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 989,
+    "title" : "[Task] Remove `spotless` workaround for jdk modules",
+    "createdAt" : "2022-06-09T18:43:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 990,
+    "title" : "[Task] Port Rules engine from Nashorn to GraalVM JS",
+    "createdAt" : "2022-06-09T19:22:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 994,
+    "title" : "[Story] GraphQL `Fetcher`s should only populate response as-needed",
+    "createdAt" : "2022-06-10T20:35:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 995,
+    "title" : "[Task] Document JWT-consuming V2 API handlers",
+    "createdAt" : "2022-06-10T21:36:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 997,
+    "title" : "Release version 2.1.1",
+    "createdAt" : "2022-06-14T19:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1001,
+    "title" : "Bump development versions after 2.1.1 release",
+    "createdAt" : "2022-06-16T16:20:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1003,
+    "title" : "[Task] CI build fails with -core version >=2.12.0",
+    "createdAt" : "2022-06-16T19:02:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1007,
+    "title" : "CI can't check out submodule for non-main branches",
+    "createdAt" : "2022-06-17T21:16:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1011,
+    "title" : "Message \"Could not parse Cryostat version string\" when clicking on \"About\"",
+    "createdAt" : "2022-06-24T14:17:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1013,
+    "title" : "Gracefully stop recording on the target's pod termination",
+    "createdAt" : "2022-06-29T11:37:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1014,
+    "title" : "[Task] Add `initialDelay` to Automated Rule definitions",
+    "createdAt" : "2022-06-30T13:11:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1016,
+    "title" : "[Story] RequestHandlers should implement \"produces\" for Content-Type negotiation",
+    "createdAt" : "2022-07-05T20:02:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1017,
+    "title" : "[Task] `repeated-*-tests.bash` scripts fail without manual build first",
+    "createdAt" : "2022-07-07T15:03:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1021,
+    "title" : "[Task] Implement per-subquery permissions for GraphQL",
+    "createdAt" : "2022-07-12T23:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1023,
+    "title" : "[Task] cryostat README.md typo for sha256 command",
+    "createdAt" : "2022-07-14T00:13:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1024,
+    "title" : "[Task] JWT creation still expects client to passthrough jmxauth claim",
+    "createdAt" : "2022-07-18T19:47:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1030,
+    "title" : "[Task] Add aggregate information for active recordings in the GraphQL API",
+    "createdAt" : "2022-08-02T19:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1033,
+    "title" : "[Task] Print application version information on startup",
+    "createdAt" : "2022-08-04T19:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1036,
+    "title" : "[Task] k8s Endpoints watch can fail and remain disconnected",
+    "createdAt" : "2022-08-04T20:59:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1038,
+    "title" : "[Task] KubeApiClient watcher discovery improperly handles replica scaling",
+    "createdAt" : "2022-08-04T23:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1040,
+    "title" : "[Task] Use `shellcheck` to analyze bundled scripts",
+    "createdAt" : "2022-08-10T19:21:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1041,
+    "title" : "[Task] Automated rules do not automatically start on targets that need authentication",
+    "createdAt" : "2022-08-16T15:49:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1043,
+    "title" : "[Task] Targets in listing and discovery tree leafnodes should have a discovery Realm annotations",
+    "createdAt" : "2022-08-16T22:00:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1045,
+    "title" : "[Bug] Archived recording uploads do not handle recording metadata (labels)",
+    "createdAt" : "2022-08-18T15:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1046,
+    "title" : "[Task] Deleting archived recordings can delete wrong file for identically-named but distinct files",
+    "createdAt" : "2022-08-18T19:37:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1049,
+    "title" : "[Task] Document Pluggable Discovery API endpoints",
+    "createdAt" : "2022-08-19T15:04:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1050,
+    "title" : "[Task] Document expected behaviour for microservices",
+    "createdAt" : "2022-08-19T15:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1051,
+    "title" : "[Task] Implement a small example/template microservice (ex. for JDP)",
+    "createdAt" : "2022-08-19T15:06:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1053,
+    "title" : "[Task] Upgrade h2database and postgres dependencies",
+    "createdAt" : "2022-08-19T23:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1054,
+    "title" : "[Task] Discovery plugin registration failure due to duplicate realm/callback responds with `HTTP 500`",
+    "createdAt" : "2022-08-22T17:36:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1058,
+    "title" : "[Task] Implement discovery plugin JWT flow",
+    "createdAt" : "2022-08-24T13:25:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1061,
+    "title" : "[Task] Discovery plugin names should have unique ID generated and appended",
+    "createdAt" : "2022-09-12T18:39:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1064,
+    "title" : "[Story] Option to automatically archive manually-created recordings on stop",
+    "createdAt" : "2022-09-13T13:48:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1068,
+    "title" : "[Task] Clean up itests to use standard external target container image, improve discovery poll times",
+    "createdAt" : "2022-09-15T18:51:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1076,
+    "title" : "[Task] Expose `jvmId` through GraphQL query in target metadata",
+    "createdAt" : "2022-09-20T14:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1078,
+    "title" : "[Task] `smoketest.sh` publishes all `vertx-fib-demo` on same HTTP port",
+    "createdAt" : "2022-09-22T17:24:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1081,
+    "title" : "[Task] Add config to require specific JMX SSL cert(s)",
+    "createdAt" : "2022-09-26T19:41:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1082,
+    "title" : "[Task] Use database for JMX credentials",
+    "createdAt" : "2022-09-27T04:52:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1085,
+    "title" : "[Task] Allow MetadataManager to start metadata validation without relying on DiscoveryStorage",
+    "createdAt" : "2022-09-28T19:12:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1087,
+    "title" : "[Task] After restart, Automated Rules fail to trim old archived copies",
+    "createdAt" : "2022-09-30T00:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1092,
+    "title" : "[Task] Automated Rules should be JvmID-aware",
+    "createdAt" : "2022-10-04T14:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1093,
+    "title" : "[Task] Automated Rule deletion fails if some matched targets cannot be connected",
+    "createdAt" : "2022-10-04T15:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1094,
+    "title" : "[Task] Development and CI runs should use `h2:file` mode by default",
+    "createdAt" : "2022-10-05T13:40:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1098,
+    "title" : "[Task] Recording deletion notifications do not update All-Archives view",
+    "createdAt" : "2022-10-05T19:53:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1100,
+    "title" : "[Task] Add \"Archive on Stop\" property to POST endpoint for starting recordings",
+    "createdAt" : "2022-10-06T14:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1102,
+    "title" : "[Task] Requests for target-specific templates return 500 instead of expected 427 on JMX credentials failure",
+    "createdAt" : "2022-10-06T20:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1103,
+    "title" : "[Task] Automated Rule enabled/disabled state is not persisted",
+    "createdAt" : "2022-10-06T21:02:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1106,
+    "title" : "[Task] Metadata and JVM ID computation can block threads",
+    "createdAt" : "2022-10-07T00:48:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1108,
+    "title" : "[Task] Split compile/container-build and itest run steps in CI",
+    "createdAt" : "2022-10-08T00:11:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "[Task] add functionality to view archived files that have no recognizable targetId/serviceUri",
+    "createdAt" : "2022-10-11T18:53:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1111,
+    "title" : "[Task] Rule deletion broken",
+    "createdAt" : "2022-10-11T21:48:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1113,
+    "title" : "[Task] `DISABLE_BUILTIN_DISCOVERY` env var should not disable Custom Targets",
+    "createdAt" : "2022-10-13T15:18:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1118,
+    "title" : "[Meta] Upstream 2.2 release",
+    "createdAt" : "2022-10-16T21:00:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1121,
+    "title" : "[Task] Various cleanup tasks related to metadata and archives",
+    "createdAt" : "2022-10-17T23:26:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1128,
+    "title" : "[Task] Update jib plugin",
+    "createdAt" : "2022-10-18T15:07:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1135,
+    "title" : "[Task] Archives incorrectly migrating",
+    "createdAt" : "2022-10-19T21:52:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1142,
+    "title" : "[Task] V2 API endpoints do not use stored credentials",
+    "createdAt" : "2022-10-21T19:49:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1143,
+    "title" : "[Task] Fix broken CI job for pushing to quay",
+    "createdAt" : "2022-10-21T22:07:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1152,
+    "title" : "[Task] CI pulls from quay.io instead of from local podman repository",
+    "createdAt" : "2022-10-24T22:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1159,
+    "title" : "Add configuration to skip building base image",
+    "createdAt" : "2022-10-25T18:44:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1163,
+    "title" : "Upgrade Postgres JDBC to 42.5",
+    "createdAt" : "2022-10-25T20:29:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1166,
+    "title" : "[Task] Lost archives metadata aren't moved along with the recordings",
+    "createdAt" : "2022-10-25T21:13:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1178,
+    "title" : "[Task] `archiveOnStop` property is not accessible from GraphQL",
+    "createdAt" : "2022-10-26T21:42:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1180,
+    "title" : "[Task] Create dependabot config for automatic dependency version updates",
+    "createdAt" : "2022-10-27T14:38:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1184,
+    "title" : "[Task] Metadata labels do not show after starting a recording with GraphQL",
+    "createdAt" : "2022-10-27T18:38:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1191,
+    "title" : "[Task] Mismatched event name between impl and self-inspection template",
+    "createdAt" : "2022-11-04T16:33:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1192,
+    "title" : "[Task] Badly-serialized `GET /api` response",
+    "createdAt" : "2022-11-04T16:34:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1194,
+    "title" : "[Task] Add Action automation to prevent dependency update merges until reviewer removes label",
+    "createdAt" : "2022-11-04T20:40:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1200,
+    "title" : "[Task] Disable Dependabot on forks",
+    "createdAt" : "2022-11-04T20:56:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1201,
+    "title" : "[Task] GraphQL async execution",
+    "createdAt" : "2022-11-06T22:32:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1203,
+    "title" : "[Task] Vertx 4.3.0 cleanup",
+    "createdAt" : "2022-11-07T15:26:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1213,
+    "title" : "[Task] Broken logging",
+    "createdAt" : "2022-11-07T19:23:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1240,
+    "title" : "[Task] Update sample apps",
+    "createdAt" : "2022-11-09T17:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1241,
+    "title" : "[Task] Replace direct WebSocket with Vertx SockJS",
+    "createdAt" : "2022-11-09T19:53:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1242,
+    "title" : "[Task] Put archived time into GraphQL queries",
+    "createdAt" : "2022-11-10T01:43:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1247,
+    "title" : "[Task] Remove `smoketest.sh`/`run.sh`/`devserver.sh` usage of `xpath`",
+    "createdAt" : "2022-11-15T19:44:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1248,
+    "title" : "[Task] `run.sh` should default to the `pom.xml` image version, not `latest`",
+    "createdAt" : "2022-11-15T20:43:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1252,
+    "title" : "[Task] Multiple similar targets can be found under /targets",
+    "createdAt" : "2022-11-16T19:23:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1253,
+    "title" : "[Task] smoketest quarkus-test-plugin should be removed gracefully with SIGTERM",
+    "createdAt" : "2022-11-16T23:22:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1258,
+    "title" : "[Task] Support for editting target details",
+    "createdAt" : "2022-11-23T21:01:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1261,
+    "title" : "[Task] Running cryostat smoketest with front-end no longer automatically pulls changes from locally built image",
+    "createdAt" : "2022-11-28T21:20:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1262,
+    "title" : "[Task] Fix itest for containers that need credentials",
+    "createdAt" : "2022-11-29T16:15:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1263,
+    "title" : "[Task] Increase dependabot PR limit",
+    "createdAt" : "2022-11-30T16:41:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1266,
+    "title" : "[Bug] `java.lang.IllegalArgumentException: Cannot schedule a timer with delay < 1 ms`",
+    "createdAt" : "2022-11-30T19:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1268,
+    "title" : "[Task] Add PR and issue templates",
+    "createdAt" : "2022-11-30T21:08:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1269,
+    "title" : "[Story] Add pull-request and issue templates to Cryostat repositories",
+    "createdAt" : "2022-11-30T21:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1270,
+    "title" : "[Task] Investigate usage of empty JMX password",
+    "createdAt" : "2022-11-30T21:11:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1272,
+    "title" : "[Task] Notification sends to web socket if ProbeTemplateUploadHandler fails",
+    "createdAt" : "2022-12-02T00:41:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1276,
+    "title" : "[Task] Discovery plugin updates should require all branches terminate in leaf nodes",
+    "createdAt" : "2022-12-05T21:15:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1278,
+    "title" : "[Bug] Labels attached to an active recording within an agent-equipped target get removed after plugin re-registration",
+    "createdAt" : "2022-12-06T00:14:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1279,
+    "title" : "[Task] Allow TargetProbePostHandler to send notification of probe events",
+    "createdAt" : "2022-12-06T00:23:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1283,
+    "title" : "[Request] Disabling an Automated Rule should also be able to perform cleanup",
+    "createdAt" : "2022-12-07T15:41:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1288,
+    "title" : "[Bug] Adding JMX Credentials after Automated Rule is added/enabled forces re-activation",
+    "createdAt" : "2022-12-13T22:15:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1292,
+    "title" : "[Bug] Resource cleanup on deleting automated rule is broken",
+    "createdAt" : "2022-12-15T01:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1299,
+    "title" : "[Story] Target-specific recording uploads",
+    "createdAt" : "2022-12-22T05:08:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1300,
+    "title" : "[Task] Relax requirement for JVMs to produce JVM IDs at discovery time by JMX request",
+    "createdAt" : "2022-12-22T05:08:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1301,
+    "title" : "[Task] Add API endpoint for uploading recordings by JVM ID",
+    "createdAt" : "2022-12-22T05:08:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1302,
+    "title" : "[Meta] 2.2.1 Release",
+    "createdAt" : "2022-12-22T15:05:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1306,
+    "title" : "[Task] Policies for pruning target-specific uploads",
+    "createdAt" : "2022-12-22T19:48:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1309,
+    "title" : "[Story] Agent HTTP API partial implementation of JMX JFR operations",
+    "createdAt" : "2022-12-23T16:25:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1310,
+    "title" : "[Task] Stub out Agent HTTP remote connection service",
+    "createdAt" : "2022-12-23T16:25:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1318,
+    "title" : "CI `mvn` invocations should all use batch mode and force updates",
+    "createdAt" : "2023-01-04T14:41:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1329,
+    "title" : "[Request] Provide ARM images ",
+    "createdAt" : "2023-01-13T16:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1334,
+    "title" : "[Task] needs-triage doesn't need to be applied on every pull-request-target action",
+    "createdAt" : "2023-01-17T01:17:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1337,
+    "title" : "[Task] Kubernetes built-in discovery should report full internal DNS names",
+    "createdAt" : "2023-01-20T21:06:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1340,
+    "title" : "[Bug] \"View Report\" failure/hang/timeout on archived recordings if not previously generated",
+    "createdAt" : "2023-01-25T16:25:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1353,
+    "title" : "[Bug] `certs/generate-dev-certs.sh` assumes `/usr/lib/jvm/java-11-openjdk`",
+    "createdAt" : "2023-02-01T23:03:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1355,
+    "title" : "[Task] Use `xpath` if it is available in cryostat scripts",
+    "createdAt" : "2023-02-02T19:34:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1360,
+    "title" : "[Task] Implement JVM details endpoint over JMX ",
+    "createdAt" : "2023-02-07T23:48:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1364,
+    "title" : "[Task] Expand OAuth token scope for multiple namespaces",
+    "createdAt" : "2023-02-10T22:14:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1365,
+    "title" : "[Task] Consider implicit inclusion of own namespace",
+    "createdAt" : "2023-02-10T22:16:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1376,
+    "title" : "[Task] Support authenticated HTTP requests to Agent",
+    "createdAt" : "2023-02-21T20:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1386,
+    "title" : "[Request] Updated credentials and rules endpoints",
+    "createdAt" : "2023-03-01T00:31:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1396,
+    "title" : "[Request] `smoketest.sh` environment variables for overriding all container versions",
+    "createdAt" : "2023-03-10T17:57:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1398,
+    "title" : "[Story] Session credential header for multiple targets per request",
+    "createdAt" : "2023-03-10T21:36:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1401,
+    "title" : "[Story] Update CI runners' JDK distributions",
+    "createdAt" : "2023-03-13T15:45:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1403,
+    "title" : "[Bug] GraphQL mutator for starting recordings cannot accept `restart` param",
+    "createdAt" : "2023-03-13T23:59:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1404,
+    "title" : "[Bug] Could not find credentials when creating custom targets",
+    "createdAt" : "2023-03-13T23:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1407,
+    "title" : "[Bug] GraphQL mutator for starting recordings does not accept the same \"labels\" format as the metadata mutator",
+    "createdAt" : "2023-03-14T03:50:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1409,
+    "title" : "[Story] Multi-tenant security",
+    "createdAt" : "2023-03-14T15:58:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1410,
+    "title" : "[Task] Add unique IDs to Discovery Nodes",
+    "createdAt" : "2023-03-14T16:27:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1416,
+    "title" : "[Task] Implement querying of readonly properties from -agent",
+    "createdAt" : "2023-03-15T21:04:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1428,
+    "title" : "[Bug] `ActiveRecordingStopped` notification has `RUNNING` state field",
+    "createdAt" : "2023-03-26T20:39:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1431,
+    "title" : "[Request] Credential test endpoint",
+    "createdAt" : "2023-03-27T02:28:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1433,
+    "title" : "[Task] Add GraphQL filter ability for node name from set",
+    "createdAt" : "2023-03-28T01:00:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1439,
+    "title" : "[Story] Docker API discovery",
+    "createdAt" : "2023-04-05T18:28:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1444,
+    "title" : "[Bug] Cryostat keeps failing with \"Too many open files\", exhausts descriptors",
+    "createdAt" : "2023-04-12T11:04:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1448,
+    "title" : "Many vert.x-worker threads blocked during startup",
+    "createdAt" : "2023-04-13T13:26:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1450,
+    "title" : "[Task] Caching of Automated Analysis Report JSON",
+    "createdAt" : "2023-04-13T18:37:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1452,
+    "title" : "[Request] Target owned resource update event should include JvmID",
+    "createdAt" : "2023-04-14T21:05:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1455,
+    "title" : "[Question] Reports-sidecar cannot be connected to in Podman discovery platform",
+    "createdAt" : "2023-04-17T21:17:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1456,
+    "title" : "[Epic] `async-profiler` support",
+    "createdAt" : "2023-04-18T13:19:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1459,
+    "title" : "[Meta] Upstream 2.3 release",
+    "createdAt" : "2023-04-18T20:18:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1464,
+    "title" : "[Story] Localize and refactor Automated Analysis Rules throughout codebase",
+    "createdAt" : "2023-04-20T20:36:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1465,
+    "title" : "[Task] Allow skipping of test container image pulls",
+    "createdAt" : "2023-04-22T05:01:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1469,
+    "title" : "[Task] Create testing scripts for more scenarios",
+    "createdAt" : "2023-04-24T08:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1473,
+    "title" : "[Task] Remove any mentions of subdirectory names to use jvmId in \"fromPath\" requests",
+    "createdAt" : "2023-04-25T19:35:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1474,
+    "title" : "[Task] Remove `KubeEnv` discovery plugin",
+    "createdAt" : "2023-04-25T20:35:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1484,
+    "title" : "[Task] 2.3 user-facing string updates",
+    "createdAt" : "2023-05-03T18:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1488,
+    "title" : "[Task] Update node and yarn versions used by frontend-plugin",
+    "createdAt" : "2023-05-10T19:04:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1489,
+    "title" : "[Bug] Logout failure on OCP 4.12+",
+    "createdAt" : "2023-05-10T21:42:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1490,
+    "title" : "[Bug] HTTP 415 when creating Automated Rules using `multipart/form-data`",
+    "createdAt" : "2023-05-11T10:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1492,
+    "title" : "[Task] Fine-grained replacement parameter for Start Recording Mutator",
+    "createdAt" : "2023-05-16T23:07:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1494,
+    "title" : "[Bug] Automated Rules fail to activate/deactivate",
+    "createdAt" : "2023-05-19T20:06:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1496,
+    "title" : "[Request] Run k8s tests in CI",
+    "createdAt" : "2023-05-23T13:59:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1497,
+    "title" : "[Bug] Automated Rules choke when targets are reachable via multiple URLs",
+    "createdAt" : "2023-05-24T14:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1498,
+    "title" : "[Bug] Blocked thread during Rule activation",
+    "createdAt" : "2023-05-25T18:52:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1500,
+    "title" : "[Task] PR template asks contributor to signoff on commit, but not to sign it",
+    "createdAt" : "2023-05-25T19:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1501,
+    "title" : "[Task] Maven plugin warnings on build",
+    "createdAt" : "2023-05-25T20:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1505,
+    "title" : "[Bug] `CRYOSTAT_DISABLE_BUILTIN_DISCOVERY` environment variable does not work",
+    "createdAt" : "2023-05-30T19:18:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1507,
+    "title" : "[Bug] `CRYOSTAT_DISABLE_SSL` env var behaves unexpectedly",
+    "createdAt" : "2023-05-30T20:07:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1510,
+    "title" : "[Bug] Additional `clientlib` JARs can conflict with required dependencies",
+    "createdAt" : "2023-06-01T14:42:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1512,
+    "title" : "[Bug] Cryostat is no longer buildable with `docker-ce`",
+    "createdAt" : "2023-06-01T17:39:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1513,
+    "title" : "[Request] Podman Discovery should be able to use container/pod Hostname automatically",
+    "createdAt" : "2023-06-01T20:26:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1516,
+    "title" : "[Bug] Internal Server Error while creating recording",
+    "createdAt" : "2023-06-02T21:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1517,
+    "title" : "[Bug] JMX and Discovery failure with particular JVM flags",
+    "createdAt" : "2023-06-02T22:46:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1532,
+    "title" : "[Bug] `README` does not document required `podman.sock` for `run.sh`/`smoketest.sh`",
+    "createdAt" : "2023-06-09T15:07:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1533,
+    "title" : "[Bug] integration tests sometimes time out waiting for containers to start",
+    "createdAt" : "2023-06-09T18:10:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1546,
+    "title" : "[Bug] Built-in discovery plugin failures should log exceptions but not block startup",
+    "createdAt" : "2023-06-14T18:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1547,
+    "title" : "[Bug] Podman/Docker built-in discoveries do not work on ARM64",
+    "createdAt" : "2023-06-14T18:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1552,
+    "title" : "[Task] GraphQL filtering of node names using \"label selector\" syntax",
+    "createdAt" : "2023-06-15T13:32:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1553,
+    "title" : "[Bug] JDP is broken on ARM64 images",
+    "createdAt" : "2023-06-15T13:57:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1555,
+    "title" : "[Bug] CI fails to create multiarch manifest image",
+    "createdAt" : "2023-06-15T15:04:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1567,
+    "title" : "[Task] `smoketest.sh` fails to start `jfr-datasource`",
+    "createdAt" : "2023-06-29T19:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1571,
+    "title" : "[Bug] integration test suite does not test just-built image, but a previous tag",
+    "createdAt" : "2023-06-30T19:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1577,
+    "title" : "[Bug] JVM target discovery failure when pod restarts",
+    "createdAt" : "2023-07-05T10:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1578,
+    "title" : "[Epic] Two-way Agent communications",
+    "createdAt" : "2023-07-05T15:12:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1579,
+    "title" : "[Story] Implement connection stubs for HTTP-backed remote operations for JMX parity",
+    "createdAt" : "2023-07-05T15:23:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1580,
+    "title" : "[Story] Implement HTTP dynamic JFR start",
+    "createdAt" : "2023-07-05T15:23:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1581,
+    "title" : "[Story] Implement HTTP dynamic JFR stop",
+    "createdAt" : "2023-07-05T15:23:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1582,
+    "title" : "[Story] Implement HTTP JFR file pull",
+    "createdAt" : "2023-07-05T15:24:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1584,
+    "title" : "[Task] Implement PR command /build_test",
+    "createdAt" : "2023-07-07T01:50:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1585,
+    "title" : "[Task] Implement PR command /request_review",
+    "createdAt" : "2023-07-07T01:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1588,
+    "title" : "[Bug] Crostat CR blocks namespace deletion",
+    "createdAt" : "2023-07-14T13:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1597,
+    "title" : "[Task] Implement API endpoint(s) for match expression validation/evaluation",
+    "createdAt" : "2023-07-26T16:53:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1601,
+    "title" : "[Bug] /beta/matchExpression throws exception when many targets are specified",
+    "createdAt" : "2023-07-27T19:54:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1613,
+    "title" : "[Story] Implement HTTP JFR snapshot creation",
+    "createdAt" : "2023-08-14T17:55:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1629,
+    "title" : "[Bug] Resource limits are too low for smoketest",
+    "createdAt" : "2023-08-23T18:17:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1633,
+    "title" : "[Bug] Agent discovery desync",
+    "createdAt" : "2023-08-24T18:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1634,
+    "title" : "[Task] `/build_test` command enhancements",
+    "createdAt" : "2023-08-24T21:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1641,
+    "title" : "[Task] Upgrade PR actions to versions that use node16",
+    "createdAt" : "2023-08-30T18:40:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1649,
+    "title" : "[Bug] Podman discovery not working",
+    "createdAt" : "2023-09-01T18:42:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1654,
+    "title" : "[Bug] `/request_review` PR workflow runs fail due to apparent permissions issue",
+    "createdAt" : "2023-09-05T19:28:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1660,
+    "title" : "[Meta] Dependabot updates should request review from `maintainers` team",
+    "createdAt" : "2023-09-07T18:17:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1661,
+    "title" : "[Bug] Application startup tasks can block the Vertx event loop",
+    "createdAt" : "2023-09-07T20:33:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1665,
+    "title" : "[Request] Update contributing guides",
+    "createdAt" : "2023-09-08T22:22:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1669,
+    "title" : "[Bug] Unresponsive server",
+    "createdAt" : "2023-09-14T18:01:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1670,
+    "title" : "[Bug] \"Restart if recording already exists\" checkbox doesn't work",
+    "createdAt" : "2023-09-15T19:25:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1673,
+    "title" : "[Bug] Cannot use `targets/:targetId`-style API endpoints for Agent HTTP connections",
+    "createdAt" : "2023-09-18T20:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1686,
+    "title" : "[Task] Update CI actions to Node 20 verions",
+    "createdAt" : "2023-09-25T13:27:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1695,
+    "title" : "[Meta] Upstream 2.4 release",
+    "createdAt" : "2023-10-04T14:06:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1698,
+    "title" : "[Bug] Startup failure due to discovery ping failure",
+    "createdAt" : "2023-10-06T20:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1719,
+    "title" : "[Bug] `pom.xml` explicitly specifies netty version to match vertx version",
+    "createdAt" : "2023-10-12T19:02:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1727,
+    "title" : "[Task] Update 'Running integration tests without rebuild' section in README.md",
+    "createdAt" : "2023-10-16T14:48:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1734,
+    "title" : "[Task] Comment-triggered workflows should report status checks",
+    "createdAt" : "2023-10-20T13:27:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1738,
+    "title" : "[Bug] Archives > All Archives > Download does not download JFR file",
+    "createdAt" : "2023-10-23T14:42:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1742,
+    "title" : "[Bug] Missing log output since #1720",
+    "createdAt" : "2023-10-24T19:23:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1755,
+    "title" : "[Bug] CI startup failure",
+    "createdAt" : "2023-10-30T15:33:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1763,
+    "title" : "[Story] Integration with Red Hat Insights for Red Hat customers",
+    "createdAt" : "2023-11-06T20:45:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1768,
+    "title" : "[Bug] Typo in CI workflow",
+    "createdAt" : "2023-11-08T14:46:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1769,
+    "title" : "[Bug] CI `/build_test` does not reflect code quality checks status, only tests",
+    "createdAt" : "2023-11-08T14:52:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1772,
+    "title" : "[Request] Env map forwarded to Agent instances should be configurable",
+    "createdAt" : "2023-11-09T15:46:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1778,
+    "title" : "[Bug] Hang on opening JMX connection",
+    "createdAt" : "2023-11-17T14:24:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1783,
+    "title" : "[Meta] CI workflows must request write permissions",
+    "createdAt" : "2023-11-20T18:17:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1796,
+    "title" : "[Bug] CI does not have permissions to download `cryostat-core` dependency",
+    "createdAt" : "2023-11-28T15:23:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1810,
+    "title" : "[Request] Provide a param that can set the web context root path of cryostat-web",
+    "createdAt" : "2023-12-05T11:59:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1818,
+    "title" : "[Task] Add `--tags` flag to `git describe` in `pom.xml` version generation",
+    "createdAt" : "2023-12-07T16:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1825,
+    "title" : "[Meta] Drop release drafter action, add GitHub release notes config",
+    "createdAt" : "2023-12-08T21:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1847,
+    "title" : "[Bug] javax.naming.ConfigurationException: Environment variable CRYOSTAT_JMX_CREDENTIALS_DB_PASSWORD must be set and non-blank",
+    "createdAt" : "2024-01-01T11:29:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1860,
+    "title" : "[Bug] Websocket not working with Cryostat exposed on a specific Path",
+    "createdAt" : "2024-01-22T18:48:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1861,
+    "title" : "[Bug] Cryostat should not always assume Kubernetes ports numbered 9091 are JMX",
+    "createdAt" : "2024-01-23T18:02:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1864,
+    "title" : "[Bug] `BUILTIN_DISCOVERY_DISABLED` is ignored if `PLATFORM` is set",
+    "createdAt" : "2024-01-24T17:01:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1866,
+    "title" : "[Bug] Cannot delete custom targets that no longer point to a JVM",
+    "createdAt" : "2024-01-25T16:42:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1867,
+    "title" : "[Bug] Unable to interact with short form custom target",
+    "createdAt" : "2024-01-25T20:21:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1876,
+    "title" : "[Bug] Unable to archive recordings for short form custom target",
+    "createdAt" : "2024-02-13T16:24:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1885,
+    "title" : "[Bug] GET recording error",
+    "createdAt" : "2024-02-28T02:07:55Z",
+    "state" : "OPEN"
+  } ]
+}

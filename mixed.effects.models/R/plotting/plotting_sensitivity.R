@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 
 plot_model_sensitivity <- function(model) {
-  time_values <- seq(1, 1000000, length.out = 1000)
+  time_values <- seq(0.1, 10, length.out = 100)
 
   param_list <- lapply(time_values, function(t) {
     params <- get_parameters(model, t)
@@ -28,7 +28,5 @@ plot_model_sensitivity <- function(model) {
 
   par(mfrow = c(1,1))
 }
-
-plot_model_sensitivity(model)
 
 # ------------------------------------------------------------------------------

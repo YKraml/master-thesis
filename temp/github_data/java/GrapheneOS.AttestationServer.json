@@ -1,0 +1,453 @@
+{
+  "repoOwner" : "GrapheneOS",
+  "repoName" : "AttestationServer",
+  "forks" : [ {
+    "createdAt" : "2018-05-12T15:57:45Z"
+  }, {
+    "createdAt" : "2018-06-19T13:54:48Z"
+  }, {
+    "createdAt" : "2018-06-27T17:19:39Z"
+  }, {
+    "createdAt" : "2018-07-05T12:05:09Z"
+  }, {
+    "createdAt" : "2018-08-17T01:16:21Z"
+  }, {
+    "createdAt" : "2018-09-07T01:39:39Z"
+  }, {
+    "createdAt" : "2019-04-26T16:29:00Z"
+  }, {
+    "createdAt" : "2019-05-11T21:24:24Z"
+  }, {
+    "createdAt" : "2019-05-13T05:02:33Z"
+  }, {
+    "createdAt" : "2019-05-30T12:45:57Z"
+  }, {
+    "createdAt" : "2019-08-08T17:49:01Z"
+  }, {
+    "createdAt" : "2020-02-25T17:39:23Z"
+  }, {
+    "createdAt" : "2020-02-27T18:23:31Z"
+  }, {
+    "createdAt" : "2020-04-07T23:36:44Z"
+  }, {
+    "createdAt" : "2020-06-07T05:56:14Z"
+  }, {
+    "createdAt" : "2020-07-30T13:10:29Z"
+  }, {
+    "createdAt" : "2020-09-10T10:20:48Z"
+  }, {
+    "createdAt" : "2021-02-09T23:27:51Z"
+  }, {
+    "createdAt" : "2021-12-14T21:56:38Z"
+  }, {
+    "createdAt" : "2022-02-01T19:14:34Z"
+  }, {
+    "createdAt" : "2022-04-24T20:13:07Z"
+  }, {
+    "createdAt" : "2022-04-28T06:46:06Z"
+  }, {
+    "createdAt" : "2022-07-27T10:11:29Z"
+  }, {
+    "createdAt" : "2022-08-17T18:00:50Z"
+  }, {
+    "createdAt" : "2022-11-18T10:42:51Z"
+  }, {
+    "createdAt" : "2023-01-10T14:02:20Z"
+  }, {
+    "createdAt" : "2023-03-25T14:42:38Z"
+  }, {
+    "createdAt" : "2023-04-11T02:51:16Z"
+  }, {
+    "createdAt" : "2023-06-09T03:07:39Z"
+  }, {
+    "createdAt" : "2023-06-22T09:10:01Z"
+  }, {
+    "createdAt" : "2023-06-26T08:29:22Z"
+  }, {
+    "createdAt" : "2023-07-31T13:55:20Z"
+  }, {
+    "createdAt" : "2023-09-05T18:56:10Z"
+  }, {
+    "createdAt" : "2023-09-28T15:48:10Z"
+  }, {
+    "createdAt" : "2023-12-19T05:06:13Z"
+  }, {
+    "createdAt" : "2024-01-15T18:07:56Z"
+  }, {
+    "createdAt" : "2024-04-12T11:48:16Z"
+  }, {
+    "createdAt" : "2024-11-06T20:01:11Z"
+  }, {
+    "createdAt" : "2024-11-19T09:28:08Z"
+  }, {
+    "createdAt" : "2025-03-16T10:11:48Z"
+  }, {
+    "createdAt" : "2025-05-16T09:00:26Z"
+  }, {
+    "createdAt" : "2025-06-04T18:26:46Z"
+  }, {
+    "createdAt" : "2025-06-06T02:58:05Z"
+  }, {
+    "createdAt" : "2025-11-30T14:09:41Z"
+  }, {
+    "createdAt" : "2026-01-20T20:41:58Z"
+  }, {
+    "createdAt" : "2026-01-23T21:19:57Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "implement basic stateless verification without either challenges or pinning to start",
+    "createdAt" : "2018-03-17T07:33:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "add some more limits to the sample service",
+    "createdAt" : "2018-03-17T07:34:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "start work on implementing pinning, maybe without certificate chain pinning to start",
+    "createdAt" : "2018-03-21T04:43:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "port certificate chain pinning from the local verification implementation in the app",
+    "createdAt" : "2018-03-22T03:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "support saving arbitrary length certificate chains for attestations",
+    "createdAt" : "2018-03-22T08:35:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "generate account qr code dynamically",
+    "createdAt" : "2018-03-24T00:23:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "add real accounts",
+    "createdAt" : "2018-03-24T00:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "switch to a structured JSON API for retrieving device data and formatting in the frontend",
+    "createdAt" : "2018-03-24T00:23:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "store and send attestation history as structured data",
+    "createdAt" : "2018-03-26T15:10:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10,
+    "title" : "add remaining OS enforced fields to device 'pinning' data",
+    "createdAt" : "2018-03-26T15:10:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "connect devices to accounts",
+    "createdAt" : "2018-03-29T17:46:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "replace challenge GET API with a POST API",
+    "createdAt" : "2018-03-29T17:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "allow paired attestations without submitting subscribe key again",
+    "createdAt" : "2018-03-29T17:48:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "stop sending subscribe key via the URL",
+    "createdAt" : "2018-03-29T17:49:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "implement devices.json for non-demo accounts",
+    "createdAt" : "2018-03-29T20:52:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "consider adding a database connection pool",
+    "createdAt" : "2018-04-01T12:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "add email support / verification",
+    "createdAt" : "2018-04-04T16:42:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "support changing password",
+    "createdAt" : "2018-04-04T18:26:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "support changing username",
+    "createdAt" : "2018-04-04T18:26:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 20,
+    "title" : "move to an actively maintained SQLite library like sqlite-jdbc",
+    "createdAt" : "2018-04-04T18:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "add optional email-based password recovery",
+    "createdAt" : "2018-04-04T21:35:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "support 2-factor authentication",
+    "createdAt" : "2018-04-04T21:36:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 23,
+    "title" : "add email-based alerts",
+    "createdAt" : "2018-04-04T21:36:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "harden against trivial denial of service issues",
+    "createdAt" : "2018-04-04T21:37:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "allow rotating subscribe key",
+    "createdAt" : "2018-04-04T21:40:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "expose subscribeKey rotation option",
+    "createdAt" : "2018-04-11T17:41:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "update subscribeKey if it changes just in case it's needed later",
+    "createdAt" : "2018-04-11T17:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "make challenge index per account",
+    "createdAt" : "2018-04-12T05:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "add a description of the service with a link to documentation",
+    "createdAt" : "2018-04-18T04:24:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "explain the public demo account",
+    "createdAt" : "2018-04-18T04:25:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "throttle alerts",
+    "createdAt" : "2018-05-01T15:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "send alert emails",
+    "createdAt" : "2018-05-01T15:32:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "add support for multiple alert email addresses",
+    "createdAt" : "2018-05-01T15:33:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 34,
+    "title" : "add support for deleting devices",
+    "createdAt" : "2018-05-02T21:45:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "implement local database backups",
+    "createdAt" : "2018-05-06T09:13:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "tune alert delay restrictions based on job scheduler latency",
+    "createdAt" : "2018-05-06T11:08:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "choose a sane rate for database backups",
+    "createdAt" : "2018-05-08T15:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "consider either replacing or reviving sqlite4java since it's poorly maintained",
+    "createdAt" : "2018-05-14T18:53:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "log failed attestations as long as they can be accurately attributed to a device",
+    "createdAt" : "2018-05-14T19:06:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 40,
+    "title" : "split attestation user from the service user",
+    "createdAt" : "2018-08-15T21:46:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "add boot / vendor patch level support per the app",
+    "createdAt" : "2018-08-19T03:30:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "add verifiedBootHash display per the app",
+    "createdAt" : "2018-11-11T02:02:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "support detecting rollback resistance for key attestation v3 (Pixel 3) per the app",
+    "createdAt" : "2018-11-11T02:02:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 44,
+    "title" : "add configuration option for frequency of attestation failure emails",
+    "createdAt" : "2019-04-19T16:23:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 45,
+    "title" : "NULL pointer dereference in sqlite4java",
+    "createdAt" : "2019-04-23T13:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "support deleting accounts",
+    "createdAt" : "2019-06-12T15:25:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 47,
+    "title" : "resolve issue of mail delivery failure notifications going to spam",
+    "createdAt" : "2019-07-14T08:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "add support for pinning key of the mail server",
+    "createdAt" : "2020-03-29T13:50:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 49,
+    "title" : "add a hard limit on sending alerts for a given problem",
+    "createdAt" : "2020-06-24T15:55:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "add support for the new attestation root certificate",
+    "createdAt" : "2020-07-14T14:30:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "add a database table with blacklisted email patterns to replace the hard-wired array in the source code",
+    "createdAt" : "2020-09-18T17:12:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 54,
+    "title" : "Tutorial should explain how to use results",
+    "createdAt" : "2020-09-23T17:02:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 57,
+    "title" : "Remote Attestation: 48 hour delay verification",
+    "createdAt" : "2020-10-03T12:24:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "set up per-IP API rate limits via nginx configuration",
+    "createdAt" : "2020-12-03T17:04:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "sponge not in package.json",
+    "createdAt" : "2021-02-14T15:07:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Investigate AppArmor confinement",
+    "createdAt" : "2021-02-15T18:29:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Investigate SELinux confinement",
+    "createdAt" : "2021-02-15T18:30:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Investigate further systemd confinement",
+    "createdAt" : "2021-02-15T18:34:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "How to know if a device is compromised?",
+    "createdAt" : "2021-04-10T17:50:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : " When \"Verified Boot Hash\" changed?",
+    "createdAt" : "2021-04-19T05:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "use hash-source in CSP for script-src/style-src once Safari and Firefox support it for external files like Chromium (CSP v3)",
+    "createdAt" : "2021-11-19T19:06:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 132,
+    "title" : "store certificate chain compressed in a single field",
+    "createdAt" : "2021-12-06T10:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "New databases are not created",
+    "createdAt" : "2021-12-14T16:46:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Starting server fails - DB[1] exec() near \"STRICT\": syntax error",
+    "createdAt" : "2021-12-22T16:32:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Error: malformed database schema (Configuration) - near \"STRICT\": syntax error",
+    "createdAt" : "2021-12-23T15:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Scanned invalid account QR code",
+    "createdAt" : "2021-12-23T17:36:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "noscript message not shown",
+    "createdAt" : "2022-12-28T21:47:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Show pretty page for when nginx shows a 502 or a 405",
+    "createdAt" : "2023-02-18T15:41:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "add 2fa",
+    "createdAt" : "2024-04-12T16:02:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "return different error code for missing pairing data",
+    "createdAt" : "2024-09-25T05:36:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 456,
+    "title" : "port to official SQLite JNI bindings",
+    "createdAt" : "2025-01-13T14:10:12Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,898 @@
+{
+  "repoOwner" : "apache",
+  "repoName" : "maven-build-cache-extension",
+  "forks" : [ {
+    "createdAt" : "2022-01-12T15:50:23Z"
+  }, {
+    "createdAt" : "2022-01-31T11:53:20Z"
+  }, {
+    "createdAt" : "2022-02-08T14:09:56Z"
+  }, {
+    "createdAt" : "2022-03-12T20:26:46Z"
+  }, {
+    "createdAt" : "2022-06-22T16:38:43Z"
+  }, {
+    "createdAt" : "2022-07-29T19:15:55Z"
+  }, {
+    "createdAt" : "2022-08-25T16:04:03Z"
+  }, {
+    "createdAt" : "2022-09-09T02:00:46Z"
+  }, {
+    "createdAt" : "2022-10-16T03:13:44Z"
+  }, {
+    "createdAt" : "2022-11-24T13:10:53Z"
+  }, {
+    "createdAt" : "2022-12-07T20:00:25Z"
+  }, {
+    "createdAt" : "2022-12-13T21:40:49Z"
+  }, {
+    "createdAt" : "2023-01-13T17:10:52Z"
+  }, {
+    "createdAt" : "2023-01-27T19:28:47Z"
+  }, {
+    "createdAt" : "2023-02-03T23:58:27Z"
+  }, {
+    "createdAt" : "2023-02-14T03:37:24Z"
+  }, {
+    "createdAt" : "2023-02-16T11:36:05Z"
+  }, {
+    "createdAt" : "2023-02-26T16:06:12Z"
+  }, {
+    "createdAt" : "2023-03-09T08:37:51Z"
+  }, {
+    "createdAt" : "2023-04-17T12:38:03Z"
+  }, {
+    "createdAt" : "2023-05-20T20:04:18Z"
+  }, {
+    "createdAt" : "2023-06-30T14:38:33Z"
+  }, {
+    "createdAt" : "2023-07-27T07:43:12Z"
+  }, {
+    "createdAt" : "2023-11-02T07:09:42Z"
+  }, {
+    "createdAt" : "2023-11-02T20:36:31Z"
+  }, {
+    "createdAt" : "2023-11-20T11:17:16Z"
+  }, {
+    "createdAt" : "2024-01-25T15:52:59Z"
+  }, {
+    "createdAt" : "2024-02-03T22:39:07Z"
+  }, {
+    "createdAt" : "2024-03-26T07:26:29Z"
+  }, {
+    "createdAt" : "2024-04-07T11:41:08Z"
+  }, {
+    "createdAt" : "2024-04-22T15:17:26Z"
+  }, {
+    "createdAt" : "2024-05-07T10:59:44Z"
+  }, {
+    "createdAt" : "2024-05-08T15:55:01Z"
+  }, {
+    "createdAt" : "2024-06-14T16:11:01Z"
+  }, {
+    "createdAt" : "2024-07-25T03:22:10Z"
+  }, {
+    "createdAt" : "2024-08-19T06:12:47Z"
+  }, {
+    "createdAt" : "2024-09-04T12:03:26Z"
+  }, {
+    "createdAt" : "2024-09-27T10:40:28Z"
+  }, {
+    "createdAt" : "2024-11-06T12:48:06Z"
+  }, {
+    "createdAt" : "2025-01-30T10:00:30Z"
+  }, {
+    "createdAt" : "2025-04-10T08:23:05Z"
+  }, {
+    "createdAt" : "2025-04-14T21:41:15Z"
+  }, {
+    "createdAt" : "2025-04-20T00:47:34Z"
+  }, {
+    "createdAt" : "2025-04-23T03:01:34Z"
+  }, {
+    "createdAt" : "2025-05-03T08:35:45Z"
+  }, {
+    "createdAt" : "2025-06-04T03:07:57Z"
+  }, {
+    "createdAt" : "2025-06-07T08:34:32Z"
+  }, {
+    "createdAt" : "2025-06-16T11:54:15Z"
+  }, {
+    "createdAt" : "2025-07-02T18:50:30Z"
+  }, {
+    "createdAt" : "2025-07-31T08:59:37Z"
+  }, {
+    "createdAt" : "2025-09-14T19:22:30Z"
+  }, {
+    "createdAt" : "2025-09-19T12:58:32Z"
+  }, {
+    "createdAt" : "2025-10-05T21:33:44Z"
+  }, {
+    "createdAt" : "2025-10-07T08:14:10Z"
+  }, {
+    "createdAt" : "2025-11-02T12:52:12Z"
+  }, {
+    "createdAt" : "2025-11-22T09:27:49Z"
+  }, {
+    "createdAt" : "2025-11-22T09:57:57Z"
+  }, {
+    "createdAt" : "2025-11-22T13:12:21Z"
+  }, {
+    "createdAt" : "2025-12-06T09:06:41Z"
+  }, {
+    "createdAt" : "2026-01-07T11:43:51Z"
+  }, {
+    "createdAt" : "2026-01-23T14:19:15Z"
+  } ],
+  "issues" : [ {
+    "number" : 226,
+    "title" : "[MBUILDCACHE-1] [Deutsche Bank contribution] Incremental build with local and remote(shared) cache",
+    "createdAt" : "2021-03-25T08:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "[MBUILDCACHE-2] Extract caching system out of maven-core",
+    "createdAt" : "2021-11-08T15:39:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "[MBUILDCACHE-3] Use maven session properties instead of reading directly from system properties",
+    "createdAt" : "2021-11-08T15:40:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "[MBUILDCACHE-4] Make opt-in as easy as possible using a command line option / system property",
+    "createdAt" : "2021-11-08T15:41:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "[MBUILDCACHE-5] migrate from JAXB to Modello",
+    "createdAt" : "2021-11-08T18:55:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "[MBUILDCACHE-6] Rename schemas to be inlined with other schemas",
+    "createdAt" : "2021-11-09T10:59:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "[MBUILDCACHE-7] Rebase on top of master 4.x",
+    "createdAt" : "2021-11-09T12:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "[MBUILDCACHE-8] Avoid guava usage",
+    "createdAt" : "2021-11-09T12:43:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "[MBUILDCACHE-9] Remove the `Type` suffix on the generated model classes",
+    "createdAt" : "2021-11-09T12:45:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "[MBUILDCACHE-10] Make the cache singletons reusable across maven sessions",
+    "createdAt" : "2021-11-15T09:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "[MBUILDCACHE-11] Define a maven 4 Feature for the cache system",
+    "createdAt" : "2021-11-15T16:48:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "[MBUILDCACHE-12] Remove usage of plexus logger",
+    "createdAt" : "2021-11-16T09:34:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "[MBUILDCACHE-13] rename remote.cache.* properties to build.cache.*",
+    "createdAt" : "2022-01-15T18:06:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "[MBUILDCACHE-15] maven.build.cache.enabled parameter is broken",
+    "createdAt" : "2022-01-21T07:46:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "[MBUILDCACHE-16] Fix config file name",
+    "createdAt" : "2022-03-04T20:43:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "[MBUILDCACHE-17] IllegalStateException: Cache is not initialized. Actual state: null",
+    "createdAt" : "2022-05-05T13:07:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "[MBUILDCACHE-18] Use m-resolver transport layer instead of redefining another one",
+    "createdAt" : "2022-05-10T04:24:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "[MBUILDCACHE-19] Upgrade to resolver 1.8.0",
+    "createdAt" : "2022-05-11T07:25:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "[MBUILDCACHE-20] Allow configuring whether local or remote builds should be preferred",
+    "createdAt" : "2022-05-16T12:44:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "[MBUILDCACHE-21] Caching does not check permissions",
+    "createdAt" : "2022-05-17T05:21:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "[MBUILDCACHE-22] Add possibility to skip cache lookup",
+    "createdAt" : "2022-08-30T16:51:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "[MBUILDCACHE-23] Add ability to disable generated source restoration on a per-module level",
+    "createdAt" : "2022-08-30T16:53:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 287,
+    "title" : "[MBUILDCACHE-24] Cache cannot be processed in presence of forked executions",
+    "createdAt" : "2022-10-21T16:23:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "[MBUILDCACHE-25] Project processed multiple time in presence of forked executions",
+    "createdAt" : "2022-10-21T16:59:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "[MBUILDCACHE-26] Ensure the maven version is >= 3.9",
+    "createdAt" : "2022-10-25T15:52:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "[MBUILDCACHE-27] Improve efficiency of cache with plugin and source type aware processing",
+    "createdAt" : "2022-10-25T23:56:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 231,
+    "title" : "[MBUILDCACHE-28] Change buildinfo model to support separate checksums",
+    "createdAt" : "2022-10-28T01:17:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 260,
+    "title" : "[MBUILDCACHE-29] Capture separate checksums of test source, dependencies and other code",
+    "createdAt" : "2022-10-28T01:17:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 247,
+    "title" : "[MBUILDCACHE-30] Track reactor projects using \"implementation + dependencies\" checksum instead of full",
+    "createdAt" : "2022-10-28T01:17:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 242,
+    "title" : "[MBUILDCACHE-31] Implement skipping \"source-only\" plugin executions",
+    "createdAt" : "2022-10-28T01:43:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 257,
+    "title" : "[MBUILDCACHE-32] Do not print exception when probing builds in remote repo",
+    "createdAt" : "2022-10-29T22:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "[MBUILDCACHE-33] Support remote cache credentials from environment variables ",
+    "createdAt" : "2022-11-03T00:00:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 237,
+    "title" : "[MBUILDCACHE-34] Improve IT test execution",
+    "createdAt" : "2022-11-04T08:17:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "[MBUILDCACHE-35] Incorrect pom is put to local repo for module with maven-shade-plugin",
+    "createdAt" : "2022-12-13T16:42:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "[MBUILDCACHE-36] Clarify Maven version prerequisites in site",
+    "createdAt" : "2022-12-29T20:05:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "[MBUILDCACHE-37] Allow disabled-by-default configuration",
+    "createdAt" : "2023-01-09T17:14:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "[MBUILDCACHE-38] IAE while execution plugin goal",
+    "createdAt" : "2023-01-15T03:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "[MBUILDCACHE-39] Upgrade to maven-parent pom 39",
+    "createdAt" : "2023-01-30T14:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "[MBUILDCACHE-40] Upgrade to maven 3.9.0",
+    "createdAt" : "2023-02-13T10:12:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "[MBUILDCACHE-42] the CLI maven.build.cache.enabled=false is not honoured",
+    "createdAt" : "2023-02-13T10:35:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "[MBUILDCACHE-43] Change the output directory from `incremental-maven` to `build-cache`",
+    "createdAt" : "2023-02-13T10:58:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "[MBUILDCACHE-44] Running duplicate maven phase leads to IllegalStateException and cache miss",
+    "createdAt" : "2023-02-14T02:33:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "[MBUILDCACHE-45] Compiled classes are not copied/restored to target, causing higher phase builds to fail",
+    "createdAt" : "2023-02-14T05:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "[MBUILDCACHE-46] Add maven.build.cache.remote.enabled parameter",
+    "createdAt" : "2023-02-18T06:01:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "[MBUILDCACHE-47] Extension computes a new check sum for a project with multiple modules without any changes",
+    "createdAt" : "2023-03-13T18:10:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "[MBUILDCACHE-48] Add ability to disable caching on a per-module level",
+    "createdAt" : "2023-03-21T10:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "[MBUILDCACHE-49] Allow caching for pom package projects",
+    "createdAt" : "2023-03-27T16:13:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 267,
+    "title" : "[MBUILDCACHE-50] Unsupported phase: null with dependency:analyze in multimodule project",
+    "createdAt" : "2023-03-30T18:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "[MBUILDCACHE-51] Broken link to maven-build-cache-config.xml template on Getting Started page",
+    "createdAt" : "2023-04-11T08:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "[MBUILDCACHE-52] Use current latest release in Getting Started snippet",
+    "createdAt" : "2023-04-11T08:18:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "[MBUILDCACHE-53] Default local cache location is different from documented location",
+    "createdAt" : "2023-04-11T08:38:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "[MBUILDCACHE-54] Project scoped dependency of a module contributes so the hash of the module itself breaking cache logic",
+    "createdAt" : "2023-04-15T10:47:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "[MBUILDCACHE-55] Code generated by maven-jaxb2-plugin is not being excluded.",
+    "createdAt" : "2023-04-19T02:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "[MBUILDCACHE-56] NPE with mojo parameters not declared as fields (prevent any saving of cache)",
+    "createdAt" : "2023-04-22T23:13:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "[MBUILDCACHE-57] Configure remote url/remote server id with command line property",
+    "createdAt" : "2023-04-24T06:42:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "[MBUILDCACHE-58] save remote not working anymore with Maven 3.9.1",
+    "createdAt" : "2023-04-25T04:30:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "[MBUILDCACHE-59] Accommodate Maven CI-friendly versions",
+    "createdAt" : "2023-04-25T22:17:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 331,
+    "title" : "[MBUILDCACHE-60] Remove Guava dependency",
+    "createdAt" : "2023-06-06T13:59:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "[MBUILDCACHE-61] XXMM hash algorithm does not work on Java 17",
+    "createdAt" : "2023-06-12T10:03:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "[MBUILDCACHE-62] Add METRO hash implementation",
+    "createdAt" : "2023-06-14T16:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "[MBUILDCACHE-63] Remote cache with Nexus raw repository does not work",
+    "createdAt" : "2023-06-21T17:57:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "[MBUILDCACHE-64] Apply global exclusions to folder names",
+    "createdAt" : "2023-06-22T08:39:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "[MBUILDCACHE-65] support caching of site artifacts",
+    "createdAt" : "2023-07-10T05:16:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 243,
+    "title" : "[MBUILDCACHE-66] Mojo execution can be out of scope",
+    "createdAt" : "2023-07-31T23:19:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "[MBUILDCACHE-67] Any error in restoring from the cache should resume the non cache build",
+    "createdAt" : "2023-08-02T21:11:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "[MBUILDCACHE-68] NoSuchElementException in CacheUtils.getLast(…)",
+    "createdAt" : "2023-08-03T07:57:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 277,
+    "title" : "[MBUILDCACHE-69] Documentation is missing on how to tweak or optimize cache",
+    "createdAt" : "2023-08-04T08:21:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 320,
+    "title" : "[MBUILDCACHE-70] Failed to restore project error if goal not specified via command line",
+    "createdAt" : "2023-08-30T15:37:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 273,
+    "title" : "[MBUILDCACHE-71] buildinfo.xml should be stored after storing the project's artifacts",
+    "createdAt" : "2023-09-01T11:59:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "[MBUILDCACHE-72] instructions for running failsafe plugin",
+    "createdAt" : "2023-09-24T18:36:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 268,
+    "title" : "[MBUILDCACHE-73] Add project version as additional property for reconcilation",
+    "createdAt" : "2023-10-19T07:56:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 304,
+    "title" : "[MBUILDCACHE-74] Old POM builds are not cleaned up from local cache",
+    "createdAt" : "2023-11-20T11:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "[MBUILDCACHE-75] Upgrade Maven parent 41",
+    "createdAt" : "2023-11-22T11:30:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "[MBUILDCACHE-76] pom project version change not detected",
+    "createdAt" : "2023-12-02T03:00:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "[MBUILDCACHE-77] Archetypes can't be build using maven build cache in CI/CD environments.",
+    "createdAt" : "2023-12-14T10:03:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 270,
+    "title" : "[MBUILDCACHE-78] Maven reactor doesn't work well for a multimodule project when enabling build cache",
+    "createdAt" : "2023-12-15T13:21:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 296,
+    "title" : "[MBUILDCACHE-79] MBUILDCACHE-67 broke the partial restore process",
+    "createdAt" : "2024-01-28T16:29:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "[MBUILDCACHE-80] Incremental builds with a higher goal than the highest cached goal is rebuilding the full project from scratch",
+    "createdAt" : "2024-01-29T03:31:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "[MBUILDCACHE-81] Add an option to include project version as part of the cache hash key",
+    "createdAt" : "2024-01-29T19:25:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "[MBUILDCACHE-82] Fix menu items in site.xml",
+    "createdAt" : "2024-02-07T11:48:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "[MBUILDCACHE-83] Allow to share cache configuration (maven-build-cache-config.xml) between projects",
+    "createdAt" : "2024-04-11T15:11:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 299,
+    "title" : "[MBUILDCACHE-84] Allow maven plugins to expose their default cache configuration",
+    "createdAt" : "2024-04-11T15:16:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 293,
+    "title" : "[MBUILDCACHE-85] Changing cache configuration `attachedOutputs` still leads to cache hit instead of a miss",
+    "createdAt" : "2024-04-15T09:06:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 318,
+    "title" : "[MBUILDCACHE-86] Bugfix and enhancements with the restoration of outputs on disk",
+    "createdAt" : "2024-04-19T12:45:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "[MBUILDCACHE-87] Checksum should consider plugin dependencies",
+    "createdAt" : "2024-04-22T13:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "[MBUILDCACHE-88] Tests in failure when ran on jdk21",
+    "createdAt" : "2024-04-22T21:05:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "[MBUILDCACHE-89] Ability to \"run always\" some plugin on a per-module level",
+    "createdAt" : "2024-04-24T14:26:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 264,
+    "title" : "[MBUILDCACHE-90] Configuration option to make mandatory the use of the clean phase in order to cache the build result",
+    "createdAt" : "2024-04-24T20:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "[MBUILDCACHE-91] maven-dependency-plugin:unpack reactor artifactItems have their versions expanded instead of being replaced by  'cache-extension-version'",
+    "createdAt" : "2024-04-25T10:04:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 272,
+    "title" : "[MBUILDCACHE-92] Allow to define 'reconciles' at plugin execution level",
+    "createdAt" : "2024-04-25T16:43:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 333,
+    "title" : "[MBUILDCACHE-93] Command line configuration to disable saving in cache",
+    "createdAt" : "2024-04-25T19:27:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "[MBUILDCACHE-94] Provide a build cache report on builds",
+    "createdAt" : "2024-04-29T08:48:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 317,
+    "title" : "[MBUILDCACHE-95] Improve efficiency of cache when adding/removing modules",
+    "createdAt" : "2024-04-29T13:11:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 303,
+    "title" : "[MBUILDCACHE-96] Remove usage of maven-compat",
+    "createdAt" : "2024-05-11T09:09:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "[MBUILDCACHE-97] Allow to override \"cache->configuration->local->maxBuildsCached\" via a command line flag",
+    "createdAt" : "2024-05-27T09:00:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 325,
+    "title" : "[MBUILDCACHE-98] Clarify literature on recommended scenarios (prod builds specifically)",
+    "createdAt" : "2024-06-18T15:15:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 335,
+    "title" : "[MBUILDCACHE-99] Project checksum fails to identify moved files in certain cases",
+    "createdAt" : "2024-07-11T07:28:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "[MBUILDCACHE-100] Exclude example incorrect in docs - Performance",
+    "createdAt" : "2024-07-16T20:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "[MBUILDCACHE-101] mvn test fails on missing classes after mvn compile",
+    "createdAt" : "2024-07-28T07:53:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "[MBUILDCACHE-102] mvn build cache extension config parsing issues on windows",
+    "createdAt" : "2024-08-15T17:46:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 290,
+    "title" : "[MBUILDCACHE-103] Allow incremental restore in case of plugin parameter mismatch",
+    "createdAt" : "2024-08-18T10:41:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 342,
+    "title" : "[MBUILDCACHE-104] Allow multiple cache entries per checksum",
+    "createdAt" : "2024-08-19T22:39:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 314,
+    "title" : "[MBUILDCACHE-105] Executing 'clean process-test-classes'  then 'clean verify' leads to empty jars",
+    "createdAt" : "2024-08-21T10:30:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 339,
+    "title" : "[MBUILDCACHE-106] Missing compile source roots matching 'generated-sources' and 'generated-test-sources' when compiler is skipped",
+    "createdAt" : "2024-08-21T22:57:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 343,
+    "title" : "[MBUILDCACHE-107] pom.xml properties 'maven.build.cache.*' are not part of the effective pom involved by the checksum",
+    "createdAt" : "2024-08-23T13:10:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 321,
+    "title" : "[MBUILDCACHE-108] Remove local cache entries that have not been used during a configurable period of time",
+    "createdAt" : "2024-09-12T09:08:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 310,
+    "title" : "[MBUILDCACHE-109] Configuration to exclude plugins from cache key calculation",
+    "createdAt" : "2024-10-31T08:08:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 327,
+    "title" : "[MBUILDCACHE-110] Maven Build Cache Extension forcing a dependency on plexus-utils in plugin execution",
+    "createdAt" : "2024-11-26T11:39:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "[MBUILDCACHE-111] Documentation uses build-cache-config 1.0.0 XML schema instead of 1.2.0 schema",
+    "createdAt" : "2024-12-06T12:21:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "[MBUILDCACHE-112] Upgrade parent POM to version 44",
+    "createdAt" : "2025-01-06T13:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "[MBUILDCACHE-113] java.security.AccessController in java.security has been deprecated and marked for removal",
+    "createdAt" : "2025-01-06T13:37:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "[MBUILDCACHE-114] Upgrade plexus-utils to 4.0.0",
+    "createdAt" : "2025-01-06T14:29:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "[MBUILDCACHE-115] MojoExecution is not seeded in session scope, causes DI failure",
+    "createdAt" : "2025-01-15T09:24:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "[MBUILDCACHE-116] Extension fails to regenerate all files in target directory",
+    "createdAt" : "2025-02-09T15:43:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 324,
+    "title" : "[MBUILDCACHE-117] temp artifacts created by extension are not found in Jenkins pipeline job",
+    "createdAt" : "2025-03-03T16:38:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 345,
+    "title" : "[MBUILDCACHE-118] Use of extension breaks IntelliJ generate sources",
+    "createdAt" : "2025-04-01T08:11:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 291,
+    "title" : "[MBUILDCACHE-119] XSD does not mention configuration.mandatoryClean",
+    "createdAt" : "2025-04-22T17:20:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 344,
+    "title" : "[MBUILDCACHE-120] Explain multiModule.discovery.scanProfiles",
+    "createdAt" : "2025-04-22T17:24:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 338,
+    "title" : "[MBUILDCACHE-121] Clarify meaning of adjustMetaInf parameter",
+    "createdAt" : "2025-04-22T17:28:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 341,
+    "title" : "[MBUILDCACHE-122] Add \"dirName\" attribute \"glob\" to XSD file",
+    "createdAt" : "2025-04-22T17:43:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 288,
+    "title" : "[MBUILDCACHE-123]  do not set projectExecutions if cacheState is disabled",
+    "createdAt" : "2025-04-24T13:41:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "[MBUILDCACHE-124] <dirName glob> doesn't capture the same files as <dirName> without glob",
+    "createdAt" : "2025-04-25T14:50:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 311,
+    "title" : "[MBUILDCACHE-125] Separate configuration/outputs per module",
+    "createdAt" : "2025-04-25T15:02:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 302,
+    "title" : "[MBUILDCACHE-126] [WARNING] Cannot find a Mojo parameter 'commandLineRules' to read for Mojo org.apache.maven.plugins:maven-enforcer-plugin:3.5.0:enforce {execution: enforce-maven}. This parameter should be ignored.",
+    "createdAt" : "2025-04-27T11:09:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 214,
+    "title" : "Permissions lost when using attachedOutputs",
+    "createdAt" : "2025-05-21T12:36:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "maven.build.cache.enable=false breaks build when maven property maven.build.cache.skipCache is set to true",
+    "createdAt" : "2025-06-04T04:43:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 220,
+    "title" : "Maven clean build failure when maven.build.cache.failFast=true",
+    "createdAt" : "2025-06-07T08:22:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Enable / Disable cache using a profile",
+    "createdAt" : "2025-06-12T09:42:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Unable to save to remote cache with an IOException \"Is a directory\"",
+    "createdAt" : "2025-06-25T15:20:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 354,
+    "title" : "mvn compile doesnt attach files",
+    "createdAt" : "2025-06-27T11:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "mvn compile doesnt attach files",
+    "createdAt" : "2025-07-10T09:30:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "Reduce the number of deprecated usages",
+    "createdAt" : "2025-07-11T14:51:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "maven.build.cache.input.glob considered as additional input when specified as project level property",
+    "createdAt" : "2025-08-04T11:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Changes in cache configuration does not invalidate artifacts",
+    "createdAt" : "2025-08-11T11:02:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 370,
+    "title" : "Removed unnecessary public modifiers from tests classes/methods",
+    "createdAt" : "2025-08-11T18:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Support Java Modules and Multi-Module Projects out of the box",
+    "createdAt" : "2025-08-24T01:26:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 374,
+    "title" : "Guarantee correctness by default",
+    "createdAt" : "2025-08-26T03:03:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 375,
+    "title" : "Maven Build Cache Extension incorrectly handles --module-version compiler arguments for Java modules, causing cache invalidation on every build despite no source code changes",
+    "createdAt" : "2025-08-28T19:37:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 377,
+    "title" : "Snapshot artifacts not resolved from remote repositories in MavenProjectInput",
+    "createdAt" : "2025-09-14T20:40:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Separate Source and Test Input Checksums for Enhanced Build Incrementality",
+    "createdAt" : "2025-09-15T19:37:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 393,
+    "title" : "Incomplete Cache Restoration from `compile`-Only Builds",
+    "createdAt" : "2025-10-08T03:24:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Allow overriding runAlways plugins on project level",
+    "createdAt" : "2025-10-14T09:28:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "Maven Build Cache not used when executing an additional plugin goal",
+    "createdAt" : "2025-10-27T13:54:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 400,
+    "title" : "Unable to include hidden files",
+    "createdAt" : "2025-10-28T14:35:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 407,
+    "title" : "Locally built transitive snapshot artifacts don't cause checksum change of a dependent module",
+    "createdAt" : "2025-11-12T22:57:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "Regression with 1.2.1 trying to download artifacts which are part of the reactor",
+    "createdAt" : "2025-11-20T06:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "The change in the mvn -P parameter does not invalidate the cache",
+    "createdAt" : "2025-11-25T11:48:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 417,
+    "title" : "1.2.1 is error: Failed to calculate checksums for xx Could not find artifact xx:jar:1.0-SNAPSHOT in nexus (http://xxx/nexus/content/groups/public/), but 1.2.0 is ok",
+    "createdAt" : "2025-12-08T10:48:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "mvnd+maven增量编译，出现mvn clean失败,删除文件失败的情况下，增量编译还把包缓存起来了",
+    "createdAt" : "2025-12-18T05:23:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Regression for calculating checksum for tests jars with SNAPSHOT version from custom repos",
+    "createdAt" : "2025-12-30T13:22:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "Pom projects can have \"source\" files too!",
+    "createdAt" : "2025-12-30T16:58:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 428,
+    "title" : "source filename is rename SetShowClkAdinfo.scala，but Found cached build  ,buildfile is  SetShowClkAdinfo.scala.bak",
+    "createdAt" : "2026-01-12T08:43:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Cleanup dependencies",
+    "createdAt" : "2026-01-16T13:15:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 436,
+    "title" : "Plexus/util writer deprecations",
+    "createdAt" : "2026-01-19T12:08:52Z",
+    "state" : "OPEN"
+  } ]
+}

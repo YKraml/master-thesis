@@ -23,6 +23,7 @@ library(splines)
 library(marginaleffects)
 library(glmertree)
 library(mgcv)
+library(robustlmm)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -43,32 +44,7 @@ source("R/lagged_day_zero.R")
 # Shared
 # ------------------------------------------------------------------------------
 
-metrics_absolute <- list(
-  # All findings
-  findings                 = list(name = "findings",          display_name = "Findings",          unit = "Findings"),
-
-  # Findings groups
-  comprehensibility        = list(name = "comprehensibility", display_name = "Comprehensibility", unit = "Findings"),
-  correctness              = list(name = "correctness",       display_name = "Correctness",       unit = "Findings"),
-  documentation            = list(name = "documentation",     display_name = "Documentation",     unit = "Findings"),
-  efficiency               = list(name = "efficiency",        display_name = "Efficiency",        unit = "Findings"),
-  errorHandling            = list(name = "errorHandling",     display_name = "Error Handling",    unit = "Findings"),
-  redundancy               = list(name = "redundancy",        display_name = "Redundancy",        unit = "Findings"),
-  structure                = list(name = "structure",         display_name = "Structure",         unit = "Findings"),
-  security                 = list(name = "security",          display_name = "Security",          unit = "Findings"),
-
-  # Structure metrics
-  longFiles                = list(name = "longFiles",         display_name = "Long Files",        unit = "Findings"),
-  longMethod               = list(name = "longMethod",        display_name = "Long Method",       unit = "Findings"),
-  deepNesting              = list(name = "deepNesting",       display_name = "Deep Nesting",      unit = "Findings"),
-
-  # Git metrics
-  numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
-  numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
-  numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
-)
-
-metrics_relative <- list(
+metrics <- list(
   # All findings
   findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC"),
 
@@ -83,11 +59,19 @@ metrics_relative <- list(
   securityDensity          = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1000 LOC"),
 
   # Structure metrics
+  longFiles                = list(name = "longFiles",                display_name = "Long Files",                unit = "Findings"),
+  longMethod               = list(name = "longMethod",               display_name = "Long Method",               unit = "Findings"),
+  deepNesting              = list(name = "deepNesting",              display_name = "Deep Nesting",              unit = "Findings"),
   longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1000 LOC"),
   longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1000 LOC"),
   deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1000 LOC"),
   cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
-  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC")
+  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC"),
+
+  # Git metrics
+  numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
+  numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
+  numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
   )
 
 
@@ -106,8 +90,7 @@ data_all <- list(
   control   = data_control
 )
 
-for (metric_key in names(metrics_relative)) {
-  metric_data         <- metrics_relative[[metric_key]]
+for (metric_data in metrics) {
   metric_name         <- metric_data$name
   message(metric_name)
 
@@ -119,6 +102,33 @@ for (metric_key in names(metrics_relative)) {
     folder_name <- data_name
     out_dir <- file.path("plots", "interrupted_time_series", folder_name, metric_name)
     dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+
+    message("   * Removing outliers")
+    metric_values <- data[[metric_name]]
+
+    # 2. Calculate Quartiles and IQR
+    Q1 <- quantile(metric_values, 0.25, na.rm = TRUE)
+    Q3 <- quantile(metric_values, 0.75, na.rm = TRUE)
+    IQR_val <- Q3 - Q1
+
+    # 3. Define Upper and Lower Bounds
+    lower_bound <- Q1 - 1.5 * IQR_val
+    upper_bound <- Q3 + 1.5 * IQR_val
+
+    # 4. Filter the dataframe
+    # This keeps only rows within the non-outlier range
+    data_clean <- data[metric_values >= lower_bound & metric_values <= upper_bound, ]
+
+    # (Optional) Check how many rows were removed
+    rows_removed <- nrow(data) - nrow(data_clean)
+    message(paste("   * Removed", rows_removed, "outliers from", metric_name))
+
+
+
+    data <- data_clean
+
+
 
 
     tryCatch({
@@ -133,7 +143,6 @@ for (metric_key in names(metrics_relative)) {
         fixed = as.formula(formula),
         random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
         data = data,
-        method = "ML",
         control = lmeControl(opt = "optim")
       )
 
@@ -315,7 +324,7 @@ metric_unit <- "XXX"
 data <- get_data("treatment", transition_n_days)
 
 data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
-data$log_time <- log(data$relative_introduction_time + 1) # +1 to avoid log(0)
+data$log_time <- log(data$relative_introduction_time + 1)
 
 
 formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
@@ -357,14 +366,15 @@ anova(models[[1]], models[[2]], models[[3]], models[[4]], models[[5]], models[[6
 # Testing
 # ------------------------------------------------------------------------------
 
-
 transition_n_days <- 90
 relative_introduction_time <- 4
-metric <- "errorHandling"
+metric <- "findingsDensity"
 metric_unit <- "XXX"
 data <- get_data("treatment", transition_n_days)
 
 data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
+
+
 formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
 model <- lme(
   fixed = as.formula(formula),
@@ -376,81 +386,13 @@ model <- lme(
 
 
 
-
-# 1. Extract Normalized Residuals and Fitted Values
-# We use type="normalized" to account for the random effects covariance structure
-res <- residuals(model, type = "normalized")
-fit <- fitted(model)
-
-# 2. Set up the graphics window to show plots side-by-side
-par(mfrow = c(1, 2))
-
-# --- Plot A: Residuals vs. Fitted Values ---
-# This checks for Homoscedasticity (constant variance)
-plot(x = fit, y = res,
-     main = "Residuals vs. Fitted",
-     xlab = "Fitted Values (Predicted Metric)",
-     ylab = "Normalized Residuals",
-     pch = 20, col = "gray30") # Dark gray dots
-abline(h = 0, col = "red", lty = 2, lwd = 2) # Zero reference line
-
-# --- Plot B: Residuals vs. Independent Variable ---
-# This checks for Independence relative to your time component
-plot(x = data$time_saturated, y = res,
-     main = "Residuals vs. Time Saturated",
-     xlab = "Time Saturated (1 - exp(...))",
-     ylab = "Normalized Residuals",
-     pch = 20, col = "gray30")
-abline(h = 0, col = "red", lty = 2, lwd = 2)
-
-# Reset graphics parameter to default
-par(mfrow = c(1, 1))
-
-
-# ------------------------------------------------------------------------------
-
-
-metric_name <- "longFilesDensity"
-data <- get_data("treatment", 90)
-data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
-
-
-formula_fixed <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric_name)
-full_formula <- as.formula(
-  paste(formula_fixed, "+ (1 + base_slope + intervention_slope + intervention_jump | id)")
+formula_robust <- sprintf(
+  "%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope) + (1 + base_slope + intervention_slope + intervention_jump | id)",
+  metric
 )
 
-# 3. Fit the Tweedie Model
-model_tweedie <- glmmTMB(
-  formula = full_formula,
+# 2. Fit the robust model
+model_robust <- rlmer(
+  as.formula(formula_robust),
   data = data,
-  family = tweedie(link = "log"),
-  control = glmmTMBControl(
-    optimizer = nlminb,
-    optCtrl = list(iter.max = 1000, eval.max = 1000)
-  )
 )
-
-summary(model_tweedie)
-plot_residuals_vs_fitted(data, model_tweedie)
-
-
-plot_residuals_vs_fitted <- function(data, model) {
-  residuals <- residuals(model)
-  fitted_vals <- fitted(model)
-
-  plot(
-    fitted_vals,
-    residuals,
-    xlab = "Fitted values",
-    ylab = "Residuals",
-    main = "Residuals vs fitted",
-    col = "lightblue",
-    pch = 4
-  )
-
-  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
-}
-
-
-

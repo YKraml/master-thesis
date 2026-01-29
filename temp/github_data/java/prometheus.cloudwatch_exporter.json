@@ -1,0 +1,2396 @@
+{
+  "repoOwner" : "prometheus",
+  "repoName" : "cloudwatch_exporter",
+  "forks" : [ {
+    "createdAt" : "2015-01-05T17:46:07Z"
+  }, {
+    "createdAt" : "2015-03-10T08:03:13Z"
+  }, {
+    "createdAt" : "2015-03-25T17:05:50Z"
+  }, {
+    "createdAt" : "2015-09-08T22:36:18Z"
+  }, {
+    "createdAt" : "2015-10-02T01:13:29Z"
+  }, {
+    "createdAt" : "2015-10-23T23:25:30Z"
+  }, {
+    "createdAt" : "2015-11-09T12:59:15Z"
+  }, {
+    "createdAt" : "2015-11-18T09:10:07Z"
+  }, {
+    "createdAt" : "2015-11-18T09:14:33Z"
+  }, {
+    "createdAt" : "2015-12-10T10:28:40Z"
+  }, {
+    "createdAt" : "2015-12-12T21:21:10Z"
+  }, {
+    "createdAt" : "2016-02-22T14:53:14Z"
+  }, {
+    "createdAt" : "2016-03-09T07:40:59Z"
+  }, {
+    "createdAt" : "2016-03-21T10:39:30Z"
+  }, {
+    "createdAt" : "2016-04-26T07:08:49Z"
+  }, {
+    "createdAt" : "2016-05-10T11:28:32Z"
+  }, {
+    "createdAt" : "2016-07-03T17:04:22Z"
+  }, {
+    "createdAt" : "2016-10-19T21:58:14Z"
+  }, {
+    "createdAt" : "2016-11-07T18:05:38Z"
+  }, {
+    "createdAt" : "2016-12-03T16:34:12Z"
+  }, {
+    "createdAt" : "2016-12-08T16:43:24Z"
+  }, {
+    "createdAt" : "2016-12-27T14:18:36Z"
+  }, {
+    "createdAt" : "2017-01-05T02:19:54Z"
+  }, {
+    "createdAt" : "2017-01-26T22:42:38Z"
+  }, {
+    "createdAt" : "2017-01-31T13:21:39Z"
+  }, {
+    "createdAt" : "2017-02-23T07:51:00Z"
+  }, {
+    "createdAt" : "2017-03-27T22:34:05Z"
+  }, {
+    "createdAt" : "2017-03-30T08:59:23Z"
+  }, {
+    "createdAt" : "2017-06-13T08:29:00Z"
+  }, {
+    "createdAt" : "2017-06-21T01:59:07Z"
+  }, {
+    "createdAt" : "2017-07-30T22:55:11Z"
+  }, {
+    "createdAt" : "2017-08-01T01:23:53Z"
+  }, {
+    "createdAt" : "2017-08-05T16:03:51Z"
+  }, {
+    "createdAt" : "2017-08-16T22:34:06Z"
+  }, {
+    "createdAt" : "2017-08-18T18:55:19Z"
+  }, {
+    "createdAt" : "2017-09-06T22:56:51Z"
+  }, {
+    "createdAt" : "2017-09-13T14:29:01Z"
+  }, {
+    "createdAt" : "2017-09-19T14:29:27Z"
+  }, {
+    "createdAt" : "2017-09-22T09:06:57Z"
+  }, {
+    "createdAt" : "2017-09-27T16:15:58Z"
+  }, {
+    "createdAt" : "2017-10-06T20:42:21Z"
+  }, {
+    "createdAt" : "2017-11-13T23:16:23Z"
+  }, {
+    "createdAt" : "2017-11-14T09:00:20Z"
+  }, {
+    "createdAt" : "2017-11-16T23:15:57Z"
+  }, {
+    "createdAt" : "2017-11-23T00:25:34Z"
+  }, {
+    "createdAt" : "2017-12-10T16:15:54Z"
+  }, {
+    "createdAt" : "2017-12-19T08:13:27Z"
+  }, {
+    "createdAt" : "2018-01-16T08:03:13Z"
+  }, {
+    "createdAt" : "2018-01-24T13:37:21Z"
+  }, {
+    "createdAt" : "2018-02-01T17:28:34Z"
+  }, {
+    "createdAt" : "2018-02-11T02:50:21Z"
+  }, {
+    "createdAt" : "2018-02-12T11:43:52Z"
+  }, {
+    "createdAt" : "2018-02-28T21:31:32Z"
+  }, {
+    "createdAt" : "2018-03-02T20:12:47Z"
+  }, {
+    "createdAt" : "2018-03-14T18:18:29Z"
+  }, {
+    "createdAt" : "2018-03-20T18:05:50Z"
+  }, {
+    "createdAt" : "2018-04-02T10:34:25Z"
+  }, {
+    "createdAt" : "2018-04-19T23:33:05Z"
+  }, {
+    "createdAt" : "2018-04-27T14:39:19Z"
+  }, {
+    "createdAt" : "2018-05-17T07:27:36Z"
+  }, {
+    "createdAt" : "2018-05-18T19:05:01Z"
+  }, {
+    "createdAt" : "2018-05-19T02:36:15Z"
+  }, {
+    "createdAt" : "2018-05-23T23:08:18Z"
+  }, {
+    "createdAt" : "2018-05-28T14:05:23Z"
+  }, {
+    "createdAt" : "2018-05-29T15:03:53Z"
+  }, {
+    "createdAt" : "2018-06-01T08:57:23Z"
+  }, {
+    "createdAt" : "2018-06-03T06:11:37Z"
+  }, {
+    "createdAt" : "2018-06-03T06:53:34Z"
+  }, {
+    "createdAt" : "2018-06-06T20:49:48Z"
+  }, {
+    "createdAt" : "2018-06-08T05:42:30Z"
+  }, {
+    "createdAt" : "2018-06-18T10:42:46Z"
+  }, {
+    "createdAt" : "2018-06-18T18:33:11Z"
+  }, {
+    "createdAt" : "2018-06-19T11:24:44Z"
+  }, {
+    "createdAt" : "2018-06-26T03:38:34Z"
+  }, {
+    "createdAt" : "2018-06-27T13:00:43Z"
+  }, {
+    "createdAt" : "2018-07-06T14:10:06Z"
+  }, {
+    "createdAt" : "2018-07-17T20:13:41Z"
+  }, {
+    "createdAt" : "2018-07-22T22:43:27Z"
+  }, {
+    "createdAt" : "2018-07-30T20:35:22Z"
+  }, {
+    "createdAt" : "2018-07-31T14:51:43Z"
+  }, {
+    "createdAt" : "2018-07-31T14:52:21Z"
+  }, {
+    "createdAt" : "2018-08-02T09:04:30Z"
+  }, {
+    "createdAt" : "2018-08-13T12:44:24Z"
+  }, {
+    "createdAt" : "2018-08-23T00:13:59Z"
+  }, {
+    "createdAt" : "2018-08-28T16:36:50Z"
+  }, {
+    "createdAt" : "2018-08-29T00:51:27Z"
+  }, {
+    "createdAt" : "2018-09-14T14:13:39Z"
+  }, {
+    "createdAt" : "2018-09-22T23:28:32Z"
+  }, {
+    "createdAt" : "2018-09-25T11:12:58Z"
+  }, {
+    "createdAt" : "2018-10-11T14:48:28Z"
+  }, {
+    "createdAt" : "2018-11-02T11:29:37Z"
+  }, {
+    "createdAt" : "2018-11-07T07:45:57Z"
+  }, {
+    "createdAt" : "2018-11-09T10:20:30Z"
+  }, {
+    "createdAt" : "2018-11-15T10:27:53Z"
+  }, {
+    "createdAt" : "2018-11-29T12:32:13Z"
+  }, {
+    "createdAt" : "2018-12-11T18:55:49Z"
+  }, {
+    "createdAt" : "2018-12-14T13:29:07Z"
+  }, {
+    "createdAt" : "2018-12-18T08:39:52Z"
+  }, {
+    "createdAt" : "2019-01-18T13:01:26Z"
+  }, {
+    "createdAt" : "2019-01-21T07:37:06Z"
+  }, {
+    "createdAt" : "2019-01-22T18:56:53Z"
+  }, {
+    "createdAt" : "2019-01-24T16:16:33Z"
+  }, {
+    "createdAt" : "2019-02-05T15:04:47Z"
+  }, {
+    "createdAt" : "2019-02-07T00:33:39Z"
+  }, {
+    "createdAt" : "2019-02-19T14:56:42Z"
+  }, {
+    "createdAt" : "2019-03-05T16:18:37Z"
+  }, {
+    "createdAt" : "2019-03-06T23:52:10Z"
+  }, {
+    "createdAt" : "2019-03-14T14:54:27Z"
+  }, {
+    "createdAt" : "2019-03-14T15:08:27Z"
+  }, {
+    "createdAt" : "2019-03-19T06:17:19Z"
+  }, {
+    "createdAt" : "2019-03-19T06:38:36Z"
+  }, {
+    "createdAt" : "2019-03-22T07:14:17Z"
+  }, {
+    "createdAt" : "2019-04-05T11:23:09Z"
+  }, {
+    "createdAt" : "2019-04-22T22:06:13Z"
+  }, {
+    "createdAt" : "2019-04-30T18:43:46Z"
+  }, {
+    "createdAt" : "2019-05-11T18:47:47Z"
+  }, {
+    "createdAt" : "2019-05-13T08:55:20Z"
+  }, {
+    "createdAt" : "2019-05-31T19:12:47Z"
+  }, {
+    "createdAt" : "2019-06-06T00:07:50Z"
+  }, {
+    "createdAt" : "2019-06-14T10:55:14Z"
+  }, {
+    "createdAt" : "2019-06-18T17:57:19Z"
+  }, {
+    "createdAt" : "2019-06-20T00:46:21Z"
+  }, {
+    "createdAt" : "2019-06-26T05:32:09Z"
+  }, {
+    "createdAt" : "2019-07-09T07:58:40Z"
+  }, {
+    "createdAt" : "2019-07-17T19:03:05Z"
+  }, {
+    "createdAt" : "2019-07-23T13:32:08Z"
+  }, {
+    "createdAt" : "2019-08-13T19:34:47Z"
+  }, {
+    "createdAt" : "2019-08-14T17:18:25Z"
+  }, {
+    "createdAt" : "2019-08-21T13:38:10Z"
+  }, {
+    "createdAt" : "2019-08-27T11:09:04Z"
+  }, {
+    "createdAt" : "2019-08-28T02:48:35Z"
+  }, {
+    "createdAt" : "2019-08-29T10:17:54Z"
+  }, {
+    "createdAt" : "2019-08-29T14:01:38Z"
+  }, {
+    "createdAt" : "2019-08-30T19:53:01Z"
+  }, {
+    "createdAt" : "2019-09-04T07:35:58Z"
+  }, {
+    "createdAt" : "2019-09-04T14:48:49Z"
+  }, {
+    "createdAt" : "2019-09-05T22:46:27Z"
+  }, {
+    "createdAt" : "2019-09-17T12:52:11Z"
+  }, {
+    "createdAt" : "2019-09-18T02:13:58Z"
+  }, {
+    "createdAt" : "2019-09-19T05:13:26Z"
+  }, {
+    "createdAt" : "2019-09-30T20:47:07Z"
+  }, {
+    "createdAt" : "2019-10-03T13:30:51Z"
+  }, {
+    "createdAt" : "2019-10-11T20:49:30Z"
+  }, {
+    "createdAt" : "2019-10-23T09:46:22Z"
+  }, {
+    "createdAt" : "2019-10-24T00:08:30Z"
+  }, {
+    "createdAt" : "2019-10-30T17:26:00Z"
+  }, {
+    "createdAt" : "2019-11-04T22:31:00Z"
+  }, {
+    "createdAt" : "2019-11-06T02:18:14Z"
+  }, {
+    "createdAt" : "2019-11-12T17:25:34Z"
+  }, {
+    "createdAt" : "2019-12-02T06:56:48Z"
+  }, {
+    "createdAt" : "2019-12-06T01:11:00Z"
+  }, {
+    "createdAt" : "2019-12-31T09:37:59Z"
+  }, {
+    "createdAt" : "2020-01-07T20:55:15Z"
+  }, {
+    "createdAt" : "2020-01-15T15:21:28Z"
+  }, {
+    "createdAt" : "2020-02-05T14:07:06Z"
+  }, {
+    "createdAt" : "2020-02-07T08:26:49Z"
+  }, {
+    "createdAt" : "2020-02-10T10:45:01Z"
+  }, {
+    "createdAt" : "2020-02-13T10:54:31Z"
+  }, {
+    "createdAt" : "2020-02-18T07:20:40Z"
+  }, {
+    "createdAt" : "2020-02-27T03:47:10Z"
+  }, {
+    "createdAt" : "2020-03-02T18:40:04Z"
+  }, {
+    "createdAt" : "2020-03-03T19:25:34Z"
+  }, {
+    "createdAt" : "2020-03-11T02:47:33Z"
+  }, {
+    "createdAt" : "2020-03-11T12:58:16Z"
+  }, {
+    "createdAt" : "2020-03-17T03:18:25Z"
+  }, {
+    "createdAt" : "2020-03-24T20:21:32Z"
+  }, {
+    "createdAt" : "2020-03-28T15:46:53Z"
+  }, {
+    "createdAt" : "2020-04-06T20:08:42Z"
+  }, {
+    "createdAt" : "2020-04-09T05:06:24Z"
+  }, {
+    "createdAt" : "2020-04-24T07:00:32Z"
+  }, {
+    "createdAt" : "2020-05-14T21:23:34Z"
+  }, {
+    "createdAt" : "2020-05-18T02:17:48Z"
+  }, {
+    "createdAt" : "2020-05-27T07:26:37Z"
+  }, {
+    "createdAt" : "2020-05-30T06:35:08Z"
+  }, {
+    "createdAt" : "2020-07-09T10:02:14Z"
+  }, {
+    "createdAt" : "2020-07-28T10:56:47Z"
+  }, {
+    "createdAt" : "2020-08-04T10:02:03Z"
+  }, {
+    "createdAt" : "2020-08-22T18:53:49Z"
+  }, {
+    "createdAt" : "2020-08-28T13:28:03Z"
+  }, {
+    "createdAt" : "2020-09-24T14:38:19Z"
+  }, {
+    "createdAt" : "2020-10-02T14:50:51Z"
+  }, {
+    "createdAt" : "2020-10-02T15:52:58Z"
+  }, {
+    "createdAt" : "2020-10-05T16:42:27Z"
+  }, {
+    "createdAt" : "2020-10-07T13:48:49Z"
+  }, {
+    "createdAt" : "2020-10-21T05:55:02Z"
+  }, {
+    "createdAt" : "2020-10-30T19:29:53Z"
+  }, {
+    "createdAt" : "2020-11-23T10:30:27Z"
+  }, {
+    "createdAt" : "2020-12-01T13:02:21Z"
+  }, {
+    "createdAt" : "2020-12-02T03:17:15Z"
+  }, {
+    "createdAt" : "2020-12-18T06:07:12Z"
+  }, {
+    "createdAt" : "2020-12-25T20:46:41Z"
+  }, {
+    "createdAt" : "2020-12-29T17:23:18Z"
+  }, {
+    "createdAt" : "2020-12-30T17:25:12Z"
+  }, {
+    "createdAt" : "2020-12-30T17:25:27Z"
+  }, {
+    "createdAt" : "2020-12-30T17:25:40Z"
+  }, {
+    "createdAt" : "2021-01-21T12:25:50Z"
+  }, {
+    "createdAt" : "2021-03-08T02:55:22Z"
+  }, {
+    "createdAt" : "2021-04-10T20:27:22Z"
+  }, {
+    "createdAt" : "2021-04-18T01:40:29Z"
+  }, {
+    "createdAt" : "2021-05-18T15:55:21Z"
+  }, {
+    "createdAt" : "2021-05-18T20:38:10Z"
+  }, {
+    "createdAt" : "2021-05-19T12:46:01Z"
+  }, {
+    "createdAt" : "2021-06-14T05:10:06Z"
+  }, {
+    "createdAt" : "2021-06-19T01:22:44Z"
+  }, {
+    "createdAt" : "2021-06-25T06:18:51Z"
+  }, {
+    "createdAt" : "2021-07-27T16:50:03Z"
+  }, {
+    "createdAt" : "2021-08-08T09:12:15Z"
+  }, {
+    "createdAt" : "2021-08-25T10:08:21Z"
+  }, {
+    "createdAt" : "2021-09-27T11:10:26Z"
+  }, {
+    "createdAt" : "2021-10-20T00:33:44Z"
+  }, {
+    "createdAt" : "2021-10-25T16:11:40Z"
+  }, {
+    "createdAt" : "2021-10-28T09:17:19Z"
+  }, {
+    "createdAt" : "2021-11-09T14:28:05Z"
+  }, {
+    "createdAt" : "2021-11-15T17:18:39Z"
+  }, {
+    "createdAt" : "2021-11-17T09:40:40Z"
+  }, {
+    "createdAt" : "2021-11-19T03:54:02Z"
+  }, {
+    "createdAt" : "2021-11-22T07:31:39Z"
+  }, {
+    "createdAt" : "2021-11-30T13:54:14Z"
+  }, {
+    "createdAt" : "2021-12-02T11:59:28Z"
+  }, {
+    "createdAt" : "2021-12-06T10:39:52Z"
+  }, {
+    "createdAt" : "2021-12-08T08:42:42Z"
+  }, {
+    "createdAt" : "2021-12-15T20:13:44Z"
+  }, {
+    "createdAt" : "2021-12-15T21:05:26Z"
+  }, {
+    "createdAt" : "2021-12-30T08:08:13Z"
+  }, {
+    "createdAt" : "2022-01-19T12:39:09Z"
+  }, {
+    "createdAt" : "2022-01-27T08:16:50Z"
+  }, {
+    "createdAt" : "2022-02-02T11:40:54Z"
+  }, {
+    "createdAt" : "2022-02-08T13:33:29Z"
+  }, {
+    "createdAt" : "2022-02-11T22:16:31Z"
+  }, {
+    "createdAt" : "2022-02-23T02:46:15Z"
+  }, {
+    "createdAt" : "2022-03-10T11:49:53Z"
+  }, {
+    "createdAt" : "2022-03-18T14:55:21Z"
+  }, {
+    "createdAt" : "2022-03-29T14:11:21Z"
+  }, {
+    "createdAt" : "2022-04-01T08:57:20Z"
+  }, {
+    "createdAt" : "2022-04-02T14:03:21Z"
+  }, {
+    "createdAt" : "2022-04-06T10:47:33Z"
+  }, {
+    "createdAt" : "2022-04-07T12:01:13Z"
+  }, {
+    "createdAt" : "2022-04-12T21:50:39Z"
+  }, {
+    "createdAt" : "2022-04-14T12:48:54Z"
+  }, {
+    "createdAt" : "2022-04-14T15:14:06Z"
+  }, {
+    "createdAt" : "2022-04-14T15:24:47Z"
+  }, {
+    "createdAt" : "2022-04-22T08:51:09Z"
+  }, {
+    "createdAt" : "2022-04-26T19:59:07Z"
+  }, {
+    "createdAt" : "2022-04-26T21:49:30Z"
+  }, {
+    "createdAt" : "2022-05-18T05:05:09Z"
+  }, {
+    "createdAt" : "2022-05-18T12:44:55Z"
+  }, {
+    "createdAt" : "2022-05-20T10:02:04Z"
+  }, {
+    "createdAt" : "2022-05-31T07:57:02Z"
+  }, {
+    "createdAt" : "2022-06-09T07:30:07Z"
+  }, {
+    "createdAt" : "2022-06-10T05:57:11Z"
+  }, {
+    "createdAt" : "2022-06-29T08:57:34Z"
+  }, {
+    "createdAt" : "2022-07-15T15:33:17Z"
+  }, {
+    "createdAt" : "2022-07-17T07:11:56Z"
+  }, {
+    "createdAt" : "2022-08-18T09:19:50Z"
+  }, {
+    "createdAt" : "2022-08-22T19:32:09Z"
+  }, {
+    "createdAt" : "2022-08-25T07:40:13Z"
+  }, {
+    "createdAt" : "2022-09-15T08:51:41Z"
+  }, {
+    "createdAt" : "2022-10-24T03:11:12Z"
+  }, {
+    "createdAt" : "2022-10-27T20:19:45Z"
+  }, {
+    "createdAt" : "2022-10-28T14:52:49Z"
+  }, {
+    "createdAt" : "2022-11-05T09:52:44Z"
+  }, {
+    "createdAt" : "2022-11-15T10:31:50Z"
+  }, {
+    "createdAt" : "2022-11-28T03:48:42Z"
+  }, {
+    "createdAt" : "2022-11-28T23:20:43Z"
+  }, {
+    "createdAt" : "2022-11-29T15:50:48Z"
+  }, {
+    "createdAt" : "2022-12-12T01:07:07Z"
+  }, {
+    "createdAt" : "2022-12-13T02:38:25Z"
+  }, {
+    "createdAt" : "2022-12-16T19:54:55Z"
+  }, {
+    "createdAt" : "2023-01-07T18:21:06Z"
+  }, {
+    "createdAt" : "2023-01-09T09:16:06Z"
+  }, {
+    "createdAt" : "2023-02-07T19:20:54Z"
+  }, {
+    "createdAt" : "2023-02-09T17:35:00Z"
+  }, {
+    "createdAt" : "2023-02-19T19:53:22Z"
+  }, {
+    "createdAt" : "2023-02-22T13:03:00Z"
+  }, {
+    "createdAt" : "2023-03-15T15:29:36Z"
+  }, {
+    "createdAt" : "2023-04-13T17:42:45Z"
+  }, {
+    "createdAt" : "2023-04-25T15:53:11Z"
+  }, {
+    "createdAt" : "2023-05-03T20:57:30Z"
+  }, {
+    "createdAt" : "2023-05-07T15:12:31Z"
+  }, {
+    "createdAt" : "2023-05-10T17:12:16Z"
+  }, {
+    "createdAt" : "2023-05-23T20:13:21Z"
+  }, {
+    "createdAt" : "2023-06-20T07:40:30Z"
+  }, {
+    "createdAt" : "2023-07-10T09:12:43Z"
+  }, {
+    "createdAt" : "2023-07-13T07:07:14Z"
+  }, {
+    "createdAt" : "2023-07-28T04:44:05Z"
+  }, {
+    "createdAt" : "2023-08-16T06:58:36Z"
+  }, {
+    "createdAt" : "2023-08-21T12:42:03Z"
+  }, {
+    "createdAt" : "2023-09-25T15:33:25Z"
+  }, {
+    "createdAt" : "2023-09-26T09:22:22Z"
+  }, {
+    "createdAt" : "2023-10-10T13:14:09Z"
+  }, {
+    "createdAt" : "2023-11-18T02:55:18Z"
+  }, {
+    "createdAt" : "2023-12-11T19:57:00Z"
+  }, {
+    "createdAt" : "2024-01-31T17:02:41Z"
+  }, {
+    "createdAt" : "2024-02-08T14:43:24Z"
+  }, {
+    "createdAt" : "2024-02-14T18:57:04Z"
+  }, {
+    "createdAt" : "2024-04-09T08:08:24Z"
+  }, {
+    "createdAt" : "2024-04-17T02:45:27Z"
+  }, {
+    "createdAt" : "2024-04-17T13:06:30Z"
+  }, {
+    "createdAt" : "2024-05-30T13:19:19Z"
+  }, {
+    "createdAt" : "2024-06-07T21:36:11Z"
+  }, {
+    "createdAt" : "2024-06-21T12:59:42Z"
+  }, {
+    "createdAt" : "2024-07-01T18:59:46Z"
+  }, {
+    "createdAt" : "2024-07-29T06:16:18Z"
+  }, {
+    "createdAt" : "2024-09-10T20:21:27Z"
+  }, {
+    "createdAt" : "2024-10-06T19:49:36Z"
+  }, {
+    "createdAt" : "2024-11-04T03:15:47Z"
+  }, {
+    "createdAt" : "2024-11-28T12:14:32Z"
+  }, {
+    "createdAt" : "2024-12-05T08:43:55Z"
+  }, {
+    "createdAt" : "2025-01-08T15:07:24Z"
+  }, {
+    "createdAt" : "2025-01-13T15:00:18Z"
+  }, {
+    "createdAt" : "2025-01-22T06:37:59Z"
+  }, {
+    "createdAt" : "2025-02-10T05:36:44Z"
+  }, {
+    "createdAt" : "2025-02-25T01:46:09Z"
+  }, {
+    "createdAt" : "2025-03-16T07:31:44Z"
+  }, {
+    "createdAt" : "2025-03-24T09:01:00Z"
+  }, {
+    "createdAt" : "2025-04-01T19:52:08Z"
+  }, {
+    "createdAt" : "2025-04-22T06:58:54Z"
+  }, {
+    "createdAt" : "2025-06-22T15:13:42Z"
+  }, {
+    "createdAt" : "2025-08-03T21:16:52Z"
+  }, {
+    "createdAt" : "2025-08-29T19:17:04Z"
+  }, {
+    "createdAt" : "2025-09-25T10:27:26Z"
+  }, {
+    "createdAt" : "2025-10-17T16:10:53Z"
+  }, {
+    "createdAt" : "2025-10-23T07:26:33Z"
+  }, {
+    "createdAt" : "2025-10-31T06:53:41Z"
+  }, {
+    "createdAt" : "2025-11-26T10:09:24Z"
+  } ],
+  "issues" : [ {
+    "number" : 4,
+    "title" : "Exception in thread \"main\" java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer",
+    "createdAt" : "2015-02-24T15:02:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Document aws_dimension_select_regex in README",
+    "createdAt" : "2015-10-01T07:39:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Rule help text override is ignored",
+    "createdAt" : "2015-10-01T09:49:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Export empty instance label",
+    "createdAt" : "2015-10-25T09:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Unable to use Docker image behind corporate proxy",
+    "createdAt" : "2015-11-19T14:19:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Multiple same HELP/TYPE lines for DynamoDB metrics",
+    "createdAt" : "2016-01-04T11:51:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Support filtering by tags",
+    "createdAt" : "2016-01-22T13:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "AWS/S3 metrics do not work",
+    "createdAt" : "2016-02-02T00:23:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Add optional timestamps to exposition data",
+    "createdAt" : "2016-02-11T12:26:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Outdated dependency in pom.xml",
+    "createdAt" : "2016-02-22T14:34:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Cannot connect via proxy",
+    "createdAt" : "2016-03-21T12:32:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "failed working in AWS china region",
+    "createdAt" : "2016-03-28T09:23:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Scrape duration",
+    "createdAt" : "2016-04-04T12:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add a health check endpoint",
+    "createdAt" : "2016-05-12T15:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Export empty metrics as 0",
+    "createdAt" : "2016-06-07T15:43:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "\"AWS/Billing\" metrics do not appear",
+    "createdAt" : "2016-06-23T07:56:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "AWS/ELB metrics do not work ",
+    "createdAt" : "2016-07-28T06:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "[k8s] mounting into \"/\" is prohibited and cannot find \"java\"",
+    "createdAt" : "2016-08-17T01:15:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "S3 metrics not being pulled",
+    "createdAt" : "2016-08-25T17:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "ELB/ALB metrics not available",
+    "createdAt" : "2016-10-03T17:11:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "What is the cpu / memory / size footprint of this program ?",
+    "createdAt" : "2016-11-21T23:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Can you provide sample prometheus configuration",
+    "createdAt" : "2016-12-10T21:35:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "CloudWatch scrape failed cannot be cast to java.util.List",
+    "createdAt" : "2016-12-22T20:40:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "trustAnchors parameter must be non-empty",
+    "createdAt" : "2017-01-12T17:15:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Can't specify region for a metric",
+    "createdAt" : "2017-01-31T15:35:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Not getting EC2 data",
+    "createdAt" : "2017-02-07T20:59:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Docker images don't have tags",
+    "createdAt" : "2017-03-07T00:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Unnecessarily hard to override config file location.",
+    "createdAt" : "2017-03-14T16:47:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "polling frequency",
+    "createdAt" : "2017-03-30T16:58:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Export data to use in a graph",
+    "createdAt" : "2017-04-14T14:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "ES metrics not appearing",
+    "createdAt" : "2017-04-19T14:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Expose period_seconds as a metric",
+    "createdAt" : "2017-05-05T08:30:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "AWS ALB",
+    "createdAt" : "2017-06-26T23:07:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Getting metrics for dead ELBs might cost a lot of money",
+    "createdAt" : "2017-07-19T11:22:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "An issue gathering metrics from SQL queues",
+    "createdAt" : "2017-08-04T16:44:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Configured metrics not being scraped",
+    "createdAt" : "2017-08-08T15:49:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "(Dockerfile) /config.yml breaks kubernetes!",
+    "createdAt" : "2017-08-16T16:03:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Custom Metrics not being exported",
+    "createdAt" : "2017-08-18T15:09:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Lots of requests for simple metrics",
+    "createdAt" : "2017-08-31T14:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Bad idea to export label job",
+    "createdAt" : "2017-08-31T16:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "add a CMD instruction for the dockerfile like the `prom/prometheus` or `prom/alertmanger` containers",
+    "createdAt" : "2017-09-03T04:12:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Read timeout",
+    "createdAt" : "2017-09-05T07:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Scraping stops working from time to time",
+    "createdAt" : "2017-09-25T08:30:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "No tags in docker hub repo",
+    "createdAt" : "2017-09-28T18:58:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Use semver",
+    "createdAt" : "2017-10-05T14:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Dynamic config reloading",
+    "createdAt" : "2017-10-06T20:09:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Scraping fails when trying to scrape a certain metric from more then one target of the same type",
+    "createdAt" : "2017-10-10T07:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Is aws_dimensions really optional?",
+    "createdAt" : "2017-11-16T22:40:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Deploying to kubernetes",
+    "createdAt" : "2017-12-19T10:07:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "[Question] Exporting SQS metric",
+    "createdAt" : "2017-12-19T13:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Support to specify prometheus metric name's prefix(used as basename in code)",
+    "createdAt" : "2017-12-24T08:34:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Scraping stops working untill restart",
+    "createdAt" : "2018-01-23T15:12:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Unable to load AWS credentials from any provider in the chain",
+    "createdAt" : "2018-02-13T10:20:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Adding multiple metrics for ALB HTTP count causes overwrite",
+    "createdAt" : "2018-02-16T21:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Feature: Default value if metric not found",
+    "createdAt" : "2018-03-05T15:47:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Cloudfront metrics not being pulled",
+    "createdAt" : "2018-03-12T09:17:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Push latest jar to maven.org",
+    "createdAt" : "2018-03-14T20:27:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Exporting HTTPCode_Target_4XX_Count-type metrics",
+    "createdAt" : "2018-03-23T10:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Add optional support for ec2 / elb / rds / es filtering of tags and tag labels",
+    "createdAt" : "2018-04-23T11:06:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Very long scrape duration",
+    "createdAt" : "2018-05-18T16:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Unable to fetch the DatabaseClass from the RDS cloudmetrics ",
+    "createdAt" : "2018-05-21T07:33:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Prometheus can drop metrics due to Cloudwatch timestamps being too old",
+    "createdAt" : "2018-06-01T08:06:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Changes to 'role_arn' have no effect when reloading config",
+    "createdAt" : "2018-06-01T09:03:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 103,
+    "title" : "Adding support for custom labels",
+    "createdAt" : "2018-06-03T07:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Maven incorrectly assumes 0.4 is the newest version",
+    "createdAt" : "2018-06-04T08:53:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "custom namespace metrics don't show up?",
+    "createdAt" : "2018-06-06T11:26:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Can't add dimension except for InstanceId in AWS/EC2",
+    "createdAt" : "2018-06-07T05:48:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Global accesible metrics not being pulled",
+    "createdAt" : "2018-06-19T09:07:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Metrics from Cloudfront not being scraped by Prometheus",
+    "createdAt" : "2018-06-20T11:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Issue with AWS Dimension filtering logic",
+    "createdAt" : "2018-06-20T15:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Can't get",
+    "createdAt" : "2018-06-21T12:43:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Prometheus is failing to pull metrics from the latest image",
+    "createdAt" : "2018-06-25T09:20:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Billing metrics don't end up in Prometheus",
+    "createdAt" : "2018-07-02T23:21:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Trying to build on Ubuntu 16.04, getting a build error[Failure executing javac]",
+    "createdAt" : "2018-07-03T21:04:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Can't retrieve cloudwatch metrics of other region",
+    "createdAt" : "2018-07-10T11:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "AWS/EC2 CPUUtilization doesn't work with multiple dimensions",
+    "createdAt" : "2018-07-11T08:22:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "exporter takes 4 minutes to return metrics",
+    "createdAt" : "2018-07-17T18:20:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Question about scraping multiple accounts",
+    "createdAt" : "2018-07-20T21:09:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "How to Monitor  Rds with cloudwatch_exporter",
+    "createdAt" : "2018-07-30T11:58:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Unable to get console values on prometheus ",
+    "createdAt" : "2018-07-31T08:30:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Cannot get AWS/RDS metrics with multiple Dimension",
+    "createdAt" : "2018-08-01T14:23:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Feature Request - Multiple Cloudwatch YAML file  ",
+    "createdAt" : "2018-08-02T12:31:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Create ability to specify a JAVA_OPTS environment variable",
+    "createdAt" : "2018-08-10T16:50:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Why isnt this project in Go?",
+    "createdAt" : "2018-08-14T18:04:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Reduce number of api operations by using GetMetricData API instead of GetMetricStatistics API",
+    "createdAt" : "2018-08-22T12:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "CVE-2017-7658 : Jetty version needs to be updated",
+    "createdAt" : "2018-08-27T12:25:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "example for  billing : ",
+    "createdAt" : "2018-09-07T21:29:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Metrics are not shown in Prometheus query browser.  ",
+    "createdAt" : "2018-09-17T14:02:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "HealthyHostCount and UnHealthyHostCount stats not coming through",
+    "createdAt" : "2018-10-01T11:30:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Pass `aws_dimension_select` filter values in `ListMetricsRequest`.",
+    "createdAt" : "2018-10-01T21:15:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Verbose logging on every CloudWatch API call",
+    "createdAt" : "2018-10-10T09:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "connecting to amazon failed ",
+    "createdAt" : "2018-10-10T15:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "CloudWatch ALB load_balancer/target_group appear to be reversed",
+    "createdAt" : "2018-10-11T02:13:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "CloudWatch Agent metrics not working",
+    "createdAt" : "2018-10-18T18:17:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "CloudWatch agent metrics",
+    "createdAt" : "2018-10-19T09:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Select multiple dimension",
+    "createdAt" : "2018-10-22T08:53:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Multiple dimension support",
+    "createdAt" : "2018-10-22T08:56:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Percentile aws_statistics (pNN.NN)",
+    "createdAt" : "2018-10-25T15:13:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Trying to build docker image fails",
+    "createdAt" : "2018-10-25T23:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Have an option to specify aws-region at metric level",
+    "createdAt" : "2018-11-01T18:10:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Unexpected results for `aws_applicationelb_httpcode_elb_5_xx_count_sum`",
+    "createdAt" : "2018-11-02T11:17:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Update to Java 11",
+    "createdAt" : "2018-11-29T12:32:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "CloudSearch metrics",
+    "createdAt" : "2018-12-04T12:29:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Prometheus",
+    "createdAt" : "2018-12-19T02:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "prometheus graph",
+    "createdAt" : "2018-12-19T02:20:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "prometheus graph have no data",
+    "createdAt" : "2018-12-19T02:25:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : " I want to monitor AWS RDS metrics in my prometheus , ",
+    "createdAt" : "2019-01-17T07:43:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "cloudwatch_exporter does not use ECS task role properly",
+    "createdAt" : "2019-01-21T11:48:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Exception in thread \"main\" java.lang.ClassCastException",
+    "createdAt" : "2019-01-31T22:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "post to reload doesn't work",
+    "createdAt" : "2019-02-07T16:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Implement exponential back-off algorithm and bulking requests",
+    "createdAt" : "2019-02-08T11:54:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Can't get AWS/DDoSProtection metrics",
+    "createdAt" : "2019-02-15T09:16:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Migrate to AWS version 2 Java API",
+    "createdAt" : "2019-02-21T17:12:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Too many requests for a single metric?",
+    "createdAt" : "2019-03-07T09:39:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Optimal solution for reducing GetMetricStatistics requests?",
+    "createdAt" : "2019-03-18T12:56:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Performace improvement with concurrent calls",
+    "createdAt" : "2019-03-20T15:05:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "exporter not running in us-west-2",
+    "createdAt" : "2019-04-02T15:38:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Detailed DEBUG info for CloudWatch exporter",
+    "createdAt" : "2019-04-05T19:29:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "\"Illegal reflective access by com.amazonaws.util.XpathUtils\" Error",
+    "createdAt" : "2019-04-26T18:27:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "STS and Custom Cloudwatch Endpoints",
+    "createdAt" : "2019-05-09T12:56:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 187,
+    "title" : "API gateway metrics are not showing /metrics",
+    "createdAt" : "2019-05-28T16:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "A non-existent table \"tables\" shows in cloudwatch get-metric-statistics",
+    "createdAt" : "2019-06-11T20:57:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Need to close the FileReader?",
+    "createdAt" : "2019-06-12T20:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "prometheus target status showing \"up\" but showing 'no data' in console",
+    "createdAt" : "2019-07-08T12:21:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "DynamoDB metrics exported but not scraped",
+    "createdAt" : "2019-07-15T15:07:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Join HTTP metrics in one metric",
+    "createdAt" : "2019-07-24T19:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "parseXml error",
+    "createdAt" : "2019-08-01T16:31:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "how to override few values present in config.yaml",
+    "createdAt" : "2019-08-12T15:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Lambda errors aws_statistics",
+    "createdAt" : "2019-08-14T16:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Unable to scrape ReadThrottleEvents in AWS/DynamoDB",
+    "createdAt" : "2019-08-19T16:55:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Add config for EMR metrics",
+    "createdAt" : "2019-08-27T04:33:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Config using AWS/DX returns only meta-metrics and no errors",
+    "createdAt" : "2019-09-03T21:13:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Auto detect AWS region",
+    "createdAt" : "2019-09-04T17:34:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "unable to fetch metric for more namespaces or number of metric are more",
+    "createdAt" : "2019-09-06T17:36:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Unable to set alerts due to delay in metrics",
+    "createdAt" : "2019-09-16T21:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "DirectConnect metrics + different results in jar vs docker file",
+    "createdAt" : "2019-09-17T18:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "cloudwatch exporter not showing cloudwatch metrics",
+    "createdAt" : "2019-09-20T15:46:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "release of 0.6.0 ",
+    "createdAt" : "2019-09-23T13:36:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Prometheus dropped the cloudwatch explorer",
+    "createdAt" : "2019-10-14T14:38:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "RDS CPU utilization not showing the correct value.",
+    "createdAt" : "2019-10-15T07:36:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Cloudwatch Exporter images not available in Quay org",
+    "createdAt" : "2019-10-22T05:40:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "exporter is not using AWS credentials from environment variables",
+    "createdAt" : "2019-10-23T16:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "CloudWatch timestamp on Prometheus",
+    "createdAt" : "2019-10-24T14:03:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "New Release?",
+    "createdAt" : "2019-11-13T19:27:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "May I apply two account in one docker server",
+    "createdAt" : "2019-11-18T09:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Duplicate scrapes from cloudwatch exporter",
+    "createdAt" : "2019-11-27T10:38:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Documentation for joining aws_resource_info with other metrics",
+    "createdAt" : "2019-12-02T10:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Exporter not picking up AWS/Kafka metrics ",
+    "createdAt" : "2019-12-03T12:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "will be broken if using aws_tag_select to specify the resources and there are \":",
+    "createdAt" : "2019-12-17T00:34:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Exporter will be broken if using aws_tag_select to specify the resources and there are \":\" inside the label",
+    "createdAt" : "2019-12-17T01:38:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "How can i add tags/labels in metrics ?",
+    "createdAt" : "2019-12-17T05:15:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "IAM AssumedRole doesn't work in ECS",
+    "createdAt" : "2019-12-23T16:54:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Help - How to convert this Grafana Query to exporter config",
+    "createdAt" : "2020-01-02T10:28:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Can I Use the one cloudwatch exporter.yml multi account ELB Metric Monitoring ?",
+    "createdAt" : "2020-01-15T06:09:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "to get region name in the metrics when it is scrapped by prometheus",
+    "createdAt" : "2020-01-20T09:36:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Resource type for SQS",
+    "createdAt" : "2020-02-06T13:45:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "AWS metrics not showing anything for AWS/NATGateway namespace",
+    "createdAt" : "2020-02-06T21:24:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "aws resource tag as label in prometheus metric",
+    "createdAt" : "2020-02-13T14:34:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Minimum calls per unit of time and resource",
+    "createdAt" : "2020-03-05T14:52:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "NullPointerException for DyamoDB metrics",
+    "createdAt" : "2020-03-05T21:46:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "aws_resource_info label bug",
+    "createdAt" : "2020-03-19T09:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Whether the job can be customized",
+    "createdAt" : "2020-03-24T03:27:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "CVEs",
+    "createdAt" : "2020-04-01T19:50:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Failing to start on windows",
+    "createdAt" : "2020-04-15T06:07:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "How to setup the exporter on Ubuntu Linux",
+    "createdAt" : "2020-04-16T19:09:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "ALB target group tag selections failing due to resource id",
+    "createdAt" : "2020-04-24T06:57:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Upgrade AWS SDK to version 2",
+    "createdAt" : "2020-04-29T19:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "aws_ebs metrics and instance label",
+    "createdAt" : "2020-05-05T10:13:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "using fine grained service account IAM roles in EKS",
+    "createdAt" : "2020-05-08T12:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "No main manifest",
+    "createdAt" : "2020-05-11T19:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "getting WAFV2 metrics by tags is not working",
+    "createdAt" : "2020-05-11T20:06:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Metrics offset value definition",
+    "createdAt" : "2020-05-14T10:32:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "delay_seconds: -20 What does this parameter mean",
+    "createdAt" : "2020-05-28T03:47:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "MediaConvert metrics not reflected correctly",
+    "createdAt" : "2020-05-31T07:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "delay_seconds\t  What do parameters mean",
+    "createdAt" : "2020-06-09T03:13:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Cloudwatch exporter is not caching AWS credentials",
+    "createdAt" : "2020-06-12T11:39:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Specify how often to make requests to CloudWatch",
+    "createdAt" : "2020-06-17T11:22:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Specify port as part of the configuration file",
+    "createdAt" : "2020-06-24T18:33:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Feature request: include tags in cloudfront labels",
+    "createdAt" : "2020-07-03T22:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "“NoSuchMethodErrors” due to multiple versions of com.fasterxml.jackson.core:jackson-core:jar",
+    "createdAt" : "2020-07-04T07:09:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "aws_elb_un_healthy_host_count_average incorrect value",
+    "createdAt" : "2020-07-06T15:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Unable to query the metrics",
+    "createdAt" : "2020-07-08T23:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "AWS/EC2/API Namespace Metrics Not Working",
+    "createdAt" : "2020-07-14T23:34:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "How to Configure Scrape Duration",
+    "createdAt" : "2020-07-18T11:29:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Repeating ALB data points",
+    "createdAt" : "2020-07-21T21:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Pulling CWAgent Metrics",
+    "createdAt" : "2020-07-31T21:54:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "CWE is not showing metrics for DynamoDB ThrottlingEvents",
+    "createdAt" : "2020-08-08T05:21:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Support authentication with AWS_WEB_IDENTITY_TOKEN_FILE",
+    "createdAt" : "2020-08-10T09:11:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "AWS ES Metrics not being shown in the prometheus console.",
+    "createdAt" : "2020-08-11T15:37:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "aws_resource_info while using aws_tag_select causes prometheus/expfmt parsing errors due to multiple same HELP/TYPE lines",
+    "createdAt" : "2020-08-14T20:28:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Preserve old images on dockerhub",
+    "createdAt" : "2020-09-04T08:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Endpoint DNS resolving issue",
+    "createdAt" : "2020-09-24T09:57:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "cloudwatch taking worker role in AWS and not using OIDC",
+    "createdAt" : "2020-10-01T14:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "NullPointerException -  CloudWatch scrape failed",
+    "createdAt" : "2020-10-08T20:24:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Do we need 2 config.yml for fetching metrics from 2 separate regions ?",
+    "createdAt" : "2020-11-10T14:52:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "[latest] Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".",
+    "createdAt" : "2020-11-20T18:09:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "PrometheusDuplicateTimestamps CloudFront Scrapping",
+    "createdAt" : "2020-11-27T15:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Custom CW Metrics not being exported",
+    "createdAt" : "2020-12-11T06:00:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Add sanitization to dynamic aws_resource_info labels to prevent metric parsing from breaking",
+    "createdAt" : "2020-12-14T21:28:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Configuration to export cloudwatch logs metrics ",
+    "createdAt" : "2021-01-19T14:47:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Not getting any metrics for my firehose or lambda resources ",
+    "createdAt" : "2021-01-21T16:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "Most recent 0.10.0 release has incorrect date (off by one year)",
+    "createdAt" : "2021-02-06T19:40:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Not able to open the rules.yml file by prometheus service ",
+    "createdAt" : "2021-02-11T03:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "cloudwatch_requests_total metric was missing intermittently in us-east-1 region",
+    "createdAt" : "2021-03-05T09:03:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Is there anyway to get EC2 instance name ?",
+    "createdAt" : "2021-03-12T23:10:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Error: Could not find or load main class io.prometheus.cloudwatch.WebServer",
+    "createdAt" : "2021-04-08T07:46:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 332,
+    "title" : "cannot use custom metrics with prometheus adapter ",
+    "createdAt" : "2021-04-12T15:43:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "How to pass multiple AWS accounts ?",
+    "createdAt" : "2021-04-27T10:38:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Memory leak in 0.10.0",
+    "createdAt" : "2021-04-30T12:33:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Connection to server fails when using `aws_tag_select`",
+    "createdAt" : "2021-05-03T18:58:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "configure multiple IAM accounts and multiple exporter programs",
+    "createdAt" : "2021-05-07T03:24:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Build container image for arm64 architecture",
+    "createdAt" : "2021-05-07T09:17:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "CloudFront did not get all indicators",
+    "createdAt" : "2021-05-10T06:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Metric help missing",
+    "createdAt" : "2021-05-18T04:33:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "Can I run it on AWS EKS",
+    "createdAt" : "2021-05-18T09:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Number of fixable CVEs present in current build",
+    "createdAt" : "2021-05-18T13:54:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "0.10.0 - setting `role_arn` also requires setting `region` or exporter fails, complaining on missing region.",
+    "createdAt" : "2021-05-19T11:16:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 347,
+    "title" : "Prometheus \"Error on ingesting out-of-order samples\"",
+    "createdAt" : "2021-05-21T14:38:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "Vulnerabilites found in dependancies",
+    "createdAt" : "2021-05-24T14:26:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "custom namespace metrics don't show up?",
+    "createdAt" : "2021-05-25T08:13:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 351,
+    "title" : "Automatically determine `aws_dimensions`",
+    "createdAt" : "2021-06-30T10:06:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "What are the possible values for `resource_type_selection`?",
+    "createdAt" : "2021-07-11T18:31:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "Use only semver as image tag",
+    "createdAt" : "2021-07-23T04:26:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Long scrape duration with large volume of metrics ",
+    "createdAt" : "2021-07-28T04:43:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Automatically discover all existing metrics ",
+    "createdAt" : "2021-07-29T13:30:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Add AWS Account ID to labels",
+    "createdAt" : "2021-08-18T23:48:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "Debug logging",
+    "createdAt" : "2021-09-07T11:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Previous scraped metric data is presisited for 5 mins when cloudwatch responds no data",
+    "createdAt" : "2021-09-08T09:39:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "CWAgent metrics error",
+    "createdAt" : "2021-09-16T19:52:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Feature: Assuming roles across multiple accounts",
+    "createdAt" : "2021-09-22T12:11:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 364,
+    "title" : "Metrics output contains 2 values",
+    "createdAt" : "2021-10-01T15:25:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "Unable to use aws_tag_select for Autoscaling group",
+    "createdAt" : "2021-10-28T13:52:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "It's so slow, it takes three minutes to refresh a page",
+    "createdAt" : "2021-11-04T04:01:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Add new S3 metric to cloudwatch exporter",
+    "createdAt" : "2021-11-04T08:44:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "Ensure uniqueness of metrics",
+    "createdAt" : "2021-11-26T15:15:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 385,
+    "title" : "leaking an instance of FileReader in WebServer",
+    "createdAt" : "2021-12-01T09:06:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "Add a build info metric",
+    "createdAt" : "2021-12-06T13:40:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Update to Jetty 11",
+    "createdAt" : "2021-12-14T11:15:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Flag to validate config",
+    "createdAt" : "2021-12-14T19:46:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 393,
+    "title" : "Duplicated Data",
+    "createdAt" : "2021-12-15T15:12:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "very SLOW scraping: 10 minutes latency",
+    "createdAt" : "2022-01-02T15:52:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "Question: Export custom namespace metrics ",
+    "createdAt" : "2022-02-08T01:11:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Multiple dimensions not able to display under AWS/EC2 namespace",
+    "createdAt" : "2022-03-10T14:00:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 406,
+    "title" : "Feature Request: Support Metric Math",
+    "createdAt" : "2022-03-11T18:35:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 408,
+    "title" : "Good example prometheus dashboard someone can recommend?",
+    "createdAt" : "2022-03-28T15:50:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Vulnerable Java Version",
+    "createdAt" : "2022-03-31T22:02:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "CVE-2022-25315 - Expat Vulnerability",
+    "createdAt" : "2022-04-04T19:15:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Question: How to scrape only tagged s3 buckets?",
+    "createdAt" : "2022-04-08T08:59:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "CVE-2022-21449: Psychic Signatures in Java",
+    "createdAt" : "2022-04-21T17:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Unify and enforce formatting",
+    "createdAt" : "2022-04-26T12:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "\"Unit\" is missing from HELP after #414",
+    "createdAt" : "2022-05-08T14:35:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Exception in thread \"main\" java.lang.NullPointerException",
+    "createdAt" : "2022-05-16T02:46:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "example ec2 not valid",
+    "createdAt" : "2022-06-05T15:09:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Missing metrics",
+    "createdAt" : "2022-06-05T15:24:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Incorrect Configuration?",
+    "createdAt" : "2022-06-06T04:11:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "use_get_metric_data not working with the latest version (0.14.0) of Cloudwatch Exporter ",
+    "createdAt" : "2022-06-07T08:44:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "Why is there no redis type in the example?",
+    "createdAt" : "2022-06-13T06:28:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "how to cloudwatch_exporter process",
+    "createdAt" : "2022-06-29T02:19:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "Allow > 20 tags for tag selection values",
+    "createdAt" : "2022-07-01T12:39:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 442,
+    "title" : "Dimensions problem with AWS/ApplicationELB:HTTPCode_Target_5XX_Count",
+    "createdAt" : "2022-07-06T13:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 443,
+    "title" : "Retain previous configuration on failed reload",
+    "createdAt" : "2022-07-08T09:40:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 444,
+    "title" : "Getting Warning messages while using cloudwatch-exporter to fetch AWS Transfer metrics in prometheus",
+    "createdAt" : "2022-07-12T04:23:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Filter metrics based on tag",
+    "createdAt" : "2022-07-13T10:57:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "[request]: Support for Cloudwatch namespace ECS/ContainerInsights",
+    "createdAt" : "2022-07-27T22:20:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 449,
+    "title" : "Cache result of ListMetrics calls",
+    "createdAt" : "2022-07-28T12:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "I can't see metrics values in prometheus",
+    "createdAt" : "2022-08-17T19:47:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 452,
+    "title" : "[bug]: OpenSearch metrics not appearing on the exporter",
+    "createdAt" : "2022-08-18T13:27:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "[question]: How to get CW metrics from only a single resource",
+    "createdAt" : "2022-09-30T13:03:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "AWS/SQS Metrics",
+    "createdAt" : "2022-10-10T18:08:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "Not able to scrape WAF metrics",
+    "createdAt" : "2022-10-13T08:31:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 462,
+    "title" : "[request]: Improve logging",
+    "createdAt" : "2022-10-20T19:09:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 463,
+    "title" : "[bug]: Cloudwatch API Request Count is 6 times than expected, request period is fixed to 10 seconds .",
+    "createdAt" : "2022-10-24T12:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Make JVM metrics optional",
+    "createdAt" : "2022-11-07T23:16:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 466,
+    "title" : "[bug]: Unable to get AWS/ManagedBlockchain metrics",
+    "createdAt" : "2022-11-15T08:30:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 467,
+    "title" : "[request]: Ability to expand environment variables in config file",
+    "createdAt" : "2022-11-19T13:33:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "unable to scrape amp metrics",
+    "createdAt" : "2022-11-29T14:31:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "[bug]: the exporter only is getting 5 back minutes of data for each scrape [interval is 1h]",
+    "createdAt" : "2022-11-30T13:34:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "[bug]: Unable to access AWS/RDS BurstBalance metrics",
+    "createdAt" : "2022-12-27T14:48:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 474,
+    "title" : "[request] Docker image should use non-root user",
+    "createdAt" : "2022-12-29T12:40:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 475,
+    "title" : "Unable to scrape AWS/WAFV2 metrics using tags",
+    "createdAt" : "2022-12-30T12:43:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "ability to add tags as metric labels",
+    "createdAt" : "2023-01-17T12:03:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : "[bug]: inconsistency labels between ELB metrics and aws_resource_info metric",
+    "createdAt" : "2023-01-18T12:07:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "Cannot export AWS/CertificateManager metric",
+    "createdAt" : "2023-01-27T16:40:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 479,
+    "title" : "[bug]: discrepancy between exported size and actual size",
+    "createdAt" : "2023-01-30T16:45:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "How can i fetch ALB tag details from the exporter metrics",
+    "createdAt" : "2023-02-06T13:34:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "[request]: Add option to label deployment in Helm chart",
+    "createdAt" : "2023-02-07T08:18:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Metrics not available in Prometheus",
+    "createdAt" : "2023-02-08T09:21:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "[validation config file ]:  command or other way to validate config file ",
+    "createdAt" : "2023-02-09T14:07:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 485,
+    "title" : "[security] 0.15.2 has multiple security vulnerabilities",
+    "createdAt" : "2023-02-13T16:48:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "[metrics]: Prometheus cloudwatch exporter - Not picking more than one or some dimension for MQ",
+    "createdAt" : "2023-02-23T11:16:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 507,
+    "title" : "[metrics]: can i use GetMetricsStatistics?",
+    "createdAt" : "2023-02-26T10:10:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 511,
+    "title" : "[metrics]: ECS average CpuUtilized reporting sum numbers instead of average",
+    "createdAt" : "2023-03-06T15:01:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "Refactor configuration loading to have a defined schema",
+    "createdAt" : "2023-03-08T16:18:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 519,
+    "title" : "[bug]: Can't scrape from kubernetes pod",
+    "createdAt" : "2023-03-21T19:53:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "[metrics]: short description here",
+    "createdAt" : "2023-04-20T11:24:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 533,
+    "title" : "[metrics]: Unable to set the provided role while deploying in Kubernetes environment",
+    "createdAt" : "2023-04-25T11:20:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "[metrics]: Can't get actual value for NumberOfEmptyReceives",
+    "createdAt" : "2023-05-17T08:51:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 544,
+    "title" : "Distinguishing metrics by tag",
+    "createdAt" : "2023-05-17T10:52:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 547,
+    "title" : "[metrics]: can't get all s3 metrics",
+    "createdAt" : "2023-05-24T10:55:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 566,
+    "title" : "[request]: Export Backup metrics",
+    "createdAt" : "2023-08-07T10:28:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 571,
+    "title" : "How to automatic fetch all the LoadBalancer (With Target Group) tags",
+    "createdAt" : "2023-08-30T17:05:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 574,
+    "title" : "[bug]:  Not able to fetch metrics when tagging enabled. ",
+    "createdAt" : "2023-09-05T08:35:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "[bug]: Not getting all metrics for multiple resources with tags ",
+    "createdAt" : "2023-09-07T05:35:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 580,
+    "title" : "I can see the metrics using localhost:9106/metrics but NOT in the web console from Prometheus",
+    "createdAt" : "2023-09-21T01:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "ConsumedLCUs is not being picked up by Prometheus Cloidwatch Exporter running inside a pod",
+    "createdAt" : "2023-10-09T07:27:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 588,
+    "title" : "[request]: Monitoring account support",
+    "createdAt" : "2023-10-11T07:15:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 592,
+    "title" : "[metrics]: ES metrics not able to get",
+    "createdAt" : "2023-10-18T09:21:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 593,
+    "title" : "[bug]: AWS/ES metrics not able to get pleasee help ,urgent!",
+    "createdAt" : "2023-10-18T17:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 596,
+    "title" : "[metrics]:  AWS/SNS: Metrics NumberOfNotificationsDelivered/NumberOfNotificationsFailed do not get exported",
+    "createdAt" : "2023-10-25T13:02:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 599,
+    "title" : "[metrics]: AWS/ApiGateway metrics '4xx' and '5xx' were not exported. ",
+    "createdAt" : "2023-11-02T17:21:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 603,
+    "title" : "Issue with getting metrics for configured IRSA - shows different arn role in logs of exporter, URGENT!!!!!!",
+    "createdAt" : "2023-11-07T07:18:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 607,
+    "title" : "[request]: New release needed",
+    "createdAt" : "2023-11-14T18:06:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 610,
+    "title" : "Regarding cloudwatch_exporter collection values, data query issues after connecting to Prometheus",
+    "createdAt" : "2023-11-24T11:37:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 618,
+    "title" : "[metrics]: How to use `use_get_metric_data`?",
+    "createdAt" : "2023-12-08T19:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 619,
+    "title" : "[metrics]: AWS/PrivateLinkService can't get metric data ",
+    "createdAt" : "2023-12-11T06:23:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 621,
+    "title" : "[request]: Cached /metrics result",
+    "createdAt" : "2023-12-11T21:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 635,
+    "title" : "[metrics]: AmazonMQ some metrics missing",
+    "createdAt" : "2024-01-18T16:24:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "[metrics]: Not able to go into a firing state when VPN tunnel is down for VPN-tunnel and ALB, CLB, & NLB",
+    "createdAt" : "2024-01-19T05:27:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 640,
+    "title" : "Information about (any) Cryptographic Dependencies ",
+    "createdAt" : "2024-01-23T02:44:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 653,
+    "title" : "We have SAP Hana [metrics]: available in CloudWatch but metrics stopped coming on dashboard",
+    "createdAt" : "2024-02-11T13:26:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 654,
+    "title" : "[metrics]: AWS/Connect metrics not appearing in Grafana",
+    "createdAt" : "2024-02-13T06:24:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 663,
+    "title" : "[request]: Add additional labels on scraper level",
+    "createdAt" : "2024-03-07T14:55:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 670,
+    "title" : "[metrics]: Exporter randomly detached from service-account ",
+    "createdAt" : "2024-03-15T17:39:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 678,
+    "title" : "[request]: New release needed",
+    "createdAt" : "2024-04-01T17:37:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "Request frequency issue",
+    "createdAt" : "2024-04-09T02:29:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Want to modify tags \"keys\" to lowercase scraping in Cloudwatch-Exporter before sending to Prometheus",
+    "createdAt" : "2024-04-19T07:25:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 689,
+    "title" : "Need cross-account support through IAM assume role policy between different aws accounts",
+    "createdAt" : "2024-04-19T11:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 700,
+    "title" : "[metrics]: support new namespace ApplicationSignals",
+    "createdAt" : "2024-05-23T05:09:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 703,
+    "title" : "[metrics]: short description here",
+    "createdAt" : "2024-06-03T10:30:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 704,
+    "title" : "[bug]: Failed to scrape ApiGateWay metrics with tags",
+    "createdAt" : "2024-06-04T12:11:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 712,
+    "title" : "[metrics]: Missing spike points in metrics collected for aws_metric_name ThreatsFound",
+    "createdAt" : "2024-08-02T18:35:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 713,
+    "title" : "[metrics]: Metrics are no longer pulled when using aws_tag_select",
+    "createdAt" : "2024-08-14T08:07:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 725,
+    "title" : "[metrics]: StepFunction Metrics Not Exported",
+    "createdAt" : "2024-08-22T17:24:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 742,
+    "title" : "[bug]: cloudwatch_metrics_requested_total is not being properly incremented",
+    "createdAt" : "2024-09-10T21:06:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "[bug]: Duplicated metric data values",
+    "createdAt" : "2024-09-24T13:14:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 748,
+    "title" : "[metrics]: elasticache redis with tags",
+    "createdAt" : "2024-10-02T02:20:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 757,
+    "title" : "example conf for AWS Glue",
+    "createdAt" : "2024-10-13T01:37:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 761,
+    "title" : "[bug]: The Cloudfront metric data is inconsistent with the original metric data of Cloudwatch(采集到的cloudfront指标数据和原始数据不一致)",
+    "createdAt" : "2024-10-25T09:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 769,
+    "title" : "AWS Shield DDoSDetected metric splitting to snakecase on change from upper to lowercase letter",
+    "createdAt" : "2024-11-11T11:32:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 771,
+    "title" : "[request]: Service Quota Metrics",
+    "createdAt" : "2024-11-15T12:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 774,
+    "title" : "[bug]: Tags that normalize to the same label name causes error",
+    "createdAt" : "2024-11-28T14:20:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 777,
+    "title" : "[metrics]: Add EBS volumes tags as labels of metrics",
+    "createdAt" : "2024-12-03T07:43:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 794,
+    "title" : "[metrics]: ignoring metric AWS/SNS <any> due to dimensions mismatch",
+    "createdAt" : "2025-02-05T12:13:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 796,
+    "title" : "[metrics]: ignoring metric AWS/Lambda DeadLetterErrors and UnreservedConcurrentExecutions due to dimensions mismatch",
+    "createdAt" : "2025-02-07T14:13:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 814,
+    "title" : "[bug]: after setting the new api GetMetricData i still see the usage of GetMetricStatistics causing billing increase",
+    "createdAt" : "2025-03-24T15:12:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 819,
+    "title" : "CVE-2024-6763 Jetty version needs to be updated",
+    "createdAt" : "2025-04-23T07:50:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 820,
+    "title" : "[metrics]: What time frame is the aggregation based off?",
+    "createdAt" : "2025-05-19T15:41:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 823,
+    "title" : "Need to remove blank \"instance\" label in exporter metrics",
+    "createdAt" : "2025-09-24T07:51:58Z",
+    "state" : "OPEN"
+  } ]
+}

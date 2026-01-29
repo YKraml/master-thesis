@@ -1,0 +1,4760 @@
+{
+  "repoOwner" : "DataDog",
+  "repoName" : "dd-trace-java",
+  "forks" : [ {
+    "createdAt" : "2018-02-05T18:34:39Z"
+  }, {
+    "createdAt" : "2018-02-08T16:56:27Z"
+  }, {
+    "createdAt" : "2018-02-16T19:28:37Z"
+  }, {
+    "createdAt" : "2018-02-27T19:36:54Z"
+  }, {
+    "createdAt" : "2018-04-12T07:17:22Z"
+  }, {
+    "createdAt" : "2018-04-27T13:46:38Z"
+  }, {
+    "createdAt" : "2018-05-04T08:29:54Z"
+  }, {
+    "createdAt" : "2018-06-09T05:31:24Z"
+  }, {
+    "createdAt" : "2018-08-14T04:05:22Z"
+  }, {
+    "createdAt" : "2018-09-03T15:17:35Z"
+  }, {
+    "createdAt" : "2018-09-08T22:00:43Z"
+  }, {
+    "createdAt" : "2018-09-16T18:50:28Z"
+  }, {
+    "createdAt" : "2018-09-20T07:22:56Z"
+  }, {
+    "createdAt" : "2018-09-24T19:41:34Z"
+  }, {
+    "createdAt" : "2018-10-03T01:51:21Z"
+  }, {
+    "createdAt" : "2018-10-26T02:45:03Z"
+  }, {
+    "createdAt" : "2018-11-18T00:34:06Z"
+  }, {
+    "createdAt" : "2018-11-19T16:23:29Z"
+  }, {
+    "createdAt" : "2019-01-09T07:20:25Z"
+  }, {
+    "createdAt" : "2019-01-28T15:49:57Z"
+  }, {
+    "createdAt" : "2019-02-04T13:02:15Z"
+  }, {
+    "createdAt" : "2019-02-11T12:29:01Z"
+  }, {
+    "createdAt" : "2019-02-14T15:36:35Z"
+  }, {
+    "createdAt" : "2019-02-18T02:27:05Z"
+  }, {
+    "createdAt" : "2019-02-20T13:57:39Z"
+  }, {
+    "createdAt" : "2019-03-06T17:50:42Z"
+  }, {
+    "createdAt" : "2019-03-15T06:24:01Z"
+  }, {
+    "createdAt" : "2019-03-21T01:25:46Z"
+  }, {
+    "createdAt" : "2019-03-28T13:26:40Z"
+  }, {
+    "createdAt" : "2019-04-02T01:35:53Z"
+  }, {
+    "createdAt" : "2019-04-09T20:21:18Z"
+  }, {
+    "createdAt" : "2019-04-12T17:45:15Z"
+  }, {
+    "createdAt" : "2019-04-14T08:07:35Z"
+  }, {
+    "createdAt" : "2019-04-24T16:32:58Z"
+  }, {
+    "createdAt" : "2019-04-28T16:51:34Z"
+  }, {
+    "createdAt" : "2019-04-30T13:15:26Z"
+  }, {
+    "createdAt" : "2019-05-02T16:31:23Z"
+  }, {
+    "createdAt" : "2019-05-11T04:27:05Z"
+  }, {
+    "createdAt" : "2019-05-24T12:39:33Z"
+  }, {
+    "createdAt" : "2019-06-21T19:06:36Z"
+  }, {
+    "createdAt" : "2019-07-04T13:51:50Z"
+  }, {
+    "createdAt" : "2019-07-05T09:30:39Z"
+  }, {
+    "createdAt" : "2019-07-05T16:05:12Z"
+  }, {
+    "createdAt" : "2019-07-11T09:57:27Z"
+  }, {
+    "createdAt" : "2019-07-14T14:37:44Z"
+  }, {
+    "createdAt" : "2019-07-29T06:03:29Z"
+  }, {
+    "createdAt" : "2019-07-29T08:50:13Z"
+  }, {
+    "createdAt" : "2019-07-30T09:58:35Z"
+  }, {
+    "createdAt" : "2019-08-06T10:37:21Z"
+  }, {
+    "createdAt" : "2019-08-27T03:16:47Z"
+  }, {
+    "createdAt" : "2019-09-07T05:51:55Z"
+  }, {
+    "createdAt" : "2019-09-12T11:08:48Z"
+  }, {
+    "createdAt" : "2019-09-23T15:46:58Z"
+  }, {
+    "createdAt" : "2019-10-02T06:40:46Z"
+  }, {
+    "createdAt" : "2019-10-02T20:37:20Z"
+  }, {
+    "createdAt" : "2019-10-04T10:16:14Z"
+  }, {
+    "createdAt" : "2019-10-09T16:57:58Z"
+  }, {
+    "createdAt" : "2019-10-29T08:30:26Z"
+  }, {
+    "createdAt" : "2019-11-18T18:23:58Z"
+  }, {
+    "createdAt" : "2019-12-05T23:32:40Z"
+  }, {
+    "createdAt" : "2019-12-13T00:07:21Z"
+  }, {
+    "createdAt" : "2019-12-19T11:29:45Z"
+  }, {
+    "createdAt" : "2020-01-01T13:12:25Z"
+  }, {
+    "createdAt" : "2020-01-09T23:39:03Z"
+  }, {
+    "createdAt" : "2020-01-16T08:46:34Z"
+  }, {
+    "createdAt" : "2020-01-27T09:40:41Z"
+  }, {
+    "createdAt" : "2020-02-12T11:00:04Z"
+  }, {
+    "createdAt" : "2020-02-14T08:52:16Z"
+  }, {
+    "createdAt" : "2020-02-23T03:52:00Z"
+  }, {
+    "createdAt" : "2020-02-28T04:36:42Z"
+  }, {
+    "createdAt" : "2020-02-28T10:52:26Z"
+  }, {
+    "createdAt" : "2020-03-03T20:48:18Z"
+  }, {
+    "createdAt" : "2020-03-05T02:43:23Z"
+  }, {
+    "createdAt" : "2020-03-10T11:57:28Z"
+  }, {
+    "createdAt" : "2020-03-26T15:32:07Z"
+  }, {
+    "createdAt" : "2020-03-31T13:09:35Z"
+  }, {
+    "createdAt" : "2020-04-08T00:53:23Z"
+  }, {
+    "createdAt" : "2020-04-24T01:26:14Z"
+  }, {
+    "createdAt" : "2020-04-24T09:09:10Z"
+  }, {
+    "createdAt" : "2020-04-26T18:55:12Z"
+  }, {
+    "createdAt" : "2020-04-28T11:38:29Z"
+  }, {
+    "createdAt" : "2020-05-11T22:36:58Z"
+  }, {
+    "createdAt" : "2020-05-22T14:10:46Z"
+  }, {
+    "createdAt" : "2020-05-25T16:15:25Z"
+  }, {
+    "createdAt" : "2020-06-01T13:34:40Z"
+  }, {
+    "createdAt" : "2020-06-02T01:36:23Z"
+  }, {
+    "createdAt" : "2020-06-08T21:21:29Z"
+  }, {
+    "createdAt" : "2020-06-09T14:42:07Z"
+  }, {
+    "createdAt" : "2020-06-20T05:20:08Z"
+  }, {
+    "createdAt" : "2020-06-29T19:30:08Z"
+  }, {
+    "createdAt" : "2020-07-08T15:43:26Z"
+  }, {
+    "createdAt" : "2020-07-20T08:49:26Z"
+  }, {
+    "createdAt" : "2020-07-20T17:58:48Z"
+  }, {
+    "createdAt" : "2020-07-28T09:43:53Z"
+  }, {
+    "createdAt" : "2020-08-13T14:12:46Z"
+  }, {
+    "createdAt" : "2020-08-25T19:11:07Z"
+  }, {
+    "createdAt" : "2020-09-01T19:45:26Z"
+  }, {
+    "createdAt" : "2020-09-08T07:13:58Z"
+  }, {
+    "createdAt" : "2020-09-14T07:09:09Z"
+  }, {
+    "createdAt" : "2020-09-18T11:34:07Z"
+  }, {
+    "createdAt" : "2020-09-27T06:56:10Z"
+  }, {
+    "createdAt" : "2020-10-08T09:01:52Z"
+  }, {
+    "createdAt" : "2020-10-13T07:05:12Z"
+  }, {
+    "createdAt" : "2020-10-15T17:32:10Z"
+  }, {
+    "createdAt" : "2020-11-09T23:32:51Z"
+  }, {
+    "createdAt" : "2020-12-01T04:24:13Z"
+  }, {
+    "createdAt" : "2020-12-17T15:08:49Z"
+  }, {
+    "createdAt" : "2020-12-21T23:34:16Z"
+  }, {
+    "createdAt" : "2020-12-23T16:14:52Z"
+  }, {
+    "createdAt" : "2021-01-27T04:50:07Z"
+  }, {
+    "createdAt" : "2021-01-28T13:42:23Z"
+  }, {
+    "createdAt" : "2021-02-09T02:55:10Z"
+  }, {
+    "createdAt" : "2021-02-15T17:24:18Z"
+  }, {
+    "createdAt" : "2021-02-20T17:59:40Z"
+  }, {
+    "createdAt" : "2021-02-24T15:01:09Z"
+  }, {
+    "createdAt" : "2021-03-01T23:45:57Z"
+  }, {
+    "createdAt" : "2021-03-02T07:49:27Z"
+  }, {
+    "createdAt" : "2021-03-18T12:33:08Z"
+  }, {
+    "createdAt" : "2021-03-26T18:51:49Z"
+  }, {
+    "createdAt" : "2021-04-02T15:02:39Z"
+  }, {
+    "createdAt" : "2021-04-15T06:26:29Z"
+  }, {
+    "createdAt" : "2021-04-22T03:03:26Z"
+  }, {
+    "createdAt" : "2021-04-30T07:38:16Z"
+  }, {
+    "createdAt" : "2021-05-07T19:30:20Z"
+  }, {
+    "createdAt" : "2021-06-10T15:48:03Z"
+  }, {
+    "createdAt" : "2021-06-11T22:45:46Z"
+  }, {
+    "createdAt" : "2021-06-23T14:49:24Z"
+  }, {
+    "createdAt" : "2021-06-24T02:54:27Z"
+  }, {
+    "createdAt" : "2021-08-24T03:40:35Z"
+  }, {
+    "createdAt" : "2021-08-31T16:57:02Z"
+  }, {
+    "createdAt" : "2021-09-08T09:14:24Z"
+  }, {
+    "createdAt" : "2021-09-08T22:36:24Z"
+  }, {
+    "createdAt" : "2021-09-14T00:59:17Z"
+  }, {
+    "createdAt" : "2021-09-21T10:16:21Z"
+  }, {
+    "createdAt" : "2021-09-22T22:36:40Z"
+  }, {
+    "createdAt" : "2021-10-05T18:23:58Z"
+  }, {
+    "createdAt" : "2021-10-06T21:00:53Z"
+  }, {
+    "createdAt" : "2021-10-14T07:33:59Z"
+  }, {
+    "createdAt" : "2021-10-21T13:11:57Z"
+  }, {
+    "createdAt" : "2021-10-23T09:44:00Z"
+  }, {
+    "createdAt" : "2021-10-30T07:35:41Z"
+  }, {
+    "createdAt" : "2021-11-02T20:17:03Z"
+  }, {
+    "createdAt" : "2021-11-14T14:21:07Z"
+  }, {
+    "createdAt" : "2021-11-25T08:00:55Z"
+  }, {
+    "createdAt" : "2021-12-02T06:01:19Z"
+  }, {
+    "createdAt" : "2021-12-04T16:59:30Z"
+  }, {
+    "createdAt" : "2021-12-12T04:12:47Z"
+  }, {
+    "createdAt" : "2021-12-14T11:03:39Z"
+  }, {
+    "createdAt" : "2021-12-14T18:01:25Z"
+  }, {
+    "createdAt" : "2021-12-16T22:58:44Z"
+  }, {
+    "createdAt" : "2021-12-18T03:13:31Z"
+  }, {
+    "createdAt" : "2022-01-12T04:00:25Z"
+  }, {
+    "createdAt" : "2022-01-13T17:10:33Z"
+  }, {
+    "createdAt" : "2022-01-17T09:45:42Z"
+  }, {
+    "createdAt" : "2022-01-18T10:37:35Z"
+  }, {
+    "createdAt" : "2022-01-19T02:19:39Z"
+  }, {
+    "createdAt" : "2022-01-24T18:06:22Z"
+  }, {
+    "createdAt" : "2022-01-26T17:32:46Z"
+  }, {
+    "createdAt" : "2022-01-31T01:36:14Z"
+  }, {
+    "createdAt" : "2022-02-03T06:12:46Z"
+  }, {
+    "createdAt" : "2022-02-23T12:16:16Z"
+  }, {
+    "createdAt" : "2022-03-01T09:18:14Z"
+  }, {
+    "createdAt" : "2022-03-23T00:47:09Z"
+  }, {
+    "createdAt" : "2022-03-24T14:54:47Z"
+  }, {
+    "createdAt" : "2022-03-25T01:19:10Z"
+  }, {
+    "createdAt" : "2022-03-28T04:18:17Z"
+  }, {
+    "createdAt" : "2022-04-08T14:38:58Z"
+  }, {
+    "createdAt" : "2022-04-22T17:25:29Z"
+  }, {
+    "createdAt" : "2022-04-28T16:16:25Z"
+  }, {
+    "createdAt" : "2022-05-07T08:39:39Z"
+  }, {
+    "createdAt" : "2022-05-09T02:25:27Z"
+  }, {
+    "createdAt" : "2022-05-13T12:18:26Z"
+  }, {
+    "createdAt" : "2022-05-26T14:45:30Z"
+  }, {
+    "createdAt" : "2022-05-27T06:06:57Z"
+  }, {
+    "createdAt" : "2022-06-02T02:41:27Z"
+  }, {
+    "createdAt" : "2022-06-16T13:40:03Z"
+  }, {
+    "createdAt" : "2022-06-23T09:36:06Z"
+  }, {
+    "createdAt" : "2022-07-05T19:21:46Z"
+  }, {
+    "createdAt" : "2022-07-15T02:50:45Z"
+  }, {
+    "createdAt" : "2022-07-26T11:29:09Z"
+  }, {
+    "createdAt" : "2022-09-07T19:31:56Z"
+  }, {
+    "createdAt" : "2022-09-07T19:34:04Z"
+  }, {
+    "createdAt" : "2022-09-11T08:04:27Z"
+  }, {
+    "createdAt" : "2022-10-21T17:17:45Z"
+  }, {
+    "createdAt" : "2022-10-24T01:37:00Z"
+  }, {
+    "createdAt" : "2022-10-25T16:17:47Z"
+  }, {
+    "createdAt" : "2022-10-28T00:16:35Z"
+  }, {
+    "createdAt" : "2022-11-04T12:37:21Z"
+  }, {
+    "createdAt" : "2022-11-08T10:01:36Z"
+  }, {
+    "createdAt" : "2022-11-12T08:37:33Z"
+  }, {
+    "createdAt" : "2022-11-17T17:08:36Z"
+  }, {
+    "createdAt" : "2022-11-23T08:39:32Z"
+  }, {
+    "createdAt" : "2022-11-28T18:02:45Z"
+  }, {
+    "createdAt" : "2022-12-01T23:21:06Z"
+  }, {
+    "createdAt" : "2022-12-06T10:09:14Z"
+  }, {
+    "createdAt" : "2022-12-09T17:05:52Z"
+  }, {
+    "createdAt" : "2022-12-19T08:52:56Z"
+  }, {
+    "createdAt" : "2022-12-21T10:27:32Z"
+  }, {
+    "createdAt" : "2023-01-02T11:40:35Z"
+  }, {
+    "createdAt" : "2023-01-13T07:19:31Z"
+  }, {
+    "createdAt" : "2023-01-23T05:41:40Z"
+  }, {
+    "createdAt" : "2023-01-25T18:07:15Z"
+  }, {
+    "createdAt" : "2023-01-31T13:38:11Z"
+  }, {
+    "createdAt" : "2023-02-14T13:04:56Z"
+  }, {
+    "createdAt" : "2023-02-25T14:48:51Z"
+  }, {
+    "createdAt" : "2023-03-04T19:03:35Z"
+  }, {
+    "createdAt" : "2023-03-24T00:15:09Z"
+  }, {
+    "createdAt" : "2023-05-08T04:39:06Z"
+  }, {
+    "createdAt" : "2023-05-17T12:54:55Z"
+  }, {
+    "createdAt" : "2023-06-20T08:25:29Z"
+  }, {
+    "createdAt" : "2023-07-12T22:01:16Z"
+  }, {
+    "createdAt" : "2023-07-24T10:12:17Z"
+  }, {
+    "createdAt" : "2023-07-25T17:53:22Z"
+  }, {
+    "createdAt" : "2023-08-07T11:12:42Z"
+  }, {
+    "createdAt" : "2023-08-14T19:12:14Z"
+  }, {
+    "createdAt" : "2023-08-16T07:35:57Z"
+  }, {
+    "createdAt" : "2023-08-16T16:45:31Z"
+  }, {
+    "createdAt" : "2023-08-23T08:29:33Z"
+  }, {
+    "createdAt" : "2023-08-28T20:13:19Z"
+  }, {
+    "createdAt" : "2023-09-05T06:35:30Z"
+  }, {
+    "createdAt" : "2023-09-07T17:09:07Z"
+  }, {
+    "createdAt" : "2023-09-17T09:41:56Z"
+  }, {
+    "createdAt" : "2023-09-20T09:03:15Z"
+  }, {
+    "createdAt" : "2023-09-22T08:48:47Z"
+  }, {
+    "createdAt" : "2023-10-01T14:01:10Z"
+  }, {
+    "createdAt" : "2023-10-01T14:11:10Z"
+  }, {
+    "createdAt" : "2023-10-08T21:54:47Z"
+  }, {
+    "createdAt" : "2023-10-10T18:22:48Z"
+  }, {
+    "createdAt" : "2023-10-11T23:30:01Z"
+  }, {
+    "createdAt" : "2023-10-19T18:40:21Z"
+  }, {
+    "createdAt" : "2023-12-01T05:01:47Z"
+  }, {
+    "createdAt" : "2023-12-14T06:49:51Z"
+  }, {
+    "createdAt" : "2023-12-24T12:07:22Z"
+  }, {
+    "createdAt" : "2024-01-04T02:01:01Z"
+  }, {
+    "createdAt" : "2024-02-03T09:45:09Z"
+  }, {
+    "createdAt" : "2024-02-15T15:29:54Z"
+  }, {
+    "createdAt" : "2024-02-29T04:35:22Z"
+  }, {
+    "createdAt" : "2024-03-11T14:25:07Z"
+  }, {
+    "createdAt" : "2024-04-11T20:27:46Z"
+  }, {
+    "createdAt" : "2024-04-23T12:23:07Z"
+  }, {
+    "createdAt" : "2024-04-30T20:14:01Z"
+  }, {
+    "createdAt" : "2024-05-02T17:05:09Z"
+  }, {
+    "createdAt" : "2024-05-02T18:10:40Z"
+  }, {
+    "createdAt" : "2024-05-02T18:14:01Z"
+  }, {
+    "createdAt" : "2024-05-02T18:20:07Z"
+  }, {
+    "createdAt" : "2024-05-03T06:19:20Z"
+  }, {
+    "createdAt" : "2024-05-03T08:33:52Z"
+  }, {
+    "createdAt" : "2024-05-03T09:33:25Z"
+  }, {
+    "createdAt" : "2024-05-10T05:54:43Z"
+  }, {
+    "createdAt" : "2024-05-29T10:45:33Z"
+  }, {
+    "createdAt" : "2024-05-30T11:57:07Z"
+  }, {
+    "createdAt" : "2024-05-30T21:06:59Z"
+  }, {
+    "createdAt" : "2024-05-31T13:49:32Z"
+  }, {
+    "createdAt" : "2024-06-02T11:05:25Z"
+  }, {
+    "createdAt" : "2024-06-02T11:45:19Z"
+  }, {
+    "createdAt" : "2024-06-17T06:33:54Z"
+  }, {
+    "createdAt" : "2024-06-25T00:06:42Z"
+  }, {
+    "createdAt" : "2024-07-02T02:40:57Z"
+  }, {
+    "createdAt" : "2024-07-11T13:52:48Z"
+  }, {
+    "createdAt" : "2024-08-08T11:09:15Z"
+  }, {
+    "createdAt" : "2024-08-20T02:01:40Z"
+  }, {
+    "createdAt" : "2024-08-23T20:35:47Z"
+  }, {
+    "createdAt" : "2024-09-02T10:29:22Z"
+  }, {
+    "createdAt" : "2024-09-25T19:19:49Z"
+  }, {
+    "createdAt" : "2024-09-30T16:40:01Z"
+  }, {
+    "createdAt" : "2024-10-08T14:07:57Z"
+  }, {
+    "createdAt" : "2024-10-23T10:20:58Z"
+  }, {
+    "createdAt" : "2024-10-24T06:36:17Z"
+  }, {
+    "createdAt" : "2024-10-30T07:41:19Z"
+  }, {
+    "createdAt" : "2024-11-06T15:55:14Z"
+  }, {
+    "createdAt" : "2024-11-11T09:02:17Z"
+  }, {
+    "createdAt" : "2024-11-16T20:31:00Z"
+  }, {
+    "createdAt" : "2024-11-23T21:28:05Z"
+  }, {
+    "createdAt" : "2024-11-24T18:53:21Z"
+  }, {
+    "createdAt" : "2024-12-21T12:06:58Z"
+  }, {
+    "createdAt" : "2024-12-30T17:46:18Z"
+  }, {
+    "createdAt" : "2025-01-09T12:44:34Z"
+  }, {
+    "createdAt" : "2025-02-26T15:37:38Z"
+  }, {
+    "createdAt" : "2025-02-26T23:45:56Z"
+  }, {
+    "createdAt" : "2025-03-11T09:49:50Z"
+  }, {
+    "createdAt" : "2025-03-18T12:34:46Z"
+  }, {
+    "createdAt" : "2025-03-24T15:21:34Z"
+  }, {
+    "createdAt" : "2025-03-26T05:44:49Z"
+  }, {
+    "createdAt" : "2025-04-03T07:14:38Z"
+  }, {
+    "createdAt" : "2025-04-10T19:10:03Z"
+  }, {
+    "createdAt" : "2025-04-17T19:30:50Z"
+  }, {
+    "createdAt" : "2025-04-27T01:47:22Z"
+  }, {
+    "createdAt" : "2025-04-30T13:55:44Z"
+  }, {
+    "createdAt" : "2025-05-15T12:50:30Z"
+  }, {
+    "createdAt" : "2025-05-16T10:15:36Z"
+  }, {
+    "createdAt" : "2025-05-17T08:40:05Z"
+  }, {
+    "createdAt" : "2025-06-01T21:14:24Z"
+  }, {
+    "createdAt" : "2025-06-20T18:06:14Z"
+  }, {
+    "createdAt" : "2025-06-22T01:28:08Z"
+  }, {
+    "createdAt" : "2025-07-03T13:40:47Z"
+  }, {
+    "createdAt" : "2025-07-10T10:06:06Z"
+  }, {
+    "createdAt" : "2025-07-13T01:06:15Z"
+  }, {
+    "createdAt" : "2025-07-15T20:22:19Z"
+  }, {
+    "createdAt" : "2025-07-17T03:48:30Z"
+  }, {
+    "createdAt" : "2025-07-17T10:22:48Z"
+  }, {
+    "createdAt" : "2025-07-17T20:19:34Z"
+  }, {
+    "createdAt" : "2025-07-30T11:29:12Z"
+  }, {
+    "createdAt" : "2025-08-18T02:01:36Z"
+  }, {
+    "createdAt" : "2025-10-10T20:34:42Z"
+  }, {
+    "createdAt" : "2025-10-16T05:31:19Z"
+  }, {
+    "createdAt" : "2025-10-22T07:18:02Z"
+  }, {
+    "createdAt" : "2025-10-28T16:26:04Z"
+  }, {
+    "createdAt" : "2025-11-15T08:27:26Z"
+  }, {
+    "createdAt" : "2025-11-18T05:53:50Z"
+  }, {
+    "createdAt" : "2025-11-20T16:03:01Z"
+  }, {
+    "createdAt" : "2025-11-26T09:37:49Z"
+  }, {
+    "createdAt" : "2025-12-02T13:50:18Z"
+  }, {
+    "createdAt" : "2025-12-15T13:18:34Z"
+  }, {
+    "createdAt" : "2025-12-24T08:42:40Z"
+  }, {
+    "createdAt" : "2025-12-24T18:13:26Z"
+  }, {
+    "createdAt" : "2026-01-05T09:28:40Z"
+  }, {
+    "createdAt" : "2026-01-13T11:33:53Z"
+  } ],
+  "issues" : [ {
+    "number" : 9,
+    "title" : "Issue starting up service after adding dd-trace dependency",
+    "createdAt" : "2017-06-02T21:58:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "DDAgentWriter wait requires interruption",
+    "createdAt" : "2017-06-15T20:58:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "[Proposal] Overriding/Setting the service name for a specific contribution",
+    "createdAt" : "2017-07-24T12:07:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "dd.agent.host not being set",
+    "createdAt" : "2018-01-24T16:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "DDTracer should allow different ScopeManagers",
+    "createdAt" : "2018-02-08T17:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Spans reported independently not in a single Trace",
+    "createdAt" : "2018-02-27T06:12:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "ClassNotFoundException while calling AWS S3 Upload",
+    "createdAt" : "2018-02-28T22:18:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Configuration inconsistent with other APM languages",
+    "createdAt" : "2018-03-04T21:04:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Cannot change default environment",
+    "createdAt" : "2018-03-08T16:47:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "hikari connection pool reported as \"unknown service\"",
+    "createdAt" : "2018-04-03T00:07:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Remove dependency on Guava",
+    "createdAt" : "2018-04-25T22:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Ratpack Instrumentation fails with NoClassDefFoundError",
+    "createdAt" : "2018-04-30T12:07:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Regression in ExecutorInstrumentation v0.7.0?",
+    "createdAt" : "2018-05-02T04:22:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "More JAX-RS context in instrumentation",
+    "createdAt" : "2018-05-02T21:57:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Java agent not working with Spring Boot 2 Reactive (Netty)",
+    "createdAt" : "2018-05-07T15:48:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "ClassCastException with Slick",
+    "createdAt" : "2018-05-16T15:31:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "Issue starting datadog java agent ",
+    "createdAt" : "2018-06-05T20:21:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "ClassCastException",
+    "createdAt" : "2018-06-06T12:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Support instrumenting Spring Sleuth",
+    "createdAt" : "2018-06-10T21:47:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 379,
+    "title" : "HikariCP: connection.getMetaData().getUserName() fires with each JDBC call",
+    "createdAt" : "2018-06-27T15:58:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Java Agent Causing Jax-RS to error out",
+    "createdAt" : "2018-06-27T18:41:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "New org.datadog.jmxfetch.App process created each time datadog-agent start or restart is run",
+    "createdAt" : "2018-07-23T12:07:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "How can I disable the dd tracer in code?",
+    "createdAt" : "2018-07-26T03:32:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Netty 4.0 integration doesn't seem to work",
+    "createdAt" : "2018-07-27T04:00:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Support for couchbase in java APM",
+    "createdAt" : "2018-07-27T14:02:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Change output from LoggingWriter from INFO to TRACE or DEBUG",
+    "createdAt" : "2018-07-31T02:59:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Jax RS Tracing broken",
+    "createdAt" : "2018-08-02T19:55:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Agent doesn't start with read-only filesystem",
+    "createdAt" : "2018-08-06T07:27:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Scala trace propagation lost over a play 2.5 BodyParser",
+    "createdAt" : "2018-08-08T02:05:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Traces not being emitted for custom instrumentation",
+    "createdAt" : "2018-08-08T03:11:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "JaxRS Client Leaks PendingTraces on Exception",
+    "createdAt" : "2018-08-10T13:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Need support for Spring Boot 2 Reactive Redis Template/Connection",
+    "createdAt" : "2018-08-16T15:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Cannot stop background threads from creating root spans",
+    "createdAt" : "2018-08-21T18:23:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 454,
+    "title" : "Clojure's DynamicClassLoader classes cannot be instrumented",
+    "createdAt" : "2018-08-21T18:33:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Allow option to disable resource.name 404 rewriting",
+    "createdAt" : "2018-08-24T15:27:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 461,
+    "title" : "AWS Client Instrumentation can write sensitive information into `params`.",
+    "createdAt" : "2018-08-27T16:34:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "Enable client side rate sampling (percentage based)",
+    "createdAt" : "2018-09-14T14:23:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "Can we override traceId with custom uniqueId which we currently have?",
+    "createdAt" : "2018-09-19T13:48:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "Failing build on master",
+    "createdAt" : "2018-09-24T18:18:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 514,
+    "title" : "JVM Memory Optimization",
+    "createdAt" : "2018-09-25T13:56:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Errors During Instrumentation (JMS and others)",
+    "createdAt" : "2018-09-26T20:06:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "ability to toggle java tracing",
+    "createdAt" : "2018-10-10T17:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Trace id can't be decoded by agent due to being transmitted as float",
+    "createdAt" : "2018-10-15T22:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "Catch 'Exception' in TracingServerInterceptor for grpc",
+    "createdAt" : "2018-10-26T03:05:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Instrumentation broken with OpenTracing on classpath",
+    "createdAt" : "2018-11-10T22:25:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 585,
+    "title" : "Allow disabling trace on a per-resource basis",
+    "createdAt" : "2018-11-19T04:20:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 602,
+    "title" : "Infinite Loop in datadog.trace.instrumentation.rabbitmq.amqp.TracedDelegatingConsumer",
+    "createdAt" : "2018-11-28T16:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 603,
+    "title" : "Using jmsTemplate, not seeing trace",
+    "createdAt" : "2018-11-28T16:09:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 605,
+    "title" : "Custom instrumentation?",
+    "createdAt" : "2018-11-28T18:00:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 606,
+    "title" : "Unique database servers per database host on map",
+    "createdAt" : "2018-11-28T23:03:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 614,
+    "title" : "Spring WebClient tracing issue",
+    "createdAt" : "2018-12-04T15:16:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 618,
+    "title" : "starting datadog java agent with wildfly (12) : java.lang.IllegalArgumentException",
+    "createdAt" : "2018-12-05T19:04:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 633,
+    "title" : "JBDC CallableStatement missing statement string",
+    "createdAt" : "2018-12-21T14:05:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 637,
+    "title" : "AWS SDK v2 Support?",
+    "createdAt" : "2018-12-27T19:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Could not initialize class java.util.logging.LogManager",
+    "createdAt" : "2019-01-08T14:23:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 652,
+    "title" : "Propegating current span across thread boundaries in async application",
+    "createdAt" : "2019-01-09T16:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 665,
+    "title" : "Support Unix Domain Sockets for JMX metrics reporting",
+    "createdAt" : "2019-01-23T23:17:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 677,
+    "title" : "JVM Crash while starting",
+    "createdAt" : "2019-01-28T19:06:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 680,
+    "title" : "Why there is no trace.kafka.produce.* metrics?",
+    "createdAt" : "2019-01-30T16:23:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 685,
+    "title" : "JVM metrics not starting when using resin container",
+    "createdAt" : "2019-01-31T18:27:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 693,
+    "title" : "Logging confusion",
+    "createdAt" : "2019-02-04T23:41:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "HystrixCommandGroupKey missing from Hystrix Command Instrumentation",
+    "createdAt" : "2019-02-13T10:24:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 708,
+    "title" : "Hystrix Instrumented needs to register as a Service to allow creation of Monitors",
+    "createdAt" : "2019-02-13T10:44:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 709,
+    "title" : "Kafka consumer client does not inherit service name",
+    "createdAt" : "2019-02-13T20:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 711,
+    "title" : "Add support for custom implementations of datadog.trace.common.writer.Writer",
+    "createdAt" : "2019-02-14T19:31:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 713,
+    "title" : "Dropping trace reason: invalid span",
+    "createdAt" : "2019-02-15T11:09:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 716,
+    "title" : "Compatibility issue with Guava 27+",
+    "createdAt" : "2019-02-19T01:46:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 717,
+    "title" : "Add Support for Custom Propagation Headers",
+    "createdAt" : "2019-02-19T17:19:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 738,
+    "title" : "I have ReportGeneration Service which has access to java swing and fonts specific classes, after adding Datadog Agent through jvm, facing below issue",
+    "createdAt" : "2019-02-27T10:51:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 739,
+    "title" : "How to build dd-java-agent with logging enabled?",
+    "createdAt" : "2019-02-27T17:42:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 740,
+    "title" : "startManual's fate",
+    "createdAt" : "2019-02-28T04:53:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "ClassNotFoundException with Hibernate instrumentation in Datadog APM Agent v0.25.0",
+    "createdAt" : "2019-03-19T18:42:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 774,
+    "title" : "Twilio SDK Support",
+    "createdAt" : "2019-03-20T21:48:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 779,
+    "title" : "Regression in 0.26.0",
+    "createdAt" : "2019-03-26T10:55:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 780,
+    "title" : "ClassNotFoundException with HttpURLConnection instrumentation in Datadog APM Agent v0.26.0",
+    "createdAt" : "2019-03-26T13:50:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 793,
+    "title" : "Disable logging",
+    "createdAt" : "2019-04-04T11:45:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 800,
+    "title" : "http.client instrumentation is creating every time new trace without check the presence of headers",
+    "createdAt" : "2019-04-13T12:26:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 801,
+    "title" : "Spring Integration is not instrumented at all",
+    "createdAt" : "2019-04-13T12:28:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 802,
+    "title" : "Build is not working",
+    "createdAt" : "2019-04-13T12:32:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 806,
+    "title" : "Add ability to customize JMXFetch initialization",
+    "createdAt" : "2019-04-18T18:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "kafka-clients instrumentation doesn't work for all consumers",
+    "createdAt" : "2019-04-20T04:34:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 810,
+    "title" : "feature request: Java 12 support ",
+    "createdAt" : "2019-04-25T14:42:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 813,
+    "title" : "Instrumenting javax.servlet.http.HttpServlet emits stack map frame.",
+    "createdAt" : "2019-04-27T19:43:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 820,
+    "title" : "How do I add my own ScopeManager with dd-trace-ot 0.27.0?",
+    "createdAt" : "2019-05-06T16:35:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 826,
+    "title" : "Link to documentation broken",
+    "createdAt" : "2019-05-10T05:38:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 834,
+    "title" : "DDTracer.inject fails on datadog.opentracing.propagation.ExtractedContext",
+    "createdAt" : "2019-05-16T09:33:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 847,
+    "title" : "PendingTraces leak to old gen space",
+    "createdAt" : "2019-05-20T22:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "Upgrade OpenTracing dependencies",
+    "createdAt" : "2019-05-21T10:23:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 850,
+    "title" : "Support instrument for CompletableFuture",
+    "createdAt" : "2019-05-22T03:55:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 851,
+    "title" : "OpenTracing document",
+    "createdAt" : "2019-05-22T04:34:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 852,
+    "title" : "ContinuableScope with javaagent",
+    "createdAt" : "2019-05-22T09:34:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 853,
+    "title" : "JVM METRIX not showing on dashboard",
+    "createdAt" : "2019-05-23T20:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 858,
+    "title" : "Rabbitmq Integration does not properly report parent service for consumer threads",
+    "createdAt" : "2019-05-24T20:24:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 887,
+    "title" : "Add Custom Span Metadata",
+    "createdAt" : "2019-06-15T22:01:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 892,
+    "title" : "Lagom (Akka HTTP) Distributed Tracing Support",
+    "createdAt" : "2019-06-19T17:09:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 893,
+    "title" : "Finagle/Netty creating separate traces",
+    "createdAt" : "2019-06-19T23:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 896,
+    "title" : "Scala 2.13 support for Akka-http",
+    "createdAt" : "2019-06-21T15:17:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 903,
+    "title" : "Question. Starting app(spring boot) fails with last version dd-java-agent.jar",
+    "createdAt" : "2019-07-01T12:40:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 918,
+    "title" : "okhttp3 error on start",
+    "createdAt" : "2019-07-16T02:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 926,
+    "title" : "Play Integration doesn't capture all spans in request",
+    "createdAt" : "2019-07-22T02:00:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 929,
+    "title" : "0.31.0 release?",
+    "createdAt" : "2019-07-25T14:46:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 931,
+    "title" : "Kotlin coroutines support",
+    "createdAt" : "2019-07-26T10:10:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 933,
+    "title" : "[feature-request] Auto-instrumentation of Queue listeners",
+    "createdAt" : "2019-07-29T18:09:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 938,
+    "title" : "Every new run creates dozens of .jar in /tmp",
+    "createdAt" : "2019-08-06T10:42:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 943,
+    "title" : "Build failed",
+    "createdAt" : "2019-08-08T06:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 944,
+    "title" : "Kafka Header Still Added To Older Clients using Hystrix",
+    "createdAt" : "2019-08-08T17:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 945,
+    "title" : "Ability to configure hostname at runtime",
+    "createdAt" : "2019-08-09T15:55:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 946,
+    "title" : "OpenTracing API 0.33 support / intent",
+    "createdAt" : "2019-08-11T23:03:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 950,
+    "title" : "Jaeger surport?",
+    "createdAt" : "2019-08-14T07:26:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 954,
+    "title" : "DDTracer builder pattern / problem with propagation config loading",
+    "createdAt" : "2019-08-16T09:40:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 962,
+    "title" : "JVM Metrics not show for applications run on Fargate using Play Framework 2.7 ",
+    "createdAt" : "2019-08-26T06:08:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 965,
+    "title" : "Couchbase integration dropping trace",
+    "createdAt" : "2019-08-26T18:21:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 967,
+    "title" : "akka-http-server integration not working with 10.1.7",
+    "createdAt" : "2019-08-29T10:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 977,
+    "title" : "\"Protocol wrong type for socket\" error using UDS",
+    "createdAt" : "2019-09-04T19:57:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 978,
+    "title" : "Annotations not working",
+    "createdAt" : "2019-09-05T06:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 981,
+    "title" : "Grpc server interceptor error taging differs from client behavior",
+    "createdAt" : "2019-09-06T17:20:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 982,
+    "title" : "[0.32.0] Getting Provider com.fasterxml.jackson.module.paranamer.ParanamerModule not found",
+    "createdAt" : "2019-09-06T17:52:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 991,
+    "title" : "Agent spawns non-daemon threads preventing JVM exit when returning from `main`",
+    "createdAt" : "2019-09-13T15:34:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1004,
+    "title" : "Locally build caused Missing class",
+    "createdAt" : "2019-09-19T01:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1006,
+    "title" : "SQL Query is not captured when using scalikejdbc library in play framework",
+    "createdAt" : "2019-09-20T03:00:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1012,
+    "title" : "Over consumption of Heap memory after v0.32 (v.033 also)",
+    "createdAt" : "2019-09-24T09:54:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1018,
+    "title" : "Bug in Sampler code",
+    "createdAt" : "2019-10-02T00:28:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1036,
+    "title" : "The first baggage item cannot be added in the second service",
+    "createdAt" : "2019-10-09T16:53:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1043,
+    "title" : "Using @Trace for a separate service",
+    "createdAt" : "2019-10-14T14:51:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1046,
+    "title" : "How to skip trace for particular endpoint with java-agent",
+    "createdAt" : "2019-10-17T12:01:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1057,
+    "title" : "Add Quartz Instrumentation",
+    "createdAt" : "2019-10-24T16:37:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1058,
+    "title" : "Allow wildcard method instrumentation",
+    "createdAt" : "2019-10-24T16:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1087,
+    "title" : "NoSuchMethodError: isHealthMetricsEnabled",
+    "createdAt" : "2019-11-08T01:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1100,
+    "title" : "No APM traces logged on canceled requests in Reactor",
+    "createdAt" : "2019-11-17T12:29:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1105,
+    "title" : "Support instrumenting bindAndHandle for akka-http-server",
+    "createdAt" : "2019-11-19T11:13:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "Agent log output in JSON?",
+    "createdAt" : "2019-11-22T05:03:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1110,
+    "title" : "Add instrumentation for Rediscala library",
+    "createdAt" : "2019-11-22T16:26:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1114,
+    "title" : "cannot instrument redis 3.0+ ",
+    "createdAt" : "2019-11-27T10:27:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1116,
+    "title" : "URLAsResourceName decorator does not preserve API versions that follow format of `v1beta`",
+    "createdAt" : "2019-11-27T19:45:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1120,
+    "title" : "grpc requests containing \"grpc-trace-bin\" header breaks instrumented grpc servers",
+    "createdAt" : "2019-11-27T21:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1121,
+    "title" : "inconsistency between impl and document about DD_PROPAGATION_STYLE_INJECT",
+    "createdAt" : "2019-11-28T08:39:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1123,
+    "title" : "Kotlin awaiting not traced correctly.",
+    "createdAt" : "2019-12-02T08:21:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1124,
+    "title" : "Exclude function/class from tracing",
+    "createdAt" : "2019-12-03T10:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1137,
+    "title" : "Allow gRPC error code config similar to HTTP",
+    "createdAt" : "2019-12-12T22:43:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1143,
+    "title" : "Add the posibility to customize default decorators",
+    "createdAt" : "2019-12-16T18:27:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1145,
+    "title" : "Exception while Shutting down service on dd-java-agent",
+    "createdAt" : "2019-12-17T15:35:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1166,
+    "title" : "4xx exceptions are being reported as 500",
+    "createdAt" : "2020-01-13T13:51:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1178,
+    "title" : "Lettuce integration dropping trace",
+    "createdAt" : "2020-01-15T19:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1180,
+    "title" : "Is it possible to disable capturing stacktrace?",
+    "createdAt" : "2020-01-16T03:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1183,
+    "title" : "Unable to fetch dd-java-agent.jar LATEST",
+    "createdAt" : "2020-01-21T11:43:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1191,
+    "title" : "StackOverFlowError on regexp in TraceConfigInstrumentation",
+    "createdAt" : "2020-01-27T09:22:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1194,
+    "title" : "Add Keycloak Instrumentation",
+    "createdAt" : "2020-01-29T13:48:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1195,
+    "title" : "Issues since upgrading to 0.41.0",
+    "createdAt" : "2020-01-29T21:43:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1205,
+    "title" : "NPE when using @Trace with the current master",
+    "createdAt" : "2020-02-07T10:41:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1210,
+    "title" : "NPE on Elasticsearch TransportActionListener ",
+    "createdAt" : "2020-02-11T17:39:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1214,
+    "title" : "Getting correlation IDs from logback-access with Tomcat 7",
+    "createdAt" : "2020-02-11T21:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1222,
+    "title" : " reference manual of \"dd.trace.global.tags\" is wrong ",
+    "createdAt" : "2020-02-14T09:21:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1230,
+    "title" : "How to manually invoke span.setResourceName()",
+    "createdAt" : "2020-02-19T19:46:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1252,
+    "title" : "When upgrading to v.0.41.0 AsyncHandlerWrapper (playws2) throws Exception",
+    "createdAt" : "2020-02-25T08:15:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1253,
+    "title" : "Distributed tracing is not working on batch consumption of kafka messages using Spring cloud stream",
+    "createdAt" : "2020-02-25T11:41:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1271,
+    "title" : "Akka Http2 dsl",
+    "createdAt" : "2020-02-28T17:05:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1272,
+    "title" : "Datadog-agent failing with fleix framework",
+    "createdAt" : "2020-02-28T17:48:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1276,
+    "title" : "MySQL and Custom Tracing lost after update to version 0.44.0",
+    "createdAt" : "2020-03-01T19:23:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1294,
+    "title" : "\"Sharing is only supported for boot loader classes because bootstrap classpath has been appended\" when running with java 13",
+    "createdAt" : "2020-03-05T15:01:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1296,
+    "title" : "Couchbase N1QL Query Support",
+    "createdAt" : "2020-03-05T18:10:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1306,
+    "title" : "Stack Overflow Triggered by Data Dog Tracing Client in Java 11 Spring Webflux Application",
+    "createdAt" : "2020-03-10T15:36:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1309,
+    "title" : "servlet2 instrumentation is reusing traceId",
+    "createdAt" : "2020-03-11T17:20:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1321,
+    "title" : "Add support for instrumentation of ElasticSearch client(s) 7.x",
+    "createdAt" : "2020-03-16T11:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1324,
+    "title" : "Support jersey client 2.30",
+    "createdAt" : "2020-03-18T08:17:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1347,
+    "title" : "no spans from hibernate",
+    "createdAt" : "2020-04-02T17:22:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1352,
+    "title" : "Error while sending X of X+2 traces to the DD agent",
+    "createdAt" : "2020-04-05T15:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1373,
+    "title" : "Undertow 2.0.21 issue",
+    "createdAt" : "2020-04-14T16:59:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1376,
+    "title" : "DDAgentWriter blocking JVM shutdown",
+    "createdAt" : "2020-04-16T17:39:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1401,
+    "title" : "What exactly does the @Trace annotation do?",
+    "createdAt" : "2020-04-24T13:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1452,
+    "title" : "traceid in the logs ",
+    "createdAt" : "2020-05-13T03:23:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1463,
+    "title" : "Netty 4.1 Instrumentation does not mark 400 responses with an error tag",
+    "createdAt" : "2020-05-15T11:39:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1477,
+    "title" : "apm support for java 11 http client ",
+    "createdAt" : "2020-05-20T14:18:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1478,
+    "title" : "apm support for java 11 http client",
+    "createdAt" : "2020-05-20T14:20:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1510,
+    "title" : "Support Spring @Async annotation tracing",
+    "createdAt" : "2020-05-29T13:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1531,
+    "title" : "Akka HTTP client request traces mixed with server request traces",
+    "createdAt" : "2020-06-03T21:26:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1544,
+    "title" : "Support for Play Framework 2.8.x",
+    "createdAt" : "2020-06-04T16:55:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1557,
+    "title" : "Ability to turn trace and metrics reporting on/off at runtime",
+    "createdAt" : "2020-06-08T14:30:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1563,
+    "title" : "play-ws websocket support",
+    "createdAt" : "2020-06-09T14:40:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1566,
+    "title" : "java.lang.NoClassDefFoundError when adding a context reference",
+    "createdAt" : "2020-06-09T22:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1597,
+    "title" : "IDE intergration to allow click from trace to code",
+    "createdAt" : "2020-06-17T09:25:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1610,
+    "title" : "Datadog : Unable to detect the kubelet URL automatically : datadog_checks.base.errors.CheckException",
+    "createdAt" : "2020-06-22T04:47:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1621,
+    "title" : "Kafka instrumentation breaks log compaction",
+    "createdAt" : "2020-06-24T06:01:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1631,
+    "title" : "NullPointerException with Kafka-Streams",
+    "createdAt" : "2020-06-25T16:19:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1633,
+    "title" : "Kafka consumer not using the same trace id for other trace",
+    "createdAt" : "2020-06-26T10:23:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1634,
+    "title" : "Datadog agent is not allowing proxool library to establish connection",
+    "createdAt" : "2020-06-26T12:51:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1635,
+    "title" : "Add option to disable url cleanup for url parts containing digits",
+    "createdAt" : "2020-06-26T13:26:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1647,
+    "title" : "UnsupportedOperationException from MDC",
+    "createdAt" : "2020-07-01T16:18:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1651,
+    "title" : "Different versions of same library used",
+    "createdAt" : "2020-07-02T08:57:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1654,
+    "title" : "ClassCastException",
+    "createdAt" : "2020-07-03T05:54:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1672,
+    "title" : "java.lang.NoClassDefFoundError jdk/jfr/Event on Java 8 ",
+    "createdAt" : "2020-07-13T05:56:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1677,
+    "title" : "File descriptors of datadog temp jars are not released",
+    "createdAt" : "2020-07-14T06:46:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1692,
+    "title" : "NoSuchMethodError",
+    "createdAt" : "2020-07-20T14:42:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1696,
+    "title" : "DefaultLogHandler should follow OpenTracing spec",
+    "createdAt" : "2020-07-20T20:03:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1742,
+    "title" : "StackOverflowError with Datadog agent and Spring Webflux project",
+    "createdAt" : "2020-08-04T13:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1753,
+    "title" : "ConcurrentModificationException in MDC after upgrading to 0.59",
+    "createdAt" : "2020-08-05T16:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1815,
+    "title" : "Create child span when parent span is from another service.",
+    "createdAt" : "2020-08-31T15:33:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1818,
+    "title" : "How to set the Trace annotation value ,like resourceName , during runtime",
+    "createdAt" : "2020-09-01T09:10:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1823,
+    "title" : "Support distributed trace propagation across SQS",
+    "createdAt" : "2020-09-02T15:49:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1860,
+    "title" : "UnsupportedOperationException from MDC",
+    "createdAt" : "2020-09-11T17:44:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1874,
+    "title" : "NPE After Upgrading from 0.61 to 0.62",
+    "createdAt" : "2020-09-16T14:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1901,
+    "title" : "Datastax Cassandra Driver 4.x",
+    "createdAt" : "2020-09-23T06:32:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1925,
+    "title" : "The current Twilio instrumentation doesn't support 8.0.0",
+    "createdAt" : "2020-09-29T09:11:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1934,
+    "title" : "http4s integration",
+    "createdAt" : "2020-09-30T14:30:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1946,
+    "title" : "Add MDC instrumentation for Jboss Logging",
+    "createdAt" : "2020-10-04T14:45:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1983,
+    "title" : "Log Tag Injection causes MDC swapping",
+    "createdAt" : "2020-10-13T21:11:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1999,
+    "title" : "WARN datadog.trace.bootstrap.config.provider.ConfigConverter - Invalid config for tags",
+    "createdAt" : "2020-10-16T16:53:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2000,
+    "title" : "Ignore resources not working ",
+    "createdAt" : "2020-10-16T18:11:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2012,
+    "title" : "Akka-http bindAndHandleAsync is deprecated",
+    "createdAt" : "2020-10-20T13:29:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2062,
+    "title" : "WARNING: Illegal reflective access by datadog.trace.instrumentation.java.concurrent.NewTaskFor",
+    "createdAt" : "2020-11-09T15:39:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2064,
+    "title" : "Apache Camel support",
+    "createdAt" : "2020-11-11T09:26:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2066,
+    "title" : "Automatically Inject Trace and Span IDs into MDC by dd-trace-ot",
+    "createdAt" : "2020-11-12T03:39:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2073,
+    "title" : "Upgrading Guava to resolve CVE-2018-10237",
+    "createdAt" : "2020-11-13T11:37:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2076,
+    "title" : "PendingTrace.write - IllegalArgumentException: Illegal Capacity: -1",
+    "createdAt" : "2020-11-15T23:22:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2090,
+    "title" : "OSGi components not getting started when the dd-java-agent-0.67.0.jar added",
+    "createdAt" : "2020-11-18T05:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2117,
+    "title" : "dd-java-agent:0.68.0 with spring-boot 2.4.0 doesn't send 'netty.request' traces to datadog apm",
+    "createdAt" : "2020-11-24T22:36:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2157,
+    "title" : "Add support for Akka HTTP flow-based (super-pool) client requests",
+    "createdAt" : "2020-12-03T13:34:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2164,
+    "title" : "Customise service name for elasticsearch?",
+    "createdAt" : "2020-12-04T12:38:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2168,
+    "title" : "grpc-java 1.33.0 breaks GrpcServerBuilderInstrumentation and GrpcClientBuilderInstrumentation",
+    "createdAt" : "2020-12-07T03:29:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2228,
+    "title" : "com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Direct self-reference leading to cycle",
+    "createdAt" : "2020-12-18T22:38:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2236,
+    "title" : "Can trace http request / response?",
+    "createdAt" : "2020-12-23T06:27:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2249,
+    "title" : "Add `dd.trace.db.client.split-by-instance` support for Redis",
+    "createdAt" : "2021-01-05T14:01:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2258,
+    "title" : "resource name not properly set on Quarkus",
+    "createdAt" : "2021-01-07T16:28:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2296,
+    "title" : "Need both ChildOf and FollowsFrom references for a span",
+    "createdAt" : "2021-01-14T07:14:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2299,
+    "title" : "Stopped seeing traces from Jetty after v0.67.0",
+    "createdAt" : "2021-01-14T20:10:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2309,
+    "title" : "0.71.0 Breaks Redhat SSO 7.2.3 Classpath",
+    "createdAt" : "2021-01-19T13:59:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2317,
+    "title" : "Atlassian Confluence fails to start when using trace-agent 0.71.0",
+    "createdAt" : "2021-01-21T00:30:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2328,
+    "title" : "gRPC server tracing starts after server interceptors",
+    "createdAt" : "2021-01-22T21:55:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2339,
+    "title" : "No traces for mysql 8+",
+    "createdAt" : "2021-01-27T23:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2353,
+    "title" : "Kafka consumer / producer spans get attributed to a synthetic 'kafka' service, rather than the actual host service",
+    "createdAt" : "2021-01-29T22:48:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2363,
+    "title" : "Aerospike traces that are \"Not found\" do not appear as traces",
+    "createdAt" : "2021-02-01T20:03:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2366,
+    "title" : "High memory usage in ExecutorInstrumentationUtils",
+    "createdAt" : "2021-02-02T15:39:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2383,
+    "title" : "Limit the granularity of a Trace",
+    "createdAt" : "2021-02-05T15:53:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2399,
+    "title" : "WildFly frequently fail to start when using dd-java-agent",
+    "createdAt" : "2021-02-10T17:46:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2403,
+    "title" : "Span trees do not maintain correct relationships in ratpack",
+    "createdAt" : "2021-02-12T00:35:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2411,
+    "title" : "Wildcard to accept all classes in package ",
+    "createdAt" : "2021-02-15T17:22:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2412,
+    "title" : "Add trace for Jetty ProxyServlet proxied resources",
+    "createdAt" : "2021-02-15T18:36:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2414,
+    "title" : "Trace JAX-WS calls",
+    "createdAt" : "2021-02-15T20:18:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2421,
+    "title" : "Opentracing 0.33.0 integration",
+    "createdAt" : "2021-02-19T05:32:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2431,
+    "title" : "DD trace integration interferes with AWS metrics publisher for Java AWS SDK v2",
+    "createdAt" : "2021-02-24T04:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2434,
+    "title" : "[Question] DD headers extraction & injection",
+    "createdAt" : "2021-02-25T06:24:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2450,
+    "title" : "spring-data: missing spans for custom repositories using @Repository",
+    "createdAt" : "2021-02-28T13:59:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2456,
+    "title" : "./gradlew clean assemble |  Task :dd-java-agent:agent-jmxfetch:submodulesUpdate FAILED",
+    "createdAt" : "2021-03-02T11:26:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2463,
+    "title" : "SegFault when running dd-trace-java on GraalVM (native)",
+    "createdAt" : "2021-03-04T00:19:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2467,
+    "title" : "Exclude specific grpc-client call from being instrumented ",
+    "createdAt" : "2021-03-05T16:15:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2607,
+    "title" : "Profiling is not enabled on J9 JVM",
+    "createdAt" : "2021-03-07T20:23:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2472,
+    "title" : "Labels 404s as a separate resource",
+    "createdAt" : "2021-03-08T17:47:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2481,
+    "title" : "JVM Monitoring/JMX w/o the java agent",
+    "createdAt" : "2021-03-11T04:59:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2499,
+    "title" : "Deadlock on dd-trace-processor and dd-task-scheduler",
+    "createdAt" : "2021-03-16T19:16:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2502,
+    "title" : "Missing traces from akka connection-pool apis",
+    "createdAt" : "2021-03-17T01:25:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2503,
+    "title" : "Disable automatic kafka consumer/producer instrumentation when using java-agent",
+    "createdAt" : "2021-03-17T07:37:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2504,
+    "title" : "how to sperate dd-trace-java jmxfetch log from host java program?",
+    "createdAt" : "2021-03-17T09:12:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2552,
+    "title" : "`NettyPromiseInstrumentation` prevents listeners from being removed from `DefaultPromise`",
+    "createdAt" : "2021-03-27T04:22:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2557,
+    "title" : "dd-trace-api 0.76.1 is not released to maven repos",
+    "createdAt" : "2021-03-29T15:06:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2606,
+    "title" : "Twilio Instrumentation for Paged request",
+    "createdAt" : "2021-04-14T22:38:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2608,
+    "title" : "DDAgentApi keep throwing SocketException: Connection reset?",
+    "createdAt" : "2021-04-15T04:35:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2613,
+    "title" : "AWS Lambda Traces are metrics are sometimes printed in a single line",
+    "createdAt" : "2021-04-15T18:25:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2624,
+    "title" : "Vertx asynchronous io.vertx.core.Future trace with @Trace annotation",
+    "createdAt" : "2021-04-19T09:04:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2653,
+    "title" : "Empty dd.env and dd.version in logs for 0.78.3",
+    "createdAt" : "2021-04-23T06:23:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2657,
+    "title" : "Latency increases experienced with releases 0.76.0 and greater",
+    "createdAt" : "2021-04-23T20:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2674,
+    "title" : "Also - here are the log messages from a sample request.  You can see that not only do our unique IDs change, the DD trace and span IDs get swapped out as well:",
+    "createdAt" : "2021-04-30T07:32:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2676,
+    "title" : "Intermittent *** java.lang.instrument ASSERTION FAILED ***",
+    "createdAt" : "2021-04-30T10:46:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2691,
+    "title" : "Rabbitmq spring auto instrumentation is missing child relationship in subsequent spans",
+    "createdAt" : "2021-05-05T18:43:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2703,
+    "title" : "Reported requests per second just halved after datadog update",
+    "createdAt" : "2021-05-07T12:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2749,
+    "title" : "Instrumentation of a class with the static field fails",
+    "createdAt" : "2021-05-21T15:41:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2767,
+    "title" : "Opentracing initializtion failed at runitime",
+    "createdAt" : "2021-05-26T13:45:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2809,
+    "title" : "Trace HTTP client split duplicating services",
+    "createdAt" : "2021-06-07T18:35:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2831,
+    "title" : "x-b3-headers are not sent as tag to datadog apm",
+    "createdAt" : "2021-06-16T18:59:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2839,
+    "title" : "Adding the request body to the traces ",
+    "createdAt" : "2021-06-18T12:43:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2846,
+    "title" : "OpenTracing  - FollowsFrom support",
+    "createdAt" : "2021-06-21T19:10:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2909,
+    "title" : "Trace flamegraph with custom spans is messy",
+    "createdAt" : "2021-07-12T10:36:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2912,
+    "title" : "Direct registration of DDTracer without agent fails",
+    "createdAt" : "2021-07-12T22:26:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2914,
+    "title" : "DDSpan addThrowable can result in NPE",
+    "createdAt" : "2021-07-13T02:12:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2934,
+    "title" : "Missing Moshi dependency?",
+    "createdAt" : "2021-07-15T14:40:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2936,
+    "title" : "Insecure Hash Algorithm",
+    "createdAt" : "2021-07-15T19:51:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2946,
+    "title" : "Noop CI Info throws NPE when finding git directory",
+    "createdAt" : "2021-07-21T04:30:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2949,
+    "title" : "dd-trace-ot doesn't depend on dogstatsd from 0.83 throws ClassNotFound",
+    "createdAt" : "2021-07-21T21:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2952,
+    "title" : "DD Trace Java sometimes prints two metrics as a single message.",
+    "createdAt" : "2021-07-22T22:22:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2984,
+    "title" : "Add abstract socket support ",
+    "createdAt" : "2021-08-03T21:25:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2985,
+    "title" : "datadog tracing log span using spring-reactor",
+    "createdAt" : "2021-08-04T09:51:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2986,
+    "title" : "Illegal reflective access by datadog.trace.instrumentation.java.concurrent.NewTaskFor to method java.util.concurrent.AbstractExecutorService.newTaskFor(java.lang.Runnable,java.lang.Object)",
+    "createdAt" : "2021-08-04T14:27:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2992,
+    "title" : "dd.service.mapping concatenating next -D param in label",
+    "createdAt" : "2021-08-06T17:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2997,
+    "title" : "JVM Crash when dd.profiling.enabled=true",
+    "createdAt" : "2021-08-10T00:07:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2999,
+    "title" : "delete",
+    "createdAt" : "2021-08-10T17:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3003,
+    "title" : "disable tag interceptors by default",
+    "createdAt" : "2021-08-13T12:16:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3005,
+    "title" : "Clarify which JVM supported with profiling",
+    "createdAt" : "2021-08-16T11:02:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3050,
+    "title" : "FollowsFrom reference support",
+    "createdAt" : "2021-09-02T07:40:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3051,
+    "title" : "Spring boot traces not available",
+    "createdAt" : "2021-09-02T16:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3056,
+    "title" : "Enhanced configuration of request path normalizer",
+    "createdAt" : "2021-09-07T14:12:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3063,
+    "title" : "Stream Hikaricp Pool jmx metrics to Datadog",
+    "createdAt" : "2021-09-10T15:29:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3067,
+    "title" : "Clarify how to have a parent span which duration is equal to the entire trace of a Reactor chain",
+    "createdAt" : "2021-09-12T22:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3076,
+    "title" : "JMS Event processing duration gets enormously large after thrown unchecked exception",
+    "createdAt" : "2021-09-17T15:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3079,
+    "title" : "Class cast exception with the agent",
+    "createdAt" : "2021-09-17T21:30:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3084,
+    "title" : "Jetty upgrade 9 to 11, and Javax to Jakarta, no traces found",
+    "createdAt" : "2021-09-21T20:55:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3086,
+    "title" : "Opentracing Redisson implementation reports under main service, instead of creating a redis service",
+    "createdAt" : "2021-09-22T15:28:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3107,
+    "title" : "Support for Akka-gRPC server",
+    "createdAt" : "2021-10-01T14:42:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3111,
+    "title" : "Tests run in a Gitlab Merged Results Pipeline don't get tagged with git.branch",
+    "createdAt" : "2021-10-04T22:48:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3120,
+    "title" : "Ignore GPRC Health Checks",
+    "createdAt" : "2021-10-06T19:14:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3138,
+    "title" : "datadog tracer cause high cpu issue.",
+    "createdAt" : "2021-10-13T03:15:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3143,
+    "title" : "Add support for Vert.x 4.x",
+    "createdAt" : "2021-10-13T14:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3158,
+    "title" : "JAX-RS (jersey) Client spans are not the parent of protocol client span (HttpUrlConnection)",
+    "createdAt" : "2021-10-21T14:49:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3164,
+    "title" : "No database service created if the database service name is matching the web service name",
+    "createdAt" : "2021-10-26T09:02:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3165,
+    "title" : "Adding additional jdbc query parameters to traces.",
+    "createdAt" : "2021-10-27T07:00:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3171,
+    "title" : "How to run DD trace on mule2",
+    "createdAt" : "2021-10-28T17:53:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3197,
+    "title" : "NoClassDefFoundError: sun/misc/Unsafe",
+    "createdAt" : "2021-11-11T08:06:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3207,
+    "title" : "Question : Is there a way to create a Span from Spancontext ?",
+    "createdAt" : "2021-11-17T13:30:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3248,
+    "title" : "Deprecated okhttp version",
+    "createdAt" : "2021-12-08T21:08:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3255,
+    "title" : "Is dd-trace-java affected by the Log4j RCE exploit?",
+    "createdAt" : "2021-12-10T18:03:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3257,
+    "title" : "Resource names are not calculated correctly for JAX-RS with resources and sub resources",
+    "createdAt" : "2021-12-11T00:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3260,
+    "title" : "Log4Shell - investigate",
+    "createdAt" : "2021-12-13T08:48:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3265,
+    "title" : "Is this package impacted by Log4j2 issue?",
+    "createdAt" : "2021-12-14T14:10:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3273,
+    "title" : "PreconditionViolationException: Launcher session has already been closed",
+    "createdAt" : "2021-12-15T23:39:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3275,
+    "title" : "Question: Using OpenTelemetry for custom instrumentation",
+    "createdAt" : "2021-12-16T14:08:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3278,
+    "title" : "log4j1 instrumentation injects incorrect value for dd.span_id",
+    "createdAt" : "2021-12-16T23:04:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3293,
+    "title" : "Opentracing dependencies upgrade to 0.33.0",
+    "createdAt" : "2021-12-26T23:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3302,
+    "title" : "Method 'findConfigurationFile' returns 'no config file present' if file exists",
+    "createdAt" : "2022-01-05T08:24:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3304,
+    "title" : "statsd client not sending metrics if k8s datadog agent restarts",
+    "createdAt" : "2022-01-05T15:50:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3323,
+    "title" : "trace agent not working for Hibernate Reactive",
+    "createdAt" : "2022-01-18T21:49:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3332,
+    "title" : "Trace all methods declared in an interface (not all methods in implementations)",
+    "createdAt" : "2022-01-24T12:37:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3339,
+    "title" : "Add support for Couchbase SDK 3.2.4+",
+    "createdAt" : "2022-01-25T21:43:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3343,
+    "title" : "Question: Duration of the trace is finishing in first service - Service1 - kinesis - Service2",
+    "createdAt" : "2022-01-27T11:16:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3349,
+    "title" : "msgp: attempted to decode type \"str\" with method for \"float64\"",
+    "createdAt" : "2022-01-28T16:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3350,
+    "title" : "Add support for Redisson 3.10+",
+    "createdAt" : "2022-01-30T03:54:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3360,
+    "title" : "Add support for Apache HttpClient 5",
+    "createdAt" : "2022-02-03T06:00:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3361,
+    "title" : "MongoDB tracing doesn't work if the client has been configured with a CommandListener",
+    "createdAt" : "2022-02-03T09:00:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3366,
+    "title" : "Header injection not working for spring webclient ",
+    "createdAt" : "2022-02-06T22:35:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3379,
+    "title" : "Add support for play-redis",
+    "createdAt" : "2022-02-10T14:40:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3389,
+    "title" : "HTTP request spans with error response codes not marked as error.",
+    "createdAt" : "2022-02-11T17:26:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3397,
+    "title" : "Kafka consumer doesn't use context from ConsumerRecord Headers",
+    "createdAt" : "2022-02-16T19:53:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3398,
+    "title" : "IllegalAccessError thrown from `AsyncAfterTransmissionInterceptorCallingResponseHandler`",
+    "createdAt" : "2022-02-16T21:18:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3400,
+    "title" : "Using akka streams to parallelize requests loses linked traces",
+    "createdAt" : "2022-02-18T00:07:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3408,
+    "title" : "Can we add Datadog span/traces to the messages/events that are pushed in the queue (RabbitMq or Kafka) ? I would like to add datadog trace to the message and end that span on consumer side. ",
+    "createdAt" : "2022-02-23T16:51:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3411,
+    "title" : "Support distributed trace propagation across SNS/SQS fanout",
+    "createdAt" : "2022-02-24T11:38:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3435,
+    "title" : "Missing traces in Datadog APM with dd-java-agent:0.94.1 and spring-boot 2.6.3",
+    "createdAt" : "2022-03-10T11:56:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3442,
+    "title" : "Redisson trace reports all operations as EVAL",
+    "createdAt" : "2022-03-12T12:52:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3443,
+    "title" : "Missing tracing for AWS MySQL driver",
+    "createdAt" : "2022-03-14T11:33:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3446,
+    "title" : "Inject a list of Spans in a message in a Flink application running on KDA",
+    "createdAt" : "2022-03-15T03:49:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3463,
+    "title" : "Startup debug information misleading with properties file",
+    "createdAt" : "2022-03-24T22:55:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3464,
+    "title" : "Missing jar in Release v0.98.0 breaks https://dtdg.co/latest-java-tracer",
+    "createdAt" : "2022-03-25T16:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3465,
+    "title" : "Release 0.98.0 Missing Java Agent Jar Asset",
+    "createdAt" : "2022-03-25T16:23:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3467,
+    "title" : "Add support for Jedis 4.0+",
+    "createdAt" : "2022-03-28T22:27:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3476,
+    "title" : "Issue with datadog java agent",
+    "createdAt" : "2022-03-30T15:41:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3477,
+    "title" : "dtdg.co down",
+    "createdAt" : "2022-03-31T09:35:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3483,
+    "title" : "Custom span on reactive stack with Reactor: \"Scope depth limit exceeded\" error in case of increasing load",
+    "createdAt" : "2022-04-07T12:54:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3484,
+    "title" : "AppSec: Logs full of warnings \"java.lang.IllegalStateException: Raw URI set already\"",
+    "createdAt" : "2022-04-08T07:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3499,
+    "title" : "Performance degradation with tracing enabled",
+    "createdAt" : "2022-04-13T16:52:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3503,
+    "title" : "Traces not captured for webflux netty.request when request is canceled",
+    "createdAt" : "2022-04-15T22:41:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3504,
+    "title" : "Disable instrumentation for external libraries",
+    "createdAt" : "2022-04-16T07:59:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3522,
+    "title" : "Document how log injection works",
+    "createdAt" : "2022-04-25T14:22:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3542,
+    "title" : "Custom Baggage Header Mapping",
+    "createdAt" : "2022-05-09T16:53:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3543,
+    "title" : "Allow the user to flush the pending traces in case the application is aborting",
+    "createdAt" : "2022-05-10T15:28:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3551,
+    "title" : "undertow_http.request span does not always fully enclose it's child spans",
+    "createdAt" : "2022-05-12T15:02:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3555,
+    "title" : "with istio, trace context is not propagated",
+    "createdAt" : "2022-05-13T17:06:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3561,
+    "title" : "Reactor Java trace and span IDs are 0",
+    "createdAt" : "2022-05-18T12:52:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3562,
+    "title" : "exec ${JAVA_HOME}/bin/java -javaagent:/path/to/dd-java-agent.jar com.test.HelloWorld",
+    "createdAt" : "2022-05-18T17:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3568,
+    "title" : "Out of memory error using dd-java-agent.jar",
+    "createdAt" : "2022-05-24T13:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3574,
+    "title" : "getting traces, not logs",
+    "createdAt" : "2022-05-26T21:26:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3575,
+    "title" : "AppSec could not start because of an unexpected error",
+    "createdAt" : "2022-05-27T04:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3578,
+    "title" : "not able to see in continuous profiler",
+    "createdAt" : "2022-06-01T21:24:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3581,
+    "title" : "ClassCast Exception when datadog instrumentation and Kamon instrumentation both are enabled",
+    "createdAt" : "2022-06-02T21:01:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3592,
+    "title" : "Direct self-reference leading to cycle",
+    "createdAt" : "2022-06-13T20:59:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3596,
+    "title" : "Application crushes after update to 0.102.0 Datadog apm lib",
+    "createdAt" : "2022-06-16T20:51:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3600,
+    "title" : "grpc-java disconnected spans between server and clients",
+    "createdAt" : "2022-06-20T16:17:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3615,
+    "title" : "Incomplete support for the Tag interface",
+    "createdAt" : "2022-06-27T16:27:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3616,
+    "title" : "Core dump when enabling dd-agent and profiling (openj9)",
+    "createdAt" : "2022-06-28T08:29:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3620,
+    "title" : "dd.trace logs appearing in Datadog as errors ",
+    "createdAt" : "2022-06-29T12:22:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3629,
+    "title" : "No AppSec for ARM64?",
+    "createdAt" : "2022-06-30T15:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3643,
+    "title" : "Instrumentation of custom JDBC database driver",
+    "createdAt" : "2022-07-07T13:57:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3648,
+    "title" : "Ignore inbound request via environment variables",
+    "createdAt" : "2022-07-11T14:56:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3664,
+    "title" : "Okhttp critical vulnerability",
+    "createdAt" : "2022-07-18T19:08:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3679,
+    "title" : "Rabbitmq consumer does not generate span, but producer does.",
+    "createdAt" : "2022-07-27T03:36:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3685,
+    "title" : "Can we disable injection of DD tracing headers for some requests?",
+    "createdAt" : "2022-07-29T10:26:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3686,
+    "title" : "Config logging not reporting correct version",
+    "createdAt" : "2022-07-29T21:26:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3697,
+    "title" : "JDBC support tag (dd.host)",
+    "createdAt" : "2022-08-03T07:54:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3699,
+    "title" : "UDS not used by Java client",
+    "createdAt" : "2022-08-04T09:42:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3704,
+    "title" : "High Startup Resources",
+    "createdAt" : "2022-08-08T08:36:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3777,
+    "title" : "Add support for mariadb-java-client 3.x",
+    "createdAt" : "2022-08-31T08:17:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3778,
+    "title" : "Continuously increasing off-heap 'Tracing' memory",
+    "createdAt" : "2022-08-31T10:19:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3787,
+    "title" : "org.yaml_snakeyaml Critical Vulnerability ",
+    "createdAt" : "2022-09-02T07:17:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3805,
+    "title" : "Error after upgrade to 108.1",
+    "createdAt" : "2022-09-06T18:37:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3812,
+    "title" : "Kafka client traces missing when using spliterator",
+    "createdAt" : "2022-09-08T09:18:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3814,
+    "title" : "Java Runtime Metrics is not captured by default",
+    "createdAt" : "2022-09-08T15:02:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3820,
+    "title" : "Crash in OpenJDK 17.0.4",
+    "createdAt" : "2022-09-09T13:42:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3857,
+    "title" : "Build Failed on Intellij IDEA",
+    "createdAt" : "2022-09-20T02:12:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3861,
+    "title" : "Generate X-Ray compliant trace headers",
+    "createdAt" : "2022-09-21T03:54:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3862,
+    "title" : "NettyResteasyAppsecTest resteasy-appsec regularly times out the whole test suite",
+    "createdAt" : "2022-09-21T06:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3864,
+    "title" : "KafkaClientTest(s) in kafka-clients-0.11 fails with wrong partition",
+    "createdAt" : "2022-09-21T07:49:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3865,
+    "title" : "KafkaStreamsTest(s) in kafka-streams-0.11 fails with wrong parent span",
+    "createdAt" : "2022-09-21T07:56:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3867,
+    "title" : "RatpackHttpServerTest fails with wrong resource name",
+    "createdAt" : "2022-09-21T11:05:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3868,
+    "title" : "PlayNettySmokeTest in play-2.4 fails when the HttpTestServer returns a \"Not Found\"",
+    "createdAt" : "2022-09-21T11:24:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3869,
+    "title" : "Disable RmiTest for ServerLegacy_stub",
+    "createdAt" : "2022-09-21T11:30:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3871,
+    "title" : "Disable `:dd-smoke-tests:springboot-openliberty:test`",
+    "createdAt" : "2022-09-21T11:38:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3874,
+    "title" : "Disable `:dd-java-agent:instrumentation:vertx-redis-client-3.9` flaky test",
+    "createdAt" : "2022-09-21T14:50:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3884,
+    "title" : "Disable MongoBaseTest",
+    "createdAt" : "2022-09-23T17:38:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3885,
+    "title" : "Disable \"statement update\" for RemoteJDBCInstrumentationTest",
+    "createdAt" : "2022-09-23T17:58:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3886,
+    "title" : "Disable \"connection error (unopened port)\" for Netty38ClientTest",
+    "createdAt" : "2022-09-23T18:01:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3900,
+    "title" : "OpenTelemetry custom instrumentation in BETA",
+    "createdAt" : "2022-09-27T10:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3912,
+    "title" : "java.io.File.deleteOnExit() throws NoClassDefFoundError with 0.109.0",
+    "createdAt" : "2022-09-28T22:28:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3935,
+    "title" : "Add backend PID tag to spans for Postgres operations",
+    "createdAt" : "2022-09-30T16:27:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3936,
+    "title" : "Add extension point for custom dynamic tags on JDBC spans",
+    "createdAt" : "2022-09-30T18:32:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3944,
+    "title" : "Support for OpenSearch instrumentation",
+    "createdAt" : "2022-10-03T23:01:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3948,
+    "title" : "Disable DebuggerIntegrationTest",
+    "createdAt" : "2022-10-04T08:46:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3979,
+    "title" : "`server.RatpackForkedHttpServerTest.test redirect` is flaky",
+    "createdAt" : "2022-10-06T11:43:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4004,
+    "title" : "`SpringJpaTest.test CRUD` is flaky",
+    "createdAt" : "2022-10-10T15:30:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4030,
+    "title" : "How to attach service type \"web\" in APM and trace view for a specific span",
+    "createdAt" : "2022-10-14T19:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4036,
+    "title" : "parent_id not visible in indexed trace",
+    "createdAt" : "2022-10-17T14:57:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4047,
+    "title" : "Use default service name for Spring RabbitMQ consumer",
+    "createdAt" : "2022-10-18T15:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4050,
+    "title" : "GraphQL Instrumentation - support for additional field span tags",
+    "createdAt" : "2022-10-18T22:32:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4051,
+    "title" : "GraphQL Instrumentation - Support for async data fetchers returning CompletableFuture",
+    "createdAt" : "2022-10-18T22:53:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4053,
+    "title" : "Error spans and log correlation",
+    "createdAt" : "2022-10-19T14:13:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8308,
+    "title" : "Support for GraalVM",
+    "createdAt" : "2022-10-20T18:29:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4070,
+    "title" : "Add option to alias/rename \"servlet.request\" to \"jetty.request\" to transition through breaking change",
+    "createdAt" : "2022-10-21T17:49:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4079,
+    "title" : "APM Traces are not sending from Java Clients",
+    "createdAt" : "2022-10-24T12:26:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4083,
+    "title" : "Datadog agent error to find FFI provider causes an application to crash",
+    "createdAt" : "2022-10-24T16:30:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4098,
+    "title" : "`TaintedMapTest` is flaky ",
+    "createdAt" : "2022-10-26T09:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4099,
+    "title" : "`GoogleHttpClientAsyncTest.basic GET request with 1 redirect` is flaky",
+    "createdAt" : "2022-10-26T09:47:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4105,
+    "title" : "[Feature Request] Global DD_ENABLE env var and dd.enable prop",
+    "createdAt" : "2022-10-27T00:04:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4133,
+    "title" : "trace agent doesn't seem to be reporting undertow trace metrics properly",
+    "createdAt" : "2022-11-01T19:53:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4155,
+    "title" : "The custom graphQL instrumentation will be called twice once the dd-agent is integrated",
+    "createdAt" : "2022-11-04T08:22:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4156,
+    "title" : "Running a sub-process erases active span",
+    "createdAt" : "2022-11-04T08:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4181,
+    "title" : "Add a non-root user to run containers from the `dd-lib-java-init` image",
+    "createdAt" : "2022-11-08T10:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4200,
+    "title" : "Increase the UID and specify the UID value in the USER instruction in the `dd-lib-java-init` Dockerfile",
+    "createdAt" : "2022-11-10T08:13:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4203,
+    "title" : "dd-trace-java agent spams logs with warnings from datadog.telemetry.TelemetryRunnable",
+    "createdAt" : "2022-11-10T10:22:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4209,
+    "title" : "Add support for jdbc-secretsmanager connection URLs in JDBCConnectionUrlParser",
+    "createdAt" : "2022-11-11T01:09:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4210,
+    "title" : "GraphQL Instrumentation - operation as resource_name",
+    "createdAt" : "2022-11-11T03:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4221,
+    "title" : "CustomLogManagerTest fails on Semeru 8",
+    "createdAt" : "2022-11-11T16:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4231,
+    "title" : "TracerDebuggerIntegrationTest is flaky",
+    "createdAt" : "2022-11-14T14:46:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4236,
+    "title" : "Look into caching Strings created from DDSpanId",
+    "createdAt" : "2022-11-15T07:42:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4242,
+    "title" : "Failed to determine dependency",
+    "createdAt" : "2022-11-15T13:46:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4250,
+    "title" : "Can we disable  injection of DD tracing headers or set as Null?",
+    "createdAt" : "2022-11-15T20:20:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4309,
+    "title" : "Version 1.1.0 started throwing java.lang.AbstractMethodError on startup",
+    "createdAt" : "2022-11-24T15:03:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4323,
+    "title" : "Incompatibility with Spring Boot 3.0.0",
+    "createdAt" : "2022-11-26T23:09:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4357,
+    "title" : "Build failed in IntelliJ Idea on macos",
+    "createdAt" : "2022-12-01T10:33:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4363,
+    "title" : "Baggage values are URL-encoded ",
+    "createdAt" : "2022-12-01T23:50:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4364,
+    "title" : "[Feature Request] JaxRs SubResource Locator Instrumentation",
+    "createdAt" : "2022-12-02T00:42:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4368,
+    "title" : "ClassNotFoundException when loading resteasy application on Wildfy application server",
+    "createdAt" : "2022-12-02T12:11:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4399,
+    "title" : "% exec time incorrect when using completable future on a jetty spring web MVC controller?",
+    "createdAt" : "2022-12-07T20:00:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4420,
+    "title" : "Kafka consumer Traces/Spans with errors not being reported to error tracking or marked as error on APM",
+    "createdAt" : "2022-12-13T18:35:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4430,
+    "title" : "Datadog trace java BufferOverflowException",
+    "createdAt" : "2022-12-14T22:59:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4435,
+    "title" : "java.lang.LinkageError when using Datadog Java agent alongside Opentelemetry Java agent",
+    "createdAt" : "2022-12-15T15:15:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4468,
+    "title" : "http4s ember client/server support",
+    "createdAt" : "2022-12-21T20:28:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4477,
+    "title" : "Make it compatible with Spring Boot 3.0.0",
+    "createdAt" : "2022-12-27T09:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4486,
+    "title" : "Asynchronous support is missing for Apache HTTP Client 5.x",
+    "createdAt" : "2023-01-02T08:50:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4507,
+    "title" : "Unable to use manual instrumentation using dd-trace-ot when also using dd-java-agent for continuous profiler",
+    "createdAt" : "2023-01-07T00:35:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4508,
+    "title" : "add spring boot buildpack (spring-boot:build-image) support for Graal",
+    "createdAt" : "2023-01-07T12:57:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4509,
+    "title" : "Run on virtual threads",
+    "createdAt" : "2023-01-08T12:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4511,
+    "title" : "Bug: Trace Baggage Mapping - baggage key case sensitivity is lost during extraction",
+    "createdAt" : "2023-01-09T10:49:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4516,
+    "title" : "baggage via header config is not honoured in root trace",
+    "createdAt" : "2023-01-09T17:29:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4527,
+    "title" : "Failed to determine dependency",
+    "createdAt" : "2023-01-12T04:35:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4529,
+    "title" : "http.status_code tag is unexpectedly added to parent span when using async AWS S3 client",
+    "createdAt" : "2023-01-12T08:49:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4537,
+    "title" : "Failed startup of spring app while using latest tracer version",
+    "createdAt" : "2023-01-12T22:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4576,
+    "title" : "log injection - dd.trace_id, dd.span_id, dd.env, dd.service, dd.version are not getting injected to tomcat access logs",
+    "createdAt" : "2023-01-20T06:52:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4588,
+    "title" : "ARM64 async profiler",
+    "createdAt" : "2023-01-24T13:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4592,
+    "title" : "Can't get detailed information from gRPC interceptors because of absence of Span.log()",
+    "createdAt" : "2023-01-24T20:52:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4599,
+    "title" : "Duplicate spans created by @Trace annotation when public class inherits from package-private one",
+    "createdAt" : "2023-01-25T10:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4633,
+    "title" : "When running a gRPC server, how can I leave gRPC requests in a span?",
+    "createdAt" : "2023-02-01T08:44:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4637,
+    "title" : "Could not notify the extension as the lambda span is null or no sampling priority has been found",
+    "createdAt" : "2023-02-01T22:49:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4638,
+    "title" : "Is there a way to capture input arguments with a span tag?",
+    "createdAt" : "2023-02-02T00:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4658,
+    "title" : "v1.6.0 is uploaded but not tagged properly in GCR",
+    "createdAt" : "2023-02-04T08:06:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4661,
+    "title" : "GraphQL query sanitizer is overzealous",
+    "createdAt" : "2023-02-05T04:18:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4673,
+    "title" : "Support for R2DBC",
+    "createdAt" : "2023-02-06T17:45:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4681,
+    "title" : "Blocking tests are flaky on GrizzlyAsyncTest and GrizzlyTest for grizzly-2",
+    "createdAt" : "2023-02-07T19:50:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4689,
+    "title" : "ApacheHttpAsyncClientTest in apache-httpclient-5 module is flaky",
+    "createdAt" : "2023-02-08T11:47:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4690,
+    "title" : "MuleHttpServerForkedTest and MuleForkedTest in mule-4 are flaky",
+    "createdAt" : "2023-02-08T13:35:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4696,
+    "title" : "`DebuggerIntegrationTest` is flaky",
+    "createdAt" : "2023-02-09T08:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4702,
+    "title" : "java.lang.UnsatisfiedLinkError: could not get native definition for type `POINTER`",
+    "createdAt" : "2023-02-09T12:40:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4718,
+    "title" : "Kotlin coroutines instrumentation causes IllegalStateException sometimes",
+    "createdAt" : "2023-02-11T08:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4722,
+    "title" : "java.lang.VerifyError: Bad return type",
+    "createdAt" : "2023-02-13T01:59:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4762,
+    "title" : "NPE when tracing Kafka messages ",
+    "createdAt" : "2023-02-17T18:41:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4773,
+    "title" : "Spring boot lambda starts twice with dd-trace-java library",
+    "createdAt" : "2023-02-21T11:21:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4792,
+    "title" : "Allow providing custom AgentScopeManager",
+    "createdAt" : "2023-02-23T18:55:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4794,
+    "title" : "Enabling Data Streams feature - adds nagative bytes values to kafka headers ",
+    "createdAt" : "2023-02-24T12:17:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4806,
+    "title" : "Missing slash(/) in akka and play request span name",
+    "createdAt" : "2023-02-28T08:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4826,
+    "title" : "FelixSmokeTest fails with NPE and bytebuddy exception",
+    "createdAt" : "2023-03-02T12:17:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4833,
+    "title" : "io.sqreen.powerwaf.exception.UnsupportedVMException: Unsupported OS: Linux",
+    "createdAt" : "2023-03-02T16:15:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4836,
+    "title" : "About latest-java-tracer question",
+    "createdAt" : "2023-03-03T06:45:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4863,
+    "title" : "Running just the javaagent without DD Agent?",
+    "createdAt" : "2023-03-07T10:43:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4866,
+    "title" : "How to serialize SpanContext? ",
+    "createdAt" : "2023-03-07T14:23:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4867,
+    "title" : "set trace_id and parent_span_id(p_id) for a span",
+    "createdAt" : "2023-03-07T14:38:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4869,
+    "title" : "1.9.0 to 1.10.0 upgrade missing custom Span tags with Micronaut 3.x",
+    "createdAt" : "2023-03-07T19:14:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4875,
+    "title" : "Java Version String Not Parsed Correctly",
+    "createdAt" : "2023-03-08T14:07:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4883,
+    "title" : "Memory leak reported against profiler in 1.10.0 ",
+    "createdAt" : "2023-03-10T09:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4887,
+    "title" : "What is the difference between dd.tags and dd.trace.span.tags",
+    "createdAt" : "2023-03-10T13:29:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4890,
+    "title" : "Keycloak resource names are no longer useful with dd-java-agent-1.6.0 ",
+    "createdAt" : "2023-03-13T11:13:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4910,
+    "title" : "snakeyaml high-risk vulnerability CVE-2022-1471",
+    "createdAt" : "2023-03-16T20:40:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4932,
+    "title" : "Google-PubSub support",
+    "createdAt" : "2023-03-21T10:58:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4935,
+    "title" : "OpenTelemetry Tracing Experimental Feature Questions",
+    "createdAt" : "2023-03-21T16:55:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4940,
+    "title" : "Add 'host' header as a tag for APM generated http metrics",
+    "createdAt" : "2023-03-21T21:25:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4954,
+    "title" : "Support for aws-sdk-kotlin",
+    "createdAt" : "2023-03-24T01:21:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4955,
+    "title" : "Support for BigQuery JDBC",
+    "createdAt" : "2023-03-24T01:30:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4961,
+    "title" : "Update graphql query to be in graphql.source tag",
+    "createdAt" : "2023-03-25T17:06:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4963,
+    "title" : "Improve XRay HttpCodec",
+    "createdAt" : "2023-03-27T08:17:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4967,
+    "title" : "java.lang.LinkageError when using Datadog Java agent alongside Lightbend Telemetry",
+    "createdAt" : "2023-03-27T16:17:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4975,
+    "title" : "Way to add baggage as tags via environment variable OR system properties",
+    "createdAt" : "2023-03-28T15:40:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4978,
+    "title" : "dd-trace-java v1.11.0 crashes the JVM",
+    "createdAt" : "2023-03-28T20:27:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4993,
+    "title" : "JMXFetch does not set up proper log level",
+    "createdAt" : "2023-03-30T10:22:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4999,
+    "title" : "Resource grouping broken on 401 from keycloak adaptor",
+    "createdAt" : "2023-03-30T16:54:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5017,
+    "title" : "Trace correlation seems to be broken with v1.11.x",
+    "createdAt" : "2023-04-03T21:20:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5018,
+    "title" : "Cannot download agent with specific version more precise than major",
+    "createdAt" : "2023-04-03T22:18:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5042,
+    "title" : "Tracing broken on Quarkus as of 1.106.0",
+    "createdAt" : "2023-04-07T22:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5077,
+    "title" : "v1.12.0 crashes JVM - segmentation fault",
+    "createdAt" : "2023-04-17T17:06:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5083,
+    "title" : "Google Guice augmented classes get a hash in the resource name",
+    "createdAt" : "2023-04-18T17:46:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5084,
+    "title" : "Unable to fetch threads from springboot tomcat",
+    "createdAt" : "2023-04-18T22:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5092,
+    "title" : "Kafka producer instrumentation not propagating span context from record headers",
+    "createdAt" : "2023-04-20T21:01:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5095,
+    "title" : "Span context propagation for the integration with third-party system",
+    "createdAt" : "2023-04-21T11:36:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5108,
+    "title" : "Tomcat exception being tagged as an error incorrectly",
+    "createdAt" : "2023-04-24T15:26:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5126,
+    "title" : "Add vert.x 4.x to Java compatibility documentation",
+    "createdAt" : "2023-04-26T16:50:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5148,
+    "title" : "Is there a way to make coexist `jmx_prometheus_javaagent` and the Datadog APM agent in a same project?",
+    "createdAt" : "2023-05-03T18:01:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5177,
+    "title" : "Vert.x instrumentation is incorrect (null) for regex routes on 1.12",
+    "createdAt" : "2023-05-10T20:00:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5184,
+    "title" : "Is there support for Custom DSM Streams?",
+    "createdAt" : "2023-05-11T13:42:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5185,
+    "title" : "Vertex integration throw NullPointerException due to null span",
+    "createdAt" : "2023-05-11T13:49:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5186,
+    "title" : "Vertex integration throw NullPointerException due to null span",
+    "createdAt" : "2023-05-11T13:49:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5191,
+    "title" : "Trace and Span IDs with logback-access in Spring Boot with Tomcat 9",
+    "createdAt" : "2023-05-11T21:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5226,
+    "title" : "JVM profiling in combination with existing OpenTelemetry tracing instrumentation",
+    "createdAt" : "2023-05-17T10:26:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5232,
+    "title" : "Amazon Opensearch instrumentation support",
+    "createdAt" : "2023-05-18T10:39:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5240,
+    "title" : "Reactor plugin will cause app error",
+    "createdAt" : "2023-05-22T02:47:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5268,
+    "title" : "Bytecode manipulation of TestNG code skips test suite result collection.",
+    "createdAt" : "2023-05-25T14:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5296,
+    "title" : "Resilience4j Support",
+    "createdAt" : "2023-05-31T15:27:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5298,
+    "title" : "Tomcat's ParameterCollector NullPointerException in dd-trace-java v1.15.0",
+    "createdAt" : "2023-06-01T08:30:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5299,
+    "title" : "ParameterCollector NPE in new 1.15.0",
+    "createdAt" : "2023-06-01T08:34:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5307,
+    "title" : "Manually set errors being overridden by HTTP Status code check",
+    "createdAt" : "2023-06-01T17:21:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5311,
+    "title" : "Distributed tracing manual propagation using W3C style",
+    "createdAt" : "2023-06-02T10:09:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5312,
+    "title" : "New versions (1.15.0+) of dd-java-agent no longer showing up on maven repo",
+    "createdAt" : "2023-06-02T13:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5313,
+    "title" : "upgrade to 1.15.0 and 1.15.1 fails with `msgp: attempted to decode type \"map\" with method for \"str\" while sending 1`",
+    "createdAt" : "2023-06-02T14:00:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5314,
+    "title" : "High quantity of intermittent failures when using DD Trace v0.5 protocol",
+    "createdAt" : "2023-06-02T14:12:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5316,
+    "title" : "Setting the `error` tag to true on a span no longer has effect since 1.13.0",
+    "createdAt" : "2023-06-02T16:05:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5322,
+    "title" : "Upgrade to 1.15.0 causes limit error when DD_PROFILING_ENABLED",
+    "createdAt" : "2023-06-05T21:18:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5330,
+    "title" : "Authentication failure while downloading dd-java-agent file from sonatype repository",
+    "createdAt" : "2023-06-07T07:21:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5364,
+    "title" : "Can a dependency management artifact be added to update all libraries at once?",
+    "createdAt" : "2023-06-11T09:30:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5371,
+    "title" : "Add support for vert.x 4 event bus",
+    "createdAt" : "2023-06-12T15:36:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5402,
+    "title" : "Question/Possible bug interceptor bypassed?",
+    "createdAt" : "2023-06-15T13:26:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5406,
+    "title" : "Release assets checksum",
+    "createdAt" : "2023-06-15T16:41:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5449,
+    "title" : "Frequent JVM crashes on 1.16.0",
+    "createdAt" : "2023-06-22T13:14:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5454,
+    "title" : "Traces with 4XX http status codes marked as error in 1.6.0",
+    "createdAt" : "2023-06-22T15:43:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5472,
+    "title" : "Does this dd-java-agent jar will will work for eclipse-temurin:17.0.6_10-jdk-focal instead of openjdk17?",
+    "createdAt" : "2023-06-27T06:52:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5487,
+    "title" : "Unrelated XRay and  java-aws-sdk traces",
+    "createdAt" : "2023-06-28T12:59:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5535,
+    "title" : "How to Inject and extract context for distributed tracing for asynchronous tasks running on different process?",
+    "createdAt" : "2023-07-05T14:26:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5544,
+    "title" : "Support for JMS @MessageDriven Beans",
+    "createdAt" : "2023-07-06T12:13:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5552,
+    "title" : "Why are tracer metrics still disabled?",
+    "createdAt" : "2023-07-07T14:17:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5562,
+    "title" : "TestNG CI Visibility onTestFinish event failure",
+    "createdAt" : "2023-07-10T18:02:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5618,
+    "title" : "ci-visibility test are flaky with IBM JDK",
+    "createdAt" : "2023-07-21T14:13:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5622,
+    "title" : "Feature Request: DynamoDB Query Strings as Span Attributes",
+    "createdAt" : "2023-07-23T21:42:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5632,
+    "title" : "Micronaut Lambda Fails to Trace with Datadog",
+    "createdAt" : "2023-07-25T03:30:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5646,
+    "title" : "DataDog does not trace the Rest API which is return empty body as response",
+    "createdAt" : "2023-07-27T10:13:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5651,
+    "title" : "\"Wrong\" class names are shown in Actuator overview of scheduled tasks in Spring Boot application",
+    "createdAt" : "2023-07-27T13:49:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5654,
+    "title" : "Junit4 CI Visibility breaks working test on testFinished",
+    "createdAt" : "2023-07-27T17:20:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5668,
+    "title" : "Add apache pulsar instrumentation",
+    "createdAt" : "2023-07-31T18:25:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5679,
+    "title" : "How to configure grpc.server.error.statuses",
+    "createdAt" : "2023-08-03T21:34:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5696,
+    "title" : "CI test cycles slow to a crawl with 1.18.0+",
+    "createdAt" : "2023-08-08T16:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5702,
+    "title" : "Missing traces with mongo driver 4.10",
+    "createdAt" : "2023-08-09T09:56:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5704,
+    "title" : "Reactor RabbitMQ `Sender` throws Exception when using DD agent",
+    "createdAt" : "2023-08-09T14:35:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5715,
+    "title" : "IAST StringConcatFactoryCallSiteTest fails with OpenJ9 11 and higher",
+    "createdAt" : "2023-08-14T12:08:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5716,
+    "title" : "Vertx 4 MySQL client instrumentation",
+    "createdAt" : "2023-08-14T20:00:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5718,
+    "title" : "Don't write the body of ElasticSearch traces by default",
+    "createdAt" : "2023-08-15T11:25:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5720,
+    "title" : "gRpc service root span resource name overwritten when making JaxRs.request client call",
+    "createdAt" : "2023-08-16T01:05:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5721,
+    "title" : "Memory leak with agent 1.19.0?",
+    "createdAt" : "2023-08-16T01:35:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5734,
+    "title" : "Losing Jetty 10 servlet traces and metrics in 1.19.0+",
+    "createdAt" : "2023-08-17T00:36:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5760,
+    "title" : "Support MUnit in CI Tests",
+    "createdAt" : "2023-08-23T09:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5782,
+    "title" : "VerifyError at `org/eclipse/jetty/server/HttpChannel.handle()` when instrumenting metabase",
+    "createdAt" : "2023-08-25T09:06:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5808,
+    "title" : "Agent metrics are considered custom metrics in Datadog",
+    "createdAt" : "2023-08-30T07:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5811,
+    "title" : "Support Apache Pekko framework",
+    "createdAt" : "2023-08-30T16:34:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5825,
+    "title" : "-Ddd.integration.throwables.enabled=false not working since 1.19",
+    "createdAt" : "2023-09-04T05:45:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5832,
+    "title" : "[CVE-2023-3635] HIGH security vulnerability in latest JAR - v1.20.0",
+    "createdAt" : "2023-09-04T13:43:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5838,
+    "title" : "Tracing of jstack invocation triggers NPE",
+    "createdAt" : "2023-09-05T06:36:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5844,
+    "title" : "Security vulnerability in com.fasterxml.jackson.core_jackson-core <2.15.0",
+    "createdAt" : "2023-09-06T11:21:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5850,
+    "title" : "DSM for AWS SQS v1",
+    "createdAt" : "2023-09-06T22:13:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5869,
+    "title" : "Off heap memory overhead when enabling profiling",
+    "createdAt" : "2023-09-12T07:31:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5871,
+    "title" : "custom instrumentation error ",
+    "createdAt" : "2023-09-12T10:40:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5917,
+    "title" : "@Trace annotation does not work with kotlin suspending functions",
+    "createdAt" : "2023-09-20T04:35:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5930,
+    "title" : "WARN datadog.trace.agent.core.propagation.DatadogTagsFactory - Invalid datadog tags header value",
+    "createdAt" : "2023-09-21T21:38:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5935,
+    "title" : "CRaC support in Datadog",
+    "createdAt" : "2023-09-25T13:46:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5941,
+    "title" : "[Question] How to add dd.trace_id to response for client call?",
+    "createdAt" : "2023-09-26T07:17:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5951,
+    "title" : "dd-trace-ot should not bundle unshaded com.kenai.jffi",
+    "createdAt" : "2023-09-27T20:29:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5972,
+    "title" : "Unclear origin of vulnerable dependency (jackson-databind)",
+    "createdAt" : "2023-10-02T15:23:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6002,
+    "title" : "Create New Trace Always ",
+    "createdAt" : "2023-10-06T11:30:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5999,
+    "title" : "Java 21 Support for trace agent.",
+    "createdAt" : "2023-10-06T11:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6010,
+    "title" : "tracer close does not return",
+    "createdAt" : "2023-10-10T09:15:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6017,
+    "title" : "OkHttp embedded in agent clashes with newer OkHttp in classpath",
+    "createdAt" : "2023-10-10T18:57:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6019,
+    "title" : "JCTools doesn't quite work with GraalVM native image >= 22.3",
+    "createdAt" : "2023-10-10T19:01:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6035,
+    "title" : "Fix CI to avoid failure when dev branch has conflict with base branch",
+    "createdAt" : "2023-10-12T08:38:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6036,
+    "title" : "System tests do not run on community contributions",
+    "createdAt" : "2023-10-12T08:42:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6042,
+    "title" : "broken propagation of traces from OpenTelemetry tracer to Kafka producer in 1.21.0 version",
+    "createdAt" : "2023-10-12T16:16:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6068,
+    "title" : "application will not compile using graalvm and g1gc garbage collector",
+    "createdAt" : "2023-10-19T14:25:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6072,
+    "title" : "Spring security - hideUserNotFoundExceptions should not be change to false",
+    "createdAt" : "2023-10-20T08:43:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6081,
+    "title" : "Trace propagation not working with Reactor Netty clients using HTTP/2",
+    "createdAt" : "2023-10-23T10:51:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6087,
+    "title" : "Feature Request: OpenTelemetry: Support Baggage in OtelContext",
+    "createdAt" : "2023-10-23T17:20:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6097,
+    "title" : "Running alongside Skywalking",
+    "createdAt" : "2023-10-25T13:20:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6098,
+    "title" : "dd-trace-java and skywalking conflict",
+    "createdAt" : "2023-10-25T13:24:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6111,
+    "title" : "GC and Heap Metrics not getting published.",
+    "createdAt" : "2023-10-29T01:54:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6127,
+    "title" : "Adding order_updates and batch_versioned_data disables update/insert MySQL spans",
+    "createdAt" : "2023-11-01T11:19:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6140,
+    "title" : "Java Agent is leaking memory",
+    "createdAt" : "2023-11-02T21:28:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6141,
+    "title" : "dd-java-agent:1.22.0 civisibility tracing gets NPE on Karate @setup methods",
+    "createdAt" : "2023-11-03T04:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6148,
+    "title" : "JSON headers being truncated in span",
+    "createdAt" : "2023-11-03T15:12:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6152,
+    "title" : "SIGSEGV when using jdk 21 on ubuntu 22.04",
+    "createdAt" : "2023-11-03T17:53:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6206,
+    "title" : "Upgrade integrations-core to 7.49.0 to fix embedded JMX metrics for Tomcat",
+    "createdAt" : "2023-11-13T12:56:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6215,
+    "title" : "Give more details about the IOException in the logs",
+    "createdAt" : "2023-11-14T21:48:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6230,
+    "title" : "Instrumentation for Vert.x 4 Redis Client",
+    "createdAt" : "2023-11-16T06:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6236,
+    "title" : "Java 21, error with Unsafe",
+    "createdAt" : "2023-11-16T17:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6248,
+    "title" : "Unfinished spans in armeria",
+    "createdAt" : "2023-11-20T11:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6253,
+    "title" : "Spans' parents in Opentelemetry",
+    "createdAt" : "2023-11-21T13:09:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6268,
+    "title" : "Truncated traces on service profiling",
+    "createdAt" : "2023-11-23T09:23:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6272,
+    "title" : "Lack of Trace Context/Span Propagation in Asynchronous Reactive Operations",
+    "createdAt" : "2023-11-24T04:52:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6273,
+    "title" : "Traces are not propagated from Spring WebFlux WebFilter into a suspend handler function (Kotlin)",
+    "createdAt" : "2023-11-24T08:48:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6284,
+    "title" : "Using completedStage in GraphQL results in an error",
+    "createdAt" : "2023-11-28T06:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6288,
+    "title" : "JDBC tracing misses batch statements executed through jOOQ",
+    "createdAt" : "2023-11-29T12:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6290,
+    "title" : "Spring boot Graalvm enable  --strict-image-heap error on compile",
+    "createdAt" : "2023-11-29T13:02:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6297,
+    "title" : "d",
+    "createdAt" : "2023-11-30T01:24:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6307,
+    "title" : "[Question] TraceId propagation in Spring Boot 3.x app using RestTemplate and Micrometer",
+    "createdAt" : "2023-12-01T22:52:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6323,
+    "title" : "How to exclude a part of request in trace.span ?",
+    "createdAt" : "2023-12-06T05:21:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6328,
+    "title" : "R2DBC Support ",
+    "createdAt" : "2023-12-07T04:00:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6329,
+    "title" : "OpenTelemetry context propagation not working as expected",
+    "createdAt" : "2023-12-07T08:03:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6342,
+    "title" : "Spans not available in Java Kafka consumer",
+    "createdAt" : "2023-12-11T07:40:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6343,
+    "title" : "Datadog tracer caused K8S pod keeping restart",
+    "createdAt" : "2023-12-11T12:14:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6345,
+    "title" : "Allow service name customization on DB spans",
+    "createdAt" : "2023-12-11T18:54:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6380,
+    "title" : "MpscBlockingConsumerArrayQueue  high memory usage",
+    "createdAt" : "2023-12-17T13:17:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6382,
+    "title" : "dd-trace-java v1.25.1 crashes the JVM",
+    "createdAt" : "2023-12-18T07:57:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6391,
+    "title" : "CVE-2022-1471 - org.yaml:snakeyaml ",
+    "createdAt" : "2023-12-18T23:31:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6392,
+    "title" : "CVE-2023-3635 - com.squareup.okio:okio",
+    "createdAt" : "2023-12-18T23:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6398,
+    "title" : "Ddtrace version >0.106.0  in the window environment does not support springboot 1.3.5",
+    "createdAt" : "2023-12-20T03:57:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6421,
+    "title" : "Traces \"path group\" is not transformed correctly ",
+    "createdAt" : "2023-12-28T19:58:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6432,
+    "title" : "1.23.0 blocks when building Clojure uberjar and AOT is enabled",
+    "createdAt" : "2024-01-02T18:46:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6443,
+    "title" : "No version file found error during native-image build",
+    "createdAt" : "2024-01-04T13:34:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6458,
+    "title" : "java.security.NoSuchProviderException: no such provider: BCFIPS",
+    "createdAt" : "2024-01-09T13:20:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6468,
+    "title" : "DD tracing is not working with virtual threads for a micronaut 4 application",
+    "createdAt" : "2024-01-11T05:16:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6474,
+    "title" : "[dd-trace-ot] Ability to customize LogHandler when using the java agent",
+    "createdAt" : "2024-01-12T00:59:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6477,
+    "title" : "Disabling log injection drops all MDC data on log4j1",
+    "createdAt" : "2024-01-12T11:31:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6494,
+    "title" : "TraceSamplingRules fails to load",
+    "createdAt" : "2024-01-15T17:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6514,
+    "title" : "Allow specifying a readable service name for databases when the JDBC url has IP Address",
+    "createdAt" : "2024-01-18T01:22:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6518,
+    "title" : "ERROR \"Could not notify the extension\"",
+    "createdAt" : "2024-01-18T13:42:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6524,
+    "title" : "bytecode modification via k8s AdmissionController for a jvm app broke interactions with Kinesis",
+    "createdAt" : "2024-01-19T09:18:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6528,
+    "title" : "Potential ClassCastException in AwsSdkClientDecorator",
+    "createdAt" : "2024-01-19T16:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6539,
+    "title" : "DatadogProfiler: failed to instantiate Datadog profiler on linux arm64 because: libjavaProfiler.so not found on classpath",
+    "createdAt" : "2024-01-23T15:43:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6552,
+    "title" : "WARN com.datadog.appsec.powerwaf.PowerWAFModule ",
+    "createdAt" : "2024-01-25T12:05:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6565,
+    "title" : "[bug] java.lang.NumberFormatException on S3 listObjects",
+    "createdAt" : "2024-01-26T15:09:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6572,
+    "title" : "[Question] Passing tags from a parent span to a child span",
+    "createdAt" : "2024-01-26T21:47:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6598,
+    "title" : "Getenforce error at JVM startup",
+    "createdAt" : "2024-02-01T10:47:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6599,
+    "title" : "[OpenSearch] Java Instrumentation not working when using OpenSearch-java with AwsSdk",
+    "createdAt" : "2024-02-01T11:00:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6604,
+    "title" : "No trace_id/span_id inside logs",
+    "createdAt" : "2024-02-01T15:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6629,
+    "title" : "Instrument Azure Speech SDK",
+    "createdAt" : "2024-02-07T03:11:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6630,
+    "title" : "Missing statement and operation from JDBCDecorator",
+    "createdAt" : "2024-02-07T09:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6635,
+    "title" : "Trace agent fails to start on arm64 nodes",
+    "createdAt" : "2024-02-07T20:00:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6640,
+    "title" : "'Failed to retrieve remote configuration' − please allow to disable remote configuration",
+    "createdAt" : "2024-02-08T10:19:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6704,
+    "title" : "Stream closed exception during Spring application startup",
+    "createdAt" : "2024-02-20T15:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6706,
+    "title" : "graphql java instrumentation impacting application throughput ",
+    "createdAt" : "2024-02-21T00:51:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6723,
+    "title" : "\uD83D\uDC1E\uD83D\uDC1B Serialization issue when IAST enabled with spring boot + kotlinx serialization",
+    "createdAt" : "2024-02-22T16:19:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6725,
+    "title" : "WARN `datadog.trace.agent.core.propagation.ptags.W3CPTagsCodec`: `Invalid datadog tags header value`",
+    "createdAt" : "2024-02-22T23:19:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6761,
+    "title" : "Adding datadog agent causes \"java not found\" error and fails to start",
+    "createdAt" : "2024-02-28T21:19:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6772,
+    "title" : "Baggage not being propagated in zio",
+    "createdAt" : "2024-03-05T11:07:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6837,
+    "title" : "JAR checksum of Maven artifact doesn't match GitHub release",
+    "createdAt" : "2024-03-22T20:55:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6839,
+    "title" : "Unified Service Tagging sometimes missing",
+    "createdAt" : "2024-03-25T01:16:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6844,
+    "title" : "Failed to inject helper classes",
+    "createdAt" : "2024-03-26T08:39:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6862,
+    "title" : " Memory Leak Issue with Datadog Integration in Kotlin/Ktor Application",
+    "createdAt" : "2024-04-01T09:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6886,
+    "title" : "Add ability to provide custom normalization of URI mapping saved as resource name",
+    "createdAt" : "2024-04-04T11:22:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6889,
+    "title" : "Cannot decode v0.4 traces payload: msgp: attempted to decode type \"array\" with method for \"str\"",
+    "createdAt" : "2024-04-04T14:38:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6894,
+    "title" : "feature request - instrumentation for https://github.com/http-kit/http-kit",
+    "createdAt" : "2024-04-08T11:30:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6896,
+    "title" : "Trace id in logs are different from datadog trace id in web",
+    "createdAt" : "2024-04-08T13:47:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6899,
+    "title" : "dd-trace-java v1.31.2 crashes the JVM",
+    "createdAt" : "2024-04-11T09:06:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6903,
+    "title" : "RabbitMQ instrumentation tests is flaky ",
+    "createdAt" : "2024-04-12T08:13:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6909,
+    "title" : "Spring Webflux 5 instrumentation tests are flaky",
+    "createdAt" : "2024-04-15T08:58:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6910,
+    "title" : "Vert.X Redis client 4 instrumentation tests are flaky",
+    "createdAt" : "2024-04-15T09:01:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6933,
+    "title" : "Grizzly http 2.3.20 instrumentation tests are flaky",
+    "createdAt" : "2024-04-22T11:59:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6936,
+    "title" : "Feature Request: Missing trace for JUnit5 BeforeAll/AfterAll methods in CIVisibility Instrumentation",
+    "createdAt" : "2024-04-23T10:39:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6938,
+    "title" : "BUG: dd-trace-java  with version 1.33.0 causes InvalidCookieDomainException. In 1.32.0 works fine.",
+    "createdAt" : "2024-04-23T15:18:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6948,
+    "title" : "Live-heap profiler (alpha) in dd-trace-java v1.33.0 crashes the JVM. (After updated from v1.32.0)",
+    "createdAt" : "2024-04-25T14:54:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6952,
+    "title" : "Play Scala integration tests are flaky",
+    "createdAt" : "2024-04-26T11:44:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6957,
+    "title" : "Spark instrumentation tests are flaky",
+    "createdAt" : "2024-04-26T15:25:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7002,
+    "title" : "DD agent is not compatible with Quarkus 3.10",
+    "createdAt" : "2024-05-07T18:55:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7024,
+    "title" : "Gradle smoke tests are flaky",
+    "createdAt" : "2024-05-14T12:02:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7025,
+    "title" : "Maven smoke tests are flaky",
+    "createdAt" : "2024-05-14T12:19:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7034,
+    "title" : "JDBC connection service mapping not being used, and traceparent missing, in SQL comment",
+    "createdAt" : "2024-05-15T13:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7036,
+    "title" : "With Unix Domain Socket, DD_AGENT_HOST not ignored despite DD_TRACE_AGENT_URL",
+    "createdAt" : "2024-05-15T22:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7061,
+    "title" : "Jetty9 instrumentation tests are flaky",
+    "createdAt" : "2024-05-22T12:01:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7088,
+    "title" : "Question: When will the next release happen?",
+    "createdAt" : "2024-05-29T17:46:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7090,
+    "title" : "Jetty9 instrumentation tests are flaky",
+    "createdAt" : "2024-05-30T06:56:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7130,
+    "title" : "DebuggerSinkTest doesn't expect RC versions",
+    "createdAt" : "2024-06-06T08:04:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7141,
+    "title" : "Non-Error Exceptions thrown in spring controllers cause the span error flag to be set.",
+    "createdAt" : "2024-06-07T15:40:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7144,
+    "title" : " v1.34.0 JVM crash",
+    "createdAt" : "2024-06-10T09:02:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7147,
+    "title" : "java.lang.UnsupportedOperationException from SnsInterceptor when trying to publish",
+    "createdAt" : "2024-06-10T12:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7152,
+    "title" : "Use hikari pool name as service name",
+    "createdAt" : "2024-06-10T20:23:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7153,
+    "title" : "Graphql-java 22 support",
+    "createdAt" : "2024-06-10T22:22:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7164,
+    "title" : "Missing @http.status_code in Play",
+    "createdAt" : "2024-06-11T19:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7165,
+    "title" : "Dynamic Instrumentation fails to start when tracing is configured to use UDS",
+    "createdAt" : "2024-06-11T21:58:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7202,
+    "title" : "java.lang.IllegalStateException: Shutdown in progress in dd-ci-git-data-uploader",
+    "createdAt" : "2024-06-17T05:40:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7209,
+    "title" : "Google PubSub DD service name is hardcoded",
+    "createdAt" : "2024-06-17T15:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7214,
+    "title" : "Latest java agent 1.35.1 and .2 breaks APM tracing",
+    "createdAt" : "2024-06-19T03:52:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7215,
+    "title" : "Kotlin coroutine instrumentation missing spans in trace",
+    "createdAt" : "2024-06-19T07:34:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7228,
+    "title" : "Datadog Trace Span Issue with MySQL Batch Inserts using MySQL Connector/J",
+    "createdAt" : "2024-06-21T09:45:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7250,
+    "title" : "Akka scheduler tasks should create spans",
+    "createdAt" : "2024-06-27T22:47:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7254,
+    "title" : "Unable to capture gRPC list field in dynamic instrumentation",
+    "createdAt" : "2024-06-28T14:32:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7275,
+    "title" : "Datadog Trace Span Issue with Apache HttpClient5",
+    "createdAt" : "2024-07-03T20:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7277,
+    "title" : "How to change DataDog java agent trace api version to V0.5",
+    "createdAt" : "2024-07-04T04:16:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7281,
+    "title" : "Quarkus 3.12.1 + Kafka + DD + Native = BOOM",
+    "createdAt" : "2024-07-04T17:55:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7288,
+    "title" : "HTTP 400 Bad Request being marked as a false positive server error in Keycloak",
+    "createdAt" : "2024-07-05T23:06:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7291,
+    "title" : "Graphql-java 22 Support Still Not Working",
+    "createdAt" : "2024-07-08T16:18:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7300,
+    "title" : "Outgoing http requests are not instrumented with datadog tracer - Spring Boot / RestClient / Eclipse Jetty Client 12.0.5",
+    "createdAt" : "2024-07-10T06:17:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7303,
+    "title" : "DD_TRACE_HEADER_BAGGAGE environment variable is not being honoured",
+    "createdAt" : "2024-07-10T11:30:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7326,
+    "title" : "Cannot invoke \"datadog.trace.civisibility.config.JvmInfo.getName()\" because \"jvmInfo\" is null",
+    "createdAt" : "2024-07-15T13:51:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7332,
+    "title" : "OSGI Bundle availability (Adobe Experience Manager)",
+    "createdAt" : "2024-07-16T19:24:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7347,
+    "title" : "Question: Ask for help about IDEA load the project failed",
+    "createdAt" : "2024-07-18T13:36:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7372,
+    "title" : "dd-java-trace SO crash in ElfParser::parseProgramHeaders",
+    "createdAt" : "2024-07-31T09:22:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7381,
+    "title" : "Multiple unrelated play/akka.http requests share same trace",
+    "createdAt" : "2024-08-02T18:47:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7396,
+    "title" : "Kafka client  Instrument don't have peer hostname",
+    "createdAt" : "2024-08-07T10:31:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7398,
+    "title" : "cp: can't stat '/datadog-init/dd-java-agent.jar': No such file or directory",
+    "createdAt" : "2024-08-07T16:21:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7407,
+    "title" : "shadowJar task does not include custom builds of the profiler as documented",
+    "createdAt" : "2024-08-09T14:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7413,
+    "title" : "-Djava.library.path=WARNING: Unable to get VM args through reflection...",
+    "createdAt" : "2024-08-12T14:03:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7419,
+    "title" : "Java 21 + virtual thread",
+    "createdAt" : "2024-08-13T09:34:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7440,
+    "title" : "Disable Status 404 grouping as resource name in APM traces",
+    "createdAt" : "2024-08-14T15:24:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7477,
+    "title" : "Application start errors when updating spring boot and Java version",
+    "createdAt" : "2024-08-20T10:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7479,
+    "title" : "DD 1.38.1 doesn't work on native",
+    "createdAt" : "2024-08-20T18:30:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7491,
+    "title" : "Enabling profiling randomly",
+    "createdAt" : "2024-08-22T12:07:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7495,
+    "title" : "Automatic injection is enabled, but trace_id is null in MDC context.",
+    "createdAt" : "2024-08-23T11:15:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7510,
+    "title" : "[redis] Redisson instrumentation only covers synchronous part of async `RedisConnection.send`.",
+    "createdAt" : "2024-08-26T12:59:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7521,
+    "title" : "NullPointerException because \"datadog.trace.api.civisibility.InstrumentationBridge.TEST_EVENTS_HANDLER_FACTORY\" is null",
+    "createdAt" : "2024-08-27T20:22:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7556,
+    "title" : "OpenTelemetry span builder uses span name as resource name instead of operation name. ",
+    "createdAt" : "2024-09-03T22:12:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7559,
+    "title" : "Corrupted/malformed main.jfr generated on OpenJDK 21",
+    "createdAt" : "2024-09-04T10:22:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7575,
+    "title" : "Tracing in Keycloak 25.0.4",
+    "createdAt" : "2024-09-06T15:37:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7580,
+    "title" : "Support CDS",
+    "createdAt" : "2024-09-09T11:22:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7587,
+    "title" : "Is it possible to reduce the number of threads created by datadog?",
+    "createdAt" : "2024-09-09T20:27:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7590,
+    "title" : "Missing ExecutionSample and ObjectAllocationSample events in Java 21",
+    "createdAt" : "2024-09-10T08:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7596,
+    "title" : "\"Could not create service of type CiVisibilityGradleListener.\" when running plugin tests with ProjectBuilder.build",
+    "createdAt" : "2024-09-10T14:21:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7599,
+    "title" : "Unable to disable tracing via env var, and connection times out after 30 seconds rather than default",
+    "createdAt" : "2024-09-10T20:36:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7634,
+    "title" : "Warning log: Failed creating custom crash upload script. Crash tracking will not work properly.",
+    "createdAt" : "2024-09-18T08:08:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7643,
+    "title" : "Uncaught exception java.lang.UnsatisfiedLinkError: could not load FFI provider jnr.ffi.provider.jffi.Provider in dd-profiler-http-dispatcher",
+    "createdAt" : "2024-09-18T21:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7660,
+    "title" : "Enabling OpenTelemetry Results in High Network Traffic to Mysql RDS Database over port 3306",
+    "createdAt" : "2024-09-20T16:27:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7665,
+    "title" : "DD profiler crashes on JDK 23",
+    "createdAt" : "2024-09-23T11:42:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7700,
+    "title" : "No `data_streams.kafka.lag_seconds` metric when using Confluent `kafka-avro-serializer` 7.7.x",
+    "createdAt" : "2024-10-01T14:08:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7713,
+    "title" : "DD_AGENT_HOST set as the host IP fails in an IPv6-only EKS environment",
+    "createdAt" : "2024-10-02T14:35:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7717,
+    "title" : "java.lang.UnsatisfiedLinkError: Unable to execute or load jffi binary stub from (TMP dir) - /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /opt/ibm/Sterling95GA/bin/jffi4477209065662703492.so)",
+    "createdAt" : "2024-10-02T20:02:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7725,
+    "title" : "Hystrix instrumenation tests are flaky",
+    "createdAt" : "2024-10-04T05:48:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7738,
+    "title" : "OOME Notifier INFO log generated when custom script is provided for -XX:OnOutOfMemoryError",
+    "createdAt" : "2024-10-04T21:05:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7755,
+    "title" : "Upgrading org.jetbrains.kotlinx:kotlinx-coroutines-core from 1.8.1 to 1.9.0 breaks tracing",
+    "createdAt" : "2024-10-11T07:54:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7761,
+    "title" : "Dependence vulnerability coming fromjsonpath-plus@9.0.0 (CVE-2024-21534) in dd-trace version 5.23.1",
+    "createdAt" : "2024-10-14T09:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7773,
+    "title" : "java.lang.NullPointerException: Cannot invoke \"datadog.trace.bootstrap.instrumentation.api.AgentSpan.setTag(String, java.lang.CharSequence)\" because \"span\" is null",
+    "createdAt" : "2024-10-16T12:09:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7825,
+    "title" : "Incorrect exec time for child spans when using completable future in spring controller",
+    "createdAt" : "2024-10-22T13:56:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7830,
+    "title" : "Spring scheduled use wrong thread pool when specific scheduler is used.",
+    "createdAt" : "2024-10-23T13:23:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7842,
+    "title" : "muzzle.mismatch=\"datadog.trace.instrumentation.springweb.DatadogByteArrayOutputStream:36 Missing class B\"",
+    "createdAt" : "2024-10-28T10:22:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7880,
+    "title" : "com.datadog.debugger.exception potential memory leak",
+    "createdAt" : "2024-11-04T18:34:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7910,
+    "title" : "JVM Crashes on C  [libjavaProfiler5380372605108795391.so+0x3c640]  SafeAccess::load(void**)+0x0",
+    "createdAt" : "2024-11-07T21:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7924,
+    "title" : "No support for OpenTelemetry Metrics API",
+    "createdAt" : "2024-11-08T19:21:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7975,
+    "title" : "Support to track URL along with URL Parameters",
+    "createdAt" : "2024-11-19T12:39:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7978,
+    "title" : "[GraalVM] Uncaught exception java.lang.NoClassDefFoundError: Could not initialize class jnr.unixsocket.UnixSocketChannel in dd-profiler-http-dispatcher",
+    "createdAt" : "2024-11-20T03:32:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7988,
+    "title" : "OTSpanContex.toTraceId() truncates 128-bit TraceIds to 64-bit decimal.",
+    "createdAt" : "2024-11-20T23:21:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8011,
+    "title" : "Native Image Build Fails after upgrading dd-trace-java from 1.40.0 to 1.41.0",
+    "createdAt" : "2024-11-25T12:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8017,
+    "title" : "java.lang.NoClassDefFoundError: datadog/opentelemetry/shim/trace/OtelSpanEvent",
+    "createdAt" : "2024-11-26T02:35:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8042,
+    "title" : "Error flag manually set to a gRPC server span gets overwritten",
+    "createdAt" : "2024-12-02T05:52:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8054,
+    "title" : "Native Image Build Fails after upgrading dd-trace-java from 1.40.0 to 1.43.0",
+    "createdAt" : "2024-12-04T10:19:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8067,
+    "title" : "SmapEntryFactory - Smap entry events could not be registered due to missing systemMap operation",
+    "createdAt" : "2024-12-06T19:49:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8084,
+    "title" : "Cannot invoke \"datadog.trace.api.civisibility.events.TestEventsHandler$Factory.create because \"datadog.trace.api.civisibility.InstrumentationBridge.TEST_EVENTS_HANDLER_FACTORY\" is null",
+    "createdAt" : "2024-12-12T18:05:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8107,
+    "title" : "Failed to collect telemetry for GraalVM by dd-java-agent",
+    "createdAt" : "2024-12-18T10:15:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8114,
+    "title" : "`dd.grpc.server.error.statuses` system property not working in `v1.44.1` (worked fine in `v1.43.0`)",
+    "createdAt" : "2024-12-19T02:18:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8118,
+    "title" : "datadog reporting no trace for netty 4.1 when request is cancelled",
+    "createdAt" : "2024-12-19T14:20:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8130,
+    "title" : "Error using dd-trace-java 1.44.1 with mule 4.6.9:11-java17",
+    "createdAt" : "2024-12-23T15:21:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8148,
+    "title" : "Error: Port already in use. Version 1.43.0 or higher.",
+    "createdAt" : "2025-01-03T12:51:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8159,
+    "title" : "Question: why we use spanId and rootSpanId to correlate profiles with traces",
+    "createdAt" : "2025-01-06T10:17:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8174,
+    "title" : "[GraalVM] Question: A few GraalVM supporting questions",
+    "createdAt" : "2025-01-09T06:02:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8245,
+    "title" : "Obfuscation of Path Parameters in APM",
+    "createdAt" : "2025-01-17T15:12:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8297,
+    "title" : "Error in cloning process",
+    "createdAt" : "2025-01-29T06:46:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8435,
+    "title" : "Tests failing with timeout in ScalaTest not reported to DataDog",
+    "createdAt" : "2025-02-21T19:55:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8441,
+    "title" : "Could not get test method warnings with munit",
+    "createdAt" : "2025-02-24T16:32:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8455,
+    "title" : "No instrumentation support for Vert.x postgresql client",
+    "createdAt" : "2025-02-26T14:32:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8514,
+    "title" : "trace resource grouping overly normalized, not showing full path",
+    "createdAt" : "2025-03-05T17:34:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8567,
+    "title" : "Support Jedis 5.0+",
+    "createdAt" : "2025-03-14T15:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8586,
+    "title" : "Add support for JDK 24",
+    "createdAt" : "2025-03-19T10:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8607,
+    "title" : "JVM Instability with DD_PROFILING_DDPROF_ENABLED=true",
+    "createdAt" : "2025-03-24T05:36:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8616,
+    "title" : "Support OpenContainers Annotations Spec",
+    "createdAt" : "2025-03-24T21:18:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8665,
+    "title" : "munit and junit test reporting does not work when sbt runs tests in fork mode",
+    "createdAt" : "2025-04-02T22:57:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8672,
+    "title" : "Wrong git sha reported from github action test run on custom ref checkout",
+    "createdAt" : "2025-04-04T16:55:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8696,
+    "title" : "File descriptor leak introduced in dd-java-agent 1.48.1",
+    "createdAt" : "2025-04-15T10:52:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8725,
+    "title" : "Interceptor keeps sending errors even setting them to false.",
+    "createdAt" : "2025-04-23T11:32:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8786,
+    "title" : "Pods don't start due to missing datadog agent in single step instrumentation",
+    "createdAt" : "2025-05-08T04:25:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8787,
+    "title" : "dd-java-agent 1.48.2 uses ~100-200MiB more memory",
+    "createdAt" : "2025-05-08T05:11:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8808,
+    "title" : "Got issue when using latest version 1.49.0",
+    "createdAt" : "2025-05-13T02:19:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8834,
+    "title" : "dd.trace.sampling.rules is not support regular expressions?",
+    "createdAt" : "2025-05-16T05:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8835,
+    "title" : "1.49.0 on arm64 crashes on libjavaProfiler",
+    "createdAt" : "2025-05-16T06:27:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8843,
+    "title" : "dd-java-agent do not work with -Djdk.tracePinnedThreads VM option",
+    "createdAt" : "2025-05-19T02:26:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8874,
+    "title" : "Excessive Heap Memory Usage on Deployment with dynamic_instrumentation Enabled in dd-java-agent 1.48.2 / 1.49.0",
+    "createdAt" : "2025-05-23T14:53:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8910,
+    "title" : "NoClassDefFoundError in dd-trace-ot",
+    "createdAt" : "2025-06-03T07:29:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8911,
+    "title" : "Wrong DD Service on Spring Kafka Consume",
+    "createdAt" : "2025-06-03T08:58:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8920,
+    "title" : "Datadog CI Visibility broken with JUnit 5.13.0",
+    "createdAt" : "2025-06-04T10:42:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8971,
+    "title" : "[GraalVM 24] datadog.trace.api.cache.QualifiedClassNameCache are persisted in the image heap",
+    "createdAt" : "2025-06-12T10:05:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9017,
+    "title" : "datadog.trace.instrumentation.akkahttp.DatadogServerRequestResponseFlowWrapper$1-DatadogServerRequestResponseFlowWrapper triggers NPE",
+    "createdAt" : "2025-06-20T17:25:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9044,
+    "title" : "java.lang.ArrayIndexOutOfBoundsException: Index 93 out of bounds for length 93",
+    "createdAt" : "2025-06-27T07:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9061,
+    "title" : "JAR checksum of Maven artifact doesn't match GitHub release",
+    "createdAt" : "2025-06-30T08:14:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9155,
+    "title" : "How to start trace with custom trace-id and parent-id?",
+    "createdAt" : "2025-07-11T08:01:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9159,
+    "title" : "com.datadog.appsec.config.MergedAsmFeatures not Initialized",
+    "createdAt" : "2025-07-11T10:40:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9167,
+    "title" : "JVM crash",
+    "createdAt" : "2025-07-14T10:41:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9212,
+    "title" : "Springboot metrics are \"duplicated\"",
+    "createdAt" : "2025-07-22T13:00:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9230,
+    "title" : "Allow DBM <> APM trace comments in SQLCommenter to be appended instead of forcing prepend",
+    "createdAt" : "2025-07-23T23:20:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9232,
+    "title" : "Dropped due to a buffer overflow: [1 spans] (Will not log warnings for 1 minute)",
+    "createdAt" : "2025-07-24T07:25:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9295,
+    "title" : "Missing PR number in CiVisibilityRepoServices implementation",
+    "createdAt" : "2025-08-01T16:58:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9312,
+    "title" : "Runtime class loading causes crash on 1.52.0; DD Java Agent clashes with OTel Agent JAR",
+    "createdAt" : "2025-08-05T14:11:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9331,
+    "title" : "Disable server part of netty integration",
+    "createdAt" : "2025-08-07T09:25:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9335,
+    "title" : "Native build not working with 1.52.0",
+    "createdAt" : "2025-08-07T14:58:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9346,
+    "title" : "NullPointerException in AppSec - Cannot invoke \"String.length()\" because \"string\" is null",
+    "createdAt" : "2025-08-09T01:13:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9372,
+    "title" : "LLMObs retrieval and embedding span creation methods are not static",
+    "createdAt" : "2025-08-15T23:53:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9393,
+    "title" : "DD_TRACE_SAMPLING_RULES has no effect",
+    "createdAt" : "2025-08-20T13:52:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9396,
+    "title" : "PekkoHttpServerInstrumentationAsyncHttp2Test.\"test exception\" is flaky",
+    "createdAt" : "2025-08-20T19:49:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9399,
+    "title" : "NullPointerException in ScopeStack.checkOverdueScopes() due to race condition on 'top' field",
+    "createdAt" : "2025-08-21T01:32:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9400,
+    "title" : "Unix Domain sockets (UDS) error when starting profiler",
+    "createdAt" : "2025-08-21T03:40:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9417,
+    "title" : "Test IastOverheadControlSpringBootSmokeTest.'Test that all the vulnerabilities are detected' is flaky",
+    "createdAt" : "2025-08-25T12:40:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9508,
+    "title" : "Excessive INFO logging from ConfigurationUpdater after latest deployment",
+    "createdAt" : "2025-09-10T14:25:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9560,
+    "title" : "GraalVM 25 Failed Unsupported Unsafe",
+    "createdAt" : "2025-09-18T12:05:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9680,
+    "title" : "dd-trace-java is incompatible with java 24 / 25 AOT caching",
+    "createdAt" : "2025-10-06T23:37:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9681,
+    "title" : "JVM 25 warning - remove usage of sun.misc.Unsafe",
+    "createdAt" : "2025-10-07T09:24:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9772,
+    "title" : "Parsing OS version fails",
+    "createdAt" : "2025-10-16T08:50:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9775,
+    "title" : "Trace ID leakage in reactive Kafka consumer concatMap operations",
+    "createdAt" : "2025-10-16T11:29:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9830,
+    "title" : "Constant JVM crashes running with JDK 25",
+    "createdAt" : "2025-10-22T13:47:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9890,
+    "title" : "Span in Kotlin `withTimeout` has wrong parent",
+    "createdAt" : "2025-10-31T13:37:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9900,
+    "title" : "Datadog dd-trace-java v1.51.2, the main version of OkHttp present in the agent’s runtime dependencies is still okhttp 3.12.15",
+    "createdAt" : "2025-11-04T05:22:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9917,
+    "title" : "Spring Actuator created extra resources in APM",
+    "createdAt" : "2025-11-07T15:41:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9928,
+    "title" : "Severe performance problems in 1.54.0, 1.55.0, 1.56.0, 1.57.0, 1.58.0",
+    "createdAt" : "2025-11-11T12:51:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9937,
+    "title" : "Strong encapsulation warning in Java 25.",
+    "createdAt" : "2025-11-12T10:25:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9984,
+    "title" : "Datadog context is not passed inside virtual threads.",
+    "createdAt" : "2025-11-17T15:47:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10017,
+    "title" : "Amazon Corretto Java 8 crashes since trace agent v1.56.0, v1.55.0 was good",
+    "createdAt" : "2025-11-21T20:42:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10031,
+    "title" : "Baggage injected via DD_TRACE_HEADER_BAGGAGE is not retrievable via OTEL Baggage API",
+    "createdAt" : "2025-11-25T16:25:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10047,
+    "title" : "Provide Environment Variable for setting `datadog.slf4j.simpleLogger.jsonEnabled` configuration",
+    "createdAt" : "2025-11-28T14:36:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10050,
+    "title" : "Mule grizzly.request missing from trace.",
+    "createdAt" : "2025-11-28T16:37:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10051,
+    "title" : "DD_APM_TRACING_ENABLED does not work",
+    "createdAt" : "2025-11-29T15:56:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10052,
+    "title" : "Improvement: Optimize CompressingRequestBody memory usage by removing Okio and redundant buffering",
+    "createdAt" : "2025-12-01T01:33:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10244,
+    "title" : "Disable DD_TRACE_COUCHBASE_INTERNAL_SPANS_ENABLED by default",
+    "createdAt" : "2025-12-18T18:37:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10245,
+    "title" : "Update DEFAULT_HTTP_CLIENT_ERROR_STATUSES to include 5xx status codes",
+    "createdAt" : "2025-12-18T18:44:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10267,
+    "title" : "NoSuchFieldError on Java record when Datadog Java tracer integrations are enabled (Java 21 & 25, Linux aarch64)",
+    "createdAt" : "2025-12-23T01:14:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10383,
+    "title" : "apache httpclient 5 - http calls done in interceptors not instrumented",
+    "createdAt" : "2026-01-14T22:14:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10423,
+    "title" : "Add option to capture Redis command arguments in span resource name",
+    "createdAt" : "2026-01-22T14:33:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10446,
+    "title" : "[GraalVM] v1.58.2 breaks native image builds - profiler ClassNotFoundException and SIGBUS crash",
+    "createdAt" : "2026-01-26T18:35:53Z",
+    "state" : "OPEN"
+  } ]
+}

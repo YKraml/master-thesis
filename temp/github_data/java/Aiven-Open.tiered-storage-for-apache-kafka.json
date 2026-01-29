@@ -1,0 +1,666 @@
+{
+  "repoOwner" : "Aiven-Open",
+  "repoName" : "tiered-storage-for-apache-kafka",
+  "forks" : [ {
+    "createdAt" : "2023-06-16T12:38:47Z"
+  }, {
+    "createdAt" : "2023-08-02T19:46:26Z"
+  }, {
+    "createdAt" : "2023-08-14T20:52:30Z"
+  }, {
+    "createdAt" : "2023-09-27T08:27:44Z"
+  }, {
+    "createdAt" : "2023-10-23T13:05:06Z"
+  }, {
+    "createdAt" : "2023-10-25T09:30:06Z"
+  }, {
+    "createdAt" : "2023-12-09T00:42:26Z"
+  }, {
+    "createdAt" : "2024-03-04T01:33:48Z"
+  }, {
+    "createdAt" : "2024-03-14T10:13:55Z"
+  }, {
+    "createdAt" : "2024-03-29T11:36:43Z"
+  }, {
+    "createdAt" : "2024-03-30T07:48:57Z"
+  }, {
+    "createdAt" : "2024-05-09T01:40:35Z"
+  }, {
+    "createdAt" : "2024-05-10T03:16:24Z"
+  }, {
+    "createdAt" : "2024-06-27T10:12:25Z"
+  }, {
+    "createdAt" : "2024-07-22T01:03:06Z"
+  }, {
+    "createdAt" : "2024-07-31T15:23:51Z"
+  }, {
+    "createdAt" : "2024-08-27T10:52:22Z"
+  }, {
+    "createdAt" : "2024-09-25T14:20:39Z"
+  }, {
+    "createdAt" : "2024-10-26T12:48:13Z"
+  }, {
+    "createdAt" : "2024-12-16T09:13:47Z"
+  }, {
+    "createdAt" : "2025-02-05T03:35:13Z"
+  }, {
+    "createdAt" : "2025-03-04T12:05:37Z"
+  }, {
+    "createdAt" : "2025-03-31T11:20:56Z"
+  }, {
+    "createdAt" : "2025-04-08T08:02:52Z"
+  }, {
+    "createdAt" : "2025-04-11T16:28:20Z"
+  }, {
+    "createdAt" : "2025-04-21T21:08:04Z"
+  }, {
+    "createdAt" : "2025-06-06T10:57:24Z"
+  }, {
+    "createdAt" : "2025-06-07T16:17:27Z"
+  }, {
+    "createdAt" : "2025-06-10T03:21:49Z"
+  }, {
+    "createdAt" : "2025-06-17T15:28:19Z"
+  }, {
+    "createdAt" : "2025-06-23T03:33:44Z"
+  }, {
+    "createdAt" : "2025-08-20T09:27:13Z"
+  }, {
+    "createdAt" : "2025-08-23T03:35:50Z"
+  }, {
+    "createdAt" : "2025-09-04T09:32:39Z"
+  }, {
+    "createdAt" : "2025-09-04T13:11:51Z"
+  }, {
+    "createdAt" : "2025-09-05T08:18:49Z"
+  }, {
+    "createdAt" : "2025-09-22T17:35:15Z"
+  }, {
+    "createdAt" : "2025-10-03T07:16:20Z"
+  }, {
+    "createdAt" : "2025-10-03T22:28:34Z"
+  }, {
+    "createdAt" : "2025-11-26T14:08:51Z"
+  }, {
+    "createdAt" : "2025-12-05T20:48:42Z"
+  }, {
+    "createdAt" : "2025-12-10T09:24:31Z"
+  }, {
+    "createdAt" : "2025-12-10T09:30:38Z"
+  }, {
+    "createdAt" : "2025-12-23T05:29:39Z"
+  }, {
+    "createdAt" : "2026-01-20T21:24:01Z"
+  } ],
+  "issues" : [ {
+    "number" : 124,
+    "title" : "S3 key/folder structure for performance",
+    "createdAt" : "2023-03-14T19:13:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 125,
+    "title" : "the multipart upload performance is not ideal",
+    "createdAt" : "2023-03-14T22:15:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 126,
+    "title" : "S3 file size issue",
+    "createdAt" : "2023-03-14T22:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Use S3's range Object to fetch a chunk of bytes",
+    "createdAt" : "2023-03-14T22:24:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Too many byte copies during S3 upload",
+    "createdAt" : "2023-03-15T02:01:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 129,
+    "title" : "Disable compression if Kafka is configured to compress log segments",
+    "createdAt" : "2023-03-16T09:30:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Add onboarding and integration instructions",
+    "createdAt" : "2023-03-27T16:31:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 137,
+    "title" : "Add Java 17 to CI",
+    "createdAt" : "2023-03-30T08:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "[New implementation] Add toString for index classes",
+    "createdAt" : "2023-04-04T04:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "[New implementation] make certain fields required on JSON deserialization",
+    "createdAt" : "2023-04-04T05:24:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "[New implementation] Document chunk enumerators thread (un-)safeness",
+    "createdAt" : "2023-04-04T14:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "[New implementation] Rename `tiered.storage` part in package name to `tieredstorage`",
+    "createdAt" : "2023-04-05T08:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "[New implementation] Consider having checksums for uploaded segments",
+    "createdAt" : "2023-04-06T05:27:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 158,
+    "title" : "[New implementation] Consider adding more metadata to manifest to make remote segments self-sufficient",
+    "createdAt" : "2023-04-06T15:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "[New implementation] Unify terms \"encryption key\" and \"secret key\"",
+    "createdAt" : "2023-04-17T10:51:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "[New implementation] Add prefix to RSM config",
+    "createdAt" : "2023-04-18T08:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "[New implementation] Compress chunks when logs are uncompressed",
+    "createdAt" : "2023-04-20T08:02:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "[New implementation] Consider renaming object.storage.factory setting to something better",
+    "createdAt" : "2023-04-20T13:37:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "[New implementation] Properly throw RemoteResourceNotFoundException from RSM",
+    "createdAt" : "2023-04-20T14:39:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "[New implementation] Consider concatenating index files into a single blob on remote storage",
+    "createdAt" : "2023-04-21T10:23:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "[New implementation] Allow KEK to be specified as PEM string instead of paths",
+    "createdAt" : "2023-05-02T09:07:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "[New implementation] Review project structure",
+    "createdAt" : "2023-05-04T09:14:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "[New implementation] Refactor transform/detransform logic to be on the same component",
+    "createdAt" : "2023-05-08T10:51:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 212,
+    "title" : "[New implementation] Decide on the RSM class name",
+    "createdAt" : "2023-05-09T14:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "[New implementation] Decide on directory structure",
+    "createdAt" : "2023-05-11T17:52:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 224,
+    "title" : "Is branch 3.3-2022-10-06-tiered-storage ready to be used?",
+    "createdAt" : "2023-05-14T09:29:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "[New implementation] Make S3 part size in multipart upload configurable",
+    "createdAt" : "2023-05-23T13:49:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Exclude Jackson from distribution",
+    "createdAt" : "2023-06-02T10:12:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Gradle's `releaseTarGz` doesn't run checks (including tests)",
+    "createdAt" : "2023-06-05T12:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "[New implementation] The fetchLogSegment implementation is flawed",
+    "createdAt" : "2023-06-15T16:15:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "S3 download speed is too slow when consumer needs to read data from S3 storage",
+    "createdAt" : "2023-06-27T01:37:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 303,
+    "title" : "Document local cache",
+    "createdAt" : "2023-06-30T14:01:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Document configurations in usage section",
+    "createdAt" : "2023-07-05T11:14:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 313,
+    "title" : "Add descriptions to plugin metrics",
+    "createdAt" : "2023-07-11T10:43:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 314,
+    "title" : "Test issue for Jira sync",
+    "createdAt" : "2023-07-12T13:24:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "test issue for jira sync",
+    "createdAt" : "2023-07-12T13:45:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "test issue for jira sync",
+    "createdAt" : "2023-07-13T11:22:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Use DeleteObjects to delete whole segment faster and with fewer requests",
+    "createdAt" : "2023-07-14T12:50:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Move configs to its own package",
+    "createdAt" : "2023-07-19T11:38:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "E2E tests: Disabled \"delete test\" blocks cleaning storage",
+    "createdAt" : "2023-08-31T09:33:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 373,
+    "title" : "Add e2e tests for GCS",
+    "createdAt" : "2023-09-03T07:26:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Document custom metadata",
+    "createdAt" : "2023-09-06T04:03:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 395,
+    "title" : "Use monotonic time measure",
+    "createdAt" : "2023-09-22T03:51:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 404,
+    "title" : "Allow fetch caching to complete even if input stream closes",
+    "createdAt" : "2023-09-30T12:14:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Build Docker image before E2E tests",
+    "createdAt" : "2023-10-03T11:27:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 417,
+    "title" : "Add `equals` and `hashCode` tests for Manifest types",
+    "createdAt" : "2023-10-09T19:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "Create read tests on precreated files",
+    "createdAt" : "2023-10-10T09:37:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 421,
+    "title" : "Tiered Storage Plugin Implementation for Azure Blob Storage",
+    "createdAt" : "2023-10-16T09:29:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "Publish release packages",
+    "createdAt" : "2023-11-16T09:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "Use direct I/O with disk cache",
+    "createdAt" : "2023-11-24T05:21:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "Retrieve message has error in logs",
+    "createdAt" : "2023-12-14T06:30:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 479,
+    "title" : "error in consumer-perf-test",
+    "createdAt" : "2024-01-05T03:15:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Some data were not uploaded to the S3 when the num of partition  > 7",
+    "createdAt" : "2024-01-19T08:34:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 483,
+    "title" : "Remote fetch operations failed with interrupted exception",
+    "createdAt" : "2024-01-23T17:30:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 498,
+    "title" : "When is the next version expected to be released, I am currently unable to download snapshot.",
+    "createdAt" : "2024-03-04T06:02:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "How can I compile the project?",
+    "createdAt" : "2024-03-04T07:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "ERROR Exiting Kafka due to fatal exception during startup. (kafka.Kafka$) java.lang.NullPointerException",
+    "createdAt" : "2024-03-04T08:37:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "rsm.config.storage.s3.path.style.access.enabled=false  invalid",
+    "createdAt" : "2024-03-05T03:23:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "software.amazon.awssdk.core.exception.AbortedException: Thread was interrupted",
+    "createdAt" : "2024-03-05T06:44:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "rsm.config.fetch.chunk.cache.path not in force",
+    "createdAt" : "2024-03-07T07:19:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 511,
+    "title" : "Add AWS STS to allow using AWS creds from service account",
+    "createdAt" : "2024-03-13T05:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 513,
+    "title" : "Disk space not released",
+    "createdAt" : "2024-03-14T09:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "How to limit the speed of tiered storage",
+    "createdAt" : "2024-03-21T02:19:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Thinking about disaster recovery",
+    "createdAt" : "2024-04-08T13:55:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 538,
+    "title" : "Is there anyway can reduce the GET QPS for S3",
+    "createdAt" : "2024-04-23T15:57:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "When can the community provide an official version?",
+    "createdAt" : "2024-05-15T10:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "Setting multiple retention results in weird result",
+    "createdAt" : "2024-05-16T10:06:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 550,
+    "title" : "Tiered storage data segment not is purged for retention time",
+    "createdAt" : "2024-05-23T01:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "Upload rate tests could be flaky",
+    "createdAt" : "2024-05-27T16:04:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 557,
+    "title" : "Can the remote_log_metadata topic enable the remote.storage.enable configuration?",
+    "createdAt" : "2024-06-02T14:47:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 560,
+    "title" : "The local disk retention setting doesn't seem to take effect",
+    "createdAt" : "2024-06-16T00:30:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 562,
+    "title" : "After enabling tiered storage, occasional residual logs are left in the replica.",
+    "createdAt" : "2024-06-22T06:04:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 570,
+    "title" : "Add filesystem jars into release artifacts",
+    "createdAt" : "2024-07-05T09:01:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 573,
+    "title" : "Plugin seems to not work on environment with FIPS",
+    "createdAt" : "2024-07-24T12:39:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Tiered Storage functionality is disabled in the broker. Topic cannot be configured with remote log storage.",
+    "createdAt" : "2024-07-24T13:16:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 584,
+    "title" : "many error logs output when fetching data from AWS S3",
+    "createdAt" : "2024-08-30T09:19:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 594,
+    "title" : "Add ability to pass encryption keys as strings",
+    "createdAt" : "2024-09-16T10:55:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 596,
+    "title" : "Some local partitions's segments don't get purged when over retention time",
+    "createdAt" : "2024-09-22T00:42:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 608,
+    "title" : "[Alert] Discussion about indicators for scaling up Kafka",
+    "createdAt" : "2024-10-12T15:24:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 616,
+    "title" : "Does GCS fetching result in a lot of extra bandwidth?",
+    "createdAt" : "2024-10-26T19:25:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 617,
+    "title" : "Should we recommend lower segment.ms settings in the presence of this config?",
+    "createdAt" : "2024-10-28T09:17:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 625,
+    "title" : "Missing core metrics from remote-storage-manager-metrics",
+    "createdAt" : "2024-11-19T03:12:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 635,
+    "title" : "How to Consume Messages Stored in S3 Minio Storage?",
+    "createdAt" : "2024-12-22T12:01:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 641,
+    "title" : "Add a demo with KRaft",
+    "createdAt" : "2025-01-03T11:36:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "Segment fetch requested bytes abnormally high",
+    "createdAt" : "2025-01-20T13:05:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 648,
+    "title" : "How to increase s3 upload speed",
+    "createdAt" : "2025-02-14T09:38:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 649,
+    "title" : "Error while copying log segments: java.lang.NullPointerException",
+    "createdAt" : "2025-02-14T15:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 663,
+    "title" : "ConsumerGroup resetting offset when topic leader changed",
+    "createdAt" : "2025-03-14T06:36:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 674,
+    "title" : "AWS S3 Demo does not work properly",
+    "createdAt" : "2025-04-11T16:27:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "Getting this error after enabling kafka tier storage",
+    "createdAt" : "2025-05-06T18:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Flaky DiskChunkCacheMetricsTest#metrics",
+    "createdAt" : "2025-06-02T21:20:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 690,
+    "title" : "Flaky ChunkCacheMetricsTest",
+    "createdAt" : "2025-06-02T21:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "Error Deleting Chunks from Tencent Cloud COS via S3 API: Missing Content-MD5 Header",
+    "createdAt" : "2025-06-10T02:32:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "After Kraft Migration \"java.lang.IllegalArgumentException: Invalid connection string.\" for tieredstorage",
+    "createdAt" : "2025-06-17T06:56:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 696,
+    "title" : "java.lang.InterruptedException when tring to read events from remote storage",
+    "createdAt" : "2025-06-18T20:23:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 698,
+    "title" : "Failed read position from the transaction index cache",
+    "createdAt" : "2025-06-20T14:05:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "Some old segment are not moved to tiered storage",
+    "createdAt" : "2025-06-20T14:22:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 706,
+    "title" : "Bucket refill fatal error on broker start",
+    "createdAt" : "2025-07-04T05:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "Remote upload failed",
+    "createdAt" : "2025-07-21T03:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 708,
+    "title" : "Not able to scrape aiven tiered storage related metrics",
+    "createdAt" : "2025-07-21T10:24:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 709,
+    "title" : "rsm.config.upload.rate.limit.bytes.per.second not working",
+    "createdAt" : "2025-07-23T03:25:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 710,
+    "title" : "Maven artifact for the version 1.0.0",
+    "createdAt" : "2025-07-30T07:26:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 714,
+    "title" : "Can the community deploy the project to the central repository?",
+    "createdAt" : "2025-08-07T08:30:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 715,
+    "title" : "Separate when index file not found and index description in manifest not found",
+    "createdAt" : "2025-08-11T05:44:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 721,
+    "title" : "S3ErrorMetricsTest is flaky",
+    "createdAt" : "2025-08-15T11:19:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 731,
+    "title" : "iceberg demo fails due to wrong mc usage",
+    "createdAt" : "2025-09-04T09:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 734,
+    "title" : "Need limit for upload.rate.limit.bytes.per.second config",
+    "createdAt" : "2025-09-05T07:51:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 736,
+    "title" : "The issue of disk space not being freed has occurred again",
+    "createdAt" : "2025-09-12T02:15:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 751,
+    "title" : "if any work for Oracle OCI Object Storage support ongoing?",
+    "createdAt" : "2025-10-03T13:53:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 760,
+    "title" : "Nested and repeated ExecutionException in ChunkCache.getChunk",
+    "createdAt" : "2025-10-13T09:54:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 762,
+    "title" : "Consuming from Iceberg topic results in incorrect behaviour",
+    "createdAt" : "2025-10-15T04:29:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "When encrypting, is there an error in `calculateChunkIndex`?",
+    "createdAt" : "2025-11-05T04:00:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 773,
+    "title" : "Aiven Tiered storage with Bitnami Kafka 3.7.1-possible Compatibility issue",
+    "createdAt" : "2025-11-19T23:10:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 776,
+    "title" : "Aiven Tiered Storage plugin fails on Kafka 4.1.0 due to SLF4J 2.x dependency (SLF4JServiceProvider missing)",
+    "createdAt" : "2025-11-26T05:24:21Z",
+    "state" : "CLOSED"
+  } ]
+}

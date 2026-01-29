@@ -1,0 +1,838 @@
+{
+  "repoOwner" : "mapstruct",
+  "repoName" : "mapstruct-idea",
+  "forks" : [ {
+    "createdAt" : "2017-08-05T13:16:11Z"
+  }, {
+    "createdAt" : "2017-08-15T08:02:11Z"
+  }, {
+    "createdAt" : "2017-08-25T13:06:07Z"
+  }, {
+    "createdAt" : "2017-09-09T04:51:30Z"
+  }, {
+    "createdAt" : "2017-11-05T18:47:33Z"
+  }, {
+    "createdAt" : "2018-04-02T07:18:29Z"
+  }, {
+    "createdAt" : "2019-06-28T05:32:49Z"
+  }, {
+    "createdAt" : "2020-04-21T19:25:05Z"
+  }, {
+    "createdAt" : "2021-04-26T08:36:42Z"
+  }, {
+    "createdAt" : "2021-08-29T10:45:51Z"
+  }, {
+    "createdAt" : "2021-10-30T04:30:46Z"
+  }, {
+    "createdAt" : "2021-11-25T06:39:32Z"
+  }, {
+    "createdAt" : "2021-12-17T02:48:31Z"
+  }, {
+    "createdAt" : "2021-12-30T05:38:02Z"
+  }, {
+    "createdAt" : "2022-01-21T10:44:39Z"
+  }, {
+    "createdAt" : "2022-01-26T07:16:19Z"
+  }, {
+    "createdAt" : "2022-03-03T05:14:21Z"
+  }, {
+    "createdAt" : "2022-04-15T18:55:26Z"
+  }, {
+    "createdAt" : "2022-04-18T13:21:06Z"
+  }, {
+    "createdAt" : "2022-06-21T22:11:53Z"
+  }, {
+    "createdAt" : "2022-07-21T19:30:50Z"
+  }, {
+    "createdAt" : "2022-08-18T07:37:25Z"
+  }, {
+    "createdAt" : "2022-08-25T05:55:53Z"
+  }, {
+    "createdAt" : "2022-10-25T02:50:47Z"
+  }, {
+    "createdAt" : "2022-10-25T12:36:51Z"
+  }, {
+    "createdAt" : "2023-02-21T01:48:47Z"
+  }, {
+    "createdAt" : "2023-04-14T12:49:15Z"
+  }, {
+    "createdAt" : "2023-06-12T01:56:37Z"
+  }, {
+    "createdAt" : "2023-07-15T01:41:44Z"
+  }, {
+    "createdAt" : "2023-08-25T22:28:39Z"
+  }, {
+    "createdAt" : "2023-10-05T14:06:37Z"
+  }, {
+    "createdAt" : "2023-10-18T05:56:49Z"
+  }, {
+    "createdAt" : "2024-03-07T20:44:30Z"
+  }, {
+    "createdAt" : "2024-05-15T02:06:58Z"
+  }, {
+    "createdAt" : "2024-07-20T07:17:27Z"
+  }, {
+    "createdAt" : "2024-11-28T07:53:23Z"
+  }, {
+    "createdAt" : "2024-12-03T12:24:55Z"
+  }, {
+    "createdAt" : "2025-02-12T13:55:36Z"
+  }, {
+    "createdAt" : "2025-06-11T06:33:09Z"
+  }, {
+    "createdAt" : "2025-11-11T16:58:08Z"
+  }, {
+    "createdAt" : "2025-11-27T09:14:39Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Add quick fixes for unmapped target properties",
+    "createdAt" : "2017-08-15T19:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Use the AccessorNamingStrategy during the auto-completion proposals",
+    "createdAt" : "2017-08-16T20:18:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3,
+    "title" : "Add auto completion (reference contributor) for ValueMapping",
+    "createdAt" : "2017-08-20T06:32:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Add smart completion for target in `@Mapping`",
+    "createdAt" : "2017-08-20T06:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Add smart completion for ValueMapping",
+    "createdAt" : "2017-08-20T06:34:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Add error info when class is not annotated with Mapper",
+    "createdAt" : "2017-08-23T15:38:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Add warn info when Mapper.getMapper(Class) is used for non default mappers",
+    "createdAt" : "2017-09-05T17:02:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Publish to intellij repo",
+    "createdAt" : "2017-09-07T09:03:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Quick fix for add unmapped target property",
+    "createdAt" : "2017-09-17T09:04:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "String index out of range: -1",
+    "createdAt" : "2017-09-20T13:38:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Inspection to highlight incorrect @Mapping values",
+    "createdAt" : "2017-09-28T07:30:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "Refactor-rename a field breaks mapping when also using lombok",
+    "createdAt" : "2017-09-28T19:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Converter implementation is not refreshed in IDEA",
+    "createdAt" : "2017-10-11T14:31:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 15,
+    "title" : "Correctly dispose of libraries during testing",
+    "createdAt" : "2017-10-25T22:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Auto-completion doesn't work for public fields",
+    "createdAt" : "2017-11-05T12:10:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Refresh of generated mapper not working reliably",
+    "createdAt" : "2017-11-05T18:22:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Have equivalents to Eclipse error markers",
+    "createdAt" : "2017-11-05T18:24:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 20,
+    "title" : "Kotlin support for target / source in @Mapping and @ValueMapping",
+    "createdAt" : "2017-11-08T13:09:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Unmapped target properties",
+    "createdAt" : "2018-01-20T03:48:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Auto-completion doesn't work in IDEA (version: 2017.2.5)",
+    "createdAt" : "2018-02-28T10:28:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Support for both fluent and conventional getters/setters",
+    "createdAt" : "2018-06-07T19:34:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Overridden method is suggested twice",
+    "createdAt" : "2018-09-03T10:14:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Add quick fix for can't map property X to Y",
+    "createdAt" : "2018-11-24T22:49:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 27,
+    "title" : "Compiler warning in decorator",
+    "createdAt" : "2019-02-14T08:57:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Add unmapped target property quick fix should move cursor to source",
+    "createdAt" : "2019-02-24T15:35:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Auto completion doesn't work in IDEA(version 2018.3.5)",
+    "createdAt" : "2019-03-01T10:25:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "@Mapping(expression=\"java()\") Code completion",
+    "createdAt" : "2019-04-03T11:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Compiler warning with a default method",
+    "createdAt" : "2019-04-22T07:52:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "New Version 1.1.1",
+    "createdAt" : "2019-06-11T13:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "unmapped target property boolean with is prefix",
+    "createdAt" : "2019-06-21T13:41:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "unmapped target property with custom method in mapper",
+    "createdAt" : "2019-06-21T13:52:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Incorrect \"unmapped property\" warning with inheritance",
+    "createdAt" : "2019-08-01T15:06:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Unmapped field when the field name starts with 'set' and Lombok @Builder is used",
+    "createdAt" : "2019-08-05T10:57:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Want to refer to other mappers in customized mapping",
+    "createdAt" : "2019-10-23T04:48:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Mapping of Enum with public static method false Unmapped target property warning ",
+    "createdAt" : "2019-10-25T10:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Auto completion doesn't work in IDEA version 2019.2 with Lombok @Data",
+    "createdAt" : "2019-11-22T12:23:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Mapping enum with methods causes IDEA missing target mapping warnings that aren't valid",
+    "createdAt" : "2020-01-23T23:36:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Feature request: add all unmapped properties",
+    "createdAt" : "2020-03-18T09:46:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Bug: smart completion doesn't work for \"target\" with Lombok @SuperBuilder",
+    "createdAt" : "2020-05-19T09:17:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Autocompletion for constructors",
+    "createdAt" : "2020-06-01T15:21:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Find usages and renaming for constructor fields",
+    "createdAt" : "2020-06-01T16:03:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 47,
+    "title" : "Incorrect \"unwrapped target property\" warning for constant",
+    "createdAt" : "2020-06-12T07:11:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Support for Immutables builders",
+    "createdAt" : "2020-06-20T16:20:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 49,
+    "title" : "Unmapped target properties when using meta annotation",
+    "createdAt" : "2020-06-26T10:54:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Quick fixes - Fix all '...' problems in file",
+    "createdAt" : "2020-06-30T15:34:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 51,
+    "title" : "Quick fix for Mapping - change the order of target and source",
+    "createdAt" : "2020-06-30T16:05:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "ClassCastException using expression in Mappings",
+    "createdAt" : "2020-07-04T16:59:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Class cast exception in MapStruct Support plugin.",
+    "createdAt" : "2020-07-07T07:30:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Unmapped target properties should take BeanMapping#ignoreByDefault into consideration",
+    "createdAt" : "2020-07-18T07:17:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "idea plugins question",
+    "createdAt" : "2020-08-05T02:50:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Mapping nested bean properties to current target not supported (MapStruct 1.4.0.Beta3)",
+    "createdAt" : "2020-08-15T08:49:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "[BUG] Exception in IDEA 2020.2",
+    "createdAt" : "2020-08-20T13:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "False positive unmapped target property for multi source methods",
+    "createdAt" : "2020-09-04T13:15:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "lots of exceptions",
+    "createdAt" : "2020-09-07T13:55:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "I can not make it work in Android Studio",
+    "createdAt" : "2020-10-24T17:52:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Idea 2020.3 Internal error",
+    "createdAt" : "2020-12-02T02:16:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Add plugin icon",
+    "createdAt" : "2020-12-14T02:25:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Support for the @InheritConfiguration",
+    "createdAt" : "2021-02-11T11:00:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Wrong parameter inference with expression=\"java(...)\"",
+    "createdAt" : "2021-02-24T09:16:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Support for Mapstruct explicit Builder disable",
+    "createdAt" : "2021-03-15T13:34:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Completion exception",
+    "createdAt" : "2021-03-19T14:23:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Consider using UAST",
+    "createdAt" : "2021-03-24T10:32:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Type information missing in auto completion for multi source methods and value mappings",
+    "createdAt" : "2021-03-27T11:00:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Do not use deprecated for removal code",
+    "createdAt" : "2021-04-01T08:02:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Cleanup pulls import into expression",
+    "createdAt" : "2021-04-20T10:41:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Too many non-blocking read actions submitted at once.",
+    "createdAt" : "2021-05-19T13:54:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 75,
+    "title" : "Completion of target and source properties in @Mapping doesn't work",
+    "createdAt" : "2021-05-21T15:26:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Field prompt will fail when using @SuperBuilder",
+    "createdAt" : "2021-06-22T08:31:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Add code completion for @BeanMapping#ignoreUnmappedSourceProperties",
+    "createdAt" : "2021-08-03T10:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Code completion for target with generic builder not working",
+    "createdAt" : "2021-08-04T12:42:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "multiple line expression syntax check is broken",
+    "createdAt" : "2021-09-09T08:38:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "Completion of nested property of generic source property",
+    "createdAt" : "2021-09-10T16:02:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 84,
+    "title" : "Inspections support for Kotlin",
+    "createdAt" : "2021-09-14T14:45:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 85,
+    "title" : "Support inherited properties",
+    "createdAt" : "2021-09-15T06:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "期望",
+    "createdAt" : "2021-12-01T07:57:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Plugin fatal crush in case using static constant in target field of @Mapping annotation",
+    "createdAt" : "2021-12-01T14:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Support for MapStruct SPI",
+    "createdAt" : "2022-02-14T07:41:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 94,
+    "title" : "IntelliJ plugin currently does not support meta annotations",
+    "createdAt" : "2022-02-22T21:36:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Redundant default parameter value assignment warning shouldn't appear if target is a string",
+    "createdAt" : "2022-04-01T03:50:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "No language injection for expressions when target is a field",
+    "createdAt" : "2022-04-15T09:03:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Multi-line Java expression flagged as invalid code",
+    "createdAt" : "2022-04-30T21:28:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 100,
+    "title" : "Error on MapStruct Support Intellij Plugin (Too many non-blocking read actions submitted at once)",
+    "createdAt" : "2022-05-20T13:30:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Support for Java 14+ records",
+    "createdAt" : "2022-05-25T20:42:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Support passing custom annotations to generated code",
+    "createdAt" : "2022-06-05T12:43:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 104,
+    "title" : "Outdated IntelliJ version",
+    "createdAt" : "2022-06-23T11:56:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "MapStruct Support 1.3.1 Completion of target and source properties in @Mapping can not work",
+    "createdAt" : "2022-06-24T09:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "[Feature Request] Support for mapstruct-spi-protobuf",
+    "createdAt" : "2022-07-14T22:40:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 107,
+    "title" : "Support for completion and Go To Definition within `Mapping#qualifiedByName`",
+    "createdAt" : "2022-07-19T16:24:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "IDE Internal Error",
+    "createdAt" : "2022-10-06T19:55:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "IntelliJ plugin reporting \"Unmapped target property\" although the property is sucesfully mapped by MapStruct for fields of child classes.",
+    "createdAt" : "2022-10-19T08:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Nested auto completion does not work with records",
+    "createdAt" : "2022-11-29T09:11:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Intellij plugin reports unmapped properties which are mapped in custom annotation",
+    "createdAt" : "2022-12-07T14:25:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Incorrect unmapped target warning for fluent setters",
+    "createdAt" : "2023-02-21T02:52:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Plugin incorrectly gives umapped target warning for Immutables-classes",
+    "createdAt" : "2023-04-14T12:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Renaming target or reference using constructor parameter name doesn't work",
+    "createdAt" : "2023-04-23T11:56:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Support chained mapping composition",
+    "createdAt" : "2023-04-25T15:55:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Use `unmappedTargetPolicy` in the unmapped target properties inspection",
+    "createdAt" : "2023-05-01T20:23:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Support for completion and Go To Definition within Mapping#qualifiedByName - for shared configurations",
+    "createdAt" : "2023-05-05T06:38:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "when I enable the plugin, the target class is different from the one when I disable the plugin",
+    "createdAt" : "2023-07-05T08:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "java.lang.ClassCastException: Object of type Address can't be cast to CompositeTracker",
+    "createdAt" : "2023-07-07T09:47:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Support the '-Amapstruct.unmappedTargetPolicy' config of maven-compiler-plugin ",
+    "createdAt" : "2023-07-15T01:21:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 151,
+    "title" : "Rework `@InheritConfiguration` and support auto-inheritance",
+    "createdAt" : "2023-09-08T21:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Fix build with ideaVersion `LATEST-EAP-SNAPSHOT`",
+    "createdAt" : "2023-10-18T07:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Fix workaround for getting the mockJDK annotations.jar in the gradle build",
+    "createdAt" : "2023-10-18T07:34:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Code completion doesn't work with lombok @SuperBuilder annotation",
+    "createdAt" : "2023-11-13T09:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Unmapped target properties warning is missing if source is a Java record",
+    "createdAt" : "2023-11-16T07:16:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Auto completion for InheritConfiguration#name, InheritInverseConfiguration#name",
+    "createdAt" : "2023-12-01T14:32:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 167,
+    "title" : "Disable unmapped target property warnings when implicitly mapping from a map",
+    "createdAt" : "2023-12-10T22:35:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Completion for properties don't work (both target and source)",
+    "createdAt" : "2023-12-29T06:35:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Array and Map paramter ignored as source-parameter if used as only source",
+    "createdAt" : "2024-01-28T23:33:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 174,
+    "title" : "Java expression",
+    "createdAt" : "2024-02-08T17:29:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Report Non-existing target properties as errors",
+    "createdAt" : "2024-03-10T18:52:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "WrongUsageOfMappersFactoryInspection ignores if componentModel is defined in MapperConfig",
+    "createdAt" : "2024-03-11T16:32:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "IDE Support of  `BeanMapping#ignoredTargets`",
+    "createdAt" : "2024-03-11T21:52:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 182,
+    "title" : "Code Completion didn't work well.",
+    "createdAt" : "2024-03-12T07:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Wrong usage of mappers factory should be able to remove static initializer",
+    "createdAt" : "2024-03-16T11:43:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 184,
+    "title" : "code wraps automatically, does not recognize keywords",
+    "createdAt" : "2024-03-27T07:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Incompatible with idea 2024.1 RC",
+    "createdAt" : "2024-03-27T09:04:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Plugin reports \"Can't find related attribute\" warning when using `source=\".\"`",
+    "createdAt" : "2024-03-29T22:32:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Code completion: mapTo... suggestions take precedence over more useful suggestions",
+    "createdAt" : "2024-04-15T12:32:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Code completion for annotation parameters like @Mapping is not working",
+    "createdAt" : "2024-04-16T02:21:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "False positive missing mapping warning",
+    "createdAt" : "2024-04-26T10:27:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Incorrect no source property defined inspection for `@Mapping`",
+    "createdAt" : "2024-05-02T10:38:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Renaming a @Getter annotated field results in a getter inside the mapping definition (instead of the new field name)",
+    "createdAt" : "2024-05-15T13:12:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 203,
+    "title" : "Add a warnig when using `source = \".\"`",
+    "createdAt" : "2024-07-21T10:55:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Expression can not get method hint when target uses @Lombok @FieldNameConstants",
+    "createdAt" : "2024-08-23T08:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "When using Lombok in @Mapping's target, the expression field will lose the reference relationship ",
+    "createdAt" : "2024-09-03T07:05:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Support Kotlin K2 mode",
+    "createdAt" : "2024-10-06T09:10:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Mappings (Mapping) with multiple sources does not highlight properly",
+    "createdAt" : "2024-11-07T08:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Remove warnings for fluent removers.",
+    "createdAt" : "2024-12-03T12:46:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 214,
+    "title" : "[reopen]Redundant default parameter value assignment warning shouldn't appear if target is a string",
+    "createdAt" : "2025-04-07T09:39:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 216,
+    "title" : "false errors on \"unknown properties\" after Pull Request #177 got merged",
+    "createdAt" : "2025-05-15T14:16:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Target properties with collection getter are not properly recognized",
+    "createdAt" : "2025-05-17T17:00:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Valid ValueMapping is incorrectly marked as error",
+    "createdAt" : "2025-05-17T18:20:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Properties with Lombok SuperBuilder are not properly resolved",
+    "createdAt" : "2025-05-17T18:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Improve messages for unknown reference",
+    "createdAt" : "2025-05-18T07:26:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Investigate 2025.2 `JavaErrorFixProvider`",
+    "createdAt" : "2025-05-26T06:27:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "References of `qualifiedByName` work for protected methods that are not accessible by mapstruct",
+    "createdAt" : "2025-05-30T20:51:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Can the properties set by the afterMapping method be detected?",
+    "createdAt" : "2025-06-11T08:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "MapStruct plugin does not support kotlin's data classes annotated with `@JvmRecord`",
+    "createdAt" : "2025-06-11T11:32:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 232,
+    "title" : "Setters in Java Records should not be recognized",
+    "createdAt" : "2025-06-14T21:43:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "\"Wrong usage of mappers factory\" should not be warning in Tests scope",
+    "createdAt" : "2025-07-17T07:23:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Mapping enum that implements an interface leads to \"Unmapped target property\" warning",
+    "createdAt" : "2025-07-18T15:08:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Disable unknown properties on mapping composition annotations",
+    "createdAt" : "2025-07-20T11:51:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Support fields that are written in the `@Ignored` annotation in the `UnmappedTargetPropertiesInspection`",
+    "createdAt" : "2025-07-20T12:00:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 238,
+    "title" : "Check unknown target properties in new `@Ignored` annotation",
+    "createdAt" : "2025-07-20T19:01:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 241,
+    "title" : "Inspection \"Target property must not be mapped more than once\" incorrectly flags multiple mappings to \".\"",
+    "createdAt" : "2025-08-13T19:26:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "For Map to Bean mappings, ignore unknown source property inspection",
+    "createdAt" : "2025-09-09T20:42:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Completion for java \"expression\" does't work with DTO as records",
+    "createdAt" : "2025-11-27T09:14:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 247,
+    "title" : "Plugin won't recognize @Named class",
+    "createdAt" : "2025-12-08T11:52:25Z",
+    "state" : "OPEN"
+  } ]
+}

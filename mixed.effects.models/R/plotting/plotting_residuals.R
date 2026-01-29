@@ -80,12 +80,13 @@ plot_residuals_qq <- function(data, model) {
   fitted_vals <- fitted(model)
   residual_data <- data.frame(Fitted = fitted_vals, Residuals = residuals)
 
-  # Base R Q-Q Plot
   qqnorm(residuals)
   qqline(
     residuals,
     col = "red"
   )
+
+  grid()
 }
 
 # ------------------------------------------------------------------------------

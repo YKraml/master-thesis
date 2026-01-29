@@ -1,0 +1,898 @@
+{
+  "repoOwner" : "danielwegener",
+  "repoName" : "logback-kafka-appender",
+  "forks" : [ {
+    "createdAt" : "2015-03-11T21:13:47Z"
+  }, {
+    "createdAt" : "2015-04-21T03:57:50Z"
+  }, {
+    "createdAt" : "2015-06-30T09:05:51Z"
+  }, {
+    "createdAt" : "2015-08-19T18:43:43Z"
+  }, {
+    "createdAt" : "2015-10-02T15:23:44Z"
+  }, {
+    "createdAt" : "2015-10-30T16:11:11Z"
+  }, {
+    "createdAt" : "2015-11-05T23:32:36Z"
+  }, {
+    "createdAt" : "2015-11-25T18:24:05Z"
+  }, {
+    "createdAt" : "2015-12-01T09:48:34Z"
+  }, {
+    "createdAt" : "2015-12-21T06:44:56Z"
+  }, {
+    "createdAt" : "2016-01-18T06:11:38Z"
+  }, {
+    "createdAt" : "2016-02-07T19:54:40Z"
+  }, {
+    "createdAt" : "2016-02-19T02:29:38Z"
+  }, {
+    "createdAt" : "2016-02-25T20:08:03Z"
+  }, {
+    "createdAt" : "2016-02-28T22:48:35Z"
+  }, {
+    "createdAt" : "2016-04-07T08:44:52Z"
+  }, {
+    "createdAt" : "2016-04-28T01:28:49Z"
+  }, {
+    "createdAt" : "2016-05-02T05:57:13Z"
+  }, {
+    "createdAt" : "2016-05-05T06:55:29Z"
+  }, {
+    "createdAt" : "2016-05-20T13:45:47Z"
+  }, {
+    "createdAt" : "2016-06-03T17:30:50Z"
+  }, {
+    "createdAt" : "2016-06-05T03:20:03Z"
+  }, {
+    "createdAt" : "2016-08-03T12:39:33Z"
+  }, {
+    "createdAt" : "2016-08-22T06:38:27Z"
+  }, {
+    "createdAt" : "2016-09-01T09:43:02Z"
+  }, {
+    "createdAt" : "2016-09-08T20:06:14Z"
+  }, {
+    "createdAt" : "2016-09-22T11:06:01Z"
+  }, {
+    "createdAt" : "2016-09-28T23:26:39Z"
+  }, {
+    "createdAt" : "2016-11-10T07:58:33Z"
+  }, {
+    "createdAt" : "2016-11-18T03:26:33Z"
+  }, {
+    "createdAt" : "2016-12-17T07:49:54Z"
+  }, {
+    "createdAt" : "2017-01-22T09:20:57Z"
+  }, {
+    "createdAt" : "2017-01-31T05:17:31Z"
+  }, {
+    "createdAt" : "2017-02-10T09:41:50Z"
+  }, {
+    "createdAt" : "2017-02-20T06:14:44Z"
+  }, {
+    "createdAt" : "2017-03-02T07:02:51Z"
+  }, {
+    "createdAt" : "2017-03-03T01:12:13Z"
+  }, {
+    "createdAt" : "2017-03-03T08:36:15Z"
+  }, {
+    "createdAt" : "2017-03-09T09:16:28Z"
+  }, {
+    "createdAt" : "2017-03-23T10:53:50Z"
+  }, {
+    "createdAt" : "2017-04-06T02:37:42Z"
+  }, {
+    "createdAt" : "2017-04-09T11:53:14Z"
+  }, {
+    "createdAt" : "2017-04-18T00:14:16Z"
+  }, {
+    "createdAt" : "2017-05-27T02:39:11Z"
+  }, {
+    "createdAt" : "2017-06-03T03:00:22Z"
+  }, {
+    "createdAt" : "2017-06-05T05:08:30Z"
+  }, {
+    "createdAt" : "2017-06-09T01:11:50Z"
+  }, {
+    "createdAt" : "2017-06-09T08:39:14Z"
+  }, {
+    "createdAt" : "2017-06-14T10:23:00Z"
+  }, {
+    "createdAt" : "2017-06-26T21:44:06Z"
+  }, {
+    "createdAt" : "2017-06-27T15:46:22Z"
+  }, {
+    "createdAt" : "2017-06-28T09:21:11Z"
+  }, {
+    "createdAt" : "2017-06-30T02:43:22Z"
+  }, {
+    "createdAt" : "2017-07-19T07:51:42Z"
+  }, {
+    "createdAt" : "2017-08-03T06:48:01Z"
+  }, {
+    "createdAt" : "2017-08-09T13:58:13Z"
+  }, {
+    "createdAt" : "2017-08-19T15:51:37Z"
+  }, {
+    "createdAt" : "2017-08-21T09:40:59Z"
+  }, {
+    "createdAt" : "2017-08-21T15:25:22Z"
+  }, {
+    "createdAt" : "2017-09-07T01:13:25Z"
+  }, {
+    "createdAt" : "2017-09-12T14:06:08Z"
+  }, {
+    "createdAt" : "2017-09-21T06:49:48Z"
+  }, {
+    "createdAt" : "2017-09-21T06:50:15Z"
+  }, {
+    "createdAt" : "2017-09-21T09:20:51Z"
+  }, {
+    "createdAt" : "2017-10-09T06:23:19Z"
+  }, {
+    "createdAt" : "2017-10-11T08:09:57Z"
+  }, {
+    "createdAt" : "2017-11-15T09:38:49Z"
+  }, {
+    "createdAt" : "2017-11-27T08:44:58Z"
+  }, {
+    "createdAt" : "2017-12-02T11:27:10Z"
+  }, {
+    "createdAt" : "2017-12-03T23:09:32Z"
+  }, {
+    "createdAt" : "2017-12-06T06:27:25Z"
+  }, {
+    "createdAt" : "2017-12-12T01:41:31Z"
+  }, {
+    "createdAt" : "2017-12-16T10:24:10Z"
+  }, {
+    "createdAt" : "2018-01-03T08:52:29Z"
+  }, {
+    "createdAt" : "2018-01-04T07:10:18Z"
+  }, {
+    "createdAt" : "2018-01-05T18:47:40Z"
+  }, {
+    "createdAt" : "2018-01-07T00:50:04Z"
+  }, {
+    "createdAt" : "2018-01-13T12:38:35Z"
+  }, {
+    "createdAt" : "2018-01-16T05:36:34Z"
+  }, {
+    "createdAt" : "2018-01-23T03:05:53Z"
+  }, {
+    "createdAt" : "2018-01-25T08:11:15Z"
+  }, {
+    "createdAt" : "2018-01-27T21:09:31Z"
+  }, {
+    "createdAt" : "2018-02-01T09:04:33Z"
+  }, {
+    "createdAt" : "2018-02-13T10:02:12Z"
+  }, {
+    "createdAt" : "2018-02-24T08:14:47Z"
+  }, {
+    "createdAt" : "2018-02-26T07:39:36Z"
+  }, {
+    "createdAt" : "2018-03-09T08:43:42Z"
+  }, {
+    "createdAt" : "2018-03-14T09:34:44Z"
+  }, {
+    "createdAt" : "2018-03-28T06:33:45Z"
+  }, {
+    "createdAt" : "2018-03-29T08:24:54Z"
+  }, {
+    "createdAt" : "2018-04-06T03:25:20Z"
+  }, {
+    "createdAt" : "2018-04-28T09:46:36Z"
+  }, {
+    "createdAt" : "2018-05-04T14:41:35Z"
+  }, {
+    "createdAt" : "2018-05-06T17:18:22Z"
+  }, {
+    "createdAt" : "2018-06-02T08:46:55Z"
+  }, {
+    "createdAt" : "2018-06-11T21:07:00Z"
+  }, {
+    "createdAt" : "2018-06-27T11:03:21Z"
+  }, {
+    "createdAt" : "2018-07-20T02:07:28Z"
+  }, {
+    "createdAt" : "2018-07-24T06:11:52Z"
+  }, {
+    "createdAt" : "2018-08-05T08:31:17Z"
+  }, {
+    "createdAt" : "2018-08-16T07:48:26Z"
+  }, {
+    "createdAt" : "2018-08-27T08:09:12Z"
+  }, {
+    "createdAt" : "2018-08-27T10:43:26Z"
+  }, {
+    "createdAt" : "2018-09-04T09:10:23Z"
+  }, {
+    "createdAt" : "2018-09-12T00:16:42Z"
+  }, {
+    "createdAt" : "2018-10-30T07:29:07Z"
+  }, {
+    "createdAt" : "2018-11-02T03:14:08Z"
+  }, {
+    "createdAt" : "2018-11-21T13:35:58Z"
+  }, {
+    "createdAt" : "2018-12-16T22:39:54Z"
+  }, {
+    "createdAt" : "2018-12-20T01:06:45Z"
+  }, {
+    "createdAt" : "2018-12-26T03:27:20Z"
+  }, {
+    "createdAt" : "2018-12-26T09:42:06Z"
+  }, {
+    "createdAt" : "2019-01-27T05:12:43Z"
+  }, {
+    "createdAt" : "2019-02-21T04:20:42Z"
+  }, {
+    "createdAt" : "2019-02-28T22:09:22Z"
+  }, {
+    "createdAt" : "2019-03-26T08:32:42Z"
+  }, {
+    "createdAt" : "2019-04-02T19:00:40Z"
+  }, {
+    "createdAt" : "2019-04-18T08:22:05Z"
+  }, {
+    "createdAt" : "2019-04-22T08:05:48Z"
+  }, {
+    "createdAt" : "2019-04-30T18:09:03Z"
+  }, {
+    "createdAt" : "2019-05-08T01:43:51Z"
+  }, {
+    "createdAt" : "2019-05-12T02:41:15Z"
+  }, {
+    "createdAt" : "2019-05-14T15:52:45Z"
+  }, {
+    "createdAt" : "2019-05-23T10:04:39Z"
+  }, {
+    "createdAt" : "2019-05-28T02:49:39Z"
+  }, {
+    "createdAt" : "2019-06-15T15:37:41Z"
+  }, {
+    "createdAt" : "2019-06-19T08:19:28Z"
+  }, {
+    "createdAt" : "2019-06-21T07:30:16Z"
+  }, {
+    "createdAt" : "2019-07-04T02:40:29Z"
+  }, {
+    "createdAt" : "2019-07-25T16:06:25Z"
+  }, {
+    "createdAt" : "2019-08-01T02:46:21Z"
+  }, {
+    "createdAt" : "2019-08-01T03:44:07Z"
+  }, {
+    "createdAt" : "2019-08-09T19:44:12Z"
+  }, {
+    "createdAt" : "2019-08-12T03:08:52Z"
+  }, {
+    "createdAt" : "2019-08-17T15:54:53Z"
+  }, {
+    "createdAt" : "2019-09-02T07:24:52Z"
+  }, {
+    "createdAt" : "2019-09-12T02:04:12Z"
+  }, {
+    "createdAt" : "2019-09-20T06:42:32Z"
+  }, {
+    "createdAt" : "2019-10-04T07:08:55Z"
+  }, {
+    "createdAt" : "2019-10-13T08:09:41Z"
+  }, {
+    "createdAt" : "2019-10-29T07:57:48Z"
+  }, {
+    "createdAt" : "2019-11-01T09:51:15Z"
+  }, {
+    "createdAt" : "2019-11-07T11:22:51Z"
+  }, {
+    "createdAt" : "2019-11-25T06:08:28Z"
+  }, {
+    "createdAt" : "2019-12-10T08:33:07Z"
+  }, {
+    "createdAt" : "2019-12-11T15:28:06Z"
+  }, {
+    "createdAt" : "2019-12-16T19:36:51Z"
+  }, {
+    "createdAt" : "2019-12-17T07:16:58Z"
+  }, {
+    "createdAt" : "2019-12-25T10:20:43Z"
+  }, {
+    "createdAt" : "2020-01-07T09:03:12Z"
+  }, {
+    "createdAt" : "2020-01-12T10:49:46Z"
+  }, {
+    "createdAt" : "2020-01-13T11:19:00Z"
+  }, {
+    "createdAt" : "2020-03-30T10:31:51Z"
+  }, {
+    "createdAt" : "2020-05-18T05:08:39Z"
+  }, {
+    "createdAt" : "2020-06-11T14:53:43Z"
+  }, {
+    "createdAt" : "2020-06-16T08:55:22Z"
+  }, {
+    "createdAt" : "2020-06-22T09:41:51Z"
+  }, {
+    "createdAt" : "2020-06-25T17:29:13Z"
+  }, {
+    "createdAt" : "2020-06-26T00:34:07Z"
+  }, {
+    "createdAt" : "2020-06-27T21:25:15Z"
+  }, {
+    "createdAt" : "2020-07-18T05:45:55Z"
+  }, {
+    "createdAt" : "2020-07-27T07:47:16Z"
+  }, {
+    "createdAt" : "2020-07-31T07:38:15Z"
+  }, {
+    "createdAt" : "2020-08-05T09:14:35Z"
+  }, {
+    "createdAt" : "2020-08-07T07:35:30Z"
+  }, {
+    "createdAt" : "2020-08-14T07:20:49Z"
+  }, {
+    "createdAt" : "2020-08-14T07:25:19Z"
+  }, {
+    "createdAt" : "2020-08-26T08:49:06Z"
+  }, {
+    "createdAt" : "2020-08-31T02:46:17Z"
+  }, {
+    "createdAt" : "2020-09-09T02:46:41Z"
+  }, {
+    "createdAt" : "2020-09-22T18:09:11Z"
+  }, {
+    "createdAt" : "2020-10-16T06:57:25Z"
+  }, {
+    "createdAt" : "2020-11-05T08:47:52Z"
+  }, {
+    "createdAt" : "2020-11-10T06:53:10Z"
+  }, {
+    "createdAt" : "2020-11-19T02:06:42Z"
+  }, {
+    "createdAt" : "2020-11-20T03:01:31Z"
+  }, {
+    "createdAt" : "2020-12-08T10:14:58Z"
+  }, {
+    "createdAt" : "2020-12-09T06:41:17Z"
+  }, {
+    "createdAt" : "2020-12-11T09:09:56Z"
+  }, {
+    "createdAt" : "2021-01-05T02:26:13Z"
+  }, {
+    "createdAt" : "2021-01-14T01:00:11Z"
+  }, {
+    "createdAt" : "2021-01-23T14:01:26Z"
+  }, {
+    "createdAt" : "2021-01-28T17:28:07Z"
+  }, {
+    "createdAt" : "2021-02-12T13:22:05Z"
+  }, {
+    "createdAt" : "2021-03-10T01:43:41Z"
+  }, {
+    "createdAt" : "2021-03-11T03:42:34Z"
+  }, {
+    "createdAt" : "2021-03-17T08:13:50Z"
+  }, {
+    "createdAt" : "2021-03-25T16:03:44Z"
+  }, {
+    "createdAt" : "2021-03-26T08:26:19Z"
+  }, {
+    "createdAt" : "2021-04-13T02:50:07Z"
+  }, {
+    "createdAt" : "2021-04-30T17:03:08Z"
+  }, {
+    "createdAt" : "2021-06-04T04:17:12Z"
+  }, {
+    "createdAt" : "2021-06-21T10:09:03Z"
+  }, {
+    "createdAt" : "2021-07-09T02:46:46Z"
+  }, {
+    "createdAt" : "2021-07-13T11:07:46Z"
+  }, {
+    "createdAt" : "2021-07-15T08:36:21Z"
+  }, {
+    "createdAt" : "2021-07-15T20:48:45Z"
+  }, {
+    "createdAt" : "2021-07-22T11:53:35Z"
+  }, {
+    "createdAt" : "2021-08-02T17:51:39Z"
+  }, {
+    "createdAt" : "2021-08-12T01:36:38Z"
+  }, {
+    "createdAt" : "2021-08-30T08:33:15Z"
+  }, {
+    "createdAt" : "2021-09-02T15:16:01Z"
+  }, {
+    "createdAt" : "2021-09-03T07:09:34Z"
+  }, {
+    "createdAt" : "2021-09-23T04:15:59Z"
+  }, {
+    "createdAt" : "2021-09-25T05:58:13Z"
+  }, {
+    "createdAt" : "2021-09-27T02:34:20Z"
+  }, {
+    "createdAt" : "2021-11-03T01:34:37Z"
+  }, {
+    "createdAt" : "2021-11-23T07:28:52Z"
+  }, {
+    "createdAt" : "2021-12-15T07:14:43Z"
+  }, {
+    "createdAt" : "2021-12-22T15:06:52Z"
+  }, {
+    "createdAt" : "2022-01-22T06:33:39Z"
+  }, {
+    "createdAt" : "2022-01-24T02:19:29Z"
+  }, {
+    "createdAt" : "2022-01-24T05:28:32Z"
+  }, {
+    "createdAt" : "2022-01-24T14:50:23Z"
+  }, {
+    "createdAt" : "2022-03-10T08:18:12Z"
+  }, {
+    "createdAt" : "2022-03-12T03:14:55Z"
+  }, {
+    "createdAt" : "2022-03-21T05:58:02Z"
+  }, {
+    "createdAt" : "2022-03-21T23:22:42Z"
+  }, {
+    "createdAt" : "2022-03-31T09:48:30Z"
+  }, {
+    "createdAt" : "2022-04-04T03:00:52Z"
+  }, {
+    "createdAt" : "2022-04-07T06:08:26Z"
+  }, {
+    "createdAt" : "2022-04-12T09:51:54Z"
+  }, {
+    "createdAt" : "2022-04-25T09:22:25Z"
+  }, {
+    "createdAt" : "2022-05-12T08:28:30Z"
+  }, {
+    "createdAt" : "2022-05-31T06:10:34Z"
+  }, {
+    "createdAt" : "2022-06-09T08:51:11Z"
+  }, {
+    "createdAt" : "2022-06-10T06:58:03Z"
+  }, {
+    "createdAt" : "2022-06-21T11:08:02Z"
+  }, {
+    "createdAt" : "2022-07-12T02:55:38Z"
+  }, {
+    "createdAt" : "2022-07-28T12:02:28Z"
+  }, {
+    "createdAt" : "2022-08-01T01:27:47Z"
+  }, {
+    "createdAt" : "2022-08-05T09:59:19Z"
+  }, {
+    "createdAt" : "2022-09-05T08:56:02Z"
+  }, {
+    "createdAt" : "2022-09-21T09:27:54Z"
+  }, {
+    "createdAt" : "2022-09-29T17:39:48Z"
+  }, {
+    "createdAt" : "2022-10-27T07:33:58Z"
+  }, {
+    "createdAt" : "2022-11-09T00:13:49Z"
+  }, {
+    "createdAt" : "2022-11-10T17:45:10Z"
+  }, {
+    "createdAt" : "2022-11-16T06:16:11Z"
+  }, {
+    "createdAt" : "2023-01-05T13:29:18Z"
+  }, {
+    "createdAt" : "2023-02-07T10:03:57Z"
+  }, {
+    "createdAt" : "2023-02-22T06:14:37Z"
+  }, {
+    "createdAt" : "2023-03-03T11:41:53Z"
+  }, {
+    "createdAt" : "2023-03-05T15:23:01Z"
+  }, {
+    "createdAt" : "2023-04-03T12:16:13Z"
+  }, {
+    "createdAt" : "2023-04-14T06:51:32Z"
+  }, {
+    "createdAt" : "2023-04-20T06:19:51Z"
+  }, {
+    "createdAt" : "2023-05-03T08:57:00Z"
+  }, {
+    "createdAt" : "2023-06-30T08:06:26Z"
+  }, {
+    "createdAt" : "2023-10-06T06:41:03Z"
+  }, {
+    "createdAt" : "2023-11-01T17:48:45Z"
+  }, {
+    "createdAt" : "2024-03-18T23:03:02Z"
+  }, {
+    "createdAt" : "2024-05-15T08:32:04Z"
+  }, {
+    "createdAt" : "2024-07-19T01:09:58Z"
+  }, {
+    "createdAt" : "2024-08-13T10:55:39Z"
+  }, {
+    "createdAt" : "2024-09-06T22:45:14Z"
+  }, {
+    "createdAt" : "2025-01-03T00:38:43Z"
+  }, {
+    "createdAt" : "2025-05-30T02:46:50Z"
+  }, {
+    "createdAt" : "2025-06-04T09:43:53Z"
+  }, {
+    "createdAt" : "2025-08-19T08:08:11Z"
+  }, {
+    "createdAt" : "2025-11-06T09:06:27Z"
+  }, {
+    "createdAt" : "2025-11-14T03:12:38Z"
+  }, {
+    "createdAt" : "2025-11-25T07:26:54Z"
+  }, {
+    "createdAt" : "2025-11-26T11:55:47Z"
+  }, {
+    "createdAt" : "2025-12-15T14:20:55Z"
+  }, {
+    "createdAt" : "2026-01-17T08:56:25Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "SLF4J Substitute Logger Warnings during startup ",
+    "createdAt" : "2015-02-22T13:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Osgi compatibility",
+    "createdAt" : "2015-03-12T16:23:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Async producer deadlocks",
+    "createdAt" : "2015-03-12T19:42:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "! Naming: PatternLayoutKafkaMessageEncoder should be LayoutKafkaMessageEncoder",
+    "createdAt" : "2015-03-13T10:38:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Flushing Appender",
+    "createdAt" : "2015-03-18T17:42:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Support for Kafka 0.8.2.1",
+    "createdAt" : "2015-08-20T16:55:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Would benefit from being able to use the generic Logstash encoder",
+    "createdAt" : "2015-10-27T23:35:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Messages being dropped by async delivery and not going to fallback appender",
+    "createdAt" : "2015-10-29T21:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Handle log-attempts with payload that is too big for the configured producer",
+    "createdAt" : "2015-11-06T16:33:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 16,
+    "title" : "When bootstrap.servers are not available, stops spring boot app from running",
+    "createdAt" : "2015-11-06T21:28:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 17,
+    "title" : "Springboot 1.3.0: LogbackLoggingSystem failed while loading KafkaAppenderConfig if no keyingStrategy is configured",
+    "createdAt" : "2015-11-25T20:23:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Upgrade to kafka 0.9",
+    "createdAt" : "2015-11-25T20:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Need for a Json Message Encoder",
+    "createdAt" : "2015-12-01T19:03:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Upgrade from 0.0.3 to 0.0.4 issue",
+    "createdAt" : "2015-12-01T23:51:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "kafka appender for logback-access events",
+    "createdAt" : "2016-01-28T20:47:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Extra line \\n in the logback-kafka-appender output",
+    "createdAt" : "2016-02-11T22:00:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Kafka producer connection being closed automatically ",
+    "createdAt" : "2016-05-20T15:01:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Blocked threads on synchronized block",
+    "createdAt" : "2016-10-10T14:55:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 34,
+    "title" : "Logback AsyncAppender",
+    "createdAt" : "2016-11-13T22:23:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "long time to start the spring boot app with logback-kafka-appender",
+    "createdAt" : "2016-11-17T23:11:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 36,
+    "title" : "Infinity loop if any message logged by kafka client library when kafka server is down.",
+    "createdAt" : "2016-11-20T04:52:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 37,
+    "title" : "AutoScan not working with Appender properties",
+    "createdAt" : "2016-12-09T14:28:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 41,
+    "title" : "Cannot connect to Kafka > 0.9",
+    "createdAt" : "2017-01-08T22:02:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "when set root logger level to debug and ref kafka appender, then start application, then app hungs there",
+    "createdAt" : "2017-01-18T05:54:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "NullPointerException",
+    "createdAt" : "2017-02-08T15:51:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Kafka producer is not able to update metadata",
+    "createdAt" : "2017-02-15T18:53:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Kafka appender infinite loop ?",
+    "createdAt" : "2017-03-10T11:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "org.apache.kafka.common.errors.TimeoutException: Failed to update metadata after 60000 ms.",
+    "createdAt" : "2017-03-17T07:21:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 48,
+    "title" : "How to exclude messages",
+    "createdAt" : "2017-05-18T21:06:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Use the standard Logback Encoder interface instead of custom KafkaMessageEncoder",
+    "createdAt" : "2017-10-20T15:49:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Application not starting when Kafka Servers down",
+    "createdAt" : "2017-10-28T20:34:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 54,
+    "title" : "use LogstashEncoder. why all data is included in the message field? ",
+    "createdAt" : "2017-11-14T11:28:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "build not success",
+    "createdAt" : "2018-01-11T02:43:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Kafka package name string and Jar shading",
+    "createdAt" : "2018-01-19T15:41:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Endless Kafka stacktraces when bad producer config",
+    "createdAt" : "2018-01-28T21:09:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 62,
+    "title" : "Broker reconnection issue",
+    "createdAt" : "2018-03-14T10:27:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 63,
+    "title" : "Using custom KeyStore tool for Kafka ProducerConfigs",
+    "createdAt" : "2018-04-06T03:22:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Jmeter log error: .KafkaProducer: Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms",
+    "createdAt" : "2018-06-19T04:39:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 67,
+    "title" : "Can not download 0.2.0",
+    "createdAt" : "2018-06-20T07:57:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "about 0.1.0 update 0.2.0",
+    "createdAt" : "2018-06-21T10:38:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Its not working with String serializer/ deserializer",
+    "createdAt" : "2018-08-14T04:17:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Not all messages delivered to Kafka",
+    "createdAt" : "2018-10-11T04:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Support for Zookeeper of Kafka",
+    "createdAt" : "2018-10-22T12:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "How to customize the message format",
+    "createdAt" : "2018-11-20T01:29:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Need for a message encoder",
+    "createdAt" : "2018-11-29T15:05:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 81,
+    "title" : "Write to multiple topics",
+    "createdAt" : "2019-02-25T16:41:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Typo",
+    "createdAt" : "2019-03-15T07:00:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "When bootstrap.servers are not available, Thread Stuck on logger.warn",
+    "createdAt" : "2019-04-01T20:20:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 85,
+    "title" : "Does this appender is supported to connect to kafka-cluster?",
+    "createdAt" : "2019-06-17T01:45:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "First few messages getting dropped",
+    "createdAt" : "2019-06-17T10:23:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 87,
+    "title" : "Marker filter not working",
+    "createdAt" : "2019-07-11T11:56:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 88,
+    "title" : "How to customize the kafka key",
+    "createdAt" : "2019-08-12T06:34:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Config block.on.buffer.full has been removed since version 0.9",
+    "createdAt" : "2019-09-09T03:26:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 92,
+    "title" : "Do we lose logs if the brokers aren't available?",
+    "createdAt" : "2020-02-17T21:52:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 94,
+    "title" : "Incorrect version in docs",
+    "createdAt" : "2020-03-13T09:31:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 95,
+    "title" : "InterruptedException  in BlockingDeliveryStrategy ",
+    "createdAt" : "2020-03-30T09:21:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 96,
+    "title" : "Question: how to mitigate broker unavailable at context start with kafka-clients >= 0.9",
+    "createdAt" : "2020-06-15T02:21:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 97,
+    "title" : "Excessive warnings in in logs when topic or broker not present",
+    "createdAt" : "2020-09-08T11:36:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 98,
+    "title" : "When will the 0.2.0 version be officially released?",
+    "createdAt" : "2020-09-28T17:15:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 99,
+    "title" : "Infinity-loop when starting up application",
+    "createdAt" : "2020-10-14T09:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Order of events",
+    "createdAt" : "2020-11-10T13:51:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Question: is it possible to use a logger other than root?",
+    "createdAt" : "2020-12-09T15:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Logs not getting published to kafka topic, no error in console logs too",
+    "createdAt" : "2021-01-12T19:10:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Add settings for Kerberized Kafka cluster",
+    "createdAt" : "2021-03-11T03:41:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 108,
+    "title" : "InterruptedException while stopping Kafka Appender",
+    "createdAt" : "2021-08-31T16:19:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "IllegalArgumentException  Either remove Logback or the competing implementation",
+    "createdAt" : "2021-11-02T09:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "how to compile source code to jar",
+    "createdAt" : "2021-11-08T11:49:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "log in the queue that was not sent to kafka will be lost.",
+    "createdAt" : "2022-01-11T12:40:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 113,
+    "title" : "Can't make kafka appender work with programmatical config",
+    "createdAt" : "2022-02-06T14:26:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 114,
+    "title" : " Topic logs not present in metadata after 60000 ms.",
+    "createdAt" : "2022-03-03T02:38:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 116,
+    "title" : "SASL_SSL protocol Kerberose authentication not working with Websphere application server",
+    "createdAt" : "2022-04-06T18:31:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "Question>Could you help me to collect full stack log?",
+    "createdAt" : "2022-05-10T05:26:14Z",
+    "state" : "OPEN"
+  } ]
+}

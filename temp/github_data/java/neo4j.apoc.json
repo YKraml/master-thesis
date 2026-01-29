@@ -1,0 +1,1309 @@
+{
+  "repoOwner" : "neo4j",
+  "repoName" : "apoc",
+  "forks" : [ {
+    "createdAt" : "2022-08-17T12:03:59Z"
+  }, {
+    "createdAt" : "2022-08-21T23:32:59Z"
+  }, {
+    "createdAt" : "2022-08-30T10:18:41Z"
+  }, {
+    "createdAt" : "2022-09-05T06:54:48Z"
+  }, {
+    "createdAt" : "2022-09-05T15:29:03Z"
+  }, {
+    "createdAt" : "2022-10-09T06:52:21Z"
+  }, {
+    "createdAt" : "2022-12-21T14:53:46Z"
+  }, {
+    "createdAt" : "2023-01-15T15:27:19Z"
+  }, {
+    "createdAt" : "2023-01-18T00:48:02Z"
+  }, {
+    "createdAt" : "2023-01-25T17:24:05Z"
+  }, {
+    "createdAt" : "2023-03-15T15:45:30Z"
+  }, {
+    "createdAt" : "2023-03-17T14:43:50Z"
+  }, {
+    "createdAt" : "2023-05-16T13:21:47Z"
+  }, {
+    "createdAt" : "2023-06-27T12:57:39Z"
+  }, {
+    "createdAt" : "2023-07-27T10:51:51Z"
+  }, {
+    "createdAt" : "2023-09-10T22:27:23Z"
+  }, {
+    "createdAt" : "2023-10-24T09:21:02Z"
+  }, {
+    "createdAt" : "2023-11-13T15:30:58Z"
+  }, {
+    "createdAt" : "2023-11-20T16:38:52Z"
+  }, {
+    "createdAt" : "2024-01-09T17:45:58Z"
+  }, {
+    "createdAt" : "2024-01-25T16:27:57Z"
+  }, {
+    "createdAt" : "2024-02-22T12:20:24Z"
+  }, {
+    "createdAt" : "2024-02-24T11:36:22Z"
+  }, {
+    "createdAt" : "2024-03-12T12:33:53Z"
+  }, {
+    "createdAt" : "2024-05-28T17:03:12Z"
+  }, {
+    "createdAt" : "2024-10-09T08:20:22Z"
+  }, {
+    "createdAt" : "2024-11-19T03:49:40Z"
+  }, {
+    "createdAt" : "2025-02-13T07:40:53Z"
+  }, {
+    "createdAt" : "2025-03-20T08:12:35Z"
+  }, {
+    "createdAt" : "2025-04-10T13:18:10Z"
+  }, {
+    "createdAt" : "2025-05-14T18:46:42Z"
+  }, {
+    "createdAt" : "2025-06-15T04:33:07Z"
+  }, {
+    "createdAt" : "2025-06-30T19:54:13Z"
+  }, {
+    "createdAt" : "2025-07-15T16:14:02Z"
+  }, {
+    "createdAt" : "2025-07-27T06:51:43Z"
+  }, {
+    "createdAt" : "2025-08-12T10:53:28Z"
+  }, {
+    "createdAt" : "2025-08-27T18:48:00Z"
+  }, {
+    "createdAt" : "2025-09-01T16:29:18Z"
+  }, {
+    "createdAt" : "2025-09-27T15:35:00Z"
+  } ],
+  "issues" : [ {
+    "number" : 442,
+    "title" : "Server no longer accepts writes, during apoc.trigger.add",
+    "createdAt" : "2021-07-31T15:52:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "apoc.load* don't actually support tar and tar.gz",
+    "createdAt" : "2022-08-31T12:11:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "`NoSuchMethodError` exception for `getReadCapabilities` when trying to use `apoc.convert.fromJsonList`",
+    "createdAt" : "2022-08-31T16:33:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "The apoc.export.cypher.* procedures don't create relationships with start/end node without properties.",
+    "createdAt" : "2022-08-31T16:33:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "The apoc.export.graphml.query export additional unwanted nodes",
+    "createdAt" : "2022-08-31T16:33:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "The `apoc.import.json` constraint check should works only when an unique constraint exists",
+    "createdAt" : "2022-08-31T16:33:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "`apoc.meta.relTypeProperties` doest not return relationship information",
+    "createdAt" : "2022-08-31T16:33:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "The apoc.periodic.repeat and apoc.periodic.sumbit procedures don't work with some statements which return something",
+    "createdAt" : "2022-08-31T16:33:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Default parallel concurrency of 50 is too high",
+    "createdAt" : "2022-08-31T16:33:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Exception while adding/removing apoc.trigger in neo4j causal cluster",
+    "createdAt" : "2022-08-31T16:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "apoc.rename.label has wrong example (from apoc.rename.type)",
+    "createdAt" : "2022-08-31T16:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Not able to import 'JSON' data using apoc.import.json procedure.",
+    "createdAt" : "2022-08-31T16:34:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Handle incorrect JSON documents in apoc.convert.fromJsonMap",
+    "createdAt" : "2022-08-31T16:59:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Shaded APOC dependencies pollute classpath ",
+    "createdAt" : "2022-08-31T16:59:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "XML DOCTYPE is disallowed when the feature set to true",
+    "createdAt" : "2022-08-31T16:59:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Incorrect behaviours for format durations",
+    "createdAt" : "2022-08-31T16:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "apoc.refactor.rename.label delets label if oldLabel is equal to newLabel",
+    "createdAt" : "2022-08-31T16:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "apoc.merge.node just for Match-only",
+    "createdAt" : "2022-08-31T16:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Failed to invoke procedure `apoc.export.cypher.all`: ",
+    "createdAt" : "2022-08-31T16:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Unable to import json file with apoc.import.json",
+    "createdAt" : "2022-08-31T16:59:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Provide MD5 hash for the downloadable artefacts",
+    "createdAt" : "2022-09-01T08:58:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Cherry-Pick Commits to dev",
+    "createdAt" : "2022-09-01T08:58:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add a roundtrip example for `apoc.export.csv` & `apoc.import.csv`",
+    "createdAt" : "2022-09-01T08:58:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Detect missing procedure at build time",
+    "createdAt" : "2022-09-01T08:58:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Don't support relationship indexes in apoc.export.cypher.all",
+    "createdAt" : "2022-09-01T08:58:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Round trip with apoc graphml coerces types to string",
+    "createdAt" : "2022-09-01T08:58:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Allow to treat JSON numbers as strings",
+    "createdAt" : "2022-09-01T08:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Improve docs about configuration with env variables",
+    "createdAt" : "2022-09-01T08:58:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "requesting apoc-#.#.#.#-core.jar be available from maven",
+    "createdAt" : "2022-09-01T08:58:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "[DUPLICATED] Provide MD5 hash for the downloadable artefacts",
+    "createdAt" : "2022-09-01T08:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "[DUPLICATED] Cherry-Pick Commits to dev",
+    "createdAt" : "2022-09-01T08:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "[DUPLICATED] Add a roundtrip example for `apoc.export.csv` & `apoc.import.csv`",
+    "createdAt" : "2022-09-01T08:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "[DUPLICATED] Detect missing procedure at build time",
+    "createdAt" : "2022-09-01T08:59:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "[DUPLICATED] Don't support relationship indexes in apoc.export.cypher.all",
+    "createdAt" : "2022-09-01T08:59:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "[DUPLICATED] Round trip with apoc graphml coerces types to string",
+    "createdAt" : "2022-09-01T08:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "[DUPLICATED] Allow to treat JSON numbers as strings",
+    "createdAt" : "2022-09-01T08:59:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "[DUPLICATED] Improve docs about configuration with env variables",
+    "createdAt" : "2022-09-01T08:59:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "[DUPLICATED] requesting apoc-#.#.#.#-core.jar be available from maven",
+    "createdAt" : "2022-09-01T08:59:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "file:/// urls don't work with apoc.export.*",
+    "createdAt" : "2022-09-01T09:07:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Can we get an quick investigation (added to this issue or docs) what happens when a new multi-database is created/started in neo4j?",
+    "createdAt" : "2022-09-01T09:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Typo in triggers documentation",
+    "createdAt" : "2022-09-01T09:08:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Incorrect statistics",
+    "createdAt" : "2022-09-01T09:08:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Problem with storing data into systemdb in a Cluster env",
+    "createdAt" : "2022-09-01T09:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Providing s3 authentication through environment variables fails when using 'apoc.load.csv'",
+    "createdAt" : "2022-09-01T09:09:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Add option to include direction of relations in apoc.convert.toTree",
+    "createdAt" : "2022-09-01T09:09:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Improve error handling with s3 and hdfs protocols",
+    "createdAt" : "2022-09-01T09:11:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "The `apoc.path.expand` procedure doesn't stop if `dbms.memory.transaction.database_max_size` is reached",
+    "createdAt" : "2022-09-01T09:11:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "The `apoc.periodic.truncate` procedure doesn't provide a feedback if fails",
+    "createdAt" : "2022-09-01T09:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "apoc.export.csv.query() function overwrites the CSV file everytime it executes. Need to append query results to CSV file. Need option to append query results to CSV file instead of overwriting CSV file.",
+    "createdAt" : "2022-09-01T09:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "3.5.0.3 apoc.export.json.query does not allow ARRAY_JSON",
+    "createdAt" : "2022-09-01T09:11:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Utilize KernelTransaction.setStatusDetails() in 4.4",
+    "createdAt" : "2022-09-01T09:11:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add method to obtain periodic job code",
+    "createdAt" : "2022-09-01T09:11:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Add option on apoc.path.expandConfig() to only return \"maximal\" paths",
+    "createdAt" : "2022-09-01T09:11:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 63,
+    "title" : "Schedule task for one-off execution at specified time",
+    "createdAt" : "2022-09-01T09:11:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Rebind for deletedNodes and deletedRelationships is disabled in the code",
+    "createdAt" : "2022-09-01T09:11:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "apoc built in urlencode does not handle newlines correctly",
+    "createdAt" : "2022-09-01T09:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "APOC build fails on 5.0.0-dev of neo4j as KernelProcedureTest tests for 4.x version",
+    "createdAt" : "2022-09-01T09:13:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Improve apoc.periodic.iterate docs",
+    "createdAt" : "2022-09-01T09:13:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Procedure `apoc.meta.subgraph` return wrong type with `includeLabels` not existent",
+    "createdAt" : "2022-09-01T09:16:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Failed to invoke procedure `apoc.meta.schema` : Caused by: java.lang.NullPointerException",
+    "createdAt" : "2022-09-01T09:16:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Document coding style rules",
+    "createdAt" : "2022-09-01T09:18:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Cleanup apoc.meta.*TypeProperties()",
+    "createdAt" : "2022-09-01T09:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Missing apoc.export.csv.all.",
+    "createdAt" : "2022-09-01T09:42:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Explain documentation structure in `CONTRIBUTING.md`",
+    "createdAt" : "2022-09-01T09:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Document apoc.convert.toTree",
+    "createdAt" : "2022-09-01T09:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "add apoc.rel.startNodeId() apoc.rel.endNodeId() for real and virtual relationships ",
+    "createdAt" : "2022-09-01T09:42:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "parseFloat(), parseInt(), format() seems to ignore locale parameter",
+    "createdAt" : "2022-09-01T09:43:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "PowerShell with Docker requires some special usage for NEO4JLABS_PLUGINS installation of APOC",
+    "createdAt" : "2022-09-01T09:45:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Invalid apoc export graphml format",
+    "createdAt" : "2022-09-01T09:45:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Add documentation that shows how to use an apoc dependency for a neo4j embedded API test",
+    "createdAt" : "2022-09-01T09:54:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 80,
+    "title" : "document what log is written to on apoc.log*",
+    "createdAt" : "2022-09-01T09:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Publish checksums alongside JARS on the releases page",
+    "createdAt" : "2022-09-01T09:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "apoc.cypher.runTimeboxed throws \"DatabaseException: The transaction has been closed\"",
+    "createdAt" : "2022-09-01T09:55:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "parallelization for apoc.path.expand",
+    "createdAt" : "2022-09-01T09:56:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "add a maxOps termination criteria to pathExpand",
+    "createdAt" : "2022-09-01T09:56:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Validate parameters for pathExpand",
+    "createdAt" : "2022-09-01T09:56:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "apoc.meta.subgraph returns java.lang.NullPointerException",
+    "createdAt" : "2022-09-01T09:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Support for Fabric - ",
+    "createdAt" : "2022-09-01T10:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Use junit causal cluster extension",
+    "createdAt" : "2022-09-01T10:44:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "apoc periodic repeat should have an option to tolerate errors",
+    "createdAt" : "2022-09-01T10:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Procedure apoc.neighbors.tohop is broken",
+    "createdAt" : "2022-09-01T10:48:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Inconsistency between apoc.coll.sort() and apoc.coll.sortNodes()",
+    "createdAt" : "2022-09-01T10:48:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Find better names for whitelist/blacklist in the APOC code base and docs",
+    "createdAt" : "2022-09-01T10:48:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "requested readme.adoc and on Version Compatibility point to http://neo4j-contrib.github.io/neo4j-apoc-procedures/versions.json ",
+    "createdAt" : "2022-09-01T10:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "rebind flag in apoc.periodic.iterate",
+    "createdAt" : "2022-09-01T10:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "dbms.lock.acquisition.timeout not triggered by apoc",
+    "createdAt" : "2022-09-01T10:56:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Update example in docs for apoc.trigger.add",
+    "createdAt" : "2022-09-01T10:56:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Issue with triggers in phase 'after'",
+    "createdAt" : "2022-09-01T10:56:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Possible bug in Neo4J 4.0 version, during GRAPHML import",
+    "createdAt" : "2022-09-01T10:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Apoc Trigger in \"Phase: After\" Never Ends",
+    "createdAt" : "2022-09-01T10:56:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Documentation improvement - elevate conditions section so it's visible in the ToC",
+    "createdAt" : "2022-09-01T11:03:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "apoc.meta.data() reports wrong property type information",
+    "createdAt" : "2022-09-01T11:03:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Invalid URLs in Installation docs",
+    "createdAt" : "2022-09-01T11:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "export config properties are in the wrong section of the docs",
+    "createdAt" : "2022-09-01T11:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "APOC conditional procedures don't yield results if ",
+    "createdAt" : "2022-09-01T11:03:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "apoc.export.csv.graph incorrectly exports properties with datatype 'float'",
+    "createdAt" : "2022-09-01T11:03:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "apoc.load.graphml does not create relationships named RELATED",
+    "createdAt" : "2022-09-01T11:03:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Expand Path methods don't handle label filters where the label filter contains characters that would normally need to be escaped using backticks",
+    "createdAt" : "2022-09-01T11:03:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "combo of apoc.periodic.iterate/apoc.refactor.mergeNodes runs forever",
+    "createdAt" : "2022-09-01T11:03:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "running apoc.periodic.iterate and exceeding heap memory in neo4j 4.0.0 and APOC 4.0.0.3",
+    "createdAt" : "2022-09-01T11:03:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "apoc.path.combine(path,path1) as paths throws Can't coerce `NO_VALUE` to Path error in linux",
+    "createdAt" : "2022-09-01T11:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Return query status for apoc.cypher.runTimeboxed",
+    "createdAt" : "2022-09-01T12:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Deletion from a trigger fails to cascade to more triggers",
+    "createdAt" : "2022-09-01T12:20:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Separate data preparation and add string templates to apoc.export.cypher",
+    "createdAt" : "2022-09-01T12:20:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Export.graphml crashes on whitespaces",
+    "createdAt" : "2022-09-01T12:20:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "apoc.refactor.mergeNodes choose the result properties randomly",
+    "createdAt" : "2022-09-01T12:25:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "apoc.nodes.group seems unable to use DateTime as a grouping operator",
+    "createdAt" : "2022-09-01T12:25:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "description of apoc.meta.* results",
+    "createdAt" : "2022-09-01T12:25:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Add relationship exclusion to apoc.path.. options",
+    "createdAt" : "2022-09-01T12:25:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Make apoc.map.fromNodes not OOM",
+    "createdAt" : "2022-09-01T12:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "add a version of periodic.iterate streaming that returns one row per batch",
+    "createdAt" : "2022-09-01T12:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "apoc.export.csv.query() does not register duration.inSeconds formatting",
+    "createdAt" : "2022-09-01T12:25:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Make A* algorithm support geo-types",
+    "createdAt" : "2022-09-01T12:30:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Add var-length support to expand for sequences",
+    "createdAt" : "2022-09-01T12:30:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Return error/warning message to graph refactoring if the dataset is too large for a single TX",
+    "createdAt" : "2022-09-01T12:30:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "handle label hierarchies in apoc.meta.graph and others",
+    "createdAt" : "2022-09-01T12:30:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "can not get apoc.periodic.submit() to run CALL db.createUniquePropertyConstraint()",
+    "createdAt" : "2022-09-01T12:30:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Documentation Improvements",
+    "createdAt" : "2022-09-01T12:31:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "add checksum to release files",
+    "createdAt" : "2022-09-01T12:37:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Review export procedures to ensure they can batch/scale",
+    "createdAt" : "2022-09-01T12:37:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "apoc.meta.graph does not display ALL relationships",
+    "createdAt" : "2022-09-01T12:37:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "apoc.export.cypher.all violates unique constraint when rewriting nodes at the same time",
+    "createdAt" : "2022-09-01T12:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Export graphml, ignores types even if set to useTypes: true in config",
+    "createdAt" : "2022-09-01T12:38:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Fix all GraphML Issues",
+    "createdAt" : "2022-09-01T12:38:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Make file export for CSV & GraphML network friendly ",
+    "createdAt" : "2022-09-01T12:39:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "make good use of tx metadata",
+    "createdAt" : "2022-09-01T12:41:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Add node/rel property filtering during expansion to path expanders",
+    "createdAt" : "2022-09-01T12:41:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 137,
+    "title" : "unable to execute multiple query (write) based on multiple condition",
+    "createdAt" : "2022-09-01T12:41:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "feature request: return data from apoc.periodic.commit",
+    "createdAt" : "2022-09-01T12:41:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "apoc.group.nodes error -> return indivdiual nodes + rels",
+    "createdAt" : "2022-09-01T12:42:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "improve apoc.group.nodes",
+    "createdAt" : "2022-09-01T12:42:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Fix documentation on path expander limit behavior changes with winter 2018 release",
+    "createdAt" : "2022-09-01T12:45:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Clarify / add to / fix path expander documentation",
+    "createdAt" : "2022-09-01T12:45:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "make sure that the larger scale graph refactorings use batching internally",
+    "createdAt" : "2022-09-01T12:45:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "apoc.group.nodes treat relationships as undirected",
+    "createdAt" : "2022-09-01T12:50:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Improve thread pool management to prevent blocking and waiting when using a combination of apoc components that use thread pools",
+    "createdAt" : "2022-09-01T12:59:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "String normalisation",
+    "createdAt" : "2022-09-01T12:59:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Configuration of export CSV is inconsistent with the docs",
+    "createdAt" : "2022-09-01T12:59:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "add means to blacklist / whitelist things for cypher-export",
+    "createdAt" : "2022-09-01T12:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "[DUPLICATED] Configuration of export CSV is inconsistent with the docs",
+    "createdAt" : "2022-09-01T13:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "[DUPLICATED] apoc.group.nodes treat relationships as undirected",
+    "createdAt" : "2022-09-01T13:01:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Improvement Request: Allow path expander config parameter `recentLimit`",
+    "createdAt" : "2022-09-01T13:04:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "apoc.import.graphml issue - export using same APOC library",
+    "createdAt" : "2022-09-01T13:04:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Should apoc.export.cypher.all include manual indexes?",
+    "createdAt" : "2022-09-01T13:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "add crontab like job-control",
+    "createdAt" : "2022-09-01T13:05:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "check for tx termination",
+    "createdAt" : "2022-09-01T13:09:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "go over all procedures / functions that use restricted APIs and check if we really need them",
+    "createdAt" : "2022-09-01T13:10:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "FTP/SFTP support for loading data (JSON, CSV, XML)",
+    "createdAt" : "2022-09-01T13:11:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 158,
+    "title" : "Feature Request: process monitoring for import calls",
+    "createdAt" : "2022-09-01T13:11:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Failed to invoke procedure `apoc.import.graphml`: Caused by: java.lang.RuntimeException: Error executing in separate thread",
+    "createdAt" : "2022-09-01T13:16:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "run export in parallel",
+    "createdAt" : "2022-09-01T13:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "more export formats",
+    "createdAt" : "2022-09-01T13:21:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "using Dijkstra with calculated properties",
+    "createdAt" : "2022-09-01T13:21:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 163,
+    "title" : "having periodic.iterate allow substitutions from parameters ala `#{row.type}`",
+    "createdAt" : "2022-09-01T13:21:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Request: apoc.path.expand. Option to assume unlisted labels are whitelisted",
+    "createdAt" : "2022-09-01T13:21:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "support file-contents/binary data for load.csv/json/xml/cypher",
+    "createdAt" : "2022-09-01T13:22:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Evaluate `ProcedureCallContext` to optimize heavy procedures",
+    "createdAt" : "2022-09-30T12:32:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "apoc.coll.different() returning false when it should return true",
+    "createdAt" : "2022-10-30T05:24:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Failed to read config `/var/lib/neo4j/conf/neo4j.conf`: Unrecognized setting. No declared setting with name: `apoc.export.file.enabled`",
+    "createdAt" : "2022-11-09T07:12:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "difference between the maven central apoc-core jar and the one on the release page for version 5.x ",
+    "createdAt" : "2022-12-02T07:37:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Support apoc.dump.jdbc",
+    "createdAt" : "2022-12-04T05:57:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Unable to find 4.x versions of APOC when running through docker",
+    "createdAt" : "2023-01-02T14:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Parameter to make apoc.periodic.iterate() raise an error when any batch fails",
+    "createdAt" : "2023-01-13T04:24:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "The missing constraint error message for apoc.import.json() is incorrect",
+    "createdAt" : "2023-01-18T01:09:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "apoc.path.subgraphAll returns more relationships",
+    "createdAt" : "2023-01-22T08:10:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Adding apoc.import.file.enabled=true would prevent db from starting",
+    "createdAt" : "2023-01-30T14:54:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Aggregation function `toMap`",
+    "createdAt" : "2023-02-20T14:02:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "load.xml can't load entity reference.",
+    "createdAt" : "2023-03-03T08:23:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "apoc.export.cypher.all exports unique indexes as node keys",
+    "createdAt" : "2023-03-08T14:35:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "Docs Example Bug apoc.load.json docs search demo doesn't exist anymore",
+    "createdAt" : "2023-04-06T20:26:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "apoc.nlp.aws.entities.graph and apoc.nlp.aws.entities.stream not returning results or debug information",
+    "createdAt" : "2023-04-27T14:01:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Cannot load json data",
+    "createdAt" : "2023-05-14T16:47:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "Trigger generating org.neo4j.graphdb.NotInTransactionException: This transaction has already been closed",
+    "createdAt" : "2023-05-16T13:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Add json5 support to apoc-core and extended",
+    "createdAt" : "2023-05-20T12:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "APOC version 5.8",
+    "createdAt" : "2023-05-23T11:58:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "ID() deprecated, how to get nodes where apoc returns id?",
+    "createdAt" : "2023-05-26T11:36:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 432,
+    "title" : "zstd compression support in apoc.util.compress()?",
+    "createdAt" : "2023-06-06T21:42:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Failed import graphml due to 'nan' input string",
+    "createdAt" : "2023-06-24T02:32:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "File Size Limit for .graphml import?",
+    "createdAt" : "2023-06-28T13:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Feature Request: measures the Cosine similarity of two vectors of an inner product space and compares the angle between them",
+    "createdAt" : "2023-07-22T14:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "apoc.custom fully removed???!!!",
+    "createdAt" : "2023-08-04T20:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "apoc.merge.node returns java.lang.NullPointerException on \"name\"",
+    "createdAt" : "2023-08-13T09:20:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "apoc.hashing.fingerprintGraph returns different fingersprints for identical graphs",
+    "createdAt" : "2023-08-17T14:06:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 482,
+    "title" : "Access Denied when using apoc.import ",
+    "createdAt" : "2023-08-29T07:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "APOC TTL Does not load in Desktop",
+    "createdAt" : "2023-09-15T18:10:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "apoc.refactor.mergeNodes while using apoc.periodic.iterate seems not working",
+    "createdAt" : "2023-10-01T13:10:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "apoc.export.cypher.schema() is only returning unique constraints and index cypher queries its not returning ` IS NOT NULL` constraints",
+    "createdAt" : "2023-10-03T07:09:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "apoc.load.json treats windows filepath as relative no matter what",
+    "createdAt" : "2023-10-06T07:52:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 676,
+    "title" : "ClassNotFoundException with APOC when running with embedded Java API and custom procedure classloader",
+    "createdAt" : "2023-10-09T09:29:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 514,
+    "title" : "Docker usage documentation Inconsistency",
+    "createdAt" : "2023-10-20T16:58:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "The apoc.export.csv.all doesn't export quotes with bulkImport: true",
+    "createdAt" : "2023-10-26T08:20:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Strange behavior of apoc.agg.statistics",
+    "createdAt" : "2023-11-13T10:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 535,
+    "title" : "Add an option to apoc.load.xml to add the element prefix in '_prefix' instead of only the local element name in '_type'",
+    "createdAt" : "2023-11-15T08:51:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "Using virtual nodes in Cypher",
+    "createdAt" : "2023-11-16T09:42:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "APOC 5.14.0 Crashes Neo4j On Startup",
+    "createdAt" : "2023-12-02T00:56:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "apoc.periodic.repeat does not affect",
+    "createdAt" : "2023-12-07T11:42:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "IndexEntryConflictException with apoc.merge.node",
+    "createdAt" : "2023-12-12T16:02:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "Unable to see apoc meta schema or apoc meta data",
+    "createdAt" : "2024-01-06T20:40:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "apoc.create.virtual.fromNode should wrap the existing node while keeping it's node-id and elementId but it doesn't",
+    "createdAt" : "2024-01-12T09:27:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 577,
+    "title" : "Data format discrepancy with and without using the option bulkImport: true",
+    "createdAt" : "2024-01-25T14:02:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "apoc.meta.data() fails when there is a relationship-type `RELATIONSHIP` breaks GenAI integrations",
+    "createdAt" : "2024-02-07T14:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 599,
+    "title" : "Failed to invoke procedure `apoc.meta.data`: Caused by: java.lang.IllegalArgumentException: duplicate element: RELATIONSHIP",
+    "createdAt" : "2024-02-23T09:28:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 611,
+    "title" : "RBAC Major security flaw",
+    "createdAt" : "2024-03-23T19:19:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 617,
+    "title" : "[apoc.spatial.geocodeOnce] Run failed",
+    "createdAt" : "2024-04-26T09:27:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 630,
+    "title" : "apoc.do.case not populating UpdateStatistics",
+    "createdAt" : "2024-05-23T11:24:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 631,
+    "title" : "Cypher script generated by apoc.export.cypher.all leaves the temporary `UNIQUE IMPORT ID REL` relationship properties",
+    "createdAt" : "2024-05-27T11:45:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 633,
+    "title" : "Inconsistent treatment of escape character \"\\\" when performing apoc.import.csv on nodes vs relationships",
+    "createdAt" : "2024-05-31T12:57:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "PageGraph GraphML file cannot be imported: Failed to invoke procedure `apoc.import.graphml`: Caused by: java.lang.NullPointerException: Cannot invoke \"String.split(String)\" because \"id\" is null",
+    "createdAt" : "2024-06-11T11:55:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 640,
+    "title" : "community server 5.21.0 cannot start with apoc 5.21.0 enabled",
+    "createdAt" : "2024-07-04T09:32:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "Problems in the execution of trigger",
+    "createdAt" : "2024-07-11T08:13:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 643,
+    "title" : "Trigger in composite databases",
+    "createdAt" : "2024-07-11T12:00:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 644,
+    "title" : "single node handling in apoc.refactor.mergeNodes",
+    "createdAt" : "2024-07-11T14:03:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 647,
+    "title" : "No results being returned by `apoc.export.json.all` when `writeNodeProperties: true` for a large dataset when writing to a stream",
+    "createdAt" : "2024-07-22T09:23:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 651,
+    "title" : "apoc.convert.toTree marked as deprecated with alternative not in documentation",
+    "createdAt" : "2024-08-08T17:09:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 655,
+    "title" : "Mongo APOC loading",
+    "createdAt" : "2024-08-15T13:15:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "Error: Neo.ClientError.Procedure.ProcedureCallFailed",
+    "createdAt" : "2024-09-14T05:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 670,
+    "title" : "Updating node locks outgoing relation deletion for APOC but not for normal queries",
+    "createdAt" : "2024-10-17T09:59:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 673,
+    "title" : "在添加APOC时出现Variable`apoc`not defined的问题",
+    "createdAt" : "2024-10-23T10:15:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 683,
+    "title" : "Change apoc.meta.schema output format (label of node = type of relationship)",
+    "createdAt" : "2024-11-11T08:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 690,
+    "title" : "Split packages between core and common",
+    "createdAt" : "2024-11-19T04:49:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Apoc.periodic.submit procedure was entered with no errors thrown but the procedure did not go through.",
+    "createdAt" : "2024-12-02T10:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "apoc.refactor.mergeNodes throws IndexEntryConflictException when merged nodes have relationships with UNIQUE constraint",
+    "createdAt" : "2024-12-05T11:48:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 713,
+    "title" : "Need a script to *AUTOMATICALLY* update APOC.core/APOC.extended jars to match the version of Neo4j server currently installed.",
+    "createdAt" : "2025-01-06T23:20:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 720,
+    "title" : "apoc.trigger deletedNodes should return all properties for the node",
+    "createdAt" : "2025-01-24T09:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 721,
+    "title" : "Multiple apoc.create.virtual.fromNode with the same node have the same id",
+    "createdAt" : "2025-01-26T06:00:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 761,
+    "title" : "apoc.refactor.mergeNodes fails to combine empty list properties",
+    "createdAt" : "2025-03-25T13:38:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 768,
+    "title" : "apoc-2025.03.0-core.jar file on GitHub is 2.8M instead of 25.3M",
+    "createdAt" : "2025-04-03T10:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 769,
+    "title" : "Missing relationships when restoring database from apoc.export.cypher.all dumps",
+    "createdAt" : "2025-04-07T13:16:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 770,
+    "title" : "Neo4j 5.26.5 + APOC 5.26.0: Registered Cypher-based Custom Procedures Not Found in neo4j DB",
+    "createdAt" : "2025-04-11T12:46:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "unable to load csv using apoc.load.csv",
+    "createdAt" : "2025-04-14T01:12:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 779,
+    "title" : "apoc.meta.nodes.count returns the total node count if the label doesn't exist",
+    "createdAt" : "2025-05-08T09:57:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 780,
+    "title" : "In 4.4.0.16, apoc.export.json.query does not export Edge properties unless writeNodeProperties:true",
+    "createdAt" : "2025-05-08T10:00:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 781,
+    "title" : "Failed to invoke procedure apoc.import.graphml: Caused by: java.net.MalformedURLException: unknown protocol: d",
+    "createdAt" : "2025-05-08T10:01:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 782,
+    "title" : "Document the way apoc.text.fuzzyMatch works",
+    "createdAt" : "2025-05-08T10:02:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 783,
+    "title" : "Non-shaded artifact for core?",
+    "createdAt" : "2025-05-08T10:02:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 788,
+    "title" : "In 5.26.3, apoc.paths.toJsonTree does not correctly map full path to tree",
+    "createdAt" : "2025-05-16T18:20:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 792,
+    "title" : "Wrong timestamp to string conversion for apoc.temporal.format",
+    "createdAt" : "2025-06-11T08:38:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 799,
+    "title" : "apoc-common 2025.06.0 unusable due to broken dependencies",
+    "createdAt" : "2025-07-09T08:50:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 801,
+    "title" : "IP Address type",
+    "createdAt" : "2025-07-11T08:26:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "Trigger is not called periodically because of closed transaction passed to setTriggerMetadata",
+    "createdAt" : "2025-07-23T07:20:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 823,
+    "title" : "apoc.periodic.iterate yields corrupted data",
+    "createdAt" : "2025-08-07T13:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 834,
+    "title" : "Request to have a flag for `apoc.load.jdbc` stored procedure to obfuscate URL on as-needed basis.",
+    "createdAt" : "2025-08-28T22:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 842,
+    "title" : "Include relationship property filter in expandConfig",
+    "createdAt" : "2025-09-11T05:03:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 869,
+    "title" : "apoc.meta.schema() fails with ClassNotFoundException: com.google.common.collect.Sets",
+    "createdAt" : "2025-12-01T14:01:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 870,
+    "title" : "Test issue",
+    "createdAt" : "2025-12-05T08:12:44Z",
+    "state" : "CLOSED"
+  } ]
+}

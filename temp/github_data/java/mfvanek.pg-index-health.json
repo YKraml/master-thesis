@@ -1,0 +1,906 @@
+{
+  "repoOwner" : "mfvanek",
+  "repoName" : "pg-index-health",
+  "forks" : [ {
+    "createdAt" : "2020-02-12T20:16:59Z"
+  }, {
+    "createdAt" : "2020-03-03T11:43:38Z"
+  }, {
+    "createdAt" : "2020-03-03T12:21:22Z"
+  }, {
+    "createdAt" : "2020-03-03T21:09:16Z"
+  }, {
+    "createdAt" : "2021-03-29T21:10:38Z"
+  }, {
+    "createdAt" : "2022-03-22T20:43:46Z"
+  }, {
+    "createdAt" : "2022-05-04T09:06:52Z"
+  }, {
+    "createdAt" : "2022-08-13T07:00:52Z"
+  }, {
+    "createdAt" : "2022-08-17T06:30:59Z"
+  }, {
+    "createdAt" : "2023-05-05T14:37:15Z"
+  }, {
+    "createdAt" : "2024-01-08T16:33:44Z"
+  }, {
+    "createdAt" : "2024-04-08T01:47:04Z"
+  }, {
+    "createdAt" : "2024-04-09T22:42:33Z"
+  }, {
+    "createdAt" : "2024-04-25T19:21:22Z"
+  }, {
+    "createdAt" : "2024-10-23T02:40:41Z"
+  }, {
+    "createdAt" : "2025-01-04T07:12:53Z"
+  }, {
+    "createdAt" : "2025-04-17T19:52:46Z"
+  }, {
+    "createdAt" : "2025-06-16T12:19:17Z"
+  }, {
+    "createdAt" : "2025-10-07T03:24:35Z"
+  }, {
+    "createdAt" : "2025-12-12T02:21:52Z"
+  } ],
+  "issues" : [ {
+    "number" : 9,
+    "title" : "Add support for different schemes (not only for public)",
+    "createdAt" : "2019-12-07T20:48:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Explicitly specify pg_catalog and information_schema for all sql queries",
+    "createdAt" : "2019-12-07T20:51:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Add ability to suggest recommended values to PostgreSQL's important settings.",
+    "createdAt" : "2019-12-22T20:23:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Add ability to accept zero value of thresholdUnitsCount argument in withIndexSizeThreshold and withTableSizeThreshold methods in Exclusions.Builder",
+    "createdAt" : "2020-01-10T07:07:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add diagnostics for measuring bloat of indexes and tables",
+    "createdAt" : "2020-02-11T09:08:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Refactoring is needed on IndexMaintenance to separate diagnostics on indexes and tables into different classes.",
+    "createdAt" : "2020-02-16T20:10:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Bloat monitoring doesn't work properly under user without read privileges.",
+    "createdAt" : "2020-02-21T07:46:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Consider adding new checks based on the article by Kirill Borovikov posted on Habr",
+    "createdAt" : "2020-02-25T08:06:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "pg-index-health as cmd-utility",
+    "createdAt" : "2020-03-03T21:34:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 48,
+    "title" : "Add ability to distinguish between index types in checks for duplicated and intersected indexes.",
+    "createdAt" : "2020-03-04T11:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Move all sql queries to a separate repository and connect it as a git submodule",
+    "createdAt" : "2020-03-04T12:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Use named parameters instead of ? in sql queries.",
+    "createdAt" : "2020-03-04T12:53:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add new test case for indexes with different opclass",
+    "createdAt" : "2020-03-11T08:08:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Add examples how to use in tests to README",
+    "createdAt" : "2020-03-19T07:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Wrong detection of intersected indexes",
+    "createdAt" : "2020-03-19T13:29:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "False positive result on missed primary key for materialized views.",
+    "createdAt" : "2020-03-19T13:41:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Wrong detection of Intersected Indexes",
+    "createdAt" : "2020-03-21T08:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Better API for using in tests",
+    "createdAt" : "2020-03-21T09:08:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Add retry policy in sql query execution to resist network inconsistency",
+    "createdAt" : "2020-04-09T07:25:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Wrong detection of Duplicated indexes",
+    "createdAt" : "2020-04-14T06:52:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Support several PgContext in indexMaintenance.get* methods",
+    "createdAt" : "2020-04-16T11:52:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Log last stat_reset timestamp",
+    "createdAt" : "2020-04-28T08:51:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Replace \"Master\" with \"Primary\"",
+    "createdAt" : "2020-04-30T21:08:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Do not create separate connection to the primary host",
+    "createdAt" : "2020-05-01T07:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Add support for PostgreSQL 13",
+    "createdAt" : "2020-10-31T16:53:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Create a Spring Boot Starter in order to simplify using with @SpringBootTest",
+    "createdAt" : "2021-05-16T07:17:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Add validation of JPA Entities against real db schema",
+    "createdAt" : "2021-10-23T15:01:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Add micrometer instrumentation",
+    "createdAt" : "2021-11-03T09:35:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 121,
+    "title" : "Prepare HighAvailabilityPgConnectionImpl for using as a long-live singleton (spring bean)",
+    "createdAt" : "2022-03-22T09:13:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Migrate codebase to Java 11",
+    "createdAt" : "2022-03-22T14:14:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Migrate to AssertJ in tests",
+    "createdAt" : "2022-03-22T14:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "GitHub CI is broken for PR from forks",
+    "createdAt" : "2022-03-24T09:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Add nullability mark field to ForeignKey class and method for generating sql request for creating corresponding index",
+    "createdAt" : "2022-05-11T07:56:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Consider to add diagnostic on usage serial/bigserial types for non primary key columns",
+    "createdAt" : "2022-05-21T09:25:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Integration with sonarcloud.io",
+    "createdAt" : "2022-05-21T20:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Consider to add check for tables and columns without description (comment)",
+    "createdAt" : "2022-06-07T07:13:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Generate package-info.java and add to the project",
+    "createdAt" : "2022-06-08T18:19:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Consider to add check for columns with type json",
+    "createdAt" : "2022-07-25T07:58:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Consider to add Google Error-Prone to the project",
+    "createdAt" : "2022-07-30T19:24:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Sonar. Refactor the code of the lambda to have only one invocation possibly throwing a runtime exception",
+    "createdAt" : "2022-08-17T06:26:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Consider migrating to dbchange",
+    "createdAt" : "2022-08-29T07:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "[Bug] Wrong detection on column that is primary key and also have another constraints",
+    "createdAt" : "2022-09-19T15:21:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Add a check for functions and procedures without a description",
+    "createdAt" : "2022-09-22T09:10:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Test and support PostgreSQL 15",
+    "createdAt" : "2022-10-16T19:39:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Consider to add a check to prevent unnecessary where-clauses in index creating queries on not null columns",
+    "createdAt" : "2023-02-01T10:03:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Consider to add Forbidden API Checker",
+    "createdAt" : "2023-02-02T09:28:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Add a check for identifiers with maximum length",
+    "createdAt" : "2023-02-08T13:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Migrate gradle build config to buildSrc",
+    "createdAt" : "2023-02-12T19:39:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Add feature to create cluster containers programmaticaly",
+    "createdAt" : "2023-03-07T06:45:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Add aggregated Jacoco report",
+    "createdAt" : "2023-04-28T12:05:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Add tests retry to increase pipeline stability",
+    "createdAt" : "2023-04-28T15:24:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Consider to migrate to org.apache.tomcat.jdbc.pool",
+    "createdAt" : "2023-07-15T09:30:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Idea: check for alignment padding",
+    "createdAt" : "2023-09-13T06:48:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 284,
+    "title" : "Add support for PostgreSQL 16",
+    "createdAt" : "2023-09-15T06:12:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Need to change migrations generator API - return List<String> instead of joint String",
+    "createdAt" : "2023-09-30T08:54:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Logging within the library",
+    "createdAt" : "2023-10-13T06:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "Add check to find usage of varchar(32/36) instead of uuid for PK",
+    "createdAt" : "2023-11-04T17:11:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Add SpotBugs plugins for static code analysis",
+    "createdAt" : "2023-11-07T09:08:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Add check to prefer timestamptz instead of timestamp [pgwiki]",
+    "createdAt" : "2023-11-10T06:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Add check \"Don't use serial\"",
+    "createdAt" : "2023-11-21T12:00:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Add check \"Do not index booleans\"",
+    "createdAt" : "2023-11-29T11:43:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Add docker-compose file to up and running PostgreSQL for experiments",
+    "createdAt" : "2024-02-17T07:07:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "Idea: how to catch errors of the \"missing index\" class",
+    "createdAt" : "2024-03-29T08:14:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 362,
+    "title" : "Add check for not valid constraints",
+    "createdAt" : "2024-04-07T19:04:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "Add check for sequences overflow (how much is left before the limit value)",
+    "createdAt" : "2024-04-07T19:11:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "Add check \"Do not index arrays via btree - use gin instead\"",
+    "createdAt" : "2024-04-07T19:14:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "Move HealthLogger and DatabaseChecks to a separate module",
+    "createdAt" : "2024-04-27T13:54:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Move DatabaseCheckOnHost to a separate module (core) and use it in Spring Boot starter",
+    "createdAt" : "2024-04-27T14:20:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Find a way to reduce amount of boilerplate code in tests",
+    "createdAt" : "2024-04-27T16:14:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Upgrade Java baseline to Java 17 and migrate starter to Spring Boot 3",
+    "createdAt" : "2024-04-27T16:16:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Upgrade PostgreSQL versions in tests",
+    "createdAt" : "2024-04-28T09:12:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Release new 0.11.0 version",
+    "createdAt" : "2024-05-02T17:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "Add check for indexes \"timestamp in the middle\"",
+    "createdAt" : "2024-05-04T19:53:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Add check \"The type of the foreign key must match the type of column in the target table\"",
+    "createdAt" : "2024-05-05T13:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Add check \"Multicolumn foreign keys with nulls\" [db_verifier]",
+    "createdAt" : "2024-05-05T13:54:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 390,
+    "title" : "Add check \"Duplicated foreign keys\"",
+    "createdAt" : "2024-05-05T13:57:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Add check \"Intersected foreign keys\"",
+    "createdAt" : "2024-05-05T13:59:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Get rid of AdditionalValidators and code duplication",
+    "createdAt" : "2024-05-24T11:03:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Update readme.md and information about checks (divide all checks into static and runtime)",
+    "createdAt" : "2024-05-26T12:59:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "Add Micronaut integration",
+    "createdAt" : "2024-06-06T20:12:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 416,
+    "title" : "Add Spring R2DBC integration",
+    "createdAt" : "2024-06-06T20:13:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 419,
+    "title" : "Add detailed information for each check",
+    "createdAt" : "2024-06-15T11:39:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 422,
+    "title" : "Get rid of sequence name concatenation via String.format",
+    "createdAt" : "2024-06-18T13:55:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Migrate nullability annotations to JSpecify",
+    "createdAt" : "2024-07-22T10:58:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Add check \"Tables are not linked to other tables\"",
+    "createdAt" : "2024-10-05T17:03:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Add support for PostgreSQL 17",
+    "createdAt" : "2024-10-06T08:06:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 452,
+    "title" : "Get rid of SimpleLoggingKey",
+    "createdAt" : "2024-10-11T15:09:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Get rid of duplication in HealthLoggerTest and StandardHealthLoggerTest",
+    "createdAt" : "2024-10-11T15:27:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "Add filters by Predicate<> to DatabaseCheckOnHost",
+    "createdAt" : "2024-10-12T10:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 456,
+    "title" : "Add static/runtime mark to each diagnostic",
+    "createdAt" : "2024-10-12T18:08:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "Add class StandardChecksOnHost",
+    "createdAt" : "2024-10-12T18:28:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "Consider to move existing predicates to separate module",
+    "createdAt" : "2024-10-15T19:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Refactor packages structure",
+    "createdAt" : "2024-10-17T07:12:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 467,
+    "title" : "Retest all table checks with partitioned tables",
+    "createdAt" : "2024-10-20T16:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "Add a check to find all indexes that were created non-concurrently",
+    "createdAt" : "2024-11-01T06:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : "Rewrite all predicates for using DbObject as basic type",
+    "createdAt" : "2024-11-04T06:50:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "Add predicate to skip standard Liqubase and Flyway tables",
+    "createdAt" : "2024-11-04T06:54:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "Extend DatabaseCheckOnHost with overloaded method for public schema with predicate",
+    "createdAt" : "2024-11-04T06:57:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Consider to refactor Exclusions and ExclusionsBuilder to usage of nested class",
+    "createdAt" : "2024-11-07T15:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 482,
+    "title" : "Consider to make model classes final to enforce immutability",
+    "createdAt" : "2024-11-08T18:09:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Consider to add an overloaded constructors to Diagnostic class",
+    "createdAt" : "2024-11-09T16:56:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "Add predicates to skip Constraints and Columns based on their names",
+    "createdAt" : "2024-11-15T17:31:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "Migration generator. Try to handle duplicated objects",
+    "createdAt" : "2024-11-17T19:15:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 503,
+    "title" : "Fix crosslinks in javadoc",
+    "createdAt" : "2024-11-19T07:41:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "DatabaseStructureHealthCondition doesn't work with Testcontainers URLs",
+    "createdAt" : "2024-11-28T12:20:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Consider to extend support of Testcontainers URLs for HA-connections",
+    "createdAt" : "2024-11-28T19:58:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "[pg-index-health-test-starter] Add ability to customize name of dataSource bean and databaseUrl",
+    "createdAt" : "2024-12-02T10:21:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "Add a check to find object names that do not follow naming convention",
+    "createdAt" : "2024-12-04T12:57:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Add overloaded methods to create tables/indexes without specifying zero size",
+    "createdAt" : "2024-12-05T13:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "[TABLES_WITHOUT_DESCRIPTION] Consider to skip partitions of table",
+    "createdAt" : "2024-12-05T13:15:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "[TABLES_NOT_LINKED_TO_OTHERS] Decide how to handle partitioned tables",
+    "createdAt" : "2024-12-05T13:20:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "[INDEXES_WITH_NULL_VALUES] Enhance support for partitioned tables/indexes",
+    "createdAt" : "2024-12-06T08:28:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "[PRIMARY_KEYS_WITH_SERIAL_TYPES] ERROR: permission denied for schema XXX",
+    "createdAt" : "2024-12-06T15:21:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Describe the main idea in readme or contribution guide",
+    "createdAt" : "2024-12-07T15:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Rename all ofPublic methods to ofDefault",
+    "createdAt" : "2024-12-12T07:03:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "Add a check \"Candidates to convert btree index into hash index\"",
+    "createdAt" : "2024-12-17T14:14:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 550,
+    "title" : "Take a close look at SchemaCrawler  and its linters",
+    "createdAt" : "2024-12-29T14:29:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Extend documentation and Standard test with filtering examples",
+    "createdAt" : "2025-02-07T10:23:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Consider to add a check to find primary keys that are not surrogate keys",
+    "createdAt" : "2025-02-24T12:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 580,
+    "title" : "Get rid of slf4j and migrate to java.util.logging",
+    "createdAt" : "2025-03-13T07:31:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "Fix bloat calculation on indexes in partitioned tables",
+    "createdAt" : "2025-03-30T08:43:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 598,
+    "title" : "Add a check \"Relation without columns or has too few columns\"",
+    "createdAt" : "2025-04-03T14:55:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 600,
+    "title" : "Delete all deprecated functionality",
+    "createdAt" : "2025-04-06T09:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 603,
+    "title" : "Make all model serializable to Json",
+    "createdAt" : "2025-04-07T07:01:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 605,
+    "title" : "[not_valid_constraints] Add test with badly named constraints",
+    "createdAt" : "2025-04-08T18:52:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 606,
+    "title" : "Add a check to find column names that do not follow naming convention",
+    "createdAt" : "2025-04-08T19:04:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 608,
+    "title" : "Consider to add a check \"Don't use varchar(n) by default\"",
+    "createdAt" : "2025-04-11T13:57:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 609,
+    "title" : "Consider to add a check \"Don't use money\"",
+    "createdAt" : "2025-04-11T14:05:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 614,
+    "title" : "Extend CONTRIBUTING.md and describe operations with git submodule",
+    "createdAt" : "2025-04-18T11:39:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 616,
+    "title" : "Merge Index and IndexWithSize models",
+    "createdAt" : "2025-04-19T18:56:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 618,
+    "title" : "Update PostgreSQL version in tests and CI",
+    "createdAt" : "2025-04-20T18:12:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 628,
+    "title" : "Add a check for columns in different tables, that have the same name but have different data types [schemacrawler]",
+    "createdAt" : "2025-05-06T06:10:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 629,
+    "title" : "Add a check for tables where the foreign key self-references the primary key [schemacrawler]",
+    "createdAt" : "2025-05-06T06:23:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 630,
+    "title" : "Add a check for tables that have all columns besides the primary key that are nullable [schemacrawler]",
+    "createdAt" : "2025-05-06T06:26:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 631,
+    "title" : "Add a check for empty tables with no data [schemacrawler]",
+    "createdAt" : "2025-05-06T06:34:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 632,
+    "title" : "Add a check for cyclical relationships between tables [schemacrawler]",
+    "createdAt" : "2025-05-06T06:36:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 633,
+    "title" : "Add a check for tables with incrementing column names [schemacrawler]",
+    "createdAt" : "2025-05-06T06:40:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 634,
+    "title" : "Add a check for tables where the primary key columns are not first [schemacrawler]",
+    "createdAt" : "2025-05-06T06:43:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 635,
+    "title" : "Add a check for tables with BLOB [schemacrawler]",
+    "createdAt" : "2025-05-06T06:53:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 636,
+    "title" : "Take a look at Squawk",
+    "createdAt" : "2025-05-08T08:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "Update EqualsVerifier to 4.0 or higher",
+    "createdAt" : "2025-05-12T14:37:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "Create a web site for a project",
+    "createdAt" : "2025-05-19T07:30:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 644,
+    "title" : "Create more convenient API in models to avoid duplication of table name",
+    "createdAt" : "2025-05-25T08:45:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 651,
+    "title" : "Rework builder in GeneratingOptions",
+    "createdAt" : "2025-06-02T09:53:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 660,
+    "title" : "OSSRH Migration",
+    "createdAt" : "2025-06-13T09:01:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 661,
+    "title" : "Migrate to gradle-maven-publish-plugin",
+    "createdAt" : "2025-06-14T18:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 665,
+    "title" : "Take a look at Azimutt",
+    "createdAt" : "2025-06-18T12:34:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 666,
+    "title" : "Take a look at schemalint",
+    "createdAt" : "2025-06-18T12:44:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 668,
+    "title" : "Update description of the project",
+    "createdAt" : "2025-06-21T08:14:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 669,
+    "title" : "Add a check \"Don't use table inheritance\" [pgwiki]",
+    "createdAt" : "2025-06-21T08:29:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "Split pg-index-health-jdbc-connection into two parts",
+    "createdAt" : "2025-07-05T13:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 691,
+    "title" : "Add new rules to detekt",
+    "createdAt" : "2025-08-07T14:10:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "Migrate to Spring Boot 3.4.x",
+    "createdAt" : "2025-08-24T10:21:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Migrate to Gradle 9",
+    "createdAt" : "2025-08-24T10:28:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 701,
+    "title" : "Refactor ColumnWithSerialType to use AbstractColumnAware",
+    "createdAt" : "2025-08-30T07:28:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 705,
+    "title" : "Add new check \"Don't use char(n)\" [pgwiki] [squawk]",
+    "createdAt" : "2025-09-07T16:20:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 708,
+    "title" : "Write custom checks correctly",
+    "createdAt" : "2025-09-15T08:12:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 710,
+    "title" : "Prepare for custom checks",
+    "createdAt" : "2025-09-21T16:04:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 713,
+    "title" : "Add support for PostgreSQL 18",
+    "createdAt" : "2025-09-26T06:21:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 714,
+    "title" : "Remove all deprecated methods",
+    "createdAt" : "2025-09-27T09:24:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 717,
+    "title" : "Performance of health logger",
+    "createdAt" : "2025-09-27T20:08:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 728,
+    "title" : "Rework AbstractCheckOnHost and make internal fields accessible in child classes",
+    "createdAt" : "2025-10-05T18:52:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 729,
+    "title" : "Add extractors for all standard models",
+    "createdAt" : "2025-10-05T19:06:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 745,
+    "title" : "Add a check \"Don't use upper case table or column names\" [pgwiki] [schemalint]",
+    "createdAt" : "2025-11-08T09:13:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 746,
+    "title" : "Add a check \"prefer-text-with-check-to-enum\" [schemalint]",
+    "createdAt" : "2025-11-08T09:18:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 747,
+    "title" : "Idea: consider to add a check \"mandatory-columns\" and revisit PgContext and exceptions [schemalint]",
+    "createdAt" : "2025-11-08T09:25:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 752,
+    "title" : "Add support for Spring Boot 4",
+    "createdAt" : "2025-11-23T08:09:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 753,
+    "title" : "Add support for Jackson 3",
+    "createdAt" : "2025-11-23T08:10:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 754,
+    "title" : "Add support for Testcontainers v2 [breaking change]",
+    "createdAt" : "2025-11-23T09:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 756,
+    "title" : "Add ArchUnit tests for auto-configuration",
+    "createdAt" : "2025-11-23T11:54:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 767,
+    "title" : "TABLES_WITH_INHERITANCE should ignore partitioned tables",
+    "createdAt" : "2025-11-29T15:28:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 787,
+    "title" : "Take a look at pgrubic",
+    "createdAt" : "2026-01-19T07:25:55Z",
+    "state" : "OPEN"
+  } ]
+}

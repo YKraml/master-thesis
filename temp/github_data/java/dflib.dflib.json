@@ -1,0 +1,2624 @@
+{
+  "repoOwner" : "dflib",
+  "repoName" : "dflib",
+  "forks" : [ {
+    "createdAt" : "2019-01-15T13:44:02Z"
+  }, {
+    "createdAt" : "2020-01-08T22:55:18Z"
+  }, {
+    "createdAt" : "2020-02-05T09:39:50Z"
+  }, {
+    "createdAt" : "2020-03-04T11:22:14Z"
+  }, {
+    "createdAt" : "2020-04-08T15:58:13Z"
+  }, {
+    "createdAt" : "2022-03-29T14:34:08Z"
+  }, {
+    "createdAt" : "2022-11-22T03:51:36Z"
+  }, {
+    "createdAt" : "2023-05-18T07:44:09Z"
+  }, {
+    "createdAt" : "2024-04-20T20:19:19Z"
+  }, {
+    "createdAt" : "2024-05-13T06:38:35Z"
+  }, {
+    "createdAt" : "2024-06-23T11:08:11Z"
+  }, {
+    "createdAt" : "2024-08-30T05:55:27Z"
+  }, {
+    "createdAt" : "2024-09-04T07:13:36Z"
+  }, {
+    "createdAt" : "2024-09-27T05:03:06Z"
+  }, {
+    "createdAt" : "2024-10-08T22:33:37Z"
+  }, {
+    "createdAt" : "2024-10-21T13:54:42Z"
+  }, {
+    "createdAt" : "2024-11-11T01:54:41Z"
+  }, {
+    "createdAt" : "2024-11-27T05:37:48Z"
+  }, {
+    "createdAt" : "2024-11-28T13:07:25Z"
+  }, {
+    "createdAt" : "2024-12-24T09:14:40Z"
+  }, {
+    "createdAt" : "2024-12-26T21:58:43Z"
+  }, {
+    "createdAt" : "2025-01-03T11:41:47Z"
+  }, {
+    "createdAt" : "2025-01-08T11:26:45Z"
+  }, {
+    "createdAt" : "2025-02-11T15:13:57Z"
+  }, {
+    "createdAt" : "2025-04-02T08:56:17Z"
+  }, {
+    "createdAt" : "2025-07-09T03:57:59Z"
+  }, {
+    "createdAt" : "2025-07-10T04:53:05Z"
+  }, {
+    "createdAt" : "2025-10-16T19:20:40Z"
+  }, {
+    "createdAt" : "2026-01-21T14:00:07Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Support for 'groupBy'",
+    "createdAt" : "2019-01-13T07:18:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Support for DataFrame aggregation API",
+    "createdAt" : "2019-01-13T09:12:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "'vConcat' and 'hConcat' : support for concatenting DataFrames",
+    "createdAt" : "2019-01-19T07:57:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "'sort' and 'sortByColumns' to reorder DataFrames",
+    "createdAt" : "2019-01-19T17:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Load DataFrames from CSV",
+    "createdAt" : "2019-01-21T13:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "RowProxy - \"flyweight\" API to hide access to Object[]",
+    "createdAt" : "2019-02-10T14:15:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Store DataFrames in CSV",
+    "createdAt" : "2019-02-18T16:10:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "JDBC loader for DataFrames",
+    "createdAt" : "2019-02-18T16:26:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "JDBC saver for DataFrames",
+    "createdAt" : "2019-03-03T05:02:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "dflib-jdbc: TableSaver to create target table if missing",
+    "createdAt" : "2019-03-03T05:11:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "dflib-jdbc: TableSaver to merge data by key",
+    "createdAt" : "2019-03-03T15:07:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Column-oriented DataFrame",
+    "createdAt" : "2019-03-16T16:26:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Scalar: helper accessor to DataFrame values",
+    "createdAt" : "2019-03-20T14:07:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "DataFrame.addColumn(Series)",
+    "createdAt" : "2019-03-28T06:09:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "GroupBy.rowNumbers()",
+    "createdAt" : "2019-03-28T06:21:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Series.fillNulls / DataFrame.fillNulls",
+    "createdAt" : "2019-03-28T07:28:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "\"DataFrame.select\" operation for selecting rows",
+    "createdAt" : "2019-03-31T13:40:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "GroupBy.head(int) and GroupBy.toDataFrame() functions",
+    "createdAt" : "2019-03-31T15:58:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "DataFrame.tail(i), GroupBy.tail(i)",
+    "createdAt" : "2019-03-31T17:08:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Add LocalDate and LocalDateTime converters",
+    "createdAt" : "2019-04-06T06:28:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Hash equijoins should include one only copy of a each join column",
+    "createdAt" : "2019-04-06T07:35:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Simplifying join API",
+    "createdAt" : "2019-04-06T07:40:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Tabular printer should right-align numbers and booleans",
+    "createdAt" : "2019-04-06T10:14:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "CsvLoader to provide shortcuts for datetime and number conversions",
+    "createdAt" : "2019-04-07T08:45:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "IntSeries / IntMutableList for joins and filters",
+    "createdAt" : "2019-04-07T17:51:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "IntSeries / IntMutableList for sort and group ",
+    "createdAt" : "2019-04-10T10:15:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Make IntSeries compatible with Series<Integer>",
+    "createdAt" : "2019-04-13T16:29:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "DoubleSeries",
+    "createdAt" : "2019-04-16T09:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : " BooleanSeries",
+    "createdAt" : "2019-04-18T14:14:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Series.replace, Series.replaceNoMatch, DataFrame.nullify, DataFrame.nullifyNoMatch",
+    "createdAt" : "2019-04-19T06:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Series/DataFrame element-wise equality operations",
+    "createdAt" : "2019-04-19T07:01:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "DataFrame.stack operation",
+    "createdAt" : "2019-04-19T07:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Tabular and Inline printers should show head and tail",
+    "createdAt" : "2019-04-24T06:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "LongSeries",
+    "createdAt" : "2019-04-24T06:46:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Series.locate(ValuePredicate)",
+    "createdAt" : "2019-04-24T18:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "DataFrame.fillNullsFromSeries(..) / Series.fillNullsFromSeries(..)",
+    "createdAt" : "2019-04-29T09:51:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Primitive Series \"select\" methods must account for nulls",
+    "createdAt" : "2019-04-29T11:09:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "DataFrame.mapColumn",
+    "createdAt" : "2019-04-30T12:29:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "\"Series.unique\" - produce Series with non-repeating values",
+    "createdAt" : "2019-05-27T14:34:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "DataFrame.unique -  produce DataFrame with non-repeating rows",
+    "createdAt" : "2019-05-27T15:51:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "EnumSeries for categorical data",
+    "createdAt" : "2019-05-27T15:53:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Column converter to enums for categorical data",
+    "createdAt" : "2019-05-28T07:44:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "\"dflib-jupyter\" - integration into Jupyter notebook",
+    "createdAt" : "2019-05-28T09:57:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "DataFrame.renameColumns(UnaryOperator<String>) to upper/lower case column names",
+    "createdAt" : "2019-05-28T13:34:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Move interfaces with public static methods for creating lambdas to the root package",
+    "createdAt" : "2019-05-29T07:08:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Series.map",
+    "createdAt" : "2019-05-29T09:52:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "dflib-jdbc: saver must support Month, Year, enums, etc",
+    "createdAt" : "2019-05-29T14:28:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "dflib-jdbc: alternative way for TableSaver to find the types of PreparedStatement parameters",
+    "createdAt" : "2019-05-30T05:33:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Hash Join builder",
+    "createdAt" : "2019-05-31T14:29:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "\"indicator\" column for joins",
+    "createdAt" : "2019-05-31T14:41:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Allow selection by BooleanSeries",
+    "createdAt" : "2019-06-03T08:10:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "HTML rendering for dflib-jupyter",
+    "createdAt" : "2019-06-03T15:28:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Column-oriented aggregators, control aggregated column names",
+    "createdAt" : "2019-06-05T07:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Aggregator \"count\" and \"sum\" functions improvements",
+    "createdAt" : "2019-06-05T12:36:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "\"TableSaver.save()\" should optionally return per-row breakdown of database operations ",
+    "createdAt" : "2019-06-05T14:46:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "CsvSaver.createMissingDirs() to save CSVs in arbitrary locations",
+    "createdAt" : "2019-06-06T12:02:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Builder for DataFrame creation",
+    "createdAt" : "2019-06-09T00:49:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Series.valueCount() - utility method for data exploration",
+    "createdAt" : "2019-06-09T01:01:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "dflib-jdbc: JdbcConnector to support external transaction management",
+    "createdAt" : "2019-06-12T14:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "dflib-jupyter: integrate Logback, allow to change log levels in notebook",
+    "createdAt" : "2019-06-12T21:27:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Series.filter(ValuePredicate), Series.filter(BooleanSeries)",
+    "createdAt" : "2019-06-17T06:22:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Basic `Series.groupBy(..)`",
+    "createdAt" : "2019-06-19T11:37:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Series / SeriesGroupBy aggregation functionality ",
+    "createdAt" : "2019-06-19T12:55:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "API for DataFrame-based value aggregator function",
+    "createdAt" : "2019-06-21T07:44:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "\"dflib-test\" a module for unit testing of Series and DataFrames",
+    "createdAt" : "2019-06-21T08:08:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Series.sort ",
+    "createdAt" : "2019-07-14T17:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "BooleanSeries: and, or, not operations",
+    "createdAt" : "2019-07-19T21:03:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "TableSaver: apply quotes to schema/catalog/table name separately",
+    "createdAt" : "2019-08-01T19:18:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Remove API deprecated in 0.6",
+    "createdAt" : "2019-08-02T14:02:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Series, DataFrame \"sample\" ",
+    "createdAt" : "2019-08-02T17:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "DataFrame.selectColumns(Predicate<String>)",
+    "createdAt" : "2019-08-02T20:42:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "JDBC sampling",
+    "createdAt" : "2019-08-16T12:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "CSV sampling",
+    "createdAt" : "2019-08-16T13:08:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "DataFrame.dropColumns(Predicate<String>)",
+    "createdAt" : "2019-08-16T13:27:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Series.forData(Iterable<T>)",
+    "createdAt" : "2019-08-22T15:06:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Type-specific column operations",
+    "createdAt" : "2019-09-02T05:47:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "DataFrame.rows(..) : transformation over a subset of rows",
+    "createdAt" : "2019-09-02T05:55:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Support filter condition in CsvLoader",
+    "createdAt" : "2019-09-02T11:49:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "CsvLoader - better way to include/exclude columns",
+    "createdAt" : "2019-10-11T13:13:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Implement min/max aggregation operations",
+    "createdAt" : "2019-10-16T18:41:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Make Series iterable",
+    "createdAt" : "2019-10-22T07:50:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Convert Series to List, Set, array",
+    "createdAt" : "2019-10-22T08:04:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Shortcuts for Series aggregations",
+    "createdAt" : "2019-10-29T06:13:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Series.map flavor that returns a DataFrame",
+    "createdAt" : "2019-10-29T13:12:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Expose JdbcConnector DataSource for ease of integration",
+    "createdAt" : "2019-10-30T06:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "DataFrame.addColumns with RowMapper",
+    "createdAt" : "2019-11-02T11:10:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Index.toSeries()",
+    "createdAt" : "2019-11-16T12:57:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Filter condition in aggregators (partial)",
+    "createdAt" : "2019-11-20T13:20:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Comparable min/max aggregators",
+    "createdAt" : "2019-11-26T15:18:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "DataFrame.over() - window functions",
+    "createdAt" : "2020-01-28T09:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Series.sortIndex()",
+    "createdAt" : "2020-01-28T15:14:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Null-safe Sorters with implicit NULL ordering policy",
+    "createdAt" : "2020-01-29T14:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "dflib-jdbc: SqlSaver to allow wrapping DataFrame updates in custom functions",
+    "createdAt" : "2020-01-30T15:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Reusable SqlLoader - allow different parameters for the same loader instance",
+    "createdAt" : "2020-02-01T12:44:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Clean table before saving via SqlSaver#Save",
+    "createdAt" : "2020-02-05T12:03:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "DbFlavor as an object with state and behavior",
+    "createdAt" : "2020-02-18T20:22:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "DbFlavor for PostgreSQL ",
+    "createdAt" : "2020-02-18T20:25:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Adding missing load/save methods to CSV",
+    "createdAt" : "2020-02-22T15:32:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Shortcut to add single-value columns ",
+    "createdAt" : "2020-03-09T13:26:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "\"dflib-junit5\" - a test module that supports JUnit5",
+    "createdAt" : "2020-04-12T15:35:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "\"dflib-json\" and JsonLoader - the initial version of DFLib JSON \"connector\"",
+    "createdAt" : "2020-04-23T06:57:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "TableLoader.neq condition",
+    "createdAt" : "2020-06-18T12:43:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "TableSaver.deleteUnmatchedRows - full sync mode",
+    "createdAt" : "2020-06-18T12:50:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "TableDeleter",
+    "createdAt" : "2020-06-18T13:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "JdbcConnector: Support for custom data converters",
+    "createdAt" : "2020-06-25T08:53:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Inferring Series type from data",
+    "createdAt" : "2020-06-25T12:53:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "TableSaver.save(..) doesn't record the status of deleted rows",
+    "createdAt" : "2020-08-05T10:17:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 113,
+    "title" : "MySQL 8 requires special treatment of local time",
+    "createdAt" : "2020-08-25T10:49:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "\"shift\" operation",
+    "createdAt" : "2020-09-12T07:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Map operation over the entire DataFrame",
+    "createdAt" : "2021-01-10T09:24:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Read/write DataFrames from/to Parquet files",
+    "createdAt" : "2021-01-20T14:26:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : " Read/write DataFrames from/to Avro files",
+    "createdAt" : "2021-01-20T15:40:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Primitive (custom) accumulators for DataFrameBuilder.byRow(..)",
+    "createdAt" : "2021-01-21T16:00:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "DataFrame.pivot(..)",
+    "createdAt" : "2021-03-24T09:11:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "BigDecimal aggregators with controlled scale",
+    "createdAt" : "2021-04-13T21:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Expression API",
+    "createdAt" : "2021-04-16T15:57:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Improve performance of \"DF.filterRows(BooleanSeries)\"",
+    "createdAt" : "2021-04-18T12:45:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Memory- and creation-optimized numeric Series",
+    "createdAt" : "2021-04-18T13:46:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 125,
+    "title" : "Column-based sort algorithm for better performance and expressions support",
+    "createdAt" : "2021-04-24T14:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Research optimizations offered by the Java Vector API",
+    "createdAt" : "2021-04-27T13:52:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Make Aggregator compatible with Exp",
+    "createdAt" : "2021-05-07T21:21:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Exp to eval against Series",
+    "createdAt" : "2021-05-09T14:00:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Rename \"filter\" methods to \"select\"",
+    "createdAt" : "2021-05-10T17:26:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Support Sorter in window functions",
+    "createdAt" : "2021-05-21T13:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Support aggregation expressions as window functions",
+    "createdAt" : "2021-05-21T14:25:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "dflib-json is not included in the BOM",
+    "createdAt" : "2021-06-29T18:34:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "dflib-json - implement JsonSaver",
+    "createdAt" : "2021-06-29T18:40:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Bootique and Testcontainers dependency leaks via BOM import",
+    "createdAt" : "2021-07-29T20:47:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Join DataFrame on multiple columns",
+    "createdAt" : "2021-08-30T11:52:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Support for loading Excel files",
+    "createdAt" : "2021-09-17T07:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "\"ne\" incorrectly compares numbers with non-numbers",
+    "createdAt" : "2021-10-02T13:07:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Storing DataFrame in Excel",
+    "createdAt" : "2021-10-13T08:22:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "JDBC Tx \"Error processing connection\" on rollback of nested transactions",
+    "createdAt" : "2022-01-17T15:23:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Use Exp.getColumn instead of  Exp.toQL for method DataFrame.selectColumns",
+    "createdAt" : "2022-03-19T10:17:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Upgrade jackson to 2.13.3",
+    "createdAt" : "2022-06-23T13:28:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Cumulative sum expression",
+    "createdAt" : "2022-07-16T15:40:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Range definitions for WindowBuilder",
+    "createdAt" : "2022-07-16T15:59:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Remove API deprecated in 0.11",
+    "createdAt" : "2022-07-16T19:01:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "WindowBuilder.mapColumn(..)",
+    "createdAt" : "2022-07-16T19:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Incorrect default name for \"$decimal(\"a\").sum()\"",
+    "createdAt" : "2022-07-17T17:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "\"Exp.castAsCondition()\"",
+    "createdAt" : "2022-07-17T20:42:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "DataFrame.vExplode()",
+    "createdAt" : "2022-07-29T15:57:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Switch to Java 11",
+    "createdAt" : "2022-10-08T08:31:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Remove support for JUnit 4",
+    "createdAt" : "2022-10-08T08:41:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "ExcelLoader.firstRowAsHeader()",
+    "createdAt" : "2022-10-08T10:38:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Load/store DataFrames from Excel Workbook object",
+    "createdAt" : "2022-10-09T12:53:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Upgrade to Jackson 2.13.4 / 2.13.4.2",
+    "createdAt" : "2022-10-20T15:36:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Exp.mapCondition(), Exp.mapConditionVal()",
+    "createdAt" : "2022-10-21T09:54:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Exp.castAsDate()",
+    "createdAt" : "2022-10-29T11:08:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Exp.castAsStr()",
+    "createdAt" : "2022-10-29T11:15:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "DateExp comparison expressions",
+    "createdAt" : "2022-10-29T11:37:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "DateExp - exp to extract day, month, year",
+    "createdAt" : "2022-10-29T11:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "TimeExp",
+    "createdAt" : "2022-10-30T08:03:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "API unification: Deprecate ValueMapper",
+    "createdAt" : "2022-10-30T09:21:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Remove API deprecated since 0.12",
+    "createdAt" : "2022-11-12T16:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "NumExp expressions must produce primitive Series where possible",
+    "createdAt" : "2022-11-12T16:25:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Optimize Exp.concat(..)",
+    "createdAt" : "2022-11-12T17:22:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "It is recommended to filter by string expression",
+    "createdAt" : "2022-11-14T03:30:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "JsonLoader add columnType function",
+    "createdAt" : "2022-12-13T09:04:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : " DateTimeExp",
+    "createdAt" : "2022-12-24T10:31:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Primitives-aware DataFrame builder",
+    "createdAt" : "2022-12-24T19:40:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Reimplement and deprecate DataFrameBuilder",
+    "createdAt" : "2022-12-25T16:36:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Refactor and unify Series builder methods",
+    "createdAt" : "2022-12-29T10:45:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "CsvLoader.selectRows(RowPredicate)",
+    "createdAt" : "2023-01-02T18:18:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "DataFrame: rename \"convertColumn(pos, Exp)\" to \"replaceColumn(pos, Exp)\"",
+    "createdAt" : "2023-01-05T13:20:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Undeprecate and fix \"convertColumn(X, ValueMapper)\"",
+    "createdAt" : "2023-01-05T14:09:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Exp.in, Exp.notIn, Series.in, Series.notIn",
+    "createdAt" : "2023-03-28T07:38:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Exp.last(), Series.last()",
+    "createdAt" : "2023-03-28T11:23:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Code commit",
+    "createdAt" : "2023-03-28T17:19:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "ExcelLoader: Duplicate empty column names",
+    "createdAt" : "2023-03-31T15:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "DateTimeExp - direct converter to DateExp and TimeExp",
+    "createdAt" : "2023-03-31T15:37:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "ExcelLoader.skipRows(int)",
+    "createdAt" : "2023-04-11T13:31:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Avoid \"arg + vararg\" methods",
+    "createdAt" : "2023-04-15T12:02:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "DFLib lack of \"addRow\" method",
+    "createdAt" : "2023-05-13T13:38:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "rows deduplication function",
+    "createdAt" : "2023-07-29T07:49:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "StrExp.contains()",
+    "createdAt" : "2023-10-20T14:35:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Exp.as(int pos)",
+    "createdAt" : "2023-10-20T17:12:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Numeric \"Exp.eq\", \"Exp.ne\" has different op label vs other expressions ",
+    "createdAt" : "2023-10-20T19:21:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "DataFrame - intuitive column transformation APIs",
+    "createdAt" : "2023-10-20T19:54:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "DataFrame: deprecate methods returning columns",
+    "createdAt" : "2023-10-20T23:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Series.castAsXyz methods",
+    "createdAt" : "2023-10-20T23:24:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "DataFrame: deprecate \"toXyzColumn()\" API",
+    "createdAt" : "2023-10-21T20:25:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "DataFrame / Series: negative values for \"head\" and \"tail\"",
+    "createdAt" : "2023-10-21T21:55:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "\"IntSequenceSeries.headInt(n)\" is broken",
+    "createdAt" : "2023-10-22T13:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Primitive Series: deprecate \"headXyz\" and \"tailXyz\" variants",
+    "createdAt" : "2023-10-22T18:22:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : " Primitive Series: deprecate \"uniqueXyz\" variants",
+    "createdAt" : "2023-10-22T18:44:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : " Primitive Series: deprecate \"materializeXyz\" variants",
+    "createdAt" : "2023-10-22T19:21:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Polymorphic \"select\" return type for primitive Series",
+    "createdAt" : "2023-10-22T19:39:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "DataFrame.map(Exp...)",
+    "createdAt" : "2023-10-28T21:00:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "RowProxy: support for primitives and simpler casting",
+    "createdAt" : "2023-10-28T21:45:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Optimization: replace Accum with direct array ops on primitive Series",
+    "createdAt" : "2023-10-29T16:56:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "DataFrame.cols(..).op(..): transformation over a subset of columns",
+    "createdAt" : "2023-11-02T18:38:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "StrExp.split()",
+    "createdAt" : "2023-11-02T18:45:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Parallel Aggregation of columns",
+    "createdAt" : "2023-11-03T18:18:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "DataFrame: \"name\" property and column aliases in joins",
+    "createdAt" : "2023-11-03T18:33:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Exp for predicated joins",
+    "createdAt" : "2023-11-03T18:38:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 217,
+    "title" : "TableLoader: specify select conditions as DFLib Exp",
+    "createdAt" : "2023-11-03T18:42:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 218,
+    "title" : "DataFrame dynamic column expansion",
+    "createdAt" : "2023-11-04T13:25:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "IndexedSeries.size(): NPE due to a race condtion",
+    "createdAt" : "2023-11-05T19:10:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Parallel row operations",
+    "createdAt" : "2023-11-05T23:56:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 221,
+    "title" : "Index.positions(), .positionsExcept()",
+    "createdAt" : "2023-11-12T15:52:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Refactor \"Index.forLabel(..)\" to \"Index.of(..)\"",
+    "createdAt" : "2023-11-12T15:55:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Select / transform columns inside joins",
+    "createdAt" : "2023-11-14T19:15:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Extractor.$val(..)",
+    "createdAt" : "2023-11-18T01:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Exp.rowNum() ",
+    "createdAt" : "2023-11-19T18:52:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "\"between(..)\" operator",
+    "createdAt" : "2023-11-29T12:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Super-lazy IndexedSeries",
+    "createdAt" : "2023-12-19T17:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : " DataFrame : negative values for \"head\" and \"tail\" ",
+    "createdAt" : "2023-12-28T16:51:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Add missing Avro, Excel, JSON modules to Jupyter dependencies",
+    "createdAt" : "2023-12-28T17:01:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Optimize SingleValueSeries creation",
+    "createdAt" : "2023-12-28T21:55:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Series.diff(), intersect()",
+    "createdAt" : "2023-12-29T14:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "\"ne(..)\" is broken for BooleanSeries, DoubleSeries, LongSeries",
+    "createdAt" : "2023-12-29T18:30:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Series.replace(..) to replace positions from another Series",
+    "createdAt" : "2023-12-30T22:31:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "IntSequenceSeries.rangeOpenClosedInt() is broken",
+    "createdAt" : "2023-12-31T18:00:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Move to dflib.org - change POM group and Java packages",
+    "createdAt" : "2024-01-02T21:07:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Fluent RowBuilder.set(..)",
+    "createdAt" : "2024-01-08T21:19:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Primitive Series \"copyTo\" ignores \"fromOffset\"",
+    "createdAt" : "2024-01-12T23:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Exp.mapVal(..) / mapConditionVal(..) to allow mapping nulls",
+    "createdAt" : "2024-01-13T23:41:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Upgrade json-path lib to 2.9.0",
+    "createdAt" : "2024-01-19T20:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Reusable user-defined functions (UDF)",
+    "createdAt" : "2024-01-22T15:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "DataFrame.getColumn(int) must throw declared IllegalArgumentException",
+    "createdAt" : "2024-01-22T19:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "ExcelLoader optimizations",
+    "createdAt" : "2024-01-22T19:35:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 244,
+    "title" : "CsvLoader optimizations",
+    "createdAt" : "2024-01-22T19:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Exp.shift(..)",
+    "createdAt" : "2024-01-22T19:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "CsvLoader / CsvSaver for Series",
+    "createdAt" : "2024-01-22T19:41:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 247,
+    "title" : "RowSet.locate(..) / index(..)",
+    "createdAt" : "2024-01-25T15:58:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Remove APIs deprecated since 0.16",
+    "createdAt" : "2024-02-08T21:04:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : " Remove APIs deprecated since 0.17",
+    "createdAt" : "2024-02-08T21:12:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : " Remove APIs deprecated since 0.18",
+    "createdAt" : "2024-02-08T21:17:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "ColumnSet / RowSet like API for CsvLoader",
+    "createdAt" : "2024-02-16T22:15:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "DataFrame.byRow() - automatically guess buffer capacity",
+    "createdAt" : "2024-02-16T22:20:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "CsvLoader.offset(..), CsvLoader.limit(..)",
+    "createdAt" : "2024-02-20T18:40:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Environment-based Printer for better JShell integration",
+    "createdAt" : "2024-02-26T23:22:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "TableLoader.limit() must result in SQL LIMIT clause",
+    "createdAt" : "2024-02-28T20:20:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 258,
+    "title" : "TableSaver.batchSize(int)",
+    "createdAt" : "2024-02-28T20:33:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "CsvLoader.generateHeader()",
+    "createdAt" : "2024-03-10T14:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "ExcelLoader.offset(..), ExcelLoader.limit(..)",
+    "createdAt" : "2024-03-10T17:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "TableLoader and SqlLoader - align API with CsvLoader ",
+    "createdAt" : "2024-03-10T17:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "ColumnSet.agg(Exp...)",
+    "createdAt" : "2024-03-10T21:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Extractor-free auto-expanding \"byArrayRow\" and \"byRow\"",
+    "createdAt" : "2024-03-17T21:55:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 265,
+    "title" : "RowSet: add missing \"sort\" methods",
+    "createdAt" : "2024-03-23T13:15:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "GroupBy.cols(..)",
+    "createdAt" : "2024-03-23T13:55:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "GroupBy \"head()\", \"tail()\" to support negative values",
+    "createdAt" : "2024-03-23T14:48:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : " Remove APIs deprecated since 1.0.0-M19",
+    "createdAt" : "2024-03-23T19:22:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "StrExp.substr(..)",
+    "createdAt" : "2024-03-23T20:16:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Replace custom predicates with the ones from JDK",
+    "createdAt" : "2024-03-24T13:16:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Make Index more Series-like",
+    "createdAt" : "2024-03-24T14:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "GroupBy.select(Exp...) / map(Exp...)",
+    "createdAt" : "2024-03-28T00:07:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Series.replace(Map), position(..), contains(..), expand(..)",
+    "createdAt" : "2024-03-30T14:09:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Upgrade Avro -> commons-compress to 1.26.1",
+    "createdAt" : "2024-04-20T23:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Upgrade POI dependency to 5.2.5",
+    "createdAt" : "2024-04-21T00:01:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Upgrade Jackson dependency to 2.15.4",
+    "createdAt" : "2024-04-21T00:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Integrate ECharts JS plot library in DFLib",
+    "createdAt" : "2024-05-19T10:54:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Printer support for GroupBy",
+    "createdAt" : "2024-05-27T14:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 291,
+    "title" : "Remove APIs deprecated since M20",
+    "createdAt" : "2024-06-01T19:25:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Failing to escape single quotes in generated ECharts JS",
+    "createdAt" : "2024-06-01T20:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "ECharts: SeriesOps.showSymbol",
+    "createdAt" : "2024-06-01T23:06:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "ECharts: SeriesOpts.label",
+    "createdAt" : "2024-06-01T23:58:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "ECharts: tooltip",
+    "createdAt" : "2024-06-02T13:09:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "ECharts: more Axis properties, multiple Y axes",
+    "createdAt" : "2024-06-02T13:34:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "PivotBuilder - align method naming with DataFrame",
+    "createdAt" : "2024-06-10T20:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "WindowBuilder - support \"range\" in \"agg(..)\"",
+    "createdAt" : "2024-06-10T20:54:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Window - align API with ColumnSet and GroupBy",
+    "createdAt" : "2024-06-10T20:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "GroupBy.map(..) / select(..) - create columns for positions that do not match",
+    "createdAt" : "2024-06-12T19:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "ECharts: pie chart",
+    "createdAt" : "2024-06-14T17:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Rename \"map\" to \"merge\" in RowSet, ColumnSet, GroupBy",
+    "createdAt" : "2024-06-16T13:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "ECharts: multiple X axes",
+    "createdAt" : "2024-06-16T14:02:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "ECharts: Grid support",
+    "createdAt" : "2024-06-16T15:44:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Remove APIs deprecated since M21",
+    "createdAt" : "2024-06-18T20:34:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "CsvLoader - error when specifying columns types and col names",
+    "createdAt" : "2024-06-23T16:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "CsvLoader - unify method naming",
+    "createdAt" : "2024-07-07T13:57:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "CsvLoader.decimalCol(..)",
+    "createdAt" : "2024-07-07T15:24:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "ColSet.select(RowToValueMapper...) does \"merge\" instead of \"select\"",
+    "createdAt" : "2024-07-15T19:02:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "DataFrame.get(col, row)",
+    "createdAt" : "2024-07-15T19:30:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Upgrade ECharts to 5.5.1",
+    "createdAt" : "2024-08-04T20:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "ECharts: \"candlestick\" series",
+    "createdAt" : "2024-08-04T21:25:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "ECharts AxisLabel options: rotate, font...",
+    "createdAt" : "2024-08-16T20:36:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "ECharts: bar chart ignores \"stack\" setting",
+    "createdAt" : "2024-08-18T17:07:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "ECharts: disallow overriding the hardcoded default series opts",
+    "createdAt" : "2024-08-18T18:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "ECharts: plot series - explicit \"name\" property",
+    "createdAt" : "2024-09-01T21:13:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "CI/CD actions to create a GitHub release when doing a Maven release",
+    "createdAt" : "2024-09-09T07:45:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Remove API deprecated since M22",
+    "createdAt" : "2024-09-09T13:10:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : " ECharts: \"boxplot\" series",
+    "createdAt" : "2024-09-15T20:13:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Memory-efficient bitset-based BooleanSeries",
+    "createdAt" : "2024-09-22T16:47:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "Compacting columns on load",
+    "createdAt" : "2024-09-28T21:11:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Remove API deprecated since M23",
+    "createdAt" : "2024-09-28T21:23:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "CsvLoader.colType() -> col()",
+    "createdAt" : "2024-09-28T21:54:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : " Compacting CSV columns on load",
+    "createdAt" : "2024-09-29T20:35:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : " Compacting Avro columns on load",
+    "createdAt" : "2024-09-29T20:36:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "AvroLoader: \"string\" type without \"avro.java.string\":\"String\" is processed incorrectly",
+    "createdAt" : "2024-09-30T00:21:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Stop adding \"avro.java.string\" property to String field schemas",
+    "createdAt" : "2024-09-30T01:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Compacting Parquet columns on load",
+    "createdAt" : "2024-09-30T10:09:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : " Compacting JDBC columns on load",
+    "createdAt" : "2024-09-30T17:02:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "JsonLoader: align API naming with other loaders",
+    "createdAt" : "2024-10-02T12:19:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "ECharts: \"boxplot\" layout (orientation)",
+    "createdAt" : "2024-10-04T14:56:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 343,
+    "title" : " Compacting Excel columns on load",
+    "createdAt" : "2024-10-07T23:11:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : " Compacting JSON columns on load",
+    "createdAt" : "2024-10-07T23:17:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "JsonLoader: File, Path, InputStream load options",
+    "createdAt" : "2024-10-07T23:25:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "JsonLoader: loading from Reader results in an empty DataFrame",
+    "createdAt" : "2024-10-07T23:27:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "JsonSaver.saveToString(..)",
+    "createdAt" : "2024-10-07T23:35:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Upgrade Avro client to 1.12.0",
+    "createdAt" : "2024-10-08T21:29:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Methods for std deviation and variance",
+    "createdAt" : "2024-10-09T23:08:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "Methods to add and multiply Series with a constant value",
+    "createdAt" : "2024-10-09T23:11:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Series.reduce(..)",
+    "createdAt" : "2024-10-09T23:13:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "No Github release created during Maven deploy",
+    "createdAt" : "2024-10-12T20:56:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "ECharts: \"candlestick\" should allow color selection",
+    "createdAt" : "2024-10-12T21:44:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Primitive FloatSeries",
+    "createdAt" : "2024-10-13T14:43:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Exp: IllegalArgumentException on arithmetics ops following aggregation",
+    "createdAt" : "2024-10-17T19:26:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "RowColumnSet: rename \"map\" to \"merge\"",
+    "createdAt" : "2024-10-18T19:54:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "Introduce aggregating semantics in Exp",
+    "createdAt" : "2024-10-18T20:28:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Aggregating expressions do not generate proper QL",
+    "createdAt" : "2024-10-19T22:11:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "BooleanSeries.firstFalse()",
+    "createdAt" : "2024-10-20T13:51:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "Empty series isTrue(..) should return \"false\"",
+    "createdAt" : "2024-10-20T14:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "BooleanSeries.eq(..) : inefficiency and potential ClassCastException",
+    "createdAt" : "2024-10-20T15:32:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "ECharts: support \"itemStyle\" for \"bar\" series",
+    "createdAt" : "2024-10-21T19:13:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : " ECharts: support \"itemStyle\", \"symbolSize\" for \"scatter\" series",
+    "createdAt" : "2024-10-21T19:27:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : " ECharts: support \"itemStyle\" for \"pie\" series",
+    "createdAt" : "2024-10-21T19:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : " ECharts: support \"itemStyle\", \"symbolSize\", \"lineStyle\" for \"line\" series",
+    "createdAt" : "2024-10-21T20:11:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : " ECharts: support \"itemStyle\" for \"boxplot\" series",
+    "createdAt" : "2024-10-21T23:33:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "NumExp.as() should return a NumExp",
+    "createdAt" : "2024-10-26T21:46:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "\"min\", \"max\", \"avg\", \"median\" aggregating functions for date and time expressions",
+    "createdAt" : "2024-11-02T14:39:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Exception printing empty columns",
+    "createdAt" : "2024-11-02T18:21:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "dflib-excel: upgrade commons-compress to 1.26.0",
+    "createdAt" : "2024-11-04T19:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Upgrade SLF4J to 2.0.16",
+    "createdAt" : "2024-11-04T19:37:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Upgrade commons-compress to 1.27.1",
+    "createdAt" : "2024-11-04T19:39:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Upgrade Apache POI to 5.3.0",
+    "createdAt" : "2024-11-04T19:41:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "DFLibJupyterExtension to auto-load root imports of each \"dflib-xyz\" module",
+    "createdAt" : "2024-11-09T15:21:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "$bool(..).cumSum()",
+    "createdAt" : "2024-11-09T22:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "ArrayRangeSeries.selectRange(..) is broken",
+    "createdAt" : "2024-11-10T01:06:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "EChartHtmlSaver to save charts to HTML",
+    "createdAt" : "2024-11-10T14:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "ECharts: \"legend\" display parameters",
+    "createdAt" : "2024-11-10T16:13:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : " ECharts: \"title\" subtext and positioning parameters",
+    "createdAt" : "2024-11-10T18:33:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "EChartsHtmlSaver and custom HTML templates",
+    "createdAt" : "2024-11-11T23:25:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Column expressions \".reduce(..)\" to behave as \".first()\"",
+    "createdAt" : "2024-11-12T13:13:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "When will be the release  v1.0.0 available in Maven Central",
+    "createdAt" : "2024-11-12T16:48:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "\"Series.shift()\" with out of bounds negative shift results in ArrayIndexOutOfBoundsException",
+    "createdAt" : "2024-11-13T23:05:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Support for OffsetDateTime",
+    "createdAt" : "2024-11-15T16:43:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Quantile series method and expression",
+    "createdAt" : "2024-11-17T21:05:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "IntSequenceSeries.median(..) returns invalid value for empty series",
+    "createdAt" : "2024-11-18T00:16:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "\"$decimal(0).median()\" must evaluate to null for empty input",
+    "createdAt" : "2024-11-18T00:27:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "NumExp.round()",
+    "createdAt" : "2024-11-20T02:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Deprecate \"DataFrame.convertColumn(..)\"",
+    "createdAt" : "2024-11-23T21:54:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "CSV GZIP (de)compression",
+    "createdAt" : "2024-11-24T21:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "ECharts: heatmap chart",
+    "createdAt" : "2024-11-27T21:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "ECharts: multiple X axes tied to a single series",
+    "createdAt" : "2024-11-28T19:25:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "BoolAccum - java.lang.ArrayIndexOutOfBoundsException",
+    "createdAt" : "2024-12-04T21:43:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "ECharts: NPE when passing XAxis without a column name",
+    "createdAt" : "2024-12-07T22:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "ECharts: \"symbolSize\" linked to a DataFrame column",
+    "createdAt" : "2024-12-07T23:24:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "\"min\", \"max\" aggregating functions for StrExp",
+    "createdAt" : "2024-12-10T22:14:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Documentation for JSON",
+    "createdAt" : "2024-12-17T22:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "ECharts can not be displayed in VSCode (and GitHub)",
+    "createdAt" : "2024-12-18T18:46:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "ECharts Jupyter: Can't render the same chart multiple times",
+    "createdAt" : "2024-12-19T14:19:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "provide load(URI) method for csv, json etc.",
+    "createdAt" : "2024-12-20T14:58:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "ByteSource: generic data source for loaders",
+    "createdAt" : "2024-12-20T22:23:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "HTTP connector with ByteSource",
+    "createdAt" : "2024-12-20T22:29:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "CsvLoader to support an explicit encoding",
+    "createdAt" : "2024-12-22T15:19:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Zip ByteSource(s)",
+    "createdAt" : "2024-12-22T15:58:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Filesystem ByteSource(s)",
+    "createdAt" : "2024-12-22T16:01:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 418,
+    "title" : " Exception printing null columns",
+    "createdAt" : "2024-12-22T20:22:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "\"RowSet.expand()\" as a non-terminal operation",
+    "createdAt" : "2024-12-29T14:44:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : " \"ColumnSet.expand()\" as a non-terminal operation",
+    "createdAt" : "2024-12-29T14:57:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "Series.replace(int,T)",
+    "createdAt" : "2024-12-31T16:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "All \"Json.load(..)\" and \"Json.save(..)\" methods must be static",
+    "createdAt" : "2025-01-01T15:55:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Invalid column names for CSVs with leading BOM char",
+    "createdAt" : "2025-01-11T12:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "CsvLoader.nullString(String)",
+    "createdAt" : "2025-01-14T21:12:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Datetime expressions' comparision operations to take String arguments",
+    "createdAt" : "2025-01-15T16:15:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Unify map-to-primitive-Series API with ColumnSets",
+    "createdAt" : "2025-01-18T14:25:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Primitive ValueMappers consistency",
+    "createdAt" : "2025-01-18T16:58:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "NumSeries and \"castAs..()\" asymmetry",
+    "createdAt" : "2025-01-18T21:39:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 435,
+    "title" : "ByteSources.process() exception for single-entry source",
+    "createdAt" : "2025-01-18T22:23:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "ByteSource.uri()",
+    "createdAt" : "2025-01-19T16:13:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "`ByteSource` doesn't close streams in internal methods",
+    "createdAt" : "2025-01-19T16:19:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "ByteSource.decompress()",
+    "createdAt" : "2025-01-19T17:23:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "DataFrame.colsRange(..), colsHead(..), colsTail(..)",
+    "createdAt" : "2025-01-20T14:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "DataFrame.rowsHead(..), rowsTail(..)",
+    "createdAt" : "2025-01-20T15:12:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 441,
+    "title" : "Unable to fetch updated table data with DFLib",
+    "createdAt" : "2025-01-24T07:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "RowSet.merge(), ColumnSet.merge(), RowColumnSet.merge()",
+    "createdAt" : "2025-01-25T20:15:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "\"RowSet.unique()\" as a non-terminal operation",
+    "createdAt" : "2025-01-26T18:57:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Window.select(..), Window.merge(..) do not work with non-aggregating functions",
+    "createdAt" : "2025-01-26T19:44:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "\"$decimal(..).avg()\", \"$bigint(..).avg()\"",
+    "createdAt" : "2025-01-31T22:08:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "Unexpected decimal operations precision",
+    "createdAt" : "2025-02-01T20:13:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "Decimal equality should work if two decimals only differ in trailing fractional zeros",
+    "createdAt" : "2025-02-01T20:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "insert row into dataframe",
+    "createdAt" : "2025-02-07T11:22:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 456,
+    "title" : "Make \"ResultSet to DataFrame\" public and Flexible",
+    "createdAt" : "2025-02-08T11:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "MissingFormatWidthException when printing Series with all empty strings",
+    "createdAt" : "2025-02-10T16:25:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "\"BoolBuilder.buildSeries()\" produces incorrect first element for size greater than 64",
+    "createdAt" : "2025-02-12T21:57:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "DFLib charts in Jupyter notebooks can not be displayed on GitHub",
+    "createdAt" : "2025-02-12T23:06:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 461,
+    "title" : "API docs",
+    "createdAt" : "2025-02-14T10:22:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "\"Exp.shift(..)\" in specialized expressions must return the type of that expression",
+    "createdAt" : "2025-02-15T14:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 463,
+    "title" : "\"Exp.as(..)\" in specialized expressions must return the type of that expression",
+    "createdAt" : "2025-02-15T14:48:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 464,
+    "title" : "Printer.toString(..) -> Printer.print(..)",
+    "createdAt" : "2025-02-15T21:13:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Align display defaults between core Printers and Jupyter",
+    "createdAt" : "2025-02-15T22:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 466,
+    "title" : "Add max columns limit to Printers",
+    "createdAt" : "2025-02-15T23:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 467,
+    "title" : "Index.head(..), tail(..)",
+    "createdAt" : "2025-02-16T13:40:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "Faster tabular printers",
+    "createdAt" : "2025-02-16T16:51:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Exp.mapBool(..) and Exp.mapBoolVal(..) with binary predicate",
+    "createdAt" : "2025-02-22T15:21:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 470,
+    "title" : "Tabular Printers should output \"...\" for a row limit of 1",
+    "createdAt" : "2025-03-01T16:36:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "Align Window API with GroupBy",
+    "createdAt" : "2025-03-02T14:57:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 472,
+    "title" : "\"df.cols().merge(Series)\" overrides columns with numeric names",
+    "createdAt" : "2025-03-02T19:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 474,
+    "title" : "\"$decimalVal(..)\" improvements",
+    "createdAt" : "2025-03-13T20:39:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "\"$bigintVal(..)\" String argument flavor",
+    "createdAt" : "2025-03-13T20:45:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : "vConcat loses the type of the column",
+    "createdAt" : "2025-03-28T14:57:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "ifNull($col(...), $col(...)) does not compile",
+    "createdAt" : "2025-03-30T12:31:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "\"RowSet.sort()\" as a non-terminal operation",
+    "createdAt" : "2025-03-30T21:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "Add \"NumExp.variance(..)\" and \"NumExp.sdtDev(..)\"",
+    "createdAt" : "2025-03-31T08:30:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "NumExp.max() for double can't handle all negative numbers.",
+    "createdAt" : "2025-04-01T14:55:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Upgrade ECharts to 5.6.0",
+    "createdAt" : "2025-04-03T22:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "Upgrade Parquet and Hadoop",
+    "createdAt" : "2025-04-03T22:31:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "ColumnSet.compact()",
+    "createdAt" : "2025-04-13T15:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 487,
+    "title" : "Series.compact()",
+    "createdAt" : "2025-04-13T15:46:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 488,
+    "title" : "Upgrade Apache POI to 5.4.1",
+    "createdAt" : "2025-04-19T11:53:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 489,
+    "title" : "Fix resource management for `HttpByteSource`",
+    "createdAt" : "2025-04-21T21:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 490,
+    "title" : "ECharts: BarSeriesOpts.barWidth",
+    "createdAt" : "2025-05-04T15:06:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 491,
+    "title" : "DFLib is not compatible with JPMS",
+    "createdAt" : "2025-05-05T17:51:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "\"IntSequenceSeries.copyToInt(..)\" is broken",
+    "createdAt" : "2025-05-09T19:49:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 493,
+    "title" : "IntReverseSequenceSeries - decreasing sequential IntSeries",
+    "createdAt" : "2025-05-09T19:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "Upgrade to Parquet 1.15.2",
+    "createdAt" : "2025-05-10T11:05:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "Force column name deduplication in SqlLoader",
+    "createdAt" : "2025-05-12T12:38:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 496,
+    "title" : "Force column name deduplication in CsvLoader",
+    "createdAt" : "2025-05-12T12:48:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "String expressions parser",
+    "createdAt" : "2025-05-16T13:23:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 498,
+    "title" : "Exp.toQL() should not quote boolean scalars",
+    "createdAt" : "2025-05-21T21:03:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "Use Udf1 for pivot aggregator for consistency",
+    "createdAt" : "2025-05-24T20:15:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "ExcelLoader modifies Excel files it opens",
+    "createdAt" : "2025-05-24T20:45:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "Ask some questions about connection",
+    "createdAt" : "2025-05-26T07:54:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 503,
+    "title" : "Upgrade JJava to 1.0-a5",
+    "createdAt" : "2025-06-11T15:22:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Methods taking Exp<?> argument(s) should have String argument(s) versions",
+    "createdAt" : "2025-06-26T00:36:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Exp parser: support for the `scale()` function",
+    "createdAt" : "2025-07-01T14:57:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "Exp parser: `concat()` function should allow any argument type",
+    "createdAt" : "2025-07-01T15:10:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Exp parser: support `vConcat()` aggregation function",
+    "createdAt" : "2025-07-01T15:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "\"ColumnSet.expand...(..)\" - explicit naming prefix",
+    "createdAt" : "2025-07-01T20:47:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 510,
+    "title" : "String split expression for \"ColumnSet.expand(..)\"",
+    "createdAt" : "2025-07-01T20:50:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "Exp parser: support set(), list() and array() aggregation functions",
+    "createdAt" : "2025-07-02T14:42:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 513,
+    "title" : "Exp parser: allow using function names as a column in the corresponding context",
+    "createdAt" : "2025-07-02T15:47:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 514,
+    "title" : "Exp parser: support `in` and `not in` operators",
+    "createdAt" : "2025-07-03T13:41:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "String sorter parser",
+    "createdAt" : "2025-07-03T14:55:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Parse lists of Exp and Sorters",
+    "createdAt" : "2025-07-04T20:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Parameters in the QL parser",
+    "createdAt" : "2025-07-08T12:57:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 518,
+    "title" : "QL Parser: column alias support",
+    "createdAt" : "2025-07-09T13:53:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 519,
+    "title" : "\"FSFolder.include(..)\" filter",
+    "createdAt" : "2025-07-26T14:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "Zip source to exclude hidden files by default",
+    "createdAt" : "2025-07-26T15:13:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "ZipEntry name extension filter for Zip",
+    "createdAt" : "2025-07-26T17:09:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "\"Zip.include(..)\" filter",
+    "createdAt" : "2025-07-26T18:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 523,
+    "title" : "Tar ByteSource(s)",
+    "createdAt" : "2025-08-02T16:23:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Configurable \"stack()\" operation",
+    "createdAt" : "2025-08-10T19:45:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "StrExp.lower(), upper()",
+    "createdAt" : "2025-08-31T16:24:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "Add `notBetween()` operator",
+    "createdAt" : "2025-09-02T14:16:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "StrExp.len()",
+    "createdAt" : "2025-09-12T21:13:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Can not expand collections with QL",
+    "createdAt" : "2025-09-14T19:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 533,
+    "title" : "QL: \"substr(..)\" function without the \"str(..)\" wrapper for the first argument",
+    "createdAt" : "2025-09-14T21:01:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "DataFrame from ResultSet from a function call disappeared",
+    "createdAt" : "2025-09-18T19:21:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "Allow nulls in numeric aggregation functions",
+    "createdAt" : "2025-10-09T15:34:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 539,
+    "title" : "Consistently return \"long\" when summing ints",
+    "createdAt" : "2025-10-10T00:02:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Incorrect sample variance and stdDev for empty series",
+    "createdAt" : "2025-10-11T13:27:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 541,
+    "title" : "Support for variance and stdDev functions for $bigint",
+    "createdAt" : "2025-10-11T14:22:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Help to create a new column in a DataFrame based in values of other column",
+    "createdAt" : "2025-10-19T20:23:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 543,
+    "title" : "ECharts: \"itemStyle.color\" linked to a DataFrame column",
+    "createdAt" : "2025-10-20T21:30:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 544,
+    "title" : "QL: can not use parameter where a single column or val",
+    "createdAt" : "2025-10-22T21:30:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "Upgrade to JJava 1.0-a6",
+    "createdAt" : "2025-10-25T14:54:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "ECharts: line chart \"symbol\" property",
+    "createdAt" : "2025-10-27T00:00:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "ECharts: upgrade to 6.0.0",
+    "createdAt" : "2025-10-27T00:27:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 549,
+    "title" : "ECharts: Allow custom themes (experimental)",
+    "createdAt" : "2025-10-27T15:26:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 550,
+    "title" : "ECharts: custom themes don't work in Jupyter",
+    "createdAt" : "2025-10-31T20:50:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "ECharts: NPE with two series reusing column names",
+    "createdAt" : "2025-10-31T21:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "ECharts: scatter plots on a single axis",
+    "createdAt" : "2025-10-31T21:48:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "ECharts: bar chart to allow an arbitrary column to be used in bar labeling",
+    "createdAt" : "2025-11-01T16:40:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "ECharts: line chart to allow an arbitrary column to be used in symbol labeling",
+    "createdAt" : "2025-11-01T16:51:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 555,
+    "title" : "Performance: parallel column evaluation",
+    "createdAt" : "2025-11-02T19:18:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 556,
+    "title" : "IndexedSeries.compact() race condition",
+    "createdAt" : "2025-11-02T20:43:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "UDF support in QL",
+    "createdAt" : "2025-11-08T20:30:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 559,
+    "title" : "NumExp / QL \"negate\" op",
+    "createdAt" : "2025-11-10T22:01:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 560,
+    "title" : "MySQL DATE Type Mismatch when Exporting DataFrame to Avro: Encoded as java.nio.HeapByteBuffer Instead of Avro Date",
+    "createdAt" : "2025-11-14T15:11:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "Support Avro spec \"logicalTypes\"",
+    "createdAt" : "2025-11-14T22:55:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 562,
+    "title" : "Column getColumnName() and toQL() consistency",
+    "createdAt" : "2025-11-15T19:15:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "QL: \"startsWith(..)\" / \"endsWith(..)\" without the \"str(..)\" wrapper for the first argument",
+    "createdAt" : "2025-11-15T20:21:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "QL: lower(..),  upper(..) without the \"str(..)\" wrapper for the argument",
+    "createdAt" : "2025-11-15T20:31:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 565,
+    "title" : "QL: trim(..) without the \"str(..)\" wrapper for the argument",
+    "createdAt" : "2025-11-15T20:39:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 566,
+    "title" : "QL: contains(..), matches(..) without \"str(..)\" wrapper for the argument",
+    "createdAt" : "2025-11-15T21:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "QL: context-based functions",
+    "createdAt" : "2025-11-15T22:11:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 571,
+    "title" : "DataFrame <-> Iterable<Map> conversions",
+    "createdAt" : "2025-12-06T14:33:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 572,
+    "title" : "Require Java 17+",
+    "createdAt" : "2025-12-06T15:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 573,
+    "title" : "DataFrame <-> Iterable<? extends Record> conversions",
+    "createdAt" : "2025-12-06T16:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Robust ECharts embedding script",
+    "createdAt" : "2025-12-06T20:33:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "[DRAFT] ColumnSet ergonomics improvements",
+    "createdAt" : "2025-12-07T14:21:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 576,
+    "title" : "QL: Can't specify parameters for \"col(?)\" index",
+    "createdAt" : "2025-12-07T16:58:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 577,
+    "title" : "`Udf0` functional interface",
+    "createdAt" : "2025-12-08T08:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 578,
+    "title" : "Static cast methods in `Udf` interfaces",
+    "createdAt" : "2025-12-08T08:23:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 579,
+    "title" : "Exp: `castAsNum()` operator",
+    "createdAt" : "2025-12-08T08:30:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 580,
+    "title" : "Issues with parquet types inference",
+    "createdAt" : "2025-12-09T11:50:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 581,
+    "title" : "Avro loader: support standard logical types",
+    "createdAt" : "2025-12-14T00:24:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 582,
+    "title" : "Parquet loader: support for all spec primitive types, including most \"logical\"",
+    "createdAt" : "2025-12-14T20:26:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 585,
+    "title" : "\"mergeAll(Udf1)\"",
+    "createdAt" : "2025-12-20T10:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 586,
+    "title" : "Parquet loader: support for MAP and LIST",
+    "createdAt" : "2025-12-20T17:21:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "Avro loader: support for complex types",
+    "createdAt" : "2025-12-21T22:33:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 588,
+    "title" : "Please suggest  the recommended way to write Dataframe to xml",
+    "createdAt" : "2025-12-22T14:59:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "ECharts: YAxis.scale(..) property",
+    "createdAt" : "2025-12-28T02:05:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 590,
+    "title" : "ECharts: VisualMap.outOfRange",
+    "createdAt" : "2025-12-28T14:24:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 591,
+    "title" : "ECharts: CalendarModel.yearLabel",
+    "createdAt" : "2025-12-28T15:12:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 592,
+    "title" : "ECharts: VisualMap.show",
+    "createdAt" : "2025-12-28T16:12:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 593,
+    "title" : "ECharts: scatter charts to support \"symbol\"",
+    "createdAt" : "2025-12-28T16:48:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 594,
+    "title" : "\"split(..)\" expression should produce compact columns",
+    "createdAt" : "2026-01-02T19:47:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "dflib-jupyter - JJava-aware logging settings",
+    "createdAt" : "2026-01-02T20:35:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 596,
+    "title" : "Parquet loader optimizations",
+    "createdAt" : "2026-01-03T21:29:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 597,
+    "title" : "ParquetLoader: align value cardinality with explicit compaction settings",
+    "createdAt" : "2026-01-03T22:19:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 598,
+    "title" : "AvroSchemaLoader: support loading schema from Avro files",
+    "createdAt" : "2026-01-04T15:20:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 599,
+    "title" : "AvroLoader: column filtering",
+    "createdAt" : "2026-01-04T16:29:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 600,
+    "title" : "AvroLoader, ParquetLoader: compactCols(..)",
+    "createdAt" : "2026-01-04T22:14:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "AvroSaver: use spec types where possible",
+    "createdAt" : "2026-01-10T16:52:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 602,
+    "title" : "AvroSaver: support for UUID, Instant values",
+    "createdAt" : "2026-01-10T18:57:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 604,
+    "title" : "ParquetLoader to use compaction by default",
+    "createdAt" : "2026-01-11T17:00:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 605,
+    "title" : "Loading ragged CSV",
+    "createdAt" : "2026-01-12T08:36:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 607,
+    "title" : "`CsvLoader.nullPadRows()`",
+    "createdAt" : "2026-01-24T22:24:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 608,
+    "title" : "`selectAll(Udf1)`",
+    "createdAt" : "2026-01-24T23:00:13Z",
+    "state" : "CLOSED"
+  } ]
+}

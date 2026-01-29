@@ -1,0 +1,580 @@
+{
+  "repoOwner" : "aws",
+  "repoName" : "smithy-go",
+  "forks" : [ {
+    "createdAt" : "2020-03-09T19:08:48Z"
+  }, {
+    "createdAt" : "2020-03-09T22:58:56Z"
+  }, {
+    "createdAt" : "2020-03-23T17:42:07Z"
+  }, {
+    "createdAt" : "2020-04-06T20:36:18Z"
+  }, {
+    "createdAt" : "2020-05-26T15:42:05Z"
+  }, {
+    "createdAt" : "2020-08-11T00:46:26Z"
+  }, {
+    "createdAt" : "2020-08-12T18:58:15Z"
+  }, {
+    "createdAt" : "2020-09-30T13:06:45Z"
+  }, {
+    "createdAt" : "2021-04-12T08:01:57Z"
+  }, {
+    "createdAt" : "2021-05-04T16:52:12Z"
+  }, {
+    "createdAt" : "2021-07-10T14:01:39Z"
+  }, {
+    "createdAt" : "2021-07-21T16:26:48Z"
+  }, {
+    "createdAt" : "2022-03-22T07:01:34Z"
+  }, {
+    "createdAt" : "2022-04-20T02:40:12Z"
+  }, {
+    "createdAt" : "2022-04-30T05:43:37Z"
+  }, {
+    "createdAt" : "2022-05-10T00:39:26Z"
+  }, {
+    "createdAt" : "2022-05-10T16:59:45Z"
+  }, {
+    "createdAt" : "2022-06-06T04:01:42Z"
+  }, {
+    "createdAt" : "2022-07-19T20:17:03Z"
+  }, {
+    "createdAt" : "2022-07-28T22:16:24Z"
+  }, {
+    "createdAt" : "2022-08-03T22:28:27Z"
+  }, {
+    "createdAt" : "2022-08-08T20:44:26Z"
+  }, {
+    "createdAt" : "2022-08-09T05:41:40Z"
+  }, {
+    "createdAt" : "2022-09-06T19:40:56Z"
+  }, {
+    "createdAt" : "2022-09-21T06:22:49Z"
+  }, {
+    "createdAt" : "2022-10-04T19:07:58Z"
+  }, {
+    "createdAt" : "2022-10-26T19:33:04Z"
+  }, {
+    "createdAt" : "2022-11-29T22:50:55Z"
+  }, {
+    "createdAt" : "2022-12-15T16:17:56Z"
+  }, {
+    "createdAt" : "2022-12-23T21:56:58Z"
+  }, {
+    "createdAt" : "2023-01-10T13:43:29Z"
+  }, {
+    "createdAt" : "2023-02-02T13:41:57Z"
+  }, {
+    "createdAt" : "2023-02-28T22:12:47Z"
+  }, {
+    "createdAt" : "2023-03-10T12:33:08Z"
+  }, {
+    "createdAt" : "2023-07-04T22:00:44Z"
+  }, {
+    "createdAt" : "2023-09-12T22:40:44Z"
+  }, {
+    "createdAt" : "2023-10-03T03:46:07Z"
+  }, {
+    "createdAt" : "2023-12-08T13:59:16Z"
+  }, {
+    "createdAt" : "2024-01-30T00:42:55Z"
+  }, {
+    "createdAt" : "2024-04-17T17:41:53Z"
+  }, {
+    "createdAt" : "2024-05-08T20:19:20Z"
+  }, {
+    "createdAt" : "2024-06-01T13:32:35Z"
+  }, {
+    "createdAt" : "2024-06-06T07:11:35Z"
+  }, {
+    "createdAt" : "2024-07-24T21:02:50Z"
+  }, {
+    "createdAt" : "2024-08-16T14:55:22Z"
+  }, {
+    "createdAt" : "2024-12-09T08:34:52Z"
+  }, {
+    "createdAt" : "2024-12-10T23:41:56Z"
+  }, {
+    "createdAt" : "2024-12-28T13:24:21Z"
+  }, {
+    "createdAt" : "2025-03-24T17:56:47Z"
+  }, {
+    "createdAt" : "2025-05-02T08:50:13Z"
+  }, {
+    "createdAt" : "2025-05-11T04:53:36Z"
+  }, {
+    "createdAt" : "2025-05-30T19:35:57Z"
+  }, {
+    "createdAt" : "2025-06-23T12:38:38Z"
+  }, {
+    "createdAt" : "2025-06-27T07:49:57Z"
+  }, {
+    "createdAt" : "2025-06-28T09:12:47Z"
+  }, {
+    "createdAt" : "2025-08-04T06:12:02Z"
+  }, {
+    "createdAt" : "2025-08-10T06:09:43Z"
+  }, {
+    "createdAt" : "2025-08-14T17:59:39Z"
+  }, {
+    "createdAt" : "2025-08-20T10:19:57Z"
+  }, {
+    "createdAt" : "2025-08-20T12:12:39Z"
+  }, {
+    "createdAt" : "2025-08-25T07:21:36Z"
+  }, {
+    "createdAt" : "2025-09-16T09:02:56Z"
+  }, {
+    "createdAt" : "2025-09-18T18:39:26Z"
+  }, {
+    "createdAt" : "2025-10-22T04:57:05Z"
+  }, {
+    "createdAt" : "2025-10-24T16:03:00Z"
+  }, {
+    "createdAt" : "2025-12-23T18:57:01Z"
+  }, {
+    "createdAt" : "2026-01-15T04:00:43Z"
+  } ],
+  "issues" : [ {
+    "number" : 110,
+    "title" : "API clients send Content-Type even when Content-Length is empty",
+    "createdAt" : "2020-07-14T21:46:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Group encoding packages under common namespace to improve shared logic",
+    "createdAt" : "2020-08-04T17:57:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Boolean and Number shapes can be decorated as boxed or unboxed",
+    "createdAt" : "2020-08-05T21:50:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Lists members should be generated as values by default",
+    "createdAt" : "2020-08-05T21:54:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "transport/http WrapLogClient should separate `withBody` into request/response flags",
+    "createdAt" : "2020-08-18T00:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "API clients should be generated with a WithAPIOptions helper function",
+    "createdAt" : "2020-08-20T18:47:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "API client's should remove APIOptionsFunc type alias",
+    "createdAt" : "2020-08-20T18:53:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "GoCodeWriter's $T and $P generate unexpected types for list and maps.",
+    "createdAt" : "2020-08-24T23:15:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Client options must not generate Getter style methods for retrievng members",
+    "createdAt" : "2020-08-26T22:42:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Middleware steps should support tagging of middleware on Insert/Add",
+    "createdAt" : "2020-08-26T22:45:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Middleware steps should support a slotting.",
+    "createdAt" : "2020-08-26T22:50:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Consider preallocating middleware order slices/maps",
+    "createdAt" : "2020-09-01T23:02:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Retry metric middleware probably shouldn't return error if no retry metadata",
+    "createdAt" : "2020-09-02T19:56:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Difference between Serialization and Deserialization Error types may be confusing",
+    "createdAt" : "2020-09-02T21:17:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "API client operations should allow nil input value",
+    "createdAt" : "2020-09-02T22:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Shapes and members can start with non-alphabetic characters",
+    "createdAt" : "2020-09-03T20:42:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Operation cloned Input/Output shapes can collide with types shape of same name",
+    "createdAt" : "2020-09-03T20:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "API Client's operation methods can be simplified by reusing behavior in helper function",
+    "createdAt" : "2020-09-04T21:55:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "OperationError is not specific enough it, it should be OperationInvokeError",
+    "createdAt" : "2020-10-09T22:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "OperationError name should be renamed to OperationInvokeError for clarity",
+    "createdAt" : "2020-10-09T23:00:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "codegen: Generated middleware helpers generated do not all return error",
+    "createdAt" : "2020-10-09T23:45:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "transport/http/request: Request.Clone() must take a context.",
+    "createdAt" : "2020-10-29T01:44:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Generated validators should include Union shapes",
+    "createdAt" : "2020-11-15T19:20:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "refactor smithy-waiters to remove jmespath dependency at runtime",
+    "createdAt" : "2020-12-03T10:57:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Consider including metadata in smithy.OperationFailure",
+    "createdAt" : "2020-12-16T22:34:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 257,
+    "title" : "Int overflow in time_test.go on 32 bits arches",
+    "createdAt" : "2021-01-14T19:11:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "codegen: SyntheticClone's getArchetype should return Optional<ShapeId>",
+    "createdAt" : "2021-01-15T22:30:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Need help in using Smithy Go",
+    "createdAt" : "2021-04-12T10:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "SyntheticClone should be renamed to Synthetic",
+    "createdAt" : "2021-04-13T17:31:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "`xml.WrapNodeDecoder.Token` incorrectly terminates on nested tags",
+    "createdAt" : "2021-05-03T22:28:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Minor Code Improvements",
+    "createdAt" : "2021-05-13T20:02:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Incorrect time formatting",
+    "createdAt" : "2021-05-31T05:02:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Examples or documentation would be appreciated",
+    "createdAt" : "2021-06-04T20:56:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Why is v0.1.0 the latest available version of the plugin?",
+    "createdAt" : "2021-06-28T13:05:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Examples of generated API client usage?",
+    "createdAt" : "2021-07-01T09:28:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Include `json` tag in structs if field is annotated with @jsonName",
+    "createdAt" : "2021-09-07T23:01:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "`internaldocument.NewDocumentMarshaler` not declared by package",
+    "createdAt" : "2021-11-16T06:58:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "smithy-go does not provide support for @restJson1 protocol trait",
+    "createdAt" : "2022-02-25T03:06:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Generated client does not honor @http trait",
+    "createdAt" : "2022-02-25T03:25:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Go inputs/outputs can't be serialized/deserialized into valid smithy",
+    "createdAt" : "2022-07-04T19:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Alias type name hides interface type name in generated input/output types",
+    "createdAt" : "2022-07-05T01:31:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 373,
+    "title" : "enhancement: Option to generate a go.mod file",
+    "createdAt" : "2022-07-28T23:09:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "`document.NoSerde` is not checked for nesteted types.",
+    "createdAt" : "2022-10-05T23:15:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "GenerateStandaloneGoModuleTest: Test breaks if in a directory hierarchey containing `go.work` file.",
+    "createdAt" : "2022-10-05T23:20:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "Support renamed errors in aws-json-1.1 protocol",
+    "createdAt" : "2023-01-05T00:06:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 420,
+    "title" : "http body need close. Otherwise, it may cause goroutine  leakage in the process",
+    "createdAt" : "2023-04-04T08:56:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "Close response body middleware log is not clear",
+    "createdAt" : "2023-05-10T11:25:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 458,
+    "title" : "Move protocol support out of aws-sdk-go-v2 into smithy-go",
+    "createdAt" : "2023-10-03T17:12:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 459,
+    "title" : "smithy-go service codegen",
+    "createdAt" : "2023-10-03T17:16:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 464,
+    "title" : "codegen/runtime: Retries",
+    "createdAt" : "2023-10-23T16:22:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "codegen/runtime: SRA observability",
+    "createdAt" : "2023-11-15T14:26:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "codegen/runtime: Interceptors",
+    "createdAt" : "2023-11-15T14:26:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "runtime: sigv4 signer",
+    "createdAt" : "2023-11-27T18:45:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 474,
+    "title" : "runtime: sigv4a signer",
+    "createdAt" : "2023-11-27T18:45:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "refactor: replace middleware with explicit operation phases",
+    "createdAt" : "2023-11-27T18:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "codegen: remove \"V2\" suffix from endpoint resolution codegen",
+    "createdAt" : "2023-11-27T18:55:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 477,
+    "title" : "codegen/runtime: @httpChecksum",
+    "createdAt" : "2023-11-27T18:58:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 478,
+    "title" : "publish to maven",
+    "createdAt" : "2023-11-27T19:00:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 479,
+    "title" : "runtime: refactor httpBearerAuth",
+    "createdAt" : "2023-11-27T19:01:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 485,
+    "title" : "codegen: `RuntimeClientPlugin` not having access to a `SymbolProvider`",
+    "createdAt" : "2023-12-01T18:23:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 487,
+    "title" : "docs: revamp README and usage guide",
+    "createdAt" : "2023-12-05T15:59:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 488,
+    "title" : "Middleware, Transport (and maybe others) broken since aws-sdk-go-v2 release-2023-11-15",
+    "createdAt" : "2023-12-07T14:07:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 493,
+    "title" : "codegen/runtime: operation checksums",
+    "createdAt" : "2024-01-16T17:40:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "protocol: smithy.protocols#rpcv2Cbor",
+    "createdAt" : "2024-03-01T15:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "codegen/runtime: event streams",
+    "createdAt" : "2024-03-01T15:32:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 513,
+    "title" : "Explore ways to reduce size of generated output",
+    "createdAt" : "2024-05-21T10:12:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 517,
+    "title" : "codegen: refactor waiters/paginators to be not integrations",
+    "createdAt" : "2024-06-14T22:23:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 521,
+    "title" : "codegen: use DirectedCodegen in client codegen",
+    "createdAt" : "2024-06-27T16:04:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 524,
+    "title" : "rename go-codegen plugin to go-client-codegen",
+    "createdAt" : "2024-07-11T14:06:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 528,
+    "title" : "test: migrate auth scheme resolution tests to standalone, generated module",
+    "createdAt" : "2024-08-01T15:42:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 530,
+    "title" : "enhancement: support range iterators in paginators",
+    "createdAt" : "2024-08-10T13:18:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 532,
+    "title" : "Trouble with NewLazyDocument and map[string]interface{}",
+    "createdAt" : "2024-08-16T00:16:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Announcement: smithy-go now supports sigv4 and sigv4a",
+    "createdAt" : "2024-09-26T22:07:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "Smithy-go's HTTP metrics are prone to data races",
+    "createdAt" : "2024-10-27T22:41:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "Error replacing URI path elements when element names overlap",
+    "createdAt" : "2024-11-12T18:05:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 557,
+    "title" : "HandleDeserialize Error from MiddleWare",
+    "createdAt" : "2024-12-11T23:56:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 562,
+    "title" : "Waiters2 (code-generated jmespath expressions) can panic on nil deref",
+    "createdAt" : "2025-01-09T18:33:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Inconsistent package name of \"transport\"",
+    "createdAt" : "2025-01-21T16:55:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 568,
+    "title" : "transport/http: depends on equality of pointer to zero-sized objects",
+    "createdAt" : "2025-02-12T19:11:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 570,
+    "title" : "Plugin option to configure smithy-go dependency version",
+    "createdAt" : "2025-02-17T14:01:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 571,
+    "title" : "Add shapes-only codegen",
+    "createdAt" : "2025-02-27T20:42:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 593,
+    "title" : "aws-http-auth: support presigning",
+    "createdAt" : "2025-08-01T17:41:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 594,
+    "title" : "Use semantic version tags alongside date-based tags",
+    "createdAt" : "2025-08-10T06:36:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 596,
+    "title" : "JSON encoder for Number values produces duplicate fields",
+    "createdAt" : "2025-08-20T00:47:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 598,
+    "title" : "enhancement: strict member mode - value types for required output members",
+    "createdAt" : "2025-08-20T18:46:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 602,
+    "title" : "support bigint/bigdecimal in serde",
+    "createdAt" : "2025-09-11T22:29:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 614,
+    "title" : "natively instrument the middleware stack w/ trace spans",
+    "createdAt" : "2025-11-11T12:17:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 621,
+    "title" : "ComputeDelay called with mxDelay equal to remainingTime returns a '0' delay, leading to spinning",
+    "createdAt" : "2026-01-23T21:38:41Z",
+    "state" : "OPEN"
+  } ]
+}

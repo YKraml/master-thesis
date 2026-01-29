@@ -1,0 +1,925 @@
+{
+  "repoOwner" : "abstracta",
+  "repoName" : "jmeter-java-dsl",
+  "forks" : [ {
+    "createdAt" : "2020-10-09T10:16:21Z"
+  }, {
+    "createdAt" : "2020-10-09T17:35:45Z"
+  }, {
+    "createdAt" : "2020-11-19T18:54:14Z"
+  }, {
+    "createdAt" : "2020-12-08T19:14:45Z"
+  }, {
+    "createdAt" : "2021-03-05T06:27:20Z"
+  }, {
+    "createdAt" : "2021-03-22T15:34:49Z"
+  }, {
+    "createdAt" : "2021-03-29T09:44:51Z"
+  }, {
+    "createdAt" : "2021-04-12T21:24:35Z"
+  }, {
+    "createdAt" : "2021-08-19T05:04:10Z"
+  }, {
+    "createdAt" : "2021-09-29T13:20:54Z"
+  }, {
+    "createdAt" : "2021-10-02T07:19:08Z"
+  }, {
+    "createdAt" : "2021-10-07T02:58:09Z"
+  }, {
+    "createdAt" : "2021-10-21T14:40:50Z"
+  }, {
+    "createdAt" : "2021-11-05T18:52:46Z"
+  }, {
+    "createdAt" : "2021-11-05T20:52:19Z"
+  }, {
+    "createdAt" : "2021-11-16T17:22:16Z"
+  }, {
+    "createdAt" : "2022-01-19T20:56:07Z"
+  }, {
+    "createdAt" : "2022-02-28T09:33:22Z"
+  }, {
+    "createdAt" : "2022-03-11T08:37:19Z"
+  }, {
+    "createdAt" : "2022-04-13T10:49:24Z"
+  }, {
+    "createdAt" : "2022-04-21T18:48:43Z"
+  }, {
+    "createdAt" : "2022-04-26T16:46:01Z"
+  }, {
+    "createdAt" : "2022-04-29T05:31:21Z"
+  }, {
+    "createdAt" : "2022-05-12T16:07:01Z"
+  }, {
+    "createdAt" : "2022-05-27T08:22:20Z"
+  }, {
+    "createdAt" : "2022-05-27T17:40:39Z"
+  }, {
+    "createdAt" : "2022-06-08T09:37:04Z"
+  }, {
+    "createdAt" : "2022-06-14T12:57:23Z"
+  }, {
+    "createdAt" : "2022-07-05T15:52:53Z"
+  }, {
+    "createdAt" : "2022-07-12T09:09:32Z"
+  }, {
+    "createdAt" : "2022-07-26T11:13:48Z"
+  }, {
+    "createdAt" : "2022-09-09T14:30:15Z"
+  }, {
+    "createdAt" : "2022-09-15T02:10:13Z"
+  }, {
+    "createdAt" : "2022-09-27T14:06:31Z"
+  }, {
+    "createdAt" : "2022-10-06T21:48:30Z"
+  }, {
+    "createdAt" : "2022-11-07T16:08:57Z"
+  }, {
+    "createdAt" : "2022-11-09T14:32:50Z"
+  }, {
+    "createdAt" : "2022-11-23T11:25:50Z"
+  }, {
+    "createdAt" : "2022-11-28T04:58:27Z"
+  }, {
+    "createdAt" : "2022-12-07T22:14:40Z"
+  }, {
+    "createdAt" : "2023-02-17T11:33:02Z"
+  }, {
+    "createdAt" : "2023-02-23T05:56:38Z"
+  }, {
+    "createdAt" : "2023-09-06T16:10:54Z"
+  }, {
+    "createdAt" : "2023-10-29T21:03:43Z"
+  }, {
+    "createdAt" : "2023-11-01T15:37:26Z"
+  }, {
+    "createdAt" : "2023-12-13T20:20:07Z"
+  }, {
+    "createdAt" : "2024-01-12T13:02:20Z"
+  }, {
+    "createdAt" : "2024-01-21T16:44:07Z"
+  }, {
+    "createdAt" : "2024-02-29T05:30:18Z"
+  }, {
+    "createdAt" : "2024-03-18T13:54:03Z"
+  }, {
+    "createdAt" : "2024-04-25T09:07:48Z"
+  }, {
+    "createdAt" : "2024-05-08T04:56:15Z"
+  }, {
+    "createdAt" : "2024-07-11T15:28:01Z"
+  }, {
+    "createdAt" : "2024-08-15T15:32:54Z"
+  }, {
+    "createdAt" : "2025-03-26T10:06:05Z"
+  }, {
+    "createdAt" : "2025-04-20T14:17:18Z"
+  }, {
+    "createdAt" : "2025-06-04T16:13:22Z"
+  }, {
+    "createdAt" : "2025-06-16T19:14:04Z"
+  }, {
+    "createdAt" : "2025-07-10T20:09:22Z"
+  }, {
+    "createdAt" : "2025-07-17T11:52:19Z"
+  }, {
+    "createdAt" : "2025-07-23T09:25:33Z"
+  }, {
+    "createdAt" : "2025-07-24T14:01:45Z"
+  }, {
+    "createdAt" : "2025-09-30T13:32:13Z"
+  }, {
+    "createdAt" : "2025-10-14T11:32:02Z"
+  }, {
+    "createdAt" : "2025-12-11T14:33:48Z"
+  }, {
+    "createdAt" : "2025-12-25T20:39:02Z"
+  }, {
+    "createdAt" : "2026-01-10T18:46:06Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "To ability to write in influxDb",
+    "createdAt" : "2020-10-16T12:29:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Integration with RestAssured",
+    "createdAt" : "2020-10-29T15:13:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4,
+    "title" : "To have the ability to add duration instead iterations . ",
+    "createdAt" : "2020-11-02T15:40:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Counts Not Correct",
+    "createdAt" : "2020-11-16T21:42:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Functionality Questions",
+    "createdAt" : "2020-11-17T23:17:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Test Doesn't Stop",
+    "createdAt" : "2020-11-19T21:04:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Functionally Defined Request Properties",
+    "createdAt" : "2020-11-19T22:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Update to JMeter 5.4",
+    "createdAt" : "2020-12-08T18:43:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Setting http request - protocol, server, port and path",
+    "createdAt" : "2020-12-20T18:16:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Validating HTTP Status Code",
+    "createdAt" : "2020-12-21T20:56:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Getting the total response time of all the requests",
+    "createdAt" : "2020-12-23T10:11:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "JTL file error",
+    "createdAt" : "2021-01-07T13:33:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "API to save response body",
+    "createdAt" : "2021-01-07T13:42:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Jmeter Test plan and execution",
+    "createdAt" : "2021-03-31T11:54:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "How to add rampup time for Thread Group",
+    "createdAt" : "2021-05-29T09:44:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Ability not to follow redirects",
+    "createdAt" : "2021-06-03T14:13:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Integration with elasticsearch to save results",
+    "createdAt" : "2021-08-14T11:52:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Java sampler - performance testing of Java request",
+    "createdAt" : "2021-09-18T19:47:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Sample variables in result file",
+    "createdAt" : "2021-09-18T19:49:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "gradle build failed",
+    "createdAt" : "2021-10-06T09:02:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Througput Shaping Timer, Througput Controller and Concurrency Thread Group",
+    "createdAt" : "2021-10-06T09:18:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "JSON JMESPath Extactor and Boudary Extractor",
+    "createdAt" : "2021-10-25T14:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Jmeter Master e Slave",
+    "createdAt" : "2021-10-26T21:58:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "How about using Kotlin as a primary DSL?",
+    "createdAt" : "2021-10-28T14:46:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 31,
+    "title" : "__tstFeedback called with wrong number of parameters",
+    "createdAt" : "2021-11-02T16:35:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Parallel controller",
+    "createdAt" : "2021-11-05T20:34:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "RpsThreadGroup issues",
+    "createdAt" : "2021-11-08T13:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Jmeter logging ",
+    "createdAt" : "2021-11-08T13:26:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Placeholder variable doesn't work in postprocessor ",
+    "createdAt" : "2021-11-08T13:35:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "HTTP request defaults",
+    "createdAt" : "2021-11-08T20:38:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "HTTP header manager",
+    "createdAt" : "2021-11-08T20:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "JDBC Sampler, SetUp and TearDown thread groups",
+    "createdAt" : "2021-11-10T11:44:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "JmxToDsl is it possible?",
+    "createdAt" : "2021-11-10T11:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "YAML scripting feature ",
+    "createdAt" : "2021-11-10T11:54:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Groovy code debug",
+    "createdAt" : "2021-11-10T11:57:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "InfluxDB v2 Tag ",
+    "createdAt" : "2021-11-10T12:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Jmeter and java versions",
+    "createdAt" : "2021-11-16T17:52:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Add ability to use custom JavaSamplers",
+    "createdAt" : "2021-11-18T11:14:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "push Jmeter Properties from java",
+    "createdAt" : "2021-11-18T12:30:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Temporary files are sometimes not deleted",
+    "createdAt" : "2021-11-19T07:59:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Able to use assertThat  instead of Jmeter Autostop plugin",
+    "createdAt" : "2021-11-24T10:12:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "HTTP Sampler parametrization",
+    "createdAt" : "2021-12-08T13:27:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Generated Jmx within HtmlReport could not be opened with Jmeter UI",
+    "createdAt" : "2021-12-14T17:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "forEach controller",
+    "createdAt" : "2022-01-20T07:44:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "forLoopController, integer param of loop",
+    "createdAt" : "2022-01-20T07:45:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "httpDefaults implementation",
+    "createdAt" : "2022-01-20T07:48:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Test manipulation buttons",
+    "createdAt" : "2022-01-20T10:25:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Dummy and debug samplers needed",
+    "createdAt" : "2022-01-20T12:37:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "boundaryExtractor, regexExtractor: can’t change field to check",
+    "createdAt" : "2022-02-01T14:03:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Default elements in test plan",
+    "createdAt" : "2022-02-01T14:06:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "testPlan showInGui exception",
+    "createdAt" : "2022-02-16T13:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "preproccessor sample class",
+    "createdAt" : "2022-02-17T11:21:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "jmx2dsl extension guide",
+    "createdAt" : "2022-03-21T13:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "SMPT Sampler support",
+    "createdAt" : "2022-03-24T19:07:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "Kafka base realisation",
+    "createdAt" : "2022-03-24T19:13:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 85,
+    "title" : "GraphQL sampler feature request",
+    "createdAt" : "2022-04-07T08:38:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Need getters for BaseTestElement",
+    "createdAt" : "2022-04-13T10:21:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Feature Request: WeightedSwitchController",
+    "createdAt" : "2022-04-15T12:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "I was trying to use the project and noticed lot of vulnerabilities, please consider fixing them.",
+    "createdAt" : "2022-04-15T21:57:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "NullPointerException in buildUltimateThreadGroupSchedules with threadGroup(name: \"name\", threads: 100, iterations: 1, child).holdFor(duration: Duration.ofMinutes(15))",
+    "createdAt" : "2022-04-19T08:00:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "httpDefaults not working for GraphQL",
+    "createdAt" : "2022-04-19T13:55:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Feature Requests: typing interpolated variable to json serialisation and csvDataset default filepath",
+    "createdAt" : "2022-04-20T14:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "RPS thread group initial RPS bug",
+    "createdAt" : "2022-04-21T19:23:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Integrability improvements",
+    "createdAt" : "2022-04-25T20:51:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Class DslTeardownThreadGroup extends DslSimpleThreadGroup<DslSetupThreadGroup> instead of DslSimpleThreadGroup<DslTeardownThreadGroup>",
+    "createdAt" : "2022-04-26T16:07:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "The older versions showing up as the latest in maven central/IntelliJ",
+    "createdAt" : "2022-04-27T01:09:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "HTTP Sampler with Proxy",
+    "createdAt" : "2022-05-02T16:34:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "DSL to understand ${P__(THREADS,1)} in Thread Group",
+    "createdAt" : "2022-05-02T17:17:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Feature Request: Need APDEX configuration for HTML reporter",
+    "createdAt" : "2022-05-19T05:51:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Question - Does this dsl provide feature to add UserParameters preprocessor ?",
+    "createdAt" : "2022-06-14T06:36:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Feature request! Open Model Therad Group",
+    "createdAt" : "2022-06-14T14:27:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 124,
+    "title" : "[jmx2dsl] ClassNotFoundException: org.xbill.DNS.Resolver when importing a JMX that contains a DNSCacheManager",
+    "createdAt" : "2022-06-20T12:56:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Throwing an error while converting the file from jmx to dsl",
+    "createdAt" : "2022-07-08T07:10:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Upgrading JMeter to 5.5 - fixing CVE vulnerabilities",
+    "createdAt" : "2022-07-25T20:49:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "error on showInGui with httpDefaults",
+    "createdAt" : "2022-08-05T14:47:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "error in jmx2dsl.jar - null/empty values in headers causes NPE",
+    "createdAt" : "2022-08-17T15:00:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Seeing Problem loading XML from jmx file",
+    "createdAt" : "2022-09-16T12:30:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Add support for jsr223 pre and post processor child objects in jmx2dsl",
+    "createdAt" : "2022-09-16T14:36:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Add support for jmx2dsl to output to a target file",
+    "createdAt" : "2022-09-16T14:38:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 137,
+    "title" : "jmx2dsl fails for jmx tests with include controllers",
+    "createdAt" : "2022-09-20T14:16:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Add support to jmx2dsl for test fragments",
+    "createdAt" : "2022-09-20T15:09:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Add jmx2dsl support for while controllers (throws Exception in thread \"main\" java.lang.NoClassDefFoundError: org/fife/ui/rtextarea/RTextScrollPane)",
+    "createdAt" : "2022-09-21T13:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Add support for Spring boot integration",
+    "createdAt" : "2022-10-18T16:21:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Html reporter throws exception when only directory is passed over",
+    "createdAt" : "2022-10-19T05:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "git tag does not match release",
+    "createdAt" : "2022-10-20T22:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "NullPointerException when using ifController",
+    "createdAt" : "2022-11-02T19:19:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "1.2-SNAPSHOT version can not be found on mvnrepo",
+    "createdAt" : "2022-11-11T13:57:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Reusing karate feature file in JMeter Java DSL",
+    "createdAt" : "2022-11-15T10:20:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 158,
+    "title" : "Unable to specify ThreadGroup with 'infinite iterations' in dsl",
+    "createdAt" : "2022-11-24T12:17:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Error with timers - Required type Duration, provided int",
+    "createdAt" : "2022-12-23T20:30:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Kafka Support from DSL",
+    "createdAt" : "2023-01-19T22:48:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 171,
+    "title" : "GraphqlSampler doesn't support GET requests",
+    "createdAt" : "2023-01-29T10:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "JmeterDSL inside SpringBoot Application. java.nio.file.NoSuchFileException: /bin",
+    "createdAt" : "2023-02-22T17:56:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Request for Bearer Token support in httpAuth()",
+    "createdAt" : "2023-02-24T21:24:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 176,
+    "title" : "Support for Jmeter plugins from Plugin Manager in DSL",
+    "createdAt" : "2023-03-06T23:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "I am looking for support in WebSocket samplers plugin. Do we have any workaround for plugins like this?",
+    "createdAt" : "2023-03-08T12:47:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 178,
+    "title" : "Add support to add custom cookies in the cookie manager",
+    "createdAt" : "2023-03-10T10:21:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 179,
+    "title" : "Add aggregate report listener support",
+    "createdAt" : "2023-03-10T10:22:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "jmx2dsl PathNotFoundException using JSONPostProcessor",
+    "createdAt" : "2023-06-15T20:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Please add support for SmtpSampler ",
+    "createdAt" : "2023-06-15T21:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Error in groovy function from jmx2dsl",
+    "createdAt" : "2023-06-20T18:11:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Support for Webdriver Sampler",
+    "createdAt" : "2023-06-21T20:40:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Issue with migrating JSR223-pre-processors with Java code (lambdas) to jsrPreProcessor with string scripts when running DSL script with Blazemeter",
+    "createdAt" : "2023-06-22T10:59:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Sending Test Results to DataDog",
+    "createdAt" : "2023-06-23T15:19:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "how to create JSON Assertion?",
+    "createdAt" : "2023-07-12T19:26:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "minor typo in DslResponseAssertion",
+    "createdAt" : "2023-07-12T20:20:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Groovy code for JSRSampler in separate files",
+    "createdAt" : "2023-07-14T06:35:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Add more listeners",
+    "createdAt" : "2023-07-25T10:14:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "FileNotFoundException when executing tests on Azure",
+    "createdAt" : "2023-08-01T06:17:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Wrong exception message?",
+    "createdAt" : "2023-08-02T17:07:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Confusing copy: 'Here is a sample project in case you want to start one from scratch.'",
+    "createdAt" : "2023-08-03T08:31:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "2 issues with running perf test on Azure",
+    "createdAt" : "2023-08-22T04:41:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Loading Resources with CSVDataSet and TestResource",
+    "createdAt" : "2023-08-24T09:10:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "jmdsl.jar recorder is making an external call to download the Selenium Manager",
+    "createdAt" : "2023-09-06T12:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Need help with an exception \"Thread 20\" java.lang.NoClassDefFoundError: org/apache/commons/codec/Base 64",
+    "createdAt" : "2023-09-09T23:15:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "JMX Converter issue - java.lang.IllegalArgumentException: Problem loading XML from:'xxx\\yyy\\zzz\\SDPUIPerformanceSuite.jmx'.",
+    "createdAt" : "2023-10-12T08:29:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "I am trying to run the performance test inside a docker container but getting an error: 2023-10-15 19:00:03 java.nio.file.NoSuchFileException: /bin",
+    "createdAt" : "2023-10-15T13:48:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "If controller stops further execution when groovy accessed variable is used in condition check",
+    "createdAt" : "2023-10-17T06:27:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "jmdsl fails to convert a test plan with JDBC request where query is read via a csvdataset config using the variable of csvdataset",
+    "createdAt" : "2023-10-19T07:50:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "JMeter 5.6 upgrade",
+    "createdAt" : "2023-10-26T19:54:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 236,
+    "title" : "Add support to jmeter-influxdb2-listener-plugin ",
+    "createdAt" : "2023-10-30T05:58:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 238,
+    "title" : "Add support for the User Parameters preprocessor",
+    "createdAt" : "2023-11-03T16:27:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 240,
+    "title" : "Header inheritance fails if encounters JSR223 sampler with SamplerScript class",
+    "createdAt" : "2023-11-06T12:51:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Support both a number of iterations and Duration",
+    "createdAt" : "2023-11-15T14:09:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Provide support to read files from directory like Directory Listing Config",
+    "createdAt" : "2023-11-19T13:17:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 248,
+    "title" : "Add graphite in BackendListener like InfluxDbBackendListener",
+    "createdAt" : "2023-11-20T13:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Add support for saving variables between different threads",
+    "createdAt" : "2023-11-24T09:12:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Add support for lambdas in azure",
+    "createdAt" : "2023-12-07T16:02:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Add support to Stepping Thread Group",
+    "createdAt" : "2023-12-14T09:08:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Flow control action",
+    "createdAt" : "2024-01-19T11:29:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "RpsThreadgroup - IllegalArgumentException (Host may not be blank)",
+    "createdAt" : "2024-03-07T12:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : " Support for Prometheus Listener for generating Grafana dashboard",
+    "createdAt" : "2024-03-09T10:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "getting socket connection closed when using rpsThreadGroup",
+    "createdAt" : "2024-03-30T02:13:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Add support HTTP2 & gRCP",
+    "createdAt" : "2024-05-09T23:52:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "InfluxDB listener",
+    "createdAt" : "2024-05-20T13:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Want to use in python projects",
+    "createdAt" : "2024-05-24T09:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Remote Testing  java.lang.NoSuchMethodException: DistributedJmeterEngine$1.<init>()",
+    "createdAt" : "2024-05-31T09:10:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "IllegalArgumentException: URI is not hierarchical",
+    "createdAt" : "2024-06-05T15:20:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Error when generating html report - report-template\" is not a valid template directory",
+    "createdAt" : "2024-08-10T18:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "How to enable disable connection reuse",
+    "createdAt" : "2024-08-16T15:03:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 278,
+    "title" : "Dynamic threads spin up when desire rate is not maintained",
+    "createdAt" : "2024-08-22T05:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "com.thoughtworks.xstream.security.ForbiddenClassException: org.apache.jmeter.save.ScriptWrapper",
+    "createdAt" : "2024-09-08T18:00:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "add opportunity use method  csvDataSet() into jar with tests",
+    "createdAt" : "2024-10-18T18:20:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "While loading .jmx file existing file and run it from Jmeter DSL iam gettting error CannotResolveClassException: org.apache.jmeter.protocol.system.SystemSampler",
+    "createdAt" : "2024-10-28T12:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "is there is any Build in function in jmeterDSL to check the 90% Percentile .and the 95% Percentile",
+    "createdAt" : "2024-11-14T10:46:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Bug - Exception when used in containerized application",
+    "createdAt" : "2024-11-21T05:35:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Support for WebSocketClient",
+    "createdAt" : "2024-12-02T09:51:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 287,
+    "title" : "Listening for Errors and Throughput to Dynamically Stop the Test",
+    "createdAt" : "2024-12-05T17:00:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 288,
+    "title" : "Capturing additional Metrics",
+    "createdAt" : "2024-12-19T05:35:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "JMeter Function ${__base64Encode} Not Executing Correctly in JMeter DSL When Loading .jmx File",
+    "createdAt" : "2024-12-26T10:45:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 291,
+    "title" : "Anyway to fetch and update existing threadgroup from testplan (fromJmx) ?",
+    "createdAt" : "2025-01-27T08:37:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 294,
+    "title" : "How can i add Perfmon Metric Collector?",
+    "createdAt" : "2025-04-30T03:56:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 295,
+    "title" : "Add support to TCP Sampler",
+    "createdAt" : "2025-05-06T17:18:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 298,
+    "title" : "URI is not hierarchical",
+    "createdAt" : "2025-07-01T10:36:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 308,
+    "title" : "Add support to create tests on Blazemeter only and not run it",
+    "createdAt" : "2025-07-23T09:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "missing Git tag v2.2",
+    "createdAt" : "2025-12-10T23:49:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "有没有dubbo sample?",
+    "createdAt" : "2026-01-06T03:46:39Z",
+    "state" : "CLOSED"
+  } ]
+}

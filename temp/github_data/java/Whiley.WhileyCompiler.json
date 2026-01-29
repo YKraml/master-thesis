@@ -1,0 +1,5433 @@
+{
+  "repoOwner" : "Whiley",
+  "repoName" : "WhileyCompiler",
+  "forks" : [ {
+    "createdAt" : "2011-03-24T16:56:01Z"
+  }, {
+    "createdAt" : "2011-07-24T16:58:51Z"
+  }, {
+    "createdAt" : "2011-12-08T21:11:37Z"
+  }, {
+    "createdAt" : "2012-07-22T02:40:54Z"
+  }, {
+    "createdAt" : "2012-11-12T02:47:12Z"
+  }, {
+    "createdAt" : "2013-03-13T23:45:05Z"
+  }, {
+    "createdAt" : "2013-05-10T03:41:17Z"
+  }, {
+    "createdAt" : "2014-04-08T04:52:56Z"
+  }, {
+    "createdAt" : "2014-08-22T23:53:41Z"
+  }, {
+    "createdAt" : "2014-09-08T13:57:02Z"
+  }, {
+    "createdAt" : "2014-12-15T02:35:06Z"
+  }, {
+    "createdAt" : "2015-03-18T04:23:16Z"
+  }, {
+    "createdAt" : "2015-04-13T20:09:13Z"
+  }, {
+    "createdAt" : "2016-01-04T08:04:02Z"
+  }, {
+    "createdAt" : "2016-01-06T01:04:36Z"
+  }, {
+    "createdAt" : "2016-01-20T08:55:27Z"
+  }, {
+    "createdAt" : "2016-07-31T19:47:23Z"
+  }, {
+    "createdAt" : "2017-04-29T23:05:23Z"
+  }, {
+    "createdAt" : "2018-03-22T19:45:16Z"
+  }, {
+    "createdAt" : "2018-07-25T05:19:32Z"
+  }, {
+    "createdAt" : "2018-12-16T12:27:17Z"
+  }, {
+    "createdAt" : "2019-04-26T21:16:32Z"
+  }, {
+    "createdAt" : "2019-05-01T02:43:38Z"
+  }, {
+    "createdAt" : "2019-05-07T06:33:44Z"
+  }, {
+    "createdAt" : "2019-08-02T07:33:28Z"
+  }, {
+    "createdAt" : "2020-07-28T01:21:52Z"
+  }, {
+    "createdAt" : "2020-07-30T15:12:05Z"
+  }, {
+    "createdAt" : "2021-01-16T10:45:38Z"
+  }, {
+    "createdAt" : "2021-02-26T04:07:50Z"
+  }, {
+    "createdAt" : "2021-07-26T06:59:47Z"
+  }, {
+    "createdAt" : "2021-08-02T10:27:09Z"
+  }, {
+    "createdAt" : "2021-10-28T19:27:24Z"
+  }, {
+    "createdAt" : "2023-07-24T06:20:40Z"
+  }, {
+    "createdAt" : "2024-07-11T14:57:17Z"
+  }, {
+    "createdAt" : "2024-07-25T03:01:49Z"
+  }, {
+    "createdAt" : "2025-03-25T20:01:38Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Representation of Integers and Rationals",
+    "createdAt" : "2010-12-09T08:01:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "The Problem with Type Inference and Constraints",
+    "createdAt" : "2010-12-09T08:17:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Filtering Lexer Output",
+    "createdAt" : "2010-12-14T03:53:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Type Propagation Performed Twice?",
+    "createdAt" : "2011-01-06T23:09:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Reading / Writing Wyil Attributes",
+    "createdAt" : "2011-01-12T02:08:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Redesigning Wyone",
+    "createdAt" : "2011-01-21T03:17:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Subtyping and Coercions",
+    "createdAt" : "2011-01-23T03:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Constraint Checking for Recursive Types",
+    "createdAt" : "2011-01-28T22:13:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Minor Problems List",
+    "createdAt" : "2011-03-01T08:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Need switch statement",
+    "createdAt" : "2011-03-01T08:38:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Need exceptions!",
+    "createdAt" : "2011-03-01T08:38:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Break Statement ?",
+    "createdAt" : "2011-03-01T08:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Function/Method Name mangling",
+    "createdAt" : "2011-03-02T19:35:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "First-class Strings",
+    "createdAt" : "2011-03-04T00:20:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Constants should not be inlined",
+    "createdAt" : "2011-04-02T08:12:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "First-Class Bit Vectors",
+    "createdAt" : "2011-04-02T09:10:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Canonical Representation of Structural Types",
+    "createdAt" : "2011-04-10T21:11:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Non-Termination of Typing",
+    "createdAt" : "2011-04-11T20:41:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Byte Type should be [bool]",
+    "createdAt" : "2011-04-16T03:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Cannot Iterate over Strings",
+    "createdAt" : "2011-08-01T00:58:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Cannot Iterate over Dictionaries",
+    "createdAt" : "2011-08-01T01:00:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Cannot Create Empty Dictionaries",
+    "createdAt" : "2011-08-01T01:03:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Subtyping Function Values",
+    "createdAt" : "2011-08-01T01:06:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Extended Invalid Tests",
+    "createdAt" : "2011-08-07T21:23:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Byte implemented as JVM byte",
+    "createdAt" : "2011-08-07T21:25:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Encapsulation Modifiers",
+    "createdAt" : "2011-08-07T21:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Bindings",
+    "createdAt" : "2011-08-07T21:27:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Update Main Entry Point",
+    "createdAt" : "2011-08-07T21:29:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "String Coercions",
+    "createdAt" : "2011-08-07T21:30:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Representation of Records",
+    "createdAt" : "2011-08-07T21:32:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Value Comparator",
+    "createdAt" : "2011-08-07T21:33:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Runtime Type Tests",
+    "createdAt" : "2011-08-07T21:34:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Support for Native Modifier",
+    "createdAt" : "2011-08-07T21:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Missing LIne Numbers",
+    "createdAt" : "2011-08-07T21:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Implementation of Record / List / Dictionary / String Access Bytecodes",
+    "createdAt" : "2011-08-07T21:40:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Distributivity of Subtyping",
+    "createdAt" : "2011-08-07T21:42:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Bitwidth for Primitive Char",
+    "createdAt" : "2011-08-07T23:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Modified Variable Types in Loops",
+    "createdAt" : "2011-08-10T21:44:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "WYIL: Unique Process Types",
+    "createdAt" : "2011-08-29T03:43:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "More Efficient Type Simplifications",
+    "createdAt" : "2011-09-15T09:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Empty Dictionaries",
+    "createdAt" : "2011-09-18T02:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Exceptions and Forward/Backward Flow Analysis",
+    "createdAt" : "2011-09-20T23:56:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Source Code information for Types",
+    "createdAt" : "2011-09-26T23:35:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Parsing Exceptions with Funny end-of-file",
+    "createdAt" : "2011-09-26T23:36:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Nested WYIL Blocks",
+    "createdAt" : "2011-09-28T23:22:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Open Records, Interfaces and Process Types",
+    "createdAt" : "2011-10-01T22:47:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Line Number Problems for Constraints",
+    "createdAt" : "2011-10-18T04:26:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Exceptions and Type Propagation",
+    "createdAt" : "2011-10-20T20:02:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Fix Error Handling with Standard Library",
+    "createdAt" : "2011-10-20T21:37:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Intersecting Lists and their Negations",
+    "createdAt" : "2011-10-22T03:33:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Dictionary Membership Testing",
+    "createdAt" : "2011-10-22T21:47:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Length Of Dictionary",
+    "createdAt" : "2011-10-22T21:52:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Do-While Construct",
+    "createdAt" : "2011-10-22T23:29:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "v0.3.13",
+    "createdAt" : "2011-10-30T20:14:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Retain Nominal Type Information",
+    "createdAt" : "2011-10-30T20:33:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Reimplement Runtime Data Types",
+    "createdAt" : "2011-11-01T03:36:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Improved Reference Counting",
+    "createdAt" : "2011-11-01T06:43:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Type Propagation and Constraint Inline",
+    "createdAt" : "2011-11-12T03:48:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Disambiguating Functions/Methods from imports based on Type",
+    "createdAt" : "2011-11-30T02:01:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Fix Unnecessary Coercions",
+    "createdAt" : "2012-01-16T23:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Modify code generation to thread blocks, not return them",
+    "createdAt" : "2012-01-25T03:36:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Improvements to Front-End Design",
+    "createdAt" : "2012-02-13T00:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Compilation Dependencies",
+    "createdAt" : "2012-03-06T01:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Missing Notion of Internal Message Send",
+    "createdAt" : "2012-03-23T00:45:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "WYC: Fix Syntax for Native Methods",
+    "createdAt" : "2012-03-23T00:47:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Units in Whiley",
+    "createdAt" : "2012-03-26T11:51:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "WYIL: Constraint Inline",
+    "createdAt" : "2012-05-21T13:22:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Register-Based WYIL",
+    "createdAt" : "2012-06-25T05:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "WYIL: Improved reporting of Wyone Constraints",
+    "createdAt" : "2012-06-27T02:28:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Strip out notion of Module.Message and Type.Message",
+    "createdAt" : "2012-06-27T03:10:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Assume Statement",
+    "createdAt" : "2012-06-27T05:32:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Rename Dictionaries to be Maps",
+    "createdAt" : "2012-06-27T05:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Subset ASCII operator",
+    "createdAt" : "2012-06-27T06:04:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Match Statement",
+    "createdAt" : "2012-06-28T08:31:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "WYIL: Fix reference counting",
+    "createdAt" : "2012-07-13T00:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "WYIL: Tidy up WyilFileWriter Output",
+    "createdAt" : "2012-07-16T03:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "WYIL: Fix Constant Propagation Pass",
+    "createdAt" : "2012-07-16T03:47:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Split WyilFile.Method into FunctionOrMethod",
+    "createdAt" : "2012-07-16T22:39:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Efficient Type Testing and Field Loading",
+    "createdAt" : "2012-07-24T21:05:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "WYIL: Compact Binary Format",
+    "createdAt" : "2012-07-24T22:14:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Eliminatie Void Functions",
+    "createdAt" : "2012-07-26T05:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Fix void return functions in Wyil binary format",
+    "createdAt" : "2012-07-28T23:31:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Insert labels after reading binary Wyil Files",
+    "createdAt" : "2012-07-28T23:32:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Abstract Main and Ant Task for Tools",
+    "createdAt" : "2012-07-28T23:45:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Fix wyjc AntTask to compile directly from wyil files",
+    "createdAt" : "2012-07-28T23:55:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Lost package information in binary wyil files",
+    "createdAt" : "2012-07-29T05:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Problem with printing bytes",
+    "createdAt" : "2012-07-29T07:14:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "WYBS: Define Project interface",
+    "createdAt" : "2012-07-31T22:48:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Include Liveness Information in Bytecodes",
+    "createdAt" : "2012-08-01T04:09:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Support for Better Destructuring Pattern Matching in Wyone",
+    "createdAt" : "2012-08-07T04:43:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "WYONE: Merge with Wyautl",
+    "createdAt" : "2012-08-07T04:45:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Syntax of Wyone Type Test",
+    "createdAt" : "2012-08-07T05:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Syntax of Wyone \"any\" type",
+    "createdAt" : "2012-08-07T22:28:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "WYONE: Automaton Validator",
+    "createdAt" : "2012-08-07T22:53:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Wyone recursive rule application?",
+    "createdAt" : "2012-08-09T03:06:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Wyone empty constructors",
+    "createdAt" : "2012-08-09T04:49:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Proposed Semantic Change: Division should be Rational by Default?",
+    "createdAt" : "2012-08-09T22:19:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Fix Non-Sequential Matching",
+    "createdAt" : "2012-08-10T03:27:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Wyone Add Supplementary Data",
+    "createdAt" : "2012-08-10T04:10:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Fix Wyone Recursive Rewrites",
+    "createdAt" : "2012-08-11T05:49:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Wyone support for Non-Sequentual Bag",
+    "createdAt" : "2012-08-12T01:02:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Add better support for constructing Wyone Terms",
+    "createdAt" : "2012-08-12T01:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Create Proper Schema for Automata",
+    "createdAt" : "2012-08-12T01:06:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "TypeOf Efficiency",
+    "createdAt" : "2012-08-20T22:37:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Wyone Boxed versus Unboxed Types",
+    "createdAt" : "2012-08-20T22:39:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Wyone Left & Right Append",
+    "createdAt" : "2012-08-20T23:41:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Proposed Syntax Change for Variable Declarations",
+    "createdAt" : "2012-08-22T23:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Add support for ifs and loops to wyone bytecodes",
+    "createdAt" : "2012-08-28T15:55:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Fix type checker for wyone bytecodes",
+    "createdAt" : "2012-08-28T15:56:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Add support for extracting declared vars",
+    "createdAt" : "2012-08-28T15:56:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Fix wyone Type to separate Lists and Sets from Compounds",
+    "createdAt" : "2012-09-05T08:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Turn Wyone into separate Module",
+    "createdAt" : "2012-09-05T08:46:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Fix up Wyone Non-Sequential Pattern Match",
+    "createdAt" : "2012-09-05T12:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Merge type tests with pattern translation in JavaFileWriter",
+    "createdAt" : "2012-09-05T14:12:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "WYONE: Drop Bytecodes?",
+    "createdAt" : "2012-09-05T15:33:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Minimise Array Duplications in Wyone Type.Set",
+    "createdAt" : "2012-09-06T12:58:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Bug with non-sequential list matching",
+    "createdAt" : "2012-09-06T18:43:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "WYONE: bug with non-sequential matching",
+    "createdAt" : "2012-09-06T19:23:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "WYONE: another bug with non-sequential matching",
+    "createdAt" : "2012-09-06T19:56:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Inner loop for non-sequential match may fail if last rewrite is false",
+    "createdAt" : "2012-09-09T09:05:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "WYIL: Eliminate Unnecessary Code.Assigns",
+    "createdAt" : "2012-09-09T09:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "WYONE: add support for bag comprehensions",
+    "createdAt" : "2012-10-14T03:46:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "WYONE: add substitution operator",
+    "createdAt" : "2012-10-14T03:47:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "WYONE: add list access operator",
+    "createdAt" : "2012-10-14T03:48:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "WYONE: add support for length of bag",
+    "createdAt" : "2012-10-14T03:52:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "WYONE: bug fix with runtime type tests",
+    "createdAt" : "2012-10-14T04:30:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "WYONE: split rewrites into reductions and inferences",
+    "createdAt" : "2012-10-16T01:53:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "WYONE: need to compact automata as much as possible",
+    "createdAt" : "2012-10-16T02:51:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "WYONE: bug with Automaton.rewrite()",
+    "createdAt" : "2012-10-16T03:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "WYONE: bug with Automaton.compact()",
+    "createdAt" : "2012-10-16T03:49:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "WYONE: bug with rule application?",
+    "createdAt" : "2012-10-17T00:51:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "WYONE: bug with calculating Least Upper Bound",
+    "createdAt" : "2012-10-17T01:02:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "WYONE: add rewrite limit",
+    "createdAt" : "2012-10-17T05:05:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "WYONE: add support for including modules",
+    "createdAt" : "2012-10-17T07:28:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "WYONE: Bug with non-termination of inference rules",
+    "createdAt" : "2012-10-18T01:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "WYONE: Enable primitives to be used directly",
+    "createdAt" : "2012-10-18T02:29:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "WYONE: need way to express \"value\" type",
+    "createdAt" : "2012-10-18T03:35:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Refactor DFA utils",
+    "createdAt" : "2012-10-25T19:49:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "WYONE: operator(s) for destructuring values",
+    "createdAt" : "2012-10-26T07:25:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "WYONE: autocompletion of type tests",
+    "createdAt" : "2012-10-28T00:26:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Problem Reporting Syntax Errors",
+    "createdAt" : "2012-10-28T20:58:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "WYONE: Optimising Reductions",
+    "createdAt" : "2012-10-29T04:12:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Cannot union sets and bags!!",
+    "createdAt" : "2012-10-29T23:38:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "WYONE: need explicit cast?",
+    "createdAt" : "2012-10-30T09:05:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "WYONE: need way to check if values are ints or not",
+    "createdAt" : "2012-10-30T09:14:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "WYONE: replace class with proper union type",
+    "createdAt" : "2012-10-30T23:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "WYONE: update type inference to catch term type errors.",
+    "createdAt" : "2012-10-31T00:42:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "WYONE: fix up loops and scopes",
+    "createdAt" : "2012-10-31T05:24:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "WYONE: post-conditions not included",
+    "createdAt" : "2012-10-31T07:06:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Proposed Change for Semantics of Sets/Lists/Maps/Tuples",
+    "createdAt" : "2012-10-31T20:00:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "WYONE: joining branches can be optimised",
+    "createdAt" : "2012-10-31T22:59:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "WYONE: problem with branch joining and collisions",
+    "createdAt" : "2012-10-31T23:39:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "BUILD: javadoc does not generate linked documentation.",
+    "createdAt" : "2012-11-01T21:51:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "WYIL need to assign target of invocation",
+    "createdAt" : "2012-11-02T06:45:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Add support for maps",
+    "createdAt" : "2012-11-02T22:25:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "WYIL: modified operands not determined!",
+    "createdAt" : "2012-11-04T04:39:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "LoopEnd should not be a label",
+    "createdAt" : "2012-11-04T05:02:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "WYIL: problem with Assign in ConstraintSolver",
+    "createdAt" : "2012-11-05T21:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Problem with isomorphic but non-equivalent automata",
+    "createdAt" : "2012-11-07T03:22:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Loop bytecode has no invariant",
+    "createdAt" : "2012-11-07T06:14:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Enable ModuleCheck and CoercionCheck Stages",
+    "createdAt" : "2012-11-07T22:43:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "WYIL: Issues with Quantification",
+    "createdAt" : "2012-11-08T01:58:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "WYONE: support classes for term subtypes",
+    "createdAt" : "2012-11-08T06:15:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "WYONE: need better support for bool types",
+    "createdAt" : "2012-11-12T02:00:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Missing support for arbitrary unions",
+    "createdAt" : "2012-11-12T04:43:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Proposed Syntax Change for Type / Constant / Function / Method Declarations",
+    "createdAt" : "2012-11-17T02:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Support Ad-Hoc Indentation",
+    "createdAt" : "2012-11-21T23:55:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Compute intersection types during TypeInference",
+    "createdAt" : "2012-11-26T23:26:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Missing logical AND/OR operators",
+    "createdAt" : "2012-11-27T00:03:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Bug with runtime type testing of recursive automata",
+    "createdAt" : "2012-11-28T22:30:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "WYONE: bug with representation of types?",
+    "createdAt" : "2012-11-29T23:21:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Proposed Syntax Change for Runtime Type Tests",
+    "createdAt" : "2012-12-02T00:32:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Substitution of VExpr Terms in Equality Constraints",
+    "createdAt" : "2012-12-03T03:16:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "WYil: transforming external blocks is broken in VerificationTransformer",
+    "createdAt" : "2012-12-03T03:20:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Div not currently supported",
+    "createdAt" : "2012-12-03T03:30:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Support for uninterpreted functions",
+    "createdAt" : "2012-12-03T03:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Need to support length of string",
+    "createdAt" : "2012-12-04T08:36:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Outstanding problem with integer inequalities",
+    "createdAt" : "2012-12-04T20:22:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Collections cannot have Negative Length",
+    "createdAt" : "2012-12-04T23:18:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Problem with Application of Quantifiers",
+    "createdAt" : "2012-12-04T23:51:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Canonicalisation of Automata ",
+    "createdAt" : "2012-12-06T00:06:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Nested Bytecode Blocks",
+    "createdAt" : "2012-12-06T00:32:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Loop variables not Invalidated on Exit",
+    "createdAt" : "2012-12-06T01:11:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Should Rationals be Printed with Braces?",
+    "createdAt" : "2012-12-06T03:58:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Support Set Operations",
+    "createdAt" : "2012-12-06T05:12:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Support for List Operations",
+    "createdAt" : "2012-12-06T05:13:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Change ZeroLessThan to ZeroLessThanEq",
+    "createdAt" : "2012-12-06T21:24:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "How to handle Errors in Constraints?",
+    "createdAt" : "2012-12-06T23:04:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "WYC: parsing of encapsulation modifiers",
+    "createdAt" : "2012-12-07T03:46:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Fix Syntax for Method Calls",
+    "createdAt" : "2012-12-09T22:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Fixes for Minimal I/O Library",
+    "createdAt" : "2012-12-09T23:27:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Problem with duplicate record fields",
+    "createdAt" : "2012-12-10T01:50:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Proposed Syntax for Currying and Interfaces",
+    "createdAt" : "2012-12-10T03:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Parsing Unqualified or Partially Qualified Lambdas",
+    "createdAt" : "2012-12-19T01:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Expr.FunctionOrMethod should be replaced with Expr.Lambda",
+    "createdAt" : "2012-12-19T01:14:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Syntax for Heap Regions?",
+    "createdAt" : "2012-12-23T07:15:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Outstanding Issues with Quantification and Collections",
+    "createdAt" : "2012-12-27T07:22:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Problems with Quantifier Instantiation",
+    "createdAt" : "2013-01-02T23:16:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Discrepancy between definitions for [nat]?",
+    "createdAt" : "2013-01-02T23:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Skolemisation of Existentials",
+    "createdAt" : "2013-01-02T23:54:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Instantiating Non-Empty Collections",
+    "createdAt" : "2013-01-03T00:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Instantiating Empty Collections",
+    "createdAt" : "2013-01-03T01:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "IndexOf implies ElementOf holds",
+    "createdAt" : "2013-01-03T01:34:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Syntax for Predicates",
+    "createdAt" : "2013-01-03T08:41:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Negative Integer is Invalid Constant Expression",
+    "createdAt" : "2013-01-06T01:01:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Axiom for NewList / NewSet / NewMap Bytecodes",
+    "createdAt" : "2013-01-07T01:13:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Support All Quantification",
+    "createdAt" : "2013-01-07T23:06:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Imperative For Loop Generates Strange Quantification",
+    "createdAt" : "2013-01-07T23:24:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "RangeOf and Try not supported vy VerificationCheck",
+    "createdAt" : "2013-01-07T23:29:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Uniform Representation of Collections",
+    "createdAt" : "2013-01-09T03:34:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "String operations not supported",
+    "createdAt" : "2013-01-10T03:55:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Problem importing Constraints from External Functions",
+    "createdAt" : "2013-01-10T04:04:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "Infinite Loop",
+    "createdAt" : "2013-01-10T20:28:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Support Switch Statements in VC Generation ",
+    "createdAt" : "2013-01-13T23:09:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Deprecating Code.IfIs ",
+    "createdAt" : "2013-01-15T15:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Proposed Semantic Change: Domains of Overloaded Functions should be Mutually Exclusive",
+    "createdAt" : "2013-01-16T12:53:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Problem with Loop Invariants and Assertions",
+    "createdAt" : "2013-01-16T17:01:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Proposed Syntax for Function Termination",
+    "createdAt" : "2013-01-22T13:01:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Proposed Syntax Change for For Loops",
+    "createdAt" : "2013-01-23T09:59:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Verification of For Loops which Mutate Variables",
+    "createdAt" : "2013-01-23T12:27:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Verification with Range Expressions",
+    "createdAt" : "2013-01-23T12:38:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Another Infinite Loop",
+    "createdAt" : "2013-01-23T12:42:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Verification with Append Expressions",
+    "createdAt" : "2013-01-23T12:54:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Verification with Sublist Expression",
+    "createdAt" : "2013-01-23T13:40:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Verification with List Update Expressions",
+    "createdAt" : "2013-01-23T13:47:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Verification of Set Comprehensions",
+    "createdAt" : "2013-01-23T13:58:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Verification of Union Expressions",
+    "createdAt" : "2013-01-23T14:29:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Continuing Thoughts on Collections",
+    "createdAt" : "2013-01-23T15:59:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Infinite Loop possible when Rewriting Inequalities",
+    "createdAt" : "2013-01-25T17:42:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Bootstrapping Wyone Types with Wyone",
+    "createdAt" : "2013-01-27T09:36:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Interference in Wycs from Unused Definitions",
+    "createdAt" : "2013-01-29T21:26:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Continued Thoughts on Collections",
+    "createdAt" : "2013-02-05T01:45:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "More Efficient VC Generation",
+    "createdAt" : "2013-02-07T00:57:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Bug in Constraint Solver",
+    "createdAt" : "2013-02-22T01:48:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Supporting WYCS Functions",
+    "createdAt" : "2013-02-24T05:10:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Syntax for Requires/Ensures and Throws ",
+    "createdAt" : "2013-02-24T21:03:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Problem with For Loops",
+    "createdAt" : "2013-03-04T08:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Improved Support for Configuration of File Writers",
+    "createdAt" : "2013-03-05T05:49:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Bug with Negating Inequalities",
+    "createdAt" : "2013-03-05T08:04:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Compiling WycsFile's into a Binary Format",
+    "createdAt" : "2013-03-07T22:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Incompatible argument to function (101_calculator)",
+    "createdAt" : "2013-03-13T00:00:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Infinite loop during Type Propagation?",
+    "createdAt" : "2013-03-13T00:17:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Problem with Loop Invariants and Modified Variables",
+    "createdAt" : "2013-03-13T00:35:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Problem with Scoping Modified Operands in WycsFiles",
+    "createdAt" : "2013-03-15T03:16:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Problem with parsing Real Numbers from Strings",
+    "createdAt" : "2013-03-25T00:08:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Modified Loop Variables and Scoping",
+    "createdAt" : "2013-03-25T01:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Inconsistent Stack Height Error",
+    "createdAt" : "2013-04-04T00:39:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Expand List Constraints from List Type",
+    "createdAt" : "2013-04-18T21:32:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "Why does this assertion fail?",
+    "createdAt" : "2013-05-05T08:55:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Why does this other assertion fail?",
+    "createdAt" : "2013-05-05T09:18:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "Thoughts on the Verifier",
+    "createdAt" : "2013-05-05T20:46:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Rename Wyone to be Wyrl",
+    "createdAt" : "2013-05-08T20:09:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Wyilc crash",
+    "createdAt" : "2013-05-08T20:49:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Revert Equals",
+    "createdAt" : "2013-05-09T04:06:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Equations and Inequalities",
+    "createdAt" : "2013-05-09T04:07:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Fix WyalFileWriter to produce valid output",
+    "createdAt" : "2013-05-09T05:53:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Why does this assertion fail?",
+    "createdAt" : "2013-05-09T06:03:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Use explicit clauses instead of And/Or",
+    "createdAt" : "2013-05-09T20:36:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Incorrect Verification Condition Generated?",
+    "createdAt" : "2013-05-09T21:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Bug with Arithmetic Unit",
+    "createdAt" : "2013-05-13T08:16:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Bug with Automaton.Rewrite(int,int)",
+    "createdAt" : "2013-05-15T00:57:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Another Bug with Arithmetic Unit",
+    "createdAt" : "2013-05-15T04:21:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Thoughts on Verifier Performance",
+    "createdAt" : "2013-05-15T08:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Implementing Equality in the Verifier",
+    "createdAt" : "2013-05-25T09:41:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Bug with WYRL and unions?",
+    "createdAt" : "2013-05-27T20:54:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Bug in WYRL Solver?",
+    "createdAt" : "2013-05-28T21:11:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Bug with binding of generic types",
+    "createdAt" : "2013-06-03T06:57:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Bug with Inequality Inference (STILL)",
+    "createdAt" : "2013-06-04T11:42:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Improve Type Test Performance",
+    "createdAt" : "2013-06-04T22:26:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "Debugging While_Valid_3",
+    "createdAt" : "2013-06-26T16:43:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Fixing Set types",
+    "createdAt" : "2013-06-27T07:45:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Bug with While Loop?",
+    "createdAt" : "2013-06-28T10:45:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Problem with modified loop variables?",
+    "createdAt" : "2013-08-01T08:51:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Set/List Length",
+    "createdAt" : "2013-08-01T19:54:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Sublist Bug?",
+    "createdAt" : "2013-08-01T19:59:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Constrained List Constants Bug",
+    "createdAt" : "2013-08-01T20:09:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "Verification of Function Invocations",
+    "createdAt" : "2013-08-01T20:22:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Related Set Size fo Set Contents",
+    "createdAt" : "2013-08-01T20:28:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "OutOfBounds checking on List Assignments",
+    "createdAt" : "2013-08-01T21:05:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Axiom Instantiation for Uninterpreted Functions",
+    "createdAt" : "2013-08-02T09:48:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Syntax for Typed Macros",
+    "createdAt" : "2013-08-02T21:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Deprecated Old JavaFileWriter",
+    "createdAt" : "2013-08-04T20:39:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Type Tests Not Working Correctly",
+    "createdAt" : "2013-08-05T09:50:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "Problem with Back Propagation and Constraints",
+    "createdAt" : "2013-08-05T20:21:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Unknow Problem with Reals",
+    "createdAt" : "2013-08-05T20:26:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Problem with Recursive Types in WyCS",
+    "createdAt" : "2013-08-05T20:33:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "VcTransformer.convert Missing Case for Null",
+    "createdAt" : "2013-08-06T03:51:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Undeclared Variable Encountered",
+    "createdAt" : "2013-08-06T03:55:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "Problem with ListUpdate",
+    "createdAt" : "2013-08-09T21:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Problem with Set Length",
+    "createdAt" : "2013-08-22T20:12:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Relating Set Size to Existential",
+    "createdAt" : "2013-08-22T20:36:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Relating Subset and Inequalities",
+    "createdAt" : "2013-08-22T20:41:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Problem with Quantifier Instantiation",
+    "createdAt" : "2013-09-05T09:36:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Problem with Inlining Preconditions",
+    "createdAt" : "2013-10-30T20:06:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Bug for Loop Invariants and Break Statements",
+    "createdAt" : "2013-11-07T03:58:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "For Loop Invariants",
+    "createdAt" : "2013-11-07T04:19:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Syntax for Functional Regions",
+    "createdAt" : "2013-11-15T22:10:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Syntax for Objects",
+    "createdAt" : "2013-11-28T06:45:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Constants as Types?",
+    "createdAt" : "2014-01-07T02:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Problem building with JDK 1.7?",
+    "createdAt" : "2014-02-15T11:51:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Implement \"protected\" modifier",
+    "createdAt" : "2014-02-21T14:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "Tic Tac Toe example doesn't compile from master",
+    "createdAt" : "2014-02-21T20:35:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "Fixing Enumerations",
+    "createdAt" : "2014-02-22T19:38:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Missing Type Tests in Assertion Language",
+    "createdAt" : "2014-03-12T03:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Incorrect Order of Operations in WyAL",
+    "createdAt" : "2014-03-18T02:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Prohibiting Mixed Tabs and Spaces",
+    "createdAt" : "2014-03-31T23:15:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "(1) Update WyIL to support multiple indexed blocks",
+    "createdAt" : "2014-04-07T06:06:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "(2) resolve issues with numSlots()",
+    "createdAt" : "2014-04-08T00:34:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 321,
+    "title" : "Eliminate WyilFile.Case.locals",
+    "createdAt" : "2014-04-08T00:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Develop Initial Plugin Framework",
+    "createdAt" : "2014-04-16T00:05:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "Convert Jasm to a Plugin",
+    "createdAt" : "2014-04-16T00:05:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Convert Whiley Compiler to Plugin",
+    "createdAt" : "2014-04-16T00:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "Problem Parsing Dereference Assignment",
+    "createdAt" : "2014-04-19T22:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Precedence for Subtraction Operator?",
+    "createdAt" : "2014-04-19T22:57:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "continue - unrecognised term",
+    "createdAt" : "2014-04-20T10:01:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "for iteration variable",
+    "createdAt" : "2014-04-20T10:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "type coercion problem",
+    "createdAt" : "2014-04-20T11:57:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Type Coercion Expected: integer -> natural",
+    "createdAt" : "2014-04-20T13:35:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Type coercion error in wyc but not play",
+    "createdAt" : "2014-04-21T00:28:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Code.OPCODE_Ifis may be misnamed",
+    "createdAt" : "2014-04-21T09:03:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Verification of Variable Declaration Invariants",
+    "createdAt" : "2014-04-21T21:18:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Problem with Pure Function Checking ",
+    "createdAt" : "2014-04-21T22:20:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Problem with Return Type Checking",
+    "createdAt" : "2014-04-22T04:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Verification of Bitwise Operators",
+    "createdAt" : "2014-04-24T22:28:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Verification of Remainder Operator",
+    "createdAt" : "2014-04-24T22:33:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "Verification with Record Constants",
+    "createdAt" : "2014-04-24T22:35:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "Flow Typing with Field Accesses",
+    "createdAt" : "2014-04-24T22:38:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Verification of Constrained Maps",
+    "createdAt" : "2014-04-24T22:41:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Verification with Method Types",
+    "createdAt" : "2014-04-24T22:48:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "Verification of Negation Types",
+    "createdAt" : "2014-04-25T00:43:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Verification of Do/While Loops",
+    "createdAt" : "2014-04-25T01:37:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Verification of Lambda Expressions",
+    "createdAt" : "2014-04-25T02:01:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Problem Verifying with Loop Variant Variables",
+    "createdAt" : "2014-04-25T04:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Problem with Verification and freeVariables()",
+    "createdAt" : "2014-04-25T07:55:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Function Overloading in WyCS",
+    "createdAt" : "2014-04-25T21:12:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "Converge WyCS Types on Whiley Types",
+    "createdAt" : "2014-04-25T21:55:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Failing to recognise a function name",
+    "createdAt" : "2014-04-30T05:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 350,
+    "title" : "wyc compiler generating a bad goto in ifge bytecode",
+    "createdAt" : "2014-05-07T23:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Merge OldCodeGenerator with CodeGenerator",
+    "createdAt" : "2014-05-16T03:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "Problem with Substitution in Verifier?",
+    "createdAt" : "2014-05-25T21:14:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Problem with Variable Ordering",
+    "createdAt" : "2014-05-26T05:43:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "Verifier to Support True Polynomials",
+    "createdAt" : "2014-05-26T21:23:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Remove AbstractSplitNaryAssignable",
+    "createdAt" : "2014-06-09T21:23:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Bug with Non-Void Method Invocation",
+    "createdAt" : "2014-06-09T21:35:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Improve Getters for Bytecode Components",
+    "createdAt" : "2014-06-09T22:30:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Condense WyIL Bytecodes",
+    "createdAt" : "2014-06-10T04:45:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "Remove Block.Entry",
+    "createdAt" : "2014-06-10T04:48:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "Whiley Lexer - '\\\\' Escape Character",
+    "createdAt" : "2014-06-16T10:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "Bug with Assert and Type Tests",
+    "createdAt" : "2014-06-19T00:46:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "Generating Extremely Large Verification Conditions",
+    "createdAt" : "2014-06-23T23:20:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "Bug in Type Propagation?",
+    "createdAt" : "2014-06-25T20:48:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "Typing Problem for Verification Condition Generator",
+    "createdAt" : "2014-06-25T21:11:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "Switch_Valid_3 test, failing on default case",
+    "createdAt" : "2014-07-11T04:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Ensures_Valid_6 - loop error",
+    "createdAt" : "2014-07-12T07:35:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Syntax of negation/union, function return type",
+    "createdAt" : "2014-07-13T23:28:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Inconsistent syntax within ifis bytecode",
+    "createdAt" : "2014-07-14T20:54:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "play editor requires newline to compile",
+    "createdAt" : "2014-07-16T03:02:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Unable to instantiate Quantifiers through Tuples",
+    "createdAt" : "2014-07-16T08:52:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "Possible Bug with Automaton State Equivalence",
+    "createdAt" : "2014-07-18T04:16:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Limitations with Quantifier Instantiation",
+    "createdAt" : "2014-07-18T04:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "False Negative for Reverse Function ?",
+    "createdAt" : "2014-07-20T21:39:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Thoughts on Verification Condition Generation",
+    "createdAt" : "2014-07-22T07:48:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Problem Inferring an Equality?",
+    "createdAt" : "2014-07-22T21:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Failing Quantifier Instantiation?",
+    "createdAt" : "2014-07-22T21:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "ArrayIndexOutOfBoundsException in wyrl.util.Runtime",
+    "createdAt" : "2014-07-23T19:45:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "Another Curous Bug",
+    "createdAt" : "2014-07-24T01:27:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "Bug with Automata Reduction",
+    "createdAt" : "2014-07-26T13:04:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "Problem with Type Checking Lambda",
+    "createdAt" : "2014-07-28T06:21:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Huge Verification Generated from Simple Precondition?",
+    "createdAt" : "2014-07-31T15:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "Problematic Failing Test",
+    "createdAt" : "2014-07-31T16:39:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Syntax Error Reported on Incorrect Line",
+    "createdAt" : "2014-08-01T07:33:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "RewriteRule Rankings",
+    "createdAt" : "2014-08-01T12:06:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Move Unbound Conditionals into probe()",
+    "createdAt" : "2014-08-01T12:08:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Problem with Variable Naming",
+    "createdAt" : "2014-08-03T18:01:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Verification Should Report Timeout Errors",
+    "createdAt" : "2014-08-03T20:20:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Problematic False-Negative",
+    "createdAt" : "2014-08-04T13:47:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Wrong file extension causes internal failure",
+    "createdAt" : "2014-08-05T23:17:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "Unusual Bug with Verifier",
+    "createdAt" : "2014-08-07T14:58:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "Improving Rewriter Performance",
+    "createdAt" : "2014-08-08T10:52:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 395,
+    "title" : "Situations <Else> and <Else If> could be used interchangably",
+    "createdAt" : "2014-08-10T16:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Contractive Types are Too Aggressive",
+    "createdAt" : "2014-08-12T04:54:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Pattern Matching in ForAll Loops",
+    "createdAt" : "2014-08-12T04:56:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Semantics for List ElementOf",
+    "createdAt" : "2014-08-12T21:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "Limitation of Quantifier Instantiation",
+    "createdAt" : "2014-08-14T01:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 400,
+    "title" : "Verifier Bug",
+    "createdAt" : "2014-08-14T22:07:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "Problem Verifying List Bounds",
+    "createdAt" : "2014-08-14T22:10:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "Another Verifier Bug",
+    "createdAt" : "2014-08-15T02:30:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "Quantifer Instantiation Requires All Variables",
+    "createdAt" : "2014-08-15T07:44:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Another Strange Instantiation Bug",
+    "createdAt" : "2014-08-15T08:26:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "Bug with Flow Typing",
+    "createdAt" : "2014-08-16T01:38:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "Invalid Literal Bug",
+    "createdAt" : "2014-08-17T20:45:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "Bug with Record Initialisation",
+    "createdAt" : "2014-08-18T00:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Bug with For-Loop Return",
+    "createdAt" : "2014-08-18T21:17:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "Bug with Quantifier Pattern Matching",
+    "createdAt" : "2014-08-18T21:24:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "NullPointerException when verifying this code",
+    "createdAt" : "2014-08-19T00:04:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Bug with Dictionary Type",
+    "createdAt" : "2014-08-19T03:52:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Index Variable in For Loop Invariants ",
+    "createdAt" : "2014-08-20T00:15:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "Problem with Generated JVM Bytecode",
+    "createdAt" : "2014-08-20T21:54:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Eliminate BackPropagation Transform",
+    "createdAt" : "2014-08-22T03:51:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Declared Types in WyIL Bytecode",
+    "createdAt" : "2014-08-22T04:28:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 418,
+    "title" : "Eliminate Implicit Coercions?",
+    "createdAt" : "2014-08-22T04:34:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "Unhelpful error message parsing increment operator",
+    "createdAt" : "2014-08-22T21:04:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Exploring Blocks Recursively during Verification Condition Generation",
+    "createdAt" : "2014-08-23T03:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Compiler Switch for SmtVerificationCheck",
+    "createdAt" : "2014-08-24T22:10:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Test case FunctionRef_Valid_3",
+    "createdAt" : "2014-08-25T04:29:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "Bug with Parsing Case Blocks ?",
+    "createdAt" : "2014-08-28T00:10:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "List negative length constraint compiles and passes verification",
+    "createdAt" : "2014-08-28T22:23:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "Error Reporting for Contractive Invariants",
+    "createdAt" : "2014-08-28T23:06:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Bug with Verifying For Loops",
+    "createdAt" : "2014-08-29T01:59:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "Bug with Dereferencing Array Types",
+    "createdAt" : "2014-08-29T04:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 428,
+    "title" : "Bug with Update via Dereference",
+    "createdAt" : "2014-08-29T23:32:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Runtime Checking Misses First Level ?",
+    "createdAt" : "2014-08-31T21:37:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Initialise real var = 0, then var is immediately cast to an int",
+    "createdAt" : "2014-09-03T01:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "Cannot dereferance a record in a function",
+    "createdAt" : "2014-09-03T01:21:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Eliminate String / Char Types ?",
+    "createdAt" : "2014-09-03T06:41:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Add .classpath and .project Files",
+    "createdAt" : "2014-09-05T07:24:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "Syntax for Cast Expressions?",
+    "createdAt" : "2014-09-06T21:42:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 435,
+    "title" : "Improved Error Reporting for Post-conditions",
+    "createdAt" : "2014-09-07T20:42:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "Thoughts on WyIL Bytecode Blocks",
+    "createdAt" : "2014-09-09T20:58:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "WyJC: Bug with [char] => [int] conversion",
+    "createdAt" : "2014-09-10T02:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Character Range Expressions",
+    "createdAt" : "2014-09-10T02:28:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "Bug with Runtime Assertions",
+    "createdAt" : "2014-09-17T09:35:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "Bug with Optimisation for Eliminating Function Calls",
+    "createdAt" : "2014-09-17T09:48:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 442,
+    "title" : "Preparing for Nested Blocks",
+    "createdAt" : "2014-10-11T07:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Improved Code Generation",
+    "createdAt" : "2014-11-11T00:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Remove Types from Bytecodes",
+    "createdAt" : "2014-11-11T00:31:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "Remove Modified Operands from Code.Loop",
+    "createdAt" : "2014-11-11T00:32:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Remove Try / Catch Statements",
+    "createdAt" : "2014-11-11T08:28:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Remove Protected Modifier",
+    "createdAt" : "2014-11-11T09:01:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Compiler index out of bounds error",
+    "createdAt" : "2014-11-22T07:35:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "Tidy up wyjc.runtime",
+    "createdAt" : "2014-11-27T03:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "Implement Rewriter API for WyIL Bytecode",
+    "createdAt" : "2014-11-27T20:52:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 452,
+    "title" : "Update Assert / Assume to implement Code.Compound",
+    "createdAt" : "2014-11-27T20:53:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Update DeadCodeElimination",
+    "createdAt" : "2014-11-27T21:05:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "Update LoopVariants to Support Blocks",
+    "createdAt" : "2014-11-27T21:07:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "Add Loop Invariant Bytecode",
+    "createdAt" : "2014-11-28T06:31:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Fix VariableTyping in VcGenerator / VcBranch",
+    "createdAt" : "2014-12-31T02:34:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "Improve Generation from Branch Graph in VcGenerator",
+    "createdAt" : "2014-12-31T02:35:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "Fixup Transforms",
+    "createdAt" : "2015-01-05T23:28:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 461,
+    "title" : "Variable Aliasing to Representing References",
+    "createdAt" : "2015-01-11T23:15:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "Equals(LengthOf,X) and Equation(LengthOf) Equivalences",
+    "createdAt" : "2015-02-01T20:40:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 463,
+    "title" : "Syntax for Return Types",
+    "createdAt" : "2015-02-04T00:44:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 464,
+    "title" : "Equivalences of Representation",
+    "createdAt" : "2015-02-04T22:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Add Support for Intersection Types",
+    "createdAt" : "2015-02-12T03:54:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 466,
+    "title" : "Current Stress Points",
+    "createdAt" : "2015-02-25T03:33:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 467,
+    "title" : "Eliminate Flow Typing from WyCS",
+    "createdAt" : "2015-02-25T08:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "Flow Typing in VcGenerator",
+    "createdAt" : "2015-02-25T09:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Removing Constrained Types from WyCS",
+    "createdAt" : "2015-02-25T09:39:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 470,
+    "title" : "Removing Effective Collections",
+    "createdAt" : "2015-02-25T18:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "Eliminate Set and Map Data Types?",
+    "createdAt" : "2015-02-25T18:54:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 472,
+    "title" : "Fix up WyCS SemanticType Construction",
+    "createdAt" : "2015-02-25T19:05:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "Refining notion of Registers in WyIL",
+    "createdAt" : "2015-02-25T19:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 474,
+    "title" : "Refactor WyIL blocks",
+    "createdAt" : "2015-02-25T19:10:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "Remove WyIL Function/Method Cases",
+    "createdAt" : "2015-02-25T20:17:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "Break Compiler upto Plugin Architecture",
+    "createdAt" : "2015-02-25T20:32:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : "Update Interpreter",
+    "createdAt" : "2015-03-03T02:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 478,
+    "title" : "Split out Standard Library",
+    "createdAt" : "2015-03-03T20:58:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "Remove Implicit Import",
+    "createdAt" : "2015-03-05T01:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "Bytecode blocks terminated with return?",
+    "createdAt" : "2015-03-31T02:03:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "Refactor Test Cases",
+    "createdAt" : "2015-03-31T07:10:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 482,
+    "title" : "WYBS Module java version",
+    "createdAt" : "2015-03-31T21:47:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Unknown Opcode Encountered",
+    "createdAt" : "2015-04-01T19:16:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "Implementation for Print I/O",
+    "createdAt" : "2015-04-04T21:54:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 485,
+    "title" : "Error Messages for Definite Assignment",
+    "createdAt" : "2015-04-07T01:51:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "Error Messages for Loop Invariants",
+    "createdAt" : "2015-04-07T02:03:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 487,
+    "title" : "Cannot resolve function call",
+    "createdAt" : "2015-04-07T03:49:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 488,
+    "title" : "Constrained return types not checked?",
+    "createdAt" : "2015-04-08T07:08:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 489,
+    "title" : "Build failing!",
+    "createdAt" : "2015-04-16T09:16:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 490,
+    "title" : "Construct Simple Interpreter",
+    "createdAt" : "2015-04-24T23:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 491,
+    "title" : "Problem Parsing Dereference",
+    "createdAt" : "2015-05-01T03:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "Add Test Library",
+    "createdAt" : "2015-05-09T22:18:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 493,
+    "title" : "Error Handling in Whiley",
+    "createdAt" : "2015-05-14T21:35:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "Replace Constant.Decimal with Constant.Rational",
+    "createdAt" : "2015-05-26T09:56:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "Removing Real Type",
+    "createdAt" : "2015-06-04T08:44:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 496,
+    "title" : "Ambiguous Coercions",
+    "createdAt" : "2015-06-04T09:37:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "Add test target to build scripts",
+    "createdAt" : "2015-06-05T07:15:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 498,
+    "title" : "Add Syntax for Range Initialisation",
+    "createdAt" : "2015-06-19T00:02:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "Remove Operator Precedence",
+    "createdAt" : "2015-06-28T22:00:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "Outstanding bug verifying Codes.Quantifier",
+    "createdAt" : "2015-07-07T09:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "Refactoring VcGenerator",
+    "createdAt" : "2015-07-08T05:09:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 502,
+    "title" : "Simplifying WyIL Bytecode",
+    "createdAt" : "2015-07-08T05:12:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 503,
+    "title" : "Bug with Verifier?",
+    "createdAt" : "2015-07-08T08:16:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Roadmap for 0.4.0",
+    "createdAt" : "2015-07-09T05:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "Quantifier Syntax",
+    "createdAt" : "2015-07-10T08:40:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Eliminate Operator Precedence",
+    "createdAt" : "2015-07-16T22:25:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "Improving Quantifier Instantiation",
+    "createdAt" : "2015-07-22T10:01:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Bug with Method Resolution?",
+    "createdAt" : "2015-07-24T22:53:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "Variable Capture with Quantifiers",
+    "createdAt" : "2015-07-26T01:14:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 510,
+    "title" : "Infinite Loop in Verifier",
+    "createdAt" : "2015-07-26T02:11:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 511,
+    "title" : "Rethinking Theorem Prover Termination",
+    "createdAt" : "2015-07-27T08:11:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "List Generator Syntax",
+    "createdAt" : "2015-08-01T21:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 513,
+    "title" : "Remove List Append",
+    "createdAt" : "2015-08-02T23:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 514,
+    "title" : "Bug with List Initialisation",
+    "createdAt" : "2015-08-03T04:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "Update from List to Array Syntax",
+    "createdAt" : "2015-08-04T00:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Bug with Array Update",
+    "createdAt" : "2015-08-04T01:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Bug with Quantifier Variable Capture",
+    "createdAt" : "2015-08-05T03:03:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 518,
+    "title" : "Bug with Verification of Array Generator",
+    "createdAt" : "2015-08-05T03:04:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 519,
+    "title" : "Yet Another Bug with Verifier?",
+    "createdAt" : "2015-08-05T07:10:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "Remove Empty Array",
+    "createdAt" : "2015-08-05T18:32:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "Yet Another Bug with Verifier!?",
+    "createdAt" : "2015-08-06T05:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Verifying Array / Record Constants",
+    "createdAt" : "2015-08-07T22:29:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 523,
+    "title" : "Verification of Function Call",
+    "createdAt" : "2015-08-07T22:49:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "Typing Tuples in WyCS",
+    "createdAt" : "2015-08-09T04:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Bug with WyCS Type Reduction",
+    "createdAt" : "2015-08-09T04:56:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Another Infinite Verifier Loop",
+    "createdAt" : "2015-08-10T20:45:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "Yet Another Verifier Infinite Loop",
+    "createdAt" : "2015-08-11T21:07:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "Remove Runtime Type Tests from WyCS",
+    "createdAt" : "2015-08-12T05:25:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Brace Syntax for Types",
+    "createdAt" : "2015-08-14T03:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Update whiley.lang.Array Specifications",
+    "createdAt" : "2015-08-18T04:57:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 531,
+    "title" : "Problem with Reasoning about Existentials",
+    "createdAt" : "2015-08-23T03:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Unexpected Limitation in Verifier",
+    "createdAt" : "2015-08-23T09:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 533,
+    "title" : "Support for Non-linear Arthmetic",
+    "createdAt" : "2015-08-23T18:52:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Verifier Performance",
+    "createdAt" : "2015-08-24T20:53:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 535,
+    "title" : "Verifier Chunking Optimisation",
+    "createdAt" : "2015-08-25T22:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "NullPointerException in Verifier",
+    "createdAt" : "2015-09-11T08:39:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 537,
+    "title" : "Removing Tuples Types?",
+    "createdAt" : "2015-09-12T03:58:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "Support for multi-versioned variables with differing types in Verification Conditon Generator",
+    "createdAt" : "2015-09-13T01:43:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 539,
+    "title" : "Multiple where clauses for type invariants",
+    "createdAt" : "2015-09-17T04:34:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Template Declarations",
+    "createdAt" : "2015-09-18T01:39:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 541,
+    "title" : "Escaping Error Messages in Brief Mode",
+    "createdAt" : "2015-09-20T05:49:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "Bug with Requires False",
+    "createdAt" : "2015-09-21T05:19:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "Verifier Out-Of-Bounds Exception?",
+    "createdAt" : "2015-09-23T04:30:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 544,
+    "title" : "Update Verifier to Latest WyRL Rewrite API",
+    "createdAt" : "2015-09-27T05:30:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 545,
+    "title" : "Problem reasoning about inequalities",
+    "createdAt" : "2015-09-28T07:19:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "Remove Recursive Types?",
+    "createdAt" : "2015-10-13T07:55:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "Rounding Bug in Verification?",
+    "createdAt" : "2015-10-20T22:04:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "Update Verifier to Use Requires",
+    "createdAt" : "2015-11-18T17:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 549,
+    "title" : "Bug with Method Resolution and Caller Return Type",
+    "createdAt" : "2015-12-02T00:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 550,
+    "title" : "Problem verityinf IntOp_Valid_1?",
+    "createdAt" : "2015-12-14T01:32:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "Update of dereferenced pointer: Internal failure, Invalid type for Update",
+    "createdAt" : "2015-12-21T04:16:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "Unused function definition changes the runtime behaviour of Whiley",
+    "createdAt" : "2015-12-22T10:24:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "Problem with Multi-Level References",
+    "createdAt" : "2015-12-23T00:02:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "Problem Function References and Name Mangling",
+    "createdAt" : "2015-12-23T02:59:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 555,
+    "title" : "Tagged Unions on the JVM",
+    "createdAt" : "2015-12-30T23:20:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 557,
+    "title" : "wyjc -verify does not verify variable initialisations.",
+    "createdAt" : "2016-01-04T08:12:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "Updated README to help building from source",
+    "createdAt" : "2016-01-04T20:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 559,
+    "title" : "Whiley compiler based on Truffle/Graal",
+    "createdAt" : "2016-01-05T00:30:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "Complex types cause verifier to give cast exception.",
+    "createdAt" : "2016-01-05T06:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 562,
+    "title" : "VariableDeclarations for Types / Constants",
+    "createdAt" : "2016-01-11T21:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "Redesigning WyIL Bytecode",
+    "createdAt" : "2016-01-11T21:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Destructuring for Reals?",
+    "createdAt" : "2016-01-13T05:27:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 565,
+    "title" : "Support Multiple Returns",
+    "createdAt" : "2016-01-13T07:24:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 566,
+    "title" : "Syntactic Sugar for Fields in Invariants",
+    "createdAt" : "2016-01-13T07:31:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Calling methods in functions using lambdas",
+    "createdAt" : "2016-01-15T00:14:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Uniform WyIL Bytecode Representation",
+    "createdAt" : "2016-01-26T01:58:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Refactor WyILFileReader/Writer",
+    "createdAt" : "2016-01-28T02:59:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 576,
+    "title" : "Remove Cast Operator",
+    "createdAt" : "2016-01-28T07:44:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 577,
+    "title" : "Type Checking Int vs Byte",
+    "createdAt" : "2016-01-28T19:31:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 578,
+    "title" : "Eliminate References to \"Lists\"",
+    "createdAt" : "2016-01-28T19:32:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 579,
+    "title" : "Missing Fail Statement",
+    "createdAt" : "2016-01-29T01:00:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 580,
+    "title" : "Parameterised JUnit Tests",
+    "createdAt" : "2016-02-01T01:01:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "Variant Subtyping with References ?",
+    "createdAt" : "2016-02-10T02:50:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 585,
+    "title" : "Problem with Intersecting Open Records",
+    "createdAt" : "2016-02-11T23:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "Bug with Assignment through Derference",
+    "createdAt" : "2016-02-17T02:46:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 588,
+    "title" : "Parameterized junit test cases are not sorted by name",
+    "createdAt" : "2016-02-18T07:51:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 590,
+    "title" : "Error message for wrong-typed \"new\" expression doesn't show the source",
+    "createdAt" : "2016-02-19T05:48:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 592,
+    "title" : "Travis builds are failing even though local build runs fine",
+    "createdAt" : "2016-02-19T09:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 594,
+    "title" : "Fix Ugly Code Generation for Expr.Lambda",
+    "createdAt" : "2016-02-23T19:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 597,
+    "title" : "wrong index in code.java?",
+    "createdAt" : "2016-03-02T14:13:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "Split up Byte_Valid_2/3/4",
+    "createdAt" : "2016-03-09T07:35:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 602,
+    "title" : "Update of dereferenced pointer is again broken in v0.3.39",
+    "createdAt" : "2016-03-22T04:24:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 603,
+    "title" : "Handling of non-ASCII characters for numbers and identifiers",
+    "createdAt" : "2016-03-22T04:43:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 604,
+    "title" : "Parsing AddressExpression buggy",
+    "createdAt" : "2016-03-25T09:06:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 608,
+    "title" : "Checking Duplicate Functions, Methods and Types",
+    "createdAt" : "2016-03-26T23:37:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 609,
+    "title" : "Parsing Void Type",
+    "createdAt" : "2016-03-26T23:41:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 610,
+    "title" : "Checking Returns for Invocations",
+    "createdAt" : "2016-03-26T23:45:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 611,
+    "title" : "Do we want to have functions as subtypes of methods?",
+    "createdAt" : "2016-03-27T04:47:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 612,
+    "title" : "Lambda function parameters leaked to outside environment",
+    "createdAt" : "2016-03-27T11:28:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 613,
+    "title" : "Lambda methods mistaken as function",
+    "createdAt" : "2016-03-27T22:28:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 614,
+    "title" : "Lambda function access to outer environment",
+    "createdAt" : "2016-03-27T23:02:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 615,
+    "title" : "WyIL to WyVC transformation broken if local variables start with an underscore",
+    "createdAt" : "2016-03-28T08:45:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 618,
+    "title" : "Update WyIL to use WyRL for Type Checking",
+    "createdAt" : "2016-03-31T17:36:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 619,
+    "title" : "Type Simplification Rules",
+    "createdAt" : "2016-04-04T18:35:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 620,
+    "title" : "Convert Bytecode into Structured Form",
+    "createdAt" : "2016-04-18T06:43:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 621,
+    "title" : "Refactor CodeGenerator",
+    "createdAt" : "2016-04-18T08:29:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 622,
+    "title" : "Broken test cases in develop",
+    "createdAt" : "2016-04-19T12:31:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 623,
+    "title" : "Question: Declaration by naming return value",
+    "createdAt" : "2016-04-19T13:04:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 624,
+    "title" : "Refactor Lambda Bytecode",
+    "createdAt" : "2016-04-19T19:15:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 625,
+    "title" : "Extract Syntax Checks from CodeGenerator",
+    "createdAt" : "2016-04-19T20:17:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 626,
+    "title" : "Type invariants ignored for local variables",
+    "createdAt" : "2016-04-20T06:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 627,
+    "title" : "Verifier cannot handle simple modulo mathematics",
+    "createdAt" : "2016-04-20T06:30:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 628,
+    "title" : "Syntax Checks for Duplicate Case Labels",
+    "createdAt" : "2016-04-20T07:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 629,
+    "title" : "Remove Nominal Type",
+    "createdAt" : "2016-04-20T07:56:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 630,
+    "title" : "Type test against reference types unsafe",
+    "createdAt" : "2016-04-20T08:23:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 631,
+    "title" : "Checking for Uninhabitable Types",
+    "createdAt" : "2016-04-21T01:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 632,
+    "title" : "Method/function subtyping broken",
+    "createdAt" : "2016-04-21T02:09:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "Variable declarantions yield parse errors (headless statements and definite types)",
+    "createdAt" : "2016-04-23T14:33:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 636,
+    "title" : "Method/function intersection (still) broken",
+    "createdAt" : "2016-04-24T09:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "Broken VirtualRoot.Entry.outputStream()",
+    "createdAt" : "2016-04-24T23:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 641,
+    "title" : "Recursive method types fail to compile",
+    "createdAt" : "2016-04-26T00:05:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 643,
+    "title" : "Remaining tasks regarding lifetimes",
+    "createdAt" : "2016-04-26T09:51:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 644,
+    "title" : "Syntax for Objects with Lifetimes",
+    "createdAt" : "2016-05-02T04:50:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 645,
+    "title" : "Simplifying (un)contractive and (un)inhabitable types",
+    "createdAt" : "2016-05-02T09:27:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 646,
+    "title" : "Ownership in Whiley",
+    "createdAt" : "2016-05-05T07:49:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 647,
+    "title" : "Instantiating True Cyclic Lists",
+    "createdAt" : "2016-05-05T07:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 648,
+    "title" : "Lifetime Parameters for Named Types",
+    "createdAt" : "2016-05-05T07:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 649,
+    "title" : "Atomic Blocks for Concurrency?",
+    "createdAt" : "2016-05-05T08:29:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 650,
+    "title" : "Low-Level Data Representation",
+    "createdAt" : "2016-05-12T05:11:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 651,
+    "title" : "Efficient JVM Representation",
+    "createdAt" : "2016-05-12T08:21:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 652,
+    "title" : "Extract WyCS into Separate Repository",
+    "createdAt" : "2016-05-15T06:13:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 653,
+    "title" : "Incremental Compilation",
+    "createdAt" : "2016-05-15T21:47:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 654,
+    "title" : "Whiley Low-Level Language (WyLL)",
+    "createdAt" : "2016-05-31T02:07:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 655,
+    "title" : "Checking Method Calls in Invariants",
+    "createdAt" : "2016-05-31T20:33:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 656,
+    "title" : "Design Questions for WyIL Design",
+    "createdAt" : "2016-06-10T22:19:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 657,
+    "title" : "Remove Embedded Filename in WhileyFile and WyilFile",
+    "createdAt" : "2016-06-21T20:53:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "Framework for Error Reporting",
+    "createdAt" : "2016-06-21T21:38:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 659,
+    "title" : "Flow Typing Semantics in Whiley",
+    "createdAt" : "2016-07-10T02:23:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 660,
+    "title" : "Continuous Code Coverage?",
+    "createdAt" : "2016-07-11T23:52:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 661,
+    "title" : "Problem with Multi-Dimensional Array Assignments",
+    "createdAt" : "2016-07-24T19:33:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 662,
+    "title" : "Problem with Variable Versioning",
+    "createdAt" : "2016-07-25T21:07:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 663,
+    "title" : "Problem with Constrained Type Test",
+    "createdAt" : "2016-07-26T08:27:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 664,
+    "title" : "Problem with Expansion after Type Test",
+    "createdAt" : "2016-07-26T08:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 665,
+    "title" : "Add DefiniteAssignment Check",
+    "createdAt" : "2016-07-26T19:08:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 666,
+    "title" : "Type Invariants Ignored for Parameter / Returns",
+    "createdAt" : "2016-07-26T19:16:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 667,
+    "title" : "Problem with ModuleCheck",
+    "createdAt" : "2016-07-26T19:24:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 668,
+    "title" : "VerificationConditionGenerator for No Quantifier",
+    "createdAt" : "2016-07-27T20:49:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 669,
+    "title" : "Refactor SyntaxError.syntaxError()",
+    "createdAt" : "2016-07-30T04:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 670,
+    "title" : "Missing Compilation Dependencies",
+    "createdAt" : "2016-08-01T19:35:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 671,
+    "title" : "Extract WhileyTheoremProver",
+    "createdAt" : "2016-08-05T01:38:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "Cannot resolve as function or definition call with precondition",
+    "createdAt" : "2016-08-05T05:50:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 673,
+    "title" : "Extract Whiley2JavaCompiler",
+    "createdAt" : "2016-08-05T09:24:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 674,
+    "title" : "Extract WhileyStdLib",
+    "createdAt" : "2016-08-06T22:09:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 675,
+    "title" : "Extract WhileyBuildSystem",
+    "createdAt" : "2016-08-06T22:14:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 676,
+    "title" : "Add Decompile Command-Line Option",
+    "createdAt" : "2016-08-13T00:46:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 677,
+    "title" : "Implement Compile, Decompile and Run Build Commands",
+    "createdAt" : "2016-08-14T02:41:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 678,
+    "title" : "Type Simplifications",
+    "createdAt" : "2016-08-29T21:11:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 679,
+    "title" : "Strip Fixed-Point Calculation from FlowTypeChecker",
+    "createdAt" : "2016-09-01T21:50:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 680,
+    "title" : "Records as Sequences or Sets?",
+    "createdAt" : "2016-09-02T23:47:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "Subtyping of Automata",
+    "createdAt" : "2016-09-09T09:13:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 682,
+    "title" : "Remove FlowTypeChecker.inferAfterType()",
+    "createdAt" : "2016-09-09T09:59:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 683,
+    "title" : "Problem Parsing Type Declarations",
+    "createdAt" : "2016-09-09T21:50:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 684,
+    "title" : "Development and Release Procedures and Processes",
+    "createdAt" : "2016-09-12T00:26:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 685,
+    "title" : "(Un)definedness Checking ",
+    "createdAt" : "2016-10-06T05:53:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 686,
+    "title" : "Support Single Stepping in Interpreter",
+    "createdAt" : "2016-10-19T01:11:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 687,
+    "title" : "Problem with Tuple Expressions",
+    "createdAt" : "2016-10-19T06:42:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Bootpath is Missing",
+    "createdAt" : "2016-10-19T06:59:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 689,
+    "title" : "RecursiveSubtypeTests",
+    "createdAt" : "2016-10-27T07:06:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 690,
+    "title" : "Expanding Nominal Types with Invariants",
+    "createdAt" : "2016-11-01T07:41:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 691,
+    "title" : "Invalid Contractive Test Case",
+    "createdAt" : "2016-11-03T02:42:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 692,
+    "title" : "Empty Array Initialisers",
+    "createdAt" : "2016-11-03T03:02:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 693,
+    "title" : "Support for MixFix Functions?",
+    "createdAt" : "2016-11-04T05:56:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "Parsing Tuple Expressions",
+    "createdAt" : "2016-11-05T22:39:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Incorrect Number of Returns for Function Call",
+    "createdAt" : "2016-11-06T06:54:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 696,
+    "title" : "Problem Type Checking Union Type",
+    "createdAt" : "2016-11-07T03:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 697,
+    "title" : "Replace SubtypeOperator",
+    "createdAt" : "2016-11-07T04:29:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 698,
+    "title" : "Variable Tick Notation",
+    "createdAt" : "2016-11-09T22:35:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 699,
+    "title" : "Syntax for Ghost Variables",
+    "createdAt" : "2016-11-09T23:26:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 700,
+    "title" : "Strip Down Wyautl_old",
+    "createdAt" : "2016-11-11T08:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 701,
+    "title" : "WyC Ant Task",
+    "createdAt" : "2016-11-23T03:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 702,
+    "title" : "Function Overloading for Nominal Types",
+    "createdAt" : "2016-11-23T06:02:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 703,
+    "title" : "Destructuring Variable Declarations",
+    "createdAt" : "2016-11-23T06:09:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 704,
+    "title" : "Named Record Initialisers",
+    "createdAt" : "2017-01-19T00:20:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 705,
+    "title" : "Final Modifier for Variables",
+    "createdAt" : "2017-01-19T00:28:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 706,
+    "title" : "Live Variables Analysis for Borrow Optimisation",
+    "createdAt" : "2017-01-19T02:43:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 707,
+    "title" : "Support for Statically Sized Types",
+    "createdAt" : "2017-01-20T21:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 708,
+    "title" : "Replace Records with Structs and Interfaces?",
+    "createdAt" : "2017-01-29T20:38:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 709,
+    "title" : "Implement BackPropagation",
+    "createdAt" : "2017-02-15T01:27:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 710,
+    "title" : "Update to WhileyTheoremProver 0.5.0",
+    "createdAt" : "2017-02-23T02:10:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 711,
+    "title" : "Syntax for Properties",
+    "createdAt" : "2017-03-10T09:14:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 712,
+    "title" : "Null Checks as Type Tests in VCG",
+    "createdAt" : "2017-03-16T15:44:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 713,
+    "title" : "Multiple Returns in Verification Condition Generation",
+    "createdAt" : "2017-03-16T16:58:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 714,
+    "title" : "Reasoning about Function Postconditions",
+    "createdAt" : "2017-03-16T17:46:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 715,
+    "title" : "Syntax for Infinite Types",
+    "createdAt" : "2017-03-25T09:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 716,
+    "title" : "Totality Checking in Whiley",
+    "createdAt" : "2017-03-25T09:49:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 717,
+    "title" : "Back out of Assignment",
+    "createdAt" : "2017-03-30T09:36:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 718,
+    "title" : "Variable Aliases in Type Declarations",
+    "createdAt" : "2017-04-10T21:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 719,
+    "title" : "Record Assignment + Verification Condition Generation",
+    "createdAt" : "2017-04-11T07:37:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 720,
+    "title" : "Loop Invariants + Function Postconditions",
+    "createdAt" : "2017-04-12T03:57:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1069,
+    "title" : "Support Language Server Protocol",
+    "createdAt" : "2017-04-23T21:27:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 721,
+    "title" : "Flow Typing and \"is\" usage",
+    "createdAt" : "2017-05-04T21:48:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 722,
+    "title" : "Exploiting Assertions in Back-End Optimisation ",
+    "createdAt" : "2017-05-07T07:27:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 723,
+    "title" : "Suggestion: templates and concepts/type classes",
+    "createdAt" : "2017-05-07T08:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 724,
+    "title" : "Suggestion: libraries worth porting to Whiley (moved)",
+    "createdAt" : "2017-05-07T11:29:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 725,
+    "title" : "Future: requires/precondition overloading",
+    "createdAt" : "2017-05-07T12:57:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 726,
+    "title" : "Compile-Time Conditionals for Meta-Programming",
+    "createdAt" : "2017-05-07T13:37:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 727,
+    "title" : "Annotation Syntax",
+    "createdAt" : "2017-05-07T14:01:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 728,
+    "title" : "Suggestion for syntax: consider moving types to the right before adding templates",
+    "createdAt" : "2017-05-07T15:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 729,
+    "title" : "Suggestion: generic programming, coercing failed assertion to false in boolean expression",
+    "createdAt" : "2017-05-07T17:39:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 730,
+    "title" : "Insufficient Specification on Test Cases",
+    "createdAt" : "2017-05-07T18:17:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 731,
+    "title" : "Quantifier Bounds in Assertion",
+    "createdAt" : "2017-05-07T20:04:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 732,
+    "title" : "Future: verification over global CPU feature check",
+    "createdAt" : "2017-05-07T21:16:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 733,
+    "title" : "Backend: Clean codegen for optimized code using deforestation? (moved)",
+    "createdAt" : "2017-05-08T09:06:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 734,
+    "title" : "Suggestion: tags in the IR for behavioural typing support",
+    "createdAt" : "2017-05-08T09:22:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 735,
+    "title" : "Support Difference Verification Levels",
+    "createdAt" : "2017-05-08T10:09:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 736,
+    "title" : "Backend: java libraries that might be useful",
+    "createdAt" : "2017-05-08T10:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 737,
+    "title" : "Backend: floating point (moved)",
+    "createdAt" : "2017-05-08T14:37:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 738,
+    "title" : "Future: verified backend (moved)",
+    "createdAt" : "2017-05-08T15:04:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 739,
+    "title" : "Backend: evaluation of target-languages (moved)",
+    "createdAt" : "2017-05-08T17:38:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 740,
+    "title" : "Future: meta-programming, accessing external data files as  Whiley \"facts\".",
+    "createdAt" : "2017-05-08T18:07:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 741,
+    "title" : "Feature request: minimizing constants",
+    "createdAt" : "2017-05-12T04:56:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 742,
+    "title" : "Syntax for Fully Qualified Names",
+    "createdAt" : "2017-05-16T14:59:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 743,
+    "title" : "Verification Condition Generation and Dereference Assignment",
+    "createdAt" : "2017-05-17T15:26:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "Problem Parsing Dereference Expressions",
+    "createdAt" : "2017-05-18T11:24:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 745,
+    "title" : "Verification Condition Generation and Function Constants",
+    "createdAt" : "2017-05-18T13:46:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "Error Messages + Verification Condition Generation",
+    "createdAt" : "2017-05-24T14:29:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 747,
+    "title" : "Refactor Bytecode API",
+    "createdAt" : "2017-05-24T15:27:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 748,
+    "title" : "Incorrect Translation of Properties to WyAL",
+    "createdAt" : "2017-05-26T18:42:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 749,
+    "title" : "Infinite Recursive Expansion",
+    "createdAt" : "2017-05-26T19:54:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "Tick notation for Heap References",
+    "createdAt" : "2017-05-28T13:50:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 751,
+    "title" : "Verification of Type Invariants",
+    "createdAt" : "2017-05-29T07:14:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 752,
+    "title" : "Replace SyntacticType with WyalFile.Type",
+    "createdAt" : "2017-05-31T09:31:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 753,
+    "title" : "Command-Line Option for Generating Verification Conditions",
+    "createdAt" : "2017-06-01T21:36:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 754,
+    "title" : "Separation Logic in Whiley",
+    "createdAt" : "2017-07-18T07:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 755,
+    "title" : "Rely-Guarantee Reasoning in Whiley",
+    "createdAt" : "2017-07-18T07:39:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 756,
+    "title" : "Invalid block comments",
+    "createdAt" : "2017-07-18T21:30:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 757,
+    "title" : "Behavioural Invariants for Whiley",
+    "createdAt" : "2017-07-19T07:54:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 758,
+    "title" : "Implementing Nominal Types in Whiley",
+    "createdAt" : "2017-07-23T07:46:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 759,
+    "title" : "Verification Error",
+    "createdAt" : "2017-07-23T09:16:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 760,
+    "title" : "Strange Counterexample Reported?",
+    "createdAt" : "2017-07-23T09:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 761,
+    "title" : "Break/Continue in Switch Statements",
+    "createdAt" : "2017-07-24T09:42:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 762,
+    "title" : "Asymmetric Coercive Subtype Operator?",
+    "createdAt" : "2017-09-09T02:21:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 763,
+    "title" : "Problem with Flow Typing",
+    "createdAt" : "2017-09-10T00:59:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 764,
+    "title" : "Subtyping over Lifetime Parameters",
+    "createdAt" : "2017-09-10T01:14:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 765,
+    "title" : "Variable Versioning",
+    "createdAt" : "2017-09-11T23:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 766,
+    "title" : "Expression Types",
+    "createdAt" : "2017-09-11T23:14:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 767,
+    "title" : "Relicense Compiler",
+    "createdAt" : "2017-09-12T00:10:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 768,
+    "title" : "Refactor WhileyFile Opcodes / Operands",
+    "createdAt" : "2017-09-12T00:19:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 769,
+    "title" : "Eliminate NameID",
+    "createdAt" : "2017-09-12T00:24:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 770,
+    "title" : "Eliminate SyntacticElement",
+    "createdAt" : "2017-09-12T00:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "Add SyntaxError to AbstractCompilationUnit",
+    "createdAt" : "2017-09-12T00:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 772,
+    "title" : "Optimise WyIL Binary Format",
+    "createdAt" : "2017-09-12T00:27:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 773,
+    "title" : "Make WyTP depend on WyC",
+    "createdAt" : "2017-09-12T00:33:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 774,
+    "title" : "Fix Name Resolution",
+    "createdAt" : "2017-09-12T02:28:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 775,
+    "title" : "Add Standard Visitors",
+    "createdAt" : "2017-09-12T04:35:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 776,
+    "title" : "Problem with External Name Resolution",
+    "createdAt" : "2017-09-14T21:48:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 777,
+    "title" : "Unable to parse import from",
+    "createdAt" : "2017-09-14T22:06:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 778,
+    "title" : "Import * from xx::yy::zz",
+    "createdAt" : "2017-09-15T00:12:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 779,
+    "title" : "Type Checking Static Variable Initialisers",
+    "createdAt" : "2017-09-15T00:13:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 780,
+    "title" : "Test and Fix VerificationConditionGenerator",
+    "createdAt" : "2017-09-15T05:07:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 781,
+    "title" : "Flow Typing and VerificationConditionGeneration",
+    "createdAt" : "2017-09-17T00:36:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 782,
+    "title" : "WyTP Variable Ordering Effect",
+    "createdAt" : "2017-09-17T01:20:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 783,
+    "title" : "Problems with Empty Types",
+    "createdAt" : "2017-09-17T04:09:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 784,
+    "title" : "Implement Writable Type Extractors",
+    "createdAt" : "2017-09-18T02:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 785,
+    "title" : "RecursiveSubtypeTests is Offline",
+    "createdAt" : "2017-09-18T03:39:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 786,
+    "title" : "Add VerificationCondition to WyilFile",
+    "createdAt" : "2017-09-18T03:52:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 787,
+    "title" : "Type Tests with Invariants",
+    "createdAt" : "2017-09-19T05:57:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 788,
+    "title" : "Updated JavaDoc Documentation",
+    "createdAt" : "2017-09-19T06:04:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 789,
+    "title" : "Type Checking Native Methods",
+    "createdAt" : "2017-09-19T06:11:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 790,
+    "title" : "Switch Case Conditions",
+    "createdAt" : "2017-09-20T21:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 791,
+    "title" : "Static Variable Initialisers",
+    "createdAt" : "2017-09-20T21:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 792,
+    "title" : "Thoughts on Variable Declaration Loops",
+    "createdAt" : "2017-09-20T21:37:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 793,
+    "title" : "Access Static Variable from Type Invariant",
+    "createdAt" : "2017-09-21T04:12:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 794,
+    "title" : "Normalisation for Method Subtyping",
+    "createdAt" : "2017-09-24T00:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 795,
+    "title" : "Support Captured Lifetime Parameters",
+    "createdAt" : "2017-09-24T01:03:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 796,
+    "title" : "Ambiguous Unions",
+    "createdAt" : "2017-09-25T19:48:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 797,
+    "title" : "Update MoveAnalysis",
+    "createdAt" : "2017-09-27T01:30:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 798,
+    "title" : "Improve MoveAnalysis Phase",
+    "createdAt" : "2017-09-27T02:42:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 799,
+    "title" : "Internal Failure on WhileyLabs",
+    "createdAt" : "2017-09-27T20:15:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 800,
+    "title" : "Mistaken Precondition Check on Assertion",
+    "createdAt" : "2017-09-27T20:26:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 801,
+    "title" : "Unexpected Postcondition Failure",
+    "createdAt" : "2017-10-01T22:08:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 802,
+    "title" : "Type Simplification",
+    "createdAt" : "2017-10-02T05:32:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 803,
+    "title" : "Whiley Low-Level Language",
+    "createdAt" : "2017-10-03T22:16:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 804,
+    "title" : "Update JavaScript Backend with Generic Support",
+    "createdAt" : "2017-10-03T22:46:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 805,
+    "title" : "Update Java Backend with Generic Support",
+    "createdAt" : "2017-10-03T22:46:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 806,
+    "title" : "Implement Generic Backend Interpreter",
+    "createdAt" : "2017-10-03T22:47:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 807,
+    "title" : "False index out of bounds error when asserting with a quantifier + an array",
+    "createdAt" : "2017-10-04T09:10:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "Internal failure: cannot convert expression to atom: 108",
+    "createdAt" : "2017-10-05T22:31:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 809,
+    "title" : "Verification of Array Generator",
+    "createdAt" : "2017-10-08T22:08:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 810,
+    "title" : "Support for No Quantifier",
+    "createdAt" : "2017-10-08T22:48:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 811,
+    "title" : "WyLL Expression Types",
+    "createdAt" : "2017-10-10T01:27:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 812,
+    "title" : "WyLL Runtime Type Tests",
+    "createdAt" : "2017-10-10T01:29:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 813,
+    "title" : "WyLL Multiple Returns",
+    "createdAt" : "2017-10-10T01:29:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 814,
+    "title" : "WyLL Runtime Coercions",
+    "createdAt" : "2017-10-10T01:55:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 815,
+    "title" : "WyLL Type Representation",
+    "createdAt" : "2017-10-10T02:30:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 816,
+    "title" : "Generation of Unqualified Synthetic Names",
+    "createdAt" : "2017-10-11T07:41:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 817,
+    "title" : "Incorrect Verification Condition from Multiple Assignment",
+    "createdAt" : "2017-10-12T22:03:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 818,
+    "title" : "Unknown Verification Failure",
+    "createdAt" : "2017-10-12T22:15:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 819,
+    "title" : "Important Exception Being Swallowed",
+    "createdAt" : "2017-10-12T22:31:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 820,
+    "title" : "Bad Casts in AbstractVisitor",
+    "createdAt" : "2017-10-13T09:29:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 821,
+    "title" : "Rethinking the Build Process",
+    "createdAt" : "2017-10-16T01:06:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 822,
+    "title" : "Operator Precedence Bug",
+    "createdAt" : "2017-10-17T01:34:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 823,
+    "title" : "Final Modifier for Variables",
+    "createdAt" : "2017-10-17T04:07:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 824,
+    "title" : "Expected end-of-line when using a 'in' operator",
+    "createdAt" : "2017-10-18T22:33:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 825,
+    "title" : "Failing to Verify Switch Statement?",
+    "createdAt" : "2017-10-21T05:57:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 826,
+    "title" : "Remove Negation Operator",
+    "createdAt" : "2017-10-23T00:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 827,
+    "title" : "Remove Any and Negation Types",
+    "createdAt" : "2017-10-27T00:57:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 828,
+    "title" : "Infinite Array Types",
+    "createdAt" : "2017-10-27T18:48:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 829,
+    "title" : "Subtyping Reference Types",
+    "createdAt" : "2017-10-27T18:51:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 830,
+    "title" : "Void Array Types",
+    "createdAt" : "2017-10-28T20:21:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 831,
+    "title" : "Update field inside a type",
+    "createdAt" : "2017-11-22T23:17:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 832,
+    "title" : "Verification Failure",
+    "createdAt" : "2017-12-18T02:38:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 833,
+    "title" : "Counterexample Generation Looping",
+    "createdAt" : "2017-12-18T05:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 834,
+    "title" : "Incorrect Decl.Lambda Type",
+    "createdAt" : "2017-12-18T20:33:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 835,
+    "title" : "Incorrect Return for Decl.Lambda.getCaptures()",
+    "createdAt" : "2017-12-18T20:38:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 836,
+    "title" : "Decl.Lambda CapturedVariables",
+    "createdAt" : "2017-12-19T22:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 838,
+    "title" : "Remove Readable/Writeable Types",
+    "createdAt" : "2017-12-28T03:19:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 839,
+    "title" : "Ambiguous Coercions",
+    "createdAt" : "2017-12-28T07:10:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 840,
+    "title" : "On the Limitations of Type Extraction",
+    "createdAt" : "2017-12-28T07:22:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 841,
+    "title" : "Implement Static Variables",
+    "createdAt" : "2017-12-28T21:15:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 842,
+    "title" : "Implement Qualified Name Syntax",
+    "createdAt" : "2017-12-28T21:18:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 843,
+    "title" : "Temporary Removal of Intersections",
+    "createdAt" : "2018-01-17T21:43:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 844,
+    "title" : "Syntactic Types + Visitor",
+    "createdAt" : "2018-01-18T21:40:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 845,
+    "title" : "Relaxed versus Strict Subtyping of Records",
+    "createdAt" : "2018-02-20T20:36:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 846,
+    "title" : "Verification of False Assertions",
+    "createdAt" : "2018-04-02T22:09:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 847,
+    "title" : "Semantics for Arrays?",
+    "createdAt" : "2018-04-05T20:57:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "Verifying Boolean Arrays",
+    "createdAt" : "2018-04-09T08:38:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 849,
+    "title" : "Readable Reference Types",
+    "createdAt" : "2018-04-11T02:58:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 850,
+    "title" : "Rethinking Runtime Type Test Operator ?",
+    "createdAt" : "2018-04-11T22:13:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 851,
+    "title" : "Problem with Type Invariant on Record",
+    "createdAt" : "2018-04-12T01:15:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 852,
+    "title" : "error: WHILEYHOME environment variable not set",
+    "createdAt" : "2018-04-17T20:43:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 853,
+    "title" : "ConcreteTypeExtractor is Broken?",
+    "createdAt" : "2018-04-19T22:50:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 854,
+    "title" : "Binary Literals",
+    "createdAt" : "2018-05-23T21:04:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 855,
+    "title" : "Infinite loop on ConstrainedInt_Valid_20",
+    "createdAt" : "2018-07-24T22:54:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 857,
+    "title" : "Fix NegativeArraySizeException in DoWhile_Valid_9",
+    "createdAt" : "2018-07-25T05:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 859,
+    "title" : " Fix NegativeArraySizeException in Record_Valid_5",
+    "createdAt" : "2018-07-25T06:23:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 861,
+    "title" : "Precondition function check throws NullPointerException",
+    "createdAt" : "2018-08-06T08:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 862,
+    "title" : "Duplicate functions or methods allowed",
+    "createdAt" : "2018-09-10T03:18:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 863,
+    "title" : "Update Mechanism for NameResolution ",
+    "createdAt" : "2018-09-11T04:33:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 864,
+    "title" : "Definite assignment for global variables not checked",
+    "createdAt" : "2018-09-13T08:17:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 865,
+    "title" : "Problematic Ambiguous Coercions",
+    "createdAt" : "2018-09-18T21:38:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 866,
+    "title" : "Monolithic WyIL Modules",
+    "createdAt" : "2018-09-19T23:57:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 867,
+    "title" : "Implement Incremental Definite Assignment",
+    "createdAt" : "2018-10-11T07:41:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 868,
+    "title" : "Array length of union type in loop invariant",
+    "createdAt" : "2018-10-12T11:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 869,
+    "title" : "Multiple wheres in loop invariant isn't same as conjunction",
+    "createdAt" : "2018-10-12T12:41:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 870,
+    "title" : "Potential infinite loop in toUnsignedInt() for ListAccess_Valid_8",
+    "createdAt" : "2018-10-13T02:25:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 871,
+    "title" : "Attributes for SyntacticElements",
+    "createdAt" : "2018-10-14T23:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 872,
+    "title" : "Refactor NameResolution",
+    "createdAt" : "2018-10-18T20:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 873,
+    "title" : "Garbage Collection and Compaction for WyIL Files",
+    "createdAt" : "2018-10-18T20:50:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 874,
+    "title" : "Simplifying NameResolution",
+    "createdAt" : "2018-11-08T16:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 875,
+    "title" : "Bug with Define Statement",
+    "createdAt" : "2019-01-16T04:36:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 876,
+    "title" : "Unknown Unit?",
+    "createdAt" : "2019-01-16T04:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 877,
+    "title" : "Unresolved Types in Function/Method Stub",
+    "createdAt" : "2019-01-17T03:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 878,
+    "title" : "Build Run Command Failing",
+    "createdAt" : "2019-01-21T21:14:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1074,
+    "title" : "Replacing AbstractSyntacticItem.getAncestor()",
+    "createdAt" : "2019-01-22T04:33:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 879,
+    "title" : "Semantic of Multiple Assignments",
+    "createdAt" : "2019-01-25T00:29:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 881,
+    "title" : "Add counterexample attribute",
+    "createdAt" : "2019-02-06T18:56:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 882,
+    "title" : "Bug with Flow Typing!!",
+    "createdAt" : "2019-02-08T14:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 883,
+    "title" : "Faling Counterexample Generation",
+    "createdAt" : "2019-02-08T14:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 884,
+    "title" : "Improved Approach to Syntax Errors",
+    "createdAt" : "2019-02-10T11:04:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 885,
+    "title" : "Contractive Types and isVoid()",
+    "createdAt" : "2019-02-13T22:07:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 886,
+    "title" : "Syntax/Type errors not reported for standalone source files",
+    "createdAt" : "2019-02-15T01:37:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 887,
+    "title" : "Improved Error Recovery for Checkers",
+    "createdAt" : "2019-02-15T02:41:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 888,
+    "title" : "Duplicate Error Messages",
+    "createdAt" : "2019-02-15T02:57:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 889,
+    "title" : "Rethinking Verification Condition Generator",
+    "createdAt" : "2019-02-20T00:47:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 890,
+    "title" : "Implement Templates",
+    "createdAt" : "2019-02-25T07:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 891,
+    "title" : "Bug with Templates",
+    "createdAt" : "2019-03-19T04:15:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 892,
+    "title" : "List of Outstanding Issues",
+    "createdAt" : "2019-03-19T06:08:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 893,
+    "title" : "Another bug with templates",
+    "createdAt" : "2019-03-19T06:24:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 894,
+    "title" : "Bug with templates and qualified names",
+    "createdAt" : "2019-03-19T07:32:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 895,
+    "title" : "Problem with Incremental Compilation",
+    "createdAt" : "2019-03-22T05:05:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 896,
+    "title" : "Remove SyntaxError from CompileTask",
+    "createdAt" : "2019-03-22T05:12:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 897,
+    "title" : "Mapping WyilFile modules to WhileyFiles",
+    "createdAt" : "2019-03-22T05:22:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 898,
+    "title" : "Build Graph & Process",
+    "createdAt" : "2019-03-27T03:38:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 899,
+    "title" : "Incremental Builds",
+    "createdAt" : "2019-03-27T03:43:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1075,
+    "title" : "Updated Syntactic Heap",
+    "createdAt" : "2019-03-27T21:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 900,
+    "title" : "Support WhileyFile Diff",
+    "createdAt" : "2019-03-27T21:57:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 901,
+    "title" : "Add Build.Workspace",
+    "createdAt" : "2019-03-29T04:07:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 902,
+    "title" : "Syntactic Attributes and Markers",
+    "createdAt" : "2019-05-05T02:59:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 903,
+    "title" : "Verification of Templates",
+    "createdAt" : "2019-05-09T23:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 904,
+    "title" : "QuickCheck for Whiley",
+    "createdAt" : "2019-05-14T06:45:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 905,
+    "title" : "Verifying Type Invariants",
+    "createdAt" : "2019-05-15T02:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 906,
+    "title" : "Bug with Interpreter Casts",
+    "createdAt" : "2019-05-16T05:53:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 907,
+    "title" : "Unsigned Bitwise Shift",
+    "createdAt" : "2019-05-16T07:30:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 909,
+    "title" : "SyntacticErrors in Parsing and Verification",
+    "createdAt" : "2019-05-18T03:26:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 910,
+    "title" : "Bug resolving private members from dependencies?",
+    "createdAt" : "2019-05-18T03:46:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 911,
+    "title" : "Problem with source configuration option",
+    "createdAt" : "2019-05-18T04:19:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 912,
+    "title" : "Bugs with Template Inference",
+    "createdAt" : "2019-05-19T00:07:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 913,
+    "title" : "Bug in QuickCheck for Whiley",
+    "createdAt" : "2019-05-19T02:18:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 914,
+    "title" : "Bug with Interpreter & Properties",
+    "createdAt" : "2019-05-19T04:32:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 915,
+    "title" : "Interpreter Bug with Type Invarants & References",
+    "createdAt" : "2019-05-19T04:51:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 916,
+    "title" : "Bug in QuickCheck for Undefinednes in Type Invariants",
+    "createdAt" : "2019-05-19T05:11:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 918,
+    "title" : "QuickCheck doesn't Exploit the Cache for Nominal Types",
+    "createdAt" : "2019-05-20T04:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 919,
+    "title" : "Integer Range Analysis for QuickCheck",
+    "createdAt" : "2019-05-27T09:19:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 920,
+    "title" : "QuickCheck Error Reporting",
+    "createdAt" : "2019-05-27T09:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 921,
+    "title" : "Bug with Type Invariants and Declarations",
+    "createdAt" : "2019-05-27T09:28:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 922,
+    "title" : "Verification of Loop Invariants",
+    "createdAt" : "2019-05-29T00:15:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 923,
+    "title" : "QuickCheck Bug with Static Variables",
+    "createdAt" : "2019-06-12T06:39:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 924,
+    "title" : "Generate Identical WyIL Files",
+    "createdAt" : "2019-06-24T08:27:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 925,
+    "title" : "How does this type check?",
+    "createdAt" : "2019-07-03T09:43:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 926,
+    "title" : "Rethinking Build System",
+    "createdAt" : "2019-07-04T02:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 927,
+    "title" : "Bug with NameResolution?",
+    "createdAt" : "2019-07-11T03:10:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 928,
+    "title" : "Bug with ConcreteTypeExtractor",
+    "createdAt" : "2019-07-19T02:54:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 929,
+    "title" : "Remove SemanticType",
+    "createdAt" : "2019-07-22T00:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 930,
+    "title" : "Rebuild after Modifying wy.toml",
+    "createdAt" : "2019-07-22T03:55:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 931,
+    "title" : "Importing Properties",
+    "createdAt" : "2019-07-22T04:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 932,
+    "title" : "Importing Hidden Members",
+    "createdAt" : "2019-07-22T04:14:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 933,
+    "title" : "Detecting Broken Imports",
+    "createdAt" : "2019-07-22T23:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 934,
+    "title" : "Bug Subtyping with Templates",
+    "createdAt" : "2019-07-23T22:13:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 935,
+    "title" : "Template Parameters have Unresolved Links",
+    "createdAt" : "2019-07-25T08:13:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 936,
+    "title" : "Semantics of Runtime Type Testing",
+    "createdAt" : "2019-07-26T00:14:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 937,
+    "title" : "FlowTyping over Logical Conditions",
+    "createdAt" : "2019-07-31T23:11:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 938,
+    "title" : "Subtyping for Explicit Casts",
+    "createdAt" : "2019-08-01T04:43:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 939,
+    "title" : "Clashing exports",
+    "createdAt" : "2019-08-02T08:36:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 940,
+    "title" : "Add Expr.getUnderlyingType()",
+    "createdAt" : "2019-08-04T23:17:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 941,
+    "title" : "Forward Type Inference",
+    "createdAt" : "2019-08-05T01:15:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 942,
+    "title" : "Remove Type.Any",
+    "createdAt" : "2019-08-07T00:08:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 943,
+    "title" : "QuickCheck Updates",
+    "createdAt" : "2019-08-07T01:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 944,
+    "title" : "Merge Template & Lifetime Parameters",
+    "createdAt" : "2019-08-07T21:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 946,
+    "title" : "Indirect Invocation through References?",
+    "createdAt" : "2019-08-23T00:52:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 947,
+    "title" : "Reference Subtyping and Open Records",
+    "createdAt" : "2019-08-23T03:44:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 948,
+    "title" : "Problem writing Lambdas",
+    "createdAt" : "2019-09-03T00:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 949,
+    "title" : "Problem with Purity Inference of Lambdas",
+    "createdAt" : "2019-09-03T20:43:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 950,
+    "title" : "Problem with Type Refinement",
+    "createdAt" : "2019-09-03T21:36:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 951,
+    "title" : "NullPointerException from FlowTypeCheck",
+    "createdAt" : "2019-09-03T23:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 952,
+    "title" : "Purity Checking & Indirect Invocation",
+    "createdAt" : "2019-09-04T04:01:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 953,
+    "title" : "Another NullPointerException",
+    "createdAt" : "2019-09-05T00:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 954,
+    "title" : "Invoking Lambda's from Arrays",
+    "createdAt" : "2019-09-05T00:59:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 955,
+    "title" : "Separate out Check for Branch Always Taken",
+    "createdAt" : "2019-09-05T05:50:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 956,
+    "title" : "Type Checking to Fix Point",
+    "createdAt" : "2019-09-05T06:24:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 957,
+    "title" : "Support WyIL Versioning",
+    "createdAt" : "2019-09-25T05:26:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 958,
+    "title" : "NameResolution Bug",
+    "createdAt" : "2019-10-12T21:24:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 959,
+    "title" : "Problem with Running QuickCheck?",
+    "createdAt" : "2019-10-12T22:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 960,
+    "title" : "QuickCheck for Specific Functions",
+    "createdAt" : "2019-10-12T23:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 961,
+    "title" : "QuickCheck ignoring Parameterless Methods?",
+    "createdAt" : "2019-10-12T23:16:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 964,
+    "title" : "Verbose Build Information",
+    "createdAt" : "2019-10-22T22:57:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 965,
+    "title" : "Improved Pretty Printing",
+    "createdAt" : "2019-10-23T00:32:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 966,
+    "title" : "RFC BackLog",
+    "createdAt" : "2019-10-23T05:20:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 967,
+    "title" : "Import With",
+    "createdAt" : "2019-10-25T01:40:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1078,
+    "title" : "Bug with SyntacticHeap.gc()",
+    "createdAt" : "2019-10-31T02:45:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 968,
+    "title" : "Performance of RecursiveTypeAnalysis",
+    "createdAt" : "2019-10-31T03:02:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 969,
+    "title" : "Strange Behaviour with QuickCheck",
+    "createdAt" : "2019-10-31T21:36:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 970,
+    "title" : "Function Selection Ambiguity",
+    "createdAt" : "2019-11-13T03:01:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 971,
+    "title" : "IndexOutOfBoundsException",
+    "createdAt" : "2019-11-13T03:54:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 972,
+    "title" : "Problem with Assignment",
+    "createdAt" : "2019-11-13T21:45:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 973,
+    "title" : "Lambda's and Multiple Returns",
+    "createdAt" : "2019-11-14T04:52:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 974,
+    "title" : "Template Inference with Empty Array ",
+    "createdAt" : "2019-11-14T04:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 975,
+    "title" : "Remove Multiple Expressions",
+    "createdAt" : "2019-11-15T04:17:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 976,
+    "title" : "NameResolution Performance",
+    "createdAt" : "2019-11-20T01:02:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 977,
+    "title" : "Type Refinement via Assignment",
+    "createdAt" : "2019-11-21T01:27:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 978,
+    "title" : "Redesigning Testing Architecture",
+    "createdAt" : "2019-11-26T20:41:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 979,
+    "title" : "Reintroduce Multi-Variable Declarations",
+    "createdAt" : "2019-11-29T02:16:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 980,
+    "title" : "AbstractSubtypeOperator NullPointerException",
+    "createdAt" : "2019-12-02T07:16:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 982,
+    "title" : "Implement ForEach",
+    "createdAt" : "2019-12-02T09:36:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "Problem with Template Binding?",
+    "createdAt" : "2019-12-05T21:40:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 984,
+    "title" : "Exposing Private Declarations",
+    "createdAt" : "2019-12-09T01:23:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 985,
+    "title" : "Reference Semantics",
+    "createdAt" : "2019-12-10T23:29:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 986,
+    "title" : "Array Dereference Operator",
+    "createdAt" : "2019-12-11T01:23:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 987,
+    "title" : "scanCharacterLiteral in FileLexer advances without checking length?",
+    "createdAt" : "2019-12-16T19:26:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 988,
+    "title" : "Turn Lifetimes into Types",
+    "createdAt" : "2020-01-15T00:23:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 989,
+    "title" : "Subtyping Broken for Nominal Types with Contravariant Positions",
+    "createdAt" : "2020-01-26T21:54:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 990,
+    "title" : "Retire AmbiguousCoercionCheck",
+    "createdAt" : "2020-01-29T21:52:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 991,
+    "title" : "Improved Error Messages",
+    "createdAt" : "2020-01-30T09:32:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 992,
+    "title" : "Remove SubtypeOperator.LifetimesRelation",
+    "createdAt" : "2020-01-30T21:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 993,
+    "title" : "Compiler Performance",
+    "createdAt" : "2020-02-02T22:37:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 994,
+    "title" : "Binding Against Union Types",
+    "createdAt" : "2020-02-03T07:59:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 995,
+    "title" : "Finalise FlowTypeCheck",
+    "createdAt" : "2020-02-03T20:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 996,
+    "title" : "Forward Type Inference (Revisited)",
+    "createdAt" : "2020-02-03T21:22:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 997,
+    "title" : "StackOverflowError on Recursive Template",
+    "createdAt" : "2020-02-11T01:55:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 998,
+    "title" : "Strict Subtyping",
+    "createdAt" : "2020-02-12T04:40:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 999,
+    "title" : "Ranking Types for Performance",
+    "createdAt" : "2020-02-27T00:20:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1000,
+    "title" : "Flow Typing and Loop Invariants",
+    "createdAt" : "2020-03-18T23:00:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1001,
+    "title" : "Decouple Type System",
+    "createdAt" : "2020-03-24T02:38:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1002,
+    "title" : "Problem with Type Selectors",
+    "createdAt" : "2020-03-24T06:44:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1003,
+    "title" : "Problems with Strict Subtyping",
+    "createdAt" : "2020-03-24T06:51:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1004,
+    "title" : "Limitations of Type Inference",
+    "createdAt" : "2020-04-02T21:53:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1005,
+    "title" : "Type Inference for Expr.VariableAccess",
+    "createdAt" : "2020-04-07T21:20:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1006,
+    "title" : "Bug with Type Mangler",
+    "createdAt" : "2020-04-08T10:48:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1007,
+    "title" : "Syntax for Package Declarations",
+    "createdAt" : "2020-04-14T07:12:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1008,
+    "title" : "Bug with Overloading?",
+    "createdAt" : "2020-04-14T22:06:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1009,
+    "title" : "NullPointerException",
+    "createdAt" : "2020-04-18T22:27:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1010,
+    "title" : "ForEach Variable Scoping",
+    "createdAt" : "2020-04-19T00:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1011,
+    "title" : "Nested Template Syntax",
+    "createdAt" : "2020-04-19T20:30:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1012,
+    "title" : "LambdaAccess with Template Parameters",
+    "createdAt" : "2020-04-22T21:15:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1013,
+    "title" : "Parsing Qualified Record Initialisers",
+    "createdAt" : "2020-04-22T21:26:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1014,
+    "title" : "Remove Reference Lifetimes",
+    "createdAt" : "2020-05-13T20:49:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1015,
+    "title" : "WhileyCompiler in win32 x86",
+    "createdAt" : "2020-07-04T16:49:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1016,
+    "title" : "Bug with For Loop Invariants",
+    "createdAt" : "2020-07-06T02:40:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1018,
+    "title" : "Bug with Record Accesses",
+    "createdAt" : "2020-08-25T05:07:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1019,
+    "title" : "QuickCheck Problem with Void Types?",
+    "createdAt" : "2020-09-10T21:02:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1021,
+    "title" : "Cannot Dereference Dynamically Sized Type",
+    "createdAt" : "2020-09-13T23:29:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1023,
+    "title" : "Method invocation not permitted",
+    "createdAt" : "2020-09-14T22:56:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1024,
+    "title" : "Type Inference Bug?",
+    "createdAt" : "2020-09-17T00:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1025,
+    "title" : "Typing Lambda Returns",
+    "createdAt" : "2020-09-17T00:45:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1026,
+    "title" : "Bug with Function Check",
+    "createdAt" : "2020-09-17T02:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1032,
+    "title" : "Improved AST Queries",
+    "createdAt" : "2020-11-03T01:37:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1033,
+    "title" : "Stmt.For does not implement Stmt.Loop",
+    "createdAt" : "2020-11-03T01:42:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1034,
+    "title" : "Type Inference of Array Length",
+    "createdAt" : "2020-11-16T05:06:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1035,
+    "title" : "QuickCheck Bug",
+    "createdAt" : "2020-11-24T23:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1036,
+    "title" : "Union Type Ordering Bug",
+    "createdAt" : "2020-11-24T23:57:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1038,
+    "title" : "Type Inference for Arithmetic Operators",
+    "createdAt" : "2020-11-26T23:27:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1039,
+    "title" : "Parallel (i.e. non-inteferring) Assignment",
+    "createdAt" : "2020-11-30T00:21:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1040,
+    "title" : "Type Inference for (inferred) Templates",
+    "createdAt" : "2020-11-30T23:52:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1041,
+    "title" : "Bug with Type Inference of Tuple Intitialiser",
+    "createdAt" : "2020-12-03T03:34:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1042,
+    "title" : "Dereference Not Permitted",
+    "createdAt" : "2020-12-05T01:16:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1043,
+    "title" : "Invalid Return Type for Bitwise Inversion",
+    "createdAt" : "2020-12-08T02:59:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1045,
+    "title" : "QuickCheck Counterexample Messages",
+    "createdAt" : "2020-12-14T02:42:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1046,
+    "title" : "Improved Test Suite Format",
+    "createdAt" : "2020-12-14T02:46:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1047,
+    "title" : "NullPointerException for Record Type Declaration",
+    "createdAt" : "2020-12-16T02:52:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1048,
+    "title" : "Flow Typing Problem",
+    "createdAt" : "2020-12-16T02:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1049,
+    "title" : "Lambda Expressions",
+    "createdAt" : "2021-01-13T02:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1050,
+    "title" : "Problem with Operator Precedence",
+    "createdAt" : "2021-01-22T03:53:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1051,
+    "title" : "Lambda Template Inference",
+    "createdAt" : "2021-01-25T21:28:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1052,
+    "title" : "Drop concept of \"modified variables\" in loop",
+    "createdAt" : "2021-01-28T01:34:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1053,
+    "title" : "Incorrect modified variables",
+    "createdAt" : "2021-01-29T02:21:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1054,
+    "title" : "Link Unresolved",
+    "createdAt" : "2021-02-25T01:32:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1055,
+    "title" : "Misleading 'unknown type' error when tabs are used.",
+    "createdAt" : "2021-03-12T05:31:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1057,
+    "title" : "Overlapping Lvals",
+    "createdAt" : "2021-03-25T06:54:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1059,
+    "title" : "Distributed computation, parallelism and (structured) concurrency",
+    "createdAt" : "2021-04-16T17:00:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1060,
+    "title" : "Migrate QuickCheck",
+    "createdAt" : "2021-06-02T02:48:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1061,
+    "title" : "Decomission Verification Condition Generator",
+    "createdAt" : "2021-06-02T23:31:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1062,
+    "title" : "Remove Master / Develop Branches",
+    "createdAt" : "2021-06-09T22:08:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1063,
+    "title" : "Automate Maven Deployment",
+    "createdAt" : "2021-06-09T22:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1064,
+    "title" : "Remove TestUtils.compile2()",
+    "createdAt" : "2021-06-11T04:22:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1068,
+    "title" : "Create Sizeable Interface",
+    "createdAt" : "2021-07-11T03:39:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1082,
+    "title" : "Update Whiley2JavaScript",
+    "createdAt" : "2021-07-25T01:22:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1083,
+    "title" : "Update Whiley2Boogie",
+    "createdAt" : "2021-07-25T01:22:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1084,
+    "title" : "Improving the Build System",
+    "createdAt" : "2021-07-25T01:24:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1086,
+    "title" : "Build.SnapShot.get() throws IOException ?",
+    "createdAt" : "2021-07-25T01:58:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1088,
+    "title" : "Next Generation WyIL Format",
+    "createdAt" : "2021-07-25T21:13:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1090,
+    "title" : "Should Build.Task implement Build.Artifact ?",
+    "createdAt" : "2021-07-26T22:37:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1091,
+    "title" : "Update WhileyQuickCheck",
+    "createdAt" : "2021-07-26T22:59:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1092,
+    "title" : "Implement Clean Command",
+    "createdAt" : "2021-08-23T03:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1093,
+    "title" : "Add unsafe marker",
+    "createdAt" : "2021-09-09T03:43:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1094,
+    "title" : "Missing tests for unsafe modifier",
+    "createdAt" : "2021-09-10T03:55:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1095,
+    "title" : "Flow Typing Over Type Invariants",
+    "createdAt" : "2021-09-14T23:25:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1096,
+    "title" : "Implement old() Syntax",
+    "createdAt" : "2021-10-07T04:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1097,
+    "title" : "Bug Assigning Through Generic Reference",
+    "createdAt" : "2021-10-07T20:25:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1098,
+    "title" : "Interpreter Doesn't Check Post-Conditions ?",
+    "createdAt" : "2021-10-08T01:48:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1099,
+    "title" : "Flow Typing Specification Elements",
+    "createdAt" : "2021-10-08T01:55:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1100,
+    "title" : "Cannot dereference within a function?",
+    "createdAt" : "2021-10-08T02:41:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1101,
+    "title" : "Parsing Reference Types",
+    "createdAt" : "2021-10-11T01:28:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1102,
+    "title" : "Generalised Property Syntax",
+    "createdAt" : "2021-10-18T23:47:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1103,
+    "title" : "NullPointerException",
+    "createdAt" : "2021-10-19T00:33:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1104,
+    "title" : "Release WDK v0.6.0",
+    "createdAt" : "2021-10-19T00:58:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1105,
+    "title" : "Fix INSTALL command",
+    "createdAt" : "2021-10-25T23:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1106,
+    "title" : "Split WyCLI out",
+    "createdAt" : "2021-10-25T23:09:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1107,
+    "title" : "Support Annotations on Methods",
+    "createdAt" : "2021-10-27T00:28:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1108,
+    "title" : "QuickCheck not functioning",
+    "createdAt" : "2021-11-03T23:24:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "Make Invalid Tests Executable",
+    "createdAt" : "2021-11-05T02:27:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1110,
+    "title" : "Support Specification Elements",
+    "createdAt" : "2021-12-01T22:07:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1111,
+    "title" : "wdk 0.5.3 README example malfunctions",
+    "createdAt" : "2021-12-02T02:52:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1112,
+    "title" : "Update WyIL format for RFC#0003",
+    "createdAt" : "2022-01-10T03:03:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1113,
+    "title" : "Enable Binary Integration with WhileyBuildTool",
+    "createdAt" : "2022-01-13T04:19:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1114,
+    "title" : "Remove jbuildgraph dependency",
+    "createdAt" : "2022-01-16T22:17:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1115,
+    "title" : "Remove jbuildstore dependency",
+    "createdAt" : "2022-01-16T22:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1116,
+    "title" : "Add Main driver",
+    "createdAt" : "2022-01-16T23:03:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1117,
+    "title" : "Add support for dependencies to Main driver",
+    "createdAt" : "2022-01-17T00:58:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1118,
+    "title" : "Remove WyilFile.getPath()",
+    "createdAt" : "2022-01-17T01:22:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1119,
+    "title" : "Bug with TestUtils",
+    "createdAt" : "2022-01-17T02:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1120,
+    "title" : "Check for Static Field Assignment",
+    "createdAt" : "2022-01-18T22:01:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1121,
+    "title" : "Add modifies clause for methods",
+    "createdAt" : "2022-01-18T22:02:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1122,
+    "title" : "Runtime checking Old Static Variable Accesses",
+    "createdAt" : "2022-01-18T23:40:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1123,
+    "title" : "Remove Verbose (non-brief) Mode",
+    "createdAt" : "2022-02-17T04:16:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1124,
+    "title" : "Support Exponentation Operator",
+    "createdAt" : "2022-02-18T02:27:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1126,
+    "title" : "Support Linking Binaries",
+    "createdAt" : "2022-03-16T03:32:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1127,
+    "title" : "Manage Windows Paths from CLI",
+    "createdAt" : "2022-03-29T04:02:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1128,
+    "title" : "Bug with Property + Tuple",
+    "createdAt" : "2022-04-04T23:27:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1129,
+    "title" : "Array & Record Update Operators",
+    "createdAt" : "2022-04-04T23:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1130,
+    "title" : "Better Handling of Syntactic.Exception",
+    "createdAt" : "2022-04-05T04:05:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1131,
+    "title" : "Linking Bug ?",
+    "createdAt" : "2022-04-05T05:00:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1132,
+    "title" : "Lambda Typing Bug",
+    "createdAt" : "2022-04-05T21:08:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1133,
+    "title" : "Linking Fix?",
+    "createdAt" : "2022-04-07T22:30:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1134,
+    "title" : "Another Flow Typing Bug?",
+    "createdAt" : "2022-04-13T02:28:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1135,
+    "title" : "Reenable Quick Check",
+    "createdAt" : "2022-04-19T23:34:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1136,
+    "title" : "Support QuickCheck Context Configuration",
+    "createdAt" : "2022-04-20T00:38:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1137,
+    "title" : "Fix QuickCheck Dependencies",
+    "createdAt" : "2022-04-20T04:49:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1138,
+    "title" : "Complete ARCHITECTURE.md",
+    "createdAt" : "2022-04-21T22:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1139,
+    "title" : "Automatically Identify Tests which now Pass",
+    "createdAt" : "2022-04-28T01:52:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1140,
+    "title" : "Apply QuickCheck During Testing",
+    "createdAt" : "2022-04-28T20:36:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1141,
+    "title" : "Add Tests related to NameResolution",
+    "createdAt" : "2022-04-28T20:38:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1142,
+    "title" : "Negative Range Failure",
+    "createdAt" : "2022-05-03T02:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1143,
+    "title" : "FlowTypeCheck internal failure",
+    "createdAt" : "2022-05-03T03:17:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1144,
+    "title" : "Cannot Dereference Dynamically Sized (Template) Type",
+    "createdAt" : "2022-05-03T03:22:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1145,
+    "title" : "Runtime Checking of Type Invariants",
+    "createdAt" : "2022-05-03T03:55:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1146,
+    "title" : "Interpreter Error Reporting for Casts",
+    "createdAt" : "2022-05-03T04:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1147,
+    "title" : "Runtime Multiple Assignment",
+    "createdAt" : "2022-05-04T05:10:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1148,
+    "title" : "Runtime Type Checking of Cyclic Assignment",
+    "createdAt" : "2022-05-05T04:12:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1149,
+    "title" : "Add Incremental Tests",
+    "createdAt" : "2022-05-05T04:45:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1150,
+    "title" : "Rework Testing Harness into a Framework",
+    "createdAt" : "2022-05-06T04:28:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1151,
+    "title" : "Add If Expression",
+    "createdAt" : "2022-05-14T18:32:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1152,
+    "title" : "Test Framework Unexpected Early Completion",
+    "createdAt" : "2022-05-16T21:13:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1153,
+    "title" : "Negative Range Error",
+    "createdAt" : "2022-05-16T22:19:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1154,
+    "title" : "Support Native Final Statics",
+    "createdAt" : "2022-05-17T02:26:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1155,
+    "title" : "Create Executor",
+    "createdAt" : "2022-05-31T23:56:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1156,
+    "title" : "Std Native Method Implementations",
+    "createdAt" : "2022-06-01T03:03:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1157,
+    "title" : "Preconditions for Properties",
+    "createdAt" : "2022-06-10T03:47:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1158,
+    "title" : "Move tests into Git submodule",
+    "createdAt" : "2022-07-03T23:03:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1159,
+    "title" : "Semantics of Division and Remainder?",
+    "createdAt" : "2022-07-06T00:02:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1160,
+    "title" : "java.lang.NullPointerException with latest release",
+    "createdAt" : "2022-08-13T22:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1163,
+    "title" : "Verification is runtime",
+    "createdAt" : "2022-10-05T19:21:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1164,
+    "title" : "Question: Why does Whiley have reference types?",
+    "createdAt" : "2024-08-29T12:09:50Z",
+    "state" : "OPEN"
+  } ]
+}

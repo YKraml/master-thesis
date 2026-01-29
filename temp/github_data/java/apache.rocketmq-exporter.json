@@ -1,0 +1,962 @@
+{
+  "repoOwner" : "apache",
+  "repoName" : "rocketmq-exporter",
+  "forks" : [ {
+    "createdAt" : "2019-06-03T07:18:35Z"
+  }, {
+    "createdAt" : "2019-06-10T01:08:49Z"
+  }, {
+    "createdAt" : "2019-06-15T10:25:07Z"
+  }, {
+    "createdAt" : "2019-06-21T08:15:35Z"
+  }, {
+    "createdAt" : "2019-07-03T06:58:27Z"
+  }, {
+    "createdAt" : "2019-07-19T06:18:53Z"
+  }, {
+    "createdAt" : "2019-07-24T01:44:14Z"
+  }, {
+    "createdAt" : "2019-07-30T07:11:06Z"
+  }, {
+    "createdAt" : "2019-08-04T14:18:57Z"
+  }, {
+    "createdAt" : "2019-08-14T06:40:56Z"
+  }, {
+    "createdAt" : "2019-09-04T05:34:53Z"
+  }, {
+    "createdAt" : "2019-09-06T07:32:16Z"
+  }, {
+    "createdAt" : "2019-09-17T04:00:31Z"
+  }, {
+    "createdAt" : "2019-10-17T06:30:23Z"
+  }, {
+    "createdAt" : "2019-10-31T07:57:09Z"
+  }, {
+    "createdAt" : "2019-12-06T13:34:21Z"
+  }, {
+    "createdAt" : "2019-12-18T08:00:07Z"
+  }, {
+    "createdAt" : "2019-12-24T09:25:32Z"
+  }, {
+    "createdAt" : "2019-12-31T01:18:16Z"
+  }, {
+    "createdAt" : "2019-12-31T02:36:29Z"
+  }, {
+    "createdAt" : "2020-01-02T10:37:28Z"
+  }, {
+    "createdAt" : "2020-03-02T13:02:31Z"
+  }, {
+    "createdAt" : "2020-03-15T12:23:15Z"
+  }, {
+    "createdAt" : "2020-03-17T02:32:23Z"
+  }, {
+    "createdAt" : "2020-03-24T14:19:44Z"
+  }, {
+    "createdAt" : "2020-05-06T01:24:36Z"
+  }, {
+    "createdAt" : "2020-05-07T10:52:48Z"
+  }, {
+    "createdAt" : "2020-05-08T03:13:12Z"
+  }, {
+    "createdAt" : "2020-05-08T05:41:46Z"
+  }, {
+    "createdAt" : "2020-05-18T09:28:12Z"
+  }, {
+    "createdAt" : "2020-06-01T14:34:39Z"
+  }, {
+    "createdAt" : "2020-06-03T08:59:29Z"
+  }, {
+    "createdAt" : "2020-06-05T03:52:48Z"
+  }, {
+    "createdAt" : "2020-06-11T06:03:53Z"
+  }, {
+    "createdAt" : "2020-06-15T02:48:49Z"
+  }, {
+    "createdAt" : "2020-06-23T09:14:58Z"
+  }, {
+    "createdAt" : "2020-06-27T11:15:33Z"
+  }, {
+    "createdAt" : "2020-07-05T09:02:03Z"
+  }, {
+    "createdAt" : "2020-07-09T03:35:10Z"
+  }, {
+    "createdAt" : "2020-07-29T05:45:49Z"
+  }, {
+    "createdAt" : "2020-09-09T10:46:07Z"
+  }, {
+    "createdAt" : "2020-09-16T03:50:28Z"
+  }, {
+    "createdAt" : "2020-09-17T07:19:17Z"
+  }, {
+    "createdAt" : "2020-10-20T03:28:51Z"
+  }, {
+    "createdAt" : "2020-10-21T05:31:48Z"
+  }, {
+    "createdAt" : "2020-10-24T07:52:51Z"
+  }, {
+    "createdAt" : "2020-10-27T03:01:21Z"
+  }, {
+    "createdAt" : "2020-11-19T02:42:22Z"
+  }, {
+    "createdAt" : "2020-12-03T02:22:07Z"
+  }, {
+    "createdAt" : "2020-12-21T02:42:42Z"
+  }, {
+    "createdAt" : "2021-01-06T06:22:50Z"
+  }, {
+    "createdAt" : "2021-01-07T02:40:29Z"
+  }, {
+    "createdAt" : "2021-01-07T02:57:49Z"
+  }, {
+    "createdAt" : "2021-01-19T08:12:02Z"
+  }, {
+    "createdAt" : "2021-01-27T01:50:06Z"
+  }, {
+    "createdAt" : "2021-02-03T10:04:41Z"
+  }, {
+    "createdAt" : "2021-02-05T09:16:24Z"
+  }, {
+    "createdAt" : "2021-02-18T11:27:11Z"
+  }, {
+    "createdAt" : "2021-02-19T10:45:55Z"
+  }, {
+    "createdAt" : "2021-03-01T06:02:07Z"
+  }, {
+    "createdAt" : "2021-03-02T10:32:51Z"
+  }, {
+    "createdAt" : "2021-03-03T06:17:51Z"
+  }, {
+    "createdAt" : "2021-03-16T03:08:29Z"
+  }, {
+    "createdAt" : "2021-03-22T11:48:08Z"
+  }, {
+    "createdAt" : "2021-03-27T09:01:48Z"
+  }, {
+    "createdAt" : "2021-04-16T05:34:58Z"
+  }, {
+    "createdAt" : "2021-06-09T11:44:33Z"
+  }, {
+    "createdAt" : "2021-06-16T12:46:22Z"
+  }, {
+    "createdAt" : "2021-08-05T12:49:53Z"
+  }, {
+    "createdAt" : "2021-08-15T04:36:32Z"
+  }, {
+    "createdAt" : "2021-08-24T09:35:44Z"
+  }, {
+    "createdAt" : "2021-08-25T02:19:26Z"
+  }, {
+    "createdAt" : "2021-08-30T08:48:21Z"
+  }, {
+    "createdAt" : "2021-09-11T06:13:31Z"
+  }, {
+    "createdAt" : "2021-09-24T10:00:29Z"
+  }, {
+    "createdAt" : "2021-09-28T08:40:15Z"
+  }, {
+    "createdAt" : "2021-09-29T07:09:35Z"
+  }, {
+    "createdAt" : "2021-10-12T06:25:18Z"
+  }, {
+    "createdAt" : "2021-10-25T06:39:23Z"
+  }, {
+    "createdAt" : "2021-11-02T09:29:32Z"
+  }, {
+    "createdAt" : "2021-11-16T07:17:18Z"
+  }, {
+    "createdAt" : "2021-11-21T08:27:26Z"
+  }, {
+    "createdAt" : "2021-12-17T01:34:58Z"
+  }, {
+    "createdAt" : "2021-12-21T10:31:08Z"
+  }, {
+    "createdAt" : "2021-12-30T11:19:05Z"
+  }, {
+    "createdAt" : "2022-01-07T09:55:14Z"
+  }, {
+    "createdAt" : "2022-01-14T03:19:57Z"
+  }, {
+    "createdAt" : "2022-01-24T02:21:35Z"
+  }, {
+    "createdAt" : "2022-01-25T02:30:13Z"
+  }, {
+    "createdAt" : "2022-01-31T12:10:42Z"
+  }, {
+    "createdAt" : "2022-02-02T07:13:43Z"
+  }, {
+    "createdAt" : "2022-02-10T03:46:23Z"
+  }, {
+    "createdAt" : "2022-02-17T11:41:54Z"
+  }, {
+    "createdAt" : "2022-02-28T09:33:24Z"
+  }, {
+    "createdAt" : "2022-03-09T08:11:27Z"
+  }, {
+    "createdAt" : "2022-03-15T07:00:43Z"
+  }, {
+    "createdAt" : "2022-03-26T10:57:03Z"
+  }, {
+    "createdAt" : "2022-03-31T01:56:46Z"
+  }, {
+    "createdAt" : "2022-03-31T15:38:18Z"
+  }, {
+    "createdAt" : "2022-04-18T03:40:54Z"
+  }, {
+    "createdAt" : "2022-04-19T16:38:44Z"
+  }, {
+    "createdAt" : "2022-05-26T08:36:49Z"
+  }, {
+    "createdAt" : "2022-05-30T09:13:07Z"
+  }, {
+    "createdAt" : "2022-06-09T02:31:17Z"
+  }, {
+    "createdAt" : "2022-06-09T09:42:31Z"
+  }, {
+    "createdAt" : "2022-06-10T02:20:55Z"
+  }, {
+    "createdAt" : "2022-06-20T10:16:03Z"
+  }, {
+    "createdAt" : "2022-06-28T03:49:00Z"
+  }, {
+    "createdAt" : "2022-06-30T07:36:20Z"
+  }, {
+    "createdAt" : "2022-07-14T03:21:52Z"
+  }, {
+    "createdAt" : "2022-07-31T01:24:41Z"
+  }, {
+    "createdAt" : "2022-08-17T09:55:25Z"
+  }, {
+    "createdAt" : "2022-09-03T14:30:35Z"
+  }, {
+    "createdAt" : "2022-09-08T07:57:10Z"
+  }, {
+    "createdAt" : "2022-09-22T07:49:45Z"
+  }, {
+    "createdAt" : "2022-09-22T08:06:20Z"
+  }, {
+    "createdAt" : "2022-11-02T02:52:41Z"
+  }, {
+    "createdAt" : "2022-11-06T15:09:34Z"
+  }, {
+    "createdAt" : "2023-01-03T03:32:53Z"
+  }, {
+    "createdAt" : "2023-01-06T06:49:50Z"
+  }, {
+    "createdAt" : "2023-02-15T12:49:54Z"
+  }, {
+    "createdAt" : "2023-02-25T16:55:10Z"
+  }, {
+    "createdAt" : "2023-02-28T14:58:25Z"
+  }, {
+    "createdAt" : "2023-03-11T10:33:39Z"
+  }, {
+    "createdAt" : "2023-03-13T10:37:13Z"
+  }, {
+    "createdAt" : "2023-03-16T08:56:51Z"
+  }, {
+    "createdAt" : "2023-03-20T00:49:49Z"
+  }, {
+    "createdAt" : "2023-03-30T02:46:54Z"
+  }, {
+    "createdAt" : "2023-04-07T04:14:59Z"
+  }, {
+    "createdAt" : "2023-04-13T08:07:43Z"
+  }, {
+    "createdAt" : "2023-04-18T13:18:28Z"
+  }, {
+    "createdAt" : "2023-04-21T06:48:11Z"
+  }, {
+    "createdAt" : "2023-05-08T09:23:54Z"
+  }, {
+    "createdAt" : "2023-05-08T09:32:45Z"
+  }, {
+    "createdAt" : "2023-05-11T11:34:52Z"
+  }, {
+    "createdAt" : "2023-05-22T10:12:39Z"
+  }, {
+    "createdAt" : "2023-05-31T04:04:42Z"
+  }, {
+    "createdAt" : "2023-06-27T07:55:54Z"
+  }, {
+    "createdAt" : "2023-06-29T13:33:16Z"
+  }, {
+    "createdAt" : "2023-07-04T07:33:41Z"
+  }, {
+    "createdAt" : "2023-07-27T09:58:24Z"
+  }, {
+    "createdAt" : "2023-08-01T06:39:43Z"
+  }, {
+    "createdAt" : "2023-08-10T08:17:42Z"
+  }, {
+    "createdAt" : "2023-11-10T09:11:51Z"
+  }, {
+    "createdAt" : "2023-12-09T00:56:46Z"
+  }, {
+    "createdAt" : "2023-12-11T06:46:33Z"
+  }, {
+    "createdAt" : "2023-12-19T07:51:19Z"
+  }, {
+    "createdAt" : "2023-12-26T12:27:53Z"
+  }, {
+    "createdAt" : "2024-01-01T22:26:03Z"
+  }, {
+    "createdAt" : "2024-01-12T02:18:21Z"
+  }, {
+    "createdAt" : "2024-01-15T03:53:43Z"
+  }, {
+    "createdAt" : "2024-01-21T12:46:43Z"
+  }, {
+    "createdAt" : "2024-01-23T11:47:55Z"
+  }, {
+    "createdAt" : "2024-02-18T00:22:04Z"
+  }, {
+    "createdAt" : "2024-03-18T09:01:12Z"
+  }, {
+    "createdAt" : "2024-04-28T08:17:28Z"
+  }, {
+    "createdAt" : "2024-05-23T06:52:48Z"
+  }, {
+    "createdAt" : "2024-06-12T13:01:39Z"
+  }, {
+    "createdAt" : "2024-07-19T07:26:48Z"
+  }, {
+    "createdAt" : "2024-08-01T02:26:34Z"
+  }, {
+    "createdAt" : "2024-08-08T09:02:01Z"
+  }, {
+    "createdAt" : "2024-10-18T05:44:02Z"
+  }, {
+    "createdAt" : "2024-10-22T03:12:54Z"
+  }, {
+    "createdAt" : "2024-11-14T02:16:06Z"
+  }, {
+    "createdAt" : "2024-12-24T13:04:34Z"
+  }, {
+    "createdAt" : "2024-12-26T06:35:24Z"
+  }, {
+    "createdAt" : "2024-12-27T02:30:48Z"
+  }, {
+    "createdAt" : "2025-01-16T01:50:17Z"
+  }, {
+    "createdAt" : "2025-02-03T12:44:27Z"
+  }, {
+    "createdAt" : "2025-02-08T02:06:51Z"
+  }, {
+    "createdAt" : "2025-07-21T02:29:07Z"
+  }, {
+    "createdAt" : "2026-01-12T07:56:03Z"
+  }, {
+    "createdAt" : "2026-01-26T07:28:16Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Polish  according to Prometheus rules  ",
+    "createdAt" : "2019-06-10T09:37:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5,
+    "title" : "The \"collectTopic()\" task spend too much time , when the topic is more than 100.",
+    "createdAt" : "2019-08-30T10:34:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "optimize code of metricsdto and controller",
+    "createdAt" : "2019-09-15T09:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "How to monitor jvm?",
+    "createdAt" : "2019-11-29T10:19:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Missing some monitor item?",
+    "createdAt" : "2019-12-17T01:18:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "how to do set logs level",
+    "createdAt" : "2020-01-09T06:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Due Diligence for RocketMQ Exporter",
+    "createdAt" : "2020-02-24T11:46:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 14,
+    "title" : "How to configure acl authentication",
+    "createdAt" : "2020-03-13T06:11:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "it can not find monitoring item",
+    "createdAt" : "2020-04-08T10:48:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : " BROKER_GET_NUMS did not collect metrics of slave, if slave read enable is turned on",
+    "createdAt" : "2020-04-17T03:29:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 19,
+    "title" : "got error while getting broker stats ",
+    "createdAt" : "2020-04-24T02:45:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "can not find producer-related metrics from metrics api",
+    "createdAt" : "2020-04-24T11:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "metric expose with type",
+    "createdAt" : "2020-04-26T06:36:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 22,
+    "title" : "please update grafana dashboard json",
+    "createdAt" : "2020-05-09T04:30:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Building Failed.",
+    "createdAt" : "2020-05-20T08:20:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "The stats <TOPIC_PUT_NUMS> <mytopic> not exist",
+    "createdAt" : "2020-06-01T07:56:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "how support aliyun rocketmq exporter?",
+    "createdAt" : "2020-06-15T02:26:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "rocketmq-exporter scrape metric error",
+    "createdAt" : "2020-07-21T02:31:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Grafana dashboard can't show most of the metrics",
+    "createdAt" : "2020-07-29T06:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Build failure",
+    "createdAt" : "2020-07-29T10:18:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "success startup in vm, but fail start in docker. ",
+    "createdAt" : "2020-09-24T04:22:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "NO Support Apache RocketMQ version 4.7.1 ; build error",
+    "createdAt" : "2020-10-01T06:28:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "rocketmq_group_get_latency_by_storetime always increase when comsumer model is BROADCASTING",
+    "createdAt" : "2020-10-14T14:32:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 36,
+    "title" : "DLedger mode metrics will display the old master data ",
+    "createdAt" : "2020-10-21T07:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "build-error",
+    "createdAt" : "2020-10-26T08:27:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "A required class was missing while executing org.springframework.boot:spring-boot-maven-plugin:2.1.2.RELEASE:repackage: org/apache/maven/shared/utils/StringUtils",
+    "createdAt" : "2020-11-09T03:08:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "rocketmq_message_accumulation no data",
+    "createdAt" : "2020-11-09T03:13:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : " not have rocketmq_ group_ get_ latency",
+    "createdAt" : "2020-12-04T05:42:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 43,
+    "title" : "There is a vulnerability in Apache RocketMQ 4.4.0,upgrade recommended",
+    "createdAt" : "2020-12-09T08:21:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "occur error in running",
+    "createdAt" : "2020-12-23T07:34:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Could not support the latest sdk",
+    "createdAt" : "2020-12-26T09:27:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "get error when build docker image",
+    "createdAt" : "2020-12-29T01:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "can't build image, get no such file or directory error",
+    "createdAt" : "2020-12-30T04:22:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Metrics cannot be obtained after ACL authentication is enabled",
+    "createdAt" : "2021-01-05T02:41:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "lots of rocketmq_group_diff metrics data loss",
+    "createdAt" : "2021-04-08T12:08:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "retention period for the rocketmq-exporter",
+    "createdAt" : "2021-04-29T01:32:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 56,
+    "title" : "ERROR Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception java.io.CharConversionException: Not an ISO 8859-1 character: [",
+    "createdAt" : "2021-05-17T09:09:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "metric interface error",
+    "createdAt" : "2021-05-20T03:09:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "why the  \"rocketmq_group_count\" can get the consumer group that has been deleted",
+    "createdAt" : "2021-07-02T07:50:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 61,
+    "title" : "Whether to support rocketmq 4.9 DLedger  cluster?",
+    "createdAt" : "2021-07-28T08:24:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "RocketMQ deleted the topic and subscription group, but prometheus still has related alarm information",
+    "createdAt" : "2021-07-29T02:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "rocketmq_producer_message_size  has bug",
+    "createdAt" : "2021-08-09T11:08:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 64,
+    "title" : "rocketmq-exporter causes OOM error",
+    "createdAt" : "2021-08-23T09:40:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Add statistics for each delay level of SCHEDULE_TOPIC_XXXX",
+    "createdAt" : "2021-08-30T11:44:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 69,
+    "title" : "failed to convert java.lang.String to long",
+    "createdAt" : "2021-09-24T07:41:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Error when building the project",
+    "createdAt" : "2021-09-29T08:08:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "The method of collectBrokerStatsTopic in the MetricsCollectTask.java contanins repeat logic",
+    "createdAt" : "2021-10-03T11:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Add a indicator for the master/slave data synchronization progress",
+    "createdAt" : "2021-11-02T02:57:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 77,
+    "title" : "rocketmq-exporter cause huge error log output with large topic situation",
+    "createdAt" : "2021-11-20T06:17:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Metrics rocketmq_consumer_offset's tag countOfOnlineConsumers doesn't behave as expected",
+    "createdAt" : "2021-12-02T07:22:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "The metric of rocketmq_group_diff show the error result for boardcast consumer",
+    "createdAt" : "2021-12-22T07:01:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "no have  rocketmq_message_accumulation and rocketmq_group_get_latency ",
+    "createdAt" : "2021-12-24T09:03:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "no have rocketmq_group_get_latency #81",
+    "createdAt" : "2021-12-27T02:34:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "The value of rocketmq_brokeruntime_put_message_size_total is wrong",
+    "createdAt" : "2021-12-30T11:23:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Can support many clusters deployment?",
+    "createdAt" : "2021-12-31T07:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "The value of rocketmq_brokeruntime_commitlogdir_capacity_free is not true.",
+    "createdAt" : "2021-12-31T09:13:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "BROKER_PUT_NUMS not exist",
+    "createdAt" : "2022-01-05T08:46:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : " why does the exporter detect only one broker in a two master-noslave cluster?",
+    "createdAt" : "2022-01-21T09:39:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 91,
+    "title" : "cached metric cause bug.",
+    "createdAt" : "2022-01-27T07:17:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Optimize the grafana dashboard.",
+    "createdAt" : "2022-03-04T07:02:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 95,
+    "title" : "The hash calculation error causes the label of metrics not to be updated.",
+    "createdAt" : "2022-03-08T10:28:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "exporter metrics labels error",
+    "createdAt" : "2022-03-10T14:57:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 98,
+    "title" : "Could not resolve placeholder 'task.count' in value \"${task.count}\"",
+    "createdAt" : "2022-03-24T06:19:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 99,
+    "title" : "The metric of rocketmq_group_get_latency_by_storetime should ignored for boardcast consumer",
+    "createdAt" : "2022-03-28T08:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "the properties  of rocketmq_group_get_latency already expired",
+    "createdAt" : "2022-04-28T08:46:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 104,
+    "title" : "can't find rocketmq-exporter in hub.docker.com?",
+    "createdAt" : "2022-06-07T05:55:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Prometheus comments",
+    "createdAt" : "2022-06-14T08:56:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 106,
+    "title" : " After rocketmq broker version changed to  4.5.1 , mvn clean install failed and how to resove it?",
+    "createdAt" : "2022-06-16T08:13:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Rocketmq exporter has an error collecting indicator",
+    "createdAt" : "2022-06-16T15:17:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "not find below metrics that described in document",
+    "createdAt" : "2022-07-13T06:34:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "sum value of topic metrix error in broker stats.",
+    "createdAt" : "2022-08-25T02:18:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Metric is wrongly written in BrokerRuntimeStats",
+    "createdAt" : "2022-09-14T07:58:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Unable to package the dependable jar",
+    "createdAt" : "2022-09-14T08:11:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "rocketmq_broker_tps ",
+    "createdAt" : "2022-10-14T03:55:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Build Binary have error",
+    "createdAt" : "2022-10-16T09:47:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Can these INFO be ignored when maven building?",
+    "createdAt" : "2022-11-09T06:10:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "ERROR collectBrokerRuntimeStats-parse or report broker runtime stats error!",
+    "createdAt" : "2022-11-10T07:28:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "本地启动报空指针错误",
+    "createdAt" : "2022-11-11T05:04:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "MetricsCollectTask.class has dependency cycle",
+    "createdAt" : "2022-11-18T06:35:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 121,
+    "title" : "rocketmq_consumer_tps and rocketmq_producer_tps error",
+    "createdAt" : "2022-11-21T03:42:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "where is rocketmq-exporter Dockerfile? ",
+    "createdAt" : "2022-12-02T10:21:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 123,
+    "title" : "like rocketmq_broker_tps, rocketmq_broker_qps metrics defined wrong",
+    "createdAt" : "2022-12-13T02:19:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "org.apache.rocketmq.exporter.model.BrokerRuntimeStats构造器中拼写错误[getTransferedTps] ，错误拼写为[getTransferredTps]，多了个[r].",
+    "createdAt" : "2023-01-05T03:22:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "add rocketmq_nameserver_up metric",
+    "createdAt" : "2023-02-02T07:31:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 127,
+    "title" : "getTransferredTps in BrokerRuntimeStats is wrong in RocketMQ 4.9.1 ，should be change back to getTransferedTps",
+    "createdAt" : "2023-02-02T11:18:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "which value should we use between BrokerStatsItem.tps and BrokerStatsItem.sum to represent tps metrics ?",
+    "createdAt" : "2023-02-26T06:43:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "4.2.0 如何监控呢",
+    "createdAt" : "2023-03-03T08:49:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 131,
+    "title" : "BrokerRuntimeStats#loadTps NPE",
+    "createdAt" : "2023-03-22T08:21:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Consider offering a version that uses the 5.0 client?",
+    "createdAt" : "2023-04-07T10:32:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 133,
+    "title" : "Grafana config 404 not found",
+    "createdAt" : "2023-04-17T16:39:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Upgrade spring-boot-start-parent version to fix jackson-databind's high vulnerabilities",
+    "createdAt" : "2023-04-21T07:20:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "云服务器报错-RemotingConnectException: connect to 60.204.153.31 :10911 failed",
+    "createdAt" : "2023-05-06T03:09:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 144,
+    "title" : "【Enhance】Metrics collection can not end in valid time because of increasing topic and consumer group numbers.",
+    "createdAt" : "2023-06-30T11:35:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 145,
+    "title" : "Don't see metric \"rocketmq_brokeruntime_commitlog_disk_ratio\"",
+    "createdAt" : "2023-08-17T07:43:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "rocketmq_brokeruntime_commitlog_disk_ratio is missing",
+    "createdAt" : "2023-08-17T07:45:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 147,
+    "title" : "How to get the release version of the software",
+    "createdAt" : "2023-08-18T06:44:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 148,
+    "title" : "in k8s start failed,but log no error ",
+    "createdAt" : "2023-09-13T07:33:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 149,
+    "title" : "14162模板太垃圾，很多指标不能正常显示，啥时候出新模板",
+    "createdAt" : "2023-09-13T09:53:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 151,
+    "title" : "When will rocketmq-exporter be officially released?",
+    "createdAt" : "2023-11-03T08:53:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 153,
+    "title" : "Could the community publish the official images of Rocketmq-Exporter?",
+    "createdAt" : "2024-01-12T08:44:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Build docker image with maven failed",
+    "createdAt" : "2024-01-21T12:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "How to display health on consul service",
+    "createdAt" : "2024-01-24T02:20:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 158,
+    "title" : "询问指标含义",
+    "createdAt" : "2024-02-01T03:24:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "询问指标含义",
+    "createdAt" : "2024-02-01T03:24:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "wrong configurations in pom.xml",
+    "createdAt" : "2024-02-11T08:26:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "不支持5.1版本吧",
+    "createdAt" : "2024-02-19T13:12:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Is it possible to provide a Go language version exporter?",
+    "createdAt" : "2024-03-18T08:45:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 168,
+    "title" : "how to Get message backlog？",
+    "createdAt" : "2024-05-15T08:58:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 169,
+    "title" : "服务器环境下启动异常",
+    "createdAt" : "2024-05-23T09:25:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 170,
+    "title" : "编译失败",
+    "createdAt" : "2024-05-24T07:20:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 171,
+    "title" : "使用广播模式,rocketmq_group_get_latency_by_storetime指标不准确",
+    "createdAt" : "2024-05-29T06:38:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 172,
+    "title" : "rocketmq-exporter中无法获取到rocketmq_broker_commitlog_diff指标",
+    "createdAt" : "2024-06-20T03:07:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 173,
+    "title" : "构建镜像报错了",
+    "createdAt" : "2024-07-04T04:27:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "NPE MetricsCollectTask.java",
+    "createdAt" : "2024-08-08T10:01:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 177,
+    "title" : "connect to proxy failed",
+    "createdAt" : "2024-12-21T07:05:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "RocketMQ exporter startup error",
+    "createdAt" : "2025-04-14T10:16:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 181,
+    "title" : "Security - 0.0.2 version has high vulnerabilities of CVE-2022-25845, CVE-2023-34981, and GHSA-xpw8-rcwv-8f8p",
+    "createdAt" : "2025-05-06T02:50:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 182,
+    "title" : "rocketmq_consumer_tps and rocketmq_consumer_tps not found",
+    "createdAt" : "2025-08-11T03:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "大量数据断点",
+    "createdAt" : "2025-11-03T12:03:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 185,
+    "title" : "需要通过环境变量支持采集k8s上的rocketmq集群",
+    "createdAt" : "2025-11-28T07:21:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 186,
+    "title" : "rocketmq export是否支持 5.4.5版本采集呢？",
+    "createdAt" : "2026-01-12T02:46:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "collectBrokerRuntimeStats metrics not getting scraped",
+    "createdAt" : "2026-01-23T10:35:02Z",
+    "state" : "OPEN"
+  } ]
+}
