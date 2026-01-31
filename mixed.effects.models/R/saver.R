@@ -31,7 +31,7 @@ save_everything <- function(model, data, out_dir, linter_name, metric_data){
 
   # print metric histogram
   save_png(
-    expression = plot_raw_data_hist(data[data$t == 0,][[metric_name]], metric_display_name, metric_unit),
+    expression = plot_raw_data_hist(data[data$t_day == 0,][[metric_name]], metric_display_name, metric_unit),
     file = file.path(out_dir, sprintf("%s.%s.hist.png", linter_name, metric_name))
   )
 

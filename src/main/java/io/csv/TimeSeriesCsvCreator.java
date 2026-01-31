@@ -145,7 +145,7 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         // Write into file
         try (PrintWriter pw = new PrintWriter(dataFile)) {
-            pw.println("id,relative_introduction_time,linter,treated," + CombinedData.Entry.csvHeader() + ",intervention,t");
+            pw.println("id,relative_introduction_time,linter,treated," + CombinedData.Entry.csvHeader() + ",intervention,t_day");
 
             // For each week (two years in each direction) one row is written
             for (int day : DAYS) {

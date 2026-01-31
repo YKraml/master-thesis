@@ -143,6 +143,8 @@ for (metric_data in metrics) {
         fixed = as.formula(formula),
         random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
         data = data,
+        method = "ML",
+        # correlation = corAR1(form = ~ t | id),
         control = lmeControl(opt = "optim")
       )
 
@@ -367,10 +369,9 @@ anova(models[[1]], models[[2]], models[[3]], models[[4]], models[[5]], models[[6
 # ------------------------------------------------------------------------------
 
 transition_n_days <- 90
-relative_introduction_time <- 4
 metric <- "findingsDensity"
-metric_unit <- "XXX"
 data <- get_data("treatment", transition_n_days)
+metric_data <- list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC")
 
 data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
 
@@ -381,18 +382,21 @@ model <- lme(
   random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
   data = data,
   method = "ML",
+  correlation = corAR1(form = ~ t | id),
   control = lmeControl(opt = "optim")
 )
 
+summary(model)
 
 
-formula_robust <- sprintf(
-  "%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope) + (1 + base_slope + intervention_slope + intervention_jump | id)",
-  metric
-)
-
-# 2. Fit the robust model
-model_robust <- rlmer(
-  as.formula(formula_robust),
+model_2 <- lme(
+  fixed = as.formula(formula),
+  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
   data = data,
+  method = "ML",
+  control = lmeControl(opt = "optim")
 )
+
+summary(model_2)
+
+save_everything(model, data, "delet_me", "ALL", metric_data)

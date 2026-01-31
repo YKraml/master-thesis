@@ -11,19 +11,19 @@ get_data <- function(folderName, transition_n_days) {
     dt <- fread(file)
     dt <- na.omit(dt)
 
-    dt$t_norm <- dt$t / 365
-    dt$base_slope <- dt$t / 365
-    dt$intervention_slope <- dt$t / 365 * dt$intervention
+    dt$t_norm <- dt$t_day / 365
+    dt$base_slope <- dt$t_day / 365
+    dt$intervention_slope <- dt$t_day / 365 * dt$intervention
     dt$intervention_jump <- dt$intervention
 
     # Delete this line later
-    dt$relative_introduction_time <- dt$relative_introduction_time / 60 / 60 / 24 / 365
+    dt$relative_introduction_time <- dt$relative_introduction_time
 
-    dt$intervention_jump[dt$t == 0] <- 0
+    dt$intervention_jump[dt$t_day == 0] <- 0
 
     dt[, c("t_pre", "t_post", "intervention") := NULL]
     dt <- dt[dt$relative_introduction_time >= 0, ]
-    dt <- dt[dt$t <= 0 | t >= transition_n_days]
+    dt <- dt[dt$t_day <= 0 | t_day >= transition_n_days]
 
     return(dt)
   }
