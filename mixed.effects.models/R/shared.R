@@ -21,7 +21,7 @@ get_data <- function(folderName, transition_n_days) {
 
     dt$intervention_jump[dt$t_day == 0] <- 0
 
-    dt[, c("t_pre", "t_post", "intervention") := NULL]
+    dt[, c("intervention") := NULL]
     dt <- dt[dt$relative_introduction_time >= 0, ]
     dt <- dt[dt$t_day <= 0 | t_day >= transition_n_days]
 

@@ -55,30 +55,22 @@ public class TimeSeriesCsvCreator implements CsvCreator {
                 .toList();
         System.out.println("Finished reading cem pair data\n");
 
-        System.out.println("Combining data");
-        List<CombinedData> combinedDataList = new ArrayList<>();
-        for (CemProject cemProject : cemProjects) {
+        System.out.println("Creating Files");
+        cemProjects.parallelStream().forEach(cemProject -> {
             String repoOwner = cemProject.repoOwner();
             String repoName = cemProject.repoName();
-
             try {
                 Proof proof = proofReaderWriter.read(repoOwner, repoName).orElseThrow();
                 TeamscaleData teamscaleData = teamscaleDataReaderWriter.read(repoOwner, repoName).orElseThrow();
                 GitHubData gitHubData = gitHubDataReaderWriter.read(repoOwner, repoName).orElseThrow();
-                combinedDataList.add(dataCombiner.combineData(proof, teamscaleData, cemProject, gitHubData));
-            } catch (NoSuchElementException e) {
+                createCsvFiles(dataCombiner.combineData(proof, teamscaleData, cemProject, gitHubData));
+            } catch (Exception e) {
                 System.err.printf("Could not get data for %s.%s%n", repoOwner, repoName);
                 e.printStackTrace();
                 System.err.println("\n");
             }
-        }
-        System.out.println("Finished combining data\n");
-
-        System.out.println("Creating files");
-        for (CombinedData combinedData : combinedDataList) {
-            createCsvFiles(combinedData);
-        }
-        System.out.println("Finished creating files\n");
+        });
+        System.out.println("Finished creating Files");
     }
 
     private void createCsvFiles(CombinedData combinedData) throws IOException {
@@ -178,5 +170,4 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         return IntStream.iterate(start, i -> i <= end, i -> i + jump).toArray();
     }
-
 }

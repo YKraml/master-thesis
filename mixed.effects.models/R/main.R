@@ -60,13 +60,13 @@ metrics <- list(
 
   # Structure metrics
   longFiles                = list(name = "longFiles",                display_name = "Long Files",                unit = "Findings"),
-  longMethod               = list(name = "longMethod",               display_name = "Long Method",               unit = "Findings"),
+  longMethods              = list(name = "longMethods",              display_name = "Long Method",               unit = "Findings"),
   deepNesting              = list(name = "deepNesting",              display_name = "Deep Nesting",              unit = "Findings"),
   longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1000 LOC"),
   longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1000 LOC"),
   deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1000 LOC"),
   cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
-  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC"),
+  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC per File"),
 
   # Git metrics
   numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
@@ -82,16 +82,13 @@ metrics <- list(
 data_treatment <- get_data("treatment", 90)
 data_control   <- get_data("control", 90)
 
-# data_treatment <- data_treatment[data_treatment$relative_introduction_time >= 2, ]
-# data_control <- data_control[data_control$relative_introduction_time >= 2, ]
-
 data_all <- list(
   treatment = data_treatment,
   control   = data_control
 )
 
 for (metric_data in metrics) {
-  metric_name         <- metric_data$name
+  metric_name <- metric_data$name
   message(metric_name)
 
   for(data_name in c("treatment", "control")){
@@ -107,28 +104,19 @@ for (metric_data in metrics) {
     message("   * Removing outliers")
     metric_values <- data[[metric_name]]
 
-    # 2. Calculate Quartiles and IQR
     Q1 <- quantile(metric_values, 0.25, na.rm = TRUE)
     Q3 <- quantile(metric_values, 0.75, na.rm = TRUE)
     IQR_val <- Q3 - Q1
-
-    # 3. Define Upper and Lower Bounds
     lower_bound <- Q1 - 1.5 * IQR_val
     upper_bound <- Q3 + 1.5 * IQR_val
 
-    # 4. Filter the dataframe
-    # This keeps only rows within the non-outlier range
     data_clean <- data[metric_values >= lower_bound & metric_values <= upper_bound, ]
 
-    # (Optional) Check how many rows were removed
     rows_removed <- nrow(data) - nrow(data_clean)
     message(paste("   * Removed", rows_removed, "outliers from", metric_name))
 
 
-
     data <- data_clean
-
-
 
 
     tryCatch({
@@ -138,7 +126,7 @@ for (metric_data in metrics) {
 
       message("   * Creating model")
       data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
-      formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric_name)
+      formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
       model <- lme(
         fixed = as.formula(formula),
         random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
@@ -288,8 +276,6 @@ data_treatment <- get_data("treatment", 90)
 data <- data_treatment
 
 
-
-
 for (metric_name in names(metrics)) {
   metric_unit <- metrics[[metric_name]]
 
@@ -316,87 +302,119 @@ for (metric_name in names(metrics)) {
 
 
 # ------------------------------------------------------------------------------
-# Model comparison
+# Model comparison - Random Effects
 # ------------------------------------------------------------------------------
 
+
 transition_n_days <- 90
-relative_introduction_time <- 4
-metric <- "findingsDensity"
-metric_unit <- "XXX"
+data <- get_data("treatment", transition_n_days)
+
+output_dir <- file.path("plots", "random_effects_comparison")
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+for (metric in metrics) {
+  metric_name <- metric$name
+  message(metric_name)
+
+  # Shared parameters
+  fixed_formula <- as.formula(sprintf("%s ~ base_slope + intervention_jump + intervention_slope", metric_name))
+  ctrl <- lmeControl(opt = "optim")
+
+  # 0-Slope Model: Random Intercept only
+  m_int <- lme(fixed = fixed_formula, random = ~ 1 | id, data = data, method = "ML", control = ctrl)
+
+  # 1-Slope Models: Intercept + One Random Effect
+  m_base <- lme(fixed = fixed_formula, random = ~ 1 + base_slope | id, data = data, method = "ML", control = ctrl)
+  m_jump <- lme(fixed = fixed_formula, random = ~ 1 + intervention_jump | id, data = data, method = "ML", control = ctrl)
+  m_slope <- lme(fixed = fixed_formula, random = ~ 1 + intervention_slope | id, data = data, method = "ML", control = ctrl)
+
+  # 2-Slope Models: Intercept + Two Random Effects
+  m_base_jump <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_jump | id, data = data, method = "ML", control = ctrl)
+  m_base_slope <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_slope | id, data = data, method = "ML", control = ctrl)
+  m_jump_slope <- lme(fixed = fixed_formula, random = ~ 1 + intervention_jump + intervention_slope | id, data = data, method = "ML", control = ctrl)
+
+  # 3-Slope Model: Full Random Effects Structure
+  m_full <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_jump + intervention_slope | id, data = data, method = "ML", control = ctrl)
+
+  # Compare models
+  model_comparison <- anova(m_int, m_base, m_jump, m_slope, m_base_jump, m_base_slope, m_jump_slope, m_full)
+
+  capture.output(
+    model_comparison[order(model_comparison$AIC), ],
+    file = file.path(output_dir, sprintf("random_effects_comparison.%s.txt", metric_name))
+  )
+}
+
+# ------------------------------------------------------------------------------
+# Model comparison - Interaction Term
+# ------------------------------------------------------------------------------
+
+
+transition_n_days <- 90
 data <- get_data("treatment", transition_n_days)
 
 data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
 data$log_time <- log(data$relative_introduction_time + 1)
 
+output_dir <- file.path("plots", "time_interaction_comparison")
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
-model <- lme(
-  fixed = as.formula(formula),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
+for (metric in metrics) {
+  metric_name <- metric$name
+  message(metric_name)
 
-models <- list()
-models[["exponential"]] <- model
+  # Shared parameters
+  effects <- "(base_slope + intervention_jump + intervention_slope)"
+  random_effects <- ~ 1 + base_slope + intervention_jump + intervention_slope | id
+  ctrl <- lmeControl(opt = "optim")
 
-# 2. Logarithmic Model
-formula_log <- sprintf("%s ~ log_time * (base_slope + intervention_jump + intervention_slope)", metric)
-models[["log"]] <- update(model, fixed = as.formula(formula_log))
+  message("1. Linear Model")
+  f_lin <- as.formula(sprintf("%s ~ relative_introduction_time * %s", metric_name, effects))
+  m_lin <- lme(fixed = f_lin, random = random_effects, data = data, method = "ML", control = ctrl)
 
-# 3. Polynomial Models (Degrees 1 to 4)
-for (i in 1:4) {
-  f_poly <- sprintf("%s ~ poly(relative_introduction_time, %d) * (base_slope + intervention_jump + intervention_slope)", metric, i)
-  models[[paste0("poly_", i)]] <- update(model, fixed = as.formula(f_poly))
+  message("2. Saturation Model")
+  f_sat <- as.formula(sprintf("%s ~ time_saturated * %s", metric_name, effects))
+  m_sat <- lme(fixed = f_sat, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  message("3. Logarithmic Model")
+  f_log <- as.formula(sprintf("%s ~ log_time * %s", metric_name, effects))
+  m_log <- lme(fixed = f_log, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  message("4. Polynomial Models (Degrees 1 to 3)")
+  f_poly1 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 1) * %s", metric_name, effects))
+  m_poly1 <- lme(fixed = f_poly1, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  f_poly2 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 2) * %s", metric_name, effects))
+  m_poly2 <- lme(fixed = f_poly2, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  f_poly3 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 3) * %s", metric_name, effects))
+  m_poly3 <- lme(fixed = f_poly3, random = random_effects, data = data, method = "ML", control = ctrl)
+
+
+  message("5. Natural Spline Models (Degrees of Freedom 1 to 3)")
+  f_spline1 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 1) * %s", metric_name, effects))
+  m_spline1 <- lme(fixed = f_spline1, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  f_spline2 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 2) * %s", metric_name, effects))
+  m_spline2 <- lme(fixed = f_spline2, random = random_effects, data = data, method = "ML", control = ctrl)
+
+  f_spline3 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 3) * %s", metric_name, effects))
+  m_spline3 <- lme(fixed = f_spline3, random = random_effects, data = data, method = "ML", control = ctrl)
+
+
+  message("6. Compare models")
+  model_comparison <- anova(m_lin, m_sat, m_log, m_poly1, m_poly2, m_poly3, m_spline1, m_spline2, m_spline3)
+
+  # Save results sorted by AIC
+  capture.output(
+    model_comparison[order(model_comparison$AIC), ],
+    file = file.path(output_dir, sprintf("time_interaction_comparison.%s.txt", metric_name))
+  )
 }
-
-# 4. Natural Spline Models (Degrees of Freedom 1 to 4)
-# Note: ns(df=1) is essentially a linear fit
-for (i in 1:4) {
-  f_spline <- sprintf("%s ~ ns(relative_introduction_time, df = %d) * (base_slope + intervention_jump + intervention_slope)", metric, i)
-  models[[paste0("spline_", i)]] <- update(model, fixed = as.formula(f_spline))
-}
-
-
-
-anova(models[[1]], models[[2]], models[[3]], models[[4]], models[[5]], models[[6]], models[[7]], models[[8]], models[[9]], models[[10]])
-
 
 
 # ------------------------------------------------------------------------------
 # Testing
 # ------------------------------------------------------------------------------
 
-transition_n_days <- 90
-metric <- "findingsDensity"
-data <- get_data("treatment", transition_n_days)
-metric_data <- list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC")
 
-data$time_saturated <- 1 - exp(-1 * data$relative_introduction_time)
-
-
-formula <- sprintf("%s ~ time_saturated * (base_slope + intervention_jump + intervention_slope)", metric)
-model <- lme(
-  fixed = as.formula(formula),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data,
-  method = "ML",
-  correlation = corAR1(form = ~ t | id),
-  control = lmeControl(opt = "optim")
-)
-
-summary(model)
-
-
-model_2 <- lme(
-  fixed = as.formula(formula),
-  random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-  data = data,
-  method = "ML",
-  control = lmeControl(opt = "optim")
-)
-
-summary(model_2)
-
-save_everything(model, data, "delet_me", "ALL", metric_data)
