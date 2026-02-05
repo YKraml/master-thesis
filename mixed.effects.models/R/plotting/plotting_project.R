@@ -7,7 +7,6 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   relative_introduction_time <- projectData[["relative_introduction_time"]][1]
 
   randomEffectsFromProject <- ranef(model)[id, ]
-  fixedEffects <- fixef(model)
 
   parameters <- get_parameters(model, relative_introduction_time)
 

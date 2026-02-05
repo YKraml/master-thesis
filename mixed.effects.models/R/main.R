@@ -34,6 +34,7 @@ source("R/plotting/plotting_lagged_transition_time.R")
 source("R/plotting/plotting_lagged_day_zero.R")
 source("R/plotting/plotting_cem_projects.R")
 source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
 
 source("R/saver.R")
 source("R/shared.R")
@@ -414,7 +415,117 @@ for (metric in metrics) {
 
 
 # ------------------------------------------------------------------------------
+# Treated vs Control Effects Distributions
+# ------------------------------------------------------------------------------
+
+transition_n_days <- 90
+
+age_ranges <- list(
+  c(0, 0.1),
+  c(0.1, 0.5),
+  c(0.5, 1),
+  c(1, 2),
+  c(2, 4),
+  c(4, 20),
+)
+
+data_treatment_full <- get_data("treatment", transition_n_days)
+data_treatment_full$time_saturated <- 1 - exp(-1 * data_treatment_full$relative_introduction_time)
+
+data_control_full <- get_data("control", transition_n_days)
+data_control_full$time_saturated <- 1 - exp(-1 * data_control_full$relative_introduction_time)
+
+
+
+for (range in age_ranges) {
+  min_project_age <- range[1]
+  max_project_age <- range[2]
+
+  message(sprintf("Time Span: %s to %s years", min_project_age, max_project_age))
+
+  data_treatment <- data_treatment_full[
+    data_treatment_full$relative_introduction_time >= min_project_age &
+      data_treatment_full$relative_introduction_time <= max_project_age,
+  ]
+
+  data_control <- data_control_full[
+    data_control_full$relative_introduction_time >= min_project_age &
+      data_control_full$relative_introduction_time <= max_project_age,
+  ]
+
+  # Optional: Check if we have enough data to proceed, skip if empty to avoid errors
+  if (nrow(data_treatment) == 0 || nrow(data_control) == 0) {
+    message("    Skipping: Insufficient data for this time span.")
+    next
+  }
+
+
+  for (metric in metrics) {
+    metric_name <- metric$name
+    message(paste("    Metric:", metric_name))
+
+    message("    * Calculating treated model")
+    formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
+
+    # Wrap in tryCatch to prevent loop crash if model fails to converge for specific slice
+    model_treatment <- tryCatch({
+      lme(
+        fixed = as.formula(formula),
+        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+        data = data_treatment,
+        method = "ML",
+        control = lmeControl(opt = "optim")
+      )
+    }, error = function(e) { message("      Error in treatment model: ", e$message); return(NULL) })
+
+    message("    * Calculating control model")
+    formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
+
+    model_control <- tryCatch({
+      lme(
+        fixed = as.formula(formula),
+        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+        data = data_control,
+        method = "ML",
+        control = lmeControl(opt = "optim")
+      )
+    }, error = function(e) { message("      Error in control model: ", e$message); return(NULL) })
+
+    # Only proceed if both models converged
+    if (!is.null(model_treatment) && !is.null(model_control)) {
+
+      df_treatment <- calculate_custom_effects(model_treatment, data_treatment)
+      df_control   <- calculate_custom_effects(model_control, data_control)
+
+      output_dir <- file.path("plots", "effects_distributions", metric_name)
+      dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+      message("    * Creating plot")
+      save_multipanel_png(
+        expression = {
+          par(oma = c(0, 0, 3, 0))
+          plot_treated_vs_control_effects(df_control$intercept,                 df_treatment$intercept,                "Intercept")
+          plot_treated_vs_control_effects(df_control$base_slope,                df_treatment$base_slope,               "Slope before Intervention")
+          plot_treated_vs_control_effects(df_control$intervention_jump,         df_treatment$intervention_jump,        "Intervention Jump")
+          plot_treated_vs_control_effects(df_control$slope_after_intervention,  df_treatment$slope_after_intervention, "Slope after Intervention")
+          mtext(
+            sprintf("Treatment and Control Effects Distributions - Project Age from %s to %s (Years)", min_project_age, max_project_age),
+            outer = TRUE,
+            cex = 1.5,
+            font = 2
+          )
+        },
+        file = file.path(output_dir, sprintf("%s.%s.%s.predicted.png", metric_name, min_project_age, max_project_age)),
+      )
+    }
+  }
+}
+
+
+# ------------------------------------------------------------------------------
 # Testing
 # ------------------------------------------------------------------------------
+
+
 
 
