@@ -17,16 +17,13 @@ public class Constants {
     public static final int CONCURRENT_REPO_DOWNLOADS = 4;
 
     public static final int NUMBER_OF_REPOS = 20000;
-    public static final Language CURRENT_LANGUAGE = Language.JAVA;
+    public static final Language CURRENT_LANGUAGE = Language.PYTHON;
 
     public static final int SIZE_IN_KB = 1000 * 1000; // 1 GB
     public static final int SIZE_IN_BYTES = 1000 * 1000 * 1000; // 1 GB
 
-    /**
-     * Time in seconds at: 2025.12.01, 00:00:00
-     */
-    public static final int ANALYSIS_TIME = 1764547200;
-    public static final int ANALYSIS_WINDOW_IN_SECONDS = 60 * 60 * 24 * 365 * 2;
+    public static final int ANALYSIS_TIME = 1764547200; // Time in seconds at: 2025.12.01, 00:00:00
+    public static final int ANALYSIS_WINDOW_IN_SECONDS = 60 * 60 * 24 * 365 * 2; // 2 Years in seconds
 
     public static final String SCC_EXE = "C:/ProgramData/chocolatey/lib/scc/tools/scc.exe";
 }

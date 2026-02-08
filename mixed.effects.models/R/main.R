@@ -142,7 +142,7 @@ for (metric_data in metrics) {
         model = model,
         data = data,
         out_dir = out_dir,
-        linter_name = folder_name,
+        folder_name = folder_name,
         metric_data = metric_data
       )
 
