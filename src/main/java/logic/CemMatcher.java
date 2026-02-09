@@ -124,7 +124,7 @@ public class CemMatcher {
         List<CemProject.LinterCommit> controlLinterCommits = new ArrayList<>();
 
         for (CemProject.LinterCommit linterCommit : treatedLinterCommits) {
-            int index = linterCommit.index() * controlCommits.size() / treatedCommits.size();
+            int index = (int) (((double) linterCommit.index()) / treatedCommits.size() * controlCommits.size());
             CemProject.Commit fakedLinterCommit = controlCommits.get(index);
             String name = fakedLinterCommit.name();
             int time = fakedLinterCommit.time();
