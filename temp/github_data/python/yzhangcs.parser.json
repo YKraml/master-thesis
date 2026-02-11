@@ -1,0 +1,994 @@
+{
+  "repoOwner" : "yzhangcs",
+  "repoName" : "parser",
+  "forks" : [ {
+    "createdAt" : "2019-01-04T04:22:19Z"
+  }, {
+    "createdAt" : "2019-04-24T13:44:06Z"
+  }, {
+    "createdAt" : "2019-06-06T05:50:51Z"
+  }, {
+    "createdAt" : "2019-06-16T09:51:46Z"
+  }, {
+    "createdAt" : "2019-08-07T03:04:26Z"
+  }, {
+    "createdAt" : "2019-08-21T13:11:48Z"
+  }, {
+    "createdAt" : "2019-10-17T07:23:37Z"
+  }, {
+    "createdAt" : "2019-11-06T12:05:37Z"
+  }, {
+    "createdAt" : "2019-11-12T06:30:45Z"
+  }, {
+    "createdAt" : "2019-12-12T14:08:18Z"
+  }, {
+    "createdAt" : "2019-12-30T07:10:08Z"
+  }, {
+    "createdAt" : "2020-01-04T19:58:43Z"
+  }, {
+    "createdAt" : "2020-02-21T00:35:10Z"
+  }, {
+    "createdAt" : "2020-03-31T10:15:04Z"
+  }, {
+    "createdAt" : "2020-05-05T16:49:52Z"
+  }, {
+    "createdAt" : "2020-05-09T00:56:26Z"
+  }, {
+    "createdAt" : "2020-05-12T11:24:42Z"
+  }, {
+    "createdAt" : "2020-05-19T17:14:14Z"
+  }, {
+    "createdAt" : "2020-06-13T12:02:55Z"
+  }, {
+    "createdAt" : "2020-06-15T05:55:26Z"
+  }, {
+    "createdAt" : "2020-06-16T16:08:49Z"
+  }, {
+    "createdAt" : "2020-06-18T01:43:36Z"
+  }, {
+    "createdAt" : "2020-06-18T03:43:17Z"
+  }, {
+    "createdAt" : "2020-07-02T04:00:13Z"
+  }, {
+    "createdAt" : "2020-07-16T09:53:05Z"
+  }, {
+    "createdAt" : "2020-07-18T16:07:33Z"
+  }, {
+    "createdAt" : "2020-07-25T23:27:57Z"
+  }, {
+    "createdAt" : "2020-07-28T05:41:34Z"
+  }, {
+    "createdAt" : "2020-07-29T07:13:42Z"
+  }, {
+    "createdAt" : "2020-08-05T11:27:05Z"
+  }, {
+    "createdAt" : "2020-08-05T12:21:15Z"
+  }, {
+    "createdAt" : "2020-08-07T09:35:40Z"
+  }, {
+    "createdAt" : "2020-08-28T02:10:02Z"
+  }, {
+    "createdAt" : "2020-08-28T07:28:35Z"
+  }, {
+    "createdAt" : "2020-09-02T15:08:59Z"
+  }, {
+    "createdAt" : "2020-09-18T10:31:48Z"
+  }, {
+    "createdAt" : "2020-09-22T13:17:00Z"
+  }, {
+    "createdAt" : "2020-09-23T19:58:59Z"
+  }, {
+    "createdAt" : "2020-10-08T14:23:39Z"
+  }, {
+    "createdAt" : "2020-10-08T16:08:54Z"
+  }, {
+    "createdAt" : "2020-10-16T09:21:43Z"
+  }, {
+    "createdAt" : "2020-10-20T08:21:58Z"
+  }, {
+    "createdAt" : "2020-10-20T15:49:10Z"
+  }, {
+    "createdAt" : "2020-10-22T05:36:35Z"
+  }, {
+    "createdAt" : "2020-10-24T08:48:31Z"
+  }, {
+    "createdAt" : "2020-10-28T12:47:21Z"
+  }, {
+    "createdAt" : "2020-11-14T06:49:09Z"
+  }, {
+    "createdAt" : "2020-11-26T17:38:53Z"
+  }, {
+    "createdAt" : "2020-11-30T08:53:33Z"
+  }, {
+    "createdAt" : "2020-12-13T13:59:19Z"
+  }, {
+    "createdAt" : "2020-12-16T08:08:04Z"
+  }, {
+    "createdAt" : "2020-12-23T02:44:42Z"
+  }, {
+    "createdAt" : "2020-12-28T02:53:42Z"
+  }, {
+    "createdAt" : "2021-01-21T03:28:44Z"
+  }, {
+    "createdAt" : "2021-02-02T08:21:44Z"
+  }, {
+    "createdAt" : "2021-03-03T08:44:59Z"
+  }, {
+    "createdAt" : "2021-03-10T11:12:44Z"
+  }, {
+    "createdAt" : "2021-03-15T12:01:52Z"
+  }, {
+    "createdAt" : "2021-03-16T02:05:07Z"
+  }, {
+    "createdAt" : "2021-03-24T07:45:04Z"
+  }, {
+    "createdAt" : "2021-04-03T13:14:27Z"
+  }, {
+    "createdAt" : "2021-04-14T08:49:22Z"
+  }, {
+    "createdAt" : "2021-05-01T06:24:27Z"
+  }, {
+    "createdAt" : "2021-05-05T15:20:06Z"
+  }, {
+    "createdAt" : "2021-05-06T23:36:02Z"
+  }, {
+    "createdAt" : "2021-05-16T07:27:23Z"
+  }, {
+    "createdAt" : "2021-05-24T02:34:24Z"
+  }, {
+    "createdAt" : "2021-06-03T09:16:37Z"
+  }, {
+    "createdAt" : "2021-08-13T18:15:43Z"
+  }, {
+    "createdAt" : "2021-08-19T14:51:10Z"
+  }, {
+    "createdAt" : "2021-08-31T18:54:19Z"
+  }, {
+    "createdAt" : "2021-09-06T05:17:31Z"
+  }, {
+    "createdAt" : "2021-09-16T09:33:14Z"
+  }, {
+    "createdAt" : "2021-09-26T04:18:59Z"
+  }, {
+    "createdAt" : "2021-09-30T12:19:16Z"
+  }, {
+    "createdAt" : "2021-10-05T05:19:46Z"
+  }, {
+    "createdAt" : "2021-10-09T06:13:26Z"
+  }, {
+    "createdAt" : "2021-10-11T13:14:06Z"
+  }, {
+    "createdAt" : "2021-11-12T08:57:34Z"
+  }, {
+    "createdAt" : "2021-11-12T13:05:39Z"
+  }, {
+    "createdAt" : "2021-11-23T07:06:46Z"
+  }, {
+    "createdAt" : "2021-11-30T13:36:28Z"
+  }, {
+    "createdAt" : "2021-12-08T02:49:17Z"
+  }, {
+    "createdAt" : "2021-12-16T08:30:17Z"
+  }, {
+    "createdAt" : "2021-12-19T08:45:41Z"
+  }, {
+    "createdAt" : "2021-12-19T13:46:19Z"
+  }, {
+    "createdAt" : "2021-12-20T07:18:05Z"
+  }, {
+    "createdAt" : "2021-12-26T02:30:42Z"
+  }, {
+    "createdAt" : "2021-12-30T09:05:45Z"
+  }, {
+    "createdAt" : "2022-01-02T02:39:55Z"
+  }, {
+    "createdAt" : "2022-02-19T20:29:18Z"
+  }, {
+    "createdAt" : "2022-02-20T11:35:45Z"
+  }, {
+    "createdAt" : "2022-03-02T15:24:48Z"
+  }, {
+    "createdAt" : "2022-03-05T17:36:54Z"
+  }, {
+    "createdAt" : "2022-03-06T03:57:02Z"
+  }, {
+    "createdAt" : "2022-03-11T02:29:34Z"
+  }, {
+    "createdAt" : "2022-04-12T17:22:40Z"
+  }, {
+    "createdAt" : "2022-04-13T13:56:08Z"
+  }, {
+    "createdAt" : "2022-04-23T09:55:05Z"
+  }, {
+    "createdAt" : "2022-05-02T12:12:57Z"
+  }, {
+    "createdAt" : "2022-05-07T11:31:41Z"
+  }, {
+    "createdAt" : "2022-05-13T01:41:40Z"
+  }, {
+    "createdAt" : "2022-05-16T11:10:31Z"
+  }, {
+    "createdAt" : "2022-06-22T02:41:36Z"
+  }, {
+    "createdAt" : "2022-06-22T04:53:23Z"
+  }, {
+    "createdAt" : "2022-06-27T02:01:29Z"
+  }, {
+    "createdAt" : "2022-07-31T20:58:17Z"
+  }, {
+    "createdAt" : "2022-08-01T13:20:18Z"
+  }, {
+    "createdAt" : "2022-08-04T04:54:36Z"
+  }, {
+    "createdAt" : "2022-08-23T10:04:42Z"
+  }, {
+    "createdAt" : "2022-10-01T02:33:03Z"
+  }, {
+    "createdAt" : "2022-10-18T09:36:15Z"
+  }, {
+    "createdAt" : "2022-10-26T12:13:10Z"
+  }, {
+    "createdAt" : "2022-11-17T03:56:31Z"
+  }, {
+    "createdAt" : "2022-12-17T13:05:42Z"
+  }, {
+    "createdAt" : "2022-12-21T05:43:25Z"
+  }, {
+    "createdAt" : "2023-01-11T16:07:23Z"
+  }, {
+    "createdAt" : "2023-01-16T12:49:40Z"
+  }, {
+    "createdAt" : "2023-01-24T09:39:29Z"
+  }, {
+    "createdAt" : "2023-02-15T15:13:16Z"
+  }, {
+    "createdAt" : "2023-02-21T06:48:23Z"
+  }, {
+    "createdAt" : "2023-03-16T12:37:16Z"
+  }, {
+    "createdAt" : "2023-03-18T13:50:05Z"
+  }, {
+    "createdAt" : "2023-03-24T16:08:10Z"
+  }, {
+    "createdAt" : "2023-03-29T08:54:06Z"
+  }, {
+    "createdAt" : "2023-04-24T16:29:43Z"
+  }, {
+    "createdAt" : "2023-05-02T04:49:56Z"
+  }, {
+    "createdAt" : "2023-07-06T04:24:32Z"
+  }, {
+    "createdAt" : "2023-09-21T01:51:47Z"
+  }, {
+    "createdAt" : "2023-12-20T10:27:45Z"
+  }, {
+    "createdAt" : "2023-12-24T16:48:34Z"
+  }, {
+    "createdAt" : "2023-12-31T14:26:09Z"
+  }, {
+    "createdAt" : "2024-03-29T11:16:46Z"
+  }, {
+    "createdAt" : "2024-08-24T20:12:24Z"
+  }, {
+    "createdAt" : "2024-09-03T20:29:23Z"
+  }, {
+    "createdAt" : "2024-10-28T03:00:21Z"
+  }, {
+    "createdAt" : "2024-11-09T18:46:42Z"
+  }, {
+    "createdAt" : "2024-12-17T14:48:13Z"
+  }, {
+    "createdAt" : "2024-12-18T13:54:40Z"
+  }, {
+    "createdAt" : "2025-02-11T16:52:29Z"
+  }, {
+    "createdAt" : "2025-03-25T11:00:00Z"
+  }, {
+    "createdAt" : "2025-04-07T10:29:10Z"
+  }, {
+    "createdAt" : "2025-05-12T01:14:02Z"
+  }, {
+    "createdAt" : "2025-05-17T04:14:17Z"
+  }, {
+    "createdAt" : "2025-08-09T20:08:03Z"
+  }, {
+    "createdAt" : "2025-08-31T18:54:44Z"
+  }, {
+    "createdAt" : "2025-09-16T19:26:20Z"
+  }, {
+    "createdAt" : "2025-10-23T08:57:28Z"
+  }, {
+    "createdAt" : "2026-01-27T18:35:35Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "RuntimeError: cuda runtime error (59) ",
+    "createdAt" : "2019-01-16T14:44:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Understanding biaffine operation. ",
+    "createdAt" : "2019-02-06T16:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "代码写的太好了吧！",
+    "createdAt" : "2019-03-09T00:03:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Data Download for Testing",
+    "createdAt" : "2019-04-17T14:44:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "How is the running speed?",
+    "createdAt" : "2019-04-22T09:46:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Apply MST when evaluating or predicting?",
+    "createdAt" : "2019-04-27T11:51:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "ModuleNotFoundError",
+    "createdAt" : "2019-04-27T12:04:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Question: Have you tried to ELMO based your code? ",
+    "createdAt" : "2019-04-28T11:51:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Duplicate Name \"parser\"",
+    "createdAt" : "2019-05-01T02:03:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "RuntimeError: merge_sort: failed to synchronize: an illegal memory access was encountered",
+    "createdAt" : "2019-05-01T06:03:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Existing trained model",
+    "createdAt" : "2019-05-18T01:43:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Some bugs",
+    "createdAt" : "2019-05-29T14:33:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "关于词向量权重的初始化问题",
+    "createdAt" : "2019-09-06T09:03:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Automatically Deleting Old Temporary Models",
+    "createdAt" : "2019-10-16T11:06:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "TypeError: namedtuple() got an unexpected keyword argument 'defaults'",
+    "createdAt" : "2019-10-19T09:32:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "吐槽",
+    "createdAt" : "2019-10-26T08:04:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "wonder why not use the default LSTM",
+    "createdAt" : "2019-10-29T06:42:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Decode with MST algorithm",
+    "createdAt" : "2019-10-30T08:19:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "unk not exist in tokens",
+    "createdAt" : "2019-11-27T02:50:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "disable padding.",
+    "createdAt" : "2019-11-28T09:24:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "About ensure well-formedness",
+    "createdAt" : "2020-03-01T11:31:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Reproduce the results of CTB",
+    "createdAt" : "2020-03-08T13:01:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Attribute error when calling hasattr()",
+    "createdAt" : "2020-05-08T02:43:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "unexpected keyword argument 'defaults'",
+    "createdAt" : "2020-05-19T09:20:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "kmeans",
+    "createdAt" : "2020-05-20T09:14:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "RuntimeError: copy_if failed to synchronize ",
+    "createdAt" : "2020-05-28T12:46:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "RuntimeError: CUDA out of memory",
+    "createdAt" : "2020-05-31T12:08:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "AutoModel",
+    "createdAt" : "2020-06-04T12:30:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "CoNLLU annotation",
+    "createdAt" : "2020-06-10T11:46:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "feat_pad_index",
+    "createdAt" : "2020-06-11T00:03:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "token ",
+    "createdAt" : "2020-06-14T11:01:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "drop in performance",
+    "createdAt" : "2020-06-15T09:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Unable to train on custom conllu data",
+    "createdAt" : "2020-07-30T10:49:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "AttributeError: module 'torch.distributed' has no attribute 'is_initialized'",
+    "createdAt" : "2020-07-30T12:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "the result of paper:Efficient Second-Order TreeCRF for Neural Dependency Parsing",
+    "createdAt" : "2020-07-31T09:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "config.ini is not work for n_embed",
+    "createdAt" : "2020-07-31T10:21:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "!pip install supar failing on Google Colab notebook",
+    "createdAt" : "2020-08-05T11:22:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Potential problem with not truncating sequences",
+    "createdAt" : "2020-08-17T12:23:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "saved models",
+    "createdAt" : "2020-09-18T15:17:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "position_ids",
+    "createdAt" : "2020-09-22T10:57:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "config file",
+    "createdAt" : "2020-10-13T02:53:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "pad_index",
+    "createdAt" : "2020-10-16T08:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "integrated tokenizer",
+    "createdAt" : "2020-10-17T08:39:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "directions in LSTM",
+    "createdAt" : "2020-11-03T12:27:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Data share",
+    "createdAt" : "2020-12-07T08:26:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Could you write some useage of chinese dataset ",
+    "createdAt" : "2020-12-21T03:31:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Could you give the link of CTB dataset ",
+    "createdAt" : "2020-12-21T05:47:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Question about fine-tuning",
+    "createdAt" : "2020-12-24T09:08:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Pytorch version problem",
+    "createdAt" : "2020-12-28T02:41:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Things slow down when I use DDP",
+    "createdAt" : "2021-01-01T08:18:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "MemoryError while using fasttext embeddings",
+    "createdAt" : "2021-01-02T09:40:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "数据分享",
+    "createdAt" : "2021-01-16T13:00:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "How to use pos tags as inputs?",
+    "createdAt" : "2021-01-20T11:56:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "an error caused by brackets",
+    "createdAt" : "2021-03-04T13:20:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "unknown `lbp`",
+    "createdAt" : "2021-03-06T08:01:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Is the Off-the-shelf Semantic Dependency Parser available?",
+    "createdAt" : "2021-03-08T06:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "[Bugs] KeyError: 'loader' when print out Dataset object",
+    "createdAt" : "2021-03-15T14:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Not working for very long sentences.",
+    "createdAt" : "2021-04-05T11:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Crash when there are parentheses among tokens",
+    "createdAt" : "2021-04-13T03:17:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Constituent parsing with Chinese",
+    "createdAt" : "2021-04-19T09:41:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "SuPar 1.1.0 cannot load 1.0.1 models",
+    "createdAt" : "2021-04-28T00:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "params from config.ini overridden by defaults",
+    "createdAt" : "2021-05-02T15:27:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "CUDA error: device-side assert triggered",
+    "createdAt" : "2021-05-02T16:00:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Issue with pretty_print in Constituency parser",
+    "createdAt" : "2021-05-11T18:21:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Cannot use RoBerta CRF model for constituency parsing",
+    "createdAt" : "2021-05-11T18:27:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "How to use with spaCy nlp pipeline?",
+    "createdAt" : "2021-05-11T21:47:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Endless RAM consumption",
+    "createdAt" : "2021-05-28T07:42:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "con.py is not available in Windows, can we change its name ?",
+    "createdAt" : "2021-06-03T09:09:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "UserWarning: Falling back to the old format < 1.6",
+    "createdAt" : "2021-06-11T10:53:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : " AttributeError: 'generator' object has no attribute 'pretty_print'",
+    "createdAt" : "2021-06-14T06:42:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Can the constituency parsing models be converted to ONNX ?",
+    "createdAt" : "2021-07-05T21:47:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Error when trying to load a model with Parser.load()",
+    "createdAt" : "2021-07-13T16:24:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Missing lr_rate and warmup",
+    "createdAt" : "2021-08-16T09:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "TypeError: 'builtin_function_or_method' object is not subscriptable",
+    "createdAt" : "2021-09-01T12:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "biaffine问题",
+    "createdAt" : "2021-09-09T07:58:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Parser does not get best metrics",
+    "createdAt" : "2021-09-15T15:32:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "ctb7.biaffine.dep.electra问题",
+    "createdAt" : "2021-10-01T07:58:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Onnx Conversion",
+    "createdAt" : "2021-10-01T11:33:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Doubts about the input format when training a SDP model.",
+    "createdAt" : "2021-10-22T13:16:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "关于constituency tree数据标注",
+    "createdAt" : "2021-11-26T06:25:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Running spacy.prefer_gpu() caused supar parser GPU error for some inputs",
+    "createdAt" : "2021-12-07T12:17:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Unable to train a SDP model with some UD Treebanks",
+    "createdAt" : "2022-01-21T16:31:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "How to load a custom trained BERT model from disk",
+    "createdAt" : "2022-01-25T15:05:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Feature Request: Customizing Stanza Pipeline",
+    "createdAt" : "2022-01-31T20:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Inconsistent behaviour when using the same file for dev and test",
+    "createdAt" : "2022-02-04T09:20:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "POS tagging",
+    "createdAt" : "2022-02-18T06:03:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "ModuleNotFoundError: No module named 'supar.parsers.con'",
+    "createdAt" : "2022-02-21T08:41:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "How to add new features for LSTM",
+    "createdAt" : "2022-02-22T11:22:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "How to easily get VP/NP/PP phrase?",
+    "createdAt" : "2022-03-01T09:58:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "LSTM Encoder for Multilingual",
+    "createdAt" : "2022-03-02T06:57:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "parser output token alignment with BERT tokens",
+    "createdAt" : "2022-03-13T23:06:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "A question about the initialization of biaffine module",
+    "createdAt" : "2022-03-31T07:32:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "How to get [('ROOT', 0, 2) phrase for Chinese?",
+    "createdAt" : "2022-04-03T12:37:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "How to retrain a pretrained model using checkpoint function",
+    "createdAt" : "2022-04-04T13:13:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Continuous Memory Accumulation",
+    "createdAt" : "2022-04-20T10:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Which UD treebanks were used for training?",
+    "createdAt" : "2022-04-26T06:41:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): M",
+    "createdAt" : "2022-06-02T06:13:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "requests.exceptions.ConnectionError: HTTPSConnectionPool",
+    "createdAt" : "2022-06-02T06:39:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Error------>Parser.load('biaffine-dep-zh')",
+    "createdAt" : "2022-06-02T07:18:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Local file paths being interpreted as URLs?",
+    "createdAt" : "2022-07-20T20:19:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Parenthesis are not parsable",
+    "createdAt" : "2022-08-09T10:04:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Calling predict() on tokenized list doesn't work as expected [vi-sdp-roberta-en]",
+    "createdAt" : "2022-09-12T16:44:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "the checkpoint of 'biaffine-dep-roberta-en' is unavailable",
+    "createdAt" : "2022-11-22T14:19:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "ValueError: unknown url type: 'biaffine-sdp-roberta-en'",
+    "createdAt" : "2022-11-24T11:16:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Error loading 'crf-con-roberta-en'",
+    "createdAt" : "2022-12-23T04:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "NLTK error when parsing sentences with unescaped parentheses.",
+    "createdAt" : "2022-12-28T04:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Custom Training for other languages model/dataset",
+    "createdAt" : "2023-01-16T03:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "About training Cons parsing with PTB dataset",
+    "createdAt" : "2023-01-16T03:44:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Is there a way to use `crf-con-roberta-en` with the latest version of the code?",
+    "createdAt" : "2023-02-15T15:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Parenthesis inside tokens are not parsable",
+    "createdAt" : "2023-04-13T07:23:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "使用biaffine训练中文数据的句法分析时报错",
+    "createdAt" : "2023-05-04T04:11:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "如何下载dep-biaffine-xlmr的checkpoint？",
+    "createdAt" : "2023-05-12T03:54:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "'con-crf-roberta-en' won't load ",
+    "createdAt" : "2023-05-23T21:55:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "low performance of  \"dep-biaffine-xlmr\"?",
+    "createdAt" : "2023-05-31T23:19:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "How to using checkpoint to predict",
+    "createdAt" : "2023-06-06T04:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "需要您的帮助",
+    "createdAt" : "2023-07-07T03:02:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Doc improvement",
+    "createdAt" : "2023-07-28T14:02:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Necessity to create a new release",
+    "createdAt" : "2023-07-28T14:07:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Missing AttachJuxtapose pre-trained weights",
+    "createdAt" : "2023-07-28T14:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Partial Parsing",
+    "createdAt" : "2023-09-28T17:56:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Constituency CRF RoBERTa English not working properly",
+    "createdAt" : "2023-10-05T10:12:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Constituency Multilinugal model not working properly ",
+    "createdAt" : "2023-10-09T08:53:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Submodule not found",
+    "createdAt" : "2023-10-19T15:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Unable to use \"biaffine-dep-roberta-en\"",
+    "createdAt" : "2023-11-16T15:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Global variable access Exception in data utils",
+    "createdAt" : "2023-11-22T16:10:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "训练新模型遇到问题",
+    "createdAt" : "2023-12-14T11:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Add verbose flag to remove progress_bar",
+    "createdAt" : "2023-12-24T16:47:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Missing word_embed with \"bert\" encoder",
+    "createdAt" : "2024-01-01T22:48:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "TypeError: code expected at most 16 arguments, got 19",
+    "createdAt" : "2024-03-18T06:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Error Loading Multilingual Dependency Parsing Model",
+    "createdAt" : "2024-05-27T13:32:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "训练数据格式是什么样的呢？",
+    "createdAt" : "2024-07-17T09:16:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "AttributeError: 'BertTokenizerFast' object has no attribute 'split_special_tokens'",
+    "createdAt" : "2024-10-01T02:41:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Inquiry About Triplet Parsing from Text",
+    "createdAt" : "2024-10-19T01:47:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "constituency parser training hangs on 'building the model' step",
+    "createdAt" : "2024-11-19T01:10:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "The code in README.md can't download models correctly.",
+    "createdAt" : "2024-11-27T02:43:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "模型无法导入",
+    "createdAt" : "2025-01-21T11:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "PyTorch 2.7.0 Issue",
+    "createdAt" : "2025-05-16T23:03:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Pytorch 2.6 does not allow model loading",
+    "createdAt" : "2025-11-01T09:15:51Z",
+    "state" : "CLOSED"
+  } ]
+}

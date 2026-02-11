@@ -1,0 +1,969 @@
+{
+  "repoOwner" : "Tivix",
+  "repoName" : "django-cron",
+  "forks" : [ {
+    "createdAt" : "2012-01-01T19:00:16Z"
+  }, {
+    "createdAt" : "2012-03-08T05:14:56Z"
+  }, {
+    "createdAt" : "2012-04-02T08:12:00Z"
+  }, {
+    "createdAt" : "2012-07-18T15:52:37Z"
+  }, {
+    "createdAt" : "2013-07-12T06:30:01Z"
+  }, {
+    "createdAt" : "2013-07-17T14:41:10Z"
+  }, {
+    "createdAt" : "2013-08-14T10:37:12Z"
+  }, {
+    "createdAt" : "2013-08-19T16:07:20Z"
+  }, {
+    "createdAt" : "2013-09-26T07:25:59Z"
+  }, {
+    "createdAt" : "2013-09-27T18:39:05Z"
+  }, {
+    "createdAt" : "2013-09-30T08:09:51Z"
+  }, {
+    "createdAt" : "2013-10-10T09:27:39Z"
+  }, {
+    "createdAt" : "2013-10-18T02:24:09Z"
+  }, {
+    "createdAt" : "2013-11-14T09:31:11Z"
+  }, {
+    "createdAt" : "2013-11-20T19:25:52Z"
+  }, {
+    "createdAt" : "2013-12-24T07:21:52Z"
+  }, {
+    "createdAt" : "2014-02-27T15:26:01Z"
+  }, {
+    "createdAt" : "2014-03-10T16:18:13Z"
+  }, {
+    "createdAt" : "2014-03-28T01:34:42Z"
+  }, {
+    "createdAt" : "2014-04-03T03:36:54Z"
+  }, {
+    "createdAt" : "2014-04-09T09:08:10Z"
+  }, {
+    "createdAt" : "2014-04-27T08:40:51Z"
+  }, {
+    "createdAt" : "2014-07-14T14:19:12Z"
+  }, {
+    "createdAt" : "2014-07-18T13:18:10Z"
+  }, {
+    "createdAt" : "2014-07-24T19:10:58Z"
+  }, {
+    "createdAt" : "2014-08-03T05:09:25Z"
+  }, {
+    "createdAt" : "2014-08-07T04:54:32Z"
+  }, {
+    "createdAt" : "2014-08-09T19:08:07Z"
+  }, {
+    "createdAt" : "2014-08-12T10:52:33Z"
+  }, {
+    "createdAt" : "2014-08-18T05:23:49Z"
+  }, {
+    "createdAt" : "2014-09-08T01:13:19Z"
+  }, {
+    "createdAt" : "2014-09-14T16:44:23Z"
+  }, {
+    "createdAt" : "2014-09-16T13:52:29Z"
+  }, {
+    "createdAt" : "2014-09-21T10:54:56Z"
+  }, {
+    "createdAt" : "2014-10-06T18:46:33Z"
+  }, {
+    "createdAt" : "2014-11-10T17:12:27Z"
+  }, {
+    "createdAt" : "2014-12-17T21:53:07Z"
+  }, {
+    "createdAt" : "2015-01-06T09:06:17Z"
+  }, {
+    "createdAt" : "2015-01-13T00:54:38Z"
+  }, {
+    "createdAt" : "2015-01-27T21:30:13Z"
+  }, {
+    "createdAt" : "2015-02-03T14:12:00Z"
+  }, {
+    "createdAt" : "2015-02-10T11:54:08Z"
+  }, {
+    "createdAt" : "2015-03-01T05:04:07Z"
+  }, {
+    "createdAt" : "2015-03-12T11:55:51Z"
+  }, {
+    "createdAt" : "2015-03-13T02:27:47Z"
+  }, {
+    "createdAt" : "2015-03-22T21:43:08Z"
+  }, {
+    "createdAt" : "2015-04-24T14:26:24Z"
+  }, {
+    "createdAt" : "2015-06-04T10:14:31Z"
+  }, {
+    "createdAt" : "2015-06-26T14:54:53Z"
+  }, {
+    "createdAt" : "2015-08-28T15:42:06Z"
+  }, {
+    "createdAt" : "2015-10-20T09:36:30Z"
+  }, {
+    "createdAt" : "2015-10-26T13:44:11Z"
+  }, {
+    "createdAt" : "2015-12-07T21:36:10Z"
+  }, {
+    "createdAt" : "2015-12-08T10:43:40Z"
+  }, {
+    "createdAt" : "2015-12-08T11:31:37Z"
+  }, {
+    "createdAt" : "2016-01-17T15:10:21Z"
+  }, {
+    "createdAt" : "2016-01-25T03:33:51Z"
+  }, {
+    "createdAt" : "2016-02-07T12:56:38Z"
+  }, {
+    "createdAt" : "2016-02-25T00:20:36Z"
+  }, {
+    "createdAt" : "2016-03-08T19:30:51Z"
+  }, {
+    "createdAt" : "2016-04-12T23:37:57Z"
+  }, {
+    "createdAt" : "2016-05-20T03:26:15Z"
+  }, {
+    "createdAt" : "2016-07-02T13:23:43Z"
+  }, {
+    "createdAt" : "2016-09-06T00:50:15Z"
+  }, {
+    "createdAt" : "2016-09-06T15:35:55Z"
+  }, {
+    "createdAt" : "2016-09-11T19:54:26Z"
+  }, {
+    "createdAt" : "2016-09-19T15:58:27Z"
+  }, {
+    "createdAt" : "2016-09-29T01:35:13Z"
+  }, {
+    "createdAt" : "2016-10-10T06:59:50Z"
+  }, {
+    "createdAt" : "2016-11-07T21:18:25Z"
+  }, {
+    "createdAt" : "2016-11-16T08:55:16Z"
+  }, {
+    "createdAt" : "2016-11-29T12:09:18Z"
+  }, {
+    "createdAt" : "2016-12-24T08:03:12Z"
+  }, {
+    "createdAt" : "2017-01-20T05:33:11Z"
+  }, {
+    "createdAt" : "2017-01-28T14:43:11Z"
+  }, {
+    "createdAt" : "2017-06-03T15:57:00Z"
+  }, {
+    "createdAt" : "2017-06-18T00:38:48Z"
+  }, {
+    "createdAt" : "2017-08-10T23:17:39Z"
+  }, {
+    "createdAt" : "2017-08-11T05:47:08Z"
+  }, {
+    "createdAt" : "2017-09-18T08:43:49Z"
+  }, {
+    "createdAt" : "2017-09-29T03:19:53Z"
+  }, {
+    "createdAt" : "2017-11-13T16:28:43Z"
+  }, {
+    "createdAt" : "2018-01-01T08:30:18Z"
+  }, {
+    "createdAt" : "2018-03-04T06:04:15Z"
+  }, {
+    "createdAt" : "2018-04-17T07:10:57Z"
+  }, {
+    "createdAt" : "2018-04-23T03:59:48Z"
+  }, {
+    "createdAt" : "2018-05-08T09:02:13Z"
+  }, {
+    "createdAt" : "2018-05-15T14:53:25Z"
+  }, {
+    "createdAt" : "2018-06-26T06:23:33Z"
+  }, {
+    "createdAt" : "2018-07-22T08:23:26Z"
+  }, {
+    "createdAt" : "2018-08-31T06:17:11Z"
+  }, {
+    "createdAt" : "2018-09-20T13:20:54Z"
+  }, {
+    "createdAt" : "2018-10-11T04:16:15Z"
+  }, {
+    "createdAt" : "2018-10-25T11:37:42Z"
+  }, {
+    "createdAt" : "2018-11-03T13:59:34Z"
+  }, {
+    "createdAt" : "2018-11-06T05:48:14Z"
+  }, {
+    "createdAt" : "2018-11-06T18:01:42Z"
+  }, {
+    "createdAt" : "2018-11-07T03:23:24Z"
+  }, {
+    "createdAt" : "2018-11-21T07:32:17Z"
+  }, {
+    "createdAt" : "2018-11-26T09:46:00Z"
+  }, {
+    "createdAt" : "2018-12-04T12:44:40Z"
+  }, {
+    "createdAt" : "2019-01-11T17:31:27Z"
+  }, {
+    "createdAt" : "2019-01-30T23:51:42Z"
+  }, {
+    "createdAt" : "2019-02-07T01:23:21Z"
+  }, {
+    "createdAt" : "2019-02-11T00:23:54Z"
+  }, {
+    "createdAt" : "2019-03-01T10:42:38Z"
+  }, {
+    "createdAt" : "2019-06-13T13:35:26Z"
+  }, {
+    "createdAt" : "2019-06-14T08:17:56Z"
+  }, {
+    "createdAt" : "2019-06-29T20:26:33Z"
+  }, {
+    "createdAt" : "2019-07-08T07:29:25Z"
+  }, {
+    "createdAt" : "2019-07-25T22:02:15Z"
+  }, {
+    "createdAt" : "2019-12-04T13:27:40Z"
+  }, {
+    "createdAt" : "2019-12-22T08:13:16Z"
+  }, {
+    "createdAt" : "2020-03-17T01:54:51Z"
+  }, {
+    "createdAt" : "2020-03-25T03:26:26Z"
+  }, {
+    "createdAt" : "2020-05-03T03:05:30Z"
+  }, {
+    "createdAt" : "2020-06-11T15:41:08Z"
+  }, {
+    "createdAt" : "2020-06-15T05:11:28Z"
+  }, {
+    "createdAt" : "2020-06-22T19:33:19Z"
+  }, {
+    "createdAt" : "2020-07-11T09:29:17Z"
+  }, {
+    "createdAt" : "2021-01-19T11:26:20Z"
+  }, {
+    "createdAt" : "2021-06-15T20:48:03Z"
+  }, {
+    "createdAt" : "2021-06-21T03:34:34Z"
+  }, {
+    "createdAt" : "2021-07-10T05:28:53Z"
+  }, {
+    "createdAt" : "2021-07-12T16:24:59Z"
+  }, {
+    "createdAt" : "2021-08-10T06:58:21Z"
+  }, {
+    "createdAt" : "2021-08-17T23:10:44Z"
+  }, {
+    "createdAt" : "2021-09-02T06:55:52Z"
+  }, {
+    "createdAt" : "2021-10-01T08:49:06Z"
+  }, {
+    "createdAt" : "2021-10-04T18:46:52Z"
+  }, {
+    "createdAt" : "2021-10-06T06:07:32Z"
+  }, {
+    "createdAt" : "2021-10-06T18:20:14Z"
+  }, {
+    "createdAt" : "2021-10-26T08:26:19Z"
+  }, {
+    "createdAt" : "2021-11-24T23:26:41Z"
+  }, {
+    "createdAt" : "2021-12-06T23:33:45Z"
+  }, {
+    "createdAt" : "2021-12-09T03:07:39Z"
+  }, {
+    "createdAt" : "2021-12-12T20:50:58Z"
+  }, {
+    "createdAt" : "2022-01-16T17:35:59Z"
+  }, {
+    "createdAt" : "2022-01-20T12:04:04Z"
+  }, {
+    "createdAt" : "2022-01-24T07:21:36Z"
+  }, {
+    "createdAt" : "2022-02-08T11:59:50Z"
+  }, {
+    "createdAt" : "2022-02-24T22:35:05Z"
+  }, {
+    "createdAt" : "2022-03-29T11:49:41Z"
+  }, {
+    "createdAt" : "2022-05-18T10:31:55Z"
+  }, {
+    "createdAt" : "2022-05-24T08:24:50Z"
+  }, {
+    "createdAt" : "2022-07-14T08:13:47Z"
+  }, {
+    "createdAt" : "2022-09-09T08:26:30Z"
+  }, {
+    "createdAt" : "2022-09-15T11:57:36Z"
+  }, {
+    "createdAt" : "2022-10-12T22:56:29Z"
+  }, {
+    "createdAt" : "2022-10-27T15:18:39Z"
+  }, {
+    "createdAt" : "2022-12-28T12:56:50Z"
+  }, {
+    "createdAt" : "2023-01-26T07:26:27Z"
+  }, {
+    "createdAt" : "2023-02-04T16:26:22Z"
+  }, {
+    "createdAt" : "2023-03-06T14:28:57Z"
+  }, {
+    "createdAt" : "2023-04-21T20:48:10Z"
+  }, {
+    "createdAt" : "2023-05-22T03:40:07Z"
+  }, {
+    "createdAt" : "2023-07-14T18:55:38Z"
+  }, {
+    "createdAt" : "2023-08-16T09:47:24Z"
+  }, {
+    "createdAt" : "2023-08-23T08:15:25Z"
+  }, {
+    "createdAt" : "2023-09-16T06:35:06Z"
+  }, {
+    "createdAt" : "2024-02-05T19:43:06Z"
+  }, {
+    "createdAt" : "2024-02-14T18:54:19Z"
+  }, {
+    "createdAt" : "2024-03-02T21:13:53Z"
+  }, {
+    "createdAt" : "2024-03-04T05:17:52Z"
+  }, {
+    "createdAt" : "2024-04-13T14:58:52Z"
+  }, {
+    "createdAt" : "2024-06-11T13:33:43Z"
+  }, {
+    "createdAt" : "2024-07-15T07:12:29Z"
+  }, {
+    "createdAt" : "2024-08-26T04:37:49Z"
+  }, {
+    "createdAt" : "2024-08-30T07:31:06Z"
+  }, {
+    "createdAt" : "2024-09-19T07:21:26Z"
+  }, {
+    "createdAt" : "2024-09-19T18:07:32Z"
+  }, {
+    "createdAt" : "2024-09-27T09:02:18Z"
+  }, {
+    "createdAt" : "2024-10-04T18:55:16Z"
+  }, {
+    "createdAt" : "2024-10-31T18:20:09Z"
+  }, {
+    "createdAt" : "2024-11-19T10:27:12Z"
+  }, {
+    "createdAt" : "2025-01-15T14:04:31Z"
+  }, {
+    "createdAt" : "2025-02-02T00:26:04Z"
+  }, {
+    "createdAt" : "2025-02-11T10:24:44Z"
+  }, {
+    "createdAt" : "2025-02-19T06:52:33Z"
+  }, {
+    "createdAt" : "2025-03-19T03:28:01Z"
+  }, {
+    "createdAt" : "2025-05-12T07:05:10Z"
+  }, {
+    "createdAt" : "2025-05-19T09:37:50Z"
+  }, {
+    "createdAt" : "2025-05-22T09:30:37Z"
+  }, {
+    "createdAt" : "2025-06-04T13:54:01Z"
+  }, {
+    "createdAt" : "2025-07-24T03:36:56Z"
+  }, {
+    "createdAt" : "2025-09-11T09:09:27Z"
+  }, {
+    "createdAt" : "2025-09-28T07:45:08Z"
+  }, {
+    "createdAt" : "2025-11-11T17:29:04Z"
+  }, {
+    "createdAt" : "2026-01-20T04:46:02Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "South migration is broken",
+    "createdAt" : "2011-04-05T12:15:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "South Dependency is Too Strict",
+    "createdAt" : "2011-04-27T18:21:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "The CronJobManager doesn't check is the job is running",
+    "createdAt" : "2011-05-14T16:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "pip can not install django-cron",
+    "createdAt" : "2012-04-19T04:38:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Can't run a job at specified time",
+    "createdAt" : "2012-04-25T16:29:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Timezone errors",
+    "createdAt" : "2012-04-28T01:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Run cron once a week / a month",
+    "createdAt" : "2012-10-11T12:16:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "How to make a fail run?",
+    "createdAt" : "2013-02-26T07:00:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "how to write CRON_CLASSES = [     \"my_app.cron.MyCronJob\"]",
+    "createdAt" : "2013-02-28T09:08:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "how to run a cron many times",
+    "createdAt" : "2013-03-01T03:51:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Pull Request: logging to message",
+    "createdAt" : "2013-03-22T07:51:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Not working",
+    "createdAt" : "2013-04-19T16:06:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Make sure these are valid cron class names",
+    "createdAt" : "2013-05-14T09:11:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "runcrons is once-and-for-all?",
+    "createdAt" : "2013-07-15T00:11:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "DateTimeField received a naive datetime while time zone support is active.",
+    "createdAt" : "2013-08-22T13:39:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "How does this work in a distributed environment?",
+    "createdAt" : "2013-10-29T22:07:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Not starting schedule jobs every 2 minutes",
+    "createdAt" : "2014-01-13T15:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Unlike documented, django-cron is not Django 1.4 compatible",
+    "createdAt" : "2014-02-27T15:23:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Django 1.7 ImportError on runcrons.py management command",
+    "createdAt" : "2014-08-18T15:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Multiple CronJobBase running when ALLOW_PARALLEL_RUNS is set to False",
+    "createdAt" : "2015-01-02T10:23:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Django 1.7 compatibility",
+    "createdAt" : "2015-01-08T10:27:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "ImportError: No module named 'base'",
+    "createdAt" : "2015-01-21T03:09:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Find out how much time is left before next cronjob run?",
+    "createdAt" : "2015-03-10T15:06:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Django 1.8 Compatibility ",
+    "createdAt" : "2015-04-09T01:28:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "There should be setting to purge old record from cron log",
+    "createdAt" : "2015-05-04T13:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Incorrect RUN_AT_TIMES with different Time Zone",
+    "createdAt" : "2015-05-15T17:22:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "No handlers could be found for logger \"django_cron\"",
+    "createdAt" : "2015-06-02T07:55:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Warning on Django 1.8",
+    "createdAt" : "2015-06-02T08:01:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "In doubt",
+    "createdAt" : "2015-06-08T02:42:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Model class django_cron.models.CronJobLog doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS",
+    "createdAt" : "2015-07-05T12:51:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Submit 0.4.3 to PyPi",
+    "createdAt" : "2015-07-16T04:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "changelog.rst in repo is not reflected on Readthedocs",
+    "createdAt" : "2015-08-19T11:39:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Question about calling runcrons while a previous job is happening",
+    "createdAt" : "2015-09-10T13:35:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Django 1.9 compatibility",
+    "createdAt" : "2015-12-05T14:15:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Move django_cron/__init__.py code to helper.py and core.py respectively?",
+    "createdAt" : "2015-12-09T02:50:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Error in file locking backend with python 3",
+    "createdAt" : "2015-12-15T22:24:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "optparse.make_option method is deprecated in Django 1.10",
+    "createdAt" : "2016-01-02T02:25:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "ImportError: No module named 'django-cron'",
+    "createdAt" : "2016-01-17T07:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Testing if datetime is aware fails",
+    "createdAt" : "2016-02-21T10:15:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "django_cron stops working if date will be (temporary, by error, etc) in future.",
+    "createdAt" : "2016-03-15T15:19:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Is it possible to \"log\"/write to the \"Messages\" field of the cron log entries?",
+    "createdAt" : "2016-03-20T10:13:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Can't run the task at second time",
+    "createdAt" : "2016-03-23T04:14:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Deprecated",
+    "createdAt" : "2016-04-12T05:45:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Error 500 on sorting by duration time on admin panel",
+    "createdAt" : "2016-05-12T14:56:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Failed Cron task continuously running if task is failed",
+    "createdAt" : "2016-05-24T14:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Not able to configure cron to run every minute",
+    "createdAt" : "2016-08-30T10:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Scheduling with run_at_times and crontab entry",
+    "createdAt" : "2016-11-13T12:26:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Cronjob is run every time runcrons is called",
+    "createdAt" : "2016-11-14T10:48:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "support django admin ?",
+    "createdAt" : "2016-11-17T06:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Remove succeeded cron job",
+    "createdAt" : "2016-12-02T10:09:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Can't create or update object",
+    "createdAt" : "2016-12-15T02:52:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Add dry-run functionality to aid development",
+    "createdAt" : "2016-12-27T19:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Improve the FailedRunsNotificationCronJob to be more resilient",
+    "createdAt" : "2016-12-27T20:05:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 108,
+    "title" : "CRON_CLASSES could be checked with a django's system check framework",
+    "createdAt" : "2017-01-06T12:28:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 112,
+    "title" : "Cronjob RUN_EVERY_MINS=1 not actually running every minute",
+    "createdAt" : "2017-03-12T01:22:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Is it possible to have a django cronjob only be ondemand?",
+    "createdAt" : "2017-03-12T01:38:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Database Locking Backend",
+    "createdAt" : "2017-03-23T19:21:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "retry_after_failure_mins not respected when only run_at_times is set",
+    "createdAt" : "2017-03-29T05:13:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Logging on Exceptions",
+    "createdAt" : "2017-07-24T07:56:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 118,
+    "title" : "Multiple cron job not executed",
+    "createdAt" : "2017-07-28T08:13:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "why did I get FailedRunsNotificationCronJob?",
+    "createdAt" : "2017-08-11T18:46:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 120,
+    "title" : "Warning still needed?",
+    "createdAt" : "2017-09-22T05:45:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Do you recommend celery?",
+    "createdAt" : "2017-09-22T05:48:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Feature request : ./manage.py runcrons --loop",
+    "createdAt" : "2017-10-05T19:40:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Error saving cronjob log message",
+    "createdAt" : "2017-10-10T00:45:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Doesn't run task",
+    "createdAt" : "2017-10-14T04:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Intermittent exceptions",
+    "createdAt" : "2017-10-23T14:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "RUN_ON_DAYS",
+    "createdAt" : "2017-11-01T15:28:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "No python errors displayed inside cron classes file",
+    "createdAt" : "2017-11-06T10:56:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "getting /bin/sh: 1: source: not found",
+    "createdAt" : "2017-11-09T16:02:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Run Cron Job without Crontab",
+    "createdAt" : "2017-11-18T23:30:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Global var inside do function?",
+    "createdAt" : "2017-11-21T22:39:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Parallel cronjobs spawned without configuring",
+    "createdAt" : "2017-11-26T00:06:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Set user_time for RUN_AT_TIMES",
+    "createdAt" : "2017-11-28T11:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Disable Crons",
+    "createdAt" : "2017-12-21T02:28:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Cache backend locking - error with failure at redis (probably) replication.",
+    "createdAt" : "2018-01-09T13:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Can I update cron frequency based on a database value?",
+    "createdAt" : "2018-02-09T01:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Project is abandoned",
+    "createdAt" : "2018-06-01T16:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Job costing more time than cron interval?",
+    "createdAt" : "2018-09-03T15:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Cache Using Unique Code as Key",
+    "createdAt" : "2018-09-05T00:11:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Unsure how to log exceptions caught by django_cron",
+    "createdAt" : "2018-10-11T22:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "using django-cron service autorun is possible in windows10",
+    "createdAt" : "2018-11-14T10:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Windows path not found for django_crontab",
+    "createdAt" : "2018-11-14T12:39:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "call service every 2 minutes without run \"python manage.py runcorns\" command everytime",
+    "createdAt" : "2018-11-15T06:40:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Sending email failed cause error response",
+    "createdAt" : "2018-11-20T05:59:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Cron message length either should be configurable or not restricted",
+    "createdAt" : "2019-02-08T21:27:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Run weekly",
+    "createdAt" : "2019-04-01T19:48:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Error 500 on sorting by duration time on admin panel (again)",
+    "createdAt" : "2019-12-05T06:46:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Cron tasks not being spawned",
+    "createdAt" : "2020-02-26T23:42:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Is this project abandoned?",
+    "createdAt" : "2020-04-03T10:09:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Scheduled cron job are not running automatically in docker.",
+    "createdAt" : "2020-05-13T10:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Is it possible to use without a local database?",
+    "createdAt" : "2020-09-26T02:33:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Increase MAX_MESSAGE_LENGTH = 1000",
+    "createdAt" : "2021-02-22T22:24:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "django-cron only working with --force",
+    "createdAt" : "2021-04-08T05:41:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "file lock mechanism breaking in django3.2",
+    "createdAt" : "2021-05-05T10:25:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "New version release?",
+    "createdAt" : "2021-05-06T08:44:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "`django.utils.translation.ugettext_lazy` is deprecated and will be removed in 4.0",
+    "createdAt" : "2021-06-26T12:23:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Wrong depreciation message in README",
+    "createdAt" : "2021-11-03T09:27:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Maintained or not maintained - that's the question.",
+    "createdAt" : "2022-05-13T19:33:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Settinng up on docker alpine image",
+    "createdAt" : "2022-06-29T12:45:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 217,
+    "title" : "Is this project deprecated or maintained?",
+    "createdAt" : "2022-07-15T14:43:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 219,
+    "title" : "Run monthly",
+    "createdAt" : "2022-08-17T12:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "File lock backend doesn't lock",
+    "createdAt" : "2022-08-30T04:13:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 222,
+    "title" : "CronJobBase is running twice while running cron job every minute",
+    "createdAt" : "2022-09-23T08:17:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "documentation still at version 0.51",
+    "createdAt" : "2022-12-22T08:41:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "Duplicate runs using default cache lock",
+    "createdAt" : "2023-01-03T13:32:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 232,
+    "title" : "Cron skips minutes",
+    "createdAt" : "2023-05-20T06:22:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 234,
+    "title" : "Issue with run_at_times",
+    "createdAt" : "2023-07-21T12:54:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 237,
+    "title" : "Pending migrations",
+    "createdAt" : "2023-08-16T18:42:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 238,
+    "title" : "add license in setup.py for pip-license parser",
+    "createdAt" : "2023-08-24T10:20:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 239,
+    "title" : "Add --slient flag to cronloop command.",
+    "createdAt" : "2023-09-16T05:40:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 241,
+    "title" : "get_time_until_run in core.py gives an error",
+    "createdAt" : "2023-10-06T19:55:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 242,
+    "title" : "Error with run weekly feature",
+    "createdAt" : "2023-10-15T12:33:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 243,
+    "title" : "Error with database cron job locks",
+    "createdAt" : "2023-11-14T15:11:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Error after upgrade to 0.6.0",
+    "createdAt" : "2024-02-13T23:46:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 248,
+    "title" : "Base models from the lib are not using the correct timezone",
+    "createdAt" : "2024-07-01T15:18:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "TypeError: 'class Meta' got invalid attribute(s): index_together with Django 5.1",
+    "createdAt" : "2024-08-28T11:58:38Z",
+    "state" : "OPEN"
+  } ]
+}

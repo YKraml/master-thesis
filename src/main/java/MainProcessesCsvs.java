@@ -12,8 +12,8 @@ public class MainProcessesCsvs {
         Injector injector = Guice.createInjector(new GuiceModule());
         TimeSeriesCsvCreator timeSeriesCsvCreator = injector.getInstance(TimeSeriesCsvCreator.class);
         CemPairCsvCreator cemPairCsvCreator = injector.getInstance(CemPairCsvCreator.class);
-        
-        timeSeriesCsvCreator.startCreatingCsvs();
+
         cemPairCsvCreator.startCreatingCsvs();
+        timeSeriesCsvCreator.startCreatingCsvs();
     }
 }

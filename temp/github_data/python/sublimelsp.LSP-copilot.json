@@ -1,0 +1,767 @@
+{
+  "repoOwner" : "sublimelsp",
+  "repoName" : "LSP-copilot",
+  "forks" : [ {
+    "createdAt" : "2022-07-12T16:33:37Z"
+  }, {
+    "createdAt" : "2022-07-25T02:35:27Z"
+  }, {
+    "createdAt" : "2022-11-17T22:41:46Z"
+  }, {
+    "createdAt" : "2022-12-27T16:26:49Z"
+  }, {
+    "createdAt" : "2023-03-23T07:33:34Z"
+  }, {
+    "createdAt" : "2023-03-26T03:29:54Z"
+  }, {
+    "createdAt" : "2023-03-30T17:34:35Z"
+  }, {
+    "createdAt" : "2023-04-10T02:48:01Z"
+  }, {
+    "createdAt" : "2023-04-19T04:57:53Z"
+  }, {
+    "createdAt" : "2023-05-12T06:36:23Z"
+  }, {
+    "createdAt" : "2023-05-28T08:47:39Z"
+  }, {
+    "createdAt" : "2023-05-30T07:29:34Z"
+  }, {
+    "createdAt" : "2023-08-14T12:00:17Z"
+  }, {
+    "createdAt" : "2023-08-21T15:06:47Z"
+  }, {
+    "createdAt" : "2023-10-19T16:24:23Z"
+  }, {
+    "createdAt" : "2023-10-21T11:18:54Z"
+  }, {
+    "createdAt" : "2023-10-30T07:55:37Z"
+  }, {
+    "createdAt" : "2023-10-31T17:36:41Z"
+  }, {
+    "createdAt" : "2023-12-11T10:55:14Z"
+  }, {
+    "createdAt" : "2023-12-21T08:14:32Z"
+  }, {
+    "createdAt" : "2024-01-06T16:32:27Z"
+  }, {
+    "createdAt" : "2024-02-09T11:19:02Z"
+  }, {
+    "createdAt" : "2024-04-17T15:38:41Z"
+  }, {
+    "createdAt" : "2024-09-23T07:45:36Z"
+  }, {
+    "createdAt" : "2024-11-04T02:38:22Z"
+  }, {
+    "createdAt" : "2024-12-21T18:49:56Z"
+  }, {
+    "createdAt" : "2024-12-28T07:10:54Z"
+  }, {
+    "createdAt" : "2025-01-27T06:34:28Z"
+  }, {
+    "createdAt" : "2025-02-22T12:17:43Z"
+  }, {
+    "createdAt" : "2025-03-13T06:05:38Z"
+  }, {
+    "createdAt" : "2025-05-04T01:02:53Z"
+  }, {
+    "createdAt" : "2025-06-08T08:15:49Z"
+  }, {
+    "createdAt" : "2025-10-28T14:31:49Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Move handler into ViewListener",
+    "createdAt" : "2022-06-26T21:27:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "What does `tabSize`, `indentSize` and `insertSpaces` actually mean?",
+    "createdAt" : "2022-07-06T13:55:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Completions missing ability to be cycled",
+    "createdAt" : "2022-07-14T11:46:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "And... how to sign in?",
+    "createdAt" : "2022-07-16T00:48:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "`Tab` key (for Copilot completion) is conflicting in different situations.",
+    "createdAt" : "2022-07-16T04:41:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Add a readme",
+    "createdAt" : "2022-07-16T04:49:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Missing getpanelcompletions",
+    "createdAt" : "2022-07-17T17:15:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Missing `NoTelemetryConsent` logic for users missing Telemetry",
+    "createdAt" : "2022-07-19T17:09:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Missing logical for `Check Status`",
+    "createdAt" : "2022-07-19T17:11:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Copilot Command Implementation Tracker",
+    "createdAt" : "2022-07-19T17:18:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Copilot: Sign In command has disappeared",
+    "createdAt" : "2022-07-22T15:05:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "`Esc` executes `copilot_reject_completion` when there is no visible Copilot suggestion",
+    "createdAt" : "2022-07-26T06:42:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "PHP completions need leading `<?php` to be highlighted properly",
+    "createdAt" : "2022-07-27T12:39:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Embedded languages are unable to highlight correctly",
+    "createdAt" : "2022-07-27T15:24:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Do we want to maintain `PACKAGE_VERSION` constant manually?",
+    "createdAt" : "2022-07-27T20:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Implement Copilot Settings",
+    "createdAt" : "2022-07-29T19:22:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Payload cancelled by server?",
+    "createdAt" : "2022-08-01T09:05:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "README vs Keymap",
+    "createdAt" : "2022-08-02T12:50:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Copilot.vim 1.5.0",
+    "createdAt" : "2022-08-14T17:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "lsp-copilot package seems to freeze sublime text 4",
+    "createdAt" : "2022-08-16T10:00:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Handle text changes when phantom completion is visible",
+    "createdAt" : "2022-08-17T13:19:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 53,
+    "title" : "Split the display text into regions and display with multiple phantoms",
+    "createdAt" : "2022-08-17T13:23:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 54,
+    "title" : "Cursor jumps when completion_style is phantom",
+    "createdAt" : "2022-08-17T13:28:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 55,
+    "title" : "Completion is dispalyed after `lsp_save` command",
+    "createdAt" : "2022-08-17T13:30:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Wrong background colour when a multi-line phantom completion is dispalyed",
+    "createdAt" : "2022-08-17T13:33:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 58,
+    "title" : "`Copilot: Sign In` is missing from the command palette ",
+    "createdAt" : "2022-08-21T13:22:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Request copilot from command line",
+    "createdAt" : "2022-10-13T00:20:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Failed to start LSP-copilot - disabling for this window for the duration of the current session. Re-enable by running \"LSP: Enable Language Server In Project\" from the Command Palette.",
+    "createdAt" : "2022-10-31T07:24:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Unable to get issuer cert locally",
+    "createdAt" : "2022-11-07T09:44:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "How to stop the suggestion popup from appearing automatically?",
+    "createdAt" : "2022-12-08T00:24:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Copilot completes on tab despite rebinding copilot_accept_completion",
+    "createdAt" : "2022-12-19T09:20:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "NPM cert issue",
+    "createdAt" : "2023-01-09T12:57:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Invalid params: /doc must have required property 'version'",
+    "createdAt" : "2023-01-20T10:43:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "ImportError: No module named 'LSP'",
+    "createdAt" : "2023-02-07T06:07:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Completion Panel specify # of completions",
+    "createdAt" : "2023-02-16T23:30:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Complete word by word",
+    "createdAt" : "2023-02-16T23:32:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 87,
+    "title" : "Completion popup only shows first line",
+    "createdAt" : "2023-02-22T17:10:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Keybinding for opening/closing suggestion panel",
+    "createdAt" : "2023-02-23T12:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "failed to register session LSP-copilot to listener ViewListener(31)",
+    "createdAt" : "2023-02-25T07:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "after i install the package i dont get a Copilot: Sign In option in the console",
+    "createdAt" : "2023-03-11T04:16:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Not working at all?",
+    "createdAt" : "2023-03-15T14:20:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 94,
+    "title" : "HTTP proxy not working",
+    "createdAt" : "2023-03-16T11:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "self-signed certificate in certificate chain",
+    "createdAt" : "2023-03-20T14:54:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Install LSP and LSP-copilot",
+    "createdAt" : "2023-03-24T16:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Is .gitignore respected?",
+    "createdAt" : "2023-03-27T21:57:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Will it be possible to accommodate Copilot X's chat interface?",
+    "createdAt" : "2023-03-28T17:20:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "\"NodeJS version requirement failed. Expected >= 16, got 15.5.0.\"",
+    "createdAt" : "2023-04-12T13:38:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "No Copilot suggestions if same file is opened in a separate pane (i.e. Sublime \"column\")?",
+    "createdAt" : "2023-04-19T16:32:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "No (documented) way to disable it for certain filetypes",
+    "createdAt" : "2023-05-08T21:37:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Not working: completions is always empty",
+    "createdAt" : "2023-05-12T18:19:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Incompatible with any sublime-workspace?",
+    "createdAt" : "2023-05-20T17:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Settings documentation",
+    "createdAt" : "2023-06-01T09:59:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Incompatibility between LSP-copilot and LSP-ruff",
+    "createdAt" : "2023-06-01T12:21:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Unofficial specs for Github Copilot plugin-agent.js interactions",
+    "createdAt" : "2023-06-19T12:02:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Failed resolving Node.js Runtime",
+    "createdAt" : "2023-06-20T18:47:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Investigate how to supported dedicated Copilot Environments (Org Tenants)",
+    "createdAt" : "2023-06-26T15:24:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "popup width",
+    "createdAt" : "2023-08-07T15:10:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 120,
+    "title" : "LSP-Copilot not working!",
+    "createdAt" : "2023-08-29T21:51:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "How can I start the Copilot LSP server?",
+    "createdAt" : "2023-09-05T06:39:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Unable to see Copilot: Sign in on command palette",
+    "createdAt" : "2023-09-29T11:39:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "How to turn Github Copilot off in one file or turn it off temporarily?  ",
+    "createdAt" : "2023-10-30T01:38:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "does it support sublime text3?",
+    "createdAt" : "2023-11-23T04:19:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Suggestion: key for closing the suggestions panel",
+    "createdAt" : "2024-01-01T11:10:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Question: is there any keybindings for choosing the next suggestion?",
+    "createdAt" : "2024-01-31T03:55:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Error: \"Failed resolving Node.js Runtime. Please see Sublime Text console for more information.\"",
+    "createdAt" : "2024-02-24T09:03:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "How to trigger manually?",
+    "createdAt" : "2024-02-27T17:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "How often does copilot.vim get updated?",
+    "createdAt" : "2024-03-03T16:37:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Completing when I press tab, even though hook_to_auto_complete_command is false",
+    "createdAt" : "2024-03-08T21:24:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "TAB key still accepts completion when other key is chosen in config.",
+    "createdAt" : "2024-03-17T16:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Is there any option to turn it off for current file or specific file extensions?",
+    "createdAt" : "2024-04-04T19:15:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 146,
+    "title" : "`copilot.is_on_completion` context is not working",
+    "createdAt" : "2024-04-12T03:20:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "gemini support?",
+    "createdAt" : "2024-05-03T08:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "LSP-copilot options not available in command palette",
+    "createdAt" : "2024-05-14T17:08:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "\"KeyError\" when using phantom",
+    "createdAt" : "2024-05-15T07:22:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "In \"panel completion\", `Mean Probability` seems to be always `0`",
+    "createdAt" : "2024-05-17T20:31:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Can't sign out",
+    "createdAt" : "2024-05-28T23:00:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Microsoft copilot?",
+    "createdAt" : "2024-05-29T20:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "No module named 'more_itertools' since reinstalling LSP-copilot plugin",
+    "createdAt" : "2024-06-03T22:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "No pop ups or phantom suggestions - what am I missing? ",
+    "createdAt" : "2024-06-12T11:12:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Argument list too long; env multiplies with windows",
+    "createdAt" : "2024-06-13T15:41:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Visual feedback that LSP-copilot is busy",
+    "createdAt" : "2024-06-18T08:16:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Error: No instance of WorkspaceWatcherProvider has been registered",
+    "createdAt" : "2024-06-20T14:11:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : ".copilotignore extension wide, folder independent",
+    "createdAt" : "2024-07-03T23:59:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 180,
+    "title" : "Add a few examples?",
+    "createdAt" : "2024-07-11T12:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Delete turn fails if race condition due to `[index+1]` logic",
+    "createdAt" : "2024-07-12T13:34:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Follow up link rendering / command issue",
+    "createdAt" : "2024-07-12T13:36:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "spinner / other loading indicator",
+    "createdAt" : "2024-07-12T15:39:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "byok / anthropic claude",
+    "createdAt" : "2024-07-12T15:40:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Copilot chat",
+    "createdAt" : "2024-07-13T01:09:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Copilot spams Sublime Text log with minihtml errors when generating `html`",
+    "createdAt" : "2024-07-14T16:54:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "How to change the color of the follow up link?",
+    "createdAt" : "2024-07-15T11:46:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "VSCode command mirroring",
+    "createdAt" : "2024-07-22T22:21:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 196,
+    "title" : "`/explain` (and others) doesn't seem to work",
+    "createdAt" : "2024-08-13T02:31:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "HTMLSheets commands don't work occasionally",
+    "createdAt" : "2024-08-14T14:48:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Error: \"The LSP-copilot server has crashed 5 times in the last 180 seconds. You can try to Restart it or you can choose Cancel to disable it for this window for the duration of the current session. Re-enable by running \"LSP: Enable Language Server In Project\" from the Command Palette.\"",
+    "createdAt" : "2024-09-01T06:33:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Chat disappears",
+    "createdAt" : "2024-09-09T07:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Github enterprise configuration appears to not work correctly",
+    "createdAt" : "2024-09-16T14:53:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 208,
+    "title" : "Does not play nice with Origami",
+    "createdAt" : "2024-09-19T19:36:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 210,
+    "title" : "Cannot run LSP-copilot.",
+    "createdAt" : "2024-09-27T09:01:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Does it Use Open Tabs?   Needs documentation",
+    "createdAt" : "2024-10-05T20:48:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 212,
+    "title" : "Sometimes copilot chat generates infinitely",
+    "createdAt" : "2024-10-08T08:25:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Model switcher",
+    "createdAt" : "2024-10-29T17:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Selecting text in copilot chat",
+    "createdAt" : "2024-11-07T03:14:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "No sign in popup on WSL",
+    "createdAt" : "2024-11-18T16:04:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "New line at the end of suggestions",
+    "createdAt" : "2024-11-19T14:21:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 218,
+    "title" : "Error when no avatar",
+    "createdAt" : "2024-11-29T19:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "[Feature request] Option to open copilot chat/completions in other places",
+    "createdAt" : "2024-11-30T09:49:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "LSP Copilot chat, stops working",
+    "createdAt" : "2024-12-02T14:35:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 222,
+    "title" : "LSP Copilot stopped working",
+    "createdAt" : "2024-12-12T03:04:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Stops working after last update 12 Dic",
+    "createdAt" : "2024-12-12T06:26:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Cause crash on Windows",
+    "createdAt" : "2024-12-13T18:03:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Stopped working entirely",
+    "createdAt" : "2024-12-21T13:40:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "LSP-Copilot is not on \"Package Control: Install Package\" list",
+    "createdAt" : "2025-01-05T22:36:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Copilot commands not showing up",
+    "createdAt" : "2025-01-10T07:12:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Question about doing similar for TabNine",
+    "createdAt" : "2025-01-11T03:02:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 231,
+    "title" : "Is this a general purpose LSP or is it \"tweaked and fitted\" to sublime? :)",
+    "createdAt" : "2025-01-20T15:45:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 232,
+    "title" : "No Suggestions in New Tab (Untitled File)",
+    "createdAt" : "2025-01-31T10:38:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 233,
+    "title" : "Cannot select text from copilot chat window.",
+    "createdAt" : "2025-02-03T13:25:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 234,
+    "title" : "Support for other models than GPT-4, now that Copilot allows it in VSCode ?",
+    "createdAt" : "2025-02-04T22:21:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Migrate to @github/copilot-language-server",
+    "createdAt" : "2025-02-05T02:54:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Is there any chance to setup plugin with ollama-copilot",
+    "createdAt" : "2025-02-13T20:26:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 238,
+    "title" : "Commands only show in one window",
+    "createdAt" : "2025-04-09T05:57:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Copilot Chat Window Keeps Closing",
+    "createdAt" : "2025-04-17T15:07:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 240,
+    "title" : "Size and wrapping issue in autocomplete popup",
+    "createdAt" : "2025-05-12T14:19:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 241,
+    "title" : "\"Open Panel Completions\" does not open the panel when not in the leftmost column",
+    "createdAt" : "2025-05-21T08:02:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 242,
+    "title" : "Unable to Sign in to Copilot",
+    "createdAt" : "2025-05-21T09:04:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 243,
+    "title" : "Sublime console has error messages",
+    "createdAt" : "2025-06-01T15:28:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "feat: add context menu to access to Github Copilot features easily",
+    "createdAt" : "2025-06-08T06:33:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Where is the location of chat sessions?",
+    "createdAt" : "2025-08-11T07:25:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 246,
+    "title" : "How to add context in the chat panel",
+    "createdAt" : "2025-08-30T01:45:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 247,
+    "title" : "LSP-copilot: ERROR: [streamChoices] Request id invalid, should have \"completionId\" and \"created\"",
+    "createdAt" : "2025-09-30T12:36:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "\"Modernize\" the suggestions dialog",
+    "createdAt" : "2025-12-29T23:53:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 249,
+    "title" : "Can't disable auto-completion suggestions",
+    "createdAt" : "2026-01-03T00:18:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Noisy chat output",
+    "createdAt" : "2026-02-05T12:28:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 251,
+    "title" : "Move to sublimelsp?",
+    "createdAt" : "2026-02-05T14:06:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Dependency Dashboard",
+    "createdAt" : "2026-02-05T15:03:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 262,
+    "title" : "No handling for 4xx response",
+    "createdAt" : "2026-02-08T21:37:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 263,
+    "title" : "feat: have ability to select model",
+    "createdAt" : "2026-02-10T02:52:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 265,
+    "title" : "Random issue/annoyences",
+    "createdAt" : "2026-02-10T07:31:52Z",
+    "state" : "OPEN"
+  } ]
+}

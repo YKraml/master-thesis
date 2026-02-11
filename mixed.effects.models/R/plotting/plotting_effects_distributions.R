@@ -3,7 +3,9 @@
 plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_title) {
 
   # 1. Run Statistical Test (Welch Two Sample t-test)
-  test_res <- t.test(vals_treated, vals_control)
+
+
+  test_res <- t.test(vals_treated, vals_control, alternative = "less")
 
   # Extract stats for the text box
   mean_control <- mean(vals_control, na.rm = TRUE)
@@ -20,7 +22,7 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   stats_text <- paste0(
     "Control Mean: ", round(mean_control, 3), "\n",
     "Treated Mean: ", round(mean_treated, 3), "\n",
-    "p ", fmt_p(pval), "\n",
+    "p ", fmt_p(pval), " (one-sided less)\n",
     "n(C) = ", n_control, ", n(T) = ", n_treated
   )
 

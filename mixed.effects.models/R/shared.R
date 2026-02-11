@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------------
 library(data.table)
 
-get_data <- function(folderName, transition_n_days) {
-  files <- list.files(file.path("data/time_series", folderName),
+get_data <- function(language, group, transition_n_days) {
+  files <- list.files(file.path("data", language, "time_series", group),
                       pattern = "\\.csv$",
                       full.names = TRUE,
                       recursive = TRUE)
@@ -11,19 +11,21 @@ get_data <- function(folderName, transition_n_days) {
     dt <- fread(file)
     dt <- na.omit(dt)
 
+    # create new columns
     dt$t_norm <- dt$t_day / 365
     dt$base_slope <- dt$t_day / 365
     dt$intervention_slope <- dt$t_day / 365 * dt$intervention
     dt$intervention_jump <- dt$intervention
 
-    # Delete this line later
-    dt$relative_introduction_time <- dt$relative_introduction_time
-
+    # some filtering
     dt$intervention_jump[dt$t_day == 0] <- 0
-
     dt[, c("intervention") := NULL]
     dt <- dt[dt$relative_introduction_time >= 0, ]
     dt <- dt[dt$t_day <= 0 | t_day >= transition_n_days]
+
+    # add some columns for potential interactions
+    dt$time_saturated <- 1 - exp(-1 * dt$relative_introduction_time)
+    dt$log_time <- log(dt$relative_introduction_time + 1)
 
     return(dt)
   }

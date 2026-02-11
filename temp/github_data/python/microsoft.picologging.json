@@ -1,0 +1,430 @@
+{
+  "repoOwner" : "microsoft",
+  "repoName" : "picologging",
+  "forks" : [ {
+    "createdAt" : "2022-06-22T06:25:06Z"
+  }, {
+    "createdAt" : "2022-06-22T06:52:30Z"
+  }, {
+    "createdAt" : "2022-06-22T08:55:22Z"
+  }, {
+    "createdAt" : "2022-06-25T07:20:42Z"
+  }, {
+    "createdAt" : "2022-06-25T10:46:03Z"
+  }, {
+    "createdAt" : "2022-07-13T09:56:24Z"
+  }, {
+    "createdAt" : "2022-07-20T10:27:16Z"
+  }, {
+    "createdAt" : "2022-07-24T04:37:15Z"
+  }, {
+    "createdAt" : "2022-08-03T03:07:04Z"
+  }, {
+    "createdAt" : "2022-08-17T07:45:31Z"
+  }, {
+    "createdAt" : "2022-08-18T16:21:43Z"
+  }, {
+    "createdAt" : "2022-09-21T04:57:31Z"
+  }, {
+    "createdAt" : "2022-10-12T00:41:41Z"
+  }, {
+    "createdAt" : "2022-12-03T17:34:33Z"
+  }, {
+    "createdAt" : "2023-03-02T16:29:07Z"
+  }, {
+    "createdAt" : "2023-04-19T19:30:40Z"
+  }, {
+    "createdAt" : "2023-09-29T17:43:36Z"
+  }, {
+    "createdAt" : "2023-11-04T18:05:48Z"
+  }, {
+    "createdAt" : "2024-02-23T13:45:37Z"
+  }, {
+    "createdAt" : "2024-04-22T17:48:38Z"
+  }, {
+    "createdAt" : "2024-10-10T14:01:22Z"
+  }, {
+    "createdAt" : "2024-12-19T23:59:31Z"
+  }, {
+    "createdAt" : "2025-04-28T21:23:06Z"
+  }, {
+    "createdAt" : "2025-05-24T13:45:42Z"
+  }, {
+    "createdAt" : "2025-08-01T13:16:39Z"
+  }, {
+    "createdAt" : "2025-10-16T14:00:07Z"
+  }, {
+    "createdAt" : "2025-11-26T06:43:42Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "See if there is a performant way to get the process name.",
+    "createdAt" : "2022-06-21T06:51:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2,
+    "title" : "See if there is a performant way to get the thread name.",
+    "createdAt" : "2022-06-21T06:51:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3,
+    "title" : "Cap vector size or decide on a better map type.",
+    "createdAt" : "2022-06-21T06:52:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4,
+    "title" : "handle error path (see handleError(record))",
+    "createdAt" : "2022-06-21T06:52:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5,
+    "title" : "Implement percentage style validation.",
+    "createdAt" : "2022-06-21T06:52:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6,
+    "title" : "Implement percentage style validation.",
+    "createdAt" : "2022-06-21T06:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Consider %d, %f format strings..",
+    "createdAt" : "2022-06-21T06:52:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8,
+    "title" : "Implement FileHandler",
+    "createdAt" : "2022-06-21T08:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "basicConfig discrepancies",
+    "createdAt" : "2022-06-22T07:15:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "getLevelName() missing from module",
+    "createdAt" : "2022-06-22T23:52:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "getLogger() raises ValueError",
+    "createdAt" : "2022-06-22T23:53:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "StreamHandler does not default to sys.stderr when stream argument not provided",
+    "createdAt" : "2022-06-23T00:26:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Write an optimized FileHandler extension type",
+    "createdAt" : "2022-06-23T21:48:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 22,
+    "title" : "Test loggers with NOTSET level having the parent level changed after instantiation",
+    "createdAt" : "2022-06-23T21:57:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Add BufferingFormatter as a C extension type",
+    "createdAt" : "2022-06-28T05:09:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 30,
+    "title" : "Add benchmarks for the different handlers",
+    "createdAt" : "2022-06-28T07:06:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Non-blocking logger",
+    "createdAt" : "2022-07-05T08:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Test defaults are propagating to string formatters",
+    "createdAt" : "2022-07-07T06:57:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 51,
+    "title" : "`getLevelName` is missing a part of the behavior",
+    "createdAt" : "2022-07-29T15:03:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Add support for `dictConfig`",
+    "createdAt" : "2022-08-04T21:28:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Add documentation site",
+    "createdAt" : "2022-08-05T05:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Issue with `setLevel` not resetting other levels",
+    "createdAt" : "2022-08-05T13:48:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Conda forge",
+    "createdAt" : "2022-09-01T15:43:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 67,
+    "title" : "AttributeError: module 'picologging' has no attribute 'PlaceHolder'",
+    "createdAt" : "2022-09-08T17:13:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Loggers created with getLogger don't have parent set",
+    "createdAt" : "2022-09-22T00:01:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "No LoggerAdapter class",
+    "createdAt" : "2022-09-22T00:20:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 80,
+    "title" : "No SysLogHandler class",
+    "createdAt" : "2022-09-22T16:24:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "No logging.raiseExceptions",
+    "createdAt" : "2022-09-22T23:26:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 90,
+    "title" : "Bug: QueueListener doesn't work",
+    "createdAt" : "2022-09-24T08:34:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Bug: missing py.typed",
+    "createdAt" : "2022-09-24T11:51:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "No HTTPHandler class",
+    "createdAt" : "2022-09-24T14:54:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 94,
+    "title" : "Logger doesn't support weak reference",
+    "createdAt" : "2022-09-24T19:08:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 95,
+    "title" : "logging.captureWarnings isn't supported",
+    "createdAt" : "2022-09-24T21:17:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 96,
+    "title" : "logging.config has no fileConfig",
+    "createdAt" : "2022-09-25T16:59:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 98,
+    "title" : "FileHandler doesnt handle errors argument",
+    "createdAt" : "2022-09-25T18:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "No logging.shutdown() function",
+    "createdAt" : "2022-09-25T20:12:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 103,
+    "title" : "Overriding formatter.formatException is not permitted",
+    "createdAt" : "2022-09-27T16:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Add pre-commit",
+    "createdAt" : "2022-10-11T22:17:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Run isort",
+    "createdAt" : "2022-10-11T22:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Run pyupgr",
+    "createdAt" : "2022-10-11T22:20:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Add memray README",
+    "createdAt" : "2022-10-11T22:25:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Set `tp_base` for child extension types",
+    "createdAt" : "2022-10-12T04:55:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Run clang-tidy in CI",
+    "createdAt" : "2022-10-12T20:48:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "LogRecord is not copy-able",
+    "createdAt" : "2022-10-19T05:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "The module is not reported correctly on handled records",
+    "createdAt" : "2022-10-19T05:45:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 125,
+    "title" : "Make a pytest fixture for log capture",
+    "createdAt" : "2022-10-19T20:59:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 129,
+    "title" : "Build ARM64 wheels for Windows",
+    "createdAt" : "2022-10-28T22:20:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Windows ARM64 not included in ZIP file generated in GitHub Actions",
+    "createdAt" : "2022-11-08T02:32:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Linux aarch64 wheels missing",
+    "createdAt" : "2022-11-13T23:13:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "logger does not have isEnabledFor()",
+    "createdAt" : "2022-12-28T23:34:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Logging to a file doesn't work with `AttributeError: module 'io' has no attribute 'text_encoding'` in python3.9",
+    "createdAt" : "2023-01-23T14:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Support passing a string to `setLevel`.",
+    "createdAt" : "2023-04-11T14:21:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Picologging leaks memory when used in an ASGI Framework",
+    "createdAt" : "2023-06-13T21:48:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 159,
+    "title" : "Crash using coloredlogs",
+    "createdAt" : "2023-09-12T13:20:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Python 3.12 support",
+    "createdAt" : "2023-09-26T04:00:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Fix all leaky PyUnicode_FromString uses",
+    "createdAt" : "2023-09-27T06:12:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "investigate pytest warning on unclosed resources",
+    "createdAt" : "2023-09-27T06:28:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Using pytest-memray in CI",
+    "createdAt" : "2023-09-29T09:52:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Python code crashes if I use %f in datefmt",
+    "createdAt" : "2023-10-11T05:02:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 185,
+    "title" : "Optimize logger.logMessageAsRecord",
+    "createdAt" : "2023-10-16T21:55:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Implement METH_FASTCALL where possible",
+    "createdAt" : "2023-10-17T03:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Optimize level name field in Log Record",
+    "createdAt" : "2023-10-17T08:21:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "log `extra` param does not work with picologging",
+    "createdAt" : "2023-11-04T17:28:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 203,
+    "title" : "Using `asctime` in formatter messes up timestamp encoding",
+    "createdAt" : "2024-02-17T12:29:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "No type annotations",
+    "createdAt" : "2024-03-06T04:17:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 205,
+    "title" : "Can't add a custom `stream` to `SteamHandler` using `dictConfig`",
+    "createdAt" : "2024-03-06T11:41:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 206,
+    "title" : "Broken when exc_info argument is provided to the log() method",
+    "createdAt" : "2024-03-26T09:43:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 207,
+    "title" : "Picologging is deadlocking when multiple threads are logging",
+    "createdAt" : "2024-04-21T07:59:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 219,
+    "title" : "log.info(string) causes torch memory leak (?) in python 3.11",
+    "createdAt" : "2024-10-11T11:01:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Memory leak in async code",
+    "createdAt" : "2025-02-24T13:41:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 224,
+    "title" : "Picologging vers 0.9.4 not availabe on Pypi",
+    "createdAt" : "2025-03-19T15:21:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "Incorrect line number, default root logger name being displayed with picologging",
+    "createdAt" : "2025-06-29T11:26:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 227,
+    "title" : "Add logging levels TRACE and NOTICE (or allow adding custom log levels)",
+    "createdAt" : "2025-08-17T10:53:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 229,
+    "title" : "Python 3.13 and 3.14 support",
+    "createdAt" : "2025-12-31T20:26:22Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,283 @@
+{
+  "repoOwner" : "rbanffy",
+  "repoName" : "pip-chill",
+  "forks" : [ {
+    "createdAt" : "2017-10-03T20:49:11Z"
+  }, {
+    "createdAt" : "2018-02-22T23:32:07Z"
+  }, {
+    "createdAt" : "2018-03-09T15:51:40Z"
+  }, {
+    "createdAt" : "2018-05-16T22:42:17Z"
+  }, {
+    "createdAt" : "2019-04-29T17:19:51Z"
+  }, {
+    "createdAt" : "2019-06-27T02:37:14Z"
+  }, {
+    "createdAt" : "2020-04-24T12:48:02Z"
+  }, {
+    "createdAt" : "2020-10-13T16:27:27Z"
+  }, {
+    "createdAt" : "2020-12-26T11:47:06Z"
+  }, {
+    "createdAt" : "2021-01-07T23:44:50Z"
+  }, {
+    "createdAt" : "2021-01-25T03:08:16Z"
+  }, {
+    "createdAt" : "2021-03-01T17:40:05Z"
+  }, {
+    "createdAt" : "2021-05-19T02:16:05Z"
+  }, {
+    "createdAt" : "2022-02-10T06:54:53Z"
+  }, {
+    "createdAt" : "2022-03-02T06:00:34Z"
+  }, {
+    "createdAt" : "2022-06-17T08:25:13Z"
+  }, {
+    "createdAt" : "2023-04-20T09:08:51Z"
+  }, {
+    "createdAt" : "2023-06-04T01:29:51Z"
+  }, {
+    "createdAt" : "2023-08-26T03:32:30Z"
+  }, {
+    "createdAt" : "2023-09-13T22:25:40Z"
+  }, {
+    "createdAt" : "2023-11-27T13:01:11Z"
+  }, {
+    "createdAt" : "2024-04-28T09:42:59Z"
+  }, {
+    "createdAt" : "2024-04-29T00:20:01Z"
+  }, {
+    "createdAt" : "2024-12-01T22:11:32Z"
+  }, {
+    "createdAt" : "2025-06-12T18:36:23Z"
+  }, {
+    "createdAt" : "2025-07-06T05:43:51Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Initial Update",
+    "createdAt" : "2016-10-04T14:34:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "We need an \"--all\" option to show all packages",
+    "createdAt" : "2016-10-24T15:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "It'd be useful to have a \"-v\"/\"--verbose\" option to show dependencies commented out",
+    "createdAt" : "2016-10-24T15:15:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "pkg-resources 0.0.0 is listed",
+    "createdAt" : "2016-11-05T23:42:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "When listing packages with versions, add an option to output hashes too",
+    "createdAt" : "2017-09-18T13:42:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "We should have a -H/--hash option to output hashes",
+    "createdAt" : "2017-10-03T20:34:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "pip-chill doesn't show URL for packages installed from source control",
+    "createdAt" : "2017-12-04T10:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "No mention of Python 3.6",
+    "createdAt" : "2018-01-10T12:16:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "pip-chill should be removed from ignored packages ",
+    "createdAt" : "2018-02-20T10:12:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Relative import not working in Python3",
+    "createdAt" : "2018-02-22T23:35:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "pip-chill aborts with failure to find `pip.get_installed_distributions()`",
+    "createdAt" : "2018-06-05T22:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Linked your package",
+    "createdAt" : "2019-02-09T17:04:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "pip-chill picks up site-packages in virtualenv with --no-site-packages",
+    "createdAt" : "2019-07-04T08:52:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "PyPI sdist",
+    "createdAt" : "2019-12-12T07:23:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "pip-chill depends on click and, therefore, it masks click if it's an actual requirement",
+    "createdAt" : "2020-02-07T17:33:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Output latest available version of all packages",
+    "createdAt" : "2020-08-04T12:00:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "CI should be done on Focal",
+    "createdAt" : "2020-11-03T18:27:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "pip-chill is not executable as a package",
+    "createdAt" : "2020-11-05T09:31:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "pip-chill should not be shown in the list",
+    "createdAt" : "2021-01-07T23:29:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "CircleCI Integration is broken",
+    "createdAt" : "2021-01-18T17:43:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Output list of packages in the 'required_by' collection in sorted order",
+    "createdAt" : "2021-01-21T22:40:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "TravisCI on macOS looks like it's a NOP",
+    "createdAt" : "2021-02-12T12:47:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Ensure pip-chill is targeting a particular python version [Enhancement]",
+    "createdAt" : "2021-03-01T15:16:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "django is not included in pip-chill output",
+    "createdAt" : "2021-04-06T14:12:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Possible to use PEP376 REQUESTED file instead of dependencies search?",
+    "createdAt" : "2021-05-22T15:42:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "`pip-chill` in a virtual environment seems to output the results of the global environment",
+    "createdAt" : "2021-10-27T07:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Skip package definitions tied to git repos",
+    "createdAt" : "2021-11-29T18:40:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "When 3.5 is deprecated, replace .format with f-strings",
+    "createdAt" : "2022-01-07T19:14:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "pyside2 Installed as dependency for app",
+    "createdAt" : "2022-03-08T12:58:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "does not list a manually installed package if said package is a dependency of another manually installed package",
+    "createdAt" : "2022-03-23T09:32:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "RTD out of date",
+    "createdAt" : "2022-05-14T08:38:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "[Python 3.10 & Python 3.11] Running pip-chill command only lists the pip-chill module. ",
+    "createdAt" : "2022-11-06T23:26:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add a --force-listing ooption",
+    "createdAt" : "2023-01-23T15:44:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Inconsistent sort for \"Installed as dependency for\"",
+    "createdAt" : "2023-03-08T15:26:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Version ranges enhancement",
+    "createdAt" : "2023-04-14T00:28:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Add tests for --verbose representations (with and without version)",
+    "createdAt" : "2023-04-15T12:27:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Makefile is a mess",
+    "createdAt" : "2023-04-17T13:30:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "pkg_resources missing on fresh install",
+    "createdAt" : "2023-11-05T19:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "pip missging from top-level dependencies",
+    "createdAt" : "2024-06-29T12:10:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "pip-chill fails to list non-pypi packages",
+    "createdAt" : "2024-08-27T14:30:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "pip-chill doesn't handle 'extras'",
+    "createdAt" : "2024-09-04T00:39:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "pip-like --path option",
+    "createdAt" : "2024-09-12T22:02:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "It lists things that were never installed in the first place",
+    "createdAt" : "2024-12-02T05:16:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Need to install `setuptools`",
+    "createdAt" : "2024-12-02T19:39:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Deprecated Package Warning: pkg_resources",
+    "createdAt" : "2025-06-07T08:38:28Z",
+    "state" : "CLOSED"
+  } ]
+}

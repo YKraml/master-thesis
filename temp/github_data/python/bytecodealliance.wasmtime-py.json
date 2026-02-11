@@ -1,0 +1,759 @@
+{
+  "repoOwner" : "bytecodealliance",
+  "repoName" : "wasmtime-py",
+  "forks" : [ {
+    "createdAt" : "2020-04-01T15:55:03Z"
+  }, {
+    "createdAt" : "2020-05-24T02:08:32Z"
+  }, {
+    "createdAt" : "2020-07-13T18:08:38Z"
+  }, {
+    "createdAt" : "2020-08-25T00:51:40Z"
+  }, {
+    "createdAt" : "2020-10-25T15:09:47Z"
+  }, {
+    "createdAt" : "2020-11-23T15:46:45Z"
+  }, {
+    "createdAt" : "2021-01-27T14:32:00Z"
+  }, {
+    "createdAt" : "2021-03-19T15:44:01Z"
+  }, {
+    "createdAt" : "2021-04-12T05:22:01Z"
+  }, {
+    "createdAt" : "2021-05-10T10:20:25Z"
+  }, {
+    "createdAt" : "2021-08-30T17:45:47Z"
+  }, {
+    "createdAt" : "2021-09-06T05:33:46Z"
+  }, {
+    "createdAt" : "2021-11-16T10:21:05Z"
+  }, {
+    "createdAt" : "2021-12-15T02:37:23Z"
+  }, {
+    "createdAt" : "2021-12-18T03:14:12Z"
+  }, {
+    "createdAt" : "2022-03-03T15:05:12Z"
+  }, {
+    "createdAt" : "2022-05-13T01:18:17Z"
+  }, {
+    "createdAt" : "2022-07-02T18:04:19Z"
+  }, {
+    "createdAt" : "2022-07-08T00:12:58Z"
+  }, {
+    "createdAt" : "2022-07-18T19:20:19Z"
+  }, {
+    "createdAt" : "2022-08-19T16:09:01Z"
+  }, {
+    "createdAt" : "2022-08-23T23:54:28Z"
+  }, {
+    "createdAt" : "2022-11-13T16:12:24Z"
+  }, {
+    "createdAt" : "2022-12-14T06:48:53Z"
+  }, {
+    "createdAt" : "2022-12-19T21:07:43Z"
+  }, {
+    "createdAt" : "2022-12-22T17:20:17Z"
+  }, {
+    "createdAt" : "2023-02-27T14:13:26Z"
+  }, {
+    "createdAt" : "2023-03-05T08:59:25Z"
+  }, {
+    "createdAt" : "2023-03-24T18:35:36Z"
+  }, {
+    "createdAt" : "2023-04-22T14:23:36Z"
+  }, {
+    "createdAt" : "2023-04-26T16:08:03Z"
+  }, {
+    "createdAt" : "2023-05-11T21:13:12Z"
+  }, {
+    "createdAt" : "2023-05-19T13:18:15Z"
+  }, {
+    "createdAt" : "2023-05-20T20:17:00Z"
+  }, {
+    "createdAt" : "2023-08-07T08:19:41Z"
+  }, {
+    "createdAt" : "2023-09-08T17:41:54Z"
+  }, {
+    "createdAt" : "2023-10-13T17:59:39Z"
+  }, {
+    "createdAt" : "2023-12-28T15:46:22Z"
+  }, {
+    "createdAt" : "2024-02-08T14:58:30Z"
+  }, {
+    "createdAt" : "2024-02-24T09:00:23Z"
+  }, {
+    "createdAt" : "2024-03-16T15:57:16Z"
+  }, {
+    "createdAt" : "2024-03-21T23:16:34Z"
+  }, {
+    "createdAt" : "2024-04-01T07:35:15Z"
+  }, {
+    "createdAt" : "2024-04-02T18:42:20Z"
+  }, {
+    "createdAt" : "2024-04-17T02:21:45Z"
+  }, {
+    "createdAt" : "2024-05-03T21:24:14Z"
+  }, {
+    "createdAt" : "2024-05-05T14:32:39Z"
+  }, {
+    "createdAt" : "2024-09-25T03:07:58Z"
+  }, {
+    "createdAt" : "2024-10-23T01:28:17Z"
+  }, {
+    "createdAt" : "2024-11-11T22:22:53Z"
+  }, {
+    "createdAt" : "2024-12-19T02:38:38Z"
+  }, {
+    "createdAt" : "2024-12-19T22:11:26Z"
+  }, {
+    "createdAt" : "2024-12-29T07:13:40Z"
+  }, {
+    "createdAt" : "2025-01-31T14:06:57Z"
+  }, {
+    "createdAt" : "2025-02-04T16:58:00Z"
+  }, {
+    "createdAt" : "2025-02-06T23:38:43Z"
+  }, {
+    "createdAt" : "2025-03-15T06:39:36Z"
+  }, {
+    "createdAt" : "2025-05-30T02:11:41Z"
+  }, {
+    "createdAt" : "2025-08-30T15:16:23Z"
+  }, {
+    "createdAt" : "2025-10-12T11:15:46Z"
+  }, {
+    "createdAt" : "2025-10-24T01:18:33Z"
+  }, {
+    "createdAt" : "2025-11-19T17:53:58Z"
+  }, {
+    "createdAt" : "2025-12-12T00:14:31Z"
+  }, {
+    "createdAt" : "2026-01-02T13:21:22Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Running WASI binaries",
+    "createdAt" : "2020-04-25T00:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Implementing an interposer",
+    "createdAt" : "2020-04-26T07:18:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Caching compiled code",
+    "createdAt" : "2020-04-27T14:47:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Python idioms in the API",
+    "createdAt" : "2020-04-27T15:35:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "`WasiConfig` still uses old idioms",
+    "createdAt" : "2020-04-30T07:20:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "No documentation on setter properties",
+    "createdAt" : "2020-04-30T07:28:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "MinGW/MSYS compatible binary wheels",
+    "createdAt" : "2020-05-21T08:08:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Compilation error: Implementation limit exceeded",
+    "createdAt" : "2020-05-21T08:20:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "AArch64 support",
+    "createdAt" : "2020-05-21T10:55:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "use pytest or not use pytest?",
+    "createdAt" : "2020-05-22T19:48:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "wasmtime-py 0.16.1 regression",
+    "createdAt" : "2020-05-23T18:15:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Publish wheels to GitHub releases",
+    "createdAt" : "2020-05-24T13:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Type annotations for method signatures",
+    "createdAt" : "2020-05-26T17:48:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Change default branch name",
+    "createdAt" : "2020-06-15T18:02:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Handling the exit trap",
+    "createdAt" : "2020-06-21T17:47:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Document WasiConfig.*_file",
+    "createdAt" : "2020-06-21T18:02:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "No module named 'wasi_snapshot_preview1'",
+    "createdAt" : "2020-06-23T04:50:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Using file objects (or equivalent) for stdio streams",
+    "createdAt" : "2020-06-23T15:30:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Exit traps crash on Windows with STATUS_BAD_STACK",
+    "createdAt" : "2020-07-01T08:48:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Querying the cache",
+    "createdAt" : "2020-07-07T03:09:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Make module constructor take an engine, not a store",
+    "createdAt" : "2020-07-15T20:35:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Is this library any good for using wasm libs in python?",
+    "createdAt" : "2020-10-29T16:25:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "qjs.wasm loops forever",
+    "createdAt" : "2021-01-21T13:01:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "How to execute wasm method loaded into module through stream",
+    "createdAt" : "2021-02-20T09:49:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "how to import wasm env function?",
+    "createdAt" : "2021-04-19T10:13:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Add ` wasm_multi_memory` to `Config`",
+    "createdAt" : "2021-07-08T19:00:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "wrong function called from module when using wasmtime loader",
+    "createdAt" : "2021-08-17T16:05:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Add examples that call a complex pre-compiled library",
+    "createdAt" : "2021-08-26T19:18:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 69,
+    "title" : "Proposal: Wasmtime 1.0",
+    "createdAt" : "2021-09-08T21:35:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Env variables are not being passed to WASM",
+    "createdAt" : "2021-11-10T00:02:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "how to compile application to wasi?",
+    "createdAt" : "2021-12-11T07:20:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "[question?] Is it possible to pass a borrowed list from Python?",
+    "createdAt" : "2022-01-20T08:06:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "wasmtime arm64 wheel for mac m1",
+    "createdAt" : "2022-02-02T14:28:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Setting a slice of memory without having to enumerate",
+    "createdAt" : "2022-02-17T10:23:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "wasmtime.loader: import error when importing a WASM module which has imports",
+    "createdAt" : "2022-03-08T21:09:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "What's the difference between this and wasmer?",
+    "createdAt" : "2022-03-28T19:41:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "In the Python generator, create aliases for numeric types",
+    "createdAt" : "2022-06-15T20:08:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "generated vars use common names",
+    "createdAt" : "2022-07-18T19:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "AttributeError: unreadable attribute",
+    "createdAt" : "2022-08-01T15:22:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Run wasm file like the wasmtime cli would",
+    "createdAt" : "2022-09-15T11:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Performance questions",
+    "createdAt" : "2022-09-22T12:09:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 107,
+    "title" : "Component bindings should verify alignment of guest-provided pointers",
+    "createdAt" : "2022-11-18T21:12:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Component bindings should implement `may_enter` and `may_leave` flags",
+    "createdAt" : "2022-11-18T21:13:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Component bindings should be more permissive for boolean values and integers",
+    "createdAt" : "2022-11-18T21:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "invalid leading byte (0x3) for component external kind (at offset 0x364cf9)",
+    "createdAt" : "2022-11-29T14:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "demo example does not work",
+    "createdAt" : "2022-12-04T21:14:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Capturing output from WASI binary (produced by TinyGo 0.26.0)",
+    "createdAt" : "2022-12-05T22:32:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Component binding class naming issue",
+    "createdAt" : "2023-01-09T00:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Update wasm tools to 1.0.20",
+    "createdAt" : "2023-01-31T09:55:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Ability to set a file-like object (instead of a file path) for stdin and stderr",
+    "createdAt" : "2023-02-03T00:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "limiting execution time",
+    "createdAt" : "2023-02-13T15:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Running wasm with shared folder / mapping directory into wasmtime-py",
+    "createdAt" : "2023-02-15T19:20:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "How to profile executable code in wasmtime-py?",
+    "createdAt" : "2023-02-20T18:14:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "WASI preopen_dir holds on to Windows resource",
+    "createdAt" : "2023-02-27T14:27:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 133,
+    "title" : "is preopen_socket not supported in wasmtime python sdk?",
+    "createdAt" : "2023-03-01T20:19:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 135,
+    "title" : "Investigate adding the Python Buffer Protocol on the `memory`",
+    "createdAt" : "2023-03-14T01:11:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "optimize time wasted in passing argument and fetching return",
+    "createdAt" : "2023-03-21T09:39:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 140,
+    "title" : "performance: calling python from wasm is too slow",
+    "createdAt" : "2023-04-05T11:47:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 141,
+    "title" : "Global.value should be a None check instead of a \"truthy\" check",
+    "createdAt" : "2023-04-10T00:31:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Handling a composed component that exchanges strings",
+    "createdAt" : "2023-04-11T13:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "wasmtime-8.0.0-py3-none-macosx_11_0_arm64.whl does not contain the generated folder",
+    "createdAt" : "2023-04-22T14:11:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Avoid using Python keywords as identifiers in `bindgen`",
+    "createdAt" : "2023-05-12T15:56:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "RuntimeError: failed to extract interface information from component",
+    "createdAt" : "2023-05-21T15:51:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "NameError: name 'RuntimeValueString' is not defined",
+    "createdAt" : "2023-05-23T10:58:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Accessing Store globals",
+    "createdAt" : "2023-05-30T05:27:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "unsupported component version: 0xa (at offset 0x0)",
+    "createdAt" : "2023-06-14T19:46:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Troubles with using wasmtime-py in a Python Kivy app on Android",
+    "createdAt" : "2023-06-29T04:10:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Panic with wasmtime 10, WIT and component model 0xd",
+    "createdAt" : "2023-07-17T23:11:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "The README instructions for components seem outdated",
+    "createdAt" : "2023-07-27T17:19:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Error when using wasm file with arrays",
+    "createdAt" : "2023-08-02T09:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "No ExitTrap._message Attribute",
+    "createdAt" : "2023-08-18T21:12:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Consider publishing the Rust code in this repo as a crate",
+    "createdAt" : "2023-08-31T21:46:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "I don't know how to get output by invoke wasm that rust build",
+    "createdAt" : "2023-09-06T14:16:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Contributor Setup: Need better error message if wasm32-wasi target is missing",
+    "createdAt" : "2023-09-08T17:43:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "wasmtime-py 13.0.0, 13.0.1 breaks compatibility with Python 3.7, 3.8, 3.9",
+    "createdAt" : "2023-09-21T08:50:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Question on usage of preopens in WASM component",
+    "createdAt" : "2023-10-05T12:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "wasmtime (13.0.0) yields errors when started with Python 3.8.18",
+    "createdAt" : "2023-11-10T07:22:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Support WIT resource types",
+    "createdAt" : "2023-11-10T22:32:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Import Order for Multiple Functions",
+    "createdAt" : "2023-11-15T16:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Limit memory and CPU usage",
+    "createdAt" : "2023-11-24T20:41:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "beginner tip?",
+    "createdAt" : "2023-12-08T04:05:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "wasmtime bindgen `get_terminal_stdin` NotImplementedError when using WIT component",
+    "createdAt" : "2024-01-11T18:15:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Can't run module with tail calls",
+    "createdAt" : "2024-01-23T22:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : " wasmtime-X.0.0-py3-none-any.whl doesn't include linux-x86_64",
+    "createdAt" : "2024-01-26T07:47:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Any example how to load `.wasm` in python",
+    "createdAt" : "2024-03-24T14:08:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "When used with ComponentizeJS output, `wasmtime.Module.from_file` is extremely slow and not configurable",
+    "createdAt" : "2024-04-03T18:51:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 218,
+    "title" : "`store` argument in `wasmtime.bindgen` output seems redundant",
+    "createdAt" : "2024-04-03T18:54:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Backward compatibility contract for bindings generated by `wasmtime.bindgen`?",
+    "createdAt" : "2024-04-03T20:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "`wasmtime.bindgen` shouldn't be using `__file__`",
+    "createdAt" : "2024-04-03T21:47:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "bug: wasi import `sched_yield` is not defined",
+    "createdAt" : "2024-04-04T10:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Easy way to get version wasmtime-py",
+    "createdAt" : "2024-04-07T20:27:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "add source distribution to pypi - to create conda package",
+    "createdAt" : "2024-04-30T10:27:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "how to handle rust's __wbindgen_throw, wbg, and __wbindgen_malloc ?",
+    "createdAt" : "2024-05-07T19:42:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "PyPI package does not work on Alpine",
+    "createdAt" : "2024-05-20T22:52:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "pip now downloads windows binaries on alpine x64",
+    "createdAt" : "2024-05-29T16:14:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Import dict rather than sequence? e.g. Instance(store, module, {\"env\": Memory(store, MemoryType(Limits(5, 5)))}) ",
+    "createdAt" : "2024-06-07T06:34:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Wasmtime-py and randomness",
+    "createdAt" : "2024-06-29T23:28:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Loading components as .wasm files fails",
+    "createdAt" : "2024-07-08T20:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "problem loading a component that uses wasi?",
+    "createdAt" : "2024-07-11T16:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Missing Windows ARM64 support",
+    "createdAt" : "2024-07-16T04:45:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Add `dir_perms` and `file_perms` to `WasiConfig.preopen_dir`",
+    "createdAt" : "2024-09-19T17:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Is `wasm32_wasip1_threads` Rust target supported?",
+    "createdAt" : "2024-10-18T20:16:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Make bindings threadsafe",
+    "createdAt" : "2024-10-21T09:09:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 259,
+    "title" : "`TypeError: WasiConfig.preopen_dir() missing 2 required positional arguments: 'dir_perms' and 'file_perms'`",
+    "createdAt" : "2024-11-21T21:31:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Would it be possible to publish musllinux-aarch64 wheels?",
+    "createdAt" : "2024-12-19T06:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Can this be used with C programs that can then be called with python?",
+    "createdAt" : "2025-03-15T00:04:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "No ` wasmtime-30.0.0-py3-none-any.whl` on PyPI.",
+    "createdAt" : "2025-03-15T03:41:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Current state of Android support?",
+    "createdAt" : "2025-05-01T19:08:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 282,
+    "title" : "Out of bound array access in binding generation",
+    "createdAt" : "2025-05-29T20:47:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "GC features",
+    "createdAt" : "2025-06-06T16:44:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 284,
+    "title" : "wasmtime unsupported architecture error in packaged Python executable",
+    "createdAt" : "2025-06-09T16:39:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "CI jobs call setup.py directly, this will be unsupported from 2025-10-31",
+    "createdAt" : "2025-06-13T15:10:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Builds of merged PRs fail to upload to test.pypi.org, due to duplicate versions",
+    "createdAt" : "2025-06-17T15:26:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Using generated project from `cargo component` does not compile",
+    "createdAt" : "2025-06-20T14:33:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Python 3.14: ImportError: cannot import name 'ResourceReader' from 'importlib.abc'",
+    "createdAt" : "2025-10-23T09:34:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "\"TypeError: 'NoneType' object is not callable\" during calls to wasmtime.Managed.__del__",
+    "createdAt" : "2025-10-27T08:10:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Type mismatch in signature of `wasmtime._value._unintern()`",
+    "createdAt" : "2025-10-27T17:38:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 309,
+    "title" : "Reimplement bindgen for components",
+    "createdAt" : "2025-11-05T21:19:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 312,
+    "title" : "Better type support with components",
+    "createdAt" : "2025-11-05T22:15:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 313,
+    "title" : "Check for 64-bit platform is incorrect",
+    "createdAt" : "2025-11-06T14:03:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 315,
+    "title" : "called `Option::unwrap()` on a `None` value",
+    "createdAt" : "2025-11-08T07:48:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "TestExternRef destructor tests fail on PyPy3",
+    "createdAt" : "2025-11-11T09:11:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "SharedMemory Not usable in pythonAPI",
+    "createdAt" : "2025-11-18T18:03:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 322,
+    "title" : "is Store thread safe？",
+    "createdAt" : "2025-12-03T11:47:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "Using a separately-packaged libwasmtime",
+    "createdAt" : "2025-12-11T14:23:24Z",
+    "state" : "OPEN"
+  } ]
+}

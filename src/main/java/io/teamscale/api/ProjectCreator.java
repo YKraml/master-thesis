@@ -33,7 +33,6 @@ public class ProjectCreator {
                         "Start revision":"%s",
                         "Content exclude":"",
                         "Polling interval":"86400",
-                        "Include files stored via Git LFS":"false",
                         "Important Branches":"",
                         "Include Submodules":"false",
                         "Submodule recursion depth":"10",

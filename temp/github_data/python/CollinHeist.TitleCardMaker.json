@@ -1,0 +1,1948 @@
+{
+  "repoOwner" : "CollinHeist",
+  "repoName" : "TitleCardMaker",
+  "forks" : [ {
+    "createdAt" : "2022-04-26T00:08:25Z"
+  }, {
+    "createdAt" : "2022-05-19T14:52:44Z"
+  }, {
+    "createdAt" : "2022-08-05T00:54:13Z"
+  }, {
+    "createdAt" : "2022-11-04T01:01:20Z"
+  }, {
+    "createdAt" : "2023-06-13T08:48:24Z"
+  }, {
+    "createdAt" : "2023-07-11T09:11:10Z"
+  }, {
+    "createdAt" : "2023-08-06T20:02:07Z"
+  }, {
+    "createdAt" : "2023-08-16T16:45:21Z"
+  }, {
+    "createdAt" : "2023-08-21T14:35:33Z"
+  }, {
+    "createdAt" : "2023-10-01T01:42:45Z"
+  }, {
+    "createdAt" : "2023-10-31T11:26:23Z"
+  }, {
+    "createdAt" : "2023-12-11T08:20:28Z"
+  }, {
+    "createdAt" : "2024-01-22T02:28:07Z"
+  }, {
+    "createdAt" : "2024-03-26T01:57:16Z"
+  }, {
+    "createdAt" : "2024-03-26T08:09:16Z"
+  }, {
+    "createdAt" : "2024-03-29T06:42:16Z"
+  }, {
+    "createdAt" : "2024-04-16T07:48:42Z"
+  }, {
+    "createdAt" : "2024-05-02T01:17:42Z"
+  }, {
+    "createdAt" : "2024-07-15T18:14:11Z"
+  }, {
+    "createdAt" : "2024-08-04T19:25:23Z"
+  }, {
+    "createdAt" : "2024-08-08T12:57:40Z"
+  }, {
+    "createdAt" : "2024-08-10T21:29:58Z"
+  }, {
+    "createdAt" : "2024-11-13T04:01:21Z"
+  }, {
+    "createdAt" : "2025-03-07T00:39:10Z"
+  }, {
+    "createdAt" : "2025-05-17T15:58:33Z"
+  }, {
+    "createdAt" : "2025-11-14T15:26:42Z"
+  } ],
+  "issues" : [ {
+    "number" : 5,
+    "title" : "Rework data files from .tsv to YAML",
+    "createdAt" : "2022-02-14T17:46:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Transition to builtin logging module",
+    "createdAt" : "2022-02-14T17:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Rework with Title class instead of hard-coded top/bottom title lines",
+    "createdAt" : "2022-02-14T20:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Add interface for sourcing images from Apple TV",
+    "createdAt" : "2022-02-17T03:16:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Detect and create multi-part cards",
+    "createdAt" : "2022-02-17T15:48:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Add tqdm-like progress bar for execution",
+    "createdAt" : "2022-02-17T17:54:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Add optional detection of media filename rather than using hard-coded format",
+    "createdAt" : "2022-02-18T16:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Fix ImageMagick failure for strings with back-tick U+0060 (`) in them",
+    "createdAt" : "2022-02-21T21:37:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Match by TVDb ID, not season+episode number",
+    "createdAt" : "2022-02-23T04:52:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Add report for missing cards/assets",
+    "createdAt" : "2022-02-23T19:25:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Match series by TVDb ID, not series name and year",
+    "createdAt" : "2022-02-24T05:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Allow for library-wide card type specification",
+    "createdAt" : "2022-02-25T05:41:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "TMDbInterface fails on Scrubs (2009) S00E05",
+    "createdAt" : "2022-03-04T02:09:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add ability to automatically get an episode title in the original/any language",
+    "createdAt" : "2022-03-04T19:03:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Support SVG logos",
+    "createdAt" : "2022-03-04T21:50:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Add custom font/character validation",
+    "createdAt" : "2022-03-11T20:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Handle unbounded fonts",
+    "createdAt" : "2022-03-18T15:30:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Detect \"generic\" title translations on TMDb",
+    "createdAt" : "2022-03-29T00:12:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "A TitleCardMaker logo",
+    "createdAt" : "2022-04-02T20:49:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Rework PlexInterface to use plexapi",
+    "createdAt" : "2022-04-08T04:00:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Add support for zero-padded season folders",
+    "createdAt" : "2022-04-10T02:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Identify if ImageMagick is installed",
+    "createdAt" : "2022-04-10T05:13:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Standard cards being created with weird characters",
+    "createdAt" : "2022-04-10T23:00:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Make docker container",
+    "createdAt" : "2022-04-11T04:34:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Handle filenames with OS-restricted characters",
+    "createdAt" : "2022-04-11T15:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Handle filename format strings without episode number",
+    "createdAt" : "2022-04-11T16:12:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Improve repeat font specification",
+    "createdAt" : "2022-04-11T22:03:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Optionally skip specials from Sonarr",
+    "createdAt" : "2022-04-15T14:29:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Add option to adjust output dimensions",
+    "createdAt" : "2022-04-15T14:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Add ability to disable season folder altogether",
+    "createdAt" : "2022-04-16T03:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Add functionality to generate series YAML entries from Sonarr",
+    "createdAt" : "2022-04-16T05:34:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Add automated testing",
+    "createdAt" : "2022-04-18T00:11:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Issues Adding to Networked Drive",
+    "createdAt" : "2022-04-18T07:46:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Adding full stop between names.",
+    "createdAt" : "2022-04-18T07:50:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Improve progress bars",
+    "createdAt" : "2022-04-20T04:21:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Add option to change output file extension - add support for `.webp`",
+    "createdAt" : "2022-04-20T17:55:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Blank title text if episode title is some variation of \"Episode {x}\"",
+    "createdAt" : "2022-04-22T16:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Handle uploading bad images to Plex",
+    "createdAt" : "2022-04-22T23:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Don't ignore episodes that haven't aired yet if episode file is present",
+    "createdAt" : "2022-04-24T23:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Implement YAML templates",
+    "createdAt" : "2022-04-25T00:07:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Document fixer",
+    "createdAt" : "2022-04-27T00:43:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Add option to change font size of genre card",
+    "createdAt" : "2022-04-27T00:45:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Add ability to use non-spoiler image for card creation",
+    "createdAt" : "2022-04-27T01:02:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Handle TMDb API limits",
+    "createdAt" : "2022-04-27T23:18:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Add ability to get season and episode list from tvdb/tmdb",
+    "createdAt" : "2022-04-29T08:16:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Handle series names with illegal characters",
+    "createdAt" : "2022-04-29T15:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Support transparent genre cards",
+    "createdAt" : "2022-05-01T21:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Add fixer option to create show summary for arbitrary directory",
+    "createdAt" : "2022-05-04T02:09:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Generate YAML from Sonarr by tag",
+    "createdAt" : "2022-05-05T13:16:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Customizeable black stroke width",
+    "createdAt" : "2022-05-06T14:51:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Customize font kerning",
+    "createdAt" : "2022-05-06T15:02:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Validate TMDb API key upon initialization",
+    "createdAt" : "2022-05-06T15:59:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Add archive load functionality",
+    "createdAt" : "2022-05-06T18:30:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Don't apply title case function if title is manually specified",
+    "createdAt" : "2022-05-06T22:50:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Transition to tinydb",
+    "createdAt" : "2022-05-08T01:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Delete extraneous breakpoint ",
+    "createdAt" : "2022-05-10T05:06:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Update Dockerfile",
+    "createdAt" : "2022-05-10T05:08:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Add feature to delete old cards of a given series",
+    "createdAt" : "2022-05-10T18:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Permit font specification without file extension",
+    "createdAt" : "2022-05-12T03:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Standard title card missing replacement for ellipses ",
+    "createdAt" : "2022-05-12T13:08:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Add option to disable sub-profiles of archives",
+    "createdAt" : "2022-05-14T04:31:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Omit logos from missing file if summaries are disabled",
+    "createdAt" : "2022-05-14T04:33:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Add ability to specify remotely hosted card types",
+    "createdAt" : "2022-05-14T19:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Create docker setup tutorial",
+    "createdAt" : "2022-05-14T19:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Handle bad font types",
+    "createdAt" : "2022-05-15T16:05:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Allow for per-season backdrop",
+    "createdAt" : "2022-05-15T18:11:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Redownload remote assets and card types only if changed",
+    "createdAt" : "2022-05-15T18:12:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Let unwatched actions be specified with spaces instead of underscores",
+    "createdAt" : "2022-05-15T18:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Let Maker be scheduled on interval",
+    "createdAt" : "2022-05-16T03:39:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Let all values be specified with spaces instead of underscores?",
+    "createdAt" : "2022-05-16T04:28:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Separate fixes and manual image creation from fixer",
+    "createdAt" : "2022-05-17T20:22:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Allow font size customization for Anime cards",
+    "createdAt" : "2022-05-18T04:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Separate art/blur all setting from unwatched option",
+    "createdAt" : "2022-05-18T17:10:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Handle placeholder \"TBD\" episode titles",
+    "createdAt" : "2022-05-20T13:52:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Actually use summary background color",
+    "createdAt" : "2022-05-21T15:24:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Modify mini maker to permit RemoteCardTypes from GitHub",
+    "createdAt" : "2022-05-22T17:56:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Rework YamlReader class",
+    "createdAt" : "2022-05-23T22:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Optionally get source image from Plex",
+    "createdAt" : "2022-05-23T22:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Temporarily ignore placeholder names from Sonarr",
+    "createdAt" : "2022-05-25T15:03:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Make textless card type",
+    "createdAt" : "2022-05-26T14:41:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Create series and/or season posters",
+    "createdAt" : "2022-05-26T14:43:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Add support for fixed UID and GID",
+    "createdAt" : "2022-05-26T15:24:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Let arbitrary series-wide data be passed to TitleCard object",
+    "createdAt" : "2022-05-27T20:55:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Add CardType attribute for whether that card uses unique sources or not",
+    "createdAt" : "2022-05-27T21:05:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Create reality show/logo only card type",
+    "createdAt" : "2022-05-27T21:10:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Let local files be specified as card types",
+    "createdAt" : "2022-05-28T16:27:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Copy episode text format string identifiers for `MultiEpisode` string modification",
+    "createdAt" : "2022-05-29T16:36:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Correctly query TMDb if not sourcing from Plex",
+    "createdAt" : "2022-05-30T04:03:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Add parsing of preferred titles",
+    "createdAt" : "2022-05-30T16:54:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Only warn about series not in Plex once",
+    "createdAt" : "2022-06-01T16:01:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Write log to file",
+    "createdAt" : "2022-06-01T16:51:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Store orignal (non-preferred) title in `Title` object for TMDb matching",
+    "createdAt" : "2022-06-01T16:53:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Temporarily ignore \"episode {x}\" placeholder titles",
+    "createdAt" : "2022-06-03T23:52:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Missing Objects",
+    "createdAt" : "2022-06-06T03:09:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Add ability to require Kanji for a given series",
+    "createdAt" : "2022-06-06T19:41:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Add to Unraid community apps store",
+    "createdAt" : "2022-06-07T00:25:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Fix greyscale profile conversion if logo card background is non-sRGB",
+    "createdAt" : "2022-06-07T01:56:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Only check source file existence if `CardType.USES_UNIQUE_SOURCE = True`",
+    "createdAt" : "2022-06-07T02:01:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Download logos before creating `ShowSummary`",
+    "createdAt" : "2022-06-10T22:57:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Remove global preferences option to change logo filename",
+    "createdAt" : "2022-06-10T23:12:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Pass episode index to all `CardType` initialization functions",
+    "createdAt" : "2022-06-12T17:28:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Load season posters into Plex",
+    "createdAt" : "2022-06-13T00:59:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Unraid template is incorrect",
+    "createdAt" : "2022-06-13T15:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Season Poster Generation throw error \"name 'value' is not defined\"",
+    "createdAt" : "2022-06-13T15:21:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Poster generation hang if poster exists (unraid related ?)",
+    "createdAt" : "2022-06-13T15:26:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Translation is not taken into account",
+    "createdAt" : "2022-06-13T15:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Unraid Install Error: invalid volume specification",
+    "createdAt" : "2022-06-13T19:47:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Error: Expecting property name enclosed in double quotes",
+    "createdAt" : "2022-06-13T20:38:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "FEATURE - Allow for multiple translations per series",
+    "createdAt" : "2022-06-13T22:18:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "BUG - Episode Names With Elipses \"...\" error out",
+    "createdAt" : "2022-06-13T23:48:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Create roman numeral card type",
+    "createdAt" : "2022-06-14T04:48:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "BUG - PermissionError: [Errno 13] Permission denied - UnRaid",
+    "createdAt" : "2022-06-14T14:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "BUG - Unraid Install Unable to Pull Source Images From Plex",
+    "createdAt" : "2022-06-14T14:11:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "BUG - Unraid Install not generating missing.yml",
+    "createdAt" : "2022-06-14T18:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "BUG - Generated images are put into new folders that do not match naming convention for Plex",
+    "createdAt" : "2022-06-14T20:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "BUG - Generated images do not have background, just text",
+    "createdAt" : "2022-06-14T21:21:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Fix poorly split top-heavy titles with priority splitting characters",
+    "createdAt" : "2022-06-15T04:36:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Match multi-episode titles with spelled part numerals",
+    "createdAt" : "2022-06-16T00:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Fix bad title modification for titles starting with digits and numeric episode text formats",
+    "createdAt" : "2022-06-16T02:40:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Blacklist Bad Source File",
+    "createdAt" : "2022-06-16T23:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Add option to customize separator character",
+    "createdAt" : "2022-06-17T21:41:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Deepcopy templates before application",
+    "createdAt" : "2022-06-18T03:28:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Immediately remake cards after episode has been watched",
+    "createdAt" : "2022-06-18T05:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Improve specifying different archival card types",
+    "createdAt" : "2022-06-19T17:10:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Jellyfin Support",
+    "createdAt" : "2022-06-20T09:08:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Setup Problem - No Files being generated",
+    "createdAt" : "2022-06-21T17:28:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "BUG - Logo file path not sent to custom card types",
+    "createdAt" : "2022-06-22T22:49:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Allow TMDb and TVDb ID's to be manually specified",
+    "createdAt" : "2022-06-25T21:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Optionally get episode data from Plex or TMDb",
+    "createdAt" : "2022-06-25T21:53:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Don't re-check for preferred title if already present",
+    "createdAt" : "2022-06-25T22:47:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Let filename formats be set for individual series",
+    "createdAt" : "2022-06-26T17:06:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Pass episode watch status to `CardType` initialization",
+    "createdAt" : "2022-06-27T15:20:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Add fixer functionality to \"correct\" 4:3 images",
+    "createdAt" : "2022-06-28T23:41:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Handle non /api/v3/ Sonarr URL's",
+    "createdAt" : "2022-06-29T22:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Add media directory to Unraid template",
+    "createdAt" : "2022-06-29T22:47:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Allow per-season logos within `LogoTitleCard`",
+    "createdAt" : "2022-07-01T16:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Add ability to remake cards when translation is added",
+    "createdAt" : "2022-07-01T17:21:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Let fixer TMDb image downloading be specified within a range",
+    "createdAt" : "2022-07-01T17:44:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Allow multiple Templates to apply to a Series, add Filters to Templates",
+    "createdAt" : "2022-07-02T16:23:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 213,
+    "title" : "Episode text format falls back to non-absolute numbering",
+    "createdAt" : "2022-07-02T18:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Match series' by IMDb ID as well",
+    "createdAt" : "2022-07-02T23:23:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Transition to TMDbAPIs package",
+    "createdAt" : "2022-07-03T20:07:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Don't recreate `SeriesInfo` and `EpisodeInfo` objects across show variations",
+    "createdAt" : "2022-07-05T04:47:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Add fixer functionality to reset Plex loaded card stats",
+    "createdAt" : "2022-07-08T21:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Optionally specify a background image for `ShowSummary` creation",
+    "createdAt" : "2022-07-09T20:40:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Optionally use custom name in \"created by\" tag of `ShowSummary`",
+    "createdAt" : "2022-07-09T20:47:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "Integrate with PMM overlays",
+    "createdAt" : "2022-07-10T15:56:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Handle TMDb episodes found by database ID not being searchable",
+    "createdAt" : "2022-07-13T01:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Add ability to sync all series within Sonarr or Plex to some series YAML file ",
+    "createdAt" : "2022-07-13T23:39:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Add Mini Maker functionality to create collection cards",
+    "createdAt" : "2022-07-20T16:15:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Permit any language/format of season folder titles",
+    "createdAt" : "2022-07-21T01:09:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Handle bad titles in datafiles",
+    "createdAt" : "2022-07-22T05:28:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Handle very tall logos on season posters",
+    "createdAt" : "2022-07-25T00:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Allow season posters to put logo and season text at top of the image",
+    "createdAt" : "2022-07-25T04:39:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Support non hexadecimal font colors",
+    "createdAt" : "2022-07-25T17:38:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Apply `sync_specials` to all episode data sources",
+    "createdAt" : "2022-07-26T21:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Overhaul archives",
+    "createdAt" : "2022-07-26T21:57:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Allow `RemoteCardType` specification as global default `card_type`",
+    "createdAt" : "2022-07-30T05:32:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "[Wiki Typo] Should read tautulli, not tautull",
+    "createdAt" : "2022-08-04T11:38:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Handle TMDb API returning badly encoding content",
+    "createdAt" : "2022-08-07T06:27:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Allow specification of series/tags to exclude from Series YAML sync",
+    "createdAt" : "2022-08-08T14:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Optionally add templates to series YAML sync",
+    "createdAt" : "2022-08-09T22:18:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Optionally disable SSL certificate verification with Sonarr",
+    "createdAt" : "2022-08-12T05:01:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Make more generic `StarWarsTitleCard` in the same format",
+    "createdAt" : "2022-08-18T13:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Allow for specification of multiple series YAML syncs",
+    "createdAt" : "2022-08-18T14:10:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Optionally omit gradient from Collection, Season, and Genre cards/posters",
+    "createdAt" : "2022-08-19T13:59:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Check for new releases while executing",
+    "createdAt" : "2022-08-21T19:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "BUG - Unable to write to network drive",
+    "createdAt" : "2022-08-22T14:24:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Create `LandscapeTitleCard`",
+    "createdAt" : "2022-08-22T17:32:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Handling too long titles",
+    "createdAt" : "2022-08-22T18:15:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Optionally skip localized images ",
+    "createdAt" : "2022-08-22T21:08:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Clarify sync `volumes` and `plex_libraries` specification",
+    "createdAt" : "2022-08-23T21:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Optionally execute every step for each show at a time",
+    "createdAt" : "2022-08-25T04:03:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "BUG - Clean malformatted title",
+    "createdAt" : "2022-08-25T09:20:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Create movie posters with Mini Maker",
+    "createdAt" : "2022-08-26T14:48:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "BUG - Losing progress when docker container is restarted/recreated.",
+    "createdAt" : "2022-08-29T11:42:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Detect changes to a show config/YAML and remake cards",
+    "createdAt" : "2022-09-01T00:26:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Integrate with Tautulli to immediately make cards upon import",
+    "createdAt" : "2022-09-01T23:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "Don't attempt to upload images larger than 10MB to Plex",
+    "createdAt" : "2022-09-06T22:31:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Ability to use TheTVDB api instead of TMDB",
+    "createdAt" : "2022-09-08T21:22:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "Make `sync` mode in Plex/Sonarr sync actually useful",
+    "createdAt" : "2022-09-11T20:11:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Create automated tests",
+    "createdAt" : "2022-09-14T21:37:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Modify `episode_ranges` to accept ranges like `s{season}e{episode}`",
+    "createdAt" : "2022-09-17T03:35:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Modify `LandscapeTitleCard` to optionally add bounding box around title",
+    "createdAt" : "2022-09-18T19:39:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Add ability to create movie posters with top line as subtile",
+    "createdAt" : "2022-09-21T03:47:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Optionally filter Sonarr sync by downloaded series only",
+    "createdAt" : "2022-09-22T17:10:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Configure Tautulli notification agent via API",
+    "createdAt" : "2022-09-23T16:30:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Make movie posters with movie number",
+    "createdAt" : "2022-09-28T17:04:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Make movie posters with logos",
+    "createdAt" : "2022-09-29T03:58:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "(Optionally) remake cards if a new title is released",
+    "createdAt" : "2022-10-01T23:39:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Forget cards during manual import with fixer",
+    "createdAt" : "2022-10-11T16:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "re-sync in plex",
+    "createdAt" : "2022-10-13T02:33:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Add new `grayscale` un/watched style option",
+    "createdAt" : "2022-10-14T18:40:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Add card directory override to `sync` setup",
+    "createdAt" : "2022-10-25T17:49:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Allow for multiple connections to Sonarr (and possibly Plex)",
+    "createdAt" : "2022-11-15T18:15:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Convert series `extras` in archive sub-variations",
+    "createdAt" : "2022-11-16T03:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "Create new `FrameTitleCard` ",
+    "createdAt" : "2022-11-16T20:00:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Add cardinal and ordinal options for season titles and episode text formats",
+    "createdAt" : "2022-11-20T20:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Add `delete_missing` font replacement option",
+    "createdAt" : "2022-11-20T20:15:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Optionally add season text at random (deterministic) locations in `RomanNumeralTitleCard`",
+    "createdAt" : "2022-11-21T06:02:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Parse sync exclusions without case sensitivity",
+    "createdAt" : "2022-11-21T17:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Handle episodes that are listed as movies on TMDb",
+    "createdAt" : "2022-11-28T00:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "Add translated options of ordinal and cardinal season/episode/absolute numbers",
+    "createdAt" : "2022-12-07T05:57:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Set season titles in Plex",
+    "createdAt" : "2022-12-12T03:36:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Use Docker but the files on another system",
+    "createdAt" : "2022-12-21T05:25:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Add episode airdate as built-in extra",
+    "createdAt" : "2022-12-22T18:43:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Handle Sonarr episode data with unpopulated TVDb episode ID's",
+    "createdAt" : "2022-12-30T04:30:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Automatic TMDb backdrop gathering only gathering english backdrops",
+    "createdAt" : "2023-01-05T02:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Add support for Emby",
+    "createdAt" : "2023-01-13T03:41:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Create a new `TintedGlassCardType` card ",
+    "createdAt" : "2023-01-16T15:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "BUG - ",
+    "createdAt" : "2023-01-23T07:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Add support for Jellyfin",
+    "createdAt" : "2023-01-23T20:45:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "BUG - Error when running container with yml files needed",
+    "createdAt" : "2023-01-31T13:45:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Add ability to \"revert\" title cards ",
+    "createdAt" : "2023-01-31T18:35:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Add `sync` option to write database ID's during sync",
+    "createdAt" : "2023-02-08T01:13:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "Add sonarr `sync` filter for `seriesType`",
+    "createdAt" : "2023-02-08T01:22:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Docker can't connect to Plex",
+    "createdAt" : "2023-02-11T13:33:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "Allow filtering sync by tags in Plex and Emby",
+    "createdAt" : "2023-02-15T23:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Add TheTVDb for source",
+    "createdAt" : "2023-02-19T23:46:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Create a Web Interface",
+    "createdAt" : "2023-02-20T01:01:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 314,
+    "title" : "Add option to set title card dimensions",
+    "createdAt" : "2023-03-08T18:03:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Setup Issues - Samba shares with docker host",
+    "createdAt" : "2023-03-12T17:57:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Questions Trying to get the blur on thumbnails",
+    "createdAt" : "2023-03-14T00:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Remove togglable font validation",
+    "createdAt" : "2023-03-27T19:35:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 321,
+    "title" : "Use Jellyfin global styles",
+    "createdAt" : "2023-04-05T23:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Only return English logos from TMDb",
+    "createdAt" : "2023-04-09T18:57:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Setup Questions",
+    "createdAt" : "2023-04-11T23:38:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "Allow background images in `LogoTitleCard`",
+    "createdAt" : "2023-04-12T00:11:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Create new `DividerTitleCard` card type",
+    "createdAt" : "2023-04-16T21:44:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "Handle title mismatches on Plex for titles with commas",
+    "createdAt" : "2023-04-17T15:29:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Create new `InsetTitleCard` card type",
+    "createdAt" : "2023-04-18T05:00:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 329,
+    "title" : "logo.png not downloading",
+    "createdAt" : "2023-04-18T17:04:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Allow specification of non-English languages for logo selection from TMDb",
+    "createdAt" : "2023-04-18T18:31:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Create `TintedFrameTitleCard` new card type",
+    "createdAt" : "2023-04-20T04:27:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Add borderless option to Movie Posters",
+    "createdAt" : "2023-04-20T04:53:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Cards being made but are not updating in Plex",
+    "createdAt" : "2023-04-22T17:14:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Add ability to download logos from Emby/Jellyfin",
+    "createdAt" : "2023-04-30T02:11:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 336,
+    "title" : "Allow logos to be omitted from season posters",
+    "createdAt" : "2023-05-04T04:06:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Fix manual title card importing to Emby and Jellyfin",
+    "createdAt" : "2023-05-05T06:23:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "Ability to use PMS Tag (label) as a filter per-episode ",
+    "createdAt" : "2023-05-17T06:10:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "Transition to compiled documentation",
+    "createdAt" : "2023-05-24T17:40:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 340,
+    "title" : "Redact server URL's from error tracelogs",
+    "createdAt" : "2023-05-26T19:22:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 341,
+    "title" : "Optionally disable outer frame blurring in Tinted Frame title card",
+    "createdAt" : "2023-05-31T21:33:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Create new Comic Book title card",
+    "createdAt" : "2023-06-06T06:51:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Add navigation buttons to easily switch between Series pages",
+    "createdAt" : "2023-06-13T03:10:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 345,
+    "title" : "Create scheduled task for missing poster downloading",
+    "createdAt" : "2023-06-13T20:15:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 346,
+    "title" : "Add option to match the Series monitored status with Sonarr",
+    "createdAt" : "2023-06-14T01:46:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 347,
+    "title" : "Get Series posters from Media Servers before trying TMDb",
+    "createdAt" : "2023-06-14T03:46:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 348,
+    "title" : "Log relevant Series and Episode when download fails",
+    "createdAt" : "2023-06-16T21:25:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "HELP - Would it be possible to automate the minimaker to add a white border around custom posters ?",
+    "createdAt" : "2023-06-18T11:29:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 350,
+    "title" : "Add pagination to Series home page to improve load times",
+    "createdAt" : "2023-06-19T05:34:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 351,
+    "title" : "Add scheduled database backup",
+    "createdAt" : "2023-06-19T06:32:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 353,
+    "title" : "Add background task updates to user",
+    "createdAt" : "2023-06-27T00:08:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 354,
+    "title" : "View and filter logs within the UI",
+    "createdAt" : "2023-06-27T00:09:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 355,
+    "title" : "Overhaul logging to be easier to trace",
+    "createdAt" : "2023-06-27T00:10:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 356,
+    "title" : "Allow importing of entire Series configs (and associated Fonts/Templates) within UI",
+    "createdAt" : "2023-06-30T02:50:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 357,
+    "title" : "Improve New Series search",
+    "createdAt" : "2023-07-02T16:19:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 358,
+    "title" : "Add button to do all major card functions of a Series in order",
+    "createdAt" : "2023-07-03T04:13:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 359,
+    "title" : "Add authentication to UI",
+    "createdAt" : "2023-07-03T18:23:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 360,
+    "title" : "Make Syncs editable",
+    "createdAt" : "2023-07-10T01:48:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 362,
+    "title" : "Add option to only get Episode data from Sonarr for downloaded Episodes",
+    "createdAt" : "2023-07-12T03:27:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 363,
+    "title" : "View title cards within the UI",
+    "createdAt" : "2023-07-18T02:34:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 364,
+    "title" : "View and browse logos within the UI",
+    "createdAt" : "2023-07-18T02:34:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 365,
+    "title" : "Add live card preview to Series card configuration page",
+    "createdAt" : "2023-07-18T02:34:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 366,
+    "title" : "Show Fonts and Templates in alphabetical order",
+    "createdAt" : "2023-07-19T05:24:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 369,
+    "title" : "Allow Tasks to be scheduled via cron",
+    "createdAt" : "2023-07-25T04:19:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 370,
+    "title" : "Display Series Card progress on homepage",
+    "createdAt" : "2023-07-31T03:44:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 371,
+    "title" : "Allow multiple of each type of Connection",
+    "createdAt" : "2023-08-02T16:14:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 372,
+    "title" : "HELP - Update list does not exist",
+    "createdAt" : "2023-08-02T18:59:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Add timestamps to master Blueprints, allow sorting by newly added",
+    "createdAt" : "2023-08-06T15:00:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 376,
+    "title" : "Add Font Validation to the UI",
+    "createdAt" : "2023-08-09T15:14:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 377,
+    "title" : "Add the Comic Book card to v1",
+    "createdAt" : "2023-08-09T15:17:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Remove duplicate Card entries for Episodes",
+    "createdAt" : "2023-08-09T19:59:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 379,
+    "title" : "Allow \"Delete missing\" Font toggle to be unset from the UI",
+    "createdAt" : "2023-08-10T18:31:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 380,
+    "title" : "Allow specification of replacements to empty characters",
+    "createdAt" : "2023-08-10T18:31:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 381,
+    "title" : "HELP - Jellyfin sync setup and general questions",
+    "createdAt" : "2023-08-11T17:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "HELP - Cards are not being created",
+    "createdAt" : "2023-08-14T14:14:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Add interword spacing to all Fonts",
+    "createdAt" : "2023-08-18T16:33:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "BUG - Jellyfin: Series \"...\" was not found under library \"...\" in Jellyfin",
+    "createdAt" : "2023-08-19T15:18:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Add option to display \"simplified\" Episode data tables",
+    "createdAt" : "2023-08-21T04:23:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 387,
+    "title" : "Match existing Templates and Fonts when importing Blueprints",
+    "createdAt" : "2023-08-23T16:32:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 388,
+    "title" : "Add setting for home page size",
+    "createdAt" : "2023-08-23T16:51:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 389,
+    "title" : "HELP - Has no year skipping",
+    "createdAt" : "2023-08-24T15:50:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "BUG - Jellyfin - While processing series: string indices must be integers, not 'str'",
+    "createdAt" : "2023-08-25T05:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Delete old Blueprint zips",
+    "createdAt" : "2023-08-25T22:06:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 392,
+    "title" : "Allow specification of local card type files",
+    "createdAt" : "2023-08-30T02:27:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 394,
+    "title" : "Allow arbitrary files to be added to Blueprints",
+    "createdAt" : "2023-09-11T19:15:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 395,
+    "title" : "BUG - Sync Jellyfin",
+    "createdAt" : "2023-09-12T02:56:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Change image preview for Marvel card type",
+    "createdAt" : "2023-09-18T13:03:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "BUG - Card Type Not Working",
+    "createdAt" : "2023-09-20T16:51:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "HELP - sync with sonarr yaml and plex, fails with a language different from en",
+    "createdAt" : "2023-09-24T18:23:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 400,
+    "title" : "Add extra for Olivier card episode text font size",
+    "createdAt" : "2023-09-24T21:53:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 401,
+    "title" : "HELP -  Some Questions",
+    "createdAt" : "2023-09-29T13:21:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Optionally add EXIF tag to cards for better PMM integration",
+    "createdAt" : "2023-10-01T06:10:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "Display changelog within the UI",
+    "createdAt" : "2023-10-02T05:17:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 404,
+    "title" : "Create \"missing\" page for v2",
+    "createdAt" : "2023-10-02T05:18:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 405,
+    "title" : "Allow multiple preview files for Blueprints",
+    "createdAt" : "2023-10-04T19:30:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 406,
+    "title" : "Add drop shadows to movie posters",
+    "createdAt" : "2023-10-05T04:12:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "Add logo vertical shift extra to Tinted Frame card",
+    "createdAt" : "2023-10-05T23:00:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 408,
+    "title" : "Implement \"smart\" Blueprint matching",
+    "createdAt" : "2023-10-06T04:30:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 409,
+    "title" : "Use \"fuzzy\" searching within UI",
+    "createdAt" : "2023-10-09T18:03:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 410,
+    "title" : "Handle filenames longer than 254 characters",
+    "createdAt" : "2023-10-13T03:39:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "Analyze custom Fonts and suggest character replacements",
+    "createdAt" : "2023-10-13T17:56:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 412,
+    "title" : "Allow creation of Blueprint \"sets\"",
+    "createdAt" : "2023-10-15T22:48:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 414,
+    "title" : "BUG - Documentation Typo",
+    "createdAt" : "2023-10-23T20:25:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "BUG - Shows with character ’ aren't match on Jellyfin",
+    "createdAt" : "2023-10-31T10:50:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "BUG - \\ua789 character error",
+    "createdAt" : "2023-11-04T22:36:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Handle changing Emby or Jellyfin IDs",
+    "createdAt" : "2023-11-08T19:41:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 418,
+    "title" : "Add ability to horizontally flip source images",
+    "createdAt" : "2023-11-08T20:09:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 419,
+    "title" : "BUG - ",
+    "createdAt" : "2023-11-13T19:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Create tabular view of home page",
+    "createdAt" : "2023-11-19T16:54:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 421,
+    "title" : "Add statistic for number of loaded Title Cards",
+    "createdAt" : "2023-11-19T16:54:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 422,
+    "title" : "Overhaul notifications and in-UI message",
+    "createdAt" : "2023-11-20T23:04:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 423,
+    "title" : "Redact log messages",
+    "createdAt" : "2023-11-24T16:26:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 424,
+    "title" : "Add support for Notifiarr",
+    "createdAt" : "2023-11-24T16:28:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 425,
+    "title" : "Handle more types of arbitrary format strings",
+    "createdAt" : "2023-11-24T16:30:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 426,
+    "title" : "HELP - WebUI not present on Unraid",
+    "createdAt" : "2023-11-29T10:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Allow Sonarr Sync filtering by root folder",
+    "createdAt" : "2024-01-05T03:07:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 430,
+    "title" : "Add built-in support for posters",
+    "createdAt" : "2024-01-17T17:27:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 431,
+    "title" : "Add Font option to apply ordinal conversion for all numbers",
+    "createdAt" : "2024-01-24T23:18:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 432,
+    "title" : "Do not allow multiple Syncs to run at the same time",
+    "createdAt" : "2024-01-25T01:08:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 433,
+    "title" : "Add global option to adjust the compression / quality level",
+    "createdAt" : "2024-01-29T05:32:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 434,
+    "title" : "Also browse Source Images from Emby and Jellyfin",
+    "createdAt" : "2024-02-02T18:19:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 435,
+    "title" : "Allow specification of global Templates",
+    "createdAt" : "2024-02-05T22:12:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 436,
+    "title" : "HELP - Can't Generate Title Cards",
+    "createdAt" : "2024-02-06T22:48:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "Add optional API rate limiting",
+    "createdAt" : "2024-02-09T18:58:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 438,
+    "title" : "Add color palette analysis",
+    "createdAt" : "2024-02-21T05:53:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 439,
+    "title" : "Add per-card type global settings/extras",
+    "createdAt" : "2024-02-23T23:18:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 440,
+    "title" : "Add Series toggle for title auto-splitting",
+    "createdAt" : "2024-03-07T01:33:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 441,
+    "title" : "Separate watched and new content Tautulli agents",
+    "createdAt" : "2024-03-07T06:51:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 442,
+    "title" : "Allow for assigning Named Font objects to episode text",
+    "createdAt" : "2024-03-07T06:53:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 443,
+    "title" : "Add ability to adjust auto splitting per-Font",
+    "createdAt" : "2024-03-07T06:53:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 444,
+    "title" : "setup",
+    "createdAt" : "2024-03-13T01:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Add TVDb API integration",
+    "createdAt" : "2024-03-13T04:18:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 446,
+    "title" : "Auto Hide Season Title for Shows with only 1 Season",
+    "createdAt" : "2024-03-14T12:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Add airdate to Episode data table",
+    "createdAt" : "2024-03-15T01:42:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 448,
+    "title" : "HELP - Maker using previous card to create new cards (pasting over the previous card)",
+    "createdAt" : "2024-03-18T03:43:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Allow drag-n-drop Card uploads to a Series",
+    "createdAt" : "2024-03-18T05:37:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 450,
+    "title" : "HELP - Different cards for the same show based on Plex library language",
+    "createdAt" : "2024-03-18T17:26:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "Add smarter matching when importing Fonts and Templates from Blueprints",
+    "createdAt" : "2024-03-18T23:27:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 452,
+    "title" : "Add support for other regional variants of languages",
+    "createdAt" : "2024-03-22T06:59:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "HELP - Tautulli integration - Error reading update list, skipping and deleting",
+    "createdAt" : "2024-03-23T18:30:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "Jellyfin sync original title as Kanji",
+    "createdAt" : "2024-03-23T19:43:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "Evaluate API integration to MediUX",
+    "createdAt" : "2024-04-10T16:36:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 456,
+    "title" : "Evaluate switch to PostgreSQL",
+    "createdAt" : "2024-04-10T16:37:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 457,
+    "title" : "Add functionality to mass-remove a Library",
+    "createdAt" : "2024-04-10T16:37:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 462,
+    "title" : "BUG - the tmdb logo_language_priority configuration for \"fr\" no longer works",
+    "createdAt" : "2024-06-13T20:02:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 463,
+    "title" : "Add ability to filter by genre",
+    "createdAt" : "2024-06-21T04:56:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 464,
+    "title" : "Add option to \"reset\" a Series when a Blueprint is imported",
+    "createdAt" : "2024-06-21T23:18:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 465,
+    "title" : "Add support for per-season logos and backdrops",
+    "createdAt" : "2024-06-21T23:18:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 466,
+    "title" : "Optionally import posters from Kometa / MediUX YAML",
+    "createdAt" : "2024-06-30T18:03:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 467,
+    "title" : "Optionally load Cards into the Backdrop in Emby/Jellyfin",
+    "createdAt" : "2024-07-02T02:33:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 468,
+    "title" : "Add ability to delete Series when removed from Sync source",
+    "createdAt" : "2024-07-05T02:31:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 469,
+    "title" : "Generate private key on device during program boot",
+    "createdAt" : "2024-07-07T05:16:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "Store private Connection details in encrypted form within database",
+    "createdAt" : "2024-07-07T05:17:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 471,
+    "title" : "BUG - TintedFrameTitleCard - episode_text_font_size only gets applied to 'index' and not 'title'",
+    "createdAt" : "2024-07-14T06:34:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 473,
+    "title" : "Add fanart.tv API integration",
+    "createdAt" : "2024-07-31T03:37:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 476,
+    "title" : "HELP - How to translate Season and Episode?",
+    "createdAt" : "2024-08-11T20:53:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 477,
+    "title" : "Add global per card-type Font customization",
+    "createdAt" : "2024-08-30T17:12:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 478,
+    "title" : "Add per-Template and Series Image Source Priority setting",
+    "createdAt" : "2024-08-30T17:13:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 479,
+    "title" : "Add integration with an NN upscaler",
+    "createdAt" : "2024-09-03T00:09:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 480,
+    "title" : "Add functionality to \"transfer\" a Font/Template over to another",
+    "createdAt" : "2024-09-03T00:13:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 481,
+    "title" : "Add optional connection to a background removal tool",
+    "createdAt" : "2024-09-18T20:53:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 482,
+    "title" : "Add various gradient intensities to Olivier card",
+    "createdAt" : "2024-10-30T00:04:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 483,
+    "title" : "Add ability to assign labels to series in TCM",
+    "createdAt" : "2024-11-06T16:32:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 484,
+    "title" : "Add in-UI support for mask images",
+    "createdAt" : "2024-11-06T16:34:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 485,
+    "title" : "Add more advanced series filtering mechanism",
+    "createdAt" : "2024-11-06T16:38:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 486,
+    "title" : "Improve home page performance",
+    "createdAt" : "2024-11-06T22:56:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 487,
+    "title" : "Add Source Image bulk-upload file input",
+    "createdAt" : "2025-01-04T20:11:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 488,
+    "title" : "Add quick toggle for showing advanced episode data tables on the Series page",
+    "createdAt" : "2025-01-07T16:36:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 489,
+    "title" : "Optionally \"upgrade\" source images",
+    "createdAt" : "2025-01-13T02:49:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 490,
+    "title" : "Add a recently added Card page",
+    "createdAt" : "2025-02-21T15:55:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 491,
+    "title" : "Integration with Tautulli - possible sync for unwatched?",
+    "createdAt" : "2025-03-01T20:28:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "Add extra to Tinted Frame card to only draw top/bottom frame as straight lines",
+    "createdAt" : "2025-03-03T17:07:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 493,
+    "title" : "HELP - Tautulli integration with normal usage",
+    "createdAt" : "2025-03-05T22:20:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "Implement `__rich_repr__` in Pydantic models",
+    "createdAt" : "2025-10-23T18:41:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 496,
+    "title" : "BUG - Can't save any settings in the webui?",
+    "createdAt" : "2025-12-15T10:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 497,
+    "title" : "HELP - Plex server not being updated",
+    "createdAt" : "2025-12-26T23:02:31Z",
+    "state" : "CLOSED"
+  } ]
+}

@@ -1,0 +1,5923 @@
+{
+  "repoOwner" : "Lightning-AI",
+  "repoName" : "torchmetrics",
+  "forks" : [ {
+    "createdAt" : "2021-03-12T09:03:02Z"
+  }, {
+    "createdAt" : "2021-03-12T23:08:30Z"
+  }, {
+    "createdAt" : "2021-03-13T05:47:50Z"
+  }, {
+    "createdAt" : "2021-03-13T09:32:26Z"
+  }, {
+    "createdAt" : "2021-03-15T07:05:55Z"
+  }, {
+    "createdAt" : "2021-03-15T14:54:42Z"
+  }, {
+    "createdAt" : "2021-03-16T03:19:12Z"
+  }, {
+    "createdAt" : "2021-03-18T09:24:39Z"
+  }, {
+    "createdAt" : "2021-03-18T21:38:20Z"
+  }, {
+    "createdAt" : "2021-03-18T21:54:32Z"
+  }, {
+    "createdAt" : "2021-03-20T18:13:20Z"
+  }, {
+    "createdAt" : "2021-03-21T08:52:57Z"
+  }, {
+    "createdAt" : "2021-03-21T19:19:04Z"
+  }, {
+    "createdAt" : "2021-03-23T09:49:08Z"
+  }, {
+    "createdAt" : "2021-03-23T18:42:59Z"
+  }, {
+    "createdAt" : "2021-03-25T15:27:18Z"
+  }, {
+    "createdAt" : "2021-03-25T19:18:28Z"
+  }, {
+    "createdAt" : "2021-03-28T12:06:21Z"
+  }, {
+    "createdAt" : "2021-03-29T01:43:03Z"
+  }, {
+    "createdAt" : "2021-03-29T05:29:02Z"
+  }, {
+    "createdAt" : "2021-03-29T07:08:00Z"
+  }, {
+    "createdAt" : "2021-04-03T03:39:08Z"
+  }, {
+    "createdAt" : "2021-04-05T11:24:18Z"
+  }, {
+    "createdAt" : "2021-04-18T00:09:12Z"
+  }, {
+    "createdAt" : "2021-04-20T00:07:55Z"
+  }, {
+    "createdAt" : "2021-04-22T16:19:35Z"
+  }, {
+    "createdAt" : "2021-04-26T18:13:32Z"
+  }, {
+    "createdAt" : "2021-04-27T22:43:51Z"
+  }, {
+    "createdAt" : "2021-04-28T00:14:03Z"
+  }, {
+    "createdAt" : "2021-04-30T04:22:01Z"
+  }, {
+    "createdAt" : "2021-04-30T11:30:00Z"
+  }, {
+    "createdAt" : "2021-05-01T19:38:08Z"
+  }, {
+    "createdAt" : "2021-05-02T04:27:20Z"
+  }, {
+    "createdAt" : "2021-05-02T07:00:50Z"
+  }, {
+    "createdAt" : "2021-05-05T17:20:44Z"
+  }, {
+    "createdAt" : "2021-05-07T03:15:22Z"
+  }, {
+    "createdAt" : "2021-05-07T09:16:51Z"
+  }, {
+    "createdAt" : "2021-05-11T01:42:14Z"
+  }, {
+    "createdAt" : "2021-05-11T08:40:38Z"
+  }, {
+    "createdAt" : "2021-05-12T21:02:45Z"
+  }, {
+    "createdAt" : "2021-05-14T12:26:46Z"
+  }, {
+    "createdAt" : "2021-05-17T15:35:55Z"
+  }, {
+    "createdAt" : "2021-05-20T15:16:53Z"
+  }, {
+    "createdAt" : "2021-05-31T12:45:57Z"
+  }, {
+    "createdAt" : "2021-05-31T16:01:36Z"
+  }, {
+    "createdAt" : "2021-06-17T10:29:34Z"
+  }, {
+    "createdAt" : "2021-06-17T17:11:44Z"
+  }, {
+    "createdAt" : "2021-06-20T20:02:02Z"
+  }, {
+    "createdAt" : "2021-06-22T18:47:34Z"
+  }, {
+    "createdAt" : "2021-07-02T09:50:51Z"
+  }, {
+    "createdAt" : "2021-07-06T21:37:55Z"
+  }, {
+    "createdAt" : "2021-07-08T08:22:11Z"
+  }, {
+    "createdAt" : "2021-07-08T08:35:24Z"
+  }, {
+    "createdAt" : "2021-07-09T17:10:22Z"
+  }, {
+    "createdAt" : "2021-07-13T02:54:03Z"
+  }, {
+    "createdAt" : "2021-07-14T18:00:24Z"
+  }, {
+    "createdAt" : "2021-07-15T16:37:16Z"
+  }, {
+    "createdAt" : "2021-07-16T10:08:17Z"
+  }, {
+    "createdAt" : "2021-07-18T20:20:30Z"
+  }, {
+    "createdAt" : "2021-07-24T04:15:54Z"
+  }, {
+    "createdAt" : "2021-07-26T15:00:15Z"
+  }, {
+    "createdAt" : "2021-08-02T11:20:46Z"
+  }, {
+    "createdAt" : "2021-08-03T17:06:48Z"
+  }, {
+    "createdAt" : "2021-08-07T06:51:28Z"
+  }, {
+    "createdAt" : "2021-08-08T15:14:44Z"
+  }, {
+    "createdAt" : "2021-08-09T18:06:21Z"
+  }, {
+    "createdAt" : "2021-08-11T07:01:25Z"
+  }, {
+    "createdAt" : "2021-08-11T11:54:36Z"
+  }, {
+    "createdAt" : "2021-08-13T06:47:59Z"
+  }, {
+    "createdAt" : "2021-08-24T07:01:05Z"
+  }, {
+    "createdAt" : "2021-08-25T16:27:13Z"
+  }, {
+    "createdAt" : "2021-08-28T15:46:56Z"
+  }, {
+    "createdAt" : "2021-08-29T01:09:19Z"
+  }, {
+    "createdAt" : "2021-09-06T10:47:33Z"
+  }, {
+    "createdAt" : "2021-09-07T06:24:47Z"
+  }, {
+    "createdAt" : "2021-09-14T23:34:23Z"
+  }, {
+    "createdAt" : "2021-09-16T09:25:20Z"
+  }, {
+    "createdAt" : "2021-09-18T03:34:01Z"
+  }, {
+    "createdAt" : "2021-09-19T02:34:08Z"
+  }, {
+    "createdAt" : "2021-09-30T23:10:12Z"
+  }, {
+    "createdAt" : "2021-10-06T18:27:43Z"
+  }, {
+    "createdAt" : "2021-10-06T19:20:25Z"
+  }, {
+    "createdAt" : "2021-10-11T23:01:16Z"
+  }, {
+    "createdAt" : "2021-10-16T05:07:32Z"
+  }, {
+    "createdAt" : "2021-10-17T18:26:33Z"
+  }, {
+    "createdAt" : "2021-10-18T10:01:56Z"
+  }, {
+    "createdAt" : "2021-10-21T13:32:38Z"
+  }, {
+    "createdAt" : "2021-10-23T09:25:25Z"
+  }, {
+    "createdAt" : "2021-10-28T07:50:05Z"
+  }, {
+    "createdAt" : "2021-10-29T06:16:31Z"
+  }, {
+    "createdAt" : "2021-11-03T14:24:39Z"
+  }, {
+    "createdAt" : "2021-11-16T00:31:55Z"
+  }, {
+    "createdAt" : "2021-11-16T15:41:00Z"
+  }, {
+    "createdAt" : "2021-11-17T06:16:39Z"
+  }, {
+    "createdAt" : "2021-11-20T07:03:07Z"
+  }, {
+    "createdAt" : "2021-11-25T07:13:15Z"
+  }, {
+    "createdAt" : "2021-11-26T12:56:16Z"
+  }, {
+    "createdAt" : "2021-11-28T11:12:11Z"
+  }, {
+    "createdAt" : "2021-11-29T13:32:36Z"
+  }, {
+    "createdAt" : "2021-12-05T04:16:28Z"
+  }, {
+    "createdAt" : "2021-12-06T07:54:39Z"
+  }, {
+    "createdAt" : "2021-12-07T06:40:01Z"
+  }, {
+    "createdAt" : "2021-12-10T11:34:31Z"
+  }, {
+    "createdAt" : "2021-12-10T15:42:45Z"
+  }, {
+    "createdAt" : "2021-12-13T10:20:45Z"
+  }, {
+    "createdAt" : "2021-12-14T15:26:11Z"
+  }, {
+    "createdAt" : "2021-12-17T19:04:26Z"
+  }, {
+    "createdAt" : "2021-12-20T06:15:55Z"
+  }, {
+    "createdAt" : "2021-12-26T10:59:20Z"
+  }, {
+    "createdAt" : "2022-01-03T19:21:28Z"
+  }, {
+    "createdAt" : "2022-01-04T00:05:54Z"
+  }, {
+    "createdAt" : "2022-01-08T09:24:02Z"
+  }, {
+    "createdAt" : "2022-01-08T16:10:32Z"
+  }, {
+    "createdAt" : "2022-01-09T20:43:12Z"
+  }, {
+    "createdAt" : "2022-01-11T14:08:52Z"
+  }, {
+    "createdAt" : "2022-01-12T10:18:51Z"
+  }, {
+    "createdAt" : "2022-01-12T13:56:11Z"
+  }, {
+    "createdAt" : "2022-01-13T14:24:04Z"
+  }, {
+    "createdAt" : "2022-01-17T21:41:45Z"
+  }, {
+    "createdAt" : "2022-01-18T13:32:26Z"
+  }, {
+    "createdAt" : "2022-01-20T12:33:16Z"
+  }, {
+    "createdAt" : "2022-01-23T04:25:07Z"
+  }, {
+    "createdAt" : "2022-01-24T07:16:48Z"
+  }, {
+    "createdAt" : "2022-01-25T07:22:59Z"
+  }, {
+    "createdAt" : "2022-01-25T16:10:02Z"
+  }, {
+    "createdAt" : "2022-01-26T10:16:14Z"
+  }, {
+    "createdAt" : "2022-01-27T22:37:34Z"
+  }, {
+    "createdAt" : "2022-01-28T08:24:05Z"
+  }, {
+    "createdAt" : "2022-01-30T21:56:24Z"
+  }, {
+    "createdAt" : "2022-01-31T16:58:27Z"
+  }, {
+    "createdAt" : "2022-02-07T02:50:18Z"
+  }, {
+    "createdAt" : "2022-02-10T04:10:01Z"
+  }, {
+    "createdAt" : "2022-02-11T11:17:25Z"
+  }, {
+    "createdAt" : "2022-02-13T10:20:42Z"
+  }, {
+    "createdAt" : "2022-02-13T13:38:24Z"
+  }, {
+    "createdAt" : "2022-02-25T09:52:14Z"
+  }, {
+    "createdAt" : "2022-02-27T18:27:56Z"
+  }, {
+    "createdAt" : "2022-03-02T07:12:09Z"
+  }, {
+    "createdAt" : "2022-03-06T15:04:40Z"
+  }, {
+    "createdAt" : "2022-03-06T22:07:18Z"
+  }, {
+    "createdAt" : "2022-03-07T21:33:59Z"
+  }, {
+    "createdAt" : "2022-03-07T22:28:09Z"
+  }, {
+    "createdAt" : "2022-03-09T23:26:15Z"
+  }, {
+    "createdAt" : "2022-03-10T13:05:17Z"
+  }, {
+    "createdAt" : "2022-03-18T01:52:47Z"
+  }, {
+    "createdAt" : "2022-03-19T09:51:53Z"
+  }, {
+    "createdAt" : "2022-03-22T08:48:49Z"
+  }, {
+    "createdAt" : "2022-03-24T13:43:16Z"
+  }, {
+    "createdAt" : "2022-03-25T06:04:59Z"
+  }, {
+    "createdAt" : "2022-03-29T11:21:36Z"
+  }, {
+    "createdAt" : "2022-04-07T13:29:39Z"
+  }, {
+    "createdAt" : "2022-04-08T17:03:40Z"
+  }, {
+    "createdAt" : "2022-04-15T20:05:05Z"
+  }, {
+    "createdAt" : "2022-04-18T13:08:37Z"
+  }, {
+    "createdAt" : "2022-04-20T02:43:59Z"
+  }, {
+    "createdAt" : "2022-04-21T15:46:32Z"
+  }, {
+    "createdAt" : "2022-04-28T19:41:28Z"
+  }, {
+    "createdAt" : "2022-04-29T21:28:59Z"
+  }, {
+    "createdAt" : "2022-05-10T11:08:37Z"
+  }, {
+    "createdAt" : "2022-05-11T08:33:09Z"
+  }, {
+    "createdAt" : "2022-05-16T20:38:37Z"
+  }, {
+    "createdAt" : "2022-05-16T21:21:29Z"
+  }, {
+    "createdAt" : "2022-05-18T03:34:32Z"
+  }, {
+    "createdAt" : "2022-05-19T07:31:45Z"
+  }, {
+    "createdAt" : "2022-05-25T12:06:52Z"
+  }, {
+    "createdAt" : "2022-05-29T13:13:50Z"
+  }, {
+    "createdAt" : "2022-06-03T03:08:22Z"
+  }, {
+    "createdAt" : "2022-06-06T13:26:52Z"
+  }, {
+    "createdAt" : "2022-06-08T20:38:46Z"
+  }, {
+    "createdAt" : "2022-06-15T16:25:34Z"
+  }, {
+    "createdAt" : "2022-06-21T15:46:19Z"
+  }, {
+    "createdAt" : "2022-06-27T01:44:29Z"
+  }, {
+    "createdAt" : "2022-06-27T19:53:44Z"
+  }, {
+    "createdAt" : "2022-06-30T13:06:26Z"
+  }, {
+    "createdAt" : "2022-07-08T18:50:43Z"
+  }, {
+    "createdAt" : "2022-07-08T23:31:21Z"
+  }, {
+    "createdAt" : "2022-07-14T07:15:07Z"
+  }, {
+    "createdAt" : "2022-07-15T05:24:12Z"
+  }, {
+    "createdAt" : "2022-07-21T10:37:09Z"
+  }, {
+    "createdAt" : "2022-07-21T11:16:15Z"
+  }, {
+    "createdAt" : "2022-07-22T09:57:35Z"
+  }, {
+    "createdAt" : "2022-07-28T06:18:10Z"
+  }, {
+    "createdAt" : "2022-07-29T01:46:46Z"
+  }, {
+    "createdAt" : "2022-08-02T10:28:41Z"
+  }, {
+    "createdAt" : "2022-08-05T19:59:45Z"
+  }, {
+    "createdAt" : "2022-08-07T23:37:08Z"
+  }, {
+    "createdAt" : "2022-08-11T17:05:02Z"
+  }, {
+    "createdAt" : "2022-08-11T20:57:01Z"
+  }, {
+    "createdAt" : "2022-08-12T12:09:51Z"
+  }, {
+    "createdAt" : "2022-08-17T07:38:10Z"
+  }, {
+    "createdAt" : "2022-08-19T23:00:19Z"
+  }, {
+    "createdAt" : "2022-08-23T11:39:57Z"
+  }, {
+    "createdAt" : "2022-08-23T15:29:49Z"
+  }, {
+    "createdAt" : "2022-08-27T10:44:29Z"
+  }, {
+    "createdAt" : "2022-08-29T15:01:29Z"
+  }, {
+    "createdAt" : "2022-09-02T23:51:14Z"
+  }, {
+    "createdAt" : "2022-09-05T07:58:31Z"
+  }, {
+    "createdAt" : "2022-09-13T21:48:17Z"
+  }, {
+    "createdAt" : "2022-09-15T00:07:32Z"
+  }, {
+    "createdAt" : "2022-09-17T13:43:58Z"
+  }, {
+    "createdAt" : "2022-09-18T06:31:14Z"
+  }, {
+    "createdAt" : "2022-09-25T16:46:07Z"
+  }, {
+    "createdAt" : "2022-09-26T02:38:05Z"
+  }, {
+    "createdAt" : "2022-09-29T17:21:59Z"
+  }, {
+    "createdAt" : "2022-10-02T17:40:51Z"
+  }, {
+    "createdAt" : "2022-10-06T21:27:47Z"
+  }, {
+    "createdAt" : "2022-10-10T10:53:52Z"
+  }, {
+    "createdAt" : "2022-10-25T05:46:48Z"
+  }, {
+    "createdAt" : "2022-10-28T01:48:03Z"
+  }, {
+    "createdAt" : "2022-10-31T18:57:16Z"
+  }, {
+    "createdAt" : "2022-11-01T03:16:14Z"
+  }, {
+    "createdAt" : "2022-11-02T13:57:16Z"
+  }, {
+    "createdAt" : "2022-11-05T18:15:07Z"
+  }, {
+    "createdAt" : "2022-11-08T15:26:36Z"
+  }, {
+    "createdAt" : "2022-11-08T23:41:33Z"
+  }, {
+    "createdAt" : "2022-11-16T09:00:47Z"
+  }, {
+    "createdAt" : "2022-11-16T09:39:45Z"
+  }, {
+    "createdAt" : "2022-11-23T07:38:25Z"
+  }, {
+    "createdAt" : "2022-11-26T12:30:06Z"
+  }, {
+    "createdAt" : "2022-11-27T20:40:07Z"
+  }, {
+    "createdAt" : "2022-12-01T15:55:41Z"
+  }, {
+    "createdAt" : "2022-12-02T14:18:40Z"
+  }, {
+    "createdAt" : "2022-12-13T23:08:49Z"
+  }, {
+    "createdAt" : "2022-12-15T16:25:06Z"
+  }, {
+    "createdAt" : "2022-12-16T13:08:44Z"
+  }, {
+    "createdAt" : "2022-12-19T21:00:27Z"
+  }, {
+    "createdAt" : "2022-12-21T23:28:29Z"
+  }, {
+    "createdAt" : "2022-12-23T01:07:12Z"
+  }, {
+    "createdAt" : "2022-12-25T11:54:32Z"
+  }, {
+    "createdAt" : "2022-12-26T01:53:35Z"
+  }, {
+    "createdAt" : "2022-12-27T15:17:57Z"
+  }, {
+    "createdAt" : "2022-12-27T19:31:02Z"
+  }, {
+    "createdAt" : "2022-12-29T16:47:57Z"
+  }, {
+    "createdAt" : "2022-12-30T10:05:12Z"
+  }, {
+    "createdAt" : "2022-12-31T13:12:36Z"
+  }, {
+    "createdAt" : "2022-12-31T23:21:29Z"
+  }, {
+    "createdAt" : "2023-01-04T20:41:07Z"
+  }, {
+    "createdAt" : "2023-01-08T20:06:32Z"
+  }, {
+    "createdAt" : "2023-01-08T20:41:06Z"
+  }, {
+    "createdAt" : "2023-01-09T06:32:46Z"
+  }, {
+    "createdAt" : "2023-01-09T15:42:26Z"
+  }, {
+    "createdAt" : "2023-01-10T02:48:02Z"
+  }, {
+    "createdAt" : "2023-01-18T15:20:58Z"
+  }, {
+    "createdAt" : "2023-01-21T00:41:07Z"
+  }, {
+    "createdAt" : "2023-01-26T02:08:43Z"
+  }, {
+    "createdAt" : "2023-01-28T13:27:19Z"
+  }, {
+    "createdAt" : "2023-02-02T00:46:09Z"
+  }, {
+    "createdAt" : "2023-02-06T20:10:21Z"
+  }, {
+    "createdAt" : "2023-02-07T00:03:34Z"
+  }, {
+    "createdAt" : "2023-02-10T05:30:55Z"
+  }, {
+    "createdAt" : "2023-02-12T21:33:40Z"
+  }, {
+    "createdAt" : "2023-02-13T03:40:33Z"
+  }, {
+    "createdAt" : "2023-02-14T09:47:52Z"
+  }, {
+    "createdAt" : "2023-02-14T20:23:50Z"
+  }, {
+    "createdAt" : "2023-02-16T17:09:38Z"
+  }, {
+    "createdAt" : "2023-03-02T22:11:30Z"
+  }, {
+    "createdAt" : "2023-03-03T16:19:08Z"
+  }, {
+    "createdAt" : "2023-03-13T02:56:24Z"
+  }, {
+    "createdAt" : "2023-03-21T11:41:24Z"
+  }, {
+    "createdAt" : "2023-03-24T16:10:45Z"
+  }, {
+    "createdAt" : "2023-03-28T11:50:20Z"
+  }, {
+    "createdAt" : "2023-04-03T21:55:16Z"
+  }, {
+    "createdAt" : "2023-04-11T21:42:21Z"
+  }, {
+    "createdAt" : "2023-04-15T10:29:07Z"
+  }, {
+    "createdAt" : "2023-04-23T14:04:19Z"
+  }, {
+    "createdAt" : "2023-04-25T09:02:09Z"
+  }, {
+    "createdAt" : "2023-04-25T21:02:05Z"
+  }, {
+    "createdAt" : "2023-04-28T12:17:31Z"
+  }, {
+    "createdAt" : "2023-05-01T11:49:30Z"
+  }, {
+    "createdAt" : "2023-05-05T01:06:00Z"
+  }, {
+    "createdAt" : "2023-05-05T15:06:27Z"
+  }, {
+    "createdAt" : "2023-05-08T03:29:15Z"
+  }, {
+    "createdAt" : "2023-05-08T10:40:05Z"
+  }, {
+    "createdAt" : "2023-05-08T12:30:35Z"
+  }, {
+    "createdAt" : "2023-05-17T06:57:08Z"
+  }, {
+    "createdAt" : "2023-05-23T09:24:25Z"
+  }, {
+    "createdAt" : "2023-05-30T15:54:50Z"
+  }, {
+    "createdAt" : "2023-06-03T10:17:46Z"
+  }, {
+    "createdAt" : "2023-06-06T05:46:48Z"
+  }, {
+    "createdAt" : "2023-06-11T21:30:34Z"
+  }, {
+    "createdAt" : "2023-06-20T00:58:23Z"
+  }, {
+    "createdAt" : "2023-06-20T08:44:26Z"
+  }, {
+    "createdAt" : "2023-06-28T02:15:27Z"
+  }, {
+    "createdAt" : "2023-06-28T03:49:28Z"
+  }, {
+    "createdAt" : "2023-06-29T11:50:09Z"
+  }, {
+    "createdAt" : "2023-07-07T06:35:59Z"
+  }, {
+    "createdAt" : "2023-07-09T09:12:09Z"
+  }, {
+    "createdAt" : "2023-07-11T09:43:43Z"
+  }, {
+    "createdAt" : "2023-07-13T02:38:50Z"
+  }, {
+    "createdAt" : "2023-07-26T18:56:54Z"
+  }, {
+    "createdAt" : "2023-07-27T00:05:09Z"
+  }, {
+    "createdAt" : "2023-07-27T17:22:28Z"
+  }, {
+    "createdAt" : "2023-07-31T04:05:00Z"
+  }, {
+    "createdAt" : "2023-07-31T19:14:32Z"
+  }, {
+    "createdAt" : "2023-08-01T13:10:40Z"
+  }, {
+    "createdAt" : "2023-08-07T07:56:19Z"
+  }, {
+    "createdAt" : "2023-08-08T03:06:43Z"
+  }, {
+    "createdAt" : "2023-08-24T12:25:42Z"
+  }, {
+    "createdAt" : "2023-09-01T00:59:47Z"
+  }, {
+    "createdAt" : "2023-09-07T05:44:56Z"
+  }, {
+    "createdAt" : "2023-09-08T03:25:27Z"
+  }, {
+    "createdAt" : "2023-09-08T10:13:36Z"
+  }, {
+    "createdAt" : "2023-09-13T23:58:10Z"
+  }, {
+    "createdAt" : "2023-09-20T06:32:56Z"
+  }, {
+    "createdAt" : "2023-10-08T21:28:39Z"
+  }, {
+    "createdAt" : "2023-10-15T15:42:41Z"
+  }, {
+    "createdAt" : "2023-10-17T22:06:39Z"
+  }, {
+    "createdAt" : "2023-10-18T14:14:05Z"
+  }, {
+    "createdAt" : "2023-10-27T11:19:31Z"
+  }, {
+    "createdAt" : "2023-11-01T11:40:15Z"
+  }, {
+    "createdAt" : "2023-11-06T13:21:31Z"
+  }, {
+    "createdAt" : "2023-11-07T15:15:14Z"
+  }, {
+    "createdAt" : "2023-11-19T17:33:39Z"
+  }, {
+    "createdAt" : "2023-11-20T09:44:42Z"
+  }, {
+    "createdAt" : "2023-11-21T16:52:53Z"
+  }, {
+    "createdAt" : "2023-12-02T08:12:17Z"
+  }, {
+    "createdAt" : "2023-12-04T20:46:34Z"
+  }, {
+    "createdAt" : "2023-12-07T12:55:10Z"
+  }, {
+    "createdAt" : "2023-12-18T06:54:27Z"
+  }, {
+    "createdAt" : "2023-12-26T07:36:00Z"
+  }, {
+    "createdAt" : "2024-01-10T17:18:28Z"
+  }, {
+    "createdAt" : "2024-01-12T07:04:29Z"
+  }, {
+    "createdAt" : "2024-01-12T17:29:24Z"
+  }, {
+    "createdAt" : "2024-01-14T10:26:00Z"
+  }, {
+    "createdAt" : "2024-01-23T13:19:21Z"
+  }, {
+    "createdAt" : "2024-01-26T10:05:34Z"
+  }, {
+    "createdAt" : "2024-01-30T19:25:44Z"
+  }, {
+    "createdAt" : "2024-02-03T15:17:35Z"
+  }, {
+    "createdAt" : "2024-02-07T13:39:55Z"
+  }, {
+    "createdAt" : "2024-02-13T13:53:17Z"
+  }, {
+    "createdAt" : "2024-02-16T06:32:09Z"
+  }, {
+    "createdAt" : "2024-02-17T11:20:39Z"
+  }, {
+    "createdAt" : "2024-02-21T23:47:02Z"
+  }, {
+    "createdAt" : "2024-02-22T09:20:11Z"
+  }, {
+    "createdAt" : "2024-03-06T18:08:10Z"
+  }, {
+    "createdAt" : "2024-03-19T12:21:37Z"
+  }, {
+    "createdAt" : "2024-03-21T02:07:32Z"
+  }, {
+    "createdAt" : "2024-03-22T00:02:29Z"
+  }, {
+    "createdAt" : "2024-03-22T07:54:24Z"
+  }, {
+    "createdAt" : "2024-03-24T13:12:08Z"
+  }, {
+    "createdAt" : "2024-03-31T03:16:45Z"
+  }, {
+    "createdAt" : "2024-04-02T09:21:07Z"
+  }, {
+    "createdAt" : "2024-04-03T09:36:10Z"
+  }, {
+    "createdAt" : "2024-04-04T10:26:24Z"
+  }, {
+    "createdAt" : "2024-04-05T06:07:29Z"
+  }, {
+    "createdAt" : "2024-04-06T21:08:50Z"
+  }, {
+    "createdAt" : "2024-04-07T13:54:36Z"
+  }, {
+    "createdAt" : "2024-04-11T07:27:04Z"
+  }, {
+    "createdAt" : "2024-04-12T02:06:33Z"
+  }, {
+    "createdAt" : "2024-04-18T05:18:14Z"
+  }, {
+    "createdAt" : "2024-04-18T09:46:23Z"
+  }, {
+    "createdAt" : "2024-04-19T23:12:14Z"
+  }, {
+    "createdAt" : "2024-04-21T21:07:14Z"
+  }, {
+    "createdAt" : "2024-04-24T08:12:59Z"
+  }, {
+    "createdAt" : "2024-04-25T07:14:09Z"
+  }, {
+    "createdAt" : "2024-04-27T11:56:03Z"
+  }, {
+    "createdAt" : "2024-04-30T20:40:05Z"
+  }, {
+    "createdAt" : "2024-05-03T06:27:26Z"
+  }, {
+    "createdAt" : "2024-05-15T08:26:14Z"
+  }, {
+    "createdAt" : "2024-05-15T14:56:40Z"
+  }, {
+    "createdAt" : "2024-05-21T18:27:16Z"
+  }, {
+    "createdAt" : "2024-06-08T10:06:21Z"
+  }, {
+    "createdAt" : "2024-06-16T11:47:33Z"
+  }, {
+    "createdAt" : "2024-06-18T01:58:33Z"
+  }, {
+    "createdAt" : "2024-06-24T10:26:58Z"
+  }, {
+    "createdAt" : "2024-07-16T11:15:12Z"
+  }, {
+    "createdAt" : "2024-07-22T05:21:00Z"
+  }, {
+    "createdAt" : "2024-08-02T19:46:00Z"
+  }, {
+    "createdAt" : "2024-08-18T09:29:21Z"
+  }, {
+    "createdAt" : "2024-08-20T20:58:37Z"
+  }, {
+    "createdAt" : "2024-08-22T10:18:23Z"
+  }, {
+    "createdAt" : "2024-08-23T07:33:04Z"
+  }, {
+    "createdAt" : "2024-08-28T09:30:25Z"
+  }, {
+    "createdAt" : "2024-09-04T11:22:13Z"
+  }, {
+    "createdAt" : "2024-09-09T07:59:33Z"
+  }, {
+    "createdAt" : "2024-09-09T18:22:33Z"
+  }, {
+    "createdAt" : "2024-09-10T20:34:24Z"
+  }, {
+    "createdAt" : "2024-09-11T04:11:06Z"
+  }, {
+    "createdAt" : "2024-09-17T11:13:08Z"
+  }, {
+    "createdAt" : "2024-09-20T16:43:25Z"
+  }, {
+    "createdAt" : "2024-10-15T11:38:15Z"
+  }, {
+    "createdAt" : "2024-10-15T12:56:32Z"
+  }, {
+    "createdAt" : "2024-10-21T17:34:54Z"
+  }, {
+    "createdAt" : "2024-10-30T12:45:02Z"
+  }, {
+    "createdAt" : "2024-11-02T15:11:38Z"
+  }, {
+    "createdAt" : "2024-11-04T10:58:28Z"
+  }, {
+    "createdAt" : "2024-11-06T18:35:31Z"
+  }, {
+    "createdAt" : "2024-11-22T02:16:07Z"
+  }, {
+    "createdAt" : "2024-11-28T12:33:02Z"
+  }, {
+    "createdAt" : "2024-12-02T01:58:16Z"
+  }, {
+    "createdAt" : "2024-12-03T05:20:30Z"
+  }, {
+    "createdAt" : "2024-12-05T20:00:34Z"
+  }, {
+    "createdAt" : "2024-12-08T21:03:09Z"
+  }, {
+    "createdAt" : "2024-12-15T06:26:29Z"
+  }, {
+    "createdAt" : "2024-12-20T11:17:50Z"
+  }, {
+    "createdAt" : "2024-12-23T09:10:03Z"
+  }, {
+    "createdAt" : "2025-01-14T14:38:23Z"
+  }, {
+    "createdAt" : "2025-01-15T21:06:48Z"
+  }, {
+    "createdAt" : "2025-01-16T18:48:54Z"
+  }, {
+    "createdAt" : "2025-01-17T00:18:57Z"
+  }, {
+    "createdAt" : "2025-01-29T11:38:33Z"
+  }, {
+    "createdAt" : "2025-02-01T13:08:42Z"
+  }, {
+    "createdAt" : "2025-02-02T10:37:07Z"
+  }, {
+    "createdAt" : "2025-02-03T02:34:41Z"
+  }, {
+    "createdAt" : "2025-02-04T12:15:26Z"
+  }, {
+    "createdAt" : "2025-02-04T15:55:05Z"
+  }, {
+    "createdAt" : "2025-02-11T14:01:18Z"
+  }, {
+    "createdAt" : "2025-03-21T14:42:46Z"
+  }, {
+    "createdAt" : "2025-03-27T06:41:53Z"
+  }, {
+    "createdAt" : "2025-04-12T17:17:12Z"
+  }, {
+    "createdAt" : "2025-04-14T10:01:42Z"
+  }, {
+    "createdAt" : "2025-04-27T14:18:17Z"
+  }, {
+    "createdAt" : "2025-04-30T13:04:09Z"
+  }, {
+    "createdAt" : "2025-05-03T02:58:06Z"
+  }, {
+    "createdAt" : "2025-05-08T07:41:13Z"
+  }, {
+    "createdAt" : "2025-05-14T09:38:07Z"
+  }, {
+    "createdAt" : "2025-05-20T16:13:15Z"
+  }, {
+    "createdAt" : "2025-05-21T14:15:57Z"
+  }, {
+    "createdAt" : "2025-05-21T16:44:15Z"
+  }, {
+    "createdAt" : "2025-05-23T02:19:35Z"
+  }, {
+    "createdAt" : "2025-05-25T02:48:28Z"
+  }, {
+    "createdAt" : "2025-06-04T04:44:28Z"
+  }, {
+    "createdAt" : "2025-06-06T17:25:25Z"
+  }, {
+    "createdAt" : "2025-06-07T00:43:22Z"
+  }, {
+    "createdAt" : "2025-06-08T20:17:10Z"
+  }, {
+    "createdAt" : "2025-06-10T03:28:18Z"
+  }, {
+    "createdAt" : "2025-06-11T20:58:42Z"
+  }, {
+    "createdAt" : "2025-06-23T19:53:07Z"
+  }, {
+    "createdAt" : "2025-06-28T17:43:51Z"
+  }, {
+    "createdAt" : "2025-07-01T08:01:04Z"
+  }, {
+    "createdAt" : "2025-07-04T16:17:13Z"
+  }, {
+    "createdAt" : "2025-07-05T06:28:54Z"
+  }, {
+    "createdAt" : "2025-07-08T17:35:11Z"
+  }, {
+    "createdAt" : "2025-07-10T14:05:09Z"
+  }, {
+    "createdAt" : "2025-07-15T05:26:04Z"
+  }, {
+    "createdAt" : "2025-07-15T16:45:02Z"
+  }, {
+    "createdAt" : "2025-07-22T10:16:15Z"
+  }, {
+    "createdAt" : "2025-07-29T11:01:39Z"
+  }, {
+    "createdAt" : "2025-07-31T17:01:43Z"
+  }, {
+    "createdAt" : "2025-08-04T12:29:02Z"
+  }, {
+    "createdAt" : "2025-08-06T09:14:40Z"
+  }, {
+    "createdAt" : "2025-08-12T21:00:00Z"
+  }, {
+    "createdAt" : "2025-08-14T14:05:15Z"
+  }, {
+    "createdAt" : "2025-08-14T16:51:19Z"
+  }, {
+    "createdAt" : "2025-09-01T16:33:00Z"
+  }, {
+    "createdAt" : "2025-09-03T09:27:50Z"
+  }, {
+    "createdAt" : "2025-09-05T13:08:11Z"
+  }, {
+    "createdAt" : "2025-09-21T10:36:10Z"
+  }, {
+    "createdAt" : "2025-09-22T01:22:13Z"
+  }, {
+    "createdAt" : "2025-09-30T01:41:21Z"
+  }, {
+    "createdAt" : "2025-09-30T22:57:45Z"
+  }, {
+    "createdAt" : "2025-10-03T11:05:00Z"
+  }, {
+    "createdAt" : "2025-10-04T16:22:35Z"
+  }, {
+    "createdAt" : "2025-10-08T03:55:03Z"
+  }, {
+    "createdAt" : "2025-10-14T19:07:07Z"
+  }, {
+    "createdAt" : "2025-10-16T10:08:32Z"
+  }, {
+    "createdAt" : "2025-11-25T15:34:52Z"
+  }, {
+    "createdAt" : "2025-12-03T10:24:35Z"
+  }, {
+    "createdAt" : "2025-12-13T06:10:25Z"
+  }, {
+    "createdAt" : "2025-12-13T15:30:23Z"
+  }, {
+    "createdAt" : "2025-12-17T09:03:40Z"
+  }, {
+    "createdAt" : "2025-12-25T21:40:03Z"
+  }, {
+    "createdAt" : "2025-12-26T18:43:27Z"
+  }, {
+    "createdAt" : "2026-01-02T17:27:05Z"
+  }, {
+    "createdAt" : "2026-01-15T04:22:12Z"
+  }, {
+    "createdAt" : "2026-01-17T14:41:14Z"
+  }, {
+    "createdAt" : "2026-01-25T10:16:21Z"
+  }, {
+    "createdAt" : "2026-01-26T11:02:42Z"
+  }, {
+    "createdAt" : "2026-01-28T12:35:38Z"
+  }, {
+    "createdAt" : "2026-02-08T08:36:59Z"
+  }, {
+    "createdAt" : "2026-02-08T19:23:05Z"
+  } ],
+  "issues" : [ {
+    "number" : 50,
+    "title" : "[Metrics] Panoptic Quality",
+    "createdAt" : "2020-03-30T13:08:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "[Metrics] ROUGE",
+    "createdAt" : "2020-03-30T13:13:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "[Metrics] WER",
+    "createdAt" : "2020-05-19T15:47:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Add Mean Average Precision (mAP) metric",
+    "createdAt" : "2020-07-08T16:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Metrics support mask",
+    "createdAt" : "2020-07-11T04:31:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Add a property to the Metric class from which can be determined if it can be self.log (scalar or not)",
+    "createdAt" : "2020-11-06T04:46:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Update class metrics interface of Precision/Recall/Fbeta to allow calculate them for each individual class",
+    "createdAt" : "2020-11-20T14:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Some metrics return NaN for edge cases",
+    "createdAt" : "2020-12-14T11:16:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Some metrics don't work on CPU using float16",
+    "createdAt" : "2020-12-31T11:47:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Remove Lightning as Dependency",
+    "createdAt" : "2021-01-04T22:35:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "F1 and Precision/Recall value not consistent.",
+    "createdAt" : "2021-02-05T04:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Cohen Kappa Score and Matthews Correlation Coefficient Metrics",
+    "createdAt" : "2021-02-22T03:58:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "`log_dict` is missing `prefix` parameter that is mentioned in docs",
+    "createdAt" : "2021-02-22T12:40:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Allow unnormalized class scores for Accuracy",
+    "createdAt" : "2021-02-22T20:20:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "finishing TM",
+    "createdAt" : "2021-02-26T09:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Test for differentiability ",
+    "createdAt" : "2021-03-05T10:25:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Add contribution guidelines",
+    "createdAt" : "2021-03-05T13:35:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add ignore_index option to Accuracy metric",
+    "createdAt" : "2021-03-09T23:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Add gpu/multi-gpu testing",
+    "createdAt" : "2021-03-10T08:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "register conda forge",
+    "createdAt" : "2021-03-11T12:54:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "MinMaxMetric for wrapping other metrics",
+    "createdAt" : "2021-03-12T12:13:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Add `FID`",
+    "createdAt" : "2021-03-13T07:53:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Add `KLDivergence`",
+    "createdAt" : "2021-03-13T08:00:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Offer a dedicated sync() interface on the base Metric class",
+    "createdAt" : "2021-03-13T08:40:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Add Deviance scores",
+    "createdAt" : "2021-03-13T18:37:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Non-Softmaxed Classification",
+    "createdAt" : "2021-03-13T20:17:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Add CosineSimilarity",
+    "createdAt" : "2021-03-14T08:33:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Allow MetricCollection to combine calculations",
+    "createdAt" : "2021-03-14T08:46:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "MetricLists for updating multiple metrics at once",
+    "createdAt" : "2021-03-14T16:17:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Add Hinge losses",
+    "createdAt" : "2021-03-16T07:25:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Support sample_weight in metrics",
+    "createdAt" : "2021-03-16T19:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Constant-memory implementation of precision-recall related metrics",
+    "createdAt" : "2021-03-16T19:27:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Bootstrap wrapper for metrics?",
+    "createdAt" : "2021-03-16T19:40:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Allow Accuracy to return metric per class",
+    "createdAt" : "2021-03-16T20:28:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Functional Confusion Matrix with Multi-Label",
+    "createdAt" : "2021-03-16T21:44:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Unable to call metric from any step in Lightning module",
+    "createdAt" : "2021-03-17T17:17:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Multi-label ROCs",
+    "createdAt" : "2021-03-17T17:51:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Micro average for auroc",
+    "createdAt" : "2021-03-17T18:41:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Add Specificity",
+    "createdAt" : "2021-03-18T12:13:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Add Negative predictive value",
+    "createdAt" : "2021-03-18T12:18:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "in DDP training, run ROC.compute() will results gpu to 100% usage and hang the training process",
+    "createdAt" : "2021-03-20T03:34:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Add testing agains each feat PT version",
+    "createdAt" : "2021-03-24T12:21:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Change order of updates in metric forward to increase efficiency",
+    "createdAt" : "2021-03-24T16:39:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Include AverageMeter?",
+    "createdAt" : "2021-03-24T21:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Implement __getitem__ as \"metric arithmetic\"",
+    "createdAt" : "2021-03-25T16:13:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Improve test utilities to accept metrics with more input arguments",
+    "createdAt" : "2021-03-26T18:06:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Smart update of Collection of CompositionalMetrics",
+    "createdAt" : "2021-03-29T09:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Metrics support for sweeping",
+    "createdAt" : "2021-03-29T18:22:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Formalize task type?",
+    "createdAt" : "2021-03-29T18:31:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Retrieval metrics problem with pytorch lightning integration in compute()",
+    "createdAt" : "2021-03-31T13:20:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "MetricCollection should enforce order when passed a dict",
+    "createdAt" : "2021-04-05T19:52:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Tensor device configuration bug",
+    "createdAt" : "2021-04-10T08:20:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Postfix arg for MetricCollection.clone in order to support TensorBoard grouping",
+    "createdAt" : "2021-04-11T13:28:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Add support for the FID metric.",
+    "createdAt" : "2021-04-11T17:29:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Better per-class metric handling for unbalanced data sets",
+    "createdAt" : "2021-04-16T10:28:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Can't import the metric straight away",
+    "createdAt" : "2021-04-18T23:06:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Useful abstraction for metrics tracker metrics",
+    "createdAt" : "2021-04-19T02:53:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Metrics are on another divice when create with __dict__ inside pl.LightningModule",
+    "createdAt" : "2021-04-19T08:02:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Precision Metric based on Quantiles",
+    "createdAt" : "2021-04-19T09:36:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "MetricCollection returns None",
+    "createdAt" : "2021-04-19T11:23:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "F1 Function Error",
+    "createdAt" : "2021-04-19T11:49:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Precision Loss in ConfusionMatrix",
+    "createdAt" : "2021-04-19T16:08:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Allow general pickle-able types as state objects?",
+    "createdAt" : "2021-04-20T21:58:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "AUC computation is incorrect for tensors with >2048 elements.",
+    "createdAt" : "2021-04-22T16:13:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "log_dict() got an unexpected keyword argument 'prefix'",
+    "createdAt" : "2021-04-24T11:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Distribute + package type hints ",
+    "createdAt" : "2021-04-26T21:43:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "True update() for MetricCollection",
+    "createdAt" : "2021-04-27T07:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Cannot calculate AUROC for dummy multi-label data",
+    "createdAt" : "2021-04-27T14:23:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "TorchMetrics incorrect Error about devices",
+    "createdAt" : "2021-04-27T16:56:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Add Expected Calibration Error",
+    "createdAt" : "2021-04-30T03:23:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Continuous Ranked Probability Score (CRPS) metric",
+    "createdAt" : "2021-05-04T08:12:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "PearsonCorrcoef will break when single sample is passed at a time.",
+    "createdAt" : "2021-05-04T21:27:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Metric Accuracy doesn't work as previous version",
+    "createdAt" : "2021-05-07T11:48:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "`RuntimeError` using `torchmetrics.IoU`",
+    "createdAt" : "2021-05-07T12:44:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "AUROC metric errors lead to confusing error messages",
+    "createdAt" : "2021-05-07T17:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Add Mean Absolute Percentage Error metric",
+    "createdAt" : "2021-05-08T20:40:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Reset of ConfusionMatrix doesn't reset the output of compute()",
+    "createdAt" : "2021-05-09T18:29:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Computing Accuarcy on 16bit softmaxed values causes ValueError",
+    "createdAt" : "2021-05-12T14:00:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Add option to compute root_mean_squared_error",
+    "createdAt" : "2021-05-14T13:25:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "option to return all aucs instead of mean in multiclass per class aucroc",
+    "createdAt" : "2021-05-14T18:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Add Option to Calculate Median AUROC",
+    "createdAt" : "2021-05-15T20:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Combine two metrics that have different inputs",
+    "createdAt" : "2021-05-17T13:36:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "F1 score seems not to match harmonic mean of precision and recall scores",
+    "createdAt" : "2021-05-20T19:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Error in multilabel AUROC",
+    "createdAt" : "2021-05-21T21:59:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "CompositionalMetric should return False when composing with a non metric.",
+    "createdAt" : "2021-05-26T10:49:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Error in _precision_recall_curve_update for binary classification",
+    "createdAt" : "2021-05-27T06:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Probabilities in `preds` must sum up to 1 across the `C` dimension.",
+    "createdAt" : "2021-05-28T08:01:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Exclude thresholds of 0.0 and 1.0 in precision recall curve",
+    "createdAt" : "2021-05-28T08:21:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "PSNR not working with multiple GPUs and dataparallel",
+    "createdAt" : "2021-05-28T09:04:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Add Mean Squared Logarithmic Error metric",
+    "createdAt" : "2021-05-28T20:36:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "`.reset()` method not called at the end of an epoch",
+    "createdAt" : "2021-05-29T14:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "PearsonCorrcoef always zero when validation batch size is one.",
+    "createdAt" : "2021-06-01T21:44:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Order of outputs of ConfusionMatrix",
+    "createdAt" : "2021-06-04T20:24:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "PearsonCorrcoef breaks when a single sample is passed at a time",
+    "createdAt" : "2021-06-07T10:01:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "ConfusionMatrix does not work on GPU",
+    "createdAt" : "2021-06-08T19:38:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "JIT RuntimeError for property `is_differentiable`",
+    "createdAt" : "2021-06-08T20:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Batched online algorithm for computing PearsonCorrcoef",
+    "createdAt" : "2021-06-10T17:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Add new audio metrics",
+    "createdAt" : "2021-06-13T05:04:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Add multi-speaker support to the audio metrics",
+    "createdAt" : "2021-06-14T17:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Wrong numbers for multiclass acc/prec/f1 if some class is not listed in true/pred tensors",
+    "createdAt" : "2021-06-15T05:56:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Same value for Accuracy, Precision and Recall for MNIST classification with 10 classes",
+    "createdAt" : "2021-06-16T08:34:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "F1 Macro score wrong(?) when label never appears",
+    "createdAt" : "2021-06-16T16:43:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Support -100 as ignore_index of Accuracy",
+    "createdAt" : "2021-06-20T03:48:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Incorrect results with ignore_index in IoU",
+    "createdAt" : "2021-06-24T14:15:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "FID with custom feature extractor crashes on compute() when torchmetrics[image] is not installed",
+    "createdAt" : "2021-06-24T21:55:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Bug in Matthews_correlation_coefficient",
+    "createdAt" : "2021-06-26T08:27:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Metric with ddp spawn causes script to hang after Trainer.fit()",
+    "createdAt" : "2021-06-29T21:44:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Metrics with list state cause crash using ddp",
+    "createdAt" : "2021-06-30T17:29:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Expected all tensors to be on the same device",
+    "createdAt" : "2021-07-01T09:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Using integer >1 as label raise an error in nDCG",
+    "createdAt" : "2021-07-01T10:42:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Metric API re-design ",
+    "createdAt" : "2021-07-01T11:58:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "[metrics] AUROC Metric can't handle 0 observations of a class with multiclass classifier",
+    "createdAt" : "2021-07-01T17:57:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "[CI] Test TorchMetrics with PL releases",
+    "createdAt" : "2021-07-01T19:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 350,
+    "title" : "Logits and multilabel: Add support for threshold <= 0?",
+    "createdAt" : "2021-07-06T16:41:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "Add Bleu score",
+    "createdAt" : "2021-07-07T09:20:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "Addition of more audio metrics",
+    "createdAt" : "2021-07-07T10:45:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "ValueError Multiclass F1 with Logits",
+    "createdAt" : "2021-07-07T14:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "logits cause error if they exceed num_classes",
+    "createdAt" : "2021-07-08T00:25:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Allow passing labels in (n_samples, n_classes) to AveragePrecision",
+    "createdAt" : "2021-07-08T12:12:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "BERTScore Implementation",
+    "createdAt" : "2021-07-10T17:00:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "Squad V2 Question Answering Task metric",
+    "createdAt" : "2021-07-12T20:01:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Unqualified threshold checks contradict logits support",
+    "createdAt" : "2021-07-13T12:37:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "SMAPE regression error",
+    "createdAt" : "2021-07-14T18:30:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "PearsonCorrcoef Causing OOM",
+    "createdAt" : "2021-07-14T20:38:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Functional nDCG can not be called with negative relevance targets",
+    "createdAt" : "2021-07-16T10:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "Make Dice a ModuleMetric similar to IoU",
+    "createdAt" : "2021-07-18T21:56:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Classification metrics do not return grad",
+    "createdAt" : "2021-07-19T08:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Add docstrings to protected functions",
+    "createdAt" : "2021-07-19T11:40:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Accuracy no longer works with logits",
+    "createdAt" : "2021-07-20T12:44:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "forward_cache / computed should be moved too on device.",
+    "createdAt" : "2021-07-20T15:32:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "Error At Percentile",
+    "createdAt" : "2021-07-21T08:12:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Case `reduction=None` not handled in CosineSimilarity",
+    "createdAt" : "2021-07-23T08:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "The Macro-F1 metric is being calculated incorrectly.",
+    "createdAt" : "2021-07-25T20:28:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "list index out of range when using ModuleDict with DDP",
+    "createdAt" : "2021-07-28T04:32:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "`TextTester` class based in `MetricTester` class to robustly test `text` metrics",
+    "createdAt" : "2021-07-29T12:01:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Ambiguity in semantic ordering of kernel_size and padding computation in SSIM",
+    "createdAt" : "2021-07-29T21:01:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Making Accuracy support threshold = 0",
+    "createdAt" : "2021-07-31T08:51:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Too slow on ``cpu``.",
+    "createdAt" : "2021-08-01T01:36:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Let IDE(s) know public symbols",
+    "createdAt" : "2021-08-03T07:53:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "F1 score seems wrong when doing binary classification",
+    "createdAt" : "2021-08-03T11:28:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "R2Score errors on size 1 batch updates",
+    "createdAt" : "2021-08-03T18:30:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "LPIPS is requested for some low-level CV problem",
+    "createdAt" : "2021-08-05T01:43:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "implement own BERT score",
+    "createdAt" : "2021-08-08T09:05:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "implement own metrics or use lighter packages",
+    "createdAt" : "2021-08-08T09:10:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "nDCG can not be called with float targets",
+    "createdAt" : "2021-08-09T15:21:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "Wrong results of precision, recall and F1",
+    "createdAt" : "2021-08-10T09:07:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 442,
+    "title" : "Forward Function of Metric not working after jit scripting",
+    "createdAt" : "2021-08-11T16:19:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "`SpearmanCorrcoef` bug due to incorrect ranking",
+    "createdAt" : "2021-08-12T22:02:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Using AUROC with DDP not working as expected",
+    "createdAt" : "2021-08-13T13:16:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "ValueError: When your inputs are multi-dimensional multi-class, you have to set the `mdmc_reduce` parameter",
+    "createdAt" : "2021-08-16T04:13:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Support float targets for classification metrics",
+    "createdAt" : "2021-08-16T10:40:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "CI: fix installing multiple PT versions",
+    "createdAt" : "2021-08-16T12:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 452,
+    "title" : "Behaviour with average=`sample`, mdmc_average=`samplewise` seems confusing.",
+    "createdAt" : "2021-08-16T14:05:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "GPU support in BootStrapper",
+    "createdAt" : "2021-08-17T09:27:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Accuracy for multistage classification problem",
+    "createdAt" : "2021-08-17T15:54:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "Don't import all modules from torchmetrics root",
+    "createdAt" : "2021-08-18T00:31:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "FID computation involves a large memory footprint",
+    "createdAt" : "2021-08-19T12:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "AveragePrecision returns list of metrics per class",
+    "createdAt" : "2021-08-19T17:59:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 472,
+    "title" : "BERTScore not working in DPP",
+    "createdAt" : "2021-08-20T16:04:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "User Warning thrown when calling AveragePrecision",
+    "createdAt" : "2021-08-24T06:46:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 480,
+    "title" : "Refactor `_input_format_classification` and `_hinge_update` so that it uses `_input_squeeze`.",
+    "createdAt" : "2021-08-24T17:22:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 482,
+    "title" : "add option to automatically reset after compute.",
+    "createdAt" : "2021-08-26T14:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Question about the intended behavior of Accuracy with `average=\"none\"` and `nan` results",
+    "createdAt" : "2021-08-27T16:23:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "torchmetrics 0.4+ broke high-precision metric states",
+    "createdAt" : "2021-08-27T22:35:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 485,
+    "title" : "`torchmetrics.Accuracy` is too slow than normal pytorch code",
+    "createdAt" : "2021-08-28T15:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "`torchmetrics.F1` bug with `ignore_index` and macro averaging",
+    "createdAt" : "2021-08-29T22:27:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 487,
+    "title" : "Support `sacrebleu` implementation under the `BLEUScore` metric",
+    "createdAt" : "2021-08-30T21:46:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 488,
+    "title" : "Unhashable type list in validation loop",
+    "createdAt" : "2021-08-31T20:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "TorchMetrics 0.5.1 no longer works with PL save_hyperparameters",
+    "createdAt" : "2021-09-02T11:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 494,
+    "title" : "precision_recall supplying results in wrong order",
+    "createdAt" : "2021-09-02T14:58:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 504,
+    "title" : "Replace remaining docs links",
+    "createdAt" : "2021-09-06T17:11:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "TorchMetrics: NaN-compatible variants for common Metrics functions [nan_(mean, sum, max)]",
+    "createdAt" : "2021-09-07T13:38:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "ValueError: transformers.__spec__ is None",
+    "createdAt" : "2021-09-08T19:52:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Implement MultioutputWrapper",
+    "createdAt" : "2021-09-08T22:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Add MS-SSIM",
+    "createdAt" : "2021-09-14T20:48:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "`_ssim_compute` creates extra tensors",
+    "createdAt" : "2021-09-17T14:29:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "FBeta binary average",
+    "createdAt" : "2021-09-17T23:00:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 531,
+    "title" : "Metric not moved to device",
+    "createdAt" : "2021-09-18T01:19:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "How to get the iou of each class?",
+    "createdAt" : "2021-09-18T01:47:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "pit bug: the device and type of preds and target may not the same with the results returned by metric_func",
+    "createdAt" : "2021-09-18T02:51:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "Allow broadcasting pickable Python objects in distributed setup",
+    "createdAt" : "2021-09-20T21:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "All classification metrics are identical when finetuning network with flash",
+    "createdAt" : "2021-09-22T20:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 550,
+    "title" : "Implementing Normalized Discounted Cumulative Gain (NDCG)",
+    "createdAt" : "2021-09-25T17:13:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "IoU reports incorrect performance on pretrained PyTorch segmentation model",
+    "createdAt" : "2021-09-29T12:40:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "Accuracy varies depending on the target labels form: dense or sparse",
+    "createdAt" : "2021-09-30T11:49:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "Dice not the same when computed individualy",
+    "createdAt" : "2021-10-05T08:59:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "add dividing amount accuracy",
+    "createdAt" : "2021-10-15T10:38:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Average of Accuracy, Loss, Etc..",
+    "createdAt" : "2021-10-16T13:32:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 568,
+    "title" : "Accuracy for Object detection",
+    "createdAt" : "2021-10-17T13:51:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 569,
+    "title" : "Add metric logging tests",
+    "createdAt" : "2021-10-18T18:12:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "support same metric with different parameter with MetricCollection",
+    "createdAt" : "2021-10-19T05:34:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 571,
+    "title" : "Add HitRate for Information Retrieval",
+    "createdAt" : "2021-10-19T17:42:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 573,
+    "title" : "`tm.functional.precision_recall_curve`: `pos_label` automatically set 1",
+    "createdAt" : "2021-10-20T17:29:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Add R-Precision for Information Retrieval",
+    "createdAt" : "2021-10-21T10:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 587,
+    "title" : "re-implement mAP instead of using COCOtools",
+    "createdAt" : "2021-10-27T11:18:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 595,
+    "title" : "Add METEOR metric",
+    "createdAt" : "2021-10-29T10:10:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 596,
+    "title" : "Typo in CalibrationError metric docs",
+    "createdAt" : "2021-10-31T03:01:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 597,
+    "title" : "Inconsistent computation of accuracy with lightning",
+    "createdAt" : "2021-10-31T16:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 600,
+    "title" : "Inconsistent input for BLEUScore compared to other metrics",
+    "createdAt" : "2021-11-01T16:21:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "MAP handling an empty prediction array.",
+    "createdAt" : "2021-11-03T01:49:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 602,
+    "title" : "false device inconsistent runtime error",
+    "createdAt" : "2021-11-03T07:35:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 604,
+    "title" : "OvO support on AUROC",
+    "createdAt" : "2021-11-03T09:01:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 608,
+    "title" : "Both tensors are on same device but raises an error both aren't",
+    "createdAt" : "2021-11-05T09:59:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 611,
+    "title" : "MeanMetric conflicts with EarlyStopping",
+    "createdAt" : "2021-11-09T06:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 613,
+    "title" : "`ignore_index` for F1 doesn't behave as expected.",
+    "createdAt" : "2021-11-09T17:31:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 614,
+    "title" : "Multilabel ranking metrics",
+    "createdAt" : "2021-11-10T22:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 626,
+    "title" : "DDP mode stuck with multiple GPUs when calling MAP metric",
+    "createdAt" : "2021-11-12T14:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 620,
+    "title" : "Devcontainer Support",
+    "createdAt" : "2021-11-14T22:27:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 625,
+    "title" : "Constant-memory implementation of common threshold-varying metrics",
+    "createdAt" : "2021-11-16T01:05:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 629,
+    "title" : "`f1` seems wrong",
+    "createdAt" : "2021-11-19T15:04:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 633,
+    "title" : "Add `CharacTER`",
+    "createdAt" : "2021-11-24T09:33:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 634,
+    "title" : "Add `ChrF++`",
+    "createdAt" : "2021-11-24T09:41:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 635,
+    "title" : "Add `EED`",
+    "createdAt" : "2021-11-24T09:51:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 636,
+    "title" : "Add `TER`",
+    "createdAt" : "2021-11-24T09:54:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 637,
+    "title" : "Metrics have bug for training.",
+    "createdAt" : "2021-11-24T14:18:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 642,
+    "title" : "[Documentation] incorrect table data for Retrival Input Details",
+    "createdAt" : "2021-11-28T11:16:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 644,
+    "title" : "CompositionalMetric only returns value for last batch",
+    "createdAt" : "2021-11-29T14:11:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 647,
+    "title" : "Enable `BERTScore` evaluates hypotheses against multiple references.",
+    "createdAt" : "2021-11-30T13:51:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 648,
+    "title" : "Devcontainer invalid format",
+    "createdAt" : "2021-11-30T18:28:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 652,
+    "title" : "Support basic plotting for some metrics",
+    "createdAt" : "2021-12-02T19:03:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 653,
+    "title" : "Move text test examples into `tests/text/inputs.py`",
+    "createdAt" : "2021-12-03T20:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 655,
+    "title" : "Classification metrics consistency",
+    "createdAt" : "2021-12-05T13:58:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 656,
+    "title" : "Stat_Scores does not behave as expected",
+    "createdAt" : "2021-12-06T00:45:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 659,
+    "title" : "Add IoU/GIoU for boxes",
+    "createdAt" : "2021-12-06T08:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 663,
+    "title" : "`BinnedPrecisionRecall` not working for multi-dimensional arrays",
+    "createdAt" : "2021-12-07T09:17:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 664,
+    "title" : "Sort currently does not support bool dtype on CUDA",
+    "createdAt" : "2021-12-07T20:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 667,
+    "title" : "Enable `ROUGEScore` to evaluate hypotheses against multiple references.",
+    "createdAt" : "2021-12-07T21:53:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 671,
+    "title" : "`RuntimeError`s when attempting use of `MAP`-metric",
+    "createdAt" : "2021-12-09T14:48:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "Add `ignore_idx` to retrieval metrics",
+    "createdAt" : "2021-12-10T09:15:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 675,
+    "title" : "Test all metrics on GPU",
+    "createdAt" : "2021-12-10T13:44:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 677,
+    "title" : "Performance issue for own mAP implementation",
+    "createdAt" : "2021-12-10T15:42:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 678,
+    "title" : "Tests refactoring",
+    "createdAt" : "2021-12-10T21:34:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "MetricCollection with Tracker",
+    "createdAt" : "2021-12-12T13:26:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 682,
+    "title" : "Support for metric names",
+    "createdAt" : "2021-12-13T02:47:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 683,
+    "title" : "mAP metric crashes when there are no ground truth boxes",
+    "createdAt" : "2021-12-13T10:59:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 685,
+    "title" : "Split `text` metrics into `text` and `speech` metrics.",
+    "createdAt" : "2021-12-15T19:26:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 686,
+    "title" : "Unify the input order for `text` (NLG) metrics",
+    "createdAt" : "2021-12-15T19:35:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 693,
+    "title" : "Keyword Argument Filtering for Metric Compositions/Collections does not behave as expected",
+    "createdAt" : "2021-12-23T13:04:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 700,
+    "title" : "Add AUPRC metric",
+    "createdAt" : "2021-12-30T08:01:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 701,
+    "title" : "Code example error for AveragePrecision and PrecisionRecallCurve",
+    "createdAt" : "2022-01-01T03:03:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 703,
+    "title" : "ImportError: cannot import name 'SDR' from 'torchmetrics.audio'",
+    "createdAt" : "2022-01-03T13:58:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 704,
+    "title" : "Clean `text` tests - remove `input_order` argument",
+    "createdAt" : "2022-01-03T15:08:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 708,
+    "title" : "ConfusionMatrix is float32 which gives slightly varying ground truth counts",
+    "createdAt" : "2022-01-04T13:28:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 716,
+    "title" : "Unify `preds, target` input arg naming across all `text` metrics",
+    "createdAt" : "2022-01-05T16:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 719,
+    "title" : "Expand section in docs",
+    "createdAt" : "2022-01-06T11:32:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 720,
+    "title" : "Unify naming of domains",
+    "createdAt" : "2022-01-06T11:34:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 726,
+    "title" : "reimplement PESQ",
+    "createdAt" : "2022-01-06T20:32:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 729,
+    "title" : "Unify functional/class metric's names",
+    "createdAt" : "2022-01-07T09:48:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 733,
+    "title" : "Improve doctests - conditional dependency skip",
+    "createdAt" : "2022-01-09T21:27:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 741,
+    "title" : "Remove `type: ignore`  across `text` metrics",
+    "createdAt" : "2022-01-10T22:26:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "use `FutureWarning` for deprecations",
+    "createdAt" : "2022-01-11T12:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "F1, Accuray, Precision and Recall all output the same value consistently in a binary classification setting.",
+    "createdAt" : "2022-01-12T06:40:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 756,
+    "title" : "missing 'ROUGEScore' from 'torchmetrics.text' in 0.7.0rc0",
+    "createdAt" : "2022-01-14T13:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 766,
+    "title" : "Metric Cache seems to get inconsistent when state variable is a list",
+    "createdAt" : "2022-01-17T13:05:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 767,
+    "title" : "Remove for loop on calibration error.",
+    "createdAt" : "2022-01-17T13:44:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 770,
+    "title" : "Error importing torchmetrics",
+    "createdAt" : "2022-01-17T21:56:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 771,
+    "title" : "Prune deprecated metrics",
+    "createdAt" : "2022-01-17T23:04:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 779,
+    "title" : "Matthews correlation coefficient should return 0 instead of NaN",
+    "createdAt" : "2022-01-18T20:27:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 780,
+    "title" : "Add `RetrievalRecallAtFixedPrecision`",
+    "createdAt" : "2022-01-19T11:20:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 782,
+    "title" : "Accuracy outputs conflicting results in a binary classification setting",
+    "createdAt" : "2022-01-19T14:46:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 784,
+    "title" : "Instance Weighting",
+    "createdAt" : "2022-01-20T14:17:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 789,
+    "title" : "Deprecate `compute_on_step`",
+    "createdAt" : "2022-01-20T15:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 793,
+    "title" : "[Doc] Confusion in the torchmetric with lightning",
+    "createdAt" : "2022-01-24T07:28:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 794,
+    "title" : "MeanAveragePrecision incorrect calculations when predictions are empty",
+    "createdAt" : "2022-01-24T11:01:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 799,
+    "title" : "More image metrics",
+    "createdAt" : "2022-01-25T23:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 803,
+    "title" : "re-implement SDR",
+    "createdAt" : "2022-01-26T22:22:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 807,
+    "title" : "The authors affiliation info is incomplete in paper.md",
+    "createdAt" : "2022-01-28T10:09:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "pip install failure for Python 3.10",
+    "createdAt" : "2022-01-28T10:28:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 809,
+    "title" : "Missing DOI in paper.md",
+    "createdAt" : "2022-01-28T10:41:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 811,
+    "title" : "F1 compute metric warning",
+    "createdAt" : "2022-01-28T12:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 812,
+    "title" : "3D SSIM",
+    "createdAt" : "2022-01-28T16:49:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 813,
+    "title" : "`RetrievalPrecision` hangs in DDP mode. ",
+    "createdAt" : "2022-01-28T18:56:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 815,
+    "title" : "Improving Classwise Metrics Logging",
+    "createdAt" : "2022-01-29T11:11:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 821,
+    "title" : "IOU type for mean average precision",
+    "createdAt" : "2022-02-01T15:48:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 825,
+    "title" : "Can add additional parameters in calculating scores like rouge?",
+    "createdAt" : "2022-02-03T12:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 826,
+    "title" : "Micro Average IoU",
+    "createdAt" : "2022-02-04T06:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 829,
+    "title" : "Jaccard Index behaviour when num_classes is absent",
+    "createdAt" : "2022-02-08T14:05:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 837,
+    "title" : "Allow float targets for binary classification",
+    "createdAt" : "2022-02-11T21:12:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 841,
+    "title" : "Error numpy.ndarray size changed",
+    "createdAt" : "2022-02-14T22:30:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 842,
+    "title" : "classwisewrapper doesn't support prefix",
+    "createdAt" : "2022-02-14T22:41:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 844,
+    "title" : "Incorrect True Negative in a Binary Classification",
+    "createdAt" : "2022-02-17T15:57:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 845,
+    "title" : "Different F1 Score with Different batch_size",
+    "createdAt" : "2022-02-17T18:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 846,
+    "title" : "TweedieDevianceScore producing nan results when setting power=1.0",
+    "createdAt" : "2022-02-17T21:31:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "Allow caching on cpu when compute some metrics.",
+    "createdAt" : "2022-02-19T17:32:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 849,
+    "title" : "Add `InfoLM`",
+    "createdAt" : "2022-02-21T10:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 852,
+    "title" : "Add `BaryScore`",
+    "createdAt" : "2022-02-21T14:14:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 854,
+    "title" : "Add `DepthScore`",
+    "createdAt" : "2022-02-22T10:15:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 859,
+    "title" : "check shape",
+    "createdAt" : "2022-02-24T22:32:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 865,
+    "title" : "Unable to cross-reference a metric in the sphinx doc.",
+    "createdAt" : "2022-02-27T18:56:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 866,
+    "title" : "`MeanAveragePrecision` CPU overload when using multi-device ddp",
+    "createdAt" : "2022-02-28T04:48:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 879,
+    "title" : "RMSE value is not equal to the square root of MSE",
+    "createdAt" : "2022-03-09T08:41:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 880,
+    "title" : "[Feature Request] Deterministic ConfusionMatrix on GPU",
+    "createdAt" : "2022-03-09T15:54:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 881,
+    "title" : "Abnormal behavior in mAP calculation ",
+    "createdAt" : "2022-03-09T16:39:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 882,
+    "title" : "Allow soft target labels for classification tasks",
+    "createdAt" : "2022-03-09T17:24:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 883,
+    "title" : "Disentanglement Metrics",
+    "createdAt" : "2022-03-09T18:52:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 886,
+    "title" : "Allow automatically adjusting `k` for `RetrievalPrecision` when `k > num(retrieved documents)`",
+    "createdAt" : "2022-03-14T10:57:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 889,
+    "title" : "Integrate multiple Retrieval metrics together for efficiency  when group number is large",
+    "createdAt" : "2022-03-17T12:54:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 890,
+    "title" : "Inefficient memory consumption by MeanMetric",
+    "createdAt" : "2022-03-17T14:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 895,
+    "title" : "The sdr metric in TM sometime gives NaN for some input",
+    "createdAt" : "2022-03-19T16:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 897,
+    "title" : "`ScaleInvariantSignalNoiseRatio` from `spectrogram `",
+    "createdAt" : "2022-03-21T16:32:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 904,
+    "title" : "No difference between RougeL and RougeLsum",
+    "createdAt" : "2022-03-23T02:00:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 906,
+    "title" : "Rename detection map file ",
+    "createdAt" : "2022-03-23T09:24:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 909,
+    "title" : "BERTScore raises RuntimeError when device=\"cuda\" ",
+    "createdAt" : "2022-03-23T17:13:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 911,
+    "title" : "Metric Collection Tracker Comptability",
+    "createdAt" : "2022-03-24T08:46:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 916,
+    "title" : "AttributeError: 'tuple' object has no attribute 'detach' for ROC when logging.",
+    "createdAt" : "2022-03-27T22:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 917,
+    "title" : "Accuracy, Precision, Recall raises RuntimeError when device=\"cuda\"",
+    "createdAt" : "2022-03-28T06:31:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 918,
+    "title" : "Fleiss Kappa",
+    "createdAt" : "2022-03-29T23:20:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 919,
+    "title" : "How to log custom metric where compute returns a dict?",
+    "createdAt" : "2022-03-30T00:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 925,
+    "title" : "Update the PDF",
+    "createdAt" : "2022-03-31T21:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 926,
+    "title" : "Metrics in multiple categories",
+    "createdAt" : "2022-03-31T21:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 928,
+    "title" : "Add `WeightedAbsolutePercentageError`",
+    "createdAt" : "2022-04-04T03:24:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 931,
+    "title" : "Update and unify a number of metrics in `torchmetrics` docs",
+    "createdAt" : "2022-04-04T15:52:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 932,
+    "title" : "Add Normalized Discounted Cumulative Gain (nDCG) Score for Classification",
+    "createdAt" : "2022-04-04T17:24:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 935,
+    "title" : "Add ability to let ignore index be outside of number of classes",
+    "createdAt" : "2022-04-06T09:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 937,
+    "title" : "Metrics for Levenshtein edit-distance between two strings",
+    "createdAt" : "2022-04-06T12:30:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 938,
+    "title" : "Using Module Metrics with PyTorch DDP (without PyTorch Lightning)",
+    "createdAt" : "2022-04-06T23:56:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 939,
+    "title" : "stabilize Transformer testing",
+    "createdAt" : "2022-04-07T02:52:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 943,
+    "title" : "MeanAveragePrecision devices mismatch",
+    "createdAt" : "2022-04-09T20:03:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 946,
+    "title" : "feat: brier score for uncertainty estimation on classification",
+    "createdAt" : "2022-04-10T12:53:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 949,
+    "title" : "Tests: Prepare reference scores once for all env. configs",
+    "createdAt" : "2022-04-11T10:21:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 956,
+    "title" : "Remove deprecated code for next v0.9",
+    "createdAt" : "2022-04-15T02:11:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 960,
+    "title" : "PSNR - Higher is better.",
+    "createdAt" : "2022-04-15T20:25:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 961,
+    "title" : "Accuracy metric - negative `ignore_index` fails when combined with `subset_accuracy=True`",
+    "createdAt" : "2022-04-15T21:52:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 963,
+    "title" : "Implement Average() and Sum()",
+    "createdAt" : "2022-04-17T09:38:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 969,
+    "title" : "BinnedPrecisionRecallCurve throws error when `thresholds` is not passed",
+    "createdAt" : "2022-04-20T04:17:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 971,
+    "title" : "Add classification metrics: `SensitivityAtSpecificity` and `SpecificityAtSensitivity`",
+    "createdAt" : "2022-04-20T20:45:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 972,
+    "title" : "Total Variation Loss",
+    "createdAt" : "2022-04-20T22:00:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 974,
+    "title" : "Calibration error does not support negative logits",
+    "createdAt" : "2022-04-21T10:54:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 976,
+    "title" : "Add `Sensitivity` metric.",
+    "createdAt" : "2022-04-21T20:03:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 977,
+    "title" : "Jaccard and FiScore metrics aren't working properly in 0.8 version",
+    "createdAt" : "2022-04-21T21:13:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 981,
+    "title" : "Sort currently does not support bool dtype on CUDA: Regression in version 0.7.3 +",
+    "createdAt" : "2022-04-23T08:17:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 986,
+    "title" : "Clarification: why do binned metrics outnumber bins?",
+    "createdAt" : "2022-04-25T11:14:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 987,
+    "title" : "Allow arbitrary types for metric states",
+    "createdAt" : "2022-04-26T14:06:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 988,
+    "title" : "cannot import name 'F1' from 'torchmetrics'",
+    "createdAt" : "2022-04-26T16:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 992,
+    "title" : "Could you implement Dice score as metric  ",
+    "createdAt" : "2022-04-27T20:14:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 994,
+    "title" : "`ValueError: 0.5/0.75 is not in list` - when passing a custom set of IoU thresholds to `MeanAveragePrecision`",
+    "createdAt" : "2022-04-28T10:26:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1000,
+    "title" : "Nested MetricCollection",
+    "createdAt" : "2022-05-01T15:48:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1001,
+    "title" : "Classification refactor",
+    "createdAt" : "2022-05-03T08:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1006,
+    "title" : "AttributeError while updating MetricCollection with prefix/postfix.",
+    "createdAt" : "2022-05-04T14:30:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1009,
+    "title" : "Compatibility with future PT 1.12",
+    "createdAt" : "2022-05-05T09:20:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1010,
+    "title" : "CalibrationError bin_boundaries added to state_dict",
+    "createdAt" : "2022-05-05T10:29:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1017,
+    "title" : "Some metrics are handling absent values ​​incorrectly",
+    "createdAt" : "2022-05-08T10:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1018,
+    "title" : "PyTorch Lightning's Precision 64 and version 0.8: Expected scalar type double",
+    "createdAt" : "2022-05-08T10:44:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1024,
+    "title" : "MeanAveragePrecision is slow",
+    "createdAt" : "2022-05-10T13:20:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1026,
+    "title" : "Accuracy doesn't work with 64 bit precision",
+    "createdAt" : "2022-05-10T18:30:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1027,
+    "title" : "FrechetInceptionDistance wrong behavior for calculating two features with different batch size",
+    "createdAt" : "2022-05-11T08:30:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1029,
+    "title" : "KL-Divergence gives NaN on 0-probabilities",
+    "createdAt" : "2022-05-12T05:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1034,
+    "title" : "Pytorch<1.8 not working despite requirements.txt",
+    "createdAt" : "2022-05-16T21:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1040,
+    "title" : "Precision fails when using negative ignored index",
+    "createdAt" : "2022-05-20T16:54:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1044,
+    "title" : "Investigate MPS support",
+    "createdAt" : "2022-05-24T16:59:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1045,
+    "title" : "Accuracy, Precision, Recall, Specificity wrong accumulation with average='none' inside Wrapper.",
+    "createdAt" : "2022-05-25T12:06:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1047,
+    "title" : "CUDA TENSOR RuntimeERROR",
+    "createdAt" : "2022-05-25T13:25:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1049,
+    "title" : "Accuracy failed in dp (DataParallell) mode ",
+    "createdAt" : "2022-05-26T01:58:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1050,
+    "title" : "ConfusionMatrix and MatthewsCorrCoef in a MetricCollection throw an Exception",
+    "createdAt" : "2022-05-26T14:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1051,
+    "title" : "Usage of MetricCollection throws warnings that compute method was called before update.",
+    "createdAt" : "2022-05-26T15:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1053,
+    "title" : "functional.fbeta_score memory use",
+    "createdAt" : "2022-05-27T12:32:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1055,
+    "title" : "PearsonCorrCoef throws device error when tensors are on cuda device",
+    "createdAt" : "2022-05-30T14:28:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1061,
+    "title" : "Missing documentation for mask format for segmentation IOU type in mAP detection metric",
+    "createdAt" : "2022-06-02T10:02:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1063,
+    "title" : "Aggregation metrics ignore zeros tensors",
+    "createdAt" : "2022-06-03T06:57:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1064,
+    "title" : "UserWarning at functional confusion_matrix function",
+    "createdAt" : "2022-06-03T11:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1065,
+    "title" : "Incorrect logits use in accuracy metric?",
+    "createdAt" : "2022-06-03T15:51:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1067,
+    "title" : "Perason Correlation with cuda tensors raises error",
+    "createdAt" : "2022-06-04T16:38:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1068,
+    "title" : "Error when providing superclass arguments as kwargs",
+    "createdAt" : "2022-06-06T01:14:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1074,
+    "title" : "Bleuscore from torchmetric give different results compare to NLTK",
+    "createdAt" : "2022-06-07T08:17:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1083,
+    "title" : "MetricCollection doesn't merge compute groups on forward",
+    "createdAt" : "2022-06-12T11:58:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1084,
+    "title" : "Classification Multilabel Micro AveragePrecision does not form a compute group with comparable metrics",
+    "createdAt" : "2022-06-12T13:03:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1088,
+    "title" : "AUC does not support `compute_on_cpu` in DDP.",
+    "createdAt" : "2022-06-15T05:44:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1089,
+    "title" : "Generalized Dice Score",
+    "createdAt" : "2022-06-15T16:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1092,
+    "title" : "pesq metric reduction parameter",
+    "createdAt" : "2022-06-16T08:18:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1093,
+    "title" : "Help needed - Disable automated syncing between processes",
+    "createdAt" : "2022-06-16T10:30:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1094,
+    "title" : "Data accumulation while computing in GPU",
+    "createdAt" : "2022-06-16T12:12:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1095,
+    "title" : "MeanAveragePrecision device error when no correct class predictions",
+    "createdAt" : "2022-06-17T16:43:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1096,
+    "title" : "MeanAveragePrecision does not handle empty predictions or ground truth boxes not in xyxy format",
+    "createdAt" : "2022-06-18T12:48:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1098,
+    "title" : "AUPRC `sample_weights` supported, but not used",
+    "createdAt" : "2022-06-18T17:15:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1099,
+    "title" : "Links to detailed docs from \"All torchmetrics\" page are dead",
+    "createdAt" : "2022-06-20T08:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1101,
+    "title" : "Support ignore_index in ConfusionMatrix",
+    "createdAt" : "2022-06-20T10:13:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1105,
+    "title" : "Possible bug in binary classification `calibration_error`",
+    "createdAt" : "2022-06-21T16:29:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1106,
+    "title" : "Minor discrepancy in AveragePrecision documentation for `average=\"none\"`",
+    "createdAt" : "2022-06-22T02:25:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1108,
+    "title" : "How to integrate `CompositionalMetric` into a `LightningModule`?",
+    "createdAt" : "2022-06-22T23:21:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "RMSE by MeanSquaredError(squared=False) not correctly when using MetricTracker",
+    "createdAt" : "2022-06-23T07:43:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1110,
+    "title" : "Refactor `Bertscore` tests",
+    "createdAt" : "2022-06-25T07:12:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1111,
+    "title" : "accuracy, recall, precision and f1-score are equal",
+    "createdAt" : "2022-06-25T11:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1113,
+    "title" : "accuracy, recall, precision and f1-score are equal ",
+    "createdAt" : "2022-06-27T13:47:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1117,
+    "title" : "Minor discrepancies in  `average` typing hints for classification metrics ",
+    "createdAt" : "2022-06-28T17:08:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1119,
+    "title" : "\"Weighted\" JaccardIndex ignore_index throws RuntimeError",
+    "createdAt" : "2022-06-28T18:47:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1122,
+    "title" : "source links are broken in docs",
+    "createdAt" : "2022-06-30T17:56:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1123,
+    "title" : "Links in readme are broken",
+    "createdAt" : "2022-07-01T07:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1124,
+    "title" : "mIoU",
+    "createdAt" : "2022-07-03T17:48:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1128,
+    "title" : "ClasswiseWrapper yields different results ",
+    "createdAt" : "2022-07-06T12:48:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1131,
+    "title" : "Recall and Specificity values are the same",
+    "createdAt" : "2022-07-07T18:10:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1142,
+    "title" : "import error: cannot import name 'PILLOW_VERSION' from 'PIL'",
+    "createdAt" : "2022-07-13T06:54:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1144,
+    "title" : "MeanAveragePrecision throw error in DDP mode",
+    "createdAt" : "2022-07-13T13:31:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1147,
+    "title" : "RuntimeError when using MAP-metric",
+    "createdAt" : "2022-07-15T20:19:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1148,
+    "title" : "StructuralSimilarityIndexMeasure : Input type (torch.cuda.FloatTensor) and weight type (torch.FloatTensor) should be the same",
+    "createdAt" : "2022-07-16T13:22:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1152,
+    "title" : "torchmetric freezes the training",
+    "createdAt" : "2022-07-19T15:49:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1153,
+    "title" : "`MeanAveragePrecision` (map) returns -1.0 if `max_detection_thresholds` is changed",
+    "createdAt" : "2022-07-20T16:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1154,
+    "title" : "notation typo in Cosine Similarity docs ",
+    "createdAt" : "2022-07-21T11:26:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1156,
+    "title" : "Refine the warning message about `full_state`",
+    "createdAt" : "2022-07-22T10:10:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1158,
+    "title" : "Support sequence tagging evaluation metrics (NLP)",
+    "createdAt" : "2022-07-22T12:34:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1160,
+    "title" : "MAPE Memory Leak",
+    "createdAt" : "2022-07-26T16:49:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1161,
+    "title" : "R2Score does not match sklearn.metrics.r2_score",
+    "createdAt" : "2022-07-27T19:20:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1164,
+    "title" : "Discrepancy between values with metrics and detectron2 cocoeval",
+    "createdAt" : "2022-07-29T11:05:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1166,
+    "title" : "Links from documentation seem broken",
+    "createdAt" : "2022-07-29T16:01:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1172,
+    "title" : "JaccardIndex then multilabel=True not working",
+    "createdAt" : "2022-08-04T11:02:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1174,
+    "title" : "PESQ value for normalized (predicted & target) and denormalized (predicted & target) form differs",
+    "createdAt" : "2022-08-05T07:41:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1176,
+    "title" : "Add Area Under PR- curve metric",
+    "createdAt" : "2022-08-08T06:49:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1177,
+    "title" : "Support for 2D tensors for pearson and spearman correlations",
+    "createdAt" : "2022-08-08T16:58:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1180,
+    "title" : "Typo in the docstring in precision_recall_curve.py",
+    "createdAt" : "2022-08-11T11:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1183,
+    "title" : "dist_sync_fn seems dysfunctional",
+    "createdAt" : "2022-08-13T15:56:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1184,
+    "title" : "Wrong Calculation of Mean Average Precision",
+    "createdAt" : "2022-08-15T15:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1186,
+    "title" : "Reduction on full image not required?",
+    "createdAt" : "2022-08-16T15:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1188,
+    "title" : "Cannot import perplexity",
+    "createdAt" : "2022-08-17T18:06:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1190,
+    "title" : "Memory leak when using JaccardIndex during multi-gpu training",
+    "createdAt" : "2022-08-22T14:14:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1194,
+    "title" : "Add Concordance Correlation Coefficient to metrics",
+    "createdAt" : "2022-08-25T20:37:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1196,
+    "title" : "JaccardIndex mps fails also with PYTORCH_ENABLE_MPS_FALLBACK=1",
+    "createdAt" : "2022-08-26T23:58:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1198,
+    "title" : "Change FID to be online",
+    "createdAt" : "2022-08-29T15:31:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1206,
+    "title" : "Add Kendall's Rank Correlation",
+    "createdAt" : "2022-09-06T18:39:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1207,
+    "title" : "MetricCollection should provide support beyond `torchmetrics.Metric` or `torchmetrics.MetricCollection` (such as CatMetric)",
+    "createdAt" : "2022-09-07T21:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1208,
+    "title" : "Incorrect inputs requirements for AUROC",
+    "createdAt" : "2022-09-09T13:11:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1209,
+    "title" : "MAE can't handle MPS backend",
+    "createdAt" : "2022-09-10T15:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1213,
+    "title" : "Bug suspected in MS-SSIM\\SSIM metric",
+    "createdAt" : "2022-09-12T10:40:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1214,
+    "title" : "The LPIPS Module Has a Normalize Parameter",
+    "createdAt" : "2022-09-12T19:22:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1217,
+    "title" : "How not to compute a metric at each call of the `update`?",
+    "createdAt" : "2022-09-13T12:38:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1218,
+    "title" : "`list index out of range` in `_sync_dist`",
+    "createdAt" : "2022-09-13T20:56:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1220,
+    "title" : "__call__ using ClassWrapper does not update wrapped metric",
+    "createdAt" : "2022-09-14T02:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1221,
+    "title" : "Slower performance for Torchmetrics PESQ",
+    "createdAt" : "2022-09-14T06:07:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1222,
+    "title" : "Slower performance for Torchmetrics PESQ",
+    "createdAt" : "2022-09-14T06:18:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1223,
+    "title" : "Slower performance for Torchmetrics PESQ",
+    "createdAt" : "2022-09-14T06:23:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1224,
+    "title" : "Almost All Image Metrics Save All Images In a Buffer",
+    "createdAt" : "2022-09-14T23:05:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1228,
+    "title" : "Accuracy fails when: 1) fp16 is enabled, and 2) multi-dimensional, multi-class",
+    "createdAt" : "2022-09-15T13:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1229,
+    "title" : "Metrics fail to reduce across devices in PL when `multidim_average='samplewise'`",
+    "createdAt" : "2022-09-16T02:27:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1230,
+    "title" : "Add the option to modify the value of `epsilon` when using `MeanAbsolutePercentageError`",
+    "createdAt" : "2022-09-16T08:20:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1235,
+    "title" : "Add weights for the pearson, spearman, and r2_score",
+    "createdAt" : "2022-09-23T22:44:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1238,
+    "title" : "Links to source broken",
+    "createdAt" : "2022-09-27T07:34:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1239,
+    "title" : "MeanAvaragePregicision (segm): 'tuple' object has no attribute 'cpu'",
+    "createdAt" : "2022-09-27T13:32:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1241,
+    "title" : "Improve modular retrieval metrics efficiency",
+    "createdAt" : "2022-09-27T20:50:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1244,
+    "title" : "Allow FID to Use Float Images",
+    "createdAt" : "2022-09-28T13:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1245,
+    "title" : "Do you want VMAF?",
+    "createdAt" : "2022-09-28T14:05:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1249,
+    "title" : "`clone()` throwing exception on single `Metric` or `MetricCollection`",
+    "createdAt" : "2022-10-05T13:02:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1257,
+    "title" : "NLTK punkt is downloaded by Rouge even when unneeded",
+    "createdAt" : "2022-10-07T20:55:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1260,
+    "title" : "Unable to unpickle a MatthewsCorrCoef saved object",
+    "createdAt" : "2022-10-10T11:47:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1262,
+    "title" : "Update minimum requirement of torch to 1.8",
+    "createdAt" : "2022-10-11T11:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1264,
+    "title" : "Import binary/multiclass/multilabel classification metrics into __init__",
+    "createdAt" : "2022-10-11T19:16:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1265,
+    "title" : "Adding metric visualization code snippets in guide/documentation to facilitate use",
+    "createdAt" : "2022-10-12T14:31:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1267,
+    "title" : "Performance difference between `v0.9.3` <-> `v0.10.0`",
+    "createdAt" : "2022-10-13T12:59:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1270,
+    "title" : "IndexError: index -100 is out of bounds for dimension 1 with size 2",
+    "createdAt" : "2022-10-14T04:42:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1272,
+    "title" : "Add Cramer's V (Cramér's phi)",
+    "createdAt" : "2022-10-16T19:41:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1273,
+    "title" : "Add Uncertainty coefficient (Theil's U)",
+    "createdAt" : "2022-10-16T19:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1275,
+    "title" : "Incorrect implementation of MAP",
+    "createdAt" : "2022-10-17T20:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1276,
+    "title" : "Compatibility with the latest tokenizers package",
+    "createdAt" : "2022-10-17T20:54:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1277,
+    "title" : "MatthewsCorrCoef has massive slow down on both CPU and especially GPU",
+    "createdAt" : "2022-10-18T22:18:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1278,
+    "title" : "inplace operation in pairwise_cosine_similarity",
+    "createdAt" : "2022-10-19T12:45:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1279,
+    "title" : "`MulticlassAccuracy` using lot of memory with many classes",
+    "createdAt" : "2022-10-19T15:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1281,
+    "title" : "Mistake in website",
+    "createdAt" : "2022-10-20T11:34:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1282,
+    "title" : "Supporting mask",
+    "createdAt" : "2022-10-20T14:44:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1283,
+    "title" : "Deepcopy broken for MatthewsCorrCoef",
+    "createdAt" : "2022-10-20T22:57:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1289,
+    "title" : "MulticlassJaccardIndex without reduction over N",
+    "createdAt" : "2022-10-24T18:37:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1290,
+    "title" : "SSIM returns incorrect results under mixed-precision training",
+    "createdAt" : "2022-10-24T20:12:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1292,
+    "title" : "Crash when using .clone on MetricCollection with MatthewsCorrCoef",
+    "createdAt" : "2022-10-25T17:09:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1294,
+    "title" : "SpearmanCorrCoef has unnecessary explicit dtype check",
+    "createdAt" : "2022-10-26T22:57:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1297,
+    "title" : "AUROC on DDP returns inconsistent result",
+    "createdAt" : "2022-10-28T09:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1299,
+    "title" : "Add Tschuprow's T",
+    "createdAt" : "2022-10-28T18:06:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1304,
+    "title" : "MetricTracker best_metric() returns the step instead of the best value",
+    "createdAt" : "2022-10-31T16:29:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1311,
+    "title" : "Add CLIP score",
+    "createdAt" : "2022-11-03T11:41:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1315,
+    "title" : "Add `LogCoshError` metric",
+    "createdAt" : "2022-11-06T13:22:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1317,
+    "title" : "`task` missing from `accuracy` docs",
+    "createdAt" : "2022-11-07T00:22:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1318,
+    "title" : "Classification metrics section: examples of input types",
+    "createdAt" : "2022-11-07T22:36:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1319,
+    "title" : "Iteration over a metric never ends",
+    "createdAt" : "2022-11-07T23:09:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1322,
+    "title" : "how to automaticaly reset the metrics, when I have tested one of the multiple dataloaders?",
+    "createdAt" : "2022-11-08T09:36:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1323,
+    "title" : "`compute_on_cpu=True` not respected",
+    "createdAt" : "2022-11-08T09:44:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1326,
+    "title" : "How do i get the size of preds and truth tensors after i call .update()",
+    "createdAt" : "2022-11-10T00:05:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1332,
+    "title" : "Add ExactMatch metric for multiclass",
+    "createdAt" : "2022-11-13T15:12:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1335,
+    "title" : "Add Pearson's Contingency Coefficient",
+    "createdAt" : "2022-11-14T18:07:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1336,
+    "title" : "`MulticlassAccuracy` should not require `num_classes`",
+    "createdAt" : "2022-11-15T00:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1338,
+    "title" : "Investigate use of `join` context for distributed sync",
+    "createdAt" : "2022-11-15T09:22:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1339,
+    "title" : "torchmetrics.image.fid FrechetInceptionDistance normalize argument not working",
+    "createdAt" : "2022-11-15T20:47:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1340,
+    "title" : "Docs: pages don't show in search results",
+    "createdAt" : "2022-11-15T23:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1345,
+    "title" : "Add Minkowski distance",
+    "createdAt" : "2022-11-19T15:48:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1351,
+    "title" : "bug in pairwise_euclidean_distance",
+    "createdAt" : "2022-11-22T10:24:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1355,
+    "title" : "Can not import total variation",
+    "createdAt" : "2022-11-23T02:30:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1356,
+    "title" : "Member variable declared wrongly in `metrics/src/torchmetrics/text/wer.py` and `metrics/src/torchmetrics/text/cer.py`",
+    "createdAt" : "2022-11-23T07:37:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1359,
+    "title" : "I can't get rid of the userwarning of WER and CER: `Torchmetrics v0.9 introduced a new argument class property called `full_state_update` that has not been set for this class...`",
+    "createdAt" : "2022-11-24T06:49:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1361,
+    "title" : "Add OKS metric",
+    "createdAt" : "2022-11-24T12:44:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1363,
+    "title" : "Make `._update_count` and `._update_called` public",
+    "createdAt" : "2022-11-29T17:38:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1364,
+    "title" : "Squared LogRatio Metric",
+    "createdAt" : "2022-11-29T21:15:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1365,
+    "title" : "Standardize modular documentation",
+    "createdAt" : "2022-11-30T11:00:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1366,
+    "title" : "mismtach between document and implementation",
+    "createdAt" : "2022-11-30T18:02:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1367,
+    "title" : "Target tensor check for int in multilabel classification does not agree with torch",
+    "createdAt" : "2022-12-01T00:10:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1368,
+    "title" : "pyright prompts import error",
+    "createdAt" : "2022-12-01T08:24:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1374,
+    "title" : "MultilabelMatthewsCorrCoef; param: \"normalize\" fails with MultilabelConfusionMatrix ",
+    "createdAt" : "2022-12-05T01:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1376,
+    "title" : "`pos_label` is missing from AUROC",
+    "createdAt" : "2022-12-06T23:42:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1379,
+    "title" : "module 'torchmetrics.classification' has no attribute 'AUC'",
+    "createdAt" : "2022-12-07T11:18:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1380,
+    "title" : "Using torch.float16 on pairwise_manhattan_distance gives NaN or INF",
+    "createdAt" : "2022-12-07T12:56:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1385,
+    "title" : "MulticlassJaccardIndex: wrong result with ignore_index",
+    "createdAt" : "2022-12-09T15:09:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1393,
+    "title" : "negative ignore_index not working",
+    "createdAt" : "2022-12-14T19:11:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1394,
+    "title" : "All links to source code are broken on readthedocs",
+    "createdAt" : "2022-12-14T21:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1396,
+    "title" : "f1_score yields different results for task binary and mulitlclass with two classes",
+    "createdAt" : "2022-12-16T17:07:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1403,
+    "title" : "dice coefficient and f1score are different names of same cocept.",
+    "createdAt" : "2022-12-19T03:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1413,
+    "title" : "Validation with torchmetrics extremely slow",
+    "createdAt" : "2022-12-19T10:49:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1406,
+    "title" : "Add `.plot()` to all modular metrics",
+    "createdAt" : "2022-12-23T08:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1409,
+    "title" : "Support for MetricTracker of MultioutputWrapper",
+    "createdAt" : "2022-12-24T16:02:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1411,
+    "title" : "Confusion around logging and resetting",
+    "createdAt" : "2022-12-26T01:38:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1417,
+    "title" : "Return `class_names` as part of `MeanAveragePrecision.compute()`",
+    "createdAt" : "2022-12-27T21:04:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1425,
+    "title" : "Cannot use `average=\"none\"` in v0.11?",
+    "createdAt" : "2023-01-03T23:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1426,
+    "title" : "Metric base class does not check for extra kwargs",
+    "createdAt" : "2023-01-04T20:59:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1428,
+    "title" : "MetricTracker of a single metric should not accept a list of `maximize`",
+    "createdAt" : "2023-01-06T00:02:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1436,
+    "title" : "MultioutputWrapper does not reset cleanly",
+    "createdAt" : "2023-01-09T14:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1437,
+    "title" : "Implement background class concept for StatScores and derived.",
+    "createdAt" : "2023-01-11T15:28:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1443,
+    "title" : "Thresholds not working?",
+    "createdAt" : "2023-01-17T02:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1444,
+    "title" : "Accuracy metric behaviour change between versions 0.9.2 and 0.10.0 (and later)",
+    "createdAt" : "2023-01-17T09:41:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1445,
+    "title" : "absent_score",
+    "createdAt" : "2023-01-17T15:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1446,
+    "title" : "Small typo in PESQ docs",
+    "createdAt" : "2023-01-18T15:16:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1450,
+    "title" : "Unexpected behavior when using the same metric object in training and validation",
+    "createdAt" : "2023-01-20T03:47:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1451,
+    "title" : "SMAPE formula typo",
+    "createdAt" : "2023-01-20T23:51:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1453,
+    "title" : "change `targets.dtype` to the type of `outputs` in the intern of `StructuralSimilarityIndexMeasure().update()`?",
+    "createdAt" : "2023-01-21T04:40:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1455,
+    "title" : "Metrics that call NLTK.download cause lightning to hang in offline environments",
+    "createdAt" : "2023-01-23T16:58:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1459,
+    "title" : "Make MetricsCollection work with dict of other MetricsCollection",
+    "createdAt" : "2023-01-24T09:08:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1461,
+    "title" : "AUROC runs into memory issues",
+    "createdAt" : "2023-01-24T20:29:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1466,
+    "title" : "XLA support",
+    "createdAt" : "2023-01-28T19:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1470,
+    "title" : "[Feature Request] Deterministic MulticlassAveragePrecision on GPU",
+    "createdAt" : "2023-01-31T04:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1475,
+    "title" : "Typo: Kendal -> Kendall",
+    "createdAt" : "2023-02-02T01:51:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1478,
+    "title" : "Implement Enum for `task` in classification metrics",
+    "createdAt" : "2023-02-03T12:24:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1483,
+    "title" : "Supporting advanced metrics for image generation",
+    "createdAt" : "2023-02-06T08:37:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1484,
+    "title" : "Fixing several issues in docs",
+    "createdAt" : "2023-02-06T11:34:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1491,
+    "title" : "Introduce k parameter in RetrievalMAP to compute at cut-off k",
+    "createdAt" : "2023-02-07T21:51:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1492,
+    "title" : "Binned implementation of PrecisionRecallCurve is extremely slow for large batch sizes",
+    "createdAt" : "2023-02-09T08:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1494,
+    "title" : "Multiclass F1 score macro-average counts 0 if label does not occur",
+    "createdAt" : "2023-02-09T16:33:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1500,
+    "title" : "F score over boundaries",
+    "createdAt" : "2023-02-12T12:36:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1508,
+    "title" : "MulticlassExactMatch agnostic to 'ignore_index'",
+    "createdAt" : "2023-02-14T20:41:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1509,
+    "title" : "Add Critical Success Index to Torchmetrics",
+    "createdAt" : "2023-02-14T20:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1510,
+    "title" : "MulticlassConfusionMatrix overflows for num_classes > 16",
+    "createdAt" : "2023-02-15T08:55:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1511,
+    "title" : "Extend Panoptic Quality usability, functionality and testing",
+    "createdAt" : "2023-02-16T21:42:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1520,
+    "title" : "Issues with Spectral Distortion Index",
+    "createdAt" : "2023-02-17T13:28:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1526,
+    "title" : "Sigmoid function in PrecisionRecallCurve leads to information loss",
+    "createdAt" : "2023-02-20T17:15:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1532,
+    "title" : "Add Earth Mover's Distance metric",
+    "createdAt" : "2023-02-21T00:15:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1536,
+    "title" : "Wrong error in Metric.__iter__",
+    "createdAt" : "2023-02-21T17:56:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1543,
+    "title" : "A bug in MetricTracker with Lightning logging style",
+    "createdAt" : "2023-02-23T10:21:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1546,
+    "title" : "LPIPS generates warning.",
+    "createdAt" : "2023-02-23T23:17:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1556,
+    "title" : "IndexError when computing multiclass accuracy with topk and ignore_index",
+    "createdAt" : "2023-02-25T03:01:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1559,
+    "title" : "PearsonCorrCoef UnboundLocalError using ddp",
+    "createdAt" : "2023-02-26T10:37:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1560,
+    "title" : "Missing `Metric.reset()` leads to DataLoader iterator crashing",
+    "createdAt" : "2023-02-27T02:40:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1561,
+    "title" : "DeepSpeed still changes metric states from fp32 to fp16",
+    "createdAt" : "2023-02-27T03:00:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1571,
+    "title" : "0.11.2 and 0.11.3 not released on PyPI",
+    "createdAt" : "2023-02-28T15:49:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1573,
+    "title" : "`r2_score` larger than 1 with (near) constant `target`",
+    "createdAt" : "2023-02-28T20:27:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1578,
+    "title" : "Adding MiFID (Memorization-Informed Frechet Inception Distance) Metric",
+    "createdAt" : "2023-03-02T10:08:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1579,
+    "title" : "Add `GEMBA` (GPT-based metric for assessment of translation quality)",
+    "createdAt" : "2023-03-02T17:56:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1590,
+    "title" : "Add plot example into `README.md` and mention built-in plotting feature",
+    "createdAt" : "2023-03-05T20:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1591,
+    "title" : "Add Modified Panoptic Quality metric",
+    "createdAt" : "2023-03-05T21:22:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1592,
+    "title" : "Clamp image before PSNR and MS-SSIM",
+    "createdAt" : "2023-03-06T07:28:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1594,
+    "title" : "RuntimeError: value cannot be converted to type int without overflow",
+    "createdAt" : "2023-03-06T08:22:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1601,
+    "title" : "Dice score cannot be calculated for each class separately",
+    "createdAt" : "2023-03-07T15:32:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1602,
+    "title" : "Dice score cannot be calculated for each class separately",
+    "createdAt" : "2023-03-07T15:52:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1604,
+    "title" : "`BinaryAccuracy()` sometimes gives incorrect answers due to non-deterministic sigmoiding ",
+    "createdAt" : "2023-03-09T17:46:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1611,
+    "title" : "MPS not supported with Accuracy",
+    "createdAt" : "2023-03-13T10:46:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1620,
+    "title" : "Batch size dependent FID",
+    "createdAt" : "2023-03-14T16:06:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1632,
+    "title" : "Lightning v2.0 training_step_end() removal",
+    "createdAt" : "2023-03-20T04:13:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1641,
+    "title" : "AUROC for binary task, if thresholds is set, results in an error",
+    "createdAt" : "2023-03-21T15:06:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1644,
+    "title" : "MAR_1 is not 1 when COCO mAP is calculated with identical predictions and groundtruth ",
+    "createdAt" : "2023-03-22T18:43:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1645,
+    "title" : "Naming of pairwise_cosine_similarity isn't accurate in all cases",
+    "createdAt" : "2023-03-22T19:29:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1646,
+    "title" : "binary_calibration_error() throw RuntimeError when preds tensor contains some 0",
+    "createdAt" : "2023-03-23T16:40:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1647,
+    "title" : "Pearson Correlation Coefficient raises error when 2D tensor but single task",
+    "createdAt" : "2023-03-23T23:22:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1652,
+    "title" : "FID.compute() throws imprecise error with batch size of 1",
+    "createdAt" : "2023-03-24T17:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1653,
+    "title" : "`top_k` for `multiclassf1score` is not working correctly",
+    "createdAt" : "2023-03-25T11:40:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1654,
+    "title" : "Inconsistent imports for BLEUScore and ROUGEScore",
+    "createdAt" : "2023-03-25T13:40:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1656,
+    "title" : "MS-SSIM for 3D input",
+    "createdAt" : "2023-03-27T21:27:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1663,
+    "title" : "Support for semantic segmentation",
+    "createdAt" : "2023-03-28T13:26:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1664,
+    "title" : "Odd behaviour with macro averaging ",
+    "createdAt" : "2023-03-28T13:29:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1665,
+    "title" : "Seems no support for CF1 OF1 in MultilabelF1",
+    "createdAt" : "2023-03-28T14:37:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1742,
+    "title" : "\"ImportError: cannot import name 'AutoModelForMaskedLM' from 'transformers' (unknown location)\" in case you have \"transformers\" directory on the same level",
+    "createdAt" : "2023-03-30T14:09:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1670,
+    "title" : "hold required `task=...` for 1.0",
+    "createdAt" : "2023-03-31T06:00:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1672,
+    "title" : "`MultioutputWrapper` does not squeeze `kwargs`",
+    "createdAt" : "2023-03-31T08:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1677,
+    "title" : "MultilabelRankingAveragePrecision would turn off grad automatically",
+    "createdAt" : "2023-03-31T15:37:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1678,
+    "title" : "add Precision At Fixed Recall",
+    "createdAt" : "2023-04-01T05:52:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1691,
+    "title" : "Accuracy is wrong when ignore_index is set",
+    "createdAt" : "2023-04-05T09:21:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1692,
+    "title" : "Macro Precision computation is wrong when ignore_index is used",
+    "createdAt" : "2023-04-05T09:53:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1693,
+    "title" : "MulticlassJaccardIndex returns 0 for classes not present in prediction and target",
+    "createdAt" : "2023-04-05T21:53:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1698,
+    "title" : "mismatch for docs in `perplexity`",
+    "createdAt" : "2023-04-07T13:04:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1705,
+    "title" : "A better way to compute the FID",
+    "createdAt" : "2023-04-13T08:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1706,
+    "title" : "Balanced accuracy for the binary case",
+    "createdAt" : "2023-04-13T10:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1713,
+    "title" : "docs: Avoid using deprecated imports in documentation source",
+    "createdAt" : "2023-04-15T19:34:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1717,
+    "title" : "Accuracy and Recally yield same results ?",
+    "createdAt" : "2023-04-17T10:41:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1722,
+    "title" : "binary_precision_recall_curve with thresholds: memory issues",
+    "createdAt" : "2023-04-20T18:59:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1723,
+    "title" : "Parameter of MulticlassStatScores and MultilabelStatScores to control which classes/labels to include the averages",
+    "createdAt" : "2023-04-21T09:47:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1724,
+    "title" : "AUROC thresholds are persistent",
+    "createdAt" : "2023-04-21T12:27:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1725,
+    "title" : "PearsonCorrCoeff returns nan when input is of type torch.float16 or torch.bfloat16.",
+    "createdAt" : "2023-04-21T22:04:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1727,
+    "title" : "`binary_auroc` has various bugs on MPS device",
+    "createdAt" : "2023-04-23T13:04:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1735,
+    "title" : "Support masks in audio metrics",
+    "createdAt" : "2023-04-25T09:20:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1737,
+    "title" : "Implement running metric wrappers",
+    "createdAt" : "2023-04-26T12:13:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1738,
+    "title" : "Accuracy calculation blowing up memory use",
+    "createdAt" : "2023-04-27T03:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1739,
+    "title" : "ModuleNotFoundError: No module named 'torchmetrics.functional.multimodal'",
+    "createdAt" : "2023-04-27T08:35:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1740,
+    "title" : "Add a `PlottableMetric` class",
+    "createdAt" : "2023-04-30T20:47:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1741,
+    "title" : "Add a wrapper adapted to multi-task learning",
+    "createdAt" : "2023-04-30T21:26:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1743,
+    "title" : "DDP map evaluation with iou_type segm",
+    "createdAt" : "2023-05-01T04:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1744,
+    "title" : "Problems with \"BinaryCalibrationError\" when perfectly calibrated",
+    "createdAt" : "2023-05-01T10:53:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1745,
+    "title" : "MeanAveragePrecision box format",
+    "createdAt" : "2023-05-01T11:50:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1755,
+    "title" : "Accuracy metric with optional num_classes argument",
+    "createdAt" : "2023-05-04T11:00:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1756,
+    "title" : "`CompositionalMetric` seems not to be logged via `self.log(...)`",
+    "createdAt" : "2023-05-05T09:43:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1764,
+    "title" : "Add `torchmetrics.regression.RelativeSquaredError`",
+    "createdAt" : "2023-05-08T15:24:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1772,
+    "title" : "Nested MetricCollection doesn't add correct prefixes to Metric returning dict",
+    "createdAt" : "2023-05-10T12:53:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1774,
+    "title" : "Order of empty images in the batch changes the mAP results",
+    "createdAt" : "2023-05-11T10:14:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1775,
+    "title" : "Add Precision-Recall-Gain curve, Area Under Precision Recall Gain curve, and FGain1 score",
+    "createdAt" : "2023-05-11T14:54:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1776,
+    "title" : "The BLEU score computed by the SacreBLEUScore metric is not the same as the original implementation",
+    "createdAt" : "2023-05-11T15:18:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1777,
+    "title" : "raise ValueError(f\"Rank {rank} and Rank 0 have different values for the list to gather.\")",
+    "createdAt" : "2023-05-12T13:20:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1779,
+    "title" : "NLTK punkt bug",
+    "createdAt" : "2023-05-13T05:53:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1780,
+    "title" : "Using Torchmetrics with `torch.compile` in Pytorch 2.0",
+    "createdAt" : "2023-05-13T13:08:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1781,
+    "title" : "Wrong argument check in `MetricCollection.plot`",
+    "createdAt" : "2023-05-13T19:23:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1791,
+    "title" : "Should reset be called in the torch metrics collection example?",
+    "createdAt" : "2023-05-16T01:17:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1793,
+    "title" : "Over-estimated map value ",
+    "createdAt" : "2023-05-16T14:07:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1795,
+    "title" : "Passing `max_detection_thresholds` to `MeanAveragePrecision` breaks the calculation",
+    "createdAt" : "2023-05-21T01:17:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1809,
+    "title" : "RuntimeError (Invalid Scalar Type) when training using `bf16-mixed` precision and DDP (gloo backend)",
+    "createdAt" : "2023-05-24T13:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1811,
+    "title" : "BinaryMatthewsCorrCoef outputs 0 if target and prediction contains only one case either positive or negative case",
+    "createdAt" : "2023-05-25T12:40:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1813,
+    "title" : "PCC gives error with AMP",
+    "createdAt" : "2023-05-26T15:41:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1823,
+    "title" : "run_training_epoch gets slower with more epochs",
+    "createdAt" : "2023-06-05T22:14:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1829,
+    "title" : "BinaryMatthewsCorrCoef  implementation for extreme cases is wrong",
+    "createdAt" : "2023-06-07T04:34:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1833,
+    "title" : "Weird behaviour while logging `CompositionalMetric`",
+    "createdAt" : "2023-06-10T15:05:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1841,
+    "title" : "self._computed role and undesired behaviour",
+    "createdAt" : "2023-06-14T11:17:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1842,
+    "title" : "Typo in return (forward and compute) of MulticlassConfusionMatrix",
+    "createdAt" : "2023-06-14T15:55:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1845,
+    "title" : "Incorrect signature for binary_auroc",
+    "createdAt" : "2023-06-16T08:43:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1846,
+    "title" : "Support for Torchvision Datapoints?",
+    "createdAt" : "2023-06-17T03:39:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1853,
+    "title" : "multilabel_accuracy yields wrong results compared to scikit-learn",
+    "createdAt" : "2023-06-21T12:14:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1861,
+    "title" : "off-by-one in MultiClassJaccard ignore_index handling",
+    "createdAt" : "2023-06-27T23:42:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1864,
+    "title" : "Different SSIM results on cpu device and gpu device.",
+    "createdAt" : "2023-06-29T02:21:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1865,
+    "title" : "Multiclass Confmat calculation throws different device exception",
+    "createdAt" : "2023-06-29T09:34:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1867,
+    "title" : "Implement pre and postfix for Classwise Wrapper",
+    "createdAt" : "2023-06-29T15:12:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1883,
+    "title" : "Missing sdist on PyPI",
+    "createdAt" : "2023-07-05T20:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1889,
+    "title" : "Result of IoU is Nan when there is empty item in preds.",
+    "createdAt" : "2023-07-07T09:24:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1890,
+    "title" : "MinMetric produces incorrect result when used with MetricCollection and compute_groups=True",
+    "createdAt" : "2023-07-07T20:21:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1891,
+    "title" : "BinaryAUROC raises IndexError with max_fpr > 0 and only true edges",
+    "createdAt" : "2023-07-07T23:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1897,
+    "title" : "`MeanMetric` with `nan_strategy in {\"warn\", \"ignore\"}` might not recover from NaNs",
+    "createdAt" : "2023-07-10T06:34:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1899,
+    "title" : "Running should never sync",
+    "createdAt" : "2023-07-10T09:16:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1900,
+    "title" : "Implement surface distance/dice scores",
+    "createdAt" : "2023-07-10T14:42:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1905,
+    "title" : "Extract the mean average precision of both bbox and segm simultaneously in one run",
+    "createdAt" : "2023-07-11T06:56:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1907,
+    "title" : "for BinaryCalibrationError the n_bins needs to be 1 less than actual to match manual calculation",
+    "createdAt" : "2023-07-11T19:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1908,
+    "title" : "MeanAveragePrecision() in torchmetrics==1.0.0 seems to be not working properly",
+    "createdAt" : "2023-07-11T20:43:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1911,
+    "title" : "Batch Jaccard not same as the average of the Jaccard",
+    "createdAt" : "2023-07-12T14:06:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1915,
+    "title" : "`ClasswiseWrapper` double prefixes with `self.prefix` when enclosed in a `MetricCollection`",
+    "createdAt" : "2023-07-12T18:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1917,
+    "title" : "Summing multiple confusion matrix does not result with same confusion matrix",
+    "createdAt" : "2023-07-13T07:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1921,
+    "title" : "Intersection over union not respecting class labels",
+    "createdAt" : "2023-07-14T17:24:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1922,
+    "title" : "Converting from half precision to `bfloat16` in Pearson correlation coefficient cause numerical errors",
+    "createdAt" : "2023-07-14T21:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1923,
+    "title" : " cannot import name '_compare_version' from 'torchmetrics.utilities.imports",
+    "createdAt" : "2023-07-17T02:49:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1927,
+    "title" : "Please update conda-forge package to v1.0",
+    "createdAt" : "2023-07-19T06:46:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1929,
+    "title" : "`MeanSquaredError` normalization",
+    "createdAt" : "2023-07-21T11:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1932,
+    "title" : "libtorch error from torchmetrics while using Lit-GPT",
+    "createdAt" : "2023-07-24T11:31:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1933,
+    "title" : "Add Perceptual Path Length",
+    "createdAt" : "2023-07-24T12:44:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1935,
+    "title" : "Add MRR@K as an option to MRR",
+    "createdAt" : "2023-07-24T16:01:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1938,
+    "title" : "Provide a way to Retrieve Precision, Recall, and Confusion Matrix scores from `MeanAveragePrecision` metric",
+    "createdAt" : "2023-07-25T11:59:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1941,
+    "title" : "AUC score legend not plotted when score=True",
+    "createdAt" : "2023-07-26T19:34:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1942,
+    "title" : "CLIPScore demo code is incorrect",
+    "createdAt" : "2023-07-26T23:55:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1945,
+    "title" : "Check for `transformers` is not precise enough",
+    "createdAt" : "2023-07-27T07:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1946,
+    "title" : "\"RuntimeError 'bincount' with precision='16-mixed' on GPU with TorchMetrics 1.0.1\"",
+    "createdAt" : "2023-07-28T07:57:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1949,
+    "title" : "Memory leak when creating multiple instances of the same metric",
+    "createdAt" : "2023-07-28T15:06:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1951,
+    "title" : "OSError: libcudart.so.10.2: cannot open shared object file: No such file or director",
+    "createdAt" : "2023-07-29T08:42:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1952,
+    "title" : "Top_k does not work in simple case.",
+    "createdAt" : "2023-07-29T15:46:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1953,
+    "title" : "Import path torchmetrics.Precision does not correspond to a subclass of <class 'torchmetrics.metric.Metric'>",
+    "createdAt" : "2023-07-31T14:05:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1959,
+    "title" : "Memory Leak in `FrechetInceptionDistance` if used in `training_step`",
+    "createdAt" : "2023-08-01T06:55:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1962,
+    "title" : "Fixes needed for docs",
+    "createdAt" : "2023-08-01T10:07:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1966,
+    "title" : "Mean-Average-Precision gives unexpected result.",
+    "createdAt" : "2023-08-01T15:24:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1968,
+    "title" : "pip: no matches found: torchmetrics[audio]",
+    "createdAt" : "2023-08-03T10:43:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1970,
+    "title" : "About torchmetrics.classification.MulticlassAccuracy: why torch.long is required when 'multidim_average' set to 'samplewise'?",
+    "createdAt" : "2023-08-03T16:00:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1971,
+    "title" : "ConfusionMatrix.plot axes are incorrect",
+    "createdAt" : "2023-08-04T01:47:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1972,
+    "title" : "May be the paramters of Theil U should change from pred, target to X, y",
+    "createdAt" : "2023-08-04T02:42:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1974,
+    "title" : "Warning message if number of detections exceeds default max_detection_threshold settings. ",
+    "createdAt" : "2023-08-04T10:44:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1989,
+    "title" : "AUROC reported wrong value when called differently",
+    "createdAt" : "2023-08-09T03:30:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1990,
+    "title" : "Add Hausdorff distance as a new classification metric",
+    "createdAt" : "2023-08-09T10:39:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1993,
+    "title" : "Inplace Error When Using MultiClassAccuracy",
+    "createdAt" : "2023-08-11T12:16:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1999,
+    "title" : "A way to track std",
+    "createdAt" : "2023-08-15T13:35:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2000,
+    "title" : "ClipScore errors on captions with more than 77 tokens",
+    "createdAt" : "2023-08-16T06:56:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2003,
+    "title" : "Clustering metrics",
+    "createdAt" : "2023-08-17T08:54:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2004,
+    "title" : "Breaking change in `MeanAveragePrecision` by removing `average` param",
+    "createdAt" : "2023-08-17T13:45:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2005,
+    "title" : "State Changes from List to Tensor After Calling Compute()",
+    "createdAt" : "2023-08-17T16:39:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2014,
+    "title" : "Pearson Correlation Coefficient fails when updating one batch at a time",
+    "createdAt" : "2023-08-22T14:49:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2016,
+    "title" : "Backwards incompatible change to MSE for pixelwise regression",
+    "createdAt" : "2023-08-22T22:51:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2020,
+    "title" : "MetricCollection NOT working for MeanAveragePrecision",
+    "createdAt" : "2023-08-23T18:50:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2022,
+    "title" : "Self-Implemented Metrics Behaved Weirdly in DDP Mode",
+    "createdAt" : "2023-08-24T06:50:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2026,
+    "title" : "`higher_is_better` is not set on some classification metrics",
+    "createdAt" : "2023-08-26T13:37:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2035,
+    "title" : "Torchetrics MeanAveragePrecision compability with numpy >1.20.0 ",
+    "createdAt" : "2023-08-30T09:11:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2041,
+    "title" : "Recall at fixed precision does not scale well for large batch sizes",
+    "createdAt" : "2023-09-01T01:47:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2046,
+    "title" : "Support for Wrappers (e.g., `BootStrapper`) in `MetricCollection`",
+    "createdAt" : "2023-09-03T13:18:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2047,
+    "title" : "Inconsistent default `average` value in F1Score (and others) compared to MultiClassF1Score",
+    "createdAt" : "2023-09-03T14:16:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2048,
+    "title" : "`BootStrapper(F1Score(average=None))` update fails when only some classes are present in batch",
+    "createdAt" : "2023-09-03T14:17:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2050,
+    "title" : "Multiclass is only one-vs-rest - missing documentation",
+    "createdAt" : "2023-09-03T14:55:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2054,
+    "title" : "More tokenizers for the SacreBLEU metric",
+    "createdAt" : "2023-09-04T14:51:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2059,
+    "title" : "Incorrect split of columns and rows in a plot for multi label confusion matrix.",
+    "createdAt" : "2023-09-05T14:25:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2063,
+    "title" : "Support metrics reduction outside of DDP",
+    "createdAt" : "2023-09-07T02:32:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2065,
+    "title" : "Prefix clash with MetricCollection",
+    "createdAt" : "2023-09-08T11:06:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2069,
+    "title" : "PeakSignalNoiseRatio RuntimeError on DDP reduction",
+    "createdAt" : "2023-09-10T20:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2076,
+    "title" : "403 link served on torch index url",
+    "createdAt" : "2023-09-12T06:05:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2077,
+    "title" : "mlflow autolog saves torchmetrics' differentiable as False",
+    "createdAt" : "2023-09-12T07:23:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2078,
+    "title" : "Some metrics save all targets and predictions in the buffer. For large datasets, this may lead to a large memory footprint",
+    "createdAt" : "2023-09-13T15:35:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2079,
+    "title" : "Discoverability of the wrappers ",
+    "createdAt" : "2023-09-13T23:43:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2080,
+    "title" : "Running Wrapper documentation code example does not render",
+    "createdAt" : "2023-09-13T23:54:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2091,
+    "title" : "`ClasswiseWrapper` & `MetricCollection` error with `LightningModule.log_dict()`",
+    "createdAt" : "2023-09-19T15:01:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2094,
+    "title" : "Problem with how some metrics are averaged (not intuitive)",
+    "createdAt" : "2023-09-20T09:23:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2095,
+    "title" : "Inconsistent docs and code output for `PerceptualEvaluationSpeechQuality `",
+    "createdAt" : "2023-09-20T12:45:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2099,
+    "title" : "Share Inception v3 network between FID, KID, Inception Score, and MiFID",
+    "createdAt" : "2023-09-21T21:10:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2100,
+    "title" : "References to the *_epoch_end hooks in Lightning 2.0",
+    "createdAt" : "2023-09-22T13:07:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2113,
+    "title" : "Behavior of classification metrics changed in stable version and not well-documented",
+    "createdAt" : "2023-09-26T14:02:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2117,
+    "title" : "Unable to move metrics to GPU when using MetricCollection in DDP setting",
+    "createdAt" : "2023-09-28T10:24:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2121,
+    "title" : "DeprecationWarning: The distutils package is deprecated",
+    "createdAt" : "2023-09-30T15:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2130,
+    "title" : "TypeError: `NoTrainInceptionV3.__init__()` takes 1 positional argument but 4 were given",
+    "createdAt" : "2023-10-02T23:16:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2139,
+    "title" : "Dont bring the defect from LPIPS to torchmetrics",
+    "createdAt" : "2023-10-04T07:19:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2147,
+    "title" : "Half precision doesn't work with top_k > 1",
+    "createdAt" : "2023-10-05T21:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2148,
+    "title" : "`rouge_score` with `accumulate='best'` gives mixed results",
+    "createdAt" : "2023-10-06T12:41:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2161,
+    "title" : "Precision-Recall Curve: switch axes in plot",
+    "createdAt" : "2023-10-10T11:42:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2166,
+    "title" : "`top_k` for `MulticlassRecall` is not working as expected",
+    "createdAt" : "2023-10-11T16:21:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2167,
+    "title" : "Rouge F1 is lower than both Recall and Precision",
+    "createdAt" : "2023-10-12T21:32:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2169,
+    "title" : "`MeanAveragePrecision` update method does not accept `torchvision.datapoints.BoundingBox` arguments",
+    "createdAt" : "2023-10-13T10:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2170,
+    "title" : "Imbalanced metric states with `drop_last=False`",
+    "createdAt" : "2023-10-13T20:56:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2171,
+    "title" : "Refactor imports for optional dependencies to be lazy",
+    "createdAt" : "2023-10-14T05:22:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2172,
+    "title" : "Documentation incorrectly specifies the name of \"num_labels\" attribute as \"num_classes\" for MultilabelMatthewsCorrCoef",
+    "createdAt" : "2023-10-15T15:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2186,
+    "title" : "AUROC for Retrieval (i.e. AUROC with `indexes` support)",
+    "createdAt" : "2023-10-19T14:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2187,
+    "title" : "Flexible aggregation for retrieval metrics",
+    "createdAt" : "2023-10-19T14:48:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2188,
+    "title" : "OSError libtorchaudio.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE when importing MSE, MAE, or MAPE",
+    "createdAt" : "2023-10-22T03:58:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2189,
+    "title" : "About specificity_at_sensitivity metric",
+    "createdAt" : "2023-10-23T08:21:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2193,
+    "title" : "MultiTaskWrapper doesn't support being logged as a metric",
+    "createdAt" : "2023-10-30T10:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2195,
+    "title" : "Conversion from logits to probabilities happens on a batch by batch basis",
+    "createdAt" : "2023-10-31T03:27:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2196,
+    "title" : "Implement the Brier score and it's decomposition into resolution, reliability and uncertainty.",
+    "createdAt" : "2023-10-31T12:28:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2200,
+    "title" : "All metrics computing a  curve should always send back result in the order Xaxis - Yaxis - Everything_Else ",
+    "createdAt" : "2023-11-03T10:49:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2202,
+    "title" : "Get confidence scores when using extended_summary with MeanAveragePrecision",
+    "createdAt" : "2023-11-06T22:48:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2206,
+    "title" : "MetricCollection just recomputes the first metric after first .compute call if compute_groups is enabled",
+    "createdAt" : "2023-11-07T16:04:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2207,
+    "title" : "The precision recall curve (and maybe others) should returned a thresholds object with the same size as Xaxis and Yaxis",
+    "createdAt" : "2023-11-09T09:16:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2218,
+    "title" : "torchmetrics.detection.mean_ap.MeanAveragePrecision  bug if en(max_detection_thresholds)<3 ",
+    "createdAt" : "2023-11-17T05:19:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2221,
+    "title" : "UniversalImageQualityIndex & SpectralDistortionIndex are still possible to give NaN results ",
+    "createdAt" : "2023-11-18T05:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2223,
+    "title" : "Error when calling `.to('cpu')` on a CUDA metric loaded on a CPU-only machine",
+    "createdAt" : "2023-11-19T17:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2224,
+    "title" : "Perplexity dtype restriction too strict",
+    "createdAt" : "2023-11-19T18:54:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2225,
+    "title" : "Bug in \"dim_zero_cat\" reduction \"Metric._reduce_states(...)\"",
+    "createdAt" : "2023-11-20T09:44:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2229,
+    "title" : "requirement of lightning-utilities in whl file has no constraint <0.10.0",
+    "createdAt" : "2023-11-21T02:39:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2231,
+    "title" : "Incorrect result when a metric object is logged with PyTorch Lightning logging system",
+    "createdAt" : "2023-11-21T19:47:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2232,
+    "title" : "`learned_perceptual_image_patch_similarity` function needs to synchronize device and dtype between net and input images",
+    "createdAt" : "2023-11-22T05:26:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2240,
+    "title" : "Weird behavior of `CosineSimilarityMetric` when used with tensors of shape [d]",
+    "createdAt" : "2023-11-26T18:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2242,
+    "title" : "HF transformers is always imported at __init__ if available",
+    "createdAt" : "2023-11-27T12:35:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2243,
+    "title" : "CLIPImageQualityAssessment insists on prompt argument to be called 'beutiful'",
+    "createdAt" : "2023-11-27T18:10:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2259,
+    "title" : "Option to return non-standardized AUC value when `max_fpr` is set for BinaryAUROC",
+    "createdAt" : "2023-12-04T19:18:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2261,
+    "title" : "torch 2.x image does not contain dependencies according to requirements/*.txt",
+    "createdAt" : "2023-12-05T00:33:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2262,
+    "title" : "Cannot use average method 'none' in Dice meter",
+    "createdAt" : "2023-12-05T05:01:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2264,
+    "title" : "False positive warning about calling `compute()` before `update()`",
+    "createdAt" : "2023-12-09T03:39:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2266,
+    "title" : "`dummy_image` in FID doesn't fit into custom feature extractors",
+    "createdAt" : "2023-12-11T22:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2268,
+    "title" : "[BUG] AttributeError: 'Tensor' object has no attribute '_is_synced'",
+    "createdAt" : "2023-12-12T04:54:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2269,
+    "title" : "Missing `CompositionalMetric` class in the __init__.py file",
+    "createdAt" : "2023-12-12T21:14:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2271,
+    "title" : "Single recall score for all images",
+    "createdAt" : "2023-12-16T11:15:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2273,
+    "title" : "add optional ignore_index in all metrics",
+    "createdAt" : "2023-12-18T12:47:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2279,
+    "title" : "Refactored Accuracy metric no longer tolerate empty tensor",
+    "createdAt" : "2023-12-22T18:52:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2280,
+    "title" : "Multiclass Accuracy, Precision, Recall, and F1Score the same (documentation issue?)",
+    "createdAt" : "2023-12-22T20:39:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2281,
+    "title" : "The `divided by zeros` problem in low precision when use `uqi`, `sdi`, `ssim` and `ms-ssim`",
+    "createdAt" : "2023-12-23T06:22:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2282,
+    "title" : "Dice metric cannot compute DICE score for each class",
+    "createdAt" : "2023-12-25T22:05:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2287,
+    "title" : "Calculations nDCG using GPU are 2x slower than CPU",
+    "createdAt" : "2023-12-29T08:18:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2289,
+    "title" : "Add State that Will not Synced during Distributed Training.",
+    "createdAt" : "2024-01-01T13:34:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2300,
+    "title" : "error while running in SLURM-managed cluster",
+    "createdAt" : "2024-01-04T10:00:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2303,
+    "title" : "Normalized Root Mean Squared Error (NRMSE) Calculation",
+    "createdAt" : "2024-01-09T22:35:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2304,
+    "title" : "LogAUC metric",
+    "createdAt" : "2024-01-12T18:25:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2305,
+    "title" : "packaging.metadata: `_tests` in `provides-extra` breaks pep-685 compliance",
+    "createdAt" : "2024-01-15T09:01:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2312,
+    "title" : "Differing Accuracy Results: Torchmetrics vs. Sklearn on Small Sample",
+    "createdAt" : "2024-01-17T15:44:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2314,
+    "title" : "DeepSpeed still, still changes metric states from fp32 to fp16",
+    "createdAt" : "2024-01-17T20:19:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2315,
+    "title" : "LPIPS gives negative value",
+    "createdAt" : "2024-01-17T23:11:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2317,
+    "title" : "SSIM AttributeError when reduction='none'",
+    "createdAt" : "2024-01-22T04:15:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2320,
+    "title" : "Inconsistent default values for `average` argument in classification metrics",
+    "createdAt" : "2024-01-22T20:02:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2323,
+    "title" : "Potential Unsupported version of DICE.",
+    "createdAt" : "2024-01-24T20:13:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2324,
+    "title" : "`MetricCollection` does not share internal `state`",
+    "createdAt" : "2024-01-26T02:38:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2325,
+    "title" : "Can MultitaskWrapper.clone() have a postfix or prefix arg?",
+    "createdAt" : "2024-01-27T03:05:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2327,
+    "title" : "SSIM has values larger than 1",
+    "createdAt" : "2024-01-29T12:25:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2329,
+    "title" : "`BinaryPrecisionRecallCurve` computes wrong value if used with logits, even though the docstring says this is supported",
+    "createdAt" : "2024-01-29T19:07:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2331,
+    "title" : "Broken source links in documentation of `1.3.0.post0`",
+    "createdAt" : "2024-01-29T20:47:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2336,
+    "title" : "RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)",
+    "createdAt" : "2024-01-30T18:41:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2337,
+    "title" : "High memory usage of Perplexity metric",
+    "createdAt" : "2024-01-30T23:34:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2338,
+    "title" : "`MultitaskWrapper` still cannot be logged",
+    "createdAt" : "2024-01-31T12:48:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2339,
+    "title" : "usage consistency on GPU between `MetricCollection` and `FeatureShare`",
+    "createdAt" : "2024-02-01T12:26:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2360,
+    "title" : "MeanAveragePrecision doesn't work as expected when using `max_detection_thresholds != [1, 10, 100]`",
+    "createdAt" : "2024-02-07T11:35:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2363,
+    "title" : "Custom callable is ignored in retrieval metric aggregation",
+    "createdAt" : "2024-02-08T08:24:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2365,
+    "title" : "Explicitly initializing tensors in `float32` in MeanMetric goes against `torch.set_default_dtype`, leading to numerical errors",
+    "createdAt" : "2024-02-08T19:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2369,
+    "title" : "Add an option to switch distributions order in the KLDivergence.",
+    "createdAt" : "2024-02-12T11:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2371,
+    "title" : "MetricWrapper for Target Binarization",
+    "createdAt" : "2024-02-12T14:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2373,
+    "title" : "Total sum of squares formula",
+    "createdAt" : "2024-02-12T23:16:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2380,
+    "title" : "Add Support for SQ and RQ in Panoptic Quality",
+    "createdAt" : "2024-02-13T15:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2383,
+    "title" : "MPS uninitialized memory(?) causing errors in `StatScores` (which cascade to other locations)",
+    "createdAt" : "2024-02-14T20:34:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2384,
+    "title" : "Importing torchmetrics causes segmentation fault with other dependencies",
+    "createdAt" : "2024-02-15T00:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2389,
+    "title" : "`MetricCollection` did not copy inner state of metric in `ClasswiseWrapper` when computing groups metrics",
+    "createdAt" : "2024-02-16T06:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2394,
+    "title" : "Wrong aggregation of Precision\\Recall\\F1-Score",
+    "createdAt" : "2024-02-20T09:05:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2398,
+    "title" : "Typing error for detection metrics in MultitaskWrapper",
+    "createdAt" : "2024-02-21T13:42:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2399,
+    "title" : "Can't access metrics in a MetricCollection via keys returned in MetricCollection.keys",
+    "createdAt" : "2024-02-21T17:14:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2402,
+    "title" : "`log_dict` method breaks on `MultitaskWrapper` + `MetricCollection` combination",
+    "createdAt" : "2024-02-22T14:21:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2405,
+    "title" : "Incorrect value of AUROC when plotting a `PrecisionRecallCurve` metric with `score=True`",
+    "createdAt" : "2024-02-26T12:06:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2406,
+    "title" : "A way to run *any* metric async on cpu",
+    "createdAt" : "2024-02-26T16:32:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2411,
+    "title" : "Unable to plot `MetricCollection` containing prefix using `MetricCollection.plot()`",
+    "createdAt" : "2024-02-27T14:49:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2415,
+    "title" : "A new metric NPV",
+    "createdAt" : "2024-02-29T08:32:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2416,
+    "title" : "Error in ERGAS metric",
+    "createdAt" : "2024-02-29T11:43:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2417,
+    "title" : "top-k multiclass macro accuracy less than top-1 multiclass macro accuracy",
+    "createdAt" : "2024-02-29T13:50:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2418,
+    "title" : "top-k multiclass macro accuracy is not calculated correctly",
+    "createdAt" : "2024-02-29T17:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2425,
+    "title" : "Error during argument validation: predictions can not contain `ignore_index`",
+    "createdAt" : "2024-03-05T11:14:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2428,
+    "title" : "Add a CW-SSIM support for torchmetrics",
+    "createdAt" : "2024-03-05T13:09:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2438,
+    "title" : "Create gallery of realistic examples",
+    "createdAt" : "2024-03-07T18:05:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2440,
+    "title" : "Delay imports of optional dependencies such as torchaudio, torchvision",
+    "createdAt" : "2024-03-08T13:56:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2441,
+    "title" : "Incorrect result in computing `MulticlassRecall` macro average when `ignore_index` is specified",
+    "createdAt" : "2024-03-08T15:42:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2449,
+    "title" : "RetrievalNormalizedDCG doesn't change with different top_k values",
+    "createdAt" : "2024-03-14T05:54:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2450,
+    "title" : "BootStrapper.update/forward don't process kwargs",
+    "createdAt" : "2024-03-15T12:22:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2463,
+    "title" : "List Metric synchronization fails in corner case",
+    "createdAt" : "2024-03-19T16:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2464,
+    "title" : "Contribution: Add new audio/speech metrics for generative audio",
+    "createdAt" : "2024-03-20T12:22:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2465,
+    "title" : "ClasswiseWrapper and JaccardIndex confmat attribute error",
+    "createdAt" : "2024-03-21T02:06:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2466,
+    "title" : "MulticlassAveragePrecision crashes on .compute() if empty",
+    "createdAt" : "2024-03-23T20:21:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2473,
+    "title" : "Metric not moved to device and invalids the cpu-gpu offloading when combining with DeepSpeed",
+    "createdAt" : "2024-03-26T04:28:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2477,
+    "title" : "No backend type associated with device type cpu",
+    "createdAt" : "2024-03-27T15:21:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2479,
+    "title" : "Metrics not being logged properly on remote GPU",
+    "createdAt" : "2024-03-27T21:27:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2481,
+    "title" : "Retrieval Metrics GPU Memory Leak",
+    "createdAt" : "2024-03-29T21:33:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2487,
+    "title" : "Specificity if TN + FN = 0",
+    "createdAt" : "2024-04-03T09:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2488,
+    "title" : "Building the docs",
+    "createdAt" : "2024-04-03T10:40:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2489,
+    "title" : "Discrepancy in optimal threshold calculation between sklearn and torchmetrics ROC implementations",
+    "createdAt" : "2024-04-04T17:49:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2490,
+    "title" : "Mean Average Detection ignores `warn_on_many_detections` set to False",
+    "createdAt" : "2024-04-05T07:21:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2492,
+    "title" : "`list` states leak (`Tensor`) memory",
+    "createdAt" : "2024-04-06T22:11:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2494,
+    "title" : "Behaviors of AUROC and Average Precision are inconsistent when all labels are equal",
+    "createdAt" : "2024-04-09T18:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2496,
+    "title" : "The default value of `compute_with_cache` should be `True` .",
+    "createdAt" : "2024-04-12T02:16:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2497,
+    "title" : "Bug in ERGAS",
+    "createdAt" : "2024-04-12T11:42:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2509,
+    "title" : "Ordinal classification metrics",
+    "createdAt" : "2024-04-18T15:39:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2519,
+    "title" : " Binary Classification Expected Calibration Error",
+    "createdAt" : "2024-04-28T04:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2534,
+    "title" : "`intersection_over_union` error",
+    "createdAt" : "2024-05-10T10:11:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2535,
+    "title" : "Clarify that nan is supported in zero_division",
+    "createdAt" : "2024-05-12T07:00:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2542,
+    "title" : "Add `_filter_kwargs` in `ClasswiseWrapper` metric wrapper",
+    "createdAt" : "2024-05-15T08:47:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2545,
+    "title" : "`MetricTracker` use `higher_is_better` as default for maximize",
+    "createdAt" : "2024-05-16T19:23:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2547,
+    "title" : "Unpredictable class order when `panoptic_quality(..., return_per_class=True)`",
+    "createdAt" : "2024-05-19T03:44:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2555,
+    "title" : "torchmetrics Accuracy",
+    "createdAt" : "2024-05-21T07:52:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2556,
+    "title" : "BootStrapper.reset() does not reset properly",
+    "createdAt" : "2024-05-22T18:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2558,
+    "title" : "segmentation.MeanIoU is wrong",
+    "createdAt" : "2024-05-23T13:29:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2559,
+    "title" : "DataLoader worker is killed in Docker",
+    "createdAt" : "2024-05-23T14:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2560,
+    "title" : "MeanAveragePrecision - bug in `max_detection_thresholds`",
+    "createdAt" : "2024-05-23T20:07:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2561,
+    "title" : "Documentation of ERGAS",
+    "createdAt" : "2024-05-24T14:48:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2562,
+    "title" : "Support for DLM (AIM) metric",
+    "createdAt" : "2024-05-25T02:16:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2563,
+    "title" : "Error for index tensor verification in GeneralizedDice if target is zeros",
+    "createdAt" : "2024-05-27T09:14:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2570,
+    "title" : "Incorrect caching (`m._compute`) of metrics inside a `MetricCollection` if `compute_groups` are used and `.compute` is called twice",
+    "createdAt" : "2024-05-28T21:18:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2580,
+    "title" : "Classification Report, maybe with the option to select even more metrics",
+    "createdAt" : "2024-06-01T10:43:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2587,
+    "title" : "`MeanAveragePrecision.tm_to_coco` example fails with `IndexError: list index out of range`",
+    "createdAt" : "2024-06-04T11:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2596,
+    "title" : "The compute_groups may lead to unexpected behavior",
+    "createdAt" : "2024-06-12T23:19:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2597,
+    "title" : "GPU ram memory increase until overflow when using PSNR and SSIM",
+    "createdAt" : "2024-06-14T11:20:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2598,
+    "title" : "Need higher level RAG metrics",
+    "createdAt" : "2024-06-14T14:35:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2604,
+    "title" : "Multi output functionality for MeanAbsoluteError",
+    "createdAt" : "2024-06-18T01:57:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2608,
+    "title" : "_cumsum moves the data to default GPU when deterministic flag is on",
+    "createdAt" : "2024-06-23T08:56:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2611,
+    "title" : "Retrieval metrics are misleading - here's how it should be done instead",
+    "createdAt" : "2024-06-26T14:52:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2612,
+    "title" : "Multiple threshold for Multilabel metrics",
+    "createdAt" : "2024-06-28T09:32:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2621,
+    "title" : "Cannot import the \"clustering\" module",
+    "createdAt" : "2024-07-08T18:20:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2637,
+    "title" : "Potentially Misleading Error Message for multiclass_precision",
+    "createdAt" : "2024-07-21T21:32:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2638,
+    "title" : "Accuracy incurs a GPU/CPU sync point",
+    "createdAt" : "2024-07-22T07:20:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2643,
+    "title" : "Support equivalent of torcheval's `merge_state`",
+    "createdAt" : "2024-07-22T19:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2652,
+    "title" : "Multilabel metrics based on threshold should accept a threshold per label",
+    "createdAt" : "2024-07-23T09:32:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2655,
+    "title" : "Recall and Accuracy produce different values when used with logits",
+    "createdAt" : "2024-07-24T14:59:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2656,
+    "title" : "Cloning `MultitaskWrapper` with postfix parameters results in incorrect dictionary",
+    "createdAt" : "2024-07-26T13:52:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2657,
+    "title" : "f-string should be used in exception",
+    "createdAt" : "2024-07-26T17:06:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2658,
+    "title" : "`zero_division` does not work for binary IoU (Jaccard index) calculation and returns NaN",
+    "createdAt" : "2024-07-29T11:49:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2659,
+    "title" : "`higher_is_better` for `InfoLM` should change depending on `information_measure`",
+    "createdAt" : "2024-07-29T20:39:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2665,
+    "title" : "GPL 2.0 License detected in `functional/text/chrf.py`",
+    "createdAt" : "2024-08-01T10:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2673,
+    "title" : "truncation cause error while using `bert_score`",
+    "createdAt" : "2024-08-03T07:53:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2683,
+    "title" : "`log_dict` to support `ClasswiseWrapper`",
+    "createdAt" : "2024-08-08T12:36:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2684,
+    "title" : "`FrechetInceptionDistance` hangs when used with multiple devices in PytorchLightning",
+    "createdAt" : "2024-08-11T13:50:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2685,
+    "title" : "Make `ignore_index` work when all batch elements are to be ignored",
+    "createdAt" : "2024-08-12T22:03:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2691,
+    "title" : "procrustes alignment",
+    "createdAt" : "2024-08-13T09:57:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2703,
+    "title" : "Please don't make us specify the number of outputs for R2Score",
+    "createdAt" : "2024-08-29T00:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2704,
+    "title" : "The typing on the `compute` method of multi label metrics is wrong",
+    "createdAt" : "2024-08-29T08:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2707,
+    "title" : "LightningModule attribute as a list of torchmetrics Metric gives error with DDP",
+    "createdAt" : "2024-08-29T21:58:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2718,
+    "title" : "SSIM calculation mistake.",
+    "createdAt" : "2024-09-03T12:50:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2728,
+    "title" : "BERT score: maximum at self-comparison, symmetry, invariance to additional items",
+    "createdAt" : "2024-09-09T20:12:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2734,
+    "title" : "Maybe a new patch release?",
+    "createdAt" : "2024-09-11T15:03:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2739,
+    "title" : "Broken \"source\" link on torchmetrics.Metric",
+    "createdAt" : "2024-09-12T12:01:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2741,
+    "title" : "MeanIoU and GeneralizedDiceScore doesn't work properly with index tensors when `per_class=True`",
+    "createdAt" : "2024-09-13T13:12:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2742,
+    "title" : "UnboundLocalError: local variable 'b' referenced before assignment",
+    "createdAt" : "2024-09-13T16:38:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2744,
+    "title" : "Docs: fix for R^2 and SMAPE",
+    "createdAt" : "2024-09-15T18:04:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2745,
+    "title" : "Autograd with DDP ",
+    "createdAt" : "2024-09-16T00:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2746,
+    "title" : "Mean Average Precision producing incorrect values, maybe?",
+    "createdAt" : "2024-09-16T10:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2747,
+    "title" : "Segmentation IOU compute Ignore some tagged values that don't need to be recorded (such as 255)",
+    "createdAt" : "2024-09-16T14:42:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2752,
+    "title" : "PESQ No utterances detected",
+    "createdAt" : "2024-09-17T11:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2756,
+    "title" : "Logging a class-wise metric with ClasswiseWrapper",
+    "createdAt" : "2024-09-18T15:24:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2758,
+    "title" : "BinaryAUROC hangs when calling metric.compute on multi-node multi-cards",
+    "createdAt" : "2024-09-23T06:48:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2759,
+    "title" : "Enhancement: Clarification of global map for MeanAveragePrecision",
+    "createdAt" : "2024-09-23T14:38:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2763,
+    "title" : "MinMaxMetric not working in Pytorch Lightning",
+    "createdAt" : "2024-09-25T08:09:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2767,
+    "title" : "Implement clustering accuracy",
+    "createdAt" : "2024-10-03T12:34:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2774,
+    "title" : "building docs instability",
+    "createdAt" : "2024-10-10T09:41:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2778,
+    "title" : "Result of IoU is Nan when there is empty item in preds.",
+    "createdAt" : "2024-10-14T07:53:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2787,
+    "title" : "Incorrect PSNR for uint8 images",
+    "createdAt" : "2024-10-18T10:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2789,
+    "title" : "Changing _modules dict type in Pytorch 2.5 leads to failing collections test",
+    "createdAt" : "2024-10-18T18:04:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2791,
+    "title" : "failing tests for PT 1.1x and python 3.10+",
+    "createdAt" : "2024-10-20T17:35:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2805,
+    "title" : "Incorrect IntersectionOverUnion calculations when predictions or targets contain empty boxes",
+    "createdAt" : "2024-10-28T08:38:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2812,
+    "title" : "`MetricsCollection` is not Pytorch JIT-able due to its `metric_state` property",
+    "createdAt" : "2024-10-30T20:25:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2816,
+    "title" : "GeneralizedDiceScore fails with 2D tensors and `input_format=\"index\"`",
+    "createdAt" : "2024-11-01T15:53:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2819,
+    "title" : "`torchmetrics.functional.classification.binary_auroc` gives wrong results when logits are large",
+    "createdAt" : "2024-11-02T01:41:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2821,
+    "title" : "How to find recall for each class using MeanAveragePrecision",
+    "createdAt" : "2024-11-04T18:29:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2828,
+    "title" : "Reference Metric in multiclass pecision recall unittests provides wrong answer when  ```ignore_index``` is specified with ```average = 'macro'```",
+    "createdAt" : "2024-11-05T19:08:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2831,
+    "title" : "MathJax rendering difficult to read for dark mode",
+    "createdAt" : "2024-11-10T23:53:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2837,
+    "title" : "`num_classes` should not be required when using micro averaging",
+    "createdAt" : "2024-11-13T15:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2842,
+    "title" : "Where is the guide document for building?",
+    "createdAt" : "2024-11-25T04:45:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2846,
+    "title" : "`GeneralizedDiceScore` yields 0 scores when using `per_class=True` for samples where class is not present",
+    "createdAt" : "2024-11-28T09:24:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2847,
+    "title" : "`DiceScore(average=\"weighted\")` doesn't work when in same compute group within `MetricCollection`",
+    "createdAt" : "2024-11-28T12:29:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2849,
+    "title" : "Dice:  The `ignore_index` 255 is not valid for inputs with 6 classes",
+    "createdAt" : "2024-11-28T17:13:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2850,
+    "title" : "`DiceScore` yields 1.0 scores when using `average=\"none\"` for samples where class is not present",
+    "createdAt" : "2024-11-29T08:52:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2851,
+    "title" : "`DiceScore(average=\"weighted\")` produces scores bigger than 1.0",
+    "createdAt" : "2024-11-29T08:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2852,
+    "title" : "`RetrievalRecall` and `RetrievalMRR` seem to function differently for `world_size > 1` and `top_k=1`",
+    "createdAt" : "2024-11-29T10:24:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2856,
+    "title" : "Support tensors in edit distance computations",
+    "createdAt" : "2024-12-01T23:39:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2857,
+    "title" : "`torchmetrics.classification.MultilabelConfusionMatrix` throws an exception when plotting the confusion matrix for two labels",
+    "createdAt" : "2024-12-03T05:16:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2865,
+    "title" : "Extend CLIP Score to image-to-image and text-to-text similarity",
+    "createdAt" : "2024-12-10T13:17:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2866,
+    "title" : "Zero value MeanIoU for Absent Classes in Ground Truth",
+    "createdAt" : "2024-12-11T16:46:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2868,
+    "title" : "Large computation speed regression in version 1.6.0 on MPS device",
+    "createdAt" : "2024-12-16T12:21:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2873,
+    "title" : "Report nan in PR curve above max threshold",
+    "createdAt" : "2024-12-17T22:25:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2874,
+    "title" : "R2s from .predict() and .test() do not match",
+    "createdAt" : "2024-12-19T00:43:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2877,
+    "title" : "Add Functional Interface for `MeanAveragePrecision`",
+    "createdAt" : "2024-12-23T20:18:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2883,
+    "title" : "CLIPScore is incorrect on captions with more than 77 tokens",
+    "createdAt" : "2024-12-25T08:46:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2887,
+    "title" : "Add ARNIQA metric",
+    "createdAt" : "2024-12-29T11:10:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2891,
+    "title" : "miou calculations are time-consuming",
+    "createdAt" : "2025-01-02T12:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2893,
+    "title" : "Pearson `_final_aggregation` modifies states in place (+ link out of date)",
+    "createdAt" : "2025-01-03T23:46:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2896,
+    "title" : "MetricCollection compute groups never re-established after copy",
+    "createdAt" : "2025-01-06T20:25:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2897,
+    "title" : "Extend support for manual specification of MetricCollection `compute_groups`",
+    "createdAt" : "2025-01-06T21:26:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2905,
+    "title" : "Detection IoU ignores predictions without ground truth",
+    "createdAt" : "2025-01-15T10:29:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2906,
+    "title" : "CLIPScore with different multimodal models for longer captions",
+    "createdAt" : "2025-01-15T23:42:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2907,
+    "title" : "When using `permutation_invariant_training` with `mode='permutation-wise'`, `kwargs` are not being correctly passed to the `metric_func`. ",
+    "createdAt" : "2025-01-16T05:39:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2908,
+    "title" : "Add CRPS metric",
+    "createdAt" : "2025-01-17T10:14:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2915,
+    "title" : "When working with OpenCV should the images be transformed to RGB?",
+    "createdAt" : "2025-01-24T21:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2916,
+    "title" : "`MetricCollection.update` gives identical results",
+    "createdAt" : "2025-01-24T22:05:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2920,
+    "title" : "Incorrect Pearson Correlation Output for Constant y_true in torchmetrics",
+    "createdAt" : "2025-01-29T14:23:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2921,
+    "title" : "Memory Leak in BinarPrecisionRecallCurve",
+    "createdAt" : "2025-01-30T08:45:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2924,
+    "title" : "Memory leak DNSMOS functional interface",
+    "createdAt" : "2025-01-30T18:50:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2925,
+    "title" : "docs: \"TorchMetrics in PyTorch Lightning\" enhancement",
+    "createdAt" : "2025-01-30T19:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2932,
+    "title" : "`MeanAveragePrecision(average=\"micro\")` does not work when cats in dataset starts from 1",
+    "createdAt" : "2025-02-01T17:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2935,
+    "title" : "add LongClip to CLIPScore",
+    "createdAt" : "2025-02-02T10:24:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2947,
+    "title" : "Adding Jensen-Shannon (JS) Divergence Metric",
+    "createdAt" : "2025-02-07T01:51:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2951,
+    "title" : "CLIP-IQA functions are incorrectly typed",
+    "createdAt" : "2025-02-12T12:19:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2954,
+    "title" : "add DISTS to the image metrics",
+    "createdAt" : "2025-02-13T13:08:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2955,
+    "title" : "Multi Label Precision numerical stability issues with MPS",
+    "createdAt" : "2025-02-15T20:31:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2961,
+    "title" : "A differentiable pytorch VMAF implementation.",
+    "createdAt" : "2025-02-18T21:53:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2964,
+    "title" : "ConcordanceCorrCoef error when running on another device than cpu",
+    "createdAt" : "2025-02-20T18:26:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2965,
+    "title" : "R2Score error when running on another device than cpu",
+    "createdAt" : "2025-02-20T18:37:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2994,
+    "title" : "Improve `MetricTracker` support for metrics nested in `ClasswiseWrapper`",
+    "createdAt" : "2025-03-08T21:50:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3002,
+    "title" : "Add Equal Error Rate (EER) as a metric",
+    "createdAt" : "2025-03-11T13:50:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3003,
+    "title" : "Lip Vertex Error (LVE)  Metrics for 3D Talking Heads Evaluation",
+    "createdAt" : "2025-03-11T18:51:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3005,
+    "title" : "ImportError: cannot import name 'dice_score' from 'torchmetrics.functional'",
+    "createdAt" : "2025-03-13T11:23:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3007,
+    "title" : "`IndexError` when calling `MetricTracker.best_metric()` for `ClasswiseWrapper` nested in `MetricCollection`",
+    "createdAt" : "2025-03-14T00:11:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3010,
+    "title" : "Improve `MeanIoU` & `mean_iou` interface & functionality",
+    "createdAt" : "2025-03-15T16:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3014,
+    "title" : "Resolve confusion between `classification.Dice` and `segmentation.DiceScore` and improve the implementation",
+    "createdAt" : "2025-03-17T14:56:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3020,
+    "title" : "MultiClassAccuracy with top k: IndexError dimension out of range",
+    "createdAt" : "2025-03-19T13:00:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3026,
+    "title" : "Pose estimation metrics",
+    "createdAt" : "2025-03-23T12:44:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3030,
+    "title" : "Supporting the addition of a MetricCollection to a MetricCollection",
+    "createdAt" : "2025-03-27T07:04:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3031,
+    "title" : "DiceScore uses average='micro' by default, while other methods use average='macro'",
+    "createdAt" : "2025-03-27T13:44:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3037,
+    "title" : "MulticlassAccuracy raises error when `top_k>1`",
+    "createdAt" : "2025-04-01T19:56:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3043,
+    "title" : "Calculate MulticlassStatScores with multidim_average='samplewise' cause ValueError",
+    "createdAt" : "2025-04-07T09:00:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3047,
+    "title" : "meanIoU calculation error for 1.8.0.dev0 (build from source)",
+    "createdAt" : "2025-04-07T15:08:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3052,
+    "title" : "Option to skip reduction for LPIPS",
+    "createdAt" : "2025-04-08T10:19:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3055,
+    "title" : "Inconsistent Input Handling: `bert_score` Fails on Single String Inputs Despite Documentation",
+    "createdAt" : "2025-04-12T10:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3062,
+    "title" : "[Bug] Mifid using a custom encoder",
+    "createdAt" : "2025-04-15T12:24:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3066,
+    "title" : "Unified `Metrics` class for multiple metrics",
+    "createdAt" : "2025-04-16T10:16:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3068,
+    "title" : "Multiclass accuracy with micro and top-k does not work as expected.",
+    "createdAt" : "2025-04-17T18:37:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3077,
+    "title" : "R2 result > 1",
+    "createdAt" : "2025-04-30T03:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3079,
+    "title" : "Wrong default description of `full_state_update`",
+    "createdAt" : "2025-05-02T09:16:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3083,
+    "title" : "MultilabelExactMatch agnostic to 'ignore_index'",
+    "createdAt" : "2025-05-06T12:44:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3084,
+    "title" : "Request metrics for time series forecasting.",
+    "createdAt" : "2025-05-07T07:39:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3086,
+    "title" : "Avoid unnecessary fallback in _bincount when deterministic mode is enabled on CUDA (PyTorch ≥ 2.1)",
+    "createdAt" : "2025-05-08T07:52:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3089,
+    "title" : "Add to SacreBleu documentation differences between original implmentation and torch metrics",
+    "createdAt" : "2025-05-10T15:27:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3095,
+    "title" : "Non-blocking call in `_safe_divide` leads to race condition",
+    "createdAt" : "2025-05-14T09:54:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3096,
+    "title" : "Provide BinaryAUROC support for Masked/Sparse Labels",
+    "createdAt" : "2025-05-14T12:47:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3097,
+    "title" : "Upper Face Dynamic Deviation (FDD) Metrics for 3D Talking Heads Evaluation",
+    "createdAt" : "2025-05-14T17:08:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3098,
+    "title" : "torchvision::nms does not exist with cpu torch version.",
+    "createdAt" : "2025-05-15T02:03:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3102,
+    "title" : "SpearmanCorrCoef is very slow on large tensors with many duplicate elements",
+    "createdAt" : "2025-05-23T02:29:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3105,
+    "title" : "Can't individually call multiple metrics when under generic class wrapper",
+    "createdAt" : "2025-05-25T04:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3110,
+    "title" : "Frechet Inception Distance with Dinov2 features",
+    "createdAt" : "2025-05-27T11:57:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3120,
+    "title" : "Is recall in MeanAveragePrecision missing a dimension?",
+    "createdAt" : "2025-06-04T20:44:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3122,
+    "title" : "WrapperMetric does not reset the state of the wrapped metric",
+    "createdAt" : "2025-06-05T15:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3130,
+    "title" : "Feature Request: Use resizing with antialiasing in `torchmetrics.image.fid.FrechetInceptionDistance`.",
+    "createdAt" : "2025-06-10T20:29:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3135,
+    "title" : "data_range in PSNR should not depend on data",
+    "createdAt" : "2025-06-16T12:43:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3150,
+    "title" : "PearsonCorrCoef() returns NaN when values are small",
+    "createdAt" : "2025-06-26T03:11:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3159,
+    "title" : "`StructuralSimilarityIndexMeasure` should not reduce \"similarity\" with `dist_reduce_fx=\"cat\"` if `reduction` is None",
+    "createdAt" : "2025-07-01T16:42:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3163,
+    "title" : "Robust instance segmentation metrics",
+    "createdAt" : "2025-07-03T09:36:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3167,
+    "title" : "Shape inconsistency in `_pearson_corrcoef_update` breaks distributed training",
+    "createdAt" : "2025-07-04T08:17:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3175,
+    "title" : "Add mixed [N, C, ...] and [N, ...] inputs support to segmentation metrics",
+    "createdAt" : "2025-07-09T16:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3179,
+    "title" : "Unwanted Sigmoid in BinaryROC/BinaryPrecisionRecallCurve Causes Incorrect Behavior in Batch-wise Updates",
+    "createdAt" : "2025-07-13T15:08:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3184,
+    "title" : "Incorrect function definition",
+    "createdAt" : "2025-07-17T14:27:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3194,
+    "title" : "Enhancement: Add per-image reduction option to VisualInformationFidelity",
+    "createdAt" : "2025-07-29T10:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3197,
+    "title" : "`MeanIoU` fails if one of the inputs is float",
+    "createdAt" : "2025-07-30T22:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3199,
+    "title" : "`MeanAveragePrecision(sync_on_compute=True)` hangs when using `LightningModule` with `ray`'s `TorchTrainer`",
+    "createdAt" : "2025-07-31T17:16:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3216,
+    "title" : "`retrieval_normalized_dcg` should compute per-query average when given 2D inputs (IR-standard behavior)",
+    "createdAt" : "2025-08-10T07:53:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3217,
+    "title" : "MulticlssIoU, MulticlssDice ImportError",
+    "createdAt" : "2025-08-11T14:12:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3231,
+    "title" : "MeanAveragePrecision for custom area definitions",
+    "createdAt" : "2025-08-19T14:42:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3233,
+    "title" : "Add Vendi Score and Memorization metrics for generative model evaluation",
+    "createdAt" : "2025-08-26T02:56:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3250,
+    "title" : "MetricCollection incorrectly links cached computations across compute groups",
+    "createdAt" : "2025-09-03T08:47:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3258,
+    "title" : "zero_division defined in docstring but doesn't exist in segmentation.DiceScore",
+    "createdAt" : "2025-09-09T15:54:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3262,
+    "title" : "Intersection Over Union (IoU) should support Shape N x C_1 x C_2 x ... x C_n",
+    "createdAt" : "2025-09-13T07:12:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3267,
+    "title" : "LPIPS turn slow during training",
+    "createdAt" : "2025-09-18T16:17:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3269,
+    "title" : "`BinaryAccuracy` (and similar metrics) incorrectly assumes logits between [0,1] are confidences/probabilities",
+    "createdAt" : "2025-09-22T15:14:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3274,
+    "title" : "BinaryAccuracy supports weight parameter",
+    "createdAt" : "2025-09-23T03:13:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3275,
+    "title" : "Deprecation Warning in raised when calling `gather_all_tensors`",
+    "createdAt" : "2025-09-24T11:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3278,
+    "title" : "`UserWarning` while using logAUC",
+    "createdAt" : "2025-09-30T18:26:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3289,
+    "title" : "Incorrect threshold indices in `_binary_clf_curve` due to `F.pad` on mps",
+    "createdAt" : "2025-10-13T08:31:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3290,
+    "title" : "Retrieval metrics crash or use excessive memory with high-valued query indexes",
+    "createdAt" : "2025-10-15T10:17:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3294,
+    "title" : "Memory Leak in AveragePrecision",
+    "createdAt" : "2025-10-16T14:24:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3296,
+    "title" : "Installing torchmetrics causes GIL error even without usage",
+    "createdAt" : "2025-10-18T11:11:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3299,
+    "title" : "MulticlassPrecisionRecallCurve with thresholds=[integer] does not use constant memory on MPS",
+    "createdAt" : "2025-10-27T09:48:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3300,
+    "title" : "hausdorff_distance() throws IndexError for certain input shapes",
+    "createdAt" : "2025-10-29T07:38:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3304,
+    "title" : "PerceptualEvaluationSpeechQuality - NoUtterancesError: b'No utterances detected'",
+    "createdAt" : "2025-11-06T16:03:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3305,
+    "title" : "Add a new metric: Localization Recall Precision (LRP)",
+    "createdAt" : "2025-11-06T18:01:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3310,
+    "title" : "Incorrect Equal Error Rate (EER) formula in doc",
+    "createdAt" : "2025-12-08T22:25:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3313,
+    "title" : "Can't scroll the left menu from the docs page",
+    "createdAt" : "2025-12-31T12:11:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3314,
+    "title" : "Failed to import from `torchmetrics.image.lpip`",
+    "createdAt" : "2026-01-09T08:55:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3321,
+    "title" : "MetricCollection.add_metrics doesn't accept another MetricCollection",
+    "createdAt" : "2026-02-04T13:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3322,
+    "title" : "`spectral_angle_mapper` NaNs even with one zero pixel",
+    "createdAt" : "2026-02-07T21:49:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 3323,
+    "title" : "`MinMaxMetric` state not saved in the checkpoint",
+    "createdAt" : "2026-02-10T10:11:36Z",
+    "state" : "OPEN"
+  } ]
+}

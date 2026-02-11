@@ -8,7 +8,7 @@ public class Constants {
 
     public static final String GITHUB_TOKEN = "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";
 
-    public static final String TEAMSCALE_ACCESS_KEY = "JR62xEGhWWh7NYh2srekjo61ftAYZBYo";
+    public static final String TEAMSCALE_ACCESS_KEY = "S9ETWm94zvEVg3QaSCh8g99bTWbrj0sE";
     public static final String TEAMSCALE_URL = "https://yannickkraml.ddnss.de";
     public static final String TEAMSCALE_USER = "admin";
 

@@ -1,0 +1,563 @@
+{
+  "repoOwner" : "gridhead",
+  "repoName" : "nvidia-auto-installer-for-fedora-linux",
+  "forks" : [ {
+    "createdAt" : "2020-05-22T17:22:19Z"
+  }, {
+    "createdAt" : "2020-05-27T22:26:48Z"
+  }, {
+    "createdAt" : "2020-07-17T11:58:19Z"
+  }, {
+    "createdAt" : "2021-07-17T08:15:30Z"
+  }, {
+    "createdAt" : "2021-07-29T08:14:17Z"
+  }, {
+    "createdAt" : "2021-09-11T04:41:41Z"
+  }, {
+    "createdAt" : "2021-12-10T09:44:45Z"
+  }, {
+    "createdAt" : "2022-10-01T19:49:09Z"
+  }, {
+    "createdAt" : "2022-10-22T19:58:37Z"
+  }, {
+    "createdAt" : "2022-12-21T15:10:14Z"
+  }, {
+    "createdAt" : "2023-02-15T11:10:50Z"
+  }, {
+    "createdAt" : "2023-02-18T17:28:30Z"
+  }, {
+    "createdAt" : "2023-03-28T16:38:30Z"
+  }, {
+    "createdAt" : "2023-04-22T07:30:34Z"
+  }, {
+    "createdAt" : "2023-05-06T14:04:38Z"
+  }, {
+    "createdAt" : "2023-08-25T00:25:22Z"
+  }, {
+    "createdAt" : "2023-11-25T18:39:23Z"
+  }, {
+    "createdAt" : "2023-12-17T15:47:54Z"
+  }, {
+    "createdAt" : "2023-12-28T06:11:30Z"
+  }, {
+    "createdAt" : "2024-02-26T09:05:04Z"
+  }, {
+    "createdAt" : "2024-05-09T19:37:45Z"
+  }, {
+    "createdAt" : "2024-07-09T16:15:41Z"
+  }, {
+    "createdAt" : "2024-08-01T23:00:50Z"
+  }, {
+    "createdAt" : "2024-08-04T20:06:58Z"
+  }, {
+    "createdAt" : "2024-08-14T20:18:12Z"
+  }, {
+    "createdAt" : "2026-01-16T15:22:13Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Non-zero exit code encountered during exit function",
+    "createdAt" : "2020-05-22T14:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Abort call is not handled properly",
+    "createdAt" : "2020-05-22T14:18:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "No way to detect host is really Fedora/RHEL/CentOS",
+    "createdAt" : "2020-05-22T14:40:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Correct typo \"RPMFusion\" to \"RPM Fusion\" or \"rpmfusion\"",
+    "createdAt" : "2020-05-23T02:32:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Generalize and test the tool in KDE Plasma spin",
+    "createdAt" : "2020-05-23T02:41:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6,
+    "title" : "Generalize and test the tool in Xfce spin",
+    "createdAt" : "2020-05-23T02:43:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7,
+    "title" : "Generalize and test the tool in LXQt spin",
+    "createdAt" : "2020-05-23T02:45:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8,
+    "title" : "Generalize and test the tool in MATE-Compiz spin",
+    "createdAt" : "2020-05-23T02:48:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9,
+    "title" : "Generalize and test the tool in Cinnamon spin",
+    "createdAt" : "2020-05-23T02:52:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10,
+    "title" : "Generalize and test the tool in LXDE spin",
+    "createdAt" : "2020-05-23T02:54:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 11,
+    "title" : "Generalize and test the tool in SOAS spin",
+    "createdAt" : "2020-05-23T02:55:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "Automate monitoring status of akmod transaction",
+    "createdAt" : "2020-05-23T04:08:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Facilitate removal of leftovers from previous unused kernel modules",
+    "createdAt" : "2020-05-23T04:10:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 14,
+    "title" : "Add support on proprietary drivers for older discrete cards",
+    "createdAt" : "2020-05-23T04:13:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 15,
+    "title" : "Post about the tool in r/buildapc and r/pcmasterrace",
+    "createdAt" : "2020-05-23T04:17:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 16,
+    "title" : "Port this to RHEL/CentOS if possible as a project",
+    "createdAt" : "2020-05-23T04:18:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 17,
+    "title" : "Use polkit instead of sudo for native privesc access",
+    "createdAt" : "2020-05-23T04:21:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Add x86 dependencies to install list",
+    "createdAt" : "2020-05-25T19:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Active querying from NVIDIA website to fetch the list of supported cards",
+    "createdAt" : "2020-05-26T02:54:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 21,
+    "title" : "Incorrect identification of installation completion",
+    "createdAt" : "2020-05-27T04:30:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Incorrect identification of kernel module load operation",
+    "createdAt" : "2020-05-27T04:38:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Remove forced sleep after installation",
+    "createdAt" : "2020-05-27T05:21:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Broken decline choice in package check",
+    "createdAt" : "2020-05-27T07:50:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Provide support for installing CUDA tools if asked",
+    "createdAt" : "2020-05-28T09:04:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Documentation needs critical correction",
+    "createdAt" : "2020-05-28T14:40:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Visibility is compromised if terminal has custom theme",
+    "createdAt" : "2020-05-29T05:48:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Proper detection of Optimus setups",
+    "createdAt" : "2020-05-31T05:01:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 37,
+    "title" : "Add automatic detection and configuration for Legacy Geforce 400/500",
+    "createdAt" : "2020-06-01T05:25:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 38,
+    "title" : "Add automatic detection and configuration for Legacy Geforce 8/9/200/300",
+    "createdAt" : "2020-06-01T05:27:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 39,
+    "title" : "Add automatic detection of EOL'd GPUs and exit out",
+    "createdAt" : "2020-06-01T05:34:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 40,
+    "title" : "Provide support for installation of NVENC/NVDEC for FFMPEG",
+    "createdAt" : "2020-06-01T05:37:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "v0.25 RPM fusion NVIDIA chould not be enable",
+    "createdAt" : "2020-06-01T13:38:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Need direct conversion from Python to C++",
+    "createdAt" : "2020-06-12T16:06:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 44,
+    "title" : "dnf update failed : conflict vidia-kmod-common-3:440.95.01-1.fc29.x86_64",
+    "createdAt" : "2020-06-28T04:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Remove colorama dependency",
+    "createdAt" : "2020-09-10T18:28:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Crash during compatibility check in Arch Linux",
+    "createdAt" : "2020-09-15T04:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Inability to package untill PyInstaller provides support for Python 3.8",
+    "createdAt" : "2020-09-15T13:58:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "CUDA software could not be installed as server can't be pinged",
+    "createdAt" : "2020-09-16T06:43:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Package unavailable with the most recent changes",
+    "createdAt" : "2020-09-23T03:13:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 52,
+    "title" : "Add CONTRIBUTING.md and CODE_OF_CONDUCT.md",
+    "createdAt" : "2020-09-25T04:42:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "symbolic link vdpau",
+    "createdAt" : "2020-09-29T11:12:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 55,
+    "title" : "Fedora 33 support",
+    "createdAt" : "2020-10-03T12:56:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Installation succeeded but updates broken on fedora 33",
+    "createdAt" : "2020-11-30T11:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Add option for rebuilding kernel modules for newly selected kernel",
+    "createdAt" : "2021-04-29T03:01:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 59,
+    "title" : "0.3.5",
+    "createdAt" : "2021-04-29T22:27:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add automatic PRIME configuration for Optimus-supported devices",
+    "createdAt" : "2021-05-20T17:32:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Nvidia driver not loading",
+    "createdAt" : "2021-05-26T23:41:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Error after installation - Nvidia kernel module missing",
+    "createdAt" : "2021-07-01T19:14:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "CUDA installation for a specific version ",
+    "createdAt" : "2021-07-17T08:16:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 69,
+    "title" : "laptop display still not working with kernel above 5.12",
+    "createdAt" : "2021-08-11T13:24:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Minor typo in README.md",
+    "createdAt" : "2021-08-18T19:45:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Fedora 34 - Nvidia driver not loading",
+    "createdAt" : "2021-10-05T23:52:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Fedora 34 - Incorrect Nvidia cuda repo",
+    "createdAt" : "2021-10-07T10:34:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Fedora 35 KDE Plasma: RPM Fusion repository for Proprietary NVIDIA Driver was not found ",
+    "createdAt" : "2021-11-06T10:28:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Fedora 35 NVIDIA kernel module missing. Falling back to nouveau",
+    "createdAt" : "2021-11-07T19:14:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Configure project installation using Poetry",
+    "createdAt" : "2021-12-15T13:14:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Replace options with commands on Click",
+    "createdAt" : "2021-12-15T13:15:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "xorg-x11-drv-nvidia-3:495.46-1.fc35.x86_64 is filtered out",
+    "createdAt" : "2022-01-08T14:15:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "Add code quality tests",
+    "createdAt" : "2022-03-06T06:48:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Setup GitHub Actions",
+    "createdAt" : "2022-03-06T07:00:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Setup Dependabot alerts",
+    "createdAt" : "2022-03-06T07:04:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Loosen Python version dependence",
+    "createdAt" : "2022-03-06T07:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Unable to find a match: kernel-headers kernel-devel",
+    "createdAt" : "2022-05-02T07:39:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 100,
+    "title" : "Update CUDA repositories for F36",
+    "createdAt" : "2022-05-12T06:03:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Suggest installing RPM Fusion repositories if people try to install the drivers without them",
+    "createdAt" : "2022-05-12T06:06:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Create an option to generate cert and sign nvidia kernel modules on secure boot",
+    "createdAt" : "2022-05-24T10:29:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 110,
+    "title" : "SDDM blackscreen after usage. (KDE Spin)",
+    "createdAt" : "2022-07-07T18:22:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 111,
+    "title" : "Feature Request: Configure KDE SDDM to properly support PRIME",
+    "createdAt" : "2022-07-08T04:47:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "Conflicting requests when install nvautoinstall in FEDORA 37",
+    "createdAt" : "2022-09-22T10:04:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Write unit tests for the code",
+    "createdAt" : "2022-09-29T03:41:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 119,
+    "title" : "Add coverage reports using `pytest-cov`",
+    "createdAt" : "2022-09-29T03:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Check security vulnerabilities using `bandit`",
+    "createdAt" : "2022-09-29T03:42:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "[Feature request] Nvidia-vaapi-driver installation and  how to manage within the script :construction: ",
+    "createdAt" : "2022-10-10T07:30:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 128,
+    "title" : "[ci] :construction_worker:  Conventional Commits check with every PR",
+    "createdAt" : "2022-10-10T07:34:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Is the installer supposed to disable the nouveau kernel module?",
+    "createdAt" : "2022-12-14T15:31:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "CuDNN and CuBLAS auto-install on Fedora 37",
+    "createdAt" : "2022-12-21T15:09:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 160,
+    "title" : "not install in rawhide ( Error: Unable to find a match: xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs )",
+    "createdAt" : "2023-01-01T03:54:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "[CI] Add pre-commit support for the project repository",
+    "createdAt" : "2023-01-02T06:46:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "[DOC] :closed_lock_with_key: Security policy",
+    "createdAt" : "2023-01-02T08:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "After install and run the NVIDIA Auto Installer for Fedora 37 Linux, NVIDIA driver/kernel module not load",
+    "createdAt" : "2023-01-09T08:08:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "problem on 0-nvidia.rules",
+    "createdAt" : "2023-02-21T17:01:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Dependency Dashboard",
+    "createdAt" : "2023-04-10T16:41:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 235,
+    "title" : "Action Required: Fix Renovate Configuration",
+    "createdAt" : "2023-04-18T00:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Use Python bindings for DNF instead of interacting directly with shell",
+    "createdAt" : "2023-07-03T03:01:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 246,
+    "title" : "Introduce pre-commit support for the project",
+    "createdAt" : "2023-07-03T03:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Introduce support for rpm-ostree based Fedora Linux releases",
+    "createdAt" : "2023-07-03T03:03:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "Warn of problems if your primary disk is LUKS encrypted ",
+    "createdAt" : "2023-10-25T12:09:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 270,
+    "title" : "Does not work on Fedora 39",
+    "createdAt" : "2023-11-10T11:57:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "CUDA toolkit on F38",
+    "createdAt" : "2023-11-18T10:44:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 273,
+    "title" : "not work  install driver",
+    "createdAt" : "2023-11-19T17:27:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 277,
+    "title" : "[Feature request] Include NVIDIA Container Toolkit For Podman",
+    "createdAt" : "2023-11-20T01:06:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 283,
+    "title" : "sudo nvautoinstall driver won't work",
+    "createdAt" : "2023-12-19T19:17:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 288,
+    "title" : "Getting \"NVIDIA kernel module missing\" despite following all instructions",
+    "createdAt" : "2024-01-20T09:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Weird wayland graphic gui bug ",
+    "createdAt" : "2024-03-05T20:11:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "CUDA repository use fedora35",
+    "createdAt" : "2024-03-27T11:56:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 307,
+    "title" : "does this installer work with NVIDIA GeForce GT 755M  ?",
+    "createdAt" : "2024-05-08T16:57:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 309,
+    "title" : "only 60hz available after installing the drivers",
+    "createdAt" : "2024-05-30T13:18:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Proposal: Implement libdnf5 API in Python for Future Commands and Phase Out dnf commands",
+    "createdAt" : "2024-08-13T06:01:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 330,
+    "title" : "Create builds for Fedora 41",
+    "createdAt" : "2024-10-30T12:05:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Code is messy and largely broken",
+    "createdAt" : "2024-12-10T17:32:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "NVIDIA Auto Installer for Fedora Linux is now RETIRED",
+    "createdAt" : "2025-07-23T04:16:24Z",
+    "state" : "OPEN"
+  } ]
+}

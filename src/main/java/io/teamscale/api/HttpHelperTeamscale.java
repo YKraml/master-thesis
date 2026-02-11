@@ -21,9 +21,10 @@ public class HttpHelperTeamscale {
     }
 
     public HttpResponse<String> executeGetRequest(String path) throws IOException, InterruptedException {
+        URI url = createUrl(path);
         HttpRequest request = HttpRequest
                 .newBuilder()
-                .uri(createUrl(path))
+                .uri(url)
                 .header("Authorization", getAuthHeader()).header("Accept", "application/json")
                 .GET()
                 .build();

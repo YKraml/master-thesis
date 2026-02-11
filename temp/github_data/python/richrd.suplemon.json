@@ -1,0 +1,944 @@
+{
+  "repoOwner" : "richrd",
+  "repoName" : "suplemon",
+  "forks" : [ {
+    "createdAt" : "2015-03-31T22:58:51Z"
+  }, {
+    "createdAt" : "2015-04-03T21:47:42Z"
+  }, {
+    "createdAt" : "2015-05-26T06:39:43Z"
+  }, {
+    "createdAt" : "2015-05-31T08:01:51Z"
+  }, {
+    "createdAt" : "2015-07-02T11:30:20Z"
+  }, {
+    "createdAt" : "2015-07-04T18:20:31Z"
+  }, {
+    "createdAt" : "2015-07-09T03:15:21Z"
+  }, {
+    "createdAt" : "2015-09-30T20:38:27Z"
+  }, {
+    "createdAt" : "2016-03-01T14:36:48Z"
+  }, {
+    "createdAt" : "2016-03-06T20:56:36Z"
+  }, {
+    "createdAt" : "2016-05-27T12:49:34Z"
+  }, {
+    "createdAt" : "2016-07-26T20:31:52Z"
+  }, {
+    "createdAt" : "2016-08-11T03:55:17Z"
+  }, {
+    "createdAt" : "2016-12-13T12:21:29Z"
+  }, {
+    "createdAt" : "2017-01-27T21:08:19Z"
+  }, {
+    "createdAt" : "2017-03-08T21:34:25Z"
+  }, {
+    "createdAt" : "2017-03-13T20:53:51Z"
+  }, {
+    "createdAt" : "2017-06-25T07:14:07Z"
+  }, {
+    "createdAt" : "2017-10-03T07:50:08Z"
+  }, {
+    "createdAt" : "2017-10-26T21:43:29Z"
+  }, {
+    "createdAt" : "2017-11-05T04:29:55Z"
+  }, {
+    "createdAt" : "2017-12-05T00:18:06Z"
+  }, {
+    "createdAt" : "2017-12-08T15:16:51Z"
+  }, {
+    "createdAt" : "2017-12-10T22:11:03Z"
+  }, {
+    "createdAt" : "2018-01-01T19:30:20Z"
+  }, {
+    "createdAt" : "2018-02-04T11:04:38Z"
+  }, {
+    "createdAt" : "2018-04-15T19:11:45Z"
+  }, {
+    "createdAt" : "2018-07-17T17:48:50Z"
+  }, {
+    "createdAt" : "2019-06-03T16:59:25Z"
+  }, {
+    "createdAt" : "2019-11-30T00:28:47Z"
+  }, {
+    "createdAt" : "2020-08-03T15:08:06Z"
+  }, {
+    "createdAt" : "2020-11-01T21:21:04Z"
+  }, {
+    "createdAt" : "2021-02-22T13:04:52Z"
+  }, {
+    "createdAt" : "2021-04-12T20:03:51Z"
+  }, {
+    "createdAt" : "2021-04-13T08:09:08Z"
+  }, {
+    "createdAt" : "2021-10-29T09:17:18Z"
+  }, {
+    "createdAt" : "2023-04-29T08:49:56Z"
+  }, {
+    "createdAt" : "2023-10-01T08:01:40Z"
+  }, {
+    "createdAt" : "2025-08-17T19:37:15Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Crashes when scrolling to end of file (on Mac)",
+    "createdAt" : "2015-01-26T13:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Special characters (ä, ö etc.) detected incorrectly as two characters.",
+    "createdAt" : "2015-03-06T09:51:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Input queries (Find etc) can't be canceled.",
+    "createdAt" : "2015-03-10T08:15:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Find next sometimes gets stuck and toggles the last cursor instead of selecting next occurance.",
+    "createdAt" : "2015-03-10T09:06:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Returns incorrect exit code (130) when quitting.",
+    "createdAt" : "2015-03-17T16:22:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Redo is unreliable and needs proper testing.",
+    "createdAt" : "2015-03-17T16:26:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Goto function should jump to end of file if given -1 as line to go to.",
+    "createdAt" : "2015-03-17T16:38:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "F1 is help on many X teminals - allow ^S to save.",
+    "createdAt" : "2015-03-31T18:08:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "no colors in TTY",
+    "createdAt" : "2015-03-31T18:10:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Cut command works incorrectly with multiple cursors.",
+    "createdAt" : "2015-04-01T16:01:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Autofind current word / character doesn't escape the search text if regex is enabled.",
+    "createdAt" : "2015-04-01T16:32:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Mac: Backspace key doesn't work",
+    "createdAt" : "2015-04-03T20:30:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "No response on Ubuntu",
+    "createdAt" : "2015-04-04T13:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Suggestion for refactoring",
+    "createdAt" : "2015-04-06T02:44:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Save keys (F1 and Ctrl+S) don't work  in Ubuntu Terminal.",
+    "createdAt" : "2015-04-06T14:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Screen flickers on some terminals and slow connections.",
+    "createdAt" : "2015-04-07T13:28:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Add global clipboard",
+    "createdAt" : "2015-04-08T21:35:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Dark line numbers in Ubuntu Terminal",
+    "createdAt" : "2015-04-10T14:39:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Add line number coloring to linelighters.",
+    "createdAt" : "2015-04-26T15:39:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Retain cursor x coordinate when moving vertically.",
+    "createdAt" : "2015-04-26T15:46:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Pasting a single line buffer on multiple lines works incorectly.",
+    "createdAt" : "2015-04-26T15:52:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Non-breaking spaces not shown as whitespace",
+    "createdAt" : "2015-04-27T10:07:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Highlighting isn't reloaded when saving a file with a new extension",
+    "createdAt" : "2015-04-27T10:55:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Ask to close file only if the file has been modified.",
+    "createdAt" : "2015-04-27T16:39:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Add save command (only save as is currently available)",
+    "createdAt" : "2015-04-29T05:27:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Search and replace in all open files",
+    "createdAt" : "2015-04-30T08:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Non UTF-8 files can't be opened",
+    "createdAt" : "2015-04-30T08:11:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Using delete fails when all lines have a cursor at their ends",
+    "createdAt" : "2015-05-02T20:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Don't ask to exit if an empty unsaved and unmodified file is open",
+    "createdAt" : "2015-05-03T00:38:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Tab characters sometimes break line rendering",
+    "createdAt" : "2015-05-03T11:12:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Editor view doesn't scroll when moving multiple cursors out of view",
+    "createdAt" : "2015-05-07T07:36:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Using save command on new file tries to save the file with an empty name.",
+    "createdAt" : "2015-05-15T07:49:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Add more key bindings for python2.",
+    "createdAt" : "2015-05-21T08:06:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Hide keyboard legend in fullscreen mode.",
+    "createdAt" : "2015-05-23T10:09:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Autocomplete support",
+    "createdAt" : "2015-05-23T21:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Make jumping between words also jump to next or previous line when applicable.",
+    "createdAt" : "2015-05-24T13:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "`ctrl+k` doesn't respect `n`/`N` when asking to close file",
+    "createdAt" : "2015-05-25T22:37:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Unsolicited critique",
+    "createdAt" : "2015-05-26T00:30:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "_curses.error",
+    "createdAt" : "2015-05-26T05:50:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Pygments syntax highlighting",
+    "createdAt" : "2015-05-26T06:31:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Use Sphinx notation for documenting parameters/return values etc",
+    "createdAt" : "2015-05-26T13:51:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Refactor App class into smaller components",
+    "createdAt" : "2015-05-26T13:54:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Status bar items from plugins can't be ordered.",
+    "createdAt" : "2015-06-02T13:01:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Trying to open a directory opens an empty file",
+    "createdAt" : "2015-06-09T05:59:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Change #! for cross platform compatibility",
+    "createdAt" : "2015-06-09T21:00:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "suplemon launcher (supl?) script",
+    "createdAt" : "2015-06-09T21:26:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "OS X input handling in prompts doesn't support backspace",
+    "createdAt" : "2015-06-09T21:34:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Add support for Homebrew",
+    "createdAt" : "2015-06-10T18:44:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Implement adding cursors via mouse clicks.",
+    "createdAt" : "2015-06-18T07:26:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Auto hide keyboard shortcuts from status bar ",
+    "createdAt" : "2015-07-20T18:45:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Native clipboard support",
+    "createdAt" : "2015-07-23T12:13:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Using delete at the end of multiple lines behaves incorrectly",
+    "createdAt" : "2015-07-23T13:15:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Installing system-wide",
+    "createdAt" : "2015-07-26T17:49:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Use 'invisibles' setting from textmate theme.",
+    "createdAt" : "2015-07-28T11:46:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Add a copy command and move cut to Ctrl+X",
+    "createdAt" : "2015-08-18T18:57:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Move default configuration into a JSON file.",
+    "createdAt" : "2015-08-18T19:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Config file can't be saved if the config directory is missing.",
+    "createdAt" : "2015-08-28T06:50:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Ctrl + S doesn't seem to be working",
+    "createdAt" : "2015-08-29T12:09:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Pasting text from system clipboard",
+    "createdAt" : "2015-09-02T17:55:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Specify config file via command line.",
+    "createdAt" : "2015-09-04T23:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Openning files with non ASCII characters fails on Python 2.7 and lower",
+    "createdAt" : "2015-09-07T18:30:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Upload Suplemon to pip for easy installing of stable versions",
+    "createdAt" : "2015-09-07T19:33:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Optimize performance on low end devices",
+    "createdAt" : "2015-09-18T20:21:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Input promts don't support special (multi byte) characters",
+    "createdAt" : "2015-09-18T22:05:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Testing discussion/braindump",
+    "createdAt" : "2015-10-04T03:02:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Windows support",
+    "createdAt" : "2015-10-07T09:49:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "'File unwritable' indicator doesn't dissapear when saving under a different filename",
+    "createdAt" : "2015-10-07T13:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Incorrect Keybindings Listed in Program",
+    "createdAt" : "2015-10-25T14:14:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "no support for device type power_supply",
+    "createdAt" : "2016-01-07T03:45:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Feature: Create missing directory when saving a file in a new location.",
+    "createdAt" : "2016-01-17T19:11:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Choose/disable flake8-quotes quote style from editor",
+    "createdAt" : "2016-01-31T16:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Hello | Plugins dir",
+    "createdAt" : "2016-02-08T20:13:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Api editor",
+    "createdAt" : "2016-02-09T14:05:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Make it clear how to disable INFO logs",
+    "createdAt" : "2016-02-14T13:09:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Fix multi-line pygments highlighting",
+    "createdAt" : "2016-02-28T19:33:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Question: Should yes/no promts like exit need pressing enter to accept the value.",
+    "createdAt" : "2016-02-28T20:10:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Show every whitespace chacter at x*tab_width as a indentation marker.",
+    "createdAt" : "2016-02-28T21:38:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Implement read-only viewer.",
+    "createdAt" : "2016-03-01T15:26:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Add contribution guidelines to readme",
+    "createdAt" : "2016-03-08T12:16:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Confirm saving file if its changed after last save and if saving new file under existing name",
+    "createdAt" : "2016-03-08T15:52:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Feature proposal: Collaborative editing",
+    "createdAt" : "2016-03-10T15:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "pypi install - missing submodules and data files",
+    "createdAt" : "2016-03-17T19:44:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Switch to asciimatics?",
+    "createdAt" : "2016-03-20T16:20:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Make more use of curses mouse and key constants",
+    "createdAt" : "2016-03-31T17:33:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "2 Questions",
+    "createdAt" : "2016-04-30T14:27:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "[Rewrite] File tree and Auto close brackets",
+    "createdAt" : "2016-05-07T23:19:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Theme color and copy/paste",
+    "createdAt" : "2016-05-07T23:24:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Feature proposal: Ability to view a diff of the currently open file compared to the file on disk",
+    "createdAt" : "2016-05-08T17:40:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Feature proposal: Use the Sublime Text JSON format for key bindings.",
+    "createdAt" : "2016-05-09T14:41:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "[Rewrite] commands should be compatible with sublime text",
+    "createdAt" : "2016-05-09T14:45:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Show actual key bindings in key legend instead of hard coded defaults",
+    "createdAt" : "2016-05-09T14:47:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Feature proposal: Command abbreviation and Set Multi Cursor with keyboard",
+    "createdAt" : "2016-05-23T00:40:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 148,
+    "title" : "Feature proposal: Wrap text",
+    "createdAt" : "2016-05-23T01:18:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Feature proposal: Terminal",
+    "createdAt" : "2016-05-24T21:52:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Support unmodified Text Mate themes by mapping hex colors to xterm colors",
+    "createdAt" : "2016-05-26T11:57:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Feature proposal: Autocomplete with Open File",
+    "createdAt" : "2016-05-27T19:11:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "comparison to kakoune",
+    "createdAt" : "2016-07-27T08:20:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Add config option to allow inserting hard tabs",
+    "createdAt" : "2016-08-01T14:04:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Can't find newlines (\\n) when regex find isn't enabled",
+    "createdAt" : "2016-08-02T10:53:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 161,
+    "title" : "Future Planning",
+    "createdAt" : "2016-08-04T19:30:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 162,
+    "title" : "Modifier keys in key config must be specified in the correct order.",
+    "createdAt" : "2016-08-05T14:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Key legend only shows default bindings, but not user bindings. ",
+    "createdAt" : "2016-08-08T22:31:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Handle special key combinations (like \"shift+enter\") that curses doesn't understand.",
+    "createdAt" : "2016-08-15T18:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Package Installers",
+    "createdAt" : "2016-08-18T23:59:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Pygments By Default",
+    "createdAt" : "2016-08-24T20:13:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Cursor Support",
+    "createdAt" : "2016-08-24T20:15:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Menu Idea",
+    "createdAt" : "2016-08-27T01:05:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 170,
+    "title" : "Mouse clicks are incorrectly offset when view is horizontally scrolled",
+    "createdAt" : "2016-10-07T18:12:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Add autocomplete to run command prompt",
+    "createdAt" : "2016-10-07T19:38:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "xfce4-terminal: keyboard input of non-english characters doesn't work",
+    "createdAt" : "2016-10-16T18:05:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Feature proposal: Daemon mode",
+    "createdAt" : "2016-12-28T03:29:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Poll: Drop Python 2 support?",
+    "createdAt" : "2017-01-04T19:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Rename?",
+    "createdAt" : "2017-01-29T08:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Errors to close the file",
+    "createdAt" : "2017-02-15T20:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "API design",
+    "createdAt" : "2017-02-25T01:36:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Add #console etc. keywords to repo",
+    "createdAt" : "2017-02-25T06:51:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Capture Ctrl+→ in ssh in tmux session instead of pasting [1;5C ",
+    "createdAt" : "2017-02-27T13:24:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Shift+← to select things",
+    "createdAt" : "2017-04-12T09:11:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Ctrl+Backspace to delete a whole word ?",
+    "createdAt" : "2017-04-12T09:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "_curses.error: addwstr() on Ubuntu 17.04",
+    "createdAt" : "2017-05-01T14:53:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "I keep getting the help screen.",
+    "createdAt" : "2017-07-23T18:18:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Except statement should be narrower (catch exactly what is expected)",
+    "createdAt" : "2017-09-10T21:34:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 194,
+    "title" : "Subfolders",
+    "createdAt" : "2017-09-10T21:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Python idioms",
+    "createdAt" : "2017-09-10T21:47:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "\"suplemon.config - INFO - Failed to load config file\" log on close",
+    "createdAt" : "2017-09-20T12:52:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Invalid cursor position saved",
+    "createdAt" : "2017-09-28T08:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Invalid indentation on paste",
+    "createdAt" : "2017-10-20T12:35:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Use of native methods/functions",
+    "createdAt" : "2017-10-22T18:49:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Refactor Cursor class",
+    "createdAt" : "2017-10-22T18:56:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Implement paste mode that disables auto indent for pasting over SSH",
+    "createdAt" : "2017-10-26T13:50:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Diff/merge features",
+    "createdAt" : "2017-11-02T16:17:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Powerline integration",
+    "createdAt" : "2017-11-02T16:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Documentation for commands.",
+    "createdAt" : "2017-11-03T12:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "[Feature Request] Deduplicate and Title Case commands",
+    "createdAt" : "2017-12-14T16:25:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 213,
+    "title" : "File autocompletion crashes suplemon if the working directory no longer exists.",
+    "createdAt" : "2017-12-27T20:51:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "dev branch?",
+    "createdAt" : "2018-01-03T20:56:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "[Wishlist] History for prompts like open-file (c-o) or search (c-f)",
+    "createdAt" : "2018-01-04T22:46:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 222,
+    "title" : "[Wishlist] Allow open-file (c-o) to create new files",
+    "createdAt" : "2018-01-09T10:04:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "[Rewrite] Context sensitive legend and below or above bottom status line",
+    "createdAt" : "2018-01-09T23:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "[bug] input handling needs some work",
+    "createdAt" : "2018-01-10T01:56:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 225,
+    "title" : "Mention in the docs that we actually have a selection like feature",
+    "createdAt" : "2018-01-11T22:20:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "multiple files like nano?",
+    "createdAt" : "2018-01-12T14:31:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "[Wishlist] in multi cursor mode execute find for each cursor",
+    "createdAt" : "2018-01-12T22:23:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "[Rewrite] Core config handling",
+    "createdAt" : "2018-01-22T23:55:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 231,
+    "title" : "[Wishlist] Mark whitespaces at end of line",
+    "createdAt" : "2018-01-24T10:31:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "希望支持windos平台",
+    "createdAt" : "2018-01-28T15:02:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "[bug] modifying default keybindings not possible",
+    "createdAt" : "2018-02-10T00:00:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "[Wishlist] configuration utility",
+    "createdAt" : "2018-03-08T06:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "[Wishlist] lint module: add command to jump to next lint warning",
+    "createdAt" : "2018-03-08T06:30:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 239,
+    "title" : "Run background threads (e.g. lint) in daemon mode to fix close delay",
+    "createdAt" : "2018-03-08T09:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "What am I missing?",
+    "createdAt" : "2018-03-23T10:49:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Cursors not working over SSH with PuTTY and how to leave help?",
+    "createdAt" : "2018-06-26T15:55:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "[Feature Proposal] Prepopulate autocomplete word list with words relevant to current language",
+    "createdAt" : "2018-07-02T05:55:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Still maintained",
+    "createdAt" : "2019-01-03T12:26:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "AttributeError during Closing",
+    "createdAt" : "2019-03-06T11:02:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "[Feature proposal] Support opening files specifying line",
+    "createdAt" : "2019-03-07T16:08:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Howto exit help?",
+    "createdAt" : "2019-03-28T10:02:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Cursor's move_up method ignores the delta parameter",
+    "createdAt" : "2019-03-31T22:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "pbcopy error message even though xclip is installed",
+    "createdAt" : "2019-05-19T19:10:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Warning about enhanced colors when using linux tty[1-6] console",
+    "createdAt" : "2019-05-19T19:14:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 256,
+    "title" : "[Feature] Scroll without moving cursors",
+    "createdAt" : "2019-06-19T14:12:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 258,
+    "title" : "No syntax highlighting even though pygments is installed",
+    "createdAt" : "2019-10-17T12:53:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 259,
+    "title" : "Show unsaved new files as `untitled` in tab bar.",
+    "createdAt" : "2019-10-24T07:36:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 261,
+    "title" : "Almost working on Windows :)",
+    "createdAt" : "2020-02-24T08:56:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 263,
+    "title" : "Issue with Pygments and alternate file extensions",
+    "createdAt" : "2020-04-07T20:08:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 264,
+    "title" : "Editor doesn't warn when quitting without saving",
+    "createdAt" : "2020-05-04T12:47:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "Removing user key bindings doesn't seem to work on the fly.",
+    "createdAt" : "2020-06-04T07:51:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 268,
+    "title" : "Limited Syntax Highlighting for certain languages like C , C++ , CSS",
+    "createdAt" : "2021-03-26T10:30:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 269,
+    "title" : "Exception: 'NoneType' object has no attribute 'getmaxyx'",
+    "createdAt" : "2021-05-03T11:54:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 270,
+    "title" : "Proposing a PR to fix a few small typos",
+    "createdAt" : "2021-05-20T19:20:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 273,
+    "title" : "Features requests / problems",
+    "createdAt" : "2021-12-30T15:13:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 274,
+    "title" : "Suplemon is not able to open big files (>1MB)",
+    "createdAt" : "2022-01-22T08:10:20Z",
+    "state" : "OPEN"
+  } ]
+}

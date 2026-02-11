@@ -13,6 +13,7 @@ import model.writable.CombinedData;
 import model.writable.GitHubData;
 import model.writable.Proof;
 import model.writable.Proof.LinterWithProof;
+import util.Constants;
 
 import java.io.File;
 import java.io.IOException;
@@ -85,7 +86,11 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         //create folder
         GroupType groupType = combinedData.cemProject().groupType();
-        String folderName = "mixed.effects.models" + separator + "data" + separator + "time_series" + separator + groupType.name().toLowerCase();
+        String folderName = "mixed.effects.models"
+                + separator + "data"
+                + separator + Constants.CURRENT_LANGUAGE.name().toLowerCase()
+                + separator + "time_series"
+                + separator + groupType.name().toLowerCase();
         new File(folderName).mkdirs();
 
         // Connect linter commits with proofs
@@ -133,7 +138,9 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         // Create file
         File dataFile = new File(folderName + separator + id + ".csv");
-        dataFile.createNewFile();
+        if (!dataFile.createNewFile()) {
+            return;
+        }
 
         // Write into file
         try (PrintWriter pw = new PrintWriter(dataFile)) {

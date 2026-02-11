@@ -6,12 +6,15 @@ import jakarta.inject.Inject;
 import model.writable.CemProject;
 import model.writable.CemProjectPair;
 import model.writable.Proof;
+import util.Constants;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.io.File.separator;
 
 public class CemPairCsvCreator implements CsvCreator {
 
@@ -45,10 +48,15 @@ public class CemPairCsvCreator implements CsvCreator {
 
     private void createFile(String string, List<CemProject> cemProjects) throws IOException {
         //create file
-        String folderName = "mixed.effects.models" + File.separator + "data" + File.separator + "cem_projects";
+        String folderName = "mixed.effects.models"
+                + separator + "data"
+                + separator + Constants.CURRENT_LANGUAGE.name().toLowerCase()
+                + separator + "cem_projects";
         new File(folderName).mkdirs();
-        File dataFile = new File(folderName + File.separator + string + ".csv");
-        dataFile.createNewFile();
+        File dataFile = new File(folderName + separator + string + ".csv");
+        if (!dataFile.createNewFile()) {
+            return;
+        }
 
         try (PrintWriter pw = new PrintWriter(dataFile)) {
             pw.println("id" + "," +

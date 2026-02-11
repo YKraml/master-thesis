@@ -1,0 +1,762 @@
+{
+  "repoOwner" : "Krukov",
+  "repoName" : "cashews",
+  "forks" : [ {
+    "createdAt" : "2021-02-11T21:31:33Z"
+  }, {
+    "createdAt" : "2022-01-07T01:33:43Z"
+  }, {
+    "createdAt" : "2022-04-04T20:53:07Z"
+  }, {
+    "createdAt" : "2022-05-07T19:39:29Z"
+  }, {
+    "createdAt" : "2022-06-06T11:50:47Z"
+  }, {
+    "createdAt" : "2022-07-30T17:50:56Z"
+  }, {
+    "createdAt" : "2022-08-07T14:54:14Z"
+  }, {
+    "createdAt" : "2022-09-03T03:10:06Z"
+  }, {
+    "createdAt" : "2022-10-13T17:20:25Z"
+  }, {
+    "createdAt" : "2022-10-27T17:04:47Z"
+  }, {
+    "createdAt" : "2022-11-02T21:35:30Z"
+  }, {
+    "createdAt" : "2023-05-30T15:21:18Z"
+  }, {
+    "createdAt" : "2023-07-01T11:13:03Z"
+  }, {
+    "createdAt" : "2023-09-12T03:02:01Z"
+  }, {
+    "createdAt" : "2023-11-30T12:07:01Z"
+  }, {
+    "createdAt" : "2024-01-31T18:15:27Z"
+  }, {
+    "createdAt" : "2024-02-26T12:46:56Z"
+  }, {
+    "createdAt" : "2024-03-19T22:30:54Z"
+  }, {
+    "createdAt" : "2024-05-08T12:42:59Z"
+  }, {
+    "createdAt" : "2024-05-13T14:29:27Z"
+  }, {
+    "createdAt" : "2024-08-15T19:36:13Z"
+  }, {
+    "createdAt" : "2024-09-07T04:41:19Z"
+  }, {
+    "createdAt" : "2024-09-07T18:23:00Z"
+  }, {
+    "createdAt" : "2024-09-18T13:09:07Z"
+  }, {
+    "createdAt" : "2024-10-25T02:46:15Z"
+  }, {
+    "createdAt" : "2025-02-28T05:17:22Z"
+  }, {
+    "createdAt" : "2025-05-02T17:26:47Z"
+  }, {
+    "createdAt" : "2025-05-18T11:28:41Z"
+  }, {
+    "createdAt" : "2025-07-15T17:28:35Z"
+  }, {
+    "createdAt" : "2025-07-24T14:41:30Z"
+  }, {
+    "createdAt" : "2025-08-22T08:33:33Z"
+  }, {
+    "createdAt" : "2025-09-01T17:50:37Z"
+  }, {
+    "createdAt" : "2025-09-19T17:48:18Z"
+  }, {
+    "createdAt" : "2025-10-03T18:55:51Z"
+  }, {
+    "createdAt" : "2025-10-21T14:31:25Z"
+  }, {
+    "createdAt" : "2025-11-11T16:40:50Z"
+  }, {
+    "createdAt" : "2025-11-15T15:39:43Z"
+  }, {
+    "createdAt" : "2026-01-13T08:01:14Z"
+  } ],
+  "issues" : [ {
+    "number" : 7,
+    "title" : "futurecoder",
+    "createdAt" : "2021-02-06T12:25:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Add licensing info",
+    "createdAt" : "2021-11-17T10:02:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Support for rediss TLS",
+    "createdAt" : "2022-01-07T00:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Support soft ttl",
+    "createdAt" : "2022-01-07T23:51:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Migration of aiocache RedLock",
+    "createdAt" : "2022-01-20T20:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "`client_side=True` in setup adds always prefix \"cashews:\" to key",
+    "createdAt" : "2022-01-20T23:21:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "'cache.incr' and 'cache.keys_match' API commands examples from documentation do not work",
+    "createdAt" : "2022-01-31T14:19:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Case sensitive keys (do not convert silently all string arguments to lowercase by default)",
+    "createdAt" : "2022-01-31T15:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Add `noself=True` parameter (equivalent to \"aiocache\" package)",
+    "createdAt" : "2022-01-31T16:11:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Minor code clean up",
+    "createdAt" : "2022-02-04T21:52:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "docs: add a note that '@cache.locked' must be used in chain with '@cache'",
+    "createdAt" : "2022-02-08T09:49:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "fix: functions without parameters are not cached",
+    "createdAt" : "2022-02-10T22:40:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "fix: functions without 'return' are not cached",
+    "createdAt" : "2022-02-10T22:45:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Can't use decorators with \"partialed\" functions",
+    "createdAt" : "2022-02-11T21:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "fix: wrong type hinting and redundant 'kwargs' in '_Redis.get()'",
+    "createdAt" : "2022-02-14T16:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "fix: passed 'args' and 'kwargs' are not considered when building a cache key",
+    "createdAt" : "2022-02-16T19:29:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "fix: client side cahe always thinks that `None` value is already in cache",
+    "createdAt" : "2022-02-19T15:20:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "fix: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbd in position 2: invalid start byte",
+    "createdAt" : "2022-02-22T09:38:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "feat: migrate from 'aioredis-py' to 'redis-py'",
+    "createdAt" : "2022-02-25T11:25:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "UnSecureDataError when reading JSON value",
+    "createdAt" : "2022-03-09T08:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "invalidate cache by key",
+    "createdAt" : "2022-04-13T13:39:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Method get() doesn't deserialize data after set_raw()",
+    "createdAt" : "2022-05-05T16:06:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Add contributions guidelines and how to run tests",
+    "createdAt" : "2022-05-05T17:17:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Method keys_match() returns different keys types for Redis and memory",
+    "createdAt" : "2022-05-06T12:35:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "`*args` support is broken: only strings are supported as `*args`",
+    "createdAt" : "2022-05-09T18:37:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Typing support ",
+    "createdAt" : "2022-05-09T19:35:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Use \"Faker\" package in tests",
+    "createdAt" : "2022-05-14T09:49:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Improve tests: conditional expect a test to fail for specific Redis versions",
+    "createdAt" : "2022-05-15T18:57:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Use 1 (the same) connection for pubsub and get client id for client side cache invalidation mechanism",
+    "createdAt" : "2022-05-16T00:55:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "get_many doesn't work with several backends",
+    "createdAt" : "2022-05-18T15:06:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Error on decoding value with underscore",
+    "createdAt" : "2022-05-18T20:20:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Use dill instead of pickle for data serialization in redis ",
+    "createdAt" : "2022-06-19T18:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "size and key of in memory cache",
+    "createdAt" : "2022-06-22T17:30:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Cache with performance condition ",
+    "createdAt" : "2022-06-29T06:31:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "sqlalchemy object caching issue",
+    "createdAt" : "2022-07-23T17:52:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Check backend setup ",
+    "createdAt" : "2022-07-29T01:07:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Implement set_many function",
+    "createdAt" : "2022-08-06T07:09:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Connecting Redis on Kubernetes with backend using cashews",
+    "createdAt" : "2022-08-22T00:05:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "High increasing load on the CPU",
+    "createdAt" : "2022-09-14T09:22:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Enable \"pre-commit\" bot to bump linters versions automatically",
+    "createdAt" : "2022-09-14T15:05:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Improve basic api with external  exceptions in case of any Backend errors ",
+    "createdAt" : "2022-09-17T12:18:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Update README with migration notes: simple decorator usage is broken after `NotConfiguredError` introducing",
+    "createdAt" : "2022-11-17T21:43:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "How to cache StreamingResponse/Generator?",
+    "createdAt" : "2022-12-01T10:20:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Alias/tags for cache keys for invalidation",
+    "createdAt" : "2023-02-04T16:50:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Transaction for cache changes",
+    "createdAt" : "2023-02-04T17:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "auto strategy to cache",
+    "createdAt" : "2023-02-07T00:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Disabling cache doesn’t work reliably in tests",
+    "createdAt" : "2023-02-09T12:55:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Cache `bytes` more efficient ",
+    "createdAt" : "2023-02-22T23:01:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "lock performance",
+    "createdAt" : "2023-03-03T07:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Invalid register tag with optional arguments",
+    "createdAt" : "2023-03-26T10:24:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Not support redis unix socket ",
+    "createdAt" : "2023-03-29T13:28:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Error when delete tags the cache before caching itself",
+    "createdAt" : "2023-04-03T07:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "TTL type annotation ",
+    "createdAt" : "2023-04-04T22:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Key template doesnt work correctly with class methods",
+    "createdAt" : "2023-05-01T16:58:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Get keys number ",
+    "createdAt" : "2023-05-21T17:47:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Allow cache exceptions aka. \"white exceptions\"",
+    "createdAt" : "2023-05-30T15:08:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Current implementation of `thunder_protection` may cause \"Future exception was never retrieved\" warning",
+    "createdAt" : "2023-05-30T15:14:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Add More contrib modules",
+    "createdAt" : "2023-06-04T19:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Pass cache result into ttl function",
+    "createdAt" : "2023-06-05T16:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Timeout and Cancelled errors",
+    "createdAt" : "2023-06-05T17:23:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Utilizing Functions as Key Generators",
+    "createdAt" : "2023-07-11T14:28:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "[Migration] [User experience] An exception must be raised if `cache.setup()` was not called",
+    "createdAt" : "2023-08-03T11:03:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "[removed by author]",
+    "createdAt" : "2023-08-12T15:42:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "A wrong exception is raised when `prefix` from the setup does not match a prefix in a passed `key`",
+    "createdAt" : "2023-08-22T10:35:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Is the `cache-control` header set?",
+    "createdAt" : "2023-09-01T19:01:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "'coroutine' object has no attribute 'execute_command' - Client Side Caching",
+    "createdAt" : "2023-09-06T14:03:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Does cashews need handle `IndexError` in `handle_message` in \"redis/asyncio/client.py\"?",
+    "createdAt" : "2023-09-21T09:21:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "AttributeError: 'Redis' object has no attribute '_client'",
+    "createdAt" : "2023-10-10T22:11:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "\"No connection available\" errors with redis-py 5.0.1",
+    "createdAt" : "2023-10-11T00:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Middleware to add \"X-From-Cache\" in response header throws AttributeError",
+    "createdAt" : "2023-11-08T12:02:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Unable to disable cache by providing \"enable=0\" or \"disable=1\" in cache setup",
+    "createdAt" : "2023-11-08T15:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Improve docs",
+    "createdAt" : "2023-11-19T12:47:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Templated tags with None values throw TagNotRegisteredError",
+    "createdAt" : "2023-11-30T12:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "'cache' is not declared in __all__ ",
+    "createdAt" : "2023-12-18T12:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Provision to skip caching immediately if not able to make connection with Redis",
+    "createdAt" : "2023-12-20T14:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Not working with GCP MemmoryStore (Redis) - unknown command 'CLIENT'",
+    "createdAt" : "2024-01-02T05:05:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Getting TagNotRegisteredError when my key have special characters (Using custom decorator)",
+    "createdAt" : "2024-01-03T14:22:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Key template context ",
+    "createdAt" : "2024-01-05T13:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "TypeErrors when using CacheEtagMiddleware",
+    "createdAt" : "2024-01-09T22:22:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Support for non async code ( synchronous ) ",
+    "createdAt" : "2024-01-22T23:20:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 195,
+    "title" : "CacheEtagMiddleware breaks with redis client_side cache",
+    "createdAt" : "2024-01-23T10:39:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Counter in Cache condition",
+    "createdAt" : "2024-01-30T13:31:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 198,
+    "title" : "cache_control_ttl is undocumented",
+    "createdAt" : "2024-01-31T15:08:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 199,
+    "title" : "Documenting with sphinx?",
+    "createdAt" : "2024-01-31T15:20:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 200,
+    "title" : "ValueError: Duplicated timeseries in CollectorRegistry",
+    "createdAt" : "2024-02-05T15:47:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "early_ttl not working in combination with CacheEtagMiddleware",
+    "createdAt" : "2024-02-07T20:53:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Gracefully close a connection pool with redis > 5.0.1",
+    "createdAt" : "2024-03-01T08:19:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Cannot close Redis connection - AttributeError: 'Redis' object has no attribute '_client'",
+    "createdAt" : "2024-03-12T22:20:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Cache doesn't work with GZIPMiddleware",
+    "createdAt" : "2024-03-15T09:45:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "JSON serializer",
+    "createdAt" : "2024-03-23T11:37:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Early cache with sqlalchemy & fastapi depend (sqlalchemy.exc.IllegalStateChangeError: Method 'close()' can't be called here; method '_connection_for_bind()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5>)",
+    "createdAt" : "2024-04-09T19:41:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Formatter Called with Formatted Value",
+    "createdAt" : "2024-04-22T14:57:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 218,
+    "title" : "CacheRequestControlMiddleware: Backend not found exception with non-default cache prefix",
+    "createdAt" : "2024-05-06T09:12:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "cache_control_ttl can't be used directly with cache api",
+    "createdAt" : "2024-05-06T15:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "thunder_protection with multiple event loops breaks",
+    "createdAt" : "2024-05-08T12:59:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "re.error: bad character in group name when using custom formatter in a tag",
+    "createdAt" : "2024-05-11T03:43:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Unhandled exception when there are only backends with prefixes",
+    "createdAt" : "2024-05-16T09:04:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Feature: Get or set",
+    "createdAt" : "2024-05-17T12:19:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "_empty and _empty_in_redis marker objects leak",
+    "createdAt" : "2024-05-21T18:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Redis Client Side Connection Timeout",
+    "createdAt" : "2024-06-07T13:10:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Interrupted `StreamingResponse` will cache partial response",
+    "createdAt" : "2024-07-13T01:08:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "The `add_prefix` middleware didn't consider `delete_many`",
+    "createdAt" : "2024-07-26T04:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Problem with codecov",
+    "createdAt" : "2024-08-12T19:59:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "valkeys backend",
+    "createdAt" : "2024-08-13T21:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Early caching unexpected behavior: Altered keys breaking other api calls",
+    "createdAt" : "2024-08-20T14:30:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 266,
+    "title" : "TypeError: cannot pickle 'coroutine' object when using async def as default argument in get_or_set",
+    "createdAt" : "2024-08-22T20:05:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Performance issue",
+    "createdAt" : "2024-09-10T00:42:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "RESP3 Support",
+    "createdAt" : "2024-09-27T09:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "CacheEtagMiddleware sometimes does not work with early_ttl",
+    "createdAt" : "2024-09-29T23:35:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "cache.invalidate(key) doesn't remove corresponded etag records",
+    "createdAt" : "2024-10-09T09:13:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 297,
+    "title" : "IndexError: list index out of range",
+    "createdAt" : "2024-10-30T15:06:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "Support for data compression (gzip)",
+    "createdAt" : "2024-11-06T03:44:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 302,
+    "title" : "TestFailed: test_long_running_transaction failed on python3.11",
+    "createdAt" : "2024-11-10T03:48:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "Redis unix socket",
+    "createdAt" : "2024-12-14T15:52:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Fix ETag Handling to Conform with HTTP Standard (Add Double Quotes)",
+    "createdAt" : "2024-12-26T16:49:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Decoding of streaming response fails if the response contains headers with colons.",
+    "createdAt" : "2025-01-14T15:11:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Locking with wait=True and separate decorator doesn't actually work",
+    "createdAt" : "2025-02-22T22:14:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Locking in multiple concurrent processes can cause hitting redis repeatedly",
+    "createdAt" : "2025-02-22T22:52:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 339,
+    "title" : "How to get function name in custom cache key",
+    "createdAt" : "2025-04-04T05:15:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "how to set ttl to forever",
+    "createdAt" : "2025-04-04T10:52:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Error executing command",
+    "createdAt" : "2025-06-09T11:17:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "`xxhash` for digestmod?",
+    "createdAt" : "2025-06-09T23:58:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 352,
+    "title" : "`_decode_dict` assumes dict keys' support for `+ str` operation",
+    "createdAt" : "2025-07-17T22:04:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "does cashews support redis cluster mode?",
+    "createdAt" : "2025-09-03T07:19:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 380,
+    "title" : "Issue With Thunder Protection",
+    "createdAt" : "2025-10-08T21:19:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "What happened to cashews-7.4.2?",
+    "createdAt" : "2025-10-10T07:32:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "LookupError when using cache decorator across async/thread boundaries in 7.4.2",
+    "createdAt" : "2025-10-10T09:56:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Cache detector overcomes boundaries of instances",
+    "createdAt" : "2025-11-10T06:28:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 392,
+    "title" : "Version 7.4.3 `LookupError` when using cashews with FastAPI's lifespan context manager.",
+    "createdAt" : "2025-11-11T16:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 395,
+    "title" : "Redis regression between versions 7.4.1 and 7.4.3",
+    "createdAt" : "2025-11-21T11:02:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Tags fail with nested attributes in cache key templates",
+    "createdAt" : "2025-12-02T12:17:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Document disk cache's size_limit",
+    "createdAt" : "2025-12-17T08:00:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "If we use cache with lock=True, it will calculate the key 3 times, one for the lock, other for thunder_protection and another for the cache itself. Shouldn't this be only once?",
+    "createdAt" : "2025-12-18T22:13:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 411,
+    "title" : "`CacheEtagMiddleware` might leak information about cached data",
+    "createdAt" : "2026-01-13T14:46:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 413,
+    "title" : "`disable=True` gets reset",
+    "createdAt" : "2026-01-22T15:31:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 414,
+    "title" : "Support for Valkey - Valkey backend",
+    "createdAt" : "2026-01-26T11:02:52Z",
+    "state" : "OPEN"
+  } ]
+}

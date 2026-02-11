@@ -1,0 +1,4996 @@
+{
+  "repoOwner" : "theupdateframework",
+  "repoName" : "python-tuf",
+  "forks" : [ {
+    "createdAt" : "2013-06-25T19:37:05Z"
+  }, {
+    "createdAt" : "2013-07-22T20:00:16Z"
+  }, {
+    "createdAt" : "2013-09-03T22:08:08Z"
+  }, {
+    "createdAt" : "2013-09-03T22:08:36Z"
+  }, {
+    "createdAt" : "2013-09-03T22:11:07Z"
+  }, {
+    "createdAt" : "2013-09-03T22:12:16Z"
+  }, {
+    "createdAt" : "2013-09-03T22:18:35Z"
+  }, {
+    "createdAt" : "2013-09-03T23:01:02Z"
+  }, {
+    "createdAt" : "2013-09-05T17:23:21Z"
+  }, {
+    "createdAt" : "2013-10-01T23:23:08Z"
+  }, {
+    "createdAt" : "2013-10-30T18:51:10Z"
+  }, {
+    "createdAt" : "2013-11-01T20:02:13Z"
+  }, {
+    "createdAt" : "2013-11-18T02:29:12Z"
+  }, {
+    "createdAt" : "2013-12-03T16:09:38Z"
+  }, {
+    "createdAt" : "2013-12-10T07:03:27Z"
+  }, {
+    "createdAt" : "2014-01-18T11:54:29Z"
+  }, {
+    "createdAt" : "2014-03-06T13:03:12Z"
+  }, {
+    "createdAt" : "2014-06-19T16:02:04Z"
+  }, {
+    "createdAt" : "2014-06-30T19:05:18Z"
+  }, {
+    "createdAt" : "2014-08-19T20:28:18Z"
+  }, {
+    "createdAt" : "2014-09-06T17:19:04Z"
+  }, {
+    "createdAt" : "2015-01-02T13:30:29Z"
+  }, {
+    "createdAt" : "2015-01-30T15:32:44Z"
+  }, {
+    "createdAt" : "2015-04-10T16:06:04Z"
+  }, {
+    "createdAt" : "2015-04-18T23:39:02Z"
+  }, {
+    "createdAt" : "2015-05-27T22:09:40Z"
+  }, {
+    "createdAt" : "2015-07-21T09:05:56Z"
+  }, {
+    "createdAt" : "2015-08-15T14:28:36Z"
+  }, {
+    "createdAt" : "2015-10-02T15:43:33Z"
+  }, {
+    "createdAt" : "2015-10-03T13:36:13Z"
+  }, {
+    "createdAt" : "2015-10-10T09:27:22Z"
+  }, {
+    "createdAt" : "2015-11-06T06:51:09Z"
+  }, {
+    "createdAt" : "2015-11-10T16:02:54Z"
+  }, {
+    "createdAt" : "2015-12-29T12:35:34Z"
+  }, {
+    "createdAt" : "2016-02-22T22:11:07Z"
+  }, {
+    "createdAt" : "2016-03-01T03:40:28Z"
+  }, {
+    "createdAt" : "2016-03-16T14:58:28Z"
+  }, {
+    "createdAt" : "2016-03-29T07:47:08Z"
+  }, {
+    "createdAt" : "2016-05-08T12:33:51Z"
+  }, {
+    "createdAt" : "2016-05-31T15:50:24Z"
+  }, {
+    "createdAt" : "2016-05-31T21:07:54Z"
+  }, {
+    "createdAt" : "2016-06-06T15:21:02Z"
+  }, {
+    "createdAt" : "2016-07-13T18:39:13Z"
+  }, {
+    "createdAt" : "2016-08-08T15:19:22Z"
+  }, {
+    "createdAt" : "2016-08-09T18:06:41Z"
+  }, {
+    "createdAt" : "2016-08-10T02:40:59Z"
+  }, {
+    "createdAt" : "2016-08-31T16:38:55Z"
+  }, {
+    "createdAt" : "2016-09-06T11:05:33Z"
+  }, {
+    "createdAt" : "2016-10-13T15:43:48Z"
+  }, {
+    "createdAt" : "2016-10-21T21:43:34Z"
+  }, {
+    "createdAt" : "2016-12-17T21:26:23Z"
+  }, {
+    "createdAt" : "2017-02-28T09:52:54Z"
+  }, {
+    "createdAt" : "2017-03-15T10:08:23Z"
+  }, {
+    "createdAt" : "2017-04-07T11:01:16Z"
+  }, {
+    "createdAt" : "2017-04-10T06:03:53Z"
+  }, {
+    "createdAt" : "2017-05-12T12:31:35Z"
+  }, {
+    "createdAt" : "2017-05-17T20:19:19Z"
+  }, {
+    "createdAt" : "2017-05-18T15:53:05Z"
+  }, {
+    "createdAt" : "2017-07-06T09:49:40Z"
+  }, {
+    "createdAt" : "2017-07-24T15:53:41Z"
+  }, {
+    "createdAt" : "2017-07-28T15:55:11Z"
+  }, {
+    "createdAt" : "2017-08-30T13:31:52Z"
+  }, {
+    "createdAt" : "2017-10-01T04:23:13Z"
+  }, {
+    "createdAt" : "2017-10-20T15:21:29Z"
+  }, {
+    "createdAt" : "2017-10-24T16:15:25Z"
+  }, {
+    "createdAt" : "2017-10-31T21:57:49Z"
+  }, {
+    "createdAt" : "2017-11-03T02:44:44Z"
+  }, {
+    "createdAt" : "2017-11-16T22:58:31Z"
+  }, {
+    "createdAt" : "2017-11-18T14:53:37Z"
+  }, {
+    "createdAt" : "2017-12-16T16:34:48Z"
+  }, {
+    "createdAt" : "2017-12-16T16:34:53Z"
+  }, {
+    "createdAt" : "2017-12-22T18:27:56Z"
+  }, {
+    "createdAt" : "2018-01-18T08:53:56Z"
+  }, {
+    "createdAt" : "2018-02-02T08:05:27Z"
+  }, {
+    "createdAt" : "2018-03-02T19:10:50Z"
+  }, {
+    "createdAt" : "2018-03-11T20:00:54Z"
+  }, {
+    "createdAt" : "2018-03-24T00:14:44Z"
+  }, {
+    "createdAt" : "2018-03-31T16:34:57Z"
+  }, {
+    "createdAt" : "2018-04-06T15:06:12Z"
+  }, {
+    "createdAt" : "2018-04-07T15:48:37Z"
+  }, {
+    "createdAt" : "2018-04-09T08:29:08Z"
+  }, {
+    "createdAt" : "2018-05-10T01:13:54Z"
+  }, {
+    "createdAt" : "2018-08-07T22:29:54Z"
+  }, {
+    "createdAt" : "2018-09-03T06:43:23Z"
+  }, {
+    "createdAt" : "2018-09-05T19:25:25Z"
+  }, {
+    "createdAt" : "2018-09-10T01:08:14Z"
+  }, {
+    "createdAt" : "2018-09-14T11:52:13Z"
+  }, {
+    "createdAt" : "2018-10-19T06:42:56Z"
+  }, {
+    "createdAt" : "2018-11-02T21:42:58Z"
+  }, {
+    "createdAt" : "2018-11-15T10:26:54Z"
+  }, {
+    "createdAt" : "2018-12-07T05:52:02Z"
+  }, {
+    "createdAt" : "2019-01-06T01:15:55Z"
+  }, {
+    "createdAt" : "2019-01-29T10:37:41Z"
+  }, {
+    "createdAt" : "2019-02-03T22:01:59Z"
+  }, {
+    "createdAt" : "2019-02-17T10:21:06Z"
+  }, {
+    "createdAt" : "2019-02-23T15:57:32Z"
+  }, {
+    "createdAt" : "2019-02-25T06:56:59Z"
+  }, {
+    "createdAt" : "2019-03-09T04:44:11Z"
+  }, {
+    "createdAt" : "2019-04-05T15:00:36Z"
+  }, {
+    "createdAt" : "2019-04-30T01:58:49Z"
+  }, {
+    "createdAt" : "2019-05-08T15:59:46Z"
+  }, {
+    "createdAt" : "2019-05-11T05:11:44Z"
+  }, {
+    "createdAt" : "2019-05-13T00:30:05Z"
+  }, {
+    "createdAt" : "2019-05-18T04:54:27Z"
+  }, {
+    "createdAt" : "2019-05-25T07:39:55Z"
+  }, {
+    "createdAt" : "2019-06-03T17:09:05Z"
+  }, {
+    "createdAt" : "2019-07-09T05:41:23Z"
+  }, {
+    "createdAt" : "2019-08-15T13:53:03Z"
+  }, {
+    "createdAt" : "2019-09-06T16:33:37Z"
+  }, {
+    "createdAt" : "2019-09-11T01:47:58Z"
+  }, {
+    "createdAt" : "2019-09-13T11:19:52Z"
+  }, {
+    "createdAt" : "2019-10-14T21:22:10Z"
+  }, {
+    "createdAt" : "2019-10-22T22:06:54Z"
+  }, {
+    "createdAt" : "2019-11-26T19:17:21Z"
+  }, {
+    "createdAt" : "2019-12-17T12:08:01Z"
+  }, {
+    "createdAt" : "2019-12-23T01:12:51Z"
+  }, {
+    "createdAt" : "2019-12-23T13:39:23Z"
+  }, {
+    "createdAt" : "2019-12-24T04:51:32Z"
+  }, {
+    "createdAt" : "2020-01-01T15:18:28Z"
+  }, {
+    "createdAt" : "2020-01-01T18:11:48Z"
+  }, {
+    "createdAt" : "2020-01-08T09:42:46Z"
+  }, {
+    "createdAt" : "2020-02-12T05:01:09Z"
+  }, {
+    "createdAt" : "2020-02-13T11:35:47Z"
+  }, {
+    "createdAt" : "2020-02-18T09:13:27Z"
+  }, {
+    "createdAt" : "2020-03-06T09:38:40Z"
+  }, {
+    "createdAt" : "2020-03-10T07:48:56Z"
+  }, {
+    "createdAt" : "2020-03-18T19:19:40Z"
+  }, {
+    "createdAt" : "2020-03-19T09:15:49Z"
+  }, {
+    "createdAt" : "2020-03-28T14:28:53Z"
+  }, {
+    "createdAt" : "2020-04-17T09:46:21Z"
+  }, {
+    "createdAt" : "2020-05-12T07:55:11Z"
+  }, {
+    "createdAt" : "2020-05-19T07:45:19Z"
+  }, {
+    "createdAt" : "2020-05-28T18:50:03Z"
+  }, {
+    "createdAt" : "2020-06-03T11:11:17Z"
+  }, {
+    "createdAt" : "2020-06-17T07:37:15Z"
+  }, {
+    "createdAt" : "2020-07-03T07:16:43Z"
+  }, {
+    "createdAt" : "2020-07-27T11:55:00Z"
+  }, {
+    "createdAt" : "2020-07-30T03:11:19Z"
+  }, {
+    "createdAt" : "2020-08-12T07:55:42Z"
+  }, {
+    "createdAt" : "2020-08-17T07:57:09Z"
+  }, {
+    "createdAt" : "2020-10-19T12:31:46Z"
+  }, {
+    "createdAt" : "2020-11-03T07:30:16Z"
+  }, {
+    "createdAt" : "2020-11-13T18:59:00Z"
+  }, {
+    "createdAt" : "2020-12-28T09:05:01Z"
+  }, {
+    "createdAt" : "2021-01-27T17:14:19Z"
+  }, {
+    "createdAt" : "2021-02-01T11:07:21Z"
+  }, {
+    "createdAt" : "2021-02-10T19:29:43Z"
+  }, {
+    "createdAt" : "2021-02-18T09:16:44Z"
+  }, {
+    "createdAt" : "2021-03-19T19:53:04Z"
+  }, {
+    "createdAt" : "2021-03-27T15:52:45Z"
+  }, {
+    "createdAt" : "2021-03-30T08:28:10Z"
+  }, {
+    "createdAt" : "2021-03-31T12:34:31Z"
+  }, {
+    "createdAt" : "2021-04-01T06:49:08Z"
+  }, {
+    "createdAt" : "2021-04-05T20:13:36Z"
+  }, {
+    "createdAt" : "2021-04-06T13:44:12Z"
+  }, {
+    "createdAt" : "2021-04-16T17:37:08Z"
+  }, {
+    "createdAt" : "2021-04-20T16:41:48Z"
+  }, {
+    "createdAt" : "2021-04-22T15:45:35Z"
+  }, {
+    "createdAt" : "2021-05-02T03:33:30Z"
+  }, {
+    "createdAt" : "2021-05-24T22:28:52Z"
+  }, {
+    "createdAt" : "2021-05-31T11:55:21Z"
+  }, {
+    "createdAt" : "2021-06-17T07:49:00Z"
+  }, {
+    "createdAt" : "2021-06-28T12:27:16Z"
+  }, {
+    "createdAt" : "2021-06-29T08:34:35Z"
+  }, {
+    "createdAt" : "2021-06-30T10:30:18Z"
+  }, {
+    "createdAt" : "2021-07-01T16:15:02Z"
+  }, {
+    "createdAt" : "2021-07-05T11:45:16Z"
+  }, {
+    "createdAt" : "2021-07-24T21:35:24Z"
+  }, {
+    "createdAt" : "2021-08-21T09:34:18Z"
+  }, {
+    "createdAt" : "2021-08-25T03:03:06Z"
+  }, {
+    "createdAt" : "2021-08-28T16:09:47Z"
+  }, {
+    "createdAt" : "2021-08-29T14:26:17Z"
+  }, {
+    "createdAt" : "2021-09-02T11:42:59Z"
+  }, {
+    "createdAt" : "2021-09-23T22:27:43Z"
+  }, {
+    "createdAt" : "2021-09-26T14:29:48Z"
+  }, {
+    "createdAt" : "2021-10-07T19:05:22Z"
+  }, {
+    "createdAt" : "2021-10-08T13:01:40Z"
+  }, {
+    "createdAt" : "2021-11-01T13:29:07Z"
+  }, {
+    "createdAt" : "2021-11-02T14:20:44Z"
+  }, {
+    "createdAt" : "2021-11-08T05:53:45Z"
+  }, {
+    "createdAt" : "2021-11-11T00:32:04Z"
+  }, {
+    "createdAt" : "2021-11-11T13:19:12Z"
+  }, {
+    "createdAt" : "2021-11-17T22:56:26Z"
+  }, {
+    "createdAt" : "2021-12-28T12:52:28Z"
+  }, {
+    "createdAt" : "2021-12-29T02:49:16Z"
+  }, {
+    "createdAt" : "2022-01-26T21:21:44Z"
+  }, {
+    "createdAt" : "2022-01-30T14:50:23Z"
+  }, {
+    "createdAt" : "2022-02-25T01:49:51Z"
+  }, {
+    "createdAt" : "2022-03-03T23:04:06Z"
+  }, {
+    "createdAt" : "2022-03-24T12:57:48Z"
+  }, {
+    "createdAt" : "2022-04-07T07:43:47Z"
+  }, {
+    "createdAt" : "2022-04-11T17:00:12Z"
+  }, {
+    "createdAt" : "2022-04-13T01:13:25Z"
+  }, {
+    "createdAt" : "2022-04-15T00:01:06Z"
+  }, {
+    "createdAt" : "2022-04-24T20:09:50Z"
+  }, {
+    "createdAt" : "2022-04-28T19:47:52Z"
+  }, {
+    "createdAt" : "2022-05-07T10:31:14Z"
+  }, {
+    "createdAt" : "2022-07-05T13:12:48Z"
+  }, {
+    "createdAt" : "2022-07-15T12:16:16Z"
+  }, {
+    "createdAt" : "2022-07-20T13:18:39Z"
+  }, {
+    "createdAt" : "2022-08-11T17:36:31Z"
+  }, {
+    "createdAt" : "2022-09-13T05:51:53Z"
+  }, {
+    "createdAt" : "2022-09-18T15:47:41Z"
+  }, {
+    "createdAt" : "2022-10-12T10:33:56Z"
+  }, {
+    "createdAt" : "2022-10-14T12:14:21Z"
+  }, {
+    "createdAt" : "2022-10-24T07:43:32Z"
+  }, {
+    "createdAt" : "2022-10-25T17:00:13Z"
+  }, {
+    "createdAt" : "2022-10-29T13:47:45Z"
+  }, {
+    "createdAt" : "2022-10-29T15:01:52Z"
+  }, {
+    "createdAt" : "2022-11-01T17:05:19Z"
+  }, {
+    "createdAt" : "2022-11-05T22:41:09Z"
+  }, {
+    "createdAt" : "2022-11-06T09:14:03Z"
+  }, {
+    "createdAt" : "2022-11-10T05:17:46Z"
+  }, {
+    "createdAt" : "2022-11-11T16:39:58Z"
+  }, {
+    "createdAt" : "2022-11-11T22:12:19Z"
+  }, {
+    "createdAt" : "2022-11-14T10:55:33Z"
+  }, {
+    "createdAt" : "2022-11-14T18:55:17Z"
+  }, {
+    "createdAt" : "2022-11-14T23:06:19Z"
+  }, {
+    "createdAt" : "2022-11-16T19:23:32Z"
+  }, {
+    "createdAt" : "2022-11-21T06:01:04Z"
+  }, {
+    "createdAt" : "2022-11-23T17:01:15Z"
+  }, {
+    "createdAt" : "2022-11-25T14:01:05Z"
+  }, {
+    "createdAt" : "2022-11-30T13:27:39Z"
+  }, {
+    "createdAt" : "2023-01-26T17:46:28Z"
+  }, {
+    "createdAt" : "2023-02-06T22:48:49Z"
+  }, {
+    "createdAt" : "2023-02-23T04:42:36Z"
+  }, {
+    "createdAt" : "2023-03-14T15:47:18Z"
+  }, {
+    "createdAt" : "2023-03-23T14:39:33Z"
+  }, {
+    "createdAt" : "2023-03-24T07:18:48Z"
+  }, {
+    "createdAt" : "2023-04-14T05:27:22Z"
+  }, {
+    "createdAt" : "2023-05-09T15:58:51Z"
+  }, {
+    "createdAt" : "2023-06-07T08:39:00Z"
+  }, {
+    "createdAt" : "2023-06-16T23:15:32Z"
+  }, {
+    "createdAt" : "2023-07-04T10:16:41Z"
+  }, {
+    "createdAt" : "2023-07-04T13:54:46Z"
+  }, {
+    "createdAt" : "2023-08-13T07:52:58Z"
+  }, {
+    "createdAt" : "2023-08-31T20:56:59Z"
+  }, {
+    "createdAt" : "2023-09-12T06:09:11Z"
+  }, {
+    "createdAt" : "2023-09-21T15:55:42Z"
+  }, {
+    "createdAt" : "2024-01-09T16:49:23Z"
+  }, {
+    "createdAt" : "2024-01-13T14:02:12Z"
+  }, {
+    "createdAt" : "2024-02-26T12:46:22Z"
+  }, {
+    "createdAt" : "2024-02-26T13:37:11Z"
+  }, {
+    "createdAt" : "2024-02-26T17:34:08Z"
+  }, {
+    "createdAt" : "2024-05-03T18:12:35Z"
+  }, {
+    "createdAt" : "2024-05-18T20:23:49Z"
+  }, {
+    "createdAt" : "2024-05-20T15:22:22Z"
+  }, {
+    "createdAt" : "2024-05-24T01:28:26Z"
+  }, {
+    "createdAt" : "2024-05-26T12:44:51Z"
+  }, {
+    "createdAt" : "2024-06-05T19:41:33Z"
+  }, {
+    "createdAt" : "2024-06-20T12:11:35Z"
+  }, {
+    "createdAt" : "2024-07-04T20:27:44Z"
+  }, {
+    "createdAt" : "2024-07-17T15:21:24Z"
+  }, {
+    "createdAt" : "2024-07-24T15:06:36Z"
+  }, {
+    "createdAt" : "2024-08-29T06:54:37Z"
+  }, {
+    "createdAt" : "2024-09-30T13:46:03Z"
+  }, {
+    "createdAt" : "2024-10-13T11:35:10Z"
+  }, {
+    "createdAt" : "2024-10-20T04:38:52Z"
+  }, {
+    "createdAt" : "2024-10-22T09:25:50Z"
+  }, {
+    "createdAt" : "2024-12-01T13:17:14Z"
+  }, {
+    "createdAt" : "2024-12-09T03:50:16Z"
+  }, {
+    "createdAt" : "2024-12-09T03:53:14Z"
+  }, {
+    "createdAt" : "2025-02-12T05:12:27Z"
+  }, {
+    "createdAt" : "2025-02-19T09:58:12Z"
+  }, {
+    "createdAt" : "2025-04-01T02:15:03Z"
+  }, {
+    "createdAt" : "2025-05-02T16:45:18Z"
+  }, {
+    "createdAt" : "2025-06-28T18:50:15Z"
+  }, {
+    "createdAt" : "2025-07-15T16:55:46Z"
+  }, {
+    "createdAt" : "2025-10-20T08:36:11Z"
+  }, {
+    "createdAt" : "2025-11-01T07:48:46Z"
+  }, {
+    "createdAt" : "2025-11-18T13:27:36Z"
+  }, {
+    "createdAt" : "2025-11-19T07:38:27Z"
+  }, {
+    "createdAt" : "2025-11-21T00:19:57Z"
+  }, {
+    "createdAt" : "2025-12-07T11:55:04Z"
+  }, {
+    "createdAt" : "2025-12-18T11:46:45Z"
+  }, {
+    "createdAt" : "2026-01-07T07:20:58Z"
+  }, {
+    "createdAt" : "2026-01-20T10:31:08Z"
+  }, {
+    "createdAt" : "2026-01-25T11:51:06Z"
+  }, {
+    "createdAt" : "2026-01-28T10:02:28Z"
+  }, {
+    "createdAt" : "2026-02-06T12:15:50Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "download.py updated",
+    "createdAt" : "2013-02-01T21:52:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "util.py",
+    "createdAt" : "2013-02-02T07:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "test_quickstart.py  (Clean temp directories)",
+    "createdAt" : "2013-02-02T16:30:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Rename the repo?",
+    "createdAt" : "2013-02-11T03:28:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "test_formats.py",
+    "createdAt" : "2013-02-11T17:04:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "test_schema.py",
+    "createdAt" : "2013-02-11T17:06:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "util.py",
+    "createdAt" : "2013-02-11T17:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "test_util.py",
+    "createdAt" : "2013-02-11T17:09:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "receive.py",
+    "createdAt" : "2013-02-11T17:17:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "push.py",
+    "createdAt" : "2013-02-11T17:25:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "scp.py",
+    "createdAt" : "2013-02-11T17:26:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Verifying fetched metadata",
+    "createdAt" : "2013-02-11T18:18:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "download and mirrors modules",
+    "createdAt" : "2013-02-11T18:21:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Removing the client's delegated targets metadata",
+    "createdAt" : "2013-02-11T18:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "basic_client.py and example_client.py",
+    "createdAt" : "2013-02-11T19:10:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "formats.py",
+    "createdAt" : "2013-02-13T14:59:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "formats.py",
+    "createdAt" : "2013-02-13T15:00:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "The test modules machine gun log messages",
+    "createdAt" : "2013-02-14T00:52:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "pushtoolslib.py",
+    "createdAt" : "2013-02-24T15:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Should normalize delegated targets directory",
+    "createdAt" : "2013-02-24T20:21:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Normalize URL prefix in repository mirrors",
+    "createdAt" : "2013-02-24T20:25:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "All server and client examples should be in the same directory",
+    "createdAt" : "2013-02-24T20:41:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Confirm passwords",
+    "createdAt" : "2013-02-26T21:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Why are delegated target roles limited to one key?",
+    "createdAt" : "2013-02-26T21:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Is it possible to list keys with their corresponding roles?",
+    "createdAt" : "2013-02-27T23:16:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Is tuf.download immune to the endless data attack?",
+    "createdAt" : "2013-03-01T00:10:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Port tuf.client to other programming languages?",
+    "createdAt" : "2013-03-01T07:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "More explicit interposition with urllib and urllib2",
+    "createdAt" : "2013-03-07T00:56:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "String formatting exception in URL path matching and transformation is critical",
+    "createdAt" : "2013-03-07T02:47:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "If TUF has a bug or is broken then the software updater will break.",
+    "createdAt" : "2013-03-09T20:43:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "tuf.interposition does not respect urllib/urllib2 module semantics",
+    "createdAt" : "2013-03-09T20:55:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Do we really want to match and transform URL paths with regular expressions?",
+    "createdAt" : "2013-03-09T21:09:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "tuf.download fails when HTTP server does not report Content-Length",
+    "createdAt" : "2013-03-13T03:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "tuf.interposition should ignore non-GET HTTP requests",
+    "createdAt" : "2013-03-13T03:14:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "TUF on Windows without OpenSSL",
+    "createdAt" : "2013-03-14T21:55:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Double metadata download",
+    "createdAt" : "2013-03-15T03:30:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Incorrect comparison of metadata expiry time?",
+    "createdAt" : "2013-03-15T05:02:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "What do we mean by a replay attack?",
+    "createdAt" : "2013-03-15T05:17:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Investigate metadata scalability",
+    "createdAt" : "2013-03-15T05:58:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Metadata move from current to previous...",
+    "createdAt" : "2013-03-15T23:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Code coverage",
+    "createdAt" : "2013-03-17T08:04:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Slow retrieval attacks",
+    "createdAt" : "2013-03-17T23:20:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "JSON Web Signature",
+    "createdAt" : "2013-03-18T00:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Run a PyPI mirror",
+    "createdAt" : "2013-03-18T00:22:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Document attack cases on PyPI + TUF",
+    "createdAt" : "2013-03-18T19:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Implement update of metadata of delegated target files",
+    "createdAt" : "2013-03-19T05:53:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Implement delegation of particular files in directories",
+    "createdAt" : "2013-03-19T06:08:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Implement delegation of a directory of target files",
+    "createdAt" : "2013-03-19T06:13:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Ensure thread-safety",
+    "createdAt" : "2013-03-19T06:17:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Stronger SSL verification and HTTP redirection",
+    "createdAt" : "2013-03-19T06:17:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Implement mirrors role",
+    "createdAt" : "2013-03-19T07:38:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Repository tools should be able to read input from files",
+    "createdAt" : "2013-03-22T20:05:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Which versions of Python do we want to support?",
+    "createdAt" : "2013-03-26T13:49:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Remove support for simplejson",
+    "createdAt" : "2013-03-26T21:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "A tool to determine whether metadata for a targets role has diverged from its data",
+    "createdAt" : "2013-03-29T06:13:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Ensure crucial messages are printed with command-line utilities",
+    "createdAt" : "2013-03-29T23:14:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Allow wildcard target paths",
+    "createdAt" : "2013-04-01T00:44:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Implement a priority scheme to resolve ambiguity when multiple roles are delegated to the same targets",
+    "createdAt" : "2013-04-01T00:55:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Better specification and documentation of interposition module",
+    "createdAt" : "2013-04-01T01:07:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Implement revocation of target delegations",
+    "createdAt" : "2013-04-01T07:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Deal with Unicode",
+    "createdAt" : "2013-04-03T08:53:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "More robust loading of keystore",
+    "createdAt" : "2013-04-07T03:16:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "More efficient reading of keystore",
+    "createdAt" : "2013-04-07T04:34:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "What ensures generation of unique key IDs?",
+    "createdAt" : "2013-04-08T05:05:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Keys appear not to be listed for large enough metadata",
+    "createdAt" : "2013-04-10T01:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Possible optimization in making a delegation",
+    "createdAt" : "2013-04-10T18:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Mix-and-match attack susceptibility!",
+    "createdAt" : "2013-04-13T17:34:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "TUF Quickstart Does Not Work on OSX",
+    "createdAt" : "2013-06-05T18:58:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "When would root be updated without its metadata from the release role?",
+    "createdAt" : "2013-07-10T15:13:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Programming error in endless attack test",
+    "createdAt" : "2013-07-21T21:11:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Signer really needs to run on the server?",
+    "createdAt" : "2013-07-30T03:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Root and targets role schemas must not be shared",
+    "createdAt" : "2013-08-07T05:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Document version numbers and target path patterns",
+    "createdAt" : "2013-08-07T06:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Allow compression of Targets metadata instead of only Release",
+    "createdAt" : "2013-08-07T13:46:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Implement the \"lazy walk\" scheme for downloading targets metadata",
+    "createdAt" : "2013-08-07T18:25:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "One way to open, read, write and close files",
+    "createdAt" : "2013-08-08T15:58:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Some the unit tests do not clean up after themselves",
+    "createdAt" : "2013-08-08T17:02:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Update unit tests following design change to aggregate_tests.py",
+    "createdAt" : "2013-08-12T14:01:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Quickstart.py Limits Number of Passwords to the Threshold Amount",
+    "createdAt" : "2013-08-19T07:12:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Remove config.cfg",
+    "createdAt" : "2013-08-20T00:38:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Update tuf.client.updater to work with lazy bin walking",
+    "createdAt" : "2013-09-05T22:36:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "A few unit tests raise WindowsError after calling os.remove(), os.rename(), etc.",
+    "createdAt" : "2013-09-10T17:34:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Incorrect post-decompression verification of safe metadata download",
+    "createdAt" : "2013-09-11T01:22:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "More thorough verification of compressed target or metadata files",
+    "createdAt" : "2013-09-11T21:52:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Memory-inefficient updater may cause denial of service",
+    "createdAt" : "2013-09-11T21:54:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Need to security validate decompression of files...",
+    "createdAt" : "2013-09-11T22:03:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Detect metadata and data mismatch on server when possible",
+    "createdAt" : "2013-09-13T14:36:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Integration tests don't use python's unit test framework",
+    "createdAt" : "2013-09-14T18:15:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Inconsistency of key sizes",
+    "createdAt" : "2013-09-14T18:31:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "signercli.py does not print some data to console",
+    "createdAt" : "2013-09-17T01:49:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Review integration tests",
+    "createdAt" : "2013-09-18T03:52:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Review cryptography",
+    "createdAt" : "2013-09-18T04:00:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Lack of information about metadata refreshing ",
+    "createdAt" : "2013-09-18T21:35:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Review unit tests",
+    "createdAt" : "2013-09-21T21:55:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Support Multiple Crypto Libraries and Import Them Based on Configuration",
+    "createdAt" : "2013-09-22T16:15:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Permanent Takedown Threat",
+    "createdAt" : "2013-10-03T00:49:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Quick Start Instructions",
+    "createdAt" : "2013-10-03T01:01:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "deb/rpm packaging",
+    "createdAt" : "2013-10-03T17:32:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Secure NTP protocol",
+    "createdAt" : "2013-10-25T04:52:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Incorrect target URL encoding and decoding",
+    "createdAt" : "2013-11-12T19:39:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Duplicate keys when re-signing a repository",
+    "createdAt" : "2013-11-20T13:32:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "libtuf.py should automatically increment version numbers prior to writing metadata",
+    "createdAt" : "2013-11-20T15:20:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "New repository tools should allow hashed-bin delegations",
+    "createdAt" : "2013-11-20T15:37:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "libtuf.py's README should include a repository.write_partial() example",
+    "createdAt" : "2013-11-20T15:55:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Incorrect File Mode in Interposition",
+    "createdAt" : "2013-11-21T18:44:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Interposition should allow streaming",
+    "createdAt" : "2013-11-21T18:57:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Interposition should preserve HTTP headers",
+    "createdAt" : "2013-11-21T18:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "class SaferHTTPResponse in tuf/download.py has an error with Python 2.6",
+    "createdAt" : "2013-11-22T19:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "libtuf.py:  Add support for ed25519 keys, signatures, and key files.",
+    "createdAt" : "2013-11-23T23:35:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "libtuf.py and keys.py:  Add support for encrypted TUF key files of any keytype.",
+    "createdAt" : "2013-11-23T23:38:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "libtuf.py:  Staged metadata directory names with user-set suffixes",
+    "createdAt" : "2013-11-23T23:52:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "libtuf.py:  Accept ISO 8601 formatted strings (without extensions) as the only supported date format.",
+    "createdAt" : "2013-11-24T00:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Write files to temporary location then move to final destination",
+    "createdAt" : "2013-11-27T00:44:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "TUF returns a CRC Error",
+    "createdAt" : "2013-11-27T15:21:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Option to read metadata once per many target requests",
+    "createdAt" : "2013-11-27T15:32:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "SlowRetrievalError needs a better message",
+    "createdAt" : "2013-11-27T15:35:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "New repository tools should provide option to write consistent snapshots",
+    "createdAt" : "2013-11-27T16:03:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Specification should discuss how to write and read consistent snapshots",
+    "createdAt" : "2013-11-27T16:27:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Crypto library should not be included in the signature method",
+    "createdAt" : "2013-11-27T16:48:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Multiple requests for timestamp.txt per session.",
+    "createdAt" : "2013-11-27T20:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Improve error messages and adjust logger messages/levels",
+    "createdAt" : "2013-11-28T00:16:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Interposition does not fetch Root if top-level metadata has expired or had its keys revoked",
+    "createdAt" : "2013-12-01T00:11:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "TUF limits the size of timestamp.txt to 2048",
+    "createdAt" : "2013-12-03T10:42:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "read(size) method in tuf.util.TempFile does not read anything",
+    "createdAt" : "2013-12-03T18:31:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "TUF interposition maintains state of available roles",
+    "createdAt" : "2013-12-09T19:56:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "repository tools rewrite every delegate every time a write occurs",
+    "createdAt" : "2013-12-11T01:26:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Old documentation needs to removed",
+    "createdAt" : "2013-12-11T14:53:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "libtuf.py needs method for dynamically retrieving a delegated targets role",
+    "createdAt" : "2013-12-20T18:29:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Excessive password confirmation in repo tools?",
+    "createdAt" : "2014-01-17T19:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Allow one to turn off Unicode support for target files",
+    "createdAt" : "2014-01-21T21:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Create Developer Tools...",
+    "createdAt" : "2014-01-21T21:24:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Documentation: private keys must be exposed?",
+    "createdAt" : "2014-02-08T01:34:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Missing from spec: PKCS?",
+    "createdAt" : "2014-02-10T17:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Interposition?",
+    "createdAt" : "2014-02-10T17:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Supported Cryptography Algorithms",
+    "createdAt" : "2014-02-10T19:48:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Where is 'ed25519' package?",
+    "createdAt" : "2014-02-24T14:37:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Where is tuf._vendor.ed25519?",
+    "createdAt" : "2014-02-24T14:39:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Fix repository_tool documentation header",
+    "createdAt" : "2014-02-24T15:17:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "File system limitations",
+    "createdAt" : "2014-02-25T13:28:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Fix typo in specification",
+    "createdAt" : "2014-02-26T14:25:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Implement add_target_to_bin()",
+    "createdAt" : "2014-03-05T13:25:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Add get_filepaths_in_directory() flag to ignore 'digest.filename' targets. ",
+    "createdAt" : "2014-03-05T16:58:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Central Location for TUF Constants",
+    "createdAt" : "2014-03-06T01:47:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Refactor Unit & Integration Tests",
+    "createdAt" : "2014-03-06T03:06:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Evaluate repository scalability under settings we recommend for PyPI / RubyGEMS",
+    "createdAt" : "2014-03-06T03:06:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Different names for the \"roles\" field in the root and targets roles",
+    "createdAt" : "2014-03-20T02:00:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Socket timeout default value pretty onerous",
+    "createdAt" : "2014-04-11T20:08:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Should we replace urllib(2) with requests?",
+    "createdAt" : "2014-04-22T17:58:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Repository and developer tools should warn about large metadata",
+    "createdAt" : "2014-04-22T18:01:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Compress metadata by default",
+    "createdAt" : "2014-04-28T21:47:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Why is pycrypto expected to be installed?",
+    "createdAt" : "2014-05-03T03:05:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Toggle consistent snapshot in the repository root role",
+    "createdAt" : "2014-05-03T21:21:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Write only dirty metadata",
+    "createdAt" : "2014-07-31T23:05:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Wildcard in target paths?",
+    "createdAt" : "2014-08-01T00:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Print expected type instead of its string representation",
+    "createdAt" : "2014-08-01T22:30:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Consistent snapshot prepends hash algorithm instead of value to target filename",
+    "createdAt" : "2014-08-01T23:21:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Compact representation of a range of (hashed) delegated target paths",
+    "createdAt" : "2014-09-05T19:55:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Restricted paths are not retroactive",
+    "createdAt" : "2014-09-18T15:46:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "threat model page broken",
+    "createdAt" : "2014-10-03T01:04:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Suggested corrections for repository management tool",
+    "createdAt" : "2014-11-10T19:16:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "signed git tags",
+    "createdAt" : "2014-12-21T16:35:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "modify paths for generic packaging",
+    "createdAt" : "2014-12-21T16:53:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Is TUF a library or a collection of tools or both?",
+    "createdAt" : "2015-01-22T18:25:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "dh-python2 packaging",
+    "createdAt" : "2015-01-23T00:26:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "Typo \"At attacker\" for \"An attacker\" in SECURITY.md",
+    "createdAt" : "2015-01-25T20:36:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "PEP 8",
+    "createdAt" : "2015-01-28T04:53:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "post a Debian RFP (Request for Package)",
+    "createdAt" : "2015-02-07T15:02:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 267,
+    "title" : "Downloading PyNaCl on ubuntu",
+    "createdAt" : "2015-04-21T18:30:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Spec does not specify format of HASHES",
+    "createdAt" : "2015-04-29T14:50:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Add CLI to the Repository Management Tools",
+    "createdAt" : "2015-04-29T16:02:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Specification of delegations is confusing",
+    "createdAt" : "2015-05-01T12:34:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Allow Repositories to Specify Hash Algorithm",
+    "createdAt" : "2015-05-01T14:46:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Provide Examples of Metadata Files in the TUF Specification",
+    "createdAt" : "2015-05-01T20:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Dealing with \"No updater or interposition warning\" in TUF logs",
+    "createdAt" : "2015-05-03T23:14:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Raise a Warning, Rather than an Error, if Metadata Specifies Untrusted Targets",
+    "createdAt" : "2015-05-05T03:29:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Ensure We Do Not Inherit File Permissions For Written Key Files ",
+    "createdAt" : "2015-05-05T03:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Verify / Fix Potential Cycles in updater.target()",
+    "createdAt" : "2015-05-06T14:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Ambiguity in spec: should root info be updated when package download fails?",
+    "createdAt" : "2015-05-12T11:10:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "Question: can target metadata be verified lazily?",
+    "createdAt" : "2015-05-12T11:13:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Question: how many retries in check for updates?",
+    "createdAt" : "2015-05-18T09:42:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Ready to use implementation on Windows?",
+    "createdAt" : "2015-09-02T14:24:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Invalid keys in example keystore",
+    "createdAt" : "2015-10-22T08:01:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "Document the parameters used for RSASSA-PSS signatures",
+    "createdAt" : "2015-11-11T09:58:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Inconsistent naming for role names",
+    "createdAt" : "2015-11-18T13:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "How about if the connection is lost?",
+    "createdAt" : "2015-12-20T10:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "logger.exception called outside exception handler",
+    "createdAt" : "2015-12-31T21:08:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "delay open log file",
+    "createdAt" : "2016-01-13T07:38:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Make log file name configurable",
+    "createdAt" : "2016-01-13T23:17:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Update Installation Instructions",
+    "createdAt" : "2016-01-15T21:10:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Add Ed25519 for signing / Include minisgn",
+    "createdAt" : "2016-01-22T22:15:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Client: When repo provides metadata w/ version < what client already has, that is not logged.",
+    "createdAt" : "2016-02-19T20:50:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Repo: Repository.targets.add_target unexpected behavior implied in walkthrough",
+    "createdAt" : "2016-02-22T20:08:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Docs: Minor documentation issues with repository creation",
+    "createdAt" : "2016-02-22T20:12:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Client: Freeze attack issue - expiry of metadata may not be detected",
+    "createdAt" : "2016-02-26T22:56:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "Is TUF required with SSL?",
+    "createdAt" : "2016-04-08T17:48:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Does TUF handle downloading initial target file over http?",
+    "createdAt" : "2016-04-09T03:24:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "Can I use the tuftools without using password for the keys?",
+    "createdAt" : "2016-04-11T08:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Repository structure mismatch",
+    "createdAt" : "2016-04-11T11:21:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Can't use FUSE filesystems with consistent_snapshot",
+    "createdAt" : "2016-04-11T19:22:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Integration test for metadata updates following key revocations",
+    "createdAt" : "2016-04-26T21:14:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Delta Support",
+    "createdAt" : "2016-06-10T00:24:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Packaging TUF for Debian",
+    "createdAt" : "2016-06-10T14:29:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Organization of modules",
+    "createdAt" : "2016-06-10T15:57:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "high cpu usage on download",
+    "createdAt" : "2016-06-27T19:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 969,
+    "title" : "Server Model and Update Races with Threshold Signing",
+    "createdAt" : "2016-07-14T14:49:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Public Log Proposal",
+    "createdAt" : "2016-07-15T14:39:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Need support for multi-group / multi-threshold signing",
+    "createdAt" : "2016-08-02T21:11:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Wrong filenames given to be generated ",
+    "createdAt" : "2016-08-03T11:52:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Add ECDSA to spec",
+    "createdAt" : "2016-08-08T15:50:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Notary 2015 NCC security audit review",
+    "createdAt" : "2016-08-08T16:09:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "Consider using JSON schema",
+    "createdAt" : "2016-08-08T20:28:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "Create static metadata that demonstrates attacks",
+    "createdAt" : "2016-08-09T20:36:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "Trust Pinning",
+    "createdAt" : "2016-08-18T17:49:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "[spec] Description of the snapshot role metadata format does not match example metadata",
+    "createdAt" : "2016-08-25T02:27:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "file corruptions",
+    "createdAt" : "2016-08-26T10:16:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "PEP8 / flake8 checks",
+    "createdAt" : "2016-08-29T15:59:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "lock the repository if update / download running",
+    "createdAt" : "2016-08-29T16:09:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Backtracking Documentation Missing",
+    "createdAt" : "2016-09-12T15:57:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "Does JSON allowing duplicate keys affect TUF security?",
+    "createdAt" : "2016-09-16T13:51:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "What does the HASH field indicates for",
+    "createdAt" : "2016-09-20T17:00:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "Linking or copying consistent metadata",
+    "createdAt" : "2016-09-29T14:02:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "RSA de-serialization is available using pyca-cryptography",
+    "createdAt" : "2016-10-02T22:12:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Spec Version should be included in the signed metadata",
+    "createdAt" : "2016-10-05T20:45:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Update repository tool document",
+    "createdAt" : "2016-10-07T18:35:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Validating root.json",
+    "createdAt" : "2016-10-19T20:24:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Can TUF be used to update offline systems, disconnected from the Internet?",
+    "createdAt" : "2016-10-27T20:46:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 390,
+    "title" : "Link or copy consistent target files",
+    "createdAt" : "2016-11-02T19:12:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Consistent versions of root appear to be needlessly written multiple times ",
+    "createdAt" : "2016-11-02T19:32:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "Partially written metadata and consistent files",
+    "createdAt" : "2016-11-04T16:00:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "Support SHA-3",
+    "createdAt" : "2016-11-21T21:22:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Minor code doc issue: Misleading comments in download.py",
+    "createdAt" : "2016-11-28T17:23:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "keyids_hash_algorithms missing in private keys?",
+    "createdAt" : "2016-12-08T17:48:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Bug in roledb use of repository_name in get_role_paths and get_delegated_rolenames",
+    "createdAt" : "2016-12-21T21:07:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Fast Forward Attack Recovery Necessary (Mercury)",
+    "createdAt" : "2016-12-22T20:08:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Specification: Delete obsolete metadata",
+    "createdAt" : "2017-01-05T18:06:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 425,
+    "title" : "Signature Standardization and Denoting Hash Algorithms Used",
+    "createdAt" : "2017-02-01T17:54:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "TUF spec does not require a field called \"compression_algorithms\" but the client expects it",
+    "createdAt" : "2017-02-17T11:14:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "TUF spec does not require a field called \"delegations\" in the target metadata but the client expects it",
+    "createdAt" : "2017-02-21T15:56:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "Cannot add signing key if the key's keyid_hash_algorithms list isn't exactly equal to tuf.conf.REPOSITORY_HASH_ALGORITHMS",
+    "createdAt" : "2017-02-28T21:44:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "Update example metadata",
+    "createdAt" : "2017-04-18T02:59:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Hashing algorithm to generate hashed bin prefix should be configurable",
+    "createdAt" : "2017-04-24T15:31:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 442,
+    "title" : "Key IDs should not be calculated from sha256(cjson(encoding(pubkey)))",
+    "createdAt" : "2017-05-05T09:58:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 446,
+    "title" : "Improve documentation on roles and delegations",
+    "createdAt" : "2017-05-18T16:48:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "Update failed from HOST/metadata/root.json - pyca-cryptography missing",
+    "createdAt" : "2017-05-31T13:31:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "Root.json size/hashes in snapshot.json are superfluous",
+    "createdAt" : "2017-05-31T14:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "Clarification needed on terminating delegations",
+    "createdAt" : "2017-06-02T05:34:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 454,
+    "title" : "tuf.conf.repository_directory is not working as expected on Windows",
+    "createdAt" : "2017-06-02T13:39:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 456,
+    "title" : "Should the specification restrict the format of rolenames listed in metadata?",
+    "createdAt" : "2017-06-02T15:30:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "Canonical JSON is unclear",
+    "createdAt" : "2017-06-07T10:34:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Inconsistent wording for the trusted Root file in spec's detailed workflow and unneeded subsection",
+    "createdAt" : "2017-06-09T14:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "What should happen if a step in the detailed client workflow fails?",
+    "createdAt" : "2017-06-13T16:40:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "TARGETPATH is ambiguously a  URL (or not)",
+    "createdAt" : "2017-06-22T12:04:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 463,
+    "title" : "Make metadata paths non-mandatory",
+    "createdAt" : "2017-06-22T12:53:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Update spec to not include hashes/size in snapshot metadata",
+    "createdAt" : "2017-07-06T20:35:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "Ensure Root's hashes and length are no longer listed in Snapshot",
+    "createdAt" : "2017-07-10T15:59:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "compression_algorithms doesn't need to be mandatory",
+    "createdAt" : "2017-07-12T14:37:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "Current usage of snapshot does permit removing a role",
+    "createdAt" : "2017-07-28T09:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "Add an FAQ and/or high-level overview of how to integrate TUF",
+    "createdAt" : "2017-08-28T14:46:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 507,
+    "title" : "Create GOVERNANCE file",
+    "createdAt" : "2017-10-19T20:21:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Go through CII Best Practices Badge Program",
+    "createdAt" : "2017-10-20T15:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Enforce DCO",
+    "createdAt" : "2017-10-30T19:17:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "Track CNCF Project Maturity Level Requirements",
+    "createdAt" : "2017-11-08T16:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "TAP 4: Multiple repository consensus on entrusted targets",
+    "createdAt" : "2017-11-09T17:39:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Add in-toto metadata to python-tuf releases",
+    "createdAt" : "2017-11-10T18:21:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 530,
+    "title" : "Roadmap",
+    "createdAt" : "2017-11-10T21:18:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "Misleading: \"unsafely update root\"",
+    "createdAt" : "2017-12-04T19:53:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 555,
+    "title" : "Enable hash-checking mode for pip install?",
+    "createdAt" : "2017-12-14T15:33:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 556,
+    "title" : "Publish GPG fingerprints and public keys used to verify TUF archives",
+    "createdAt" : "2017-12-14T16:05:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 557,
+    "title" : "Organize README and docs",
+    "createdAt" : "2017-12-14T16:47:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Revise API for performing delegations",
+    "createdAt" : "2017-12-22T20:51:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 568,
+    "title" : "Log / print filename of the key whose password is being requested",
+    "createdAt" : "2017-12-22T20:52:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 569,
+    "title" : "Support hardware security modules or signing metadata externally",
+    "createdAt" : "2017-12-22T20:52:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 570,
+    "title" : "Revise documentation on required repository directories",
+    "createdAt" : "2017-12-22T20:53:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 571,
+    "title" : "Option to generate key in RAM instead of on disk?",
+    "createdAt" : "2017-12-26T19:06:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 572,
+    "title" : "Using a non-default repository name throws an error",
+    "createdAt" : "2017-12-26T23:27:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 573,
+    "title" : "Option to automatically generate key filename using the keyid",
+    "createdAt" : "2017-12-27T16:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 574,
+    "title" : "Reading some attributes of a delegated targets role after loading a repository throws a KeyError",
+    "createdAt" : "2017-12-28T23:55:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "User authentication",
+    "createdAt" : "2018-01-12T08:12:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 589,
+    "title" : "repository_tool incorrectly prevents distinct delegations to same role",
+    "createdAt" : "2018-01-16T21:35:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 591,
+    "title" : "Incorrect repo instructions re. optional args in repository_tool key functions",
+    "createdAt" : "2018-01-16T22:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 596,
+    "title" : "libeatmydata for running tests and installing dependencies under Travis CI",
+    "createdAt" : "2018-01-18T22:30:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "Basic setup/tutorial is unusable",
+    "createdAt" : "2018-01-21T04:13:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 628,
+    "title" : "Add ADOPTERS.md or USERS.md to list public adopters",
+    "createdAt" : "2018-02-13T16:49:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 630,
+    "title" : "Path delegation leading-forward-slash sensitivity (inconsistent)",
+    "createdAt" : "2018-02-27T18:34:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 631,
+    "title" : "Tutorial text for delegation should actually delegate a path",
+    "createdAt" : "2018-02-27T18:39:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 639,
+    "title" : "Raise an exception (while making a delegation) if a delegated path starts with a leading slash",
+    "createdAt" : "2018-03-06T16:28:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 646,
+    "title" : "Role can use key without calling load_signing_key first",
+    "createdAt" : "2018-03-16T20:14:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 650,
+    "title" : "Bug in writing consistent snapshots?",
+    "createdAt" : "2018-03-19T19:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 656,
+    "title" : "Remove crypto functions already available in library dependency",
+    "createdAt" : "2018-03-22T20:41:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "Promiscuous delegation not supported correctly",
+    "createdAt" : "2018-03-23T18:19:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 660,
+    "title" : "Roles and Delegations are still confused in parts of the implementation",
+    "createdAt" : "2018-03-23T19:18:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 665,
+    "title" : "Invalid .pyup.yml detected",
+    "createdAt" : "2018-03-29T15:05:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 670,
+    "title" : "Add continuous integration solution for Windows",
+    "createdAt" : "2018-04-02T16:04:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "Update ADOPTERS.md for graduation",
+    "createdAt" : "2018-04-03T18:41:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 675,
+    "title" : "Include links in ADOPTERS.md",
+    "createdAt" : "2018-04-04T15:51:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 676,
+    "title" : "Update AUTHORS / list of contributors",
+    "createdAt" : "2018-04-04T15:55:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 685,
+    "title" : "Locally generated keyids do not match the repo's",
+    "createdAt" : "2018-04-12T16:06:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 690,
+    "title" : "Address unit test failures under Windows",
+    "createdAt" : "2018-04-13T16:09:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 692,
+    "title" : "`os.link()` errors while running under Python 2.7.14 and Windows",
+    "createdAt" : "2018-04-13T20:21:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "subprocess calls in the unit tests fail under Windows",
+    "createdAt" : "2018-04-13T21:16:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 695,
+    "title" : "Unit test failure under Windows: `InvalidURL: nonnumeric port:`",
+    "createdAt" : "2018-04-13T21:19:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 709,
+    "title" : "Inconsistent newline characters in PEM strings",
+    "createdAt" : "2018-04-24T15:58:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 727,
+    "title" : "Lighter installation of TUF",
+    "createdAt" : "2018-05-17T23:00:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 728,
+    "title" : "Increasing values used to detect slow retrieval attacks",
+    "createdAt" : "2018-05-17T23:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 736,
+    "title" : "Bad assumption in roledb leads to persistent freeze attack",
+    "createdAt" : "2018-05-30T15:55:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 741,
+    "title" : "Review of the CLI and supporting documentation",
+    "createdAt" : "2018-06-08T14:42:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "Document how spec and code changes are released",
+    "createdAt" : "2018-06-13T14:39:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 748,
+    "title" : "Add functions to en|dis(able) file logging, and do not enable it by default",
+    "createdAt" : "2018-06-14T14:28:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "Request: log messages to user/application logger",
+    "createdAt" : "2018-06-15T21:20:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 753,
+    "title" : "Fix rendering of README.md on PyPI project page",
+    "createdAt" : "2018-06-20T15:16:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 763,
+    "title" : "Mock test CLI and complete docstrings",
+    "createdAt" : "2018-06-28T21:42:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 772,
+    "title" : "Failed to Add Target Files when following instruction in TUTORIAL.md",
+    "createdAt" : "2018-08-20T07:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 777,
+    "title" : "Spam in Travis-CI for some Python versions only",
+    "createdAt" : "2018-08-20T22:41:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 807,
+    "title" : "How to download all files in a folder without knowing files' names",
+    "createdAt" : "2018-11-27T07:18:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 808,
+    "title" : "Documentation Overhaul",
+    "createdAt" : "2018-11-27T17:53:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 814,
+    "title" : "TUF client requests TUF server through proxy",
+    "createdAt" : "2018-12-18T10:16:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 816,
+    "title" : "TUF deployment roadmap for PyPI",
+    "createdAt" : "2019-01-02T14:07:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 820,
+    "title" : "Create roles independently from tuf.repository_tool.Targets.delegate()",
+    "createdAt" : "2019-01-08T17:54:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 822,
+    "title" : "Indexing targets with TUF is hard if using delegations",
+    "createdAt" : "2019-01-15T17:38:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 835,
+    "title" : "Related tools",
+    "createdAt" : "2019-03-04T11:03:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 837,
+    "title" : "Creating a TAP to forbid leading path separators in targets?",
+    "createdAt" : "2019-03-20T16:13:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 838,
+    "title" : "Misleading / missing steps in TUTORIAL for delegated roles",
+    "createdAt" : "2019-03-25T22:22:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 840,
+    "title" : "repository_tool vs developer_tool: refactoring needed",
+    "createdAt" : "2019-03-26T16:56:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 841,
+    "title" : "Clean up updater metadata update stack",
+    "createdAt" : "2019-03-26T18:57:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 845,
+    "title" : "ModuleNotFoundError: No module named 'tuf.conf'",
+    "createdAt" : "2019-04-02T12:11:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 847,
+    "title" : "Should trusting/distrusting a key with repo.py bump the version number?",
+    "createdAt" : "2019-04-03T03:47:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 848,
+    "title" : "Documenting or creating a TAP to describe keyid_hash_algorithms",
+    "createdAt" : "2019-04-04T16:28:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 857,
+    "title" : "NoWorkingMirrorError swallows error messages",
+    "createdAt" : "2019-04-17T12:29:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 864,
+    "title" : "External Signing API, or CCID/PIV Support",
+    "createdAt" : "2019-04-23T17:39:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 865,
+    "title" : "More Flexible Transport API for Updater",
+    "createdAt" : "2019-04-23T18:41:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 873,
+    "title" : "Make the repo script usable from other scripts",
+    "createdAt" : "2019-05-24T00:13:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 874,
+    "title" : "Rename and rework repo.py and client.py",
+    "createdAt" : "2019-05-24T00:57:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 881,
+    "title" : "Roadmap for cli tools: repo.py, client.py",
+    "createdAt" : "2019-05-27T12:14:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 883,
+    "title" : "repository_tool: Root pre-verification during metadata writes misses possible verification failures",
+    "createdAt" : "2019-05-28T21:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 898,
+    "title" : "Tutorial error",
+    "createdAt" : "2019-08-14T12:27:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 913,
+    "title" : "Several incompatibilities with master branch of securesystemslib",
+    "createdAt" : "2019-09-16T10:41:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 920,
+    "title" : "Changing signature schemes without rotating the keys",
+    "createdAt" : "2019-09-20T14:00:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 927,
+    "title" : "Duplicate definitions of schemas",
+    "createdAt" : "2019-10-02T19:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 932,
+    "title" : "Reinstate full protection against slow retrieval attacks",
+    "createdAt" : "2019-10-10T14:39:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 933,
+    "title" : "Remove root from snapshot ",
+    "createdAt" : "2019-10-11T10:18:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 940,
+    "title" : "AppVeyor builds for Python 2.7 keep timing out",
+    "createdAt" : "2019-10-18T14:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 949,
+    "title" : "SemVer for spec_version breaks pre-SemVer clients",
+    "createdAt" : "2019-11-05T16:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 951,
+    "title" : "No need to tolerate repositories written with pre-SemVer spec_version",
+    "createdAt" : "2019-11-05T16:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 955,
+    "title" : "Revise intended and actual behavior of  Repository's `status()` method",
+    "createdAt" : "2019-11-12T10:25:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 957,
+    "title" : "Targets' `add_target(s)` methods do not correctly check passed paths",
+    "createdAt" : "2019-11-12T14:49:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 958,
+    "title" : "`Repository.writeall()` does not \"write all\" and may leave repo in inconsistent state ",
+    "createdAt" : "2019-11-13T15:48:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 963,
+    "title" : "Conflicting file path assertions in `delegate()` and `add_paths()`",
+    "createdAt" : "2019-11-29T14:27:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 964,
+    "title" : "`Repository.writeall()` may not need to write all dirty roles",
+    "createdAt" : "2019-12-02T14:56:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 965,
+    "title" : "test_key_revocation_integration.TestKeyRevocation fails on windows with Python 2.7",
+    "createdAt" : "2019-12-11T14:29:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 967,
+    "title" : "Improve exception hierarchy",
+    "createdAt" : "2019-12-16T16:35:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 968,
+    "title" : "Optional upper bound on targets file sizes?",
+    "createdAt" : "2019-12-16T16:54:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 973,
+    "title" : "Potential DoS for attacker that can create metadata files...",
+    "createdAt" : "2020-01-08T17:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 983,
+    "title" : "Logging in Updater is reporting errors despite things proceeding as expected",
+    "createdAt" : "2020-02-18T21:09:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 994,
+    "title" : "Refactor `add_target_to_bin` and `remove_target_from_bin`",
+    "createdAt" : "2020-03-06T15:32:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 995,
+    "title" : "`delegate_hashed_bins` must hash a target path as it appears in metadata",
+    "createdAt" : "2020-03-09T12:25:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 996,
+    "title" : "Make length and hashes optional in snapshot/timestamp metadata",
+    "createdAt" : "2020-03-11T09:49:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 998,
+    "title" : "CLI failure: 'repo.py --sign' fails for RSA",
+    "createdAt" : "2020-03-13T09:12:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 999,
+    "title" : "CLI missbehaving: option '--pw' doesn't work for '--sign'",
+    "createdAt" : "2020-03-13T09:32:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1000,
+    "title" : "File \"tuf/client_setup_and_repository_example.md\" is extermely outdated",
+    "createdAt" : "2020-03-15T22:41:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1002,
+    "title" : "Execution of Quickstart Tutorial fails because of missing 2.root.json",
+    "createdAt" : "2020-03-16T20:02:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1003,
+    "title" : "Take fileinfo kwarg in add_target and add_target_to_bin methods",
+    "createdAt" : "2020-03-17T17:27:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1004,
+    "title" : "Take use_existing_fileinfo kwarg in write and writeall methods",
+    "createdAt" : "2020-03-18T09:10:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1005,
+    "title" : "Fix performance and metadata representation issues in roledb",
+    "createdAt" : "2020-03-19T18:39:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1006,
+    "title" : "Improve TUF onboarding for new users",
+    "createdAt" : "2020-03-24T19:47:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1009,
+    "title" : "Support abstract files and directories",
+    "createdAt" : "2020-03-30T14:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1010,
+    "title" : "Problems running tuf unit tests against local version of securesyslib",
+    "createdAt" : "2020-04-02T11:53:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1011,
+    "title" : "Passing HTTP header to client.updater",
+    "createdAt" : "2020-04-02T14:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1018,
+    "title" : "Add stricter TARGETPATH and PATHPATTERN checks",
+    "createdAt" : "2020-04-08T16:03:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1019,
+    "title" : "Provide TARGETPATH normalizing convenience interface",
+    "createdAt" : "2020-04-08T16:44:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1030,
+    "title" : "Document release process expectations",
+    "createdAt" : "2020-05-06T13:28:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1037,
+    "title" : "Targets delegations are not updated when adding a new delegation key",
+    "createdAt" : "2020-05-26T14:39:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1039,
+    "title" : "Silence the logs when running the test suite",
+    "createdAt" : "2020-05-28T15:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1043,
+    "title" : "Review schemas for possible consolidation and clean-up",
+    "createdAt" : "2020-06-04T11:43:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1045,
+    "title" : "load_repository() does not load correctly Targets objects of delegated roles",
+    "createdAt" : "2020-06-05T09:11:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1046,
+    "title" : "load_repository does not load target file info for delegated targets metadata",
+    "createdAt" : "2020-06-08T10:07:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1048,
+    "title" : "support updating individual metadata upon addition of target file",
+    "createdAt" : "2020-06-08T16:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1050,
+    "title" : "Delegated roles metadata can be written to disk without signing",
+    "createdAt" : "2020-06-09T14:09:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1053,
+    "title" : "Document public API",
+    "createdAt" : "2020-06-17T12:05:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1057,
+    "title" : "Updater: No download progress hooks",
+    "createdAt" : "2020-06-26T14:14:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1059,
+    "title" : "Tests fail with recent change to formats.PATH_SCHEMA in securesystemslib master",
+    "createdAt" : "2020-06-26T15:52:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1061,
+    "title" : "Targets.delegate() creates different objects for the same role",
+    "createdAt" : "2020-06-29T12:19:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1063,
+    "title" : "Updater: Add ability to check for existence of (local) repository",
+    "createdAt" : "2020-06-30T12:58:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1065,
+    "title" : "Remove iso8601 dependency",
+    "createdAt" : "2020-07-03T06:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1068,
+    "title" : "updater can't handle missing content-length",
+    "createdAt" : "2020-07-06T08:58:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1069,
+    "title" : "load_repository(): fails to load \"0.json\" metadata file",
+    "createdAt" : "2020-07-06T09:24:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1070,
+    "title" : "Rewrite _generate_and_write_metadata function and the way it's called",
+    "createdAt" : "2020-07-06T12:11:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1075,
+    "title" : "Updater: refresh() results are different depending targets.json existence",
+    "createdAt" : "2020-07-10T12:27:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1076,
+    "title" : "Document how to run individual unit tests or test suites",
+    "createdAt" : "2020-07-13T14:34:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1077,
+    "title" : "os.path.join() used with URLs in Updater",
+    "createdAt" : "2020-07-13T16:25:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1079,
+    "title" : "Updater: mirrors configuration tweaks",
+    "createdAt" : "2020-07-16T16:03:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1080,
+    "title" : "Updater: Way to disable hash prefix for consistent_snapshot",
+    "createdAt" : "2020-07-16T16:17:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1081,
+    "title" : "Support ASN.1 metadata",
+    "createdAt" : "2020-07-17T12:29:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1082,
+    "title" : "Implement support for TAP 3: Multi-role delegations",
+    "createdAt" : "2020-07-17T12:39:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1083,
+    "title" : "logging in updater tests is weirdly broken",
+    "createdAt" : "2020-07-17T14:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1084,
+    "title" : "Implement TAP 12",
+    "createdAt" : "2020-07-17T23:31:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1085,
+    "title" : "Remove sleep() from tests",
+    "createdAt" : "2020-07-18T15:07:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1087,
+    "title" : "Execution of Quickstart Tutorial fails because of StorageError",
+    "createdAt" : "2020-07-20T14:45:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1093,
+    "title" : "Option to show log output when running individual tests",
+    "createdAt" : "2020-07-30T10:48:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1099,
+    "title" : "Updater: unclosed file object",
+    "createdAt" : "2020-08-05T13:51:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1108,
+    "title" : "logging level consistency",
+    "createdAt" : "2020-08-13T08:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1109,
+    "title" : "Support external signatures (sigs made on system without TUF installed)",
+    "createdAt" : "2020-08-15T18:55:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1111,
+    "title" : "tests (simple_server.py) still unreliable",
+    "createdAt" : "2020-08-17T15:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1114,
+    "title" : "KeyError while trying to delegate to new role with CLI",
+    "createdAt" : "2020-08-20T19:37:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1115,
+    "title" : "lint failure: W0707: Consider explicitly re-raising using the 'from' keyword (raise-missing-from)",
+    "createdAt" : "2020-08-21T14:49:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1118,
+    "title" : "updater.py and mirror.py docs disagree on what confined_target_dirs means",
+    "createdAt" : "2020-08-28T10:07:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1119,
+    "title" : "TestArbitraryPackageAttack TearDownClass failure",
+    "createdAt" : "2020-09-07T07:37:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1120,
+    "title" : "logging in test runner / CI : higher log level but only print failing tests",
+    "createdAt" : "2020-09-08T12:41:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1123,
+    "title" : "Resource warnings when running the test files",
+    "createdAt" : "2020-09-09T19:08:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1124,
+    "title" : "Add a method to create a server subprocesses only on unused local ports",
+    "createdAt" : "2020-09-09T19:21:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1125,
+    "title" : "Decide on Python version",
+    "createdAt" : "2020-09-10T07:24:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1126,
+    "title" : "Decide where to develop TUF 1.0.0",
+    "createdAt" : "2020-09-10T07:45:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1127,
+    "title" : "Decide on deprecation strategy",
+    "createdAt" : "2020-09-10T07:57:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1128,
+    "title" : "Decide on style guideline",
+    "createdAt" : "2020-09-10T07:59:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1129,
+    "title" : "Add test guidelines",
+    "createdAt" : "2020-09-10T08:08:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1130,
+    "title" : "Add validation guidelines",
+    "createdAt" : "2020-09-10T08:10:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1131,
+    "title" : "Add exception handling guidelines",
+    "createdAt" : "2020-09-10T08:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1132,
+    "title" : "Add logging config and guidelines",
+    "createdAt" : "2020-09-10T08:27:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1133,
+    "title" : "Decide on extent of OOP in metadata model",
+    "createdAt" : "2020-09-10T08:39:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1134,
+    "title" : "How much metadata behaviour should be implemented on their classes?",
+    "createdAt" : "2020-09-10T08:50:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1135,
+    "title" : "Design client library",
+    "createdAt" : "2020-09-10T09:17:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1136,
+    "title" : "Design repository library",
+    "createdAt" : "2020-09-10T09:22:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1137,
+    "title" : "Add root metadata class to new TUF metadata model",
+    "createdAt" : "2020-09-10T13:25:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1138,
+    "title" : "Add classes for complex metadata attributes",
+    "createdAt" : "2020-09-10T13:36:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1139,
+    "title" : "Add classes for complex metadata fields",
+    "createdAt" : "2020-09-10T13:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1140,
+    "title" : "Add input validation to simple metadata api",
+    "createdAt" : "2020-09-10T13:48:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1141,
+    "title" : "Keep track of procedural and architectural decision",
+    "createdAt" : "2020-09-10T14:46:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1142,
+    "title" : "client/updater design: let user download targets?",
+    "createdAt" : "2020-09-14T07:06:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1143,
+    "title" : "client/updater design: mirror config redesign",
+    "createdAt" : "2020-09-14T07:29:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1148,
+    "title" : "repository_tool and repository_lib modify log handlers",
+    "createdAt" : "2020-09-22T07:31:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1150,
+    "title" : "Dependabot couldn't authenticate with https://pypi.python.org/simple/",
+    "createdAt" : "2020-09-24T10:48:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1154,
+    "title" : "repository_lib.py lists signatures in an non-deterministic order",
+    "createdAt" : "2020-09-28T22:26:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1155,
+    "title" : "Make confined_target_dirs optional field in  the MIRROR_SCHEMA",
+    "createdAt" : "2020-09-29T12:59:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1158,
+    "title" : "client/updater design: parallel downloads",
+    "createdAt" : "2020-10-02T12:09:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1159,
+    "title" : "Document/encode which version of the spec we conform to",
+    "createdAt" : "2020-10-02T16:08:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1160,
+    "title" : "tar.gz release does not contain LICENSE",
+    "createdAt" : "2020-10-04T10:03:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1161,
+    "title" : "Modernise and rationalise packaging",
+    "createdAt" : "2020-10-05T10:10:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1164,
+    "title" : "review exception handling around the TUF calls",
+    "createdAt" : "2020-10-05T12:45:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1165,
+    "title" : "import-style prevents vendoring",
+    "createdAt" : "2020-10-06T10:50:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1168,
+    "title" : "Updater feature request: verify chain of trust from bootstrapped root metadata",
+    "createdAt" : "2020-10-08T09:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1174,
+    "title" : "Remove unsafely_update_root_if_necessary from ",
+    "createdAt" : "2020-10-12T10:37:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1178,
+    "title" : "Revise pylint configuration (and linter choice)",
+    "createdAt" : "2020-10-15T13:02:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1181,
+    "title" : "Identify components of client and determine how to split out client from current code base",
+    "createdAt" : "2020-10-21T09:30:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1184,
+    "title" : "develop branch fails 'with-sslib-master' build",
+    "createdAt" : "2020-10-22T08:53:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1188,
+    "title" : "Provide a way to customize requests.Session",
+    "createdAt" : "2020-10-26T08:55:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1195,
+    "title" : "Consider switching to GitHub Actions for automated testing",
+    "createdAt" : "2020-10-30T09:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1196,
+    "title" : "tests: server logging  via tempfile may have threading issues",
+    "createdAt" : "2020-11-02T11:17:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1199,
+    "title" : "Unexpected warning when calling `Repository.status()`",
+    "createdAt" : "2020-11-05T11:01:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1204,
+    "title" : "Tests failure when using generate_and_write_ed25519_keypair() on develop branch",
+    "createdAt" : "2020-11-10T15:15:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1207,
+    "title" : "Remove global state from repository_tool",
+    "createdAt" : "2020-11-11T23:00:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1211,
+    "title" : "Non-determinism in JSON export",
+    "createdAt" : "2020-11-12T20:37:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1213,
+    "title" : "updater: abstract out the network IO",
+    "createdAt" : "2020-11-13T12:06:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1215,
+    "title" : "Updater: target hash calculation should not read the whole file in memory",
+    "createdAt" : "2020-11-17T18:38:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1227,
+    "title" : "Failing CI due to import path",
+    "createdAt" : "2020-11-27T11:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1230,
+    "title" : "New API: Revise \"update\"  methods in tuf/api/metadata.py",
+    "createdAt" : "2020-12-01T15:18:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1231,
+    "title" : "Expiration check does not follow the spec",
+    "createdAt" : "2020-12-02T19:21:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1241,
+    "title" : "New API: Add a constants module",
+    "createdAt" : "2020-12-14T15:45:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1243,
+    "title" : "GitHub Actions: Reinstate coveralls.io integration",
+    "createdAt" : "2020-12-17T10:22:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1244,
+    "title" : "GitHub Actions: Reinstate fossa.com integration",
+    "createdAt" : "2020-12-17T10:24:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1246,
+    "title" : "GitHub Actions: Consider hardening setup against CVE-2020-15228",
+    "createdAt" : "2020-12-17T10:58:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1247,
+    "title" : "GitHub Actions: Consider further caching in CI workflow",
+    "createdAt" : "2020-12-17T11:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1248,
+    "title" : "GitHub Actions: Find and implement fail-fast strategy",
+    "createdAt" : "2020-12-17T11:11:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1249,
+    "title" : "Fully automate updates in pinned requirements file",
+    "createdAt" : "2020-12-17T15:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1251,
+    "title" : "Client explicitly asks server to not compress data",
+    "createdAt" : "2020-12-22T18:49:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1255,
+    "title" : "tests: flaky windows server startup failure on github action",
+    "createdAt" : "2021-01-08T11:06:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1257,
+    "title" : "tests: localhost name lookup takes 1sec on Windows in github actions ",
+    "createdAt" : "2021-01-11T13:58:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1262,
+    "title" : "Fix simple typo: excepion -> exception",
+    "createdAt" : "2021-01-13T21:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1263,
+    "title" : "Support custom signing implementations in Metadata.sign method",
+    "createdAt" : "2021-01-14T11:18:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1266,
+    "title" : "Should we accept metadata that includes unrecognised fields?",
+    "createdAt" : "2021-01-19T16:59:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1267,
+    "title" : "Go-tuf (TUF 0.9) backwards compatibility ",
+    "createdAt" : "2021-01-21T08:25:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1269,
+    "title" : "Verifiably reproducible build artefacts",
+    "createdAt" : "2021-01-28T14:32:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1273,
+    "title" : "deprecate settings module",
+    "createdAt" : "2021-02-05T15:27:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1276,
+    "title" : "Make a final release supporting 2.7, then stop supporting EOL versions of Python",
+    "createdAt" : "2021-02-09T22:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1287,
+    "title" : "Unexpected Coveralls failures on github UI",
+    "createdAt" : "2021-02-17T13:14:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1290,
+    "title" : "Ugly pip resolver workaround in tox configuration",
+    "createdAt" : "2021-02-22T09:22:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1296,
+    "title" : "Remove use of six",
+    "createdAt" : "2021-03-03T09:54:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1297,
+    "title" : "Remove uses of `from __future__ import` ",
+    "createdAt" : "2021-03-03T09:58:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1303,
+    "title" : "Improve RequestsFetcher cleanup mechanisms",
+    "createdAt" : "2021-03-11T09:53:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1304,
+    "title" : "Remove `MetadataWrapper` class",
+    "createdAt" : "2021-03-12T10:55:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1305,
+    "title" : "Add 'expired' method to Signed class",
+    "createdAt" : "2021-03-12T12:22:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1306,
+    "title" : "Implement verification by a threshold of keys ",
+    "createdAt" : "2021-03-12T12:33:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1307,
+    "title" : "Split Updater into logical components: redesign mirrors.py and download.py",
+    "createdAt" : "2021-03-12T15:43:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1308,
+    "title" : "Split Updater into logical components: bundle metadata",
+    "createdAt" : "2021-03-12T15:49:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1309,
+    "title" : "Add/rewrite tests for the refactored client",
+    "createdAt" : "2021-03-12T15:57:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1310,
+    "title" : "Add consistent_snapshot to the client workflow",
+    "createdAt" : "2021-03-12T16:24:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1311,
+    "title" : "Record fixed update start time in client workflow ",
+    "createdAt" : "2021-03-12T16:27:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1312,
+    "title" : "review/document client exceptions",
+    "createdAt" : "2021-03-12T16:30:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1313,
+    "title" : "Keep track of currently valid set of metadata in Updater",
+    "createdAt" : "2021-03-12T16:42:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1316,
+    "title" : "fix imports (to be vendoring compatible) in client refactor",
+    "createdAt" : "2021-03-18T12:40:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1317,
+    "title" : "client refactor: consider API changes",
+    "createdAt" : "2021-03-18T13:07:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1318,
+    "title" : "client refactor: review file object handling",
+    "createdAt" : "2021-03-18T13:17:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1319,
+    "title" : "client refactor: review _get_*_meta_name() usage",
+    "createdAt" : "2021-03-18T13:31:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1320,
+    "title" : "Remove temporary commits ",
+    "createdAt" : "2021-03-23T15:44:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1332,
+    "title" : "Revise the disabling of broad-except pylint warning (W0703)",
+    "createdAt" : "2021-04-06T09:59:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1333,
+    "title" : "New API: Don't hardcode metadata files extension",
+    "createdAt" : "2021-04-06T10:50:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1334,
+    "title" : "Use lazy (old style %-format) log formatting in the new pylint config",
+    "createdAt" : "2021-04-06T11:38:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1335,
+    "title" : "lint/CI: Use mypy for static type checking",
+    "createdAt" : "2021-04-07T07:57:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1336,
+    "title" : "Implement from_object/from_string method in Metadata class",
+    "createdAt" : "2021-04-07T13:27:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1339,
+    "title" : "experimental client: download functions review",
+    "createdAt" : "2021-04-08T10:55:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1344,
+    "title" : "tests: WinError 32 on CI again",
+    "createdAt" : "2021-04-09T08:03:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1348,
+    "title" : "tests: test infrastructure (setup/teardown) improvements",
+    "createdAt" : "2021-04-12T14:16:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1349,
+    "title" : "Update python commands in documentation",
+    "createdAt" : "2021-04-14T09:59:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1350,
+    "title" : "Let's not use pre-release versions of tools in tox environments",
+    "createdAt" : "2021-04-14T11:59:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1351,
+    "title" : "Exceptions in metadata API, especially verify()",
+    "createdAt" : "2021-04-15T12:33:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1356,
+    "title" : "New metadata API: Validate dictionary keys as well as values",
+    "createdAt" : "2021-04-20T11:46:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1357,
+    "title" : "review metadata api docstrings before release",
+    "createdAt" : "2021-04-21T08:56:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1361,
+    "title" : "API : Add hash verification for timestamp/snapshot/targets",
+    "createdAt" : "2021-04-21T17:31:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1362,
+    "title" : "Metadata API: Targets.delegations should be optional",
+    "createdAt" : "2021-04-22T15:53:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1371,
+    "title" : "API: Make _type read-only",
+    "createdAt" : "2021-05-04T06:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1374,
+    "title" : "Metadata API: Root.consistent_snapshot should be optional",
+    "createdAt" : "2021-05-05T15:35:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1375,
+    "title" : "Metadata API: linting _type is an issue for API users",
+    "createdAt" : "2021-05-06T12:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1377,
+    "title" : "Metadata verification API tweaks",
+    "createdAt" : "2021-05-07T11:38:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1378,
+    "title" : "Metadata API: Root.add_key() is broken",
+    "createdAt" : "2021-05-07T14:56:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1384,
+    "title" : "Metadata API: stop using formats.py",
+    "createdAt" : "2021-05-12T06:13:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1385,
+    "title" : "ngclient: Proper public module documentation",
+    "createdAt" : "2021-05-12T06:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1388,
+    "title" : "Metadata file contains a key with an invalid keytype.",
+    "createdAt" : "2021-05-13T13:58:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1389,
+    "title" : "Metadata API: DelegatedRole fails to serialize correctly when paths=[]",
+    "createdAt" : "2021-05-14T10:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1391,
+    "title" : "Metadata API: comprehensive de/serialization testing",
+    "createdAt" : "2021-05-14T11:57:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1392,
+    "title" : "Document Metadata API: MetaFile hash matching issue with serialization",
+    "createdAt" : "2021-05-14T14:26:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1393,
+    "title" : "Metadata API: Move common metadata classes of TUF and In-toto in securesystemslib",
+    "createdAt" : "2021-05-14T16:19:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1397,
+    "title" : "Client refactor: directories and naming",
+    "createdAt" : "2021-05-18T09:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1398,
+    "title" : "ngclient: review _preorder_depth_first_walk()",
+    "createdAt" : "2021-05-19T16:07:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1399,
+    "title" : "ngclient: review download code",
+    "createdAt" : "2021-05-19T17:38:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1400,
+    "title" : "ngclient: Use %-style formatting in logging",
+    "createdAt" : "2021-05-20T06:23:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1402,
+    "title" : "ngclient: client-level constants",
+    "createdAt" : "2021-05-20T11:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1404,
+    "title" : "experimental client: Write a proper README that describes the package/directory",
+    "createdAt" : "2021-05-20T15:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1409,
+    "title" : "ngclient: type annotations review and mypy integration",
+    "createdAt" : "2021-05-21T12:11:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1410,
+    "title" : "ngclient: use MetaFile/TargetFile verification API when it exists",
+    "createdAt" : "2021-05-21T12:15:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1411,
+    "title" : "Metadata API: Consider including filename in TargetFile/MetaFile",
+    "createdAt" : "2021-05-21T12:27:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1412,
+    "title" : "ngclient: experiment with separating local target caching from updater",
+    "createdAt" : "2021-05-21T12:38:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1413,
+    "title" : "ngclient: Use Metadata APIs verify_with_threshold() when possible",
+    "createdAt" : "2021-05-21T13:55:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1414,
+    "title" : "Tests refactored code: reorganize testing in test_api",
+    "createdAt" : "2021-05-21T13:58:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1417,
+    "title" : "Metadata API: implement verify in Key, store id in key",
+    "createdAt" : "2021-05-26T08:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1418,
+    "title" : "Metadata Attribute research: version",
+    "createdAt" : "2021-05-26T08:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1419,
+    "title" : "Metadata Attribute research: spec_version",
+    "createdAt" : "2021-05-26T08:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1420,
+    "title" : "Metadata Attribute research: expires",
+    "createdAt" : "2021-05-26T08:14:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1422,
+    "title" : "Metadata API: enforce signature uniqueness by keyid",
+    "createdAt" : "2021-05-28T07:33:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1425,
+    "title" : "Metadata API: Consider if Metadata class should contain role name",
+    "createdAt" : "2021-05-31T07:40:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1426,
+    "title" : "Metadata API: enforce role name uniqueness in delegations",
+    "createdAt" : "2021-05-31T08:55:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1429,
+    "title" : "Metadata API: (maybe) Enforce public key content uniqueness in keys",
+    "createdAt" : "2021-05-31T12:51:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1431,
+    "title" : "Provide a way to generate test data with invalid content but valid signatures",
+    "createdAt" : "2021-06-01T18:04:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1433,
+    "title" : "Metadata API: Improve metadata.signed \"typing\" ",
+    "createdAt" : "2021-06-03T07:45:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1434,
+    "title" : "Metadata API: Tests (de)serialization with invalid arguments",
+    "createdAt" : "2021-06-03T10:15:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1438,
+    "title" : "Metadata Attribute research: KEY",
+    "createdAt" : "2021-06-07T15:47:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1439,
+    "title" : "Metadata Attribute research: Threshold",
+    "createdAt" : "2021-06-08T14:47:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1440,
+    "title" : "New Metadata API: Should we add logging?",
+    "createdAt" : "2021-06-09T11:02:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1441,
+    "title" : "api/metadata input validation: hashes",
+    "createdAt" : "2021-06-09T11:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1443,
+    "title" : "Metadata API: Timestamp should provide easy access to snapshot MetaFile",
+    "createdAt" : "2021-06-11T08:12:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1444,
+    "title" : "Improve testing using generated metadata",
+    "createdAt" : "2021-06-14T08:12:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1447,
+    "title" : "Metadata API: Add TargetFile.from_data()",
+    "createdAt" : "2021-06-15T11:17:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1452,
+    "title" : "MetaFile/TargetFile: ensure securesystemslib errors are all handled",
+    "createdAt" : "2021-06-16T19:15:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1458,
+    "title" : "Metadata API: Add Key.from_securesystemslib_key()?",
+    "createdAt" : "2021-06-21T13:14:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1459,
+    "title" : "Create constructor(s) for creating Metadata from scratch",
+    "createdAt" : "2021-06-21T15:18:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1461,
+    "title" : "Metadata Attribute validation: DelegationRole attributes",
+    "createdAt" : "2021-06-22T15:03:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1462,
+    "title" : "ngclient: Improve testing (status tracker issue)",
+    "createdAt" : "2021-06-22T15:36:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1464,
+    "title" : "Metadata API: Test unrecognized fields",
+    "createdAt" : "2021-06-23T08:59:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1465,
+    "title" : "ngclient TrustedMetadataSet: write tests to handling coverage report",
+    "createdAt" : "2021-06-23T10:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1469,
+    "title" : "Metadata API: Missing key helper functions in Targets/Delegations",
+    "createdAt" : "2021-06-28T12:07:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1471,
+    "title" : "Track licencing using SDPX headers",
+    "createdAt" : "2021-06-29T14:47:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1476,
+    "title" : "Refactor idea: type hinting",
+    "createdAt" : "2021-07-01T16:47:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1478,
+    "title" : "Metadata API: Role keyids is not ordered",
+    "createdAt" : "2021-07-02T13:16:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1479,
+    "title" : "ngclient: support HASH.FILENAME.EXT for downloading targets",
+    "createdAt" : "2021-07-05T07:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1482,
+    "title" : "Docs: Enable continuous documentation build",
+    "createdAt" : "2021-07-05T16:52:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1483,
+    "title" : "ngclient: remove URL normalization",
+    "createdAt" : "2021-07-06T11:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1484,
+    "title" : "ngclient: consider removing SLEEP_BEFORE_ROUND",
+    "createdAt" : "2021-07-06T11:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1485,
+    "title" : "Test [de]serialization of metadata with more than one item in each container and zero items (where valid)",
+    "createdAt" : "2021-07-06T14:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1487,
+    "title" : "Metadata API: Add Metadata.to_bytes()",
+    "createdAt" : "2021-07-09T07:22:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1491,
+    "title" : "licensing issues with code from Thandy",
+    "createdAt" : "2021-07-12T10:53:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1492,
+    "title" : "tests: reconsider encrypted private keys",
+    "createdAt" : "2021-07-13T08:19:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1497,
+    "title" : "Metadata API: validate that \"paths\" or \"path_hash_prefixes\" is set",
+    "createdAt" : "2021-07-15T16:13:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1498,
+    "title" : "ngclient: improve rollback protection",
+    "createdAt" : "2021-07-15T16:32:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1499,
+    "title" : "ngclient Updater: write tests to handling coverage report ",
+    "createdAt" : "2021-07-15T19:38:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1502,
+    "title" : "ngclient requestsfetcher result when length > max_length",
+    "createdAt" : "2021-07-20T09:50:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1504,
+    "title" : "improve \"generic\" Metadata module documentation",
+    "createdAt" : "2021-07-20T13:59:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1505,
+    "title" : "ngclient: implement glob-like pattern matching",
+    "createdAt" : "2021-07-22T09:27:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1506,
+    "title" : "ngclient: avoid lstrip(os.sep) on target paths",
+    "createdAt" : "2021-07-23T13:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1507,
+    "title" : "ngclient: return loaded metadata from Updater._load_targets",
+    "createdAt" : "2021-07-23T13:25:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1516,
+    "title" : "Metadata API validation: validate root roles dictionary content",
+    "createdAt" : "2021-08-09T08:45:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1518,
+    "title" : "docs: tutorial/example for ngclient Updater",
+    "createdAt" : "2021-08-10T07:55:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1523,
+    "title" : "ngclient: review snapshot hashes/length check",
+    "createdAt" : "2021-08-18T08:30:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1525,
+    "title" : "docs: remove docs/ROADMAP.md (or update it)",
+    "createdAt" : "2021-08-19T13:11:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1526,
+    "title" : "ngclient: persist metadata in a safer way",
+    "createdAt" : "2021-08-20T15:08:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1527,
+    "title" : "Metadata API: Delegation role names validation",
+    "createdAt" : "2021-08-20T18:14:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1528,
+    "title" : "ngclient: skipping visited roles",
+    "createdAt" : "2021-08-22T13:45:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1538,
+    "title" : "root version does not increase when top-level keys are updated",
+    "createdAt" : "2021-08-24T17:21:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1543,
+    "title" : "Improve ngclient/metadata docs ",
+    "createdAt" : "2021-08-26T08:17:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1550,
+    "title" : "Automated release builds",
+    "createdAt" : "2021-08-29T15:50:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1552,
+    "title" : "ngclient coverage: SlowRetrievalError testing",
+    "createdAt" : "2021-08-30T13:17:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1555,
+    "title" : "Rename to python-tuf",
+    "createdAt" : "2021-08-31T09:11:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1556,
+    "title" : "ngclient: feature request \"download target as bytes\"",
+    "createdAt" : "2021-09-01T10:22:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1558,
+    "title" : "Metadata API: prevent Delegation role names to be one of top level metadata roles",
+    "createdAt" : "2021-09-01T13:01:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1560,
+    "title" : "Scope of Metadata Management (MM) and Third Party MM projects",
+    "createdAt" : "2021-09-01T15:55:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1562,
+    "title" : "ngclient: prevent using rolenames as filenames if they are dangerous",
+    "createdAt" : "2021-09-02T12:06:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1563,
+    "title" : "ngclient: recent rollback checks are buggy",
+    "createdAt" : "2021-09-02T14:31:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1568,
+    "title" : "docs: python-tuf version should be visible in docs (readthedocs)",
+    "createdAt" : "2021-09-06T13:19:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1570,
+    "title" : "ngclient: handle readtimeout on session.get()",
+    "createdAt" : "2021-09-08T07:41:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1571,
+    "title" : "ngclient: downloading targets fails if  targetpath includes subdirectories",
+    "createdAt" : "2021-09-08T08:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1573,
+    "title" : "tests: consistent_snapshot tests in test_updater_ng.py are broken",
+    "createdAt" : "2021-09-08T11:09:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1575,
+    "title" : "ngclient: should clean temp file if write fails",
+    "createdAt" : "2021-09-08T13:18:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1576,
+    "title" : "ngclient: consistent targets handled differently than legacy updater",
+    "createdAt" : "2021-09-10T11:03:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1577,
+    "title" : "ngclient: max_root_rotations value is very small",
+    "createdAt" : "2021-09-10T14:01:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1578,
+    "title" : "ngclient: top-level targets is unnecessarily updated twice",
+    "createdAt" : "2021-09-10T14:44:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1579,
+    "title" : "Design test strategy",
+    "createdAt" : "2021-09-14T20:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1580,
+    "title" : "ngclient: reveal final form (finish API changes)",
+    "createdAt" : "2021-09-15T07:53:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1582,
+    "title" : "tests: Start linting tests",
+    "createdAt" : "2021-09-15T11:21:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1594,
+    "title" : "ngclient updater: API functions argument validation",
+    "createdAt" : "2021-09-27T14:52:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1595,
+    "title" : "docs: standardize how we refer to methods in docstrings",
+    "createdAt" : "2021-09-29T07:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1597,
+    "title" : "Create migration guide prior to 1.0",
+    "createdAt" : "2021-09-30T10:59:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1598,
+    "title" : "Develop a process for keeping `metadata.SPECIFICATION_VERSION` up-to-date",
+    "createdAt" : "2021-09-30T11:06:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1599,
+    "title" : "metadata API: add missing arguments docs",
+    "createdAt" : "2021-10-01T11:36:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1600,
+    "title" : "Metadata API: Improve docstrings language",
+    "createdAt" : "2021-10-01T12:10:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1601,
+    "title" : "ngclient: Document internal details (maybe)",
+    "createdAt" : "2021-10-01T12:21:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1602,
+    "title" : "metadata API: TargetFile.custom is not visible in documentation",
+    "createdAt" : "2021-10-01T12:27:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1606,
+    "title" : "ngclient testing: client workflow sequences",
+    "createdAt" : "2021-10-06T13:18:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1607,
+    "title" : "tests: Updater key rotation tests",
+    "createdAt" : "2021-10-07T07:58:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1612,
+    "title" : "repository design: survey existing implementation",
+    "createdAt" : "2021-10-12T12:12:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1613,
+    "title" : "New implementation: do we need a separate DEFAULT_HASH_ALGORITHM config option in TUF?",
+    "createdAt" : "2021-10-12T15:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1614,
+    "title" : "Test utils fail on every OS when using Python version 3.10",
+    "createdAt" : "2021-10-13T07:16:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1615,
+    "title" : "RepositorySimulator: add support for serving invalid metadata",
+    "createdAt" : "2021-10-13T07:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1617,
+    "title" : "CI / windows: deprecation warnings from tox",
+    "createdAt" : "2021-10-13T12:39:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1627,
+    "title" : "Metadata API: Consider removing 'update()' methods",
+    "createdAt" : "2021-10-20T16:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1629,
+    "title" : "update branch protection rules?",
+    "createdAt" : "2021-10-21T11:45:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1632,
+    "title" : "https://github.com/faisalman/ua-parser-js/issues/536",
+    "createdAt" : "2021-10-24T16:20:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1633,
+    "title" : "advertize type annotations ",
+    "createdAt" : "2021-10-24T18:01:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1634,
+    "title" : "ngclient: consistently encode URLs",
+    "createdAt" : "2021-10-25T07:25:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1637,
+    "title" : "RepositorySimulator: implement non-consistent snapshot ",
+    "createdAt" : "2021-10-26T11:09:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1638,
+    "title" : "ngclient: review argument names",
+    "createdAt" : "2021-10-27T06:30:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1639,
+    "title" : "RepositorySimulator: add support for delegated hash bins",
+    "createdAt" : "2021-10-27T07:49:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1640,
+    "title" : "ngtests: ensure tests cover known attacks on package managers",
+    "createdAt" : "2021-10-27T07:56:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1641,
+    "title" : "ngtests: Add tests for delegated roles metadata update",
+    "createdAt" : "2021-10-27T08:09:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1642,
+    "title" : "ngtests: add tests for fetching targets",
+    "createdAt" : "2021-10-27T08:13:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1643,
+    "title" : "ngtests: test complex delegation graphs",
+    "createdAt" : "2021-10-27T08:20:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1644,
+    "title" : "ngtests: add input validation tests for Updater API",
+    "createdAt" : "2021-10-27T08:33:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1645,
+    "title" : "Version 1.0 release strategy",
+    "createdAt" : "2021-10-27T10:52:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1646,
+    "title" : "metadata API: avoid raising securesystemslib exceptions",
+    "createdAt" : "2021-10-27T16:31:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1647,
+    "title" : "tests: ngclient non-root key rotations",
+    "createdAt" : "2021-10-27T18:00:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1648,
+    "title" : "metadata API: Constants for top-level rolenames",
+    "createdAt" : "2021-10-28T07:53:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1650,
+    "title" : "ngclient: Make refresh() optional",
+    "createdAt" : "2021-10-29T09:25:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1651,
+    "title" : "RepositorySimulator: inconsistent behaviour of compute_metafile_hashes_length ",
+    "createdAt" : "2021-10-29T11:46:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1653,
+    "title" : "Increase the usage of augmented assignment statements",
+    "createdAt" : "2021-11-02T07:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1656,
+    "title" : "New implementation tests: apply black and isort automatic linting fixes",
+    "createdAt" : "2021-11-02T16:57:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1657,
+    "title" : "New implementation test files: resolve linting issues discovered by pylint and mypy",
+    "createdAt" : "2021-11-02T17:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1660,
+    "title" : "New style guidelines: should we ban the usage of assertRaises in testing?",
+    "createdAt" : "2021-11-03T09:56:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1661,
+    "title" : "re-enable fossa integration (or remove .fossa.yml)",
+    "createdAt" : "2021-11-03T12:42:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1662,
+    "title" : "github actions: set workflow permissions to read-only",
+    "createdAt" : "2021-11-04T09:13:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1665,
+    "title" : "Metadata API: Metadata \"factory\" constructors misbehave with inheritance",
+    "createdAt" : "2021-11-08T14:01:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1667,
+    "title" : "ngtests: add tests toggling consistent snapshot",
+    "createdAt" : "2021-11-08T14:47:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1669,
+    "title" : "ngtests: improve _assert* methods",
+    "createdAt" : "2021-11-09T12:45:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1673,
+    "title" : "Docs: Add repository tutorial based on metadata API",
+    "createdAt" : "2021-11-12T13:48:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1676,
+    "title" : "Add 1.0.0 announcement / migration help",
+    "createdAt" : "2021-11-15T10:30:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1678,
+    "title" : "metadata api: Signed.expires string representation should not contain microseconds  ",
+    "createdAt" : "2021-11-16T11:43:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1679,
+    "title" : "Write ADR for repository library design",
+    "createdAt" : "2021-11-16T11:50:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1681,
+    "title" : "ngtests: test loading of cached metadata",
+    "createdAt" : "2021-11-17T09:52:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1682,
+    "title" : "RepositorySimulator: add trackers/counters for downloaded files",
+    "createdAt" : "2021-11-17T16:44:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1684,
+    "title" : "Configure black and isort only once in pyproject.toml",
+    "createdAt" : "2021-11-18T10:36:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1692,
+    "title" : "Implement native support from GHA for pip caching with python-setup.",
+    "createdAt" : "2021-11-24T01:01:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1694,
+    "title" : "Release 0.20.0 (last release before 1.0.0)",
+    "createdAt" : "2021-11-24T10:47:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1696,
+    "title" : "Metadata API: Provide a way to validate object when serializing to dictionary",
+    "createdAt" : "2021-11-26T11:50:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1697,
+    "title" : "examples: run mypy on repo example",
+    "createdAt" : "2021-11-30T07:43:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1709,
+    "title" : "doc: misc enhancements to contributors",
+    "createdAt" : "2021-12-06T10:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1713,
+    "title" : "ngclient: test fast-forward recovery",
+    "createdAt" : "2021-12-08T10:53:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1714,
+    "title" : "ngclient: decide what to do with requests (Fetcher impl) errors",
+    "createdAt" : "2021-12-08T12:58:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1716,
+    "title" : "Add the examples/client_example to RTD",
+    "createdAt" : "2021-12-08T14:29:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1717,
+    "title" : "Create simple test for examples/client_example",
+    "createdAt" : "2021-12-08T14:37:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1719,
+    "title" : "Improve subtests clean up",
+    "createdAt" : "2021-12-09T14:12:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1722,
+    "title" : "Metadata API: Remove dependency on dateutil",
+    "createdAt" : "2021-12-13T08:35:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1727,
+    "title" : "Metadata API: rethink the expiry related API",
+    "createdAt" : "2021-12-14T09:47:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1729,
+    "title" : "What to do with tuf/exceptions before 1.0.0?",
+    "createdAt" : "2021-12-14T15:08:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1730,
+    "title" : "ngclient: test data length limits",
+    "createdAt" : "2021-12-15T08:14:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1733,
+    "title" : "Improve docstrings on exceptions",
+    "createdAt" : "2021-12-17T16:45:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1737,
+    "title" : "docs: TargetFile should be explicit about what is hashed",
+    "createdAt" : "2021-12-20T15:15:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1739,
+    "title" : "docs: relative links in README 404 on PyPI project page",
+    "createdAt" : "2021-12-21T10:43:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1745,
+    "title" : "Remove \"legacy code\"",
+    "createdAt" : "2021-12-22T11:56:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1746,
+    "title" : "Add tests of metadata max length and endless data attack protection",
+    "createdAt" : "2021-12-23T12:36:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1747,
+    "title" : "Testing specific sequences the client should be able to handle ",
+    "createdAt" : "2021-12-23T12:54:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1748,
+    "title" : "Revise test_updater_ng.py",
+    "createdAt" : "2021-12-23T13:05:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1751,
+    "title" : "spec version incompatibility",
+    "createdAt" : "2022-01-04T10:20:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1752,
+    "title" : "role keyids still not ordered",
+    "createdAt" : "2022-01-04T13:42:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1753,
+    "title" : "tests: test_update_root_new_root_fail_threshold_verification is misleading",
+    "createdAt" : "2022-01-05T09:42:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1756,
+    "title" : "ngclient: Test against other implementations",
+    "createdAt" : "2022-01-05T15:06:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1761,
+    "title" : "ngclient: throws securesystemslib errors",
+    "createdAt" : "2022-01-10T08:31:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1763,
+    "title" : "specification has new version",
+    "createdAt" : "2022-01-11T13:26:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1764,
+    "title" : "Review all TODO items in the new implementation prior to 1.0.0",
+    "createdAt" : "2022-01-11T14:12:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1770,
+    "title" : "doc: Is it okay to remove spec \"forwarders\"?",
+    "createdAt" : "2022-01-13T16:21:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1778,
+    "title" : "Do we need a new MissingInformationError/MissingMetadataError?",
+    "createdAt" : "2022-01-18T14:12:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1779,
+    "title" : "Do we need a new (Metadata)TypeError?",
+    "createdAt" : "2022-01-18T14:16:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1782,
+    "title" : "doc: post-1.0.0 roadmap for python-tuf",
+    "createdAt" : "2022-01-19T15:01:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1784,
+    "title" : "Generic exceptions vs Specific exceptions",
+    "createdAt" : "2022-01-19T17:53:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1785,
+    "title" : "Builtin vs custom exceptions",
+    "createdAt" : "2022-01-19T18:00:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1786,
+    "title" : "Should we rename any of the exceptions names?",
+    "createdAt" : "2022-01-19T18:13:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1788,
+    "title" : "Dict comparisons insensitive to order",
+    "createdAt" : "2022-01-21T10:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1789,
+    "title" : "Source not available on coveralls.io",
+    "createdAt" : "2022-01-21T10:40:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1791,
+    "title" : "tox warns on windows that python3 is not installed in testenv",
+    "createdAt" : "2022-01-24T08:25:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1793,
+    "title" : "Yearly maintainer list cleanup",
+    "createdAt" : "2022-01-24T13:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1795,
+    "title" : "doc: remove/reword announcement about upcoming 1.0.0 on release",
+    "createdAt" : "2022-01-26T08:57:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1797,
+    "title" : "doc: consider re-adding a \"quickstart\" document",
+    "createdAt" : "2022-01-26T09:09:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1798,
+    "title" : "doc: consider re-adding python-tuf attack protection demo",
+    "createdAt" : "2022-01-26T09:24:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1801,
+    "title" : "maybe rename readthedocs subdomain?",
+    "createdAt" : "2022-01-27T08:49:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1802,
+    "title" : "Should we allow unrecognized fields for the signatures dictionaries?",
+    "createdAt" : "2022-01-27T11:20:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1804,
+    "title" : "ngclient: make update progress easier to follow in logs",
+    "createdAt" : "2022-01-28T07:51:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1806,
+    "title" : "tests: static test data generation",
+    "createdAt" : "2022-01-28T10:39:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1807,
+    "title" : "docs: Remove AUTHORS.txt (or make it up-to-date)",
+    "createdAt" : "2022-01-28T14:46:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1811,
+    "title" : "lints: new black complains",
+    "createdAt" : "2022-01-31T12:44:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1812,
+    "title" : "Strange behavior from Metadata.sign() and Metadata.to_file()",
+    "createdAt" : "2022-01-31T18:32:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1813,
+    "title" : "build: let's start pinning dev requirements (?)",
+    "createdAt" : "2022-02-01T10:19:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1816,
+    "title" : "Metadata API: verify_signature() should handle SerializationError",
+    "createdAt" : "2022-02-02T14:36:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1817,
+    "title" : "Metadata API: verify_delegate() should document errors",
+    "createdAt" : "2022-02-02T14:38:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1818,
+    "title" : "Metadata API: from_securesystemslib_key() should handle sslib error",
+    "createdAt" : "2022-02-02T14:42:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1819,
+    "title" : "Document exceptions for __init__ and from_dict() methods in Metadata API",
+    "createdAt" : "2022-02-02T15:12:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1822,
+    "title" : "github: re-enable pip caching",
+    "createdAt" : "2022-02-04T08:49:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1826,
+    "title" : "github: start pinning actions versions",
+    "createdAt" : "2022-02-05T10:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1828,
+    "title" : "Dependabot does not work",
+    "createdAt" : "2022-02-07T07:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1833,
+    "title" : "build: missing license field somewhere (setup.cfg?)",
+    "createdAt" : "2022-02-08T09:01:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1841,
+    "title" : "Black doesn't warn about long lines inside function docstrings",
+    "createdAt" : "2022-02-08T15:00:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1842,
+    "title" : "Review coverage report about non-tested statements",
+    "createdAt" : "2022-02-08T15:15:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1844,
+    "title" : "Review ngclient documentation",
+    "createdAt" : "2022-02-09T09:39:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1845,
+    "title" : "Write 1.0 changelog / release notes",
+    "createdAt" : "2022-02-09T10:14:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1846,
+    "title" : "Update installation instructions",
+    "createdAt" : "2022-02-09T10:30:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1847,
+    "title" : "Rename CONTRIBUTORS.rst to CONTRIBUTING.rst",
+    "createdAt" : "2022-02-09T10:36:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1849,
+    "title" : "Restructure docs directory",
+    "createdAt" : "2022-02-09T13:48:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1852,
+    "title" : "Add support for unrecognized_fields inside Metadata",
+    "createdAt" : "2022-02-09T16:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1854,
+    "title" : "Yearly maintainer permissions review",
+    "createdAt" : "2022-02-10T10:27:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1857,
+    "title" : "compatibility: bottlerocket metadata uses microseconds in expiry",
+    "createdAt" : "2022-02-11T17:34:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1858,
+    "title" : "compatibility: sigstore metadata expiry is incompatible",
+    "createdAt" : "2022-02-11T17:46:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1859,
+    "title" : "compatibility: go-tuf ecdsa key format is incompatible",
+    "createdAt" : "2022-02-12T09:07:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1862,
+    "title" : "example-client: better error handling",
+    "createdAt" : "2022-02-14T09:10:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1866,
+    "title" : "Metadata API: handle malformed keys better",
+    "createdAt" : "2022-02-15T08:35:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1874,
+    "title" : "tox run with latest securesystemslib changes doesn't seem to work",
+    "createdAt" : "2022-02-18T14:13:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1875,
+    "title" : "Provide more information when Key.verify_signature() fails",
+    "createdAt" : "2022-02-18T14:42:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1884,
+    "title" : "project blog: setup",
+    "createdAt" : "2022-02-23T11:59:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1885,
+    "title" : "blog: \"how we test ngclient compliance\"",
+    "createdAt" : "2022-02-23T12:07:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1893,
+    "title" : "MetaFile is missing from_bytes() or equivalent",
+    "createdAt" : "2022-03-02T13:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1894,
+    "title" : "Reconsider keyid \"compliance\"",
+    "createdAt" : "2022-03-02T13:53:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1899,
+    "title" : "Rethink strategy for pinning test dependencies",
+    "createdAt" : "2022-03-09T10:43:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1901,
+    "title" : "examples not included in sdist",
+    "createdAt" : "2022-03-09T15:18:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1903,
+    "title" : "Replace manual path construction with \"os.path.join\"",
+    "createdAt" : "2022-03-10T16:16:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1909,
+    "title" : "TAP 15 (succinct hashed bin delegations) implementation",
+    "createdAt" : "2022-03-18T11:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1912,
+    "title" : "Support HSM signing",
+    "createdAt" : "2022-03-21T10:20:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1916,
+    "title" : "Fetcher docs should make it clear what needs to be implemented",
+    "createdAt" : "2022-03-23T07:53:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1920,
+    "title" : "Add some more generated metadata files",
+    "createdAt" : "2022-03-23T13:13:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1921,
+    "title" : "Testing with old and new generated metadata files",
+    "createdAt" : "2022-03-23T15:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1937,
+    "title" : "unrecognised_fields default value vs empty container",
+    "createdAt" : "2022-04-04T09:13:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1938,
+    "title" : "unrecognized_fields is annotated as Mapping but maybe should be just Dict",
+    "createdAt" : "2022-04-04T09:20:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1942,
+    "title" : "verify_release assumes clean source dir",
+    "createdAt" : "2022-04-06T11:16:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1943,
+    "title" : "Relying on mandatory DelegatedRole.name attribute when TAP 15 describes it as optional",
+    "createdAt" : "2022-04-06T13:00:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1952,
+    "title" : "Provide API to handle hashed bin delegations math",
+    "createdAt" : "2022-04-13T13:25:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1956,
+    "title" : "Document a deprecation strategy",
+    "createdAt" : "2022-04-14T11:09:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1959,
+    "title" : "specification has new version",
+    "createdAt" : "2022-04-19T13:37:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1961,
+    "title" : "ci/cd: make workflow pipeline more robust",
+    "createdAt" : "2022-04-20T08:29:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1966,
+    "title" : "cd: re-enable release signing",
+    "createdAt" : "2022-04-21T10:32:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1967,
+    "title" : "cd: consider replacing 3rd-party GitHub actions",
+    "createdAt" : "2022-04-21T10:43:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1968,
+    "title" : "cd:  auto-generate release notes for GitHub release page",
+    "createdAt" : "2022-04-21T10:53:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1969,
+    "title" : "cd: workflow could have a permissions section",
+    "createdAt" : "2022-04-21T10:56:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1981,
+    "title" : "verify_release hangs",
+    "createdAt" : "2022-04-27T14:17:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1984,
+    "title" : "build: reproducibility issue with hatch version",
+    "createdAt" : "2022-04-28T07:18:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1988,
+    "title" : "reconsider types-requests dependency",
+    "createdAt" : "2022-04-28T11:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1992,
+    "title" : "specification has new version",
+    "createdAt" : "2022-04-29T13:39:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1995,
+    "title" : "RFE: expose delegated metadata to client application",
+    "createdAt" : "2022-05-04T08:28:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 1999,
+    "title" : "ngclient: temp_file could be undefined",
+    "createdAt" : "2022-05-09T08:49:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2014,
+    "title" : "document dependabot PR review strategy",
+    "createdAt" : "2022-06-01T08:09:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2020,
+    "title" : "Must signed.version be incremented every time a role is re-signed?",
+    "createdAt" : "2022-06-08T13:13:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2023,
+    "title" : "ngclient: used trusted timestamp if new has equal version ",
+    "createdAt" : "2022-06-13T09:43:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2030,
+    "title" : "deps: hatchling update",
+    "createdAt" : "2022-06-16T13:31:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2040,
+    "title" : "Implement TAP 14",
+    "createdAt" : "2022-06-24T15:04:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2047,
+    "title" : "DownloadLengthMismatchError because requests automatically decodes gzip files",
+    "createdAt" : "2022-07-04T14:32:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2052,
+    "title" : "How to perform modifications on bins handled by succinct hash bin delegations?",
+    "createdAt" : "2022-07-07T17:59:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2056,
+    "title" : "The client-example has a confusing return for the `download` function.",
+    "createdAt" : "2022-07-14T09:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2070,
+    "title" : "finally remove setup.py",
+    "createdAt" : "2022-08-09T13:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2071,
+    "title" : "Try constructor improvements for Delegations/ delegated roles ",
+    "createdAt" : "2022-08-11T16:01:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2072,
+    "title" : "Provide a way to customize the default Requests session",
+    "createdAt" : "2022-08-11T17:00:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2073,
+    "title" : "Create a `class HttpxFetcher(FetcherInterface)` for `httpx`",
+    "createdAt" : "2022-08-11T17:02:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2074,
+    "title" : "`requests_fetcher` fails on `file:///` URIs because of `urlparse` fails on them",
+    "createdAt" : "2022-08-11T17:17:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2077,
+    "title" : "design spec_version updates",
+    "createdAt" : "2022-08-13T09:28:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2082,
+    "title" : "Build dependency hatchling: use 1.x versions",
+    "createdAt" : "2022-08-20T14:13:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2089,
+    "title" : "spec version check fails",
+    "createdAt" : "2022-08-29T12:53:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2093,
+    "title" : "Implement DSSE bridge?",
+    "createdAt" : "2022-09-01T08:12:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2096,
+    "title" : "Create a security policy",
+    "createdAt" : "2022-09-06T15:37:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2112,
+    "title" : "TUF specification has a new version - v1.0.31",
+    "createdAt" : "2022-09-21T13:58:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2116,
+    "title" : "review token permissions (based on openssf scorecard recommendations)",
+    "createdAt" : "2022-09-26T07:32:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2136,
+    "title" : "Incorrect metapath length validation",
+    "createdAt" : "2022-10-12T10:47:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2140,
+    "title" : "securesystemslib import fails",
+    "createdAt" : "2022-10-18T13:07:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2144,
+    "title" : "github action \"set-output\" will be deprecated",
+    "createdAt" : "2022-10-21T06:29:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2152,
+    "title" : "updated Readme.md",
+    "createdAt" : "2022-10-25T17:19:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2160,
+    "title" : "Publish OSSF Scorecard results",
+    "createdAt" : "2022-10-31T13:41:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2161,
+    "title" : "Sort `roles` dict by keys when serializing",
+    "createdAt" : "2022-11-01T13:50:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2166,
+    "title" : "Allow generation of hash-prefixed versions of `TargetFile`s",
+    "createdAt" : "2022-11-04T17:42:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2167,
+    "title" : "docs: Include the relevant securesystemslib classes in docs",
+    "createdAt" : "2022-11-05T10:48:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2168,
+    "title" : "aggregate_tests.py fails",
+    "createdAt" : "2022-11-06T17:12:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2171,
+    "title" : "verify_release is missing annotation",
+    "createdAt" : "2022-11-08T14:49:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2172,
+    "title" : "coveralls-fin workflow job sometimes fails",
+    "createdAt" : "2022-11-08T15:20:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2195,
+    "title" : "ngclient should cope better with broken repos",
+    "createdAt" : "2022-11-27T10:49:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2196,
+    "title" : "code uses python 2 \"__metaclass__\"",
+    "createdAt" : "2022-11-28T09:19:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2206,
+    "title" : "Examples: ship bootstrap root.jsons for well-known repositories",
+    "createdAt" : "2022-12-05T10:31:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2212,
+    "title" : "build: Stop depending on action-gh-release",
+    "createdAt" : "2022-12-07T13:47:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2216,
+    "title" : "windows tests fail",
+    "createdAt" : "2022-12-09T14:51:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2218,
+    "title" : "tests: Update to tox 4.x",
+    "createdAt" : "2022-12-09T17:49:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2225,
+    "title" : "ngclient feature: Add option to only update metadata if needed",
+    "createdAt" : "2022-12-14T18:59:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2228,
+    "title" : "repository module: Add tests",
+    "createdAt" : "2022-12-17T21:17:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2229,
+    "title" : "repository example: Extend the example with uploader tool",
+    "createdAt" : "2022-12-17T21:20:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2235,
+    "title" : "Being more explicit with documenting public API",
+    "createdAt" : "2022-12-19T09:00:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2247,
+    "title" : "ngclient: reconsider use of Optional",
+    "createdAt" : "2022-12-23T07:50:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2254,
+    "title" : "coveralls publish fails on CI",
+    "createdAt" : "2023-01-02T11:02:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2264,
+    "title" : "Make new release",
+    "createdAt" : "2023-01-11T09:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2268,
+    "title" : "ngclient `RequestsFetcher`: make timeout part of the public API",
+    "createdAt" : "2023-01-12T18:43:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2272,
+    "title" : "refactor Metadata._get_role_and_keys()",
+    "createdAt" : "2023-01-13T12:22:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2299,
+    "title" : "Yearly maintainer permissions review",
+    "createdAt" : "2023-02-10T10:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2304,
+    "title" : "Delegated path pattern does not match the target path in basic_repo.py",
+    "createdAt" : "2023-02-16T11:07:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2307,
+    "title" : "Snapshot and Timestamp default content",
+    "createdAt" : "2023-02-23T18:14:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2308,
+    "title" : "Repository: make some propertiess not required",
+    "createdAt" : "2023-02-24T12:46:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2309,
+    "title" : "metadata API: Improve exception handling in Metadata.sign()",
+    "createdAt" : "2023-02-25T12:12:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2311,
+    "title" : "potential repository design tweaks",
+    "createdAt" : "2023-02-26T09:28:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2312,
+    "title" : "git-repo: Add action to validate signing event PRs",
+    "createdAt" : "2023-02-27T09:22:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2325,
+    "title" : "Prototype support for content addressable systems such as IPFS",
+    "createdAt" : "2023-03-07T17:39:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2326,
+    "title" : "GitHub \"required checks\" is somehow not up-to-date",
+    "createdAt" : "2023-03-08T07:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2359,
+    "title" : "Implementation of Offline mode for TUF ",
+    "createdAt" : "2023-04-16T18:23:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2361,
+    "title" : "move verify_delegate() from Metadata to Signed",
+    "createdAt" : "2023-04-17T16:26:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2370,
+    "title" : "Use PyPI Trusted publishing",
+    "createdAt" : "2023-04-27T12:34:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2382,
+    "title" : "New release",
+    "createdAt" : "2023-05-05T11:19:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2385,
+    "title" : "Support DSSE in client and metadata API.",
+    "createdAt" : "2023-05-08T13:13:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2386,
+    "title" : "Update RELEASE.md to mention Trusted Publishing",
+    "createdAt" : "2023-05-09T08:46:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2388,
+    "title" : "verify_release: Fix issue with draft releases no showing up",
+    "createdAt" : "2023-05-09T10:53:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2393,
+    "title" : "metadata API: serialization is missing a final newline",
+    "createdAt" : "2023-05-16T11:13:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2394,
+    "title" : "TUF specification has a new version - v1.0.32",
+    "createdAt" : "2023-05-16T13:21:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2410,
+    "title" : "Metadata API Root.roles should be a normal dict",
+    "createdAt" : "2023-06-16T06:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2438,
+    "title" : "repository: Tweak snapshot/timestamp triggers",
+    "createdAt" : "2023-08-10T12:18:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2439,
+    "title" : "Include version comments in GH action uses-lines",
+    "createdAt" : "2023-08-11T09:38:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2442,
+    "title" : "ngclient: Increase default network timeout",
+    "createdAt" : "2023-08-11T11:19:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2444,
+    "title" : "failure in with-sslib-main tests after recent securesystemslib refactoring",
+    "createdAt" : "2023-08-14T12:55:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2449,
+    "title" : "Metadata API: add `_Delegator.get_delegate_signing_status()`",
+    "createdAt" : "2023-08-24T14:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2452,
+    "title" : "blog post about choosing your repository implementation",
+    "createdAt" : "2023-08-31T09:23:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2471,
+    "title" : "ngclient: Make updater.config immutable",
+    "createdAt" : "2023-09-27T06:45:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2487,
+    "title" : "workflows: revert v2 pinning for scorecard-action",
+    "createdAt" : "2023-10-09T15:06:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2489,
+    "title" : "tests: remove obsolete test metadata",
+    "createdAt" : "2023-10-10T07:43:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2493,
+    "title" : "repository: redesign needed after recent verify_delegate changes",
+    "createdAt" : "2023-10-17T13:21:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2499,
+    "title" : "build: Enable python 3.12",
+    "createdAt" : "2023-10-23T07:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2529,
+    "title" : "investigate alternative hatchling version pinning ",
+    "createdAt" : "2023-12-13T09:12:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2539,
+    "title" : "Consider including `securesystemslib[crypto]` as a dependency in TUF",
+    "createdAt" : "2023-12-28T22:59:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2544,
+    "title" : "VerificationResult should include keys for keyids",
+    "createdAt" : "2024-01-19T13:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2550,
+    "title" : "Replace most linting tools with ruff",
+    "createdAt" : "2024-02-01T16:41:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2552,
+    "title" : "repository: maybe provide a Repository.get_delegating_role()",
+    "createdAt" : "2024-02-04T09:55:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2554,
+    "title" : "Yearly maintainer permissions review",
+    "createdAt" : "2024-02-10T10:23:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2564,
+    "title" : "Change `securesystemslib.dsse.Envelope.signatures` to dict upstream",
+    "createdAt" : "2024-02-21T16:10:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2565,
+    "title" : "Test all components with DSSE",
+    "createdAt" : "2024-02-21T16:11:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2566,
+    "title" : "Test \"ruff check --output-format=github\"",
+    "createdAt" : "2024-02-21T16:32:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2567,
+    "title" : "linting: Enable more ruff rulesets ",
+    "createdAt" : "2024-02-21T19:39:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2568,
+    "title" : "linting: enable pycodestyle for tests",
+    "createdAt" : "2024-02-21T19:45:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2572,
+    "title" : "datetime.utcnow() is deprecated: stop using it",
+    "createdAt" : "2024-02-26T09:00:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2598,
+    "title" : "SimpleEnvelope._DEFAULT_PAYLOAD_TYPE should be public?",
+    "createdAt" : "2024-04-03T12:46:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2604,
+    "title" : "should build job require prior test job to pass? ",
+    "createdAt" : "2024-04-12T08:09:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2605,
+    "title" : "possible blog post: Caching TUF metadata",
+    "createdAt" : "2024-04-12T11:41:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2611,
+    "title" : "provide user-agent customization?",
+    "createdAt" : "2024-04-19T12:16:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2618,
+    "title" : "workflows: macos runners are missing older pythons",
+    "createdAt" : "2024-04-24T15:47:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2625,
+    "title" : "next release",
+    "createdAt" : "2024-05-07T08:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2631,
+    "title" : "user-agent should maybe mention \"python\"?",
+    "createdAt" : "2024-05-14T12:35:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2635,
+    "title" : "Workflow for monitoring issues for staleness",
+    "createdAt" : "2024-05-21T12:29:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2637,
+    "title" : "Make Implementations command/code copy-pastable",
+    "createdAt" : "2024-05-21T20:52:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2638,
+    "title" : "Add CONTRIBUTING.md File to this Repo",
+    "createdAt" : "2024-05-22T19:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2639,
+    "title" : "Enhance TUF Documentation with Architecture Diagrams and Visual Aids",
+    "createdAt" : "2024-05-23T20:29:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2644,
+    "title" : "Add Vale linter for TUF documentation",
+    "createdAt" : "2024-05-26T12:56:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2649,
+    "title" : "ERROR: I am having ruff check issue when runnning `tox` in WSL ",
+    "createdAt" : "2024-05-29T06:45:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2654,
+    "title" : "Enhancing The Update Framework (Python - TUF) README",
+    "createdAt" : "2024-06-08T11:56:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2669,
+    "title" : "One faulty version of root md can prevent updating to subsequent valid versions",
+    "createdAt" : "2024-07-09T19:07:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2672,
+    "title" : "max root rotations is way too small",
+    "createdAt" : "2024-07-15T08:53:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2676,
+    "title" : "ngclient: support `StorageBackendInterface`?",
+    "createdAt" : "2024-07-18T15:08:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2688,
+    "title" : "Improvement of OpenSSF Scorecard Score",
+    "createdAt" : "2024-08-16T21:55:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2700,
+    "title" : "Maintenance discussion",
+    "createdAt" : "2024-09-12T10:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2708,
+    "title" : "PyPy3.10 test failures due to datetime mocking: `TypeError: isinstance() arg 2 must be a class, type, or tuple of classes and types, got MagicMock`",
+    "createdAt" : "2024-09-27T13:57:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2722,
+    "title" : "update container annotations",
+    "createdAt" : "2024-10-16T08:28:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2730,
+    "title" : "ngclient: lots of 404 traffic when trying to update root metadata?",
+    "createdAt" : "2024-10-31T16:20:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2745,
+    "title" : "Running pytest fails due to path issues: No such file or directory: 'generated_data/ed25519_metadata'",
+    "createdAt" : "2024-12-06T15:38:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2751,
+    "title" : "Investigate switching to urllib3",
+    "createdAt" : "2024-12-11T12:30:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2761,
+    "title" : "coveralls gone mad",
+    "createdAt" : "2025-01-02T08:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2774,
+    "title" : "mypy config in pyproject.toml somehow broken",
+    "createdAt" : "2025-01-30T13:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2775,
+    "title" : "annotation issues",
+    "createdAt" : "2025-01-30T17:41:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2776,
+    "title" : "silence a deprecation warning in tests",
+    "createdAt" : "2025-01-31T11:09:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2777,
+    "title" : "Update deps and docs after urllib3 migration",
+    "createdAt" : "2025-01-31T11:13:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2782,
+    "title" : "Yearly maintainer permissions review",
+    "createdAt" : "2025-02-10T10:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2786,
+    "title" : "Path issue in tuf import in examples/client and examples/repository",
+    "createdAt" : "2025-02-11T17:28:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2787,
+    "title" : "urllib3: Handle proxy environment variables",
+    "createdAt" : "2025-02-13T17:51:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2793,
+    "title" : "Lint workflows with zizmor",
+    "createdAt" : "2025-02-18T09:12:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2794,
+    "title" : "enable FA (future annotations) linting ruleset",
+    "createdAt" : "2025-02-19T09:55:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2796,
+    "title" : "new release",
+    "createdAt" : "2025-02-19T13:24:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2807,
+    "title" : "ngclient: allow metadata dir to not exist",
+    "createdAt" : "2025-03-07T12:15:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2827,
+    "title" : "Enhance README with an Interactive and Engaging Format",
+    "createdAt" : "2025-04-28T12:10:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2836,
+    "title" : "ngclient: Be better with concurrent instances",
+    "createdAt" : "2025-05-22T08:28:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2842,
+    "title" : "Investigate/test fetcher retries",
+    "createdAt" : "2025-06-12T08:38:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 2910,
+    "title" : "Yearly maintainer permissions review",
+    "createdAt" : "2026-02-10T10:30:18Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,580 @@
+{
+  "repoOwner" : "AmbitionEng",
+  "repoName" : "django-pghistory",
+  "forks" : [ {
+    "createdAt" : "2020-06-29T02:17:14Z"
+  }, {
+    "createdAt" : "2020-09-29T18:03:38Z"
+  }, {
+    "createdAt" : "2021-01-29T18:56:04Z"
+  }, {
+    "createdAt" : "2021-02-20T02:15:13Z"
+  }, {
+    "createdAt" : "2021-06-12T14:06:30Z"
+  }, {
+    "createdAt" : "2021-08-29T06:43:17Z"
+  }, {
+    "createdAt" : "2021-09-14T11:27:32Z"
+  }, {
+    "createdAt" : "2021-12-01T10:19:36Z"
+  }, {
+    "createdAt" : "2022-02-25T15:10:31Z"
+  }, {
+    "createdAt" : "2022-04-09T05:59:40Z"
+  }, {
+    "createdAt" : "2022-06-10T07:59:31Z"
+  }, {
+    "createdAt" : "2022-06-20T13:25:53Z"
+  }, {
+    "createdAt" : "2022-07-17T03:40:07Z"
+  }, {
+    "createdAt" : "2022-08-23T03:26:10Z"
+  }, {
+    "createdAt" : "2022-09-01T18:48:05Z"
+  }, {
+    "createdAt" : "2022-09-29T08:54:35Z"
+  }, {
+    "createdAt" : "2022-10-26T03:41:53Z"
+  }, {
+    "createdAt" : "2022-11-03T07:52:08Z"
+  }, {
+    "createdAt" : "2022-12-19T21:55:51Z"
+  }, {
+    "createdAt" : "2022-12-22T15:21:27Z"
+  }, {
+    "createdAt" : "2023-03-17T13:04:59Z"
+  }, {
+    "createdAt" : "2023-03-19T17:05:53Z"
+  }, {
+    "createdAt" : "2023-03-22T22:41:35Z"
+  }, {
+    "createdAt" : "2023-04-19T12:38:17Z"
+  }, {
+    "createdAt" : "2023-04-30T16:30:23Z"
+  }, {
+    "createdAt" : "2023-05-03T07:51:56Z"
+  }, {
+    "createdAt" : "2023-05-10T15:17:19Z"
+  }, {
+    "createdAt" : "2023-05-30T08:14:26Z"
+  }, {
+    "createdAt" : "2023-11-23T08:24:25Z"
+  }, {
+    "createdAt" : "2023-12-20T14:05:28Z"
+  }, {
+    "createdAt" : "2024-03-16T16:57:44Z"
+  }, {
+    "createdAt" : "2024-04-05T14:51:53Z"
+  }, {
+    "createdAt" : "2024-04-15T13:47:12Z"
+  }, {
+    "createdAt" : "2024-05-09T10:57:19Z"
+  }, {
+    "createdAt" : "2024-06-20T06:26:13Z"
+  }, {
+    "createdAt" : "2024-06-21T06:49:05Z"
+  }, {
+    "createdAt" : "2024-06-27T22:13:28Z"
+  }, {
+    "createdAt" : "2024-08-09T14:11:56Z"
+  }, {
+    "createdAt" : "2025-02-26T21:35:33Z"
+  }, {
+    "createdAt" : "2025-03-09T15:56:08Z"
+  }, {
+    "createdAt" : "2025-03-27T23:48:46Z"
+  }, {
+    "createdAt" : "2025-04-23T17:50:20Z"
+  }, {
+    "createdAt" : "2025-05-22T20:13:52Z"
+  }, {
+    "createdAt" : "2025-07-02T09:37:58Z"
+  }, {
+    "createdAt" : "2025-07-07T04:38:20Z"
+  }, {
+    "createdAt" : "2025-07-07T13:38:47Z"
+  }, {
+    "createdAt" : "2025-07-08T20:31:28Z"
+  }, {
+    "createdAt" : "2025-09-12T16:52:07Z"
+  }, {
+    "createdAt" : "2025-12-04T20:40:24Z"
+  }, {
+    "createdAt" : "2025-12-10T22:43:16Z"
+  }, {
+    "createdAt" : "2025-12-29T14:54:50Z"
+  }, {
+    "createdAt" : "2026-01-27T21:26:55Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "Problem when single-quote exists in context payload",
+    "createdAt" : "2020-08-03T23:07:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Interaction with Django Admin Log to give a richer Model Change History",
+    "createdAt" : "2020-08-11T09:21:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "multi table inheritance",
+    "createdAt" : "2020-12-15T00:40:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Events consolidated into single table?",
+    "createdAt" : "2020-12-15T18:30:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Prevent database transaction when BeforeUpdate/Delete raises Exception",
+    "createdAt" : "2020-12-21T22:17:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "BeforeDelete trigger raises IntegrityError on NEW.id (should be OLD.id)",
+    "createdAt" : "2021-01-21T23:54:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Reduce likelihood of unexpected behavior by avoiding overriding of context keys",
+    "createdAt" : "2021-05-14T17:38:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Allow nested contexts",
+    "createdAt" : "2021-05-14T18:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Is there a way to override the name of the db table used for capturing history?",
+    "createdAt" : "2021-06-09T12:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Tracking linked models being assigned/removed",
+    "createdAt" : "2021-06-11T18:52:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Incorrect type hint",
+    "createdAt" : "2021-08-02T15:08:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Migrations cannot be rolled back",
+    "createdAt" : "2021-08-03T12:15:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Reverse setup doesn't install triggers",
+    "createdAt" : "2021-08-04T13:05:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Enable context for delete requests",
+    "createdAt" : "2021-08-30T11:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "datadump error: CommandError: Unable to serialize database: Must use .target() to target an object for event aggregation",
+    "createdAt" : "2021-10-09T21:38:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Information for Contributors",
+    "createdAt" : "2022-03-12T21:51:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "RemovedInDjango41Warning: 'pghistory' defines default_app_config = 'pghistory.apps.PGHistoryConfig'.",
+    "createdAt" : "2022-03-30T03:46:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "A model clashes with field name \"event\", what to do?",
+    "createdAt" : "2022-04-09T14:27:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Cannot track Auth permission model: psycopg2.errors.UndefinedFunction",
+    "createdAt" : "2022-04-19T00:50:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Object of type UUID is not JSON serializable",
+    "createdAt" : "2022-05-18T14:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Question regarding using Retrieving and Joining AggregateEvent Metadata from the doc",
+    "createdAt" : "2022-05-21T14:04:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Add a templatetag to retrieve aggregate events easily in the admin templates",
+    "createdAt" : "2022-06-10T14:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "django.db.utils.NotSupportedError: cannot alter type of a column used in a trigger definition",
+    "createdAt" : "2022-07-01T13:22:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Error: triggers not created",
+    "createdAt" : "2022-07-17T00:10:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Upgrading to version 2",
+    "createdAt" : "2022-08-05T15:02:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "dumpdata fails unless pghistory.context is directly referenced",
+    "createdAt" : "2022-08-05T22:57:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Triggers not added while applying migrations",
+    "createdAt" : "2022-08-22T07:06:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Fix docs to mention that pgtrigger must be in INSTALLED_APPS",
+    "createdAt" : "2022-09-02T07:57:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "3rd party app objects' history is not viewable in Django Amin",
+    "createdAt" : "2022-09-12T12:09:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "How to track deletion events with snapshot?",
+    "createdAt" : "2022-09-29T13:53:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Multiple trackers with DRF",
+    "createdAt" : "2022-10-26T19:50:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Docs: add PDF",
+    "createdAt" : "2022-11-04T17:48:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Toggleable context injection",
+    "createdAt" : "2022-11-24T04:05:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "save some fields when it's changed",
+    "createdAt" : "2022-12-06T17:09:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Error while changing AppConfig - EventAdmin",
+    "createdAt" : "2022-12-08T15:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Trigger function not excluded when using non-postgres database (proposed solution)",
+    "createdAt" : "2022-12-19T16:30:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "pghistory adds NEW data not OLD, requiring a total database copy for robust backups",
+    "createdAt" : "2023-02-07T17:34:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Proxying a model that contains an event field",
+    "createdAt" : "2023-03-07T07:59:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Calls to SET LOCAL quickly blind pg_stat_statements",
+    "createdAt" : "2023-03-17T13:04:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Add attribute to ignore auto_now fields?",
+    "createdAt" : "2023-03-17T18:32:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Difference between Snapshot and AfterInsertOrUpdate",
+    "createdAt" : "2023-04-30T15:38:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Doc request: FAQ on backfilling models with existing data",
+    "createdAt" : "2023-05-03T18:07:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Configurable context injection mechanisms",
+    "createdAt" : "2023-06-08T20:07:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Admin for MiddlewareEvents doesn't display non-mw events",
+    "createdAt" : "2023-06-13T13:23:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Configurable Event Model Suffix",
+    "createdAt" : "2023-06-26T20:31:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "django.db.utils.ProgrammingError: relation \"pghistory_context\" already exists",
+    "createdAt" : "2023-07-31T16:31:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "trigger condition based on pghistory context",
+    "createdAt" : "2023-09-19T15:59:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "update primary key data type on tracking tables",
+    "createdAt" : "2023-09-19T20:04:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "[Question] how do you get django to recognize the dynamically created Event Models during makemigrations?",
+    "createdAt" : "2023-10-28T16:24:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Docs for 3.0.1 didn't build",
+    "createdAt" : "2023-11-07T22:31:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Migration error when collecting context with management command",
+    "createdAt" : "2023-12-09T10:30:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Field not found on tracked model when PGHISTORY_DEFAULT_TRACKERS is set and more than two models are tracked with default trackers.",
+    "createdAt" : "2023-12-09T11:59:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Tracking different fields depending on event",
+    "createdAt" : "2024-03-15T17:09:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "minor: docstrings mention DatabaseTracker, which was removed",
+    "createdAt" : "2024-03-15T17:14:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "ProgrammingError caused by _pgh_attach_context from create_event when using denormalized context ",
+    "createdAt" : "2024-03-20T08:43:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "How to ignore/disable eventing dynamically ?",
+    "createdAt" : "2024-03-26T20:24:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "pghistory.context used when pghistory.middleware.HistoryMiddleware throws AttributeError: 'NoneType' object has no attribute 'nextset'",
+    "createdAt" : "2024-03-28T17:37:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Issues upgrading from 2.8.0 to 3.1.0",
+    "createdAt" : "2024-04-05T19:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Disable during test runs",
+    "createdAt" : "2024-04-09T17:45:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Logging changes to django-pydantic-field model fields",
+    "createdAt" : "2024-05-02T07:43:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Events queryset fails for custom model PKs",
+    "createdAt" : "2024-05-08T22:13:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "MiddlewareEvents model should allow nullable context",
+    "createdAt" : "2024-05-09T15:27:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Is there a way to delete all Events?",
+    "createdAt" : "2024-05-09T20:08:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Context tracking causes issues with SQL that has `%` and no arguments",
+    "createdAt" : "2024-09-02T18:48:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 159,
+    "title" : "Suggestion: Add button in admin to revert changes.",
+    "createdAt" : "2024-09-04T19:39:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Errors when createing or deleting child models",
+    "createdAt" : "2024-09-05T15:56:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Many migrations with `related_query_name=\"+\"` are created in 3.4",
+    "createdAt" : "2024-09-07T00:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Default trigger names are bit strange",
+    "createdAt" : "2024-09-11T16:22:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 171,
+    "title" : "Wrong diff when storing old data",
+    "createdAt" : "2024-10-08T13:05:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Denormalized Context by Default",
+    "createdAt" : "2024-11-03T11:26:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Migrating existing data to start capturing history",
+    "createdAt" : "2024-12-12T11:43:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Custom field with default unique",
+    "createdAt" : "2024-12-30T15:11:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 184,
+    "title" : "Cannot use to track `django-modeltranslation` TranslationField",
+    "createdAt" : "2025-02-20T05:11:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Overriding the `db_table` attribute of event models",
+    "createdAt" : "2025-03-24T13:06:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "extra_context in admin changelist_view got overridden by django-pghistory",
+    "createdAt" : "2025-03-27T23:47:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Customizable pgh_data pgh_diff for child objects",
+    "createdAt" : "2025-04-10T08:48:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "[Doc?] Correct ordering of events / guarantees",
+    "createdAt" : "2025-05-06T04:54:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Django 5.2+ values() auto-aliasing breaks pghistory CTE references",
+    "createdAt" : "2025-05-14T18:04:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 203,
+    "title" : "Some questions about context handling",
+    "createdAt" : "2025-05-22T09:01:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Triggers do not automatically update / migrate",
+    "createdAt" : "2025-06-12T23:20:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Removing pg-history from model: triggers were not removed",
+    "createdAt" : "2025-06-16T09:33:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Using references inside Subquery",
+    "createdAt" : "2025-06-16T11:25:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Context tracking does not work in async",
+    "createdAt" : "2025-07-07T14:24:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Denormalizing Context generates incorrect migration",
+    "createdAt" : "2025-08-01T00:12:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Admin Integration - \"ProgrammingError at /admin/pghistory/events/\"",
+    "createdAt" : "2025-08-29T21:31:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Indices on the Context",
+    "createdAt" : "2025-09-11T08:04:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Feature Request: Ability to Allow Null for non-nullable Fields",
+    "createdAt" : "2025-10-08T09:49:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Decorator ordering issue with @pgtrigger.ignore and pghistory.context() after version 3.6.0",
+    "createdAt" : "2025-10-28T19:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Error: SET TRANSACTION ISOLATION LEVEL must be called before any query",
+    "createdAt" : "2025-11-02T09:26:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Question: Is it possible to segregate the Events model?",
+    "createdAt" : "2025-11-12T18:21:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Denormalized `pgh_context` does not get written to event table",
+    "createdAt" : "2025-11-17T14:17:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 244,
+    "title" : "pgh_event_models returning child event models for parent model",
+    "createdAt" : "2025-12-10T21:18:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 245,
+    "title" : "Thoughts about using pghistory with a connection pool",
+    "createdAt" : "2025-12-10T22:40:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Slow Performance when application is served using `gunicorn`",
+    "createdAt" : "2026-01-21T09:53:24Z",
+    "state" : "CLOSED"
+  } ]
+}
