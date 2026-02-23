@@ -6,13 +6,11 @@ import io.teamscale.api.FindingChurnFetcher;
 import io.teamscale.api.MetricsFetcher;
 import io.teamscale.api.ProjectsFetcher;
 import io.teamscale.api.model.churn.FindingChurn;
-import io.teamscale.api.model.cleaned.Assessment;
 import io.teamscale.api.model.cleaned.CleanedMetrics;
 import io.teamscale.api.model.cleaned.TeamscaleData;
 import io.teamscale.api.model.cleaned.TeamscaleDataEntry;
 import io.teamscale.api.model.metrics.Metrics;
 import io.teamscale.api.model.metrics.ValueDouble;
-import io.teamscale.api.model.metrics.ValueMapping;
 import io.teamscale.api.model.project.Project;
 import logic.StateHandler;
 import org.apache.commons.lang3.tuple.Pair;
@@ -81,11 +79,11 @@ public class TeamscaleDataCollector {
         AtomicInteger counter = new AtomicInteger(1);
         int teamscaleCommitCount = metrics.size();
         for (Metrics entry : metrics) {
-            futures.add(CompletableFuture.runAsync(() -> {
-                FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.timestamp(), 5);
-                stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloaded data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
-                data.add(new TeamscaleDataEntry(findingChurn, cleanMetrics(entry)));
-            }, executorService));
+            //futures.add(CompletableFuture.runAsync(() -> {
+            FindingChurn findingChurn = getFindingChurnWithTimeout(repoOwner, repoName, entry.timestamp(), 5);
+            stateHandler.addToState(Pair.of(repoOwner, repoName), "Downloaded data from commit " + counter.getAndIncrement() + "/" + teamscaleCommitCount);
+            data.add(new TeamscaleDataEntry(findingChurn, cleanMetrics(entry)));
+            //}, executorService));
         }
 
         // Wait here until all data is downloaded
@@ -119,41 +117,14 @@ public class TeamscaleDataCollector {
     }
 
     private CleanedMetrics cleanMetrics(Metrics metrics) {
-        ValueMapping fileSizeAssessment = (ValueMapping) metrics.value().get(3);
-        ValueMapping methodLengthAssessment = (ValueMapping) metrics.value().get(5);
-        ValueMapping nestingDepthAssessment = (ValueMapping) metrics.value().get(7);
-        ValueMapping commentCompletenessAssessment = (ValueMapping) metrics.value().get(18);
 
         return new CleanedMetrics(
                 Math.toIntExact(metrics.timestamp() / 1000),
                 (int) ((ValueDouble) metrics.value().get(0)).value(),
                 (int) ((ValueDouble) metrics.value().get(1)).value(),
                 (int) ((ValueDouble) metrics.value().get(2)).value(),
-                new Assessment((int) fileSizeAssessment.red(), (int) fileSizeAssessment.yellow(), (int) fileSizeAssessment.green()),
-                (int) ((ValueDouble) metrics.value().get(4)).value(),
-                new Assessment((int) methodLengthAssessment.red(), (int) methodLengthAssessment.yellow(), (int) methodLengthAssessment.green()),
-                (int) ((ValueDouble) metrics.value().get(6)).value(),
-                new Assessment((int) nestingDepthAssessment.red(), (int) nestingDepthAssessment.yellow(), (int) nestingDepthAssessment.green()),
-                ((ValueDouble) metrics.value().get(10)).value(),
                 ((ValueDouble) metrics.value().get(11)).value(),
-                ((ValueDouble) metrics.value().get(12)).value(),
-                ((ValueDouble) metrics.value().get(13)).value(),
-                ((ValueDouble) metrics.value().get(14)).value(),
-                ((ValueDouble) metrics.value().get(15)).value(),
-                ((ValueDouble) metrics.value().get(16)).value(),
-                ((ValueDouble) metrics.value().get(17)).value(),
-                new Assessment((int) commentCompletenessAssessment.red(), (int) commentCompletenessAssessment.yellow(), (int) commentCompletenessAssessment.green()),
-                ((ValueDouble) metrics.value().get(19)).value(),
-                ((ValueDouble) metrics.value().get(21)).value(),
-                ((ValueDouble) metrics.value().get(22)).value(),
-                ((ValueDouble) metrics.value().get(23)).value(),
-                ((ValueDouble) metrics.value().get(24)).value(),
-                ((ValueDouble) metrics.value().get(25)).value(),
-                ((ValueDouble) metrics.value().get(26)).value(),
-                ((ValueDouble) metrics.value().get(27)).value(),
-                ((ValueDouble) metrics.value().get(28)).value(),
-                ((ValueDouble) metrics.value().get(29)).value(),
-                ((ValueDouble) metrics.value().get(30)).value()
+                ((ValueDouble) metrics.value().get(17)).value()
         );
     }
 }

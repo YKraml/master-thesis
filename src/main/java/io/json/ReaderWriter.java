@@ -1,5 +1,6 @@
 package io.json;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import model.writable.Writable;
@@ -14,6 +15,8 @@ import java.util.Optional;
 
 public abstract class ReaderWriter<T extends Writable> {
 
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper().disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
     private final Class<T> clazz;
 
     protected ReaderWriter(Class<T> clazz) {
@@ -22,14 +25,14 @@ public abstract class ReaderWriter<T extends Writable> {
 
     public void write(T element) throws IOException {
         File file = createFile(element.repoOwner(), element.repoName());
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(file, element);
+        OBJECT_MAPPER.writeValue(file, element);
     }
 
     public List<T> readAll() throws IOException {
         List<T> list = new ArrayList<>();
         for (File file : FileUtils.listFiles(getFolder(), new String[]{".json"}, false)) {
             try {
-                list.add(new ObjectMapper().readValue(file, clazz));
+                list.add(OBJECT_MAPPER.readValue(file, clazz));
             } catch (MismatchedInputException e) {
                 e.printStackTrace();
                 file.delete();
@@ -47,7 +50,7 @@ public abstract class ReaderWriter<T extends Writable> {
         if (!proofs.exists()) {
             return Optional.empty();
         }
-        return Optional.ofNullable(new ObjectMapper().readValue(proofs, clazz));
+        return Optional.ofNullable(OBJECT_MAPPER.readValue(proofs, clazz));
     }
 
     private File getFolder() {

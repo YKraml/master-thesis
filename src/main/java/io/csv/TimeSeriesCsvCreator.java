@@ -103,6 +103,9 @@ public class TimeSeriesCsvCreator implements CsvCreator {
                     .filter(linter -> linter.introductionCommit().equals(linterCommit.name()))
                     .findFirst();
             linterCommitsWithProof.put(linterCommit, linterWithProof);
+
+            //Only one linter per project!
+            break;
         }
 
         // Create file for each linter
@@ -136,7 +139,7 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         String linterName = linterWithProof.map(LinterWithProof::linterName).orElse("CONTROL" + i);
         String id = repoOwner + "." + repoName + "." + linterName;
 
-        // Create file
+        // Create file and skip if it already exists
         File dataFile = new File(folderName + separator + id + ".csv");
         if (!dataFile.createNewFile()) {
             return;

@@ -45,7 +45,7 @@ source("R/lagged_day_zero.R")
 # Shared
 # ------------------------------------------------------------------------------
 
-languages <- c("java", "python")
+languages <- c("python", "java")
 
 metrics <- list(
   # All findings
@@ -173,26 +173,26 @@ for(language in languages){
   out_dir <- file.path("plots", language, "cem_projects")
   dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
-  capture.output(wilcox.test(control_data$numberOfStars, treated_data$numberOfStars),                                   file = file.path(out_dir, "wilcox_test_star_counts.txt"))
-  capture.output(wilcox.test(control_data$creationYear, treated_data$creationYear),                                     file = file.path(out_dir, "wilcox_test_project_creation_years.txt"))
-  capture.output(wilcox.test(control_data$numberOfCommits, treated_data$numberOfCommits),                               file = file.path(out_dir, "wilcox_test_commit_counts.txt"))
-  capture.output(wilcox.test(control_data$time_diff, treated_data$time_diff),                                           file = file.path(out_dir, "wilcox_test_linter_ages.txt"))
-  capture.output(wilcox.test(control_data$linter_intro_year, treated_data$linter_intro_year),                           file = file.path(out_dir, "wilcox_test_linter_introduction_years.txt"))
-  capture.output(wilcox.test(control_data$numberOfCommitsInTwoYearWindow, treated_data$numberOfCommitsInTwoYearWindow), file = file.path(out_dir, "wilcox_test_commit_counts_in_analysis_window.txt"))
-  capture.output(wilcox.test(control_data$linterCommitIndex, treated_data$linterCommitIndex),                           file = file.path(out_dir, "wilcox_test_commit_counts_in_analysis_window.txt"))
-  capture.output(wilcox.test(control_data$sloc, treated_data$sloc),                                                     file = file.path(out_dir, "wilcox_test_sloc.txt"))
-  capture.output(wilcox.test(control_data$numberOfContributors, treated_data$numberOfContributors),                     file = file.path(out_dir, "wilcox_test_number_of_contributors.txt"))
+  capture.output(wilcox.test(control_data$numberOfStars, treated_data$numberOfStars),                                   file = file.path(out_dir, paste0(language, "wilcox_test_star_counts.txt")))
+  capture.output(wilcox.test(control_data$creationYear, treated_data$creationYear),                                     file = file.path(out_dir, paste0(language, "wilcox_test_project_creation_years.txt")))
+  capture.output(wilcox.test(control_data$numberOfCommits, treated_data$numberOfCommits),                               file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts.txt")))
+  capture.output(wilcox.test(control_data$time_diff, treated_data$time_diff),                                           file = file.path(out_dir, paste0(language, "wilcox_test_linter_ages.txt")))
+  capture.output(wilcox.test(control_data$linter_intro_year, treated_data$linter_intro_year),                           file = file.path(out_dir, paste0(language, "wilcox_test_linter_introduction_years.txt")))
+  capture.output(wilcox.test(control_data$numberOfCommitsInTwoYearWindow, treated_data$numberOfCommitsInTwoYearWindow), file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts_in_analysis_window.txt")))
+  capture.output(wilcox.test(control_data$linterCommitIndex, treated_data$linterCommitIndex),                           file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts_in_analysis_window.txt")))
+  capture.output(wilcox.test(control_data$sloc, treated_data$sloc),                                                     file = file.path(out_dir, paste0(language, "wilcox_test_sloc.txt")))
+  capture.output(wilcox.test(control_data$numberOfContributors, treated_data$numberOfContributors),                     file = file.path(out_dir, paste0(language, "wilcox_test_number_of_contributors.txt")))
 
 
-  save_png(expression = plot_star_count(control_data, treated_data),             file = file.path(out_dir, "star_counts.png"))
-  save_png(expression = plot_creation_year(control_data, treated_data),          file = file.path(out_dir, "project_creation_years.png"))
-  save_png(expression = plot_commit_count(control_data, treated_data),           file = file.path(out_dir, "commit_counts.png"))
-  save_png(expression = plot_linter_age(control_data, treated_data),             file = file.path(out_dir, "linter_ages.png"))
-  save_png(expression = plot_linter_intro_year(control_data, treated_data),      file = file.path(out_dir, "linter_introduction_years.png"))
-  save_png(expression = plot_window_commits(control_data, treated_data),         file = file.path(out_dir, "commit_counts_in_analysis_window.png"))
-  save_png(expression = plot_linter_commit_indicies(control_data, treated_data), file = file.path(out_dir, "commit_indices.png"))
-  save_png(expression = plot_sloc(control_data, treated_data),                   file = file.path(out_dir, "sloc.png"))
-  save_png(expression = plot_number_of_contributors(control_data, treated_data), file = file.path(out_dir, "number_of_contributors.png"))
+  save_png(expression = plot_star_count(control_data, treated_data),             file = file.path(out_dir, paste0(language, "star_counts.png")))
+  save_png(expression = plot_creation_year(control_data, treated_data),          file = file.path(out_dir, paste0(language, "project_creation_years.png")))
+  save_png(expression = plot_commit_count(control_data, treated_data),           file = file.path(out_dir, paste0(language, "commit_counts.png")))
+  save_png(expression = plot_linter_age(control_data, treated_data),             file = file.path(out_dir, paste0(language, "linter_ages.png")))
+  save_png(expression = plot_linter_intro_year(control_data, treated_data),      file = file.path(out_dir, paste0(language, "linter_introduction_years.png")))
+  save_png(expression = plot_window_commits(control_data, treated_data),         file = file.path(out_dir, paste0(language, "commit_counts_in_analysis_window.png")))
+  save_png(expression = plot_linter_commit_indicies(control_data, treated_data), file = file.path(out_dir, paste0(language, "commit_indices.png")))
+  save_png(expression = plot_sloc(control_data, treated_data),                   file = file.path(out_dir, paste0(language, "sloc.png")))
+  save_png(expression = plot_number_of_contributors(control_data, treated_data), file = file.path(out_dir, paste0(language, "number_of_contributors.png")))
 }
 
 
@@ -401,10 +401,10 @@ age_ranges <- list(
   c(4, 20)
 )
 
-data_treatment_full <- get_data("java", "treatment", transition_n_days)
+data_treatment_full <- get_data("python", "treatment", transition_n_days)
 data_treatment_full$time_saturated <- 1 - exp(-1 * data_treatment_full$relative_introduction_time)
 
-data_control_full <- get_data("java", "control", transition_n_days)
+data_control_full <- get_data("python", "control", transition_n_days)
 data_control_full$time_saturated <- 1 - exp(-1 * data_control_full$relative_introduction_time)
 
 
