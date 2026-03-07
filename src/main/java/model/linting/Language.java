@@ -6,8 +6,6 @@ public enum Language {
 
     JAVA("Java (default)", "**.java", "**/package-info.java, **/module-info.java", Set.of("Java")),
     PYTHON("Python (default)", "**.py", "", Set.of("Python")),
-    GO("", "**.go", "", Set.of()),
-    JAVASCRIPT("", "**.js, **.sj, **.jsx, **.ts, **.tsx, **/tsconfig.json, **/jsconfig.json, **.html", "**/build/**, **/dist/**, **/node_modules/**, **.min.js, **-min.js, **_min.js, **/obfuscated/**, **.d.ts", Set.of()),
     CPP("", "**.cpp, **.hpp, **.cxx, **.hxx, **.cc, **.hh, **.h, **.inc, **.inl", "", Set.of());
 
     private final String analysisProfile;

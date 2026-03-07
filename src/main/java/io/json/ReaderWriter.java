@@ -25,7 +25,7 @@ public abstract class ReaderWriter<T extends Writable> {
 
     public void write(T element) throws IOException {
         File file = createFile(element.repoOwner(), element.repoName());
-        OBJECT_MAPPER.writeValue(file, element);
+        OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValue(file, element);
     }
 
     public List<T> readAll() throws IOException {
