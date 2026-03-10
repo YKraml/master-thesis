@@ -53,7 +53,10 @@ public enum Linter {
     RUFF(Language.PYTHON, List.of(
             new FileNameEndsWithAndContentContainsFileIndicator(".toml", "[tool.ruff"),
             new FileNameEndsWithAndContentContainsFileIndicator(".yaml", ": ruff")
-    ));
+    )),
+    CLANG_TIDY(Language.CPP, List.of()),
+    CPPCHECK(Language.CPP, List.of()),
+    SONARLINT(Language.CPP, List.of());
 
     private final Language language;
     private final List<FileIndicator> fileIndicators;
