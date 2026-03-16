@@ -41,13 +41,14 @@ public class LinterFinder {
 
     private void searchForLinter(File folder, Linter linter, List<Result> linters) throws IOException {
         List<File> files = new ArrayList<>(FileUtils.listFiles(folder, null, true));
-        String[] extensions = Linter.getExtensionsOfLanguage(linter.getLanguage());
+        String[] interestingFileExtensions = Linter.getExtensionsOfLanguage(linter.getLanguage());
 
         files.sort(Comparator.comparingInt((File file) -> file.getAbsolutePath().length()).thenComparing(File::getAbsolutePath));
 
         for (File file : files) {
-
-            Strings.CI.endsWithAny(file.getName(), extensions);
+            if (!Strings.CI.endsWithAny(file.getName(), interestingFileExtensions)) {
+                continue;
+            }
 
             Optional<Result> result = searchForLinter(folder, file, linter);
             if (result.isPresent()) {
