@@ -6,7 +6,7 @@ public enum Language {
 
     JAVA("Java (default)", "**.java", "**/package-info.java, **/module-info.java", Set.of("Java")),
     PYTHON("Python (default)", "**.py", "", Set.of("Python")),
-    CPP("", "**.cpp, **.hpp, **.cxx, **.hxx, **.cc, **.hh, **.h, **.inc, **.inl", "", Set.of());
+    CPP("", "**.cpp, **.hpp, **.cxx, **.hxx, **.cc, **.hh, **.h, **.inc, **.inl", "", Set.of("C++", "C", "C Header"));
 
     private final String analysisProfile;
     private final String includedFileNames;
