@@ -1,0 +1,2560 @@
+{
+  "repoOwner" : "twhl-community",
+  "repoName" : "halflife-unified-sdk",
+  "forks" : [ {
+    "createdAt" : "2021-12-10T18:19:09Z"
+  }, {
+    "createdAt" : "2021-12-25T00:18:50Z"
+  }, {
+    "createdAt" : "2021-12-30T02:31:13Z"
+  }, {
+    "createdAt" : "2022-04-16T14:17:57Z"
+  }, {
+    "createdAt" : "2022-04-23T00:33:58Z"
+  }, {
+    "createdAt" : "2022-04-23T00:48:10Z"
+  }, {
+    "createdAt" : "2022-05-05T01:34:22Z"
+  }, {
+    "createdAt" : "2022-06-15T03:04:54Z"
+  }, {
+    "createdAt" : "2022-06-23T02:12:48Z"
+  }, {
+    "createdAt" : "2022-07-11T18:15:03Z"
+  }, {
+    "createdAt" : "2022-07-25T12:29:12Z"
+  }, {
+    "createdAt" : "2022-07-26T13:25:13Z"
+  }, {
+    "createdAt" : "2023-02-10T09:26:34Z"
+  }, {
+    "createdAt" : "2023-03-09T12:17:13Z"
+  }, {
+    "createdAt" : "2023-04-30T10:26:51Z"
+  }, {
+    "createdAt" : "2023-08-15T09:15:05Z"
+  }, {
+    "createdAt" : "2024-01-19T05:38:08Z"
+  }, {
+    "createdAt" : "2024-03-19T13:58:08Z"
+  }, {
+    "createdAt" : "2024-04-28T14:15:54Z"
+  }, {
+    "createdAt" : "2024-05-08T18:31:12Z"
+  }, {
+    "createdAt" : "2024-05-20T06:44:11Z"
+  }, {
+    "createdAt" : "2025-01-18T02:47:15Z"
+  }, {
+    "createdAt" : "2025-04-20T23:01:02Z"
+  }, {
+    "createdAt" : "2025-07-20T13:02:55Z"
+  }, {
+    "createdAt" : "2025-10-11T09:57:01Z"
+  }, {
+    "createdAt" : "2025-12-17T14:04:27Z"
+  }, {
+    "createdAt" : "2025-12-20T07:26:00Z"
+  } ],
+  "issues" : [ {
+    "number" : 236,
+    "title" : "Hud Scaling Support?",
+    "createdAt" : "2021-03-03T19:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "Customizable Hud Color?",
+    "createdAt" : "2021-03-03T23:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Apache angular velocity is affected by server framerate",
+    "createdAt" : "2021-07-06T14:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Remove unused linux files, update linux gitignore to account for out-of-tree builds",
+    "createdAt" : "2021-09-07T14:35:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Remove unused files",
+    "createdAt" : "2021-09-07T14:37:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Remove obsolete CBaseSpecator class",
+    "createdAt" : "2021-09-07T14:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Remove obsolete cine entities",
+    "createdAt" : "2021-09-07T14:46:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Remove obsolete cycler entity, refactor cycler classes",
+    "createdAt" : "2021-09-07T14:49:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Remove unused skiplocal parameter from weapon methods",
+    "createdAt" : "2021-09-07T15:04:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Format all files to use consistent formatting",
+    "createdAt" : "2021-09-07T15:09:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Remove unused preprocessor definitions",
+    "createdAt" : "2021-09-07T16:09:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Restructure source code directories",
+    "createdAt" : "2021-09-07T16:09:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Restructure SDL2 files to encapsulate it as a CMake library",
+    "createdAt" : "2021-09-17T19:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Only copy Linux libraries when building on Linux",
+    "createdAt" : "2021-09-17T19:20:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Add Mac OSX support (.dylib files)",
+    "createdAt" : "2021-09-17T19:27:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Don't add hl.def for non-Windows builds",
+    "createdAt" : "2021-09-17T19:30:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Make the client project depend on the server so that the server is never out of date",
+    "createdAt" : "2021-09-17T19:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "Move vgui Linux libraries to utils/vgui/lib/linux",
+    "createdAt" : "2021-09-17T19:57:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "Enable multi-processor compilation",
+    "createdAt" : "2021-09-18T12:37:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Use CMAKE_DL_LIBS to link with dl library",
+    "createdAt" : "2021-09-18T16:20:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "Automatically copy mod libraries to HLDS directory on install",
+    "createdAt" : "2021-09-28T17:59:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Set CMake version to 3.21",
+    "createdAt" : "2021-09-29T11:56:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Remove use of HALFLIFE_DIRECTORY variable from CMakeLists",
+    "createdAt" : "2021-09-29T12:08:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Provide CMake settings to set up debugging command line arguments more easily",
+    "createdAt" : "2021-09-29T14:12:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Some Music Cues Don't Play",
+    "createdAt" : "2021-09-30T18:45:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 1,
+    "title" : "Add monster_rosenberg",
+    "createdAt" : "2021-10-02T14:24:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Add trigger_playerfreeze",
+    "createdAt" : "2021-10-02T14:26:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Add env_warpball",
+    "createdAt" : "2021-10-02T14:31:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Add item_helmet & item_armorvest",
+    "createdAt" : "2021-10-02T14:36:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Add Blue Shift-specific NPC code",
+    "createdAt" : "2021-10-02T14:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Refactor Blue Shift Rosenberg code to eliminate code duplication",
+    "createdAt" : "2021-10-02T14:43:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Add Opposing Force-specific entity classifications",
+    "createdAt" : "2021-10-02T15:39:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Add Opposing Force weapons",
+    "createdAt" : "2021-10-02T16:04:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Add weapon_pipewrench",
+    "createdAt" : "2021-10-02T16:08:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Add weapon_knife",
+    "createdAt" : "2021-10-02T16:08:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Add weapon_grapple",
+    "createdAt" : "2021-10-02T16:08:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Add weapon_eagle",
+    "createdAt" : "2021-10-02T16:08:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Add weapon_penguin",
+    "createdAt" : "2021-10-02T16:08:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Add weapon_m249",
+    "createdAt" : "2021-10-02T16:08:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Add weapon_displacer",
+    "createdAt" : "2021-10-02T16:08:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Add weapon_sniperrifle",
+    "createdAt" : "2021-10-02T16:08:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Add weapon_sporelauncher",
+    "createdAt" : "2021-10-02T16:08:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Add weapon_shockrifle",
+    "createdAt" : "2021-10-02T16:08:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Add Opposing Force NPCs",
+    "createdAt" : "2021-10-02T17:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Add monster_ShockTrooper_dead",
+    "createdAt" : "2021-10-02T17:36:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Add monster_alien_babyvoltigore",
+    "createdAt" : "2021-10-02T17:36:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Add monster_alien_slave_dead",
+    "createdAt" : "2021-10-02T17:36:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Add monster_alien_voltigore",
+    "createdAt" : "2021-10-02T17:36:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Add monster_assassin_repel",
+    "createdAt" : "2021-10-02T17:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Add monster_blkop_apache",
+    "createdAt" : "2021-10-02T17:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Add monster_blkop_osprey",
+    "createdAt" : "2021-10-02T17:37:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Add monster_cleansuit_scientist",
+    "createdAt" : "2021-10-02T17:37:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Add monster_cleansuit_scientist_dead",
+    "createdAt" : "2021-10-02T17:37:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Add monster_drillsergeant",
+    "createdAt" : "2021-10-02T17:37:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Add monster_fgrunt_repel",
+    "createdAt" : "2021-10-02T17:37:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Add monster_geneworm",
+    "createdAt" : "2021-10-02T17:37:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add monster_gonome",
+    "createdAt" : "2021-10-02T17:37:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Add monster_gonome_dead",
+    "createdAt" : "2021-10-02T17:37:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Add monster_grunt_ally_repel",
+    "createdAt" : "2021-10-02T17:37:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Add monster_hfgrunt_dead",
+    "createdAt" : "2021-10-02T17:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Add monster_houndeye_dead",
+    "createdAt" : "2021-10-02T17:37:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Add monster_human_friendly_grunt",
+    "createdAt" : "2021-10-02T17:37:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Add monster_human_grunt_ally",
+    "createdAt" : "2021-10-02T17:37:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Add monster_human_grunt_ally_dead",
+    "createdAt" : "2021-10-02T17:38:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Add monster_human_medic_ally",
+    "createdAt" : "2021-10-02T17:38:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Add monster_human_torch_ally",
+    "createdAt" : "2021-10-02T17:38:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Add monster_male_assassin",
+    "createdAt" : "2021-10-02T17:38:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Add monster_massassin_dead",
+    "createdAt" : "2021-10-02T17:38:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Add monster_medic_ally_repel",
+    "createdAt" : "2021-10-02T17:38:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Add monster_op4loader",
+    "createdAt" : "2021-10-02T17:38:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Add monster_otis",
+    "createdAt" : "2021-10-02T17:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Add monster_otis_dead",
+    "createdAt" : "2021-10-02T17:38:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Add monster_penguin",
+    "createdAt" : "2021-10-02T17:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Add monster_pitdrone",
+    "createdAt" : "2021-10-02T17:38:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Add monster_pitworm",
+    "createdAt" : "2021-10-02T17:38:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Add monster_pitworm_up",
+    "createdAt" : "2021-10-02T17:38:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Add monster_recruit",
+    "createdAt" : "2021-10-02T17:39:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Add monster_shockroach",
+    "createdAt" : "2021-10-02T17:39:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Add monster_shocktrooper",
+    "createdAt" : "2021-10-02T17:39:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Add monster_shocktrooper_repel",
+    "createdAt" : "2021-10-02T17:39:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Add monster_sitting_cleansuit_scientist",
+    "createdAt" : "2021-10-02T17:39:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Add monster_skeleton_dead",
+    "createdAt" : "2021-10-02T17:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Add monster_torch_ally_repel",
+    "createdAt" : "2021-10-02T17:39:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Add monster_zombie_barney",
+    "createdAt" : "2021-10-02T17:39:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Add monster_zombie_soldier",
+    "createdAt" : "2021-10-02T17:39:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Add monster_zombie_soldier_dead",
+    "createdAt" : "2021-10-02T17:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Add charged_bolt (Voltigore attack)",
+    "createdAt" : "2021-10-02T17:39:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Add env_genewormcloud",
+    "createdAt" : "2021-10-02T17:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Add env_genewormspawn",
+    "createdAt" : "2021-10-02T17:39:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Add gonomeguts",
+    "createdAt" : "2021-10-02T17:39:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Add hvr_blkop_rocket (copy of hvr_rocket)",
+    "createdAt" : "2021-10-02T17:39:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Add info_pitworm",
+    "createdAt" : "2021-10-02T17:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Add info_pitworm_steam_lock",
+    "createdAt" : "2021-10-02T17:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Add pitdronespike",
+    "createdAt" : "2021-10-02T17:40:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Add pitworm_gib",
+    "createdAt" : "2021-10-02T17:40:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Add pitworm_gibshooter",
+    "createdAt" : "2021-10-02T17:40:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Add trigger_geneworm_hit",
+    "createdAt" : "2021-10-02T17:41:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Add Opposing Force misc entities",
+    "createdAt" : "2021-10-02T17:49:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Add env_blowercannon",
+    "createdAt" : "2021-10-02T17:50:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Add env_spritetrain",
+    "createdAt" : "2021-10-02T17:50:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Add func_tank_of",
+    "createdAt" : "2021-10-02T17:50:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Add func_tankcontrols_of",
+    "createdAt" : "2021-10-02T17:50:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Add func_tanklaser_of",
+    "createdAt" : "2021-10-02T17:50:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Add func_tankmortar_of",
+    "createdAt" : "2021-10-02T17:50:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Add func_tankrocket_of",
+    "createdAt" : "2021-10-02T17:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Add item_generic",
+    "createdAt" : "2021-10-02T17:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Add item_nuclearbomb",
+    "createdAt" : "2021-10-02T17:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Add item_nuclearbombbutton",
+    "createdAt" : "2021-10-02T17:50:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Add item_nuclearbombtimer",
+    "createdAt" : "2021-10-02T17:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Add item_vest",
+    "createdAt" : "2021-10-02T17:50:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Add trigger_kill_nogib",
+    "createdAt" : "2021-10-02T17:51:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Add trigger_playerfreeze",
+    "createdAt" : "2021-10-02T17:51:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Add controllable mortar",
+    "createdAt" : "2021-10-02T17:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Add func_op4mortarcontroller",
+    "createdAt" : "2021-10-02T17:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Add mortar_shell",
+    "createdAt" : "2021-10-02T17:53:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Add op4mortar",
+    "createdAt" : "2021-10-02T17:53:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Add ammo entities",
+    "createdAt" : "2021-10-02T17:54:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Add ammo_556",
+    "createdAt" : "2021-10-02T17:55:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Add ammo_762",
+    "createdAt" : "2021-10-02T17:55:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Add ammo_eagleclip",
+    "createdAt" : "2021-10-02T17:55:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Add ammo_spore",
+    "createdAt" : "2021-10-02T17:55:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Add Opposing Force utility functionality",
+    "createdAt" : "2021-10-04T12:48:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Add Opposing Force EHandle functionality",
+    "createdAt" : "2021-10-04T12:57:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Add Opposing Force shared schedules and tasks",
+    "createdAt" : "2021-10-04T13:11:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Add Opposing Force specific decal names",
+    "createdAt" : "2021-10-04T13:22:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Add Opposing Force-specific animation events for CBaseMonster",
+    "createdAt" : "2021-10-04T13:28:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Implement \"No Reset Entity\" spawn flag for scripted_sequence",
+    "createdAt" : "2021-10-04T14:04:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Implement \"suspicious\" keyvalue for talk monsters",
+    "createdAt" : "2021-10-04T14:07:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Add rope entities",
+    "createdAt" : "2021-10-04T14:13:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Add env_rope",
+    "createdAt" : "2021-10-04T14:13:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Add env_electrified_wire",
+    "createdAt" : "2021-10-04T14:13:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Add rope_sample",
+    "createdAt" : "2021-10-04T14:13:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Add rope_segment",
+    "createdAt" : "2021-10-04T14:13:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Add shock effect logic to CBaseMonster",
+    "createdAt" : "2021-10-04T17:29:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Add displacer_ball",
+    "createdAt" : "2021-10-04T17:44:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Add eagle_laser",
+    "createdAt" : "2021-10-04T17:44:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Add grapple_tip",
+    "createdAt" : "2021-10-04T17:44:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Add info_displacer_earth_target",
+    "createdAt" : "2021-10-04T17:45:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Add info_displacer_xen_target",
+    "createdAt" : "2021-10-04T17:45:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Add trigger_xen_return",
+    "createdAt" : "2021-10-04T17:45:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Add shock_beam",
+    "createdAt" : "2021-10-04T17:45:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Add spore",
+    "createdAt" : "2021-10-04T17:45:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Add barnacle deadflag update to Killed",
+    "createdAt" : "2021-10-04T17:46:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Add improved weapon prediction entity lookup",
+    "createdAt" : "2021-10-04T17:59:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Set 357 body value from event code",
+    "createdAt" : "2021-10-04T17:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Allow weapons to network data as needed",
+    "createdAt" : "2021-10-04T18:07:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Move FindHullIntersection to shared weapons code",
+    "createdAt" : "2021-10-04T18:16:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Raise number of weapon slots to 7",
+    "createdAt" : "2021-10-05T07:48:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Add GetAutoaimVectorFromPoint",
+    "createdAt" : "2021-10-05T08:36:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Implement CTF gamemode",
+    "createdAt" : "2021-10-05T08:39:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Add CTF gamerules",
+    "createdAt" : "2021-10-05T08:39:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Add UTIL_IsCTF utility function",
+    "createdAt" : "2021-10-05T08:39:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Add switch cases for player MP5 & 357 bullet types to FireBullets",
+    "createdAt" : "2021-10-05T09:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Make IsFacing function available to all AI code",
+    "createdAt" : "2021-10-05T14:13:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Add improved gib spawn functionality",
+    "createdAt" : "2021-10-05T15:27:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Refactor weapons code to make creation of new weapons easier",
+    "createdAt" : "2021-10-08T10:13:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Add IncrementAmmo method to weapons",
+    "createdAt" : "2021-10-11T08:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Add CLASS_CTFITEM constant",
+    "createdAt" : "2021-10-11T08:38:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Add CTF-specific entities",
+    "createdAt" : "2021-10-11T09:08:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Add ctf_hudicon",
+    "createdAt" : "2021-10-11T09:10:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Add info_ctfdetect",
+    "createdAt" : "2021-10-11T09:10:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Add info_ctfspawn",
+    "createdAt" : "2021-10-11T09:10:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Add info_ctfspawn_powerup",
+    "createdAt" : "2021-10-11T09:10:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Add item_ctfaccelerator",
+    "createdAt" : "2021-10-11T09:10:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Add item_ctfbackpack",
+    "createdAt" : "2021-10-11T09:10:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Add item_ctfbase",
+    "createdAt" : "2021-10-11T09:10:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Add item_ctfflag",
+    "createdAt" : "2021-10-11T09:11:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Add item_ctflongjump",
+    "createdAt" : "2021-10-11T09:11:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Add item_ctfportablehev",
+    "createdAt" : "2021-10-11T09:11:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Add item_ctfregeneration",
+    "createdAt" : "2021-10-11T09:11:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Add trigger_ctfgeneric",
+    "createdAt" : "2021-10-11T09:11:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Add CItemCTF",
+    "createdAt" : "2021-10-11T10:22:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Add player iterator utility functions",
+    "createdAt" : "2021-10-11T15:14:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Add custom HUD color support for singleplayer and multiplayer",
+    "createdAt" : "2021-10-11T15:17:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Add CTF user messages",
+    "createdAt" : "2021-10-11T15:18:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Add CTF HUD elements",
+    "createdAt" : "2021-10-11T16:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Add CHudScoreboard",
+    "createdAt" : "2021-10-11T16:08:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Add CHudFlagIcons",
+    "createdAt" : "2021-10-11T16:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Add CHudPlayerBrowse",
+    "createdAt" : "2021-10-11T16:08:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Add custom icons to CHudStatusIcons",
+    "createdAt" : "2021-10-11T16:08:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Add CTF cvars",
+    "createdAt" : "2021-10-11T16:14:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Add squad monster logic to make one shot kills inflicted to squad members put squad on alert",
+    "createdAt" : "2021-10-11T16:51:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Change monster_hevsuit_dead model to deadhaz.mdl",
+    "createdAt" : "2021-10-11T16:59:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Add co-op gamerules",
+    "createdAt" : "2021-10-11T17:05:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Add sv_spamdelay cvar",
+    "createdAt" : "2021-10-11T17:07:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "Update scientist code to account for additional head submodels",
+    "createdAt" : "2021-10-11T17:30:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Add way to control default ammo for weapons",
+    "createdAt" : "2021-10-11T19:01:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Add night vision",
+    "createdAt" : "2021-10-11T20:08:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Add player_sethudcolor entity",
+    "createdAt" : "2021-10-12T12:00:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Set C++ standard to 17",
+    "createdAt" : "2021-10-12T13:20:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Draw crosshair in client library",
+    "createdAt" : "2021-10-12T17:35:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Add crosshair scale cvar",
+    "createdAt" : "2021-10-12T19:27:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Merge osprey classes",
+    "createdAt" : "2021-10-13T14:57:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Merge apache classes",
+    "createdAt" : "2021-10-13T15:18:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Refactor human grunt & male assassin classes",
+    "createdAt" : "2021-10-14T09:18:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Refactor human grunt & friendly human grunt classes",
+    "createdAt" : "2021-10-14T09:45:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Refactor Barney & Otis classes",
+    "createdAt" : "2021-10-14T09:54:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Refactor Drill Sergeant class",
+    "createdAt" : "2021-10-14T10:47:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Refactor Recruit class",
+    "createdAt" : "2021-10-14T10:56:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Refactor Cleansuit Scientist classes",
+    "createdAt" : "2021-10-14T11:17:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Refactor Zombie classes",
+    "createdAt" : "2021-10-14T11:38:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Refactor Gonome class",
+    "createdAt" : "2021-10-14T12:10:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Refactor Voltigore classes",
+    "createdAt" : "2021-10-14T15:12:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Overhaul entity classification system",
+    "createdAt" : "2021-10-14T15:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Add separate entity classifications for Black Ops and Race X",
+    "createdAt" : "2021-10-14T15:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 179,
+    "title" : "Refactor allied human grunt classes",
+    "createdAt" : "2021-10-18T14:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Remove ACT_SIGNAL3 from talk monster schedules",
+    "createdAt" : "2021-10-19T17:25:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Rework talk monster and ally monster logic to no longer depend on list of friend classnames",
+    "createdAt" : "2021-10-19T18:47:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Add helper function to iterate over all entities",
+    "createdAt" : "2021-10-19T19:58:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Add string pool",
+    "createdAt" : "2021-10-31T11:29:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Add class to manage server state",
+    "createdAt" : "2021-10-31T11:30:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Add class to contain per-map state",
+    "createdAt" : "2021-10-31T11:32:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Add engine filesystem support",
+    "createdAt" : "2021-10-31T11:33:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Use std::clamp instead of clamp macro",
+    "createdAt" : "2021-11-01T11:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Add JSON support with JSON Schema validation",
+    "createdAt" : "2021-11-01T12:10:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Enable solution folders in CMake configuration",
+    "createdAt" : "2021-11-01T12:29:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Add spdlog logging system",
+    "createdAt" : "2021-11-01T12:33:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Set C++ standard to 20",
+    "createdAt" : "2021-11-01T12:42:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Ensure all libraries link statically with MSVC runtime",
+    "createdAt" : "2021-11-01T12:46:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Add class to manage client state",
+    "createdAt" : "2021-11-01T13:00:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Use base class to handle common logic in CClientLibrary and CServerLibrary",
+    "createdAt" : "2021-11-01T13:10:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Set CMAKE_SYSTEM_VERSION to 10 for MSVC builds",
+    "createdAt" : "2021-11-01T13:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Add abstraction to register console commands and cvars on client and server",
+    "createdAt" : "2021-11-02T11:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Replace fmt::format with std::format",
+    "createdAt" : "2021-11-02T11:36:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Add server and map configuration files",
+    "createdAt" : "2021-11-10T11:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Move COM_Parse to shared_utils.h/.cpp",
+    "createdAt" : "2021-11-13T13:13:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Add basic Angelscript-based scripting functionality",
+    "createdAt" : "2021-11-13T16:49:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Separate client engine function setup from weapon setup",
+    "createdAt" : "2021-11-14T12:39:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Add trace logging to JSON to show file loading, validation",
+    "createdAt" : "2021-11-14T13:07:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Add ICU to handle Unicode text",
+    "createdAt" : "2021-11-14T17:17:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 205,
+    "title" : "Add more conditions to game config condition system",
+    "createdAt" : "2021-11-14T17:56:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Improve JSON Schema parse error handling",
+    "createdAt" : "2021-11-14T18:27:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Add file logging",
+    "createdAt" : "2021-11-14T19:08:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Enable certain Clang-tidy checks",
+    "createdAt" : "2021-11-19T20:08:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 241,
+    "title" : "Format all files and add clang-format configuration file",
+    "createdAt" : "2021-11-28T15:23:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Remove unused globals and duplicate global variable forward declarations",
+    "createdAt" : "2021-11-28T18:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "Fix or silence compiler warnings",
+    "createdAt" : "2021-11-28T20:49:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 208,
+    "title" : "Add debug-only check in entity method setters to validate usage",
+    "createdAt" : "2021-12-11T10:07:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Fix Linux builds not finding game libraries",
+    "createdAt" : "2021-12-15T22:17:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Linux builds try to link with 64 bit versions of dependencies on 64 bit OS",
+    "createdAt" : "2021-12-15T22:55:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Fix Linux libraries having visible symbols",
+    "createdAt" : "2021-12-16T14:54:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "Add entity to filter by game difficulty",
+    "createdAt" : "2021-12-18T11:02:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "[Proposal] Move zombie entities to NPCs/zombies.",
+    "createdAt" : "2021-12-24T21:16:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Rework skill cfg to use JSON",
+    "createdAt" : "2021-12-25T14:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Make it possible to make NPCs friendly to players",
+    "createdAt" : "2021-12-25T14:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Make it possible for any NPC to follow players (if they are friendly to the player)",
+    "createdAt" : "2021-12-25T15:00:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Implement custom model feature",
+    "createdAt" : "2021-12-25T15:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Implement custom health feature",
+    "createdAt" : "2021-12-25T15:02:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Implement global and per-entity model, sound and sentence replacement",
+    "createdAt" : "2021-12-25T15:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "Implement new material system",
+    "createdAt" : "2021-12-25T18:57:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Implement fog",
+    "createdAt" : "2021-12-25T19:01:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Use IFileSystem for all file access",
+    "createdAt" : "2021-12-26T11:55:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Fix potential buffer overflow in saytext",
+    "createdAt" : "2021-12-26T11:59:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Fix CBaseMonster::ReportAIState not handling all MONSTERSTATE enum values",
+    "createdAt" : "2021-12-26T12:08:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Implement logic_random",
+    "createdAt" : "2021-12-26T12:45:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Refactor monster & player base classes",
+    "createdAt" : "2021-12-26T12:48:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 246,
+    "title" : "Provide Doxygen documentation",
+    "createdAt" : "2022-01-07T21:26:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 269,
+    "title" : "Include extdll.h & util.h in cbase.h",
+    "createdAt" : "2022-01-21T21:10:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Make cbase.h a precompiled header for the server dll",
+    "createdAt" : "2022-01-21T21:15:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Remove redundant header inclusions",
+    "createdAt" : "2022-01-21T21:26:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Clean up standard header includes",
+    "createdAt" : "2022-01-21T22:08:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Improve const correctness",
+    "createdAt" : "2022-01-21T22:34:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 274,
+    "title" : "Rewrite KB_ConvertString to use std::string",
+    "createdAt" : "2022-01-21T22:41:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Convert CVoiceStatus::m_pchGameDir to std::string",
+    "createdAt" : "2022-01-21T22:44:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Remove unused CHudAmmoSecondary class",
+    "createdAt" : "2022-01-21T23:18:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Resolve conflicts between client and server cvar utility code",
+    "createdAt" : "2022-01-21T23:45:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Ensure MESSAGE_BEGIN parameters are correct",
+    "createdAt" : "2022-01-22T00:22:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Use local AngleVectors function instead of engine version",
+    "createdAt" : "2022-01-22T01:10:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "Make hud.h a precompiled header for the client dll",
+    "createdAt" : "2022-01-22T01:14:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Remove references to clamp macro",
+    "createdAt" : "2022-01-22T12:32:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "Replace ARRAYSIZE with std::size",
+    "createdAt" : "2022-01-22T16:02:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Define and use pointer to member function types for use with entities",
+    "createdAt" : "2022-01-22T16:40:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Rework stats menu to handle missing stats files",
+    "createdAt" : "2022-01-29T22:16:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Enable precompiled header for spdlog library",
+    "createdAt" : "2022-01-30T20:21:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Enable multi-processor compilation for JSON validator & Angelscript libraries",
+    "createdAt" : "2022-02-02T14:32:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Add helper commands for debugging maps",
+    "createdAt" : "2022-02-17T13:58:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "Use hint file to silence Intellisense warnings about macros that define code",
+    "createdAt" : "2022-02-22T21:27:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Move utility code to shared header and source file",
+    "createdAt" : "2022-03-06T18:21:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 408,
+    "title" : "Add CMake project for tools",
+    "createdAt" : "2022-03-18T14:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 409,
+    "title" : "Create source groups for tool projects",
+    "createdAt" : "2022-03-18T20:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Overhaul math related code (Vector/Matrix).",
+    "createdAt" : "2022-03-20T19:50:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 292,
+    "title" : "[Enhancement] Implement compound assignment operators for Vector.",
+    "createdAt" : "2022-03-20T19:56:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Fix entities not removing child entities created by them",
+    "createdAt" : "2022-03-26T13:02:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Improve JSON Schema validation API",
+    "createdAt" : "2022-03-26T13:21:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "Overhaul skill system",
+    "createdAt" : "2022-04-04T09:54:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Don't treat JSON validation errors as file load error",
+    "createdAt" : "2022-04-04T13:32:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Allow registering commands and variables without library prefix",
+    "createdAt" : "2022-04-06T15:25:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Rework skill.json to allow for conditional values",
+    "createdAt" : "2022-04-06T15:44:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Implement secondary SF for item_generic from CZDS to make model a SOLID_SLIDEBOX / size based on mins & maxs",
+    "createdAt" : "2022-04-06T16:01:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "Constrain JSON validation log output to a reasonable length",
+    "createdAt" : "2022-04-06T16:16:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Allow skill.json variables to set values for all levels by omitting skill level",
+    "createdAt" : "2022-04-06T16:58:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Require skill.json values to be stored as JSON number",
+    "createdAt" : "2022-04-06T17:41:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "Log when JSON file passes validation",
+    "createdAt" : "2022-04-06T17:48:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Implement game system API to avoid tight coupling between game systems",
+    "createdAt" : "2022-05-07T13:14:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Initialize default log level to log_startup_level command line argument or developer setting",
+    "createdAt" : "2022-05-07T13:16:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Remove unused functions",
+    "createdAt" : "2022-05-07T18:34:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Remove unused constants",
+    "createdAt" : "2022-05-07T18:35:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 313,
+    "title" : "Update Tentacle monster uses to use tentacle3.mdl where needed in place of spawnflag 64",
+    "createdAt" : "2022-05-08T14:00:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "Implement better client command system",
+    "createdAt" : "2022-05-08T15:40:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "Rework weapon selection client command to use actual named command",
+    "createdAt" : "2022-05-08T15:43:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Add virtual destructor to CGameRules",
+    "createdAt" : "2022-05-08T16:37:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Rework spectator client command code to allow use of it outside CTF gamemode",
+    "createdAt" : "2022-05-08T17:05:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Fix ScoreInfo message causing fatal error",
+    "createdAt" : "2022-05-08T17:07:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Save and restore hud color setting",
+    "createdAt" : "2022-05-08T17:21:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Move CTF-only client commands to CTF gamerules",
+    "createdAt" : "2022-05-08T17:30:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 321,
+    "title" : "Add OnCreate & OnDestroy virtual functions to CBaseEntity",
+    "createdAt" : "2022-05-09T10:41:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "Remove NPC voice pitch restore hack",
+    "createdAt" : "2022-05-09T10:43:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "Use better regex for skill name parsing",
+    "createdAt" : "2022-05-10T15:04:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Allow setting hud color from config files",
+    "createdAt" : "2022-05-11T12:18:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 325,
+    "title" : "Allow setting suit light type from config files",
+    "createdAt" : "2022-05-11T12:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Upgrade math code to use standard library features",
+    "createdAt" : "2022-05-11T14:31:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "Fix func_rot_button \"X Axis\" spawnflag conflicting with func_button \"Sparks\" spawnflag",
+    "createdAt" : "2022-05-18T10:23:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Add keyvalue to monster_scientist to set item bodygroup",
+    "createdAt" : "2022-05-22T12:03:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Add keyvalues to Tentacle monster to allow changing height values",
+    "createdAt" : "2022-05-22T12:06:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Rework game title display to support multiple games",
+    "createdAt" : "2022-05-26T13:40:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Remap \"No use\" spawnflag for scientists to a keyvalue",
+    "createdAt" : "2022-05-26T15:45:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Raise sentence group limit",
+    "createdAt" : "2022-05-27T12:30:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Install delta.lst and liblist.gam to the mod directory",
+    "createdAt" : "2022-06-01T13:36:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "Rename server library to server",
+    "createdAt" : "2022-06-01T14:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "Add natvis file with configuration for CBaseEntity",
+    "createdAt" : "2022-06-01T18:42:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Implement ambient_music",
+    "createdAt" : "2022-06-06T09:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Remove trigger_cdaudio and target_cdaudio",
+    "createdAt" : "2022-06-06T09:40:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "Rework worldspawn sounds, trigger_cdaudio, target_cdaudio to use ambient_music instead",
+    "createdAt" : "2022-06-06T09:42:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Add special entity targetname for player activation",
+    "createdAt" : "2022-06-06T11:13:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Pause music when game is paused",
+    "createdAt" : "2022-06-06T16:22:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Half-Life logo doesn't show in Intro",
+    "createdAt" : "2022-06-07T19:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "HUD Uses Opfor font",
+    "createdAt" : "2022-06-07T19:05:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "HEV Suit Startup File doesn't play",
+    "createdAt" : "2022-06-07T19:06:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "EAX/A3D Emulation",
+    "createdAt" : "2022-06-07T19:09:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Add debug text to show project info",
+    "createdAt" : "2022-06-16T13:44:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "CGrenade causes crash on Restore under special conditions",
+    "createdAt" : "2022-06-28T02:40:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Remove support for resolutions below 640x480",
+    "createdAt" : "2022-07-17T07:42:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "\"Stuck\" scientist in map \"Office Complex\"",
+    "createdAt" : "2022-07-19T19:03:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 361,
+    "title" : "Implement new sentences system",
+    "createdAt" : "2022-07-22T19:57:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Add EASTL dependency",
+    "createdAt" : "2022-07-22T21:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "Implement global sentence replacement",
+    "createdAt" : "2022-08-18T14:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Shock Roach texture issue",
+    "createdAt" : "2022-08-18T22:08:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "Implement global sound replacement",
+    "createdAt" : "2022-08-20T20:14:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Entity to Entity Following ",
+    "createdAt" : "2022-08-27T18:38:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 371,
+    "title" : "Add entity info hud",
+    "createdAt" : "2022-08-29T16:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "Remove superfluous \"Random\" value from monster_otis bodystate keyvalue",
+    "createdAt" : "2022-09-12T20:35:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Use proper constants for all GetBodygroup and SetBodygroup calls",
+    "createdAt" : "2022-09-13T13:15:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "Rework animation body groups for NPCs that use the new structure",
+    "createdAt" : "2022-09-13T14:00:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "Add new game icons for the Unified SDK",
+    "createdAt" : "2022-09-16T14:07:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Investigate adding A3D functionality using HRTF",
+    "createdAt" : "2022-09-17T18:49:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Ensure time compression calculations always produce channel-aligned values",
+    "createdAt" : "2022-09-17T18:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Disable AVX instruction set in libnyquist",
+    "createdAt" : "2022-09-17T18:51:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Rework client command registry to use unique_ptr",
+    "createdAt" : "2022-09-17T20:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Separate conditional evaluation from game configuration system",
+    "createdAt" : "2022-09-18T13:21:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "Make game configuration system use type-safe user data",
+    "createdAt" : "2022-09-18T13:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "Rework use of OpenAL extensions to use runtime lookup",
+    "createdAt" : "2022-09-18T22:19:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "Merge func_tank_of into func_tank",
+    "createdAt" : "2022-09-19T15:39:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Identify players consistently everywhere",
+    "createdAt" : "2022-09-22T17:09:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "Remove obsolete trigger_secret check",
+    "createdAt" : "2022-09-22T18:13:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Merge CBasePlayerItem into CBasePlayerWeapon",
+    "createdAt" : "2022-09-23T08:27:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 387,
+    "title" : "Rework ammo type definition",
+    "createdAt" : "2022-09-23T08:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Update all uses of the local player to work properly in multiplayer",
+    "createdAt" : "2022-09-23T08:49:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Define constants for `waterlevel` variable",
+    "createdAt" : "2022-09-23T08:57:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Make `trigger_changelevel` work in multiplayer",
+    "createdAt" : "2022-09-23T12:36:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Make coop gamerules work properly",
+    "createdAt" : "2022-09-23T12:37:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Rework game mode selection",
+    "createdAt" : "2022-09-23T12:59:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 393,
+    "title" : "Redesign gamerules classes",
+    "createdAt" : "2022-09-23T13:02:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "Mark unused variables and functions in engine interfaces as deprecated",
+    "createdAt" : "2022-09-23T13:15:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 395,
+    "title" : "Rework save restore system to use more generic metadata",
+    "createdAt" : "2022-09-23T13:40:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Extend global sound replacement to apply to client side studio events",
+    "createdAt" : "2022-09-25T10:17:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Make `string_t` strongly typed",
+    "createdAt" : "2022-09-25T11:35:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Add natvis config for `string_t`",
+    "createdAt" : "2022-09-25T12:38:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "Convert ALERT log calls to spdlog",
+    "createdAt" : "2022-09-25T15:07:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 400,
+    "title" : "Make FileSystem error logging use developer-only logging",
+    "createdAt" : "2022-09-27T12:15:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "Add option to specify player spawn inventory to game config files",
+    "createdAt" : "2022-09-30T15:07:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Add generic events for holstering and equipping NPC weapon",
+    "createdAt" : "2022-10-06T17:04:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "Generate ProjectInfo.h on build",
+    "createdAt" : "2022-10-13T20:37:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Change all uses of pfnGetPlayerWONId to pfnGetPlayerAuthId",
+    "createdAt" : "2022-10-20T16:30:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "Add logger for precache calls",
+    "createdAt" : "2022-10-28T20:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "Add diagnostic logging for map startup stages",
+    "createdAt" : "2022-10-28T20:43:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "hl-updated-cmake building linker errors",
+    "createdAt" : "2022-11-09T20:18:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "Add support for writing to signon buffer when using new sound system",
+    "createdAt" : "2022-11-21T22:56:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Ensure all worldspawn keyvalues restore correctly on save game load",
+    "createdAt" : "2022-11-22T12:38:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Fix `momentary_door` trying to play null string_t",
+    "createdAt" : "2022-11-22T16:56:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Replace tracktrain event with proper throttled sound updates",
+    "createdAt" : "2022-11-22T19:19:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "Convert entities to use sound names instead of indices",
+    "createdAt" : "2022-11-22T20:53:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "Fix momentary_rot_button not stopping its sound",
+    "createdAt" : "2022-11-26T21:44:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Remove virtual functions in CBaseEntity that are only implemented for players and called by code that knows it's CBasePlayer",
+    "createdAt" : "2022-11-30T18:43:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 418,
+    "title" : "Clean up APIProxy.h header",
+    "createdAt" : "2022-11-30T19:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "Convert type definitions to use C++ style instead of C style",
+    "createdAt" : "2022-11-30T19:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Change `(void)` parameters to `()`",
+    "createdAt" : "2022-11-30T21:32:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "Use Vector instead of float[3]",
+    "createdAt" : "2022-11-30T21:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Remove functions and macros that work with float*, use Vector instead",
+    "createdAt" : "2022-11-30T22:02:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "Implement logic_setcvar",
+    "createdAt" : "2022-12-01T10:43:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Replace macros with functions when possible",
+    "createdAt" : "2022-12-01T10:56:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 425,
+    "title" : "Remove unused types",
+    "createdAt" : "2022-12-01T11:23:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "Fix scripted_sequence searching for targets incorrectly",
+    "createdAt" : "2022-12-01T19:26:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 428,
+    "title" : "Use CBaseEntity wherever possible",
+    "createdAt" : "2022-12-01T19:29:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Add entity dictionary to create entities with",
+    "createdAt" : "2022-12-01T22:09:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Lifts, elevators, platforms not playing sounds.",
+    "createdAt" : "2023-01-03T23:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 431,
+    "title" : "HL1 training hologram plays pushcart sequence in jump challenges.",
+    "createdAt" : "2023-01-03T23:37:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 432,
+    "title" : "Wrong security guard use/unuse sentences in HL1 Training.",
+    "createdAt" : "2023-01-03T23:40:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Wrong beam outer color in test chamber control room.",
+    "createdAt" : "2023-01-03T23:45:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "Pitworm upward and downward movement lag.",
+    "createdAt" : "2023-01-03T23:46:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 435,
+    "title" : "Dying ally grunt has incorrect weapon bodygroup value.",
+    "createdAt" : "2023-01-03T23:53:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "Bootcamp live fire turrets target range. ",
+    "createdAt" : "2023-01-03T23:56:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "Grunt scripted sequence does not play MP5 sounds.",
+    "createdAt" : "2023-01-04T00:01:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Wrong scientist model used in Blue Shift training.",
+    "createdAt" : "2023-01-04T00:06:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "Grunts AI sentences refer to Freeman in Blue Shift maps.",
+    "createdAt" : "2023-01-04T00:13:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 441,
+    "title" : "Wrong scientist head used in ba_yard1.",
+    "createdAt" : "2023-01-07T18:04:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Implement console print buffering during client startup",
+    "createdAt" : "2023-02-05T19:55:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Add way to pass keyvalues to monsters spawned by monstermaker",
+    "createdAt" : "2023-03-27T13:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 451,
+    "title" : "\"Game Over\" screen is interrupted",
+    "createdAt" : "2023-04-29T20:20:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 452,
+    "title" : "Fix non-looping sounds incorrectly set to loop",
+    "createdAt" : "2023-05-28T10:39:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 453,
+    "title" : "Implement new UI",
+    "createdAt" : "2023-06-17T16:02:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 454,
+    "title" : "Convert command menu to JSON",
+    "createdAt" : "2023-06-26T11:21:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 455,
+    "title" : "Re-implement VGUI1 scoreboard",
+    "createdAt" : "2023-06-26T11:23:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 456,
+    "title" : "Add support to trigger_camera to apply to all players",
+    "createdAt" : "2023-06-26T11:24:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 457,
+    "title" : "Load weapon data from config files",
+    "createdAt" : "2023-06-26T11:26:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 458,
+    "title" : "Use protobuf to transfer network data",
+    "createdAt" : "2023-06-26T11:28:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 459,
+    "title" : "Implement spk command equivalent in new sound system",
+    "createdAt" : "2023-06-26T11:34:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 460,
+    "title" : "Fix rpg rocket notifying owner incorrectly",
+    "createdAt" : "2023-06-26T11:37:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 461,
+    "title" : "Add unkillable support to more NPCs",
+    "createdAt" : "2023-06-26T11:38:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 462,
+    "title" : "Add god mode support to NPCs",
+    "createdAt" : "2023-06-26T11:40:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 463,
+    "title" : "Pass on certain entity properties to child entities",
+    "createdAt" : "2023-06-26T11:41:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 464,
+    "title" : "Tripmine laser beams can be walked through sometimes",
+    "createdAt" : "2023-06-26T11:43:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 465,
+    "title" : "Add sound effects for grass",
+    "createdAt" : "2023-06-26T11:44:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 466,
+    "title" : "Add weather effects entities",
+    "createdAt" : "2023-06-26T11:47:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 467,
+    "title" : "Convert Con_Printf & UTIL_VarArgs to use fmt::format",
+    "createdAt" : "2023-06-26T11:48:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 468,
+    "title" : "Implement software-based sound effects",
+    "createdAt" : "2023-06-26T14:34:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 469,
+    "title" : "Make sound system skip bad word names",
+    "createdAt" : "2023-06-26T14:35:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 470,
+    "title" : "Node graph error logging causes performance issues",
+    "createdAt" : "2023-06-26T14:38:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 471,
+    "title" : "Restore hud notify area",
+    "createdAt" : "2023-06-26T14:44:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 472,
+    "title" : "Rework weapon & ammo iteration",
+    "createdAt" : "2023-06-26T14:48:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 473,
+    "title" : "Count NPC kills in multiplayer",
+    "createdAt" : "2023-06-26T14:51:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 474,
+    "title" : "Enable death messages in multiplayer as optional feature",
+    "createdAt" : "2023-06-26T14:52:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 475,
+    "title" : "Make player death messages work properly when killed by monsters",
+    "createdAt" : "2023-06-26T14:53:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 476,
+    "title" : "Transfer MOTD contents using network data system",
+    "createdAt" : "2023-06-26T14:54:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 477,
+    "title" : "Add option to set keyvalues for item spawned by func_breakable",
+    "createdAt" : "2023-06-26T14:55:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 478,
+    "title" : "Add option to require line-of-sight to +use entity",
+    "createdAt" : "2023-06-26T15:01:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 479,
+    "title" : "Precache sounds played by any server-side studio event",
+    "createdAt" : "2023-06-26T15:02:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 480,
+    "title" : "func_plat has backwards mins/maxs errors when using negative height",
+    "createdAt" : "2023-06-26T15:15:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 481,
+    "title" : "Repeatable env_explosion entities can move their origin",
+    "createdAt" : "2023-06-26T15:16:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 482,
+    "title" : "Add RGB24 type support in save/restore",
+    "createdAt" : "2023-06-26T15:17:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 483,
+    "title" : "Consider packing dead player weapons in coop",
+    "createdAt" : "2023-06-26T15:18:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 484,
+    "title" : "Move ammo hud sprites to hud.json",
+    "createdAt" : "2023-06-26T15:20:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 485,
+    "title" : "Refactor HUD globals into class members",
+    "createdAt" : "2023-06-26T15:20:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 486,
+    "title" : "Scroll weapon buckets if they don't fit on screen",
+    "createdAt" : "2023-06-26T15:21:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 487,
+    "title" : "Add save game version check",
+    "createdAt" : "2023-06-26T15:26:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 488,
+    "title" : "Add entity list class",
+    "createdAt" : "2023-06-26T15:27:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 489,
+    "title" : "Pass original caller when delay triggering entities",
+    "createdAt" : "2023-06-26T15:31:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 490,
+    "title" : "Rework damage handling",
+    "createdAt" : "2023-06-26T15:34:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 491,
+    "title" : "Consider saving schedules",
+    "createdAt" : "2023-06-26T15:37:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 492,
+    "title" : "Implement more hurt entities",
+    "createdAt" : "2023-06-26T15:38:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 493,
+    "title" : "Some classes redefine variables with existing names",
+    "createdAt" : "2023-06-26T15:41:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 494,
+    "title" : "Consider setting scientist crouch animation to use ACT_CROUCH",
+    "createdAt" : "2023-06-26T15:42:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 495,
+    "title" : "Hornets can pass through thin objects",
+    "createdAt" : "2023-06-26T15:43:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 496,
+    "title" : "Snarks can get stuck in other entities",
+    "createdAt" : "2023-06-26T15:44:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 497,
+    "title" : "Fix bell sound sounding different in Hazard Course",
+    "createdAt" : "2023-06-26T15:46:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 498,
+    "title" : "Investigate node graph generation problem in c3a2d",
+    "createdAt" : "2023-07-26T13:08:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "Intro FMV Restoration?",
+    "createdAt" : "2023-07-30T19:51:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "Consider adding software rendering water effects to OpenGL as a toggle",
+    "createdAt" : "2023-08-17T03:41:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 502,
+    "title" : "\"Could not find \"liblist.gam\" for Half-Life Uplink. Make sure the game is installed.\" But there is no Half-Life: Uplink on Steam",
+    "createdAt" : "2023-08-17T03:49:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 503,
+    "title" : "Missing HEV suits in map c3a2d",
+    "createdAt" : "2023-08-17T19:18:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 504,
+    "title" : "Improve NPC following feature",
+    "createdAt" : "2023-08-18T19:40:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 505,
+    "title" : "Third person view broken.",
+    "createdAt" : "2023-08-22T22:49:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Opposing Force uses HL1 HUD digits.",
+    "createdAt" : "2023-08-22T22:56:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "Opposing Force drill sergeant is equipped with whistle.",
+    "createdAt" : "2023-08-22T23:34:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Osprey on_tarmac sequence not restored after reloading the game.",
+    "createdAt" : "2023-08-22T23:50:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "Missiles fired by enemy tanks follow RPG laserspot.",
+    "createdAt" : "2023-08-23T00:48:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 510,
+    "title" : "(of2a5) Engineer ally grunt does not deploy his gun.",
+    "createdAt" : "2023-08-23T01:43:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 511,
+    "title" : "(of2a5) Engineer ally grunt invincible to propane explosion while in scripted sequence.",
+    "createdAt" : "2023-08-23T22:54:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 512,
+    "title" : "Gordon head mesh visible through dead HEV scientists helmets.",
+    "createdAt" : "2023-08-23T23:35:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 513,
+    "title" : "(of1a3, of1a4) Elevator does not play move sound after level transition.",
+    "createdAt" : "2023-08-24T00:41:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 514,
+    "title" : "(of5a4) Gman cell remains visible after playing cell_away sequence.",
+    "createdAt" : "2023-08-24T01:08:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 515,
+    "title" : "Actors sometimes don't move their mouth while speaking sentences or responding to players.",
+    "createdAt" : "2023-08-24T22:38:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 517,
+    "title" : "Players can push drill sergeants away as with followers.",
+    "createdAt" : "2023-08-25T00:35:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 518,
+    "title" : "(t0a0d, ba_hazard6) Elevator doors don't open when loading map from the console.",
+    "createdAt" : "2023-08-26T14:52:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 519,
+    "title" : "(of6a5) Missing .wav extension in `ambient_generic` entity `genearrivesound`.",
+    "createdAt" : "2023-08-26T15:46:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "(of5a2) Xen bullsquids don't play eat sequence.",
+    "createdAt" : "2023-08-26T18:43:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "(of3a4, of5a2, of6a4, of6a4b) Xen bullsquids don't attack players.",
+    "createdAt" : "2023-08-26T19:03:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "(ofboot4) Bootcamp turrets stop firing immediately when player is occluded.",
+    "createdAt" : "2023-08-27T13:39:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 523,
+    "title" : "Hazard and damage HUD icons displayed without being suit equipped.",
+    "createdAt" : "2023-08-27T14:54:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 524,
+    "title" : "(ba_power2) Power struggle chapter displayed.",
+    "createdAt" : "2023-08-27T15:01:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Rats throw alien gibs when killed.",
+    "createdAt" : "2023-08-27T15:58:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Turrets keep attacking player after going in notarget.",
+    "createdAt" : "2023-08-27T17:32:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "(ba_outro) Grunt has incorrect submodels setup.",
+    "createdAt" : "2023-08-27T20:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Gauss gun continues to play spin animation even after forced fire occurred.",
+    "createdAt" : "2023-08-27T21:13:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Hornet gun does not play fire animation on regen when previously empty.",
+    "createdAt" : "2023-08-27T21:40:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 531,
+    "title" : "Baby Voltigores use adult melee attack sounds.",
+    "createdAt" : "2023-08-27T22:06:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Modifying max ammo values?",
+    "createdAt" : "2023-08-27T22:11:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 533,
+    "title" : "Baby Voltigores throw adult gibs when killed.",
+    "createdAt" : "2023-08-27T22:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "Baby Voltigores can perform beam attacks ?",
+    "createdAt" : "2023-08-27T22:52:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "Consider using alternatives to standard library types",
+    "createdAt" : "2023-10-05T15:01:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 537,
+    "title" : "Triggering NPCs no longer stops wait for trigger schedule",
+    "createdAt" : "2023-10-23T18:04:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 538,
+    "title" : "Test network data system using fastdl",
+    "createdAt" : "2023-10-23T18:13:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Update list of official maps in C# tools",
+    "createdAt" : "2024-01-13T22:32:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 541,
+    "title" : "Use Half-Life Uplink maps that ship with the anniversary version of the game",
+    "createdAt" : "2024-01-13T22:34:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 542,
+    "title" : "Re-test upgrades applied by the installer",
+    "createdAt" : "2024-01-13T22:36:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 543,
+    "title" : "Update to anniversary version",
+    "createdAt" : "2024-01-13T22:55:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 544,
+    "title" : "VS Project solution",
+    "createdAt" : "2024-01-17T23:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 547,
+    "title" : "item_battery is not being given on game_player_equip",
+    "createdAt" : "2024-02-21T16:03:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 551,
+    "title" : "Consider using newer GCC version",
+    "createdAt" : "2025-01-12T13:01:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 552,
+    "title" : "Hostile Npcs If Classified as Ally to player wont follow the player anymore after they battled an hostile enemy",
+    "createdAt" : "2025-02-02T00:58:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 554,
+    "title" : "Can't install with the command?",
+    "createdAt" : "2025-11-01T19:27:50Z",
+    "state" : "CLOSED"
+  } ]
+}

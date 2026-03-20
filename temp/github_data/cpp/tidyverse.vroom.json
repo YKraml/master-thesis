@@ -1,0 +1,2611 @@
+{
+  "repoOwner" : "tidyverse",
+  "repoName" : "vroom",
+  "forks" : [ {
+    "createdAt" : "2018-12-29T23:23:40Z"
+  }, {
+    "createdAt" : "2019-01-02T23:16:11Z"
+  }, {
+    "createdAt" : "2019-02-26T21:46:49Z"
+  }, {
+    "createdAt" : "2019-02-27T13:24:12Z"
+  }, {
+    "createdAt" : "2019-03-26T11:48:45Z"
+  }, {
+    "createdAt" : "2019-05-10T17:32:29Z"
+  }, {
+    "createdAt" : "2019-05-21T13:38:43Z"
+  }, {
+    "createdAt" : "2019-05-27T08:02:57Z"
+  }, {
+    "createdAt" : "2019-05-30T22:08:56Z"
+  }, {
+    "createdAt" : "2019-07-08T07:27:07Z"
+  }, {
+    "createdAt" : "2019-07-08T07:29:47Z"
+  }, {
+    "createdAt" : "2019-07-08T08:03:22Z"
+  }, {
+    "createdAt" : "2019-07-08T08:29:39Z"
+  }, {
+    "createdAt" : "2019-07-08T09:27:13Z"
+  }, {
+    "createdAt" : "2019-07-08T13:58:49Z"
+  }, {
+    "createdAt" : "2019-07-09T10:16:16Z"
+  }, {
+    "createdAt" : "2019-07-24T08:04:17Z"
+  }, {
+    "createdAt" : "2019-08-22T19:36:54Z"
+  }, {
+    "createdAt" : "2019-09-19T21:48:41Z"
+  }, {
+    "createdAt" : "2019-10-03T02:51:29Z"
+  }, {
+    "createdAt" : "2019-11-29T19:21:35Z"
+  }, {
+    "createdAt" : "2019-12-23T01:14:23Z"
+  }, {
+    "createdAt" : "2020-01-23T08:14:31Z"
+  }, {
+    "createdAt" : "2020-01-30T00:12:35Z"
+  }, {
+    "createdAt" : "2020-02-12T09:03:04Z"
+  }, {
+    "createdAt" : "2020-02-14T11:57:08Z"
+  }, {
+    "createdAt" : "2020-03-21T16:46:14Z"
+  }, {
+    "createdAt" : "2020-07-23T19:03:28Z"
+  }, {
+    "createdAt" : "2020-07-28T11:04:39Z"
+  }, {
+    "createdAt" : "2020-09-16T02:31:04Z"
+  }, {
+    "createdAt" : "2020-12-14T10:15:01Z"
+  }, {
+    "createdAt" : "2021-02-01T16:15:00Z"
+  }, {
+    "createdAt" : "2021-04-21T00:44:32Z"
+  }, {
+    "createdAt" : "2021-07-19T17:54:28Z"
+  }, {
+    "createdAt" : "2021-07-22T02:34:09Z"
+  }, {
+    "createdAt" : "2021-11-27T11:37:58Z"
+  }, {
+    "createdAt" : "2022-01-13T18:08:36Z"
+  }, {
+    "createdAt" : "2022-01-20T11:02:51Z"
+  }, {
+    "createdAt" : "2022-02-04T20:18:33Z"
+  }, {
+    "createdAt" : "2022-04-07T05:56:00Z"
+  }, {
+    "createdAt" : "2022-05-20T14:15:29Z"
+  }, {
+    "createdAt" : "2022-05-27T13:05:47Z"
+  }, {
+    "createdAt" : "2022-08-01T05:18:41Z"
+  }, {
+    "createdAt" : "2022-08-04T13:34:11Z"
+  }, {
+    "createdAt" : "2022-09-15T12:58:31Z"
+  }, {
+    "createdAt" : "2022-10-02T01:23:56Z"
+  }, {
+    "createdAt" : "2022-10-11T23:26:19Z"
+  }, {
+    "createdAt" : "2023-03-12T12:27:29Z"
+  }, {
+    "createdAt" : "2023-03-30T23:33:49Z"
+  }, {
+    "createdAt" : "2023-05-26T14:39:32Z"
+  }, {
+    "createdAt" : "2023-09-15T16:42:50Z"
+  }, {
+    "createdAt" : "2023-09-17T19:30:30Z"
+  }, {
+    "createdAt" : "2023-09-22T15:04:04Z"
+  }, {
+    "createdAt" : "2023-09-26T11:21:38Z"
+  }, {
+    "createdAt" : "2024-01-12T07:38:30Z"
+  }, {
+    "createdAt" : "2024-01-17T04:07:33Z"
+  }, {
+    "createdAt" : "2024-02-15T21:36:29Z"
+  }, {
+    "createdAt" : "2024-07-17T20:28:34Z"
+  }, {
+    "createdAt" : "2024-09-06T16:09:11Z"
+  }, {
+    "createdAt" : "2025-03-02T12:30:37Z"
+  }, {
+    "createdAt" : "2025-03-19T22:26:43Z"
+  }, {
+    "createdAt" : "2025-06-26T17:31:14Z"
+  }, {
+    "createdAt" : "2025-08-19T11:01:50Z"
+  }, {
+    "createdAt" : "2025-10-17T11:00:35Z"
+  }, {
+    "createdAt" : "2025-11-21T09:59:08Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Consider using threads for index parsing",
+    "createdAt" : "2018-12-23T13:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Should the index be in memory or a mmap?",
+    "createdAt" : "2018-12-23T13:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Windows newlines",
+    "createdAt" : "2018-12-28T20:42:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Quoted fields",
+    "createdAt" : "2018-12-28T20:42:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Comments",
+    "createdAt" : "2018-12-28T20:42:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Whitespace trimming",
+    "createdAt" : "2018-12-28T20:42:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Non-UTF-8 locales",
+    "createdAt" : "2018-12-28T20:43:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Missing data / NA values",
+    "createdAt" : "2018-12-28T20:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Reading from connections",
+    "createdAt" : "2018-12-28T20:45:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Marking materialized altvectors as sorted",
+    "createdAt" : "2018-12-28T20:46:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "tests",
+    "createdAt" : "2018-12-28T21:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Specify col_types",
+    "createdAt" : "2018-12-29T19:57:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "User supplied Factor levels",
+    "createdAt" : "2018-12-31T15:15:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Connection speed",
+    "createdAt" : "2019-01-02T13:28:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Conversion / Materialization performance",
+    "createdAt" : "2019-01-02T15:40:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "installation fails: undefined symbol: _Z21force_materializationP7SEXPREC",
+    "createdAt" : "2019-01-03T09:14:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "vroom_list to import from a vector of files?",
+    "createdAt" : "2019-01-07T19:41:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Something is wrong when parsing tables with less than 3 columns",
+    "createdAt" : "2019-01-24T12:44:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Re-use memory when materializing vector",
+    "createdAt" : "2019-01-25T16:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "add tests for connection creation",
+    "createdAt" : "2019-02-10T19:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "add tests for multiple files",
+    "createdAt" : "2019-02-10T19:36:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "add tests for logical parsing (0 and 1s in particular)",
+    "createdAt" : "2019-02-10T19:37:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Byte order marks",
+    "createdAt" : "2019-02-10T19:37:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Dates, times, datetimes",
+    "createdAt" : "2019-02-10T19:38:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "readr's flexible number parser",
+    "createdAt" : "2019-02-10T19:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "richer delimiters",
+    "createdAt" : "2019-02-10T19:40:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "delimiter guessing",
+    "createdAt" : "2019-02-10T19:40:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Progress bars",
+    "createdAt" : "2019-02-10T19:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Performance regressions with dplyr",
+    "createdAt" : "2019-02-10T19:41:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Support embedded newlines in fields",
+    "createdAt" : "2019-02-10T19:42:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "skipping comments and blank lines in data",
+    "createdAt" : "2019-02-10T19:43:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Use C++ traits for zero-runtime-cost features",
+    "createdAt" : "2019-02-11T14:15:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "fixed width files",
+    "createdAt" : "2019-02-13T14:22:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Compilation failed",
+    "createdAt" : "2019-02-15T12:07:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Connection indexing wrong",
+    "createdAt" : "2019-02-15T14:45:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Provide way to include the filename as a column",
+    "createdAt" : "2019-02-19T14:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Look into fuzz testing",
+    "createdAt" : "2019-02-19T21:47:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "strtod",
+    "createdAt" : "2019-02-20T19:18:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Support for R versions before 3.5",
+    "createdAt" : "2019-02-22T14:48:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "crash if file does not have a trailing newline",
+    "createdAt" : "2019-02-22T14:51:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "crash if a header row with no data",
+    "createdAt" : "2019-02-22T14:51:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Figure out gcc issue with index_connection",
+    "createdAt" : "2019-02-23T00:22:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "compilation failed on macOS",
+    "createdAt" : "2019-02-26T02:05:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Instability with gzip connections",
+    "createdAt" : "2019-02-26T02:23:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Is the sky (or 2.5 GB) the limit?",
+    "createdAt" : "2019-02-26T10:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : ".csv loads too slow to enviroment. ",
+    "createdAt" : "2019-02-26T14:17:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "When reading from connections make sure full first line is in buffer",
+    "createdAt" : "2019-02-26T14:37:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Performance parsing doubles",
+    "createdAt" : "2019-02-26T15:19:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Test-driving performance issues",
+    "createdAt" : "2019-02-26T20:30:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Handle case when `character(0)` is passed as the filenames",
+    "createdAt" : "2019-02-26T20:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Consider alternative index approaches",
+    "createdAt" : "2019-02-26T21:17:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 52,
+    "title" : "Include column spec in result",
+    "createdAt" : "2019-02-27T12:41:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Add `Get_region` implementations for numeric types",
+    "createdAt" : "2019-03-06T13:18:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 55,
+    "title" : "Define Extract_subset altrep methods",
+    "createdAt" : "2019-03-06T13:22:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Using vroom with col_names crashes R",
+    "createdAt" : "2019-03-09T22:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Check consistency of column names",
+    "createdAt" : "2019-03-10T12:55:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "POSIXct objects not using altrep after subsetting",
+    "createdAt" : "2019-03-14T17:43:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Understanding vroom performance",
+    "createdAt" : "2019-03-14T22:03:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "the `id` argument failed when dealing with compressed files",
+    "createdAt" : "2019-03-15T13:01:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "FR: `id` argument could use names when dealing with a named vector like `map_df`",
+    "createdAt" : "2019-03-15T13:15:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Implement n_max",
+    "createdAt" : "2019-03-16T12:39:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "slower than data.table::fread",
+    "createdAt" : "2019-03-20T11:12:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "All connection are in use when opening many compressed csvs",
+    "createdAt" : "2019-03-21T18:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Commas inside quoted fields breaks column reading",
+    "createdAt" : "2019-03-23T12:32:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "A representative video",
+    "createdAt" : "2019-04-05T02:01:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "python bindings coming soon?",
+    "createdAt" : "2019-04-06T12:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "compilation failure in macOS",
+    "createdAt" : "2019-04-06T21:59:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Factor performance",
+    "createdAt" : "2019-04-09T17:49:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 70,
+    "title" : "Handling multiple CSV files with differing columns",
+    "createdAt" : "2019-04-09T18:36:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Extract the guessing from readr",
+    "createdAt" : "2019-04-10T17:33:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "dplyr interactions",
+    "createdAt" : "2019-04-10T18:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "I need help for this problem",
+    "createdAt" : "2019-04-12T06:03:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Vroom Causes R to crash",
+    "createdAt" : "2019-04-13T02:54:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Speed of writing characters",
+    "createdAt" : "2019-04-15T15:14:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 76,
+    "title" : "Reading file creates unusable object",
+    "createdAt" : "2019-04-18T00:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Support quoted_na argument",
+    "createdAt" : "2019-04-18T12:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "read_fwf should not error if the file is truncated.",
+    "createdAt" : "2019-04-18T21:40:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Consider adding a fuzz target",
+    "createdAt" : "2019-04-23T20:38:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 80,
+    "title" : "Things to do before CRAN release",
+    "createdAt" : "2019-04-24T18:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "mention janitor in the getting started vignette",
+    "createdAt" : "2019-04-30T18:47:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Support different decimal marks",
+    "createdAt" : "2019-05-01T16:35:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 83,
+    "title" : "Release vroom 1.0.0",
+    "createdAt" : "2019-05-01T17:55:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "I have a problem when install this package. Help",
+    "createdAt" : "2019-05-02T07:01:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "feature request: can we define a default col_type for all columns",
+    "createdAt" : "2019-05-03T00:16:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Mention setting a default column type in the getting started vignette",
+    "createdAt" : "2019-05-03T11:49:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Add benchmark with _wide_ data to the benchmarking vignette",
+    "createdAt" : "2019-05-03T11:49:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "times not guessed without an AM or PM",
+    "createdAt" : "2019-05-03T13:42:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Consider using bytes / sec in benchmark plots",
+    "createdAt" : "2019-05-05T11:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Provide a `vroom_lines` function",
+    "createdAt" : "2019-05-05T11:13:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Fix vignettes failing on R 3.3 and 3.2",
+    "createdAt" : "2019-05-05T11:14:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Tweak vignette title so it shows up better on CRAN landing page",
+    "createdAt" : "2019-05-06T13:24:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Fix link to dplyr::select in getting started vignette",
+    "createdAt" : "2019-05-06T14:11:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "look into reported rchk issues",
+    "createdAt" : "2019-05-07T13:47:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Add guessed delimiter to message output",
+    "createdAt" : "2019-05-07T15:30:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "RStudio 1.2 should have the altrep bug fixes, so recommend that instead of the daily.",
+    "createdAt" : "2019-05-07T18:49:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "Fix UBSAN issues",
+    "createdAt" : "2019-05-07T20:47:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Not working in Windows (indefinitely hangs)?",
+    "createdAt" : "2019-05-07T22:44:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Wrong CRAN Installation Instructions!",
+    "createdAt" : "2019-05-08T10:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Consider an occupancy bitmap",
+    "createdAt" : "2019-05-08T13:45:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 102,
+    "title" : "README multifile `.tsv` example hangs",
+    "createdAt" : "2019-05-09T13:44:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "R Studio Crashing When Reading csv",
+    "createdAt" : "2019-05-09T18:12:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Required package not found",
+    "createdAt" : "2019-05-10T18:28:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Consider CleverCSV style parsing to determine the CSV dialect",
+    "createdAt" : "2019-05-13T12:43:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 106,
+    "title" : "Document how to read and write to C level stdin and stderr",
+    "createdAt" : "2019-05-13T13:38:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Encoding detection",
+    "createdAt" : "2019-05-13T14:45:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 108,
+    "title" : "Use the flights dataset in the getting started vignette?",
+    "createdAt" : "2019-05-13T15:05:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Release vroom 1.0.1",
+    "createdAt" : "2019-05-13T15:58:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "The id column should also be selectable in `col_select()`",
+    "createdAt" : "2019-05-14T19:51:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Look into speed of `id`",
+    "createdAt" : "2019-05-15T20:30:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Issue when using vroom_fwf() to read in large .dat.gz files",
+    "createdAt" : "2019-05-17T18:15:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Possible encoding error",
+    "createdAt" : "2019-05-18T18:17:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Issue with multiple newlines and `\\r\\n`",
+    "createdAt" : "2019-05-20T09:57:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "Encoding of column names",
+    "createdAt" : "2019-05-20T10:18:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Issue with reading large compressed file (.zip and .gz) ",
+    "createdAt" : "2019-05-23T20:04:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Parquet files",
+    "createdAt" : "2019-05-24T15:48:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "this package is PURE insanity!!!!!",
+    "createdAt" : "2019-05-25T20:38:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "vroom keeps crashing my R session",
+    "createdAt" : "2019-05-26T03:12:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "should `col_select()` bypass the mandatory same column number check",
+    "createdAt" : "2019-05-28T12:39:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Document how reading compressed files work",
+    "createdAt" : "2019-05-28T13:21:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "segfault on large zipped csv",
+    "createdAt" : "2019-05-30T01:03:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "vroom::col_date fails to parse single digit month and day",
+    "createdAt" : "2019-05-30T21:40:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "wrong units for speed in readme",
+    "createdAt" : "2019-05-31T09:54:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "feature request: handling multiple files in a zip",
+    "createdAt" : "2019-05-31T13:44:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "vroom::vroom() reads data as a single column",
+    "createdAt" : "2019-06-03T17:53:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "vroom setDT performance",
+    "createdAt" : "2019-06-04T10:04:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Reading a file from url",
+    "createdAt" : "2019-06-04T19:59:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Cannot load vroom",
+    "createdAt" : "2019-06-05T09:58:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "Vroom::room() reads less records than actual records",
+    "createdAt" : "2019-06-05T13:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "feature request: add file name when reading multiple files",
+    "createdAt" : "2019-06-05T14:56:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Add support for progress bar colors in RStudio 1.3+",
+    "createdAt" : "2019-06-07T17:39:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Compiling error",
+    "createdAt" : "2019-06-07T18:44:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Documentation Errors",
+    "createdAt" : "2019-06-12T16:08:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Null integers read in as zero",
+    "createdAt" : "2019-06-13T18:06:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "vroom sends 'R character strings are limited to 2^31-1 bytes' error for a big .CSV file",
+    "createdAt" : "2019-06-20T15:11:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "when specifying col_types, empty strings in a .CSV are read as NA for double, but zero for integer ",
+    "createdAt" : "2019-06-20T15:18:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Support UTF-16 encodings",
+    "createdAt" : "2019-06-20T18:19:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "vroom skips rows",
+    "createdAt" : "2019-06-21T00:11:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "Default message should use rows and cols",
+    "createdAt" : "2019-06-23T14:09:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Fails to guess delimeter on file",
+    "createdAt" : "2019-06-23T14:11:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "vroom_lines does not respect n_max",
+    "createdAt" : "2019-06-25T13:36:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Add fixed width file benchmark",
+    "createdAt" : "2019-06-25T14:46:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Add multiple files benchmark",
+    "createdAt" : "2019-06-25T14:47:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Throw a better error message when trying to write to a zip file, which is not supported",
+    "createdAt" : "2019-06-26T15:49:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "include max memory usage in benchmarks",
+    "createdAt" : "2019-06-26T19:05:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Release vroom 1.0.2",
+    "createdAt" : "2019-06-27T18:22:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Rewrite benchmarks so they can be run piecemeal (at least by package)",
+    "createdAt" : "2019-06-27T19:25:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "R locked after printing on Windows 10",
+    "createdAt" : "2019-06-29T01:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Add AWS machine information to benchmark vignettes",
+    "createdAt" : "2019-06-29T11:55:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "`vroom_chunked()` function",
+    "createdAt" : "2019-06-29T15:05:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Investigate Solaris failures",
+    "createdAt" : "2019-07-01T12:42:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "repetitive ingestion and index serialization",
+    "createdAt" : "2019-07-10T19:59:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "problem with scientific notation in text file",
+    "createdAt" : "2019-07-14T04:57:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Emphasize comparison bw just readr and vroom in README",
+    "createdAt" : "2019-07-15T20:04:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "multiple whitespace delim and RStudio crash",
+    "createdAt" : "2019-07-16T18:31:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Are you sure that vroom can guess the separator automatically like data.table?",
+    "createdAt" : "2019-07-20T14:15:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "vroom_write needs it's own delim docs",
+    "createdAt" : "2019-07-23T21:28:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Error contains unneeded call",
+    "createdAt" : "2019-07-23T21:35:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "vroom::col_date fails to parse %m/%d/%Y %H:%M:%S %p",
+    "createdAt" : "2019-07-29T16:23:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "parsing error when the file contains bad lines",
+    "createdAt" : "2019-07-30T15:11:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "vroom_write() crashes R session when the data.frame to write is empty",
+    "createdAt" : "2019-07-30T16:18:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "vroom() error when file contains only header and no line break",
+    "createdAt" : "2019-07-30T16:34:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "documentation implies multiple delimeters supported, but only one recognized",
+    "createdAt" : "2019-08-02T17:09:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "Incorrect parsing",
+    "createdAt" : "2019-08-08T09:19:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "vroom::col_date fails to parse %d%b%Y",
+    "createdAt" : "2019-08-14T11:20:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Can't delete files after read by vroom in R session",
+    "createdAt" : "2019-08-15T15:18:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Include user::conf talk whenever it is posted",
+    "createdAt" : "2019-08-16T20:27:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "vroom not available in R 3.5.3",
+    "createdAt" : "2019-08-26T18:11:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Too many open files - Windows",
+    "createdAt" : "2019-09-12T16:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "LZ4 compression",
+    "createdAt" : "2019-09-23T07:58:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Mention why vroom_write() prefers tsvs",
+    "createdAt" : "2019-09-23T13:16:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Factor parsing is incorrect when escaping backslashes",
+    "createdAt" : "2019-10-14T09:28:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "vroom isn't that fast on one real world dataset",
+    "createdAt" : "2019-10-19T13:33:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Allows any number of whitespace characters between columns",
+    "createdAt" : "2019-10-19T15:01:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "vroom parse missing values incorrectly",
+    "createdAt" : "2019-11-21T15:03:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "vroom_fwf(\"A\\n  a\") gives 'R character strings are limited to 2^31-1 bytes'",
+    "createdAt" : "2019-11-27T21:08:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Option to output data.frame/data.table",
+    "createdAt" : "2019-12-04T17:54:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "vroom introduces missing data",
+    "createdAt" : "2019-12-12T11:42:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "Vroom should respect a delim in the spec object",
+    "createdAt" : "2019-12-12T16:04:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "`cols()` should have a `.delim` argument",
+    "createdAt" : "2019-12-12T16:05:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Are there known issues with very large data files?",
+    "createdAt" : "2019-12-17T03:27:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Should not show the delim for fixed width files",
+    "createdAt" : "2019-12-17T21:23:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Filter and Summarize performance on large datasets",
+    "createdAt" : "2019-12-17T22:00:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "vroom not reading entirely a (possibly) bogus csv?",
+    "createdAt" : "2019-12-19T19:47:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Reading from multiple files AND make a column selection including the id column",
+    "createdAt" : "2019-12-27T10:04:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Able to read in col_type as `integer64`",
+    "createdAt" : "2019-12-31T18:21:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Broken benchmark links",
+    "createdAt" : "2020-01-03T21:33:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Release vroom 1.1.0",
+    "createdAt" : "2020-01-09T14:45:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Support `NA_integer_` indices",
+    "createdAt" : "2020-01-14T17:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Document using a vector as input to vroom in `?vroom`",
+    "createdAt" : "2020-01-15T19:32:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Problems with reading a csv file",
+    "createdAt" : "2020-01-16T12:25:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Label col_select as a tidy select argument",
+    "createdAt" : "2020-01-16T20:20:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Considering arrow style partitioning",
+    "createdAt" : "2020-01-21T20:52:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 208,
+    "title" : "Compilation failing: use of undeclared identifier 'LONG_LONG_MAX'. macOS 10.15.2",
+    "createdAt" : "2020-01-23T22:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Error when using `col_select` and files with duplicated column names",
+    "createdAt" : "2020-01-28T22:13:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Error in gsub(\"</\", \"\\\\u003c/\", payload, fixed = TRUE) :    input string 1 is invalid UTF-8",
+    "createdAt" : "2020-02-01T20:52:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Inconsistent reading of large, irregular CSVs",
+    "createdAt" : "2020-02-03T17:07:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Unable to save tibble with no rows",
+    "createdAt" : "2020-02-12T11:15:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "error on vroom reading many files w/ interaction to set_names",
+    "createdAt" : "2020-02-13T17:47:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Maybe a problem with col_types and locale?",
+    "createdAt" : "2020-02-21T15:00:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "pkgdown misconfiguration",
+    "createdAt" : "2020-02-25T13:30:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "`fwf_positions` with start column > end column produces unusual failure behavior.",
+    "createdAt" : "2020-02-27T23:30:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Include locate argument in the vroom_lines() function",
+    "createdAt" : "2020-03-02T01:20:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Truncated data with CRLF newlines and no newline at end of file",
+    "createdAt" : "2020-03-10T23:08:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Malformed date format leads to C stack usage error and/or segmentation fault",
+    "createdAt" : "2020-03-11T19:17:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "Error when path to file contains Russian characters",
+    "createdAt" : "2020-03-26T06:54:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Suggestion: please add a new argument for assigning the 1st column to rownames",
+    "createdAt" : "2020-03-27T11:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "csv read error with accented colname",
+    "createdAt" : "2020-04-01T12:40:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "More robust handling of quoted fields",
+    "createdAt" : "2020-04-03T14:39:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Try the new float parser from simd-json",
+    "createdAt" : "2020-04-03T15:33:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "CSV read error, truncating value",
+    "createdAt" : "2020-04-04T21:12:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Does vroom work if there are some blanks in my csv file?",
+    "createdAt" : "2020-04-09T22:31:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Windows 10: compilation failed delimited_index_connection.o error",
+    "createdAt" : "2020-04-25T17:55:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "The result of vroom is not consistent with readr, which get the correct values",
+    "createdAt" : "2020-05-03T07:46:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "`vroom_write` inherits wrong documentation for `col_names` parameter",
+    "createdAt" : "2020-05-07T03:43:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Formatting datetime col_type issue and extra \"\\r\" included in last column",
+    "createdAt" : "2020-05-07T15:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "append=TRUE destroys data file if path has compression extension",
+    "createdAt" : "2020-05-08T04:30:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "Argument \"na\" does not work with Cyrillic characters",
+    "createdAt" : "2020-05-12T09:55:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Subsetting a dataset crashes R",
+    "createdAt" : "2020-05-12T13:50:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Release vroom 1.2.1",
+    "createdAt" : "2020-05-12T16:57:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "crash with NA indexes and datetime or factor columns",
+    "createdAt" : "2020-05-19T15:24:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "the combination of \"id\" and col_types \"_\" - error",
+    "createdAt" : "2020-05-20T13:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "error with col_select and missing column names",
+    "createdAt" : "2020-05-27T13:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "skip empty columns",
+    "createdAt" : "2020-05-27T14:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "vroom converts unusual datetime stamps to NAs",
+    "createdAt" : "2020-06-02T04:15:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Comment lines after real data begins are not removed",
+    "createdAt" : "2020-06-14T14:40:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "vroom generates large temporary files that are not deleted",
+    "createdAt" : "2020-06-26T19:31:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "vroom fails to see the value in a column of 495704 rows",
+    "createdAt" : "2020-06-29T02:12:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Wrong parsing",
+    "createdAt" : "2020-06-30T08:10:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "24 hour date time issue",
+    "createdAt" : "2020-07-02T16:15:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 247,
+    "title" : "Add warning about parsing errors (like readr does)",
+    "createdAt" : "2020-07-03T06:29:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "vroom_write is currently not safe",
+    "createdAt" : "2020-07-07T16:06:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "Interface in C/C++ for accessing Altstring/Altrep data",
+    "createdAt" : "2020-07-22T18:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Should I not modify the file while I am using vroom?",
+    "createdAt" : "2020-07-26T02:50:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "View():ing an emptly tibble originating from vroom crashes Rstudio server session",
+    "createdAt" : "2020-08-05T10:02:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "A date field crashes the R session when reading in with vroom",
+    "createdAt" : "2020-08-11T08:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Release vroom 1.3.0",
+    "createdAt" : "2020-08-13T18:02:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "vroom 1.3.0 col_type issue",
+    "createdAt" : "2020-08-14T15:54:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Bug: fatal termination on 1.3.0",
+    "createdAt" : "2020-08-15T01:02:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Language special characters not recognized ",
+    "createdAt" : "2020-08-18T20:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "n_max with url connections",
+    "createdAt" : "2020-08-19T12:16:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "POSIXct test failures on R devel",
+    "createdAt" : "2020-08-25T14:06:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Release vroom 1.3.1",
+    "createdAt" : "2020-08-25T19:33:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 262,
+    "title" : "false equivalence in vroom/tests/testthat/test-factor.R (due to utils::all.equal not testing factors well)",
+    "createdAt" : "2020-08-26T19:52:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "Request alternate line endings capability",
+    "createdAt" : "2020-08-29T14:36:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Error \"r_vector\" when defining col_types with readr::cols()",
+    "createdAt" : "2020-09-15T18:15:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "vroom crashes with readr style colspec",
+    "createdAt" : "2020-09-28T13:35:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Release vroom 1.3.2",
+    "createdAt" : "2020-09-29T14:36:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Vroom issue with too many files (linux)",
+    "createdAt" : "2020-10-01T18:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "vroom causes progress::progress_bar to flicker (in some cases)",
+    "createdAt" : "2020-10-01T19:13:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 270,
+    "title" : "Vector memory exhausted",
+    "createdAt" : "2020-10-13T06:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Consider libfmt instead of grisu",
+    "createdAt" : "2020-10-13T12:49:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 272,
+    "title" : "Clarify that license is GPLv3",
+    "createdAt" : "2020-10-13T12:50:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Consider cctz instead of R derived localtime",
+    "createdAt" : "2020-10-13T13:30:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Reading large character",
+    "createdAt" : "2020-10-14T06:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "vroom replacing missing values with literal \"NA\", not <NA>",
+    "createdAt" : "2020-10-16T19:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "Create multiple columns of the same type",
+    "createdAt" : "2020-10-26T09:18:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 277,
+    "title" : "Install error on Ubuntu 18.04",
+    "createdAt" : "2020-10-27T16:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Unique gen_name() values",
+    "createdAt" : "2020-11-16T08:55:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "cannot delete file after read with vroom",
+    "createdAt" : "2020-11-26T08:54:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Incorrect use of new.env function",
+    "createdAt" : "2020-12-04T14:30:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "vroom as a readr backend",
+    "createdAt" : "2020-12-07T17:00:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "dplyr operation on dataset read-in with vroom crashes R/RStudio",
+    "createdAt" : "2020-12-14T16:40:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "`vroom_lines()` is erroring on empty files",
+    "createdAt" : "2020-12-22T19:13:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Vroom comment cannot differentiate lines starting with ## and #",
+    "createdAt" : "2020-12-27T12:16:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Unable to write file with no separator between ",
+    "createdAt" : "2020-12-28T17:00:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Escape double = TRUE slower than readr and crashing.",
+    "createdAt" : "2021-01-04T21:36:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "UBSAN issues",
+    "createdAt" : "2021-01-06T21:21:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Reading multiple files with the `id` argument compared to `map_dfr` with `.id`",
+    "createdAt" : "2021-01-11T19:25:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Current best practice for writing lines",
+    "createdAt" : "2021-01-13T17:53:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Should vroom return the column names in `problems()`?",
+    "createdAt" : "2021-01-14T15:53:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Incorrect column name in presence of skipped columns",
+    "createdAt" : "2021-01-14T16:47:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "comment not work",
+    "createdAt" : "2021-01-17T14:11:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "line number in problems not correct after commented rows.",
+    "createdAt" : "2021-01-26T16:35:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 296,
+    "title" : "Behavior when unnamed column types do not match the number of columns",
+    "createdAt" : "2021-01-26T18:39:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "If file is empty vroom should still output a data frame with the expected number of columns",
+    "createdAt" : "2021-01-26T18:41:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Should line numbers in problems include the header line or not?",
+    "createdAt" : "2021-01-26T18:54:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Release vroom 1.4.0",
+    "createdAt" : "2021-01-28T18:08:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "How to suppress parsing problems",
+    "createdAt" : "2021-02-01T22:17:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "[bug?] Unexpected behaviour of vroom 1.4.0",
+    "createdAt" : "2021-02-03T10:24:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Support comments within data",
+    "createdAt" : "2021-02-03T19:45:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "vroom::spec returns NULL when col_select is specified and readr is loaded",
+    "createdAt" : "2021-02-03T20:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "incorrect docs in vroom_write?",
+    "createdAt" : "2021-02-04T01:15:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "`vroom` requires all columns in all files before checking `col_select`",
+    "createdAt" : "2021-02-05T16:49:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "vroom not enjoying reading one row (n_max=1) from some files",
+    "createdAt" : "2021-02-07T00:31:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Images in benchmark vignette aren't showing",
+    "createdAt" : "2021-02-08T23:11:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "`problems()` not interchangable between readr and vroom",
+    "createdAt" : "2021-02-09T20:10:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Reading directly to data.frames seems slower with version 1.4.0",
+    "createdAt" : "2021-02-11T16:15:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "About .name_repair",
+    "createdAt" : "2021-02-11T23:34:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Cannot specify col_types for columns with missing names",
+    "createdAt" : "2021-02-13T04:57:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Empty tibble returned by vroom",
+    "createdAt" : "2021-02-15T17:15:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "Reading data with decimal mark ',' and col_type 'd' gives incorrect values",
+    "createdAt" : "2021-02-18T20:11:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "Could not guess the delimiter.",
+    "createdAt" : "2021-02-25T10:39:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "Incorrect row numbers, duplicate rows in `problems()` for `vroom_fwf`",
+    "createdAt" : "2021-02-26T22:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "hard crash if `n_max = 0` and `col_names` a character vector",
+    "createdAt" : "2021-03-01T08:22:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Specifying column types for optional columns",
+    "createdAt" : "2021-03-01T09:51:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "`problems()` needs to de-duplicate its results",
+    "createdAt" : "2021-03-01T13:46:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Compressed file fails (uncompressed okay)",
+    "createdAt" : "2021-04-01T14:31:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 323,
+    "title" : "Re-license vroom to MIT",
+    "createdAt" : "2021-04-12T13:40:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 326,
+    "title" : "Incorrect row number in `problems()`",
+    "createdAt" : "2021-04-22T14:56:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 327,
+    "title" : "Replace usage of zones with `tzdb`",
+    "createdAt" : "2021-04-22T20:48:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "`show_col_types`: Should this message be removed?",
+    "createdAt" : "2021-04-23T20:08:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "vroom_altrep: Duplicate conditions",
+    "createdAt" : "2021-04-27T19:36:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Duplicated factor levels for quoted characters",
+    "createdAt" : "2021-04-28T05:42:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "problems reading from .zip but not from decompressed file",
+    "createdAt" : "2021-04-29T07:06:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "Images aren't visible in benchmarks vignette",
+    "createdAt" : "2021-04-30T14:53:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Issue with quotes?",
+    "createdAt" : "2021-05-02T17:12:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "vroom_fwf is not working correctly with `n_max`",
+    "createdAt" : "2021-05-14T14:46:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "Windows Memory Usage Equivalent to Loading Full Dataset",
+    "createdAt" : "2021-05-21T20:09:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Parsing failure of CSV with lines ending with a space",
+    "createdAt" : "2021-05-25T06:56:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "Double Quotes are interpreted as end-of-string if followed by a delimiter",
+    "createdAt" : "2021-05-26T10:44:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "vroom 1.4.0 does not consider locale in guessing delimiters",
+    "createdAt" : "2021-05-28T11:17:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 340,
+    "title" : "can't handle embedded nulls in multibyte encoding; need for skipNull argument?",
+    "createdAt" : "2021-05-30T05:27:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Release vroom 1.5.0",
+    "createdAt" : "2021-06-01T16:57:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "na values not respected in numeric columns.",
+    "createdAt" : "2021-06-08T17:54:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Lower performance than expected when doing element-wise indexing",
+    "createdAt" : "2021-06-21T14:32:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Release vroom 1.5.1",
+    "createdAt" : "2021-06-22T14:18:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Release vroom 1.5.2",
+    "createdAt" : "2021-06-24T12:50:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Segmentation fault with `use_threads`  on some systems",
+    "createdAt" : "2021-06-24T13:50:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "Automatically detect file compression for local files",
+    "createdAt" : "2021-06-30T14:22:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 350,
+    "title" : "Possible truncation at >4GB [potential solution?]",
+    "createdAt" : "2021-07-01T08:36:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 351,
+    "title" : "Cannot delete files after vroom",
+    "createdAt" : "2021-07-02T21:24:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "`NA` intepreted as logical ",
+    "createdAt" : "2021-07-10T20:29:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 353,
+    "title" : "`vroom` fails to read file csv file correctly",
+    "createdAt" : "2021-07-13T01:15:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 354,
+    "title" : "trim_ws, trim whitespaces doesn't work",
+    "createdAt" : "2021-07-13T08:45:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Error if user passes too many column types",
+    "createdAt" : "2021-07-13T15:31:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 356,
+    "title" : "Release vroom 1.5.3",
+    "createdAt" : "2021-07-13T19:34:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Possibly don't need to use connections with files that don't end with newlines",
+    "createdAt" : "2021-07-14T13:39:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 360,
+    "title" : "Support for CR only newlines",
+    "createdAt" : "2021-07-29T17:22:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "'skip' argument results in Error: The size of the connection buffer (131072) was not large enough",
+    "createdAt" : "2021-08-03T06:17:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "problems returns incorrect values or throws errors on tables read in other processes",
+    "createdAt" : "2021-08-03T19:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 363,
+    "title" : "Release vroom 1.5.4",
+    "createdAt" : "2021-08-05T18:08:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 364,
+    "title" : "The size of the connection buffer (131072) was not large enough",
+    "createdAt" : "2021-08-07T23:46:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "R session crashes depending on the size of `guess_max`",
+    "createdAt" : "2021-08-16T15:17:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "Add rowname option",
+    "createdAt" : "2021-08-25T14:18:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "unclear how to use both col_names and col_select",
+    "createdAt" : "2021-08-31T19:47:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "vroom unhelpful for large data files on /tmp with tmpfs file system",
+    "createdAt" : "2021-09-01T09:14:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "Specifying folder to read from when reading multiple files - enhancement",
+    "createdAt" : "2021-09-06T09:26:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 370,
+    "title" : "Move `master` branch to `main`",
+    "createdAt" : "2021-09-08T00:32:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "vroom command locks a target file in a Windows system. So the target file cannot edit after reading while R session is still running.",
+    "createdAt" : "2021-09-10T06:20:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "Release vroom 1.5.5",
+    "createdAt" : "2021-09-13T19:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "Something has changed with delimiter guessing",
+    "createdAt" : "2021-09-13T20:35:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "fwf_empty() can't handle a URL",
+    "createdAt" : "2021-09-17T14:28:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 375,
+    "title" : "problems(.Last.value) shows phantom problem interactively in RStudio Rmarkdown",
+    "createdAt" : "2021-09-22T00:36:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Inconsistency in accepted formats for file argument",
+    "createdAt" : "2021-09-28T15:32:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 377,
+    "title" : "Performance of vroom_format",
+    "createdAt" : "2021-10-04T10:59:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Slow performance with dplyr",
+    "createdAt" : "2021-10-04T17:48:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 379,
+    "title" : "Hang issues with some CSV file parsing on Windows (/r/n)",
+    "createdAt" : "2021-10-20T08:07:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "multiple delimeters",
+    "createdAt" : "2021-10-20T21:42:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 381,
+    "title" : "Unable to read a file when setting `vroom(col_names = FALSE, col_select = c(1, 2))` (Linux/Windows)",
+    "createdAt" : "2021-10-21T22:15:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "Release vroom 1.5.6",
+    "createdAt" : "2021-11-10T11:11:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 383,
+    "title" : "R crashes with vroom 1.5.6 but not with 1.5.5",
+    "createdAt" : "2021-11-12T14:47:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 384,
+    "title" : "Error in vroom_materialize",
+    "createdAt" : "2021-11-22T19:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "Fails to build on PowerPC Mac with R 4.1.2",
+    "createdAt" : "2021-11-23T11:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 388,
+    "title" : "Release vroom 1.5.7",
+    "createdAt" : "2021-11-29T13:41:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Recursive gc error",
+    "createdAt" : "2021-12-01T13:08:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "`vroom_write()` should error on list-cols, df-cols, and matrix-cols",
+    "createdAt" : "2021-12-13T14:36:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 392,
+    "title" : "When `guess_max > n_max` , `guess_max` is truncated to `n_max`",
+    "createdAt" : "2021-12-22T16:46:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "File path encoding problem on Windows",
+    "createdAt" : "2022-01-03T23:04:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 395,
+    "title" : "locking file when saving",
+    "createdAt" : "2022-01-18T17:11:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "vroom na option being ignored for factors",
+    "createdAt" : "2022-01-24T18:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Extraneous whitespace complicates parsing in the presence of quoted fields",
+    "createdAt" : "2022-01-26T19:02:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 400,
+    "title" : "vroom doesn't respect skip/comment options for remote (HTTP) gzipped CSVs",
+    "createdAt" : "2022-02-04T19:47:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "force paths to be UTF-8 encoded for Windows",
+    "createdAt" : "2022-02-04T19:57:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "Scrutinize how \"Files must end with a newline\" is being emitted",
+    "createdAt" : "2022-02-08T20:00:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 425,
+    "title" : "`format_csv` segfaults with empty data frame",
+    "createdAt" : "2022-02-16T19:19:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 424,
+    "title" : "Automatically recycle col_types argument when it is just a single character",
+    "createdAt" : "2022-02-22T15:14:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 405,
+    "title" : "Upkeep for vroom",
+    "createdAt" : "2022-02-28T22:25:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "Upkeep for vroom",
+    "createdAt" : "2022-03-03T18:43:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "Upkeep for vroom",
+    "createdAt" : "2022-03-03T20:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Update errors to rlang 1.0.0",
+    "createdAt" : "2022-03-08T00:46:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 414,
+    "title" : "Problems encoding days and months in UTF-8",
+    "createdAt" : "2022-03-08T18:39:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 416,
+    "title" : "id column doesn't show up if not explicitly in col_select?",
+    "createdAt" : "2022-03-09T00:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Any docs/speedup pigz decompress?",
+    "createdAt" : "2022-03-10T23:59:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "cli_text() not exported, and VECTOR_ELT() can only be applied to a 'list', not a 'closure'",
+    "createdAt" : "2022-03-16T14:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Fractional seconds, col_datetime/col_time differences and %AT",
+    "createdAt" : "2022-03-25T21:53:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 455,
+    "title" : "Error when using numeric reference in col_select and id in read_csv",
+    "createdAt" : "2022-03-26T18:02:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "Move vroom from r-lib GitHub Organization to tidyverse",
+    "createdAt" : "2022-03-31T15:54:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "innecesary quotes when string starts with NA",
+    "createdAt" : "2022-04-10T11:41:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 427,
+    "title" : "Is it `collector_number` or `collector_numeric`?",
+    "createdAt" : "2022-04-12T15:42:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Rstudio crashes when reading a csv file with readr::read_csv, but not when using read.csv",
+    "createdAt" : "2022-04-14T09:30:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 430,
+    "title" : "Segfault when reading multiples and first file has no data rows",
+    "createdAt" : "2022-04-15T22:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Multi-file inputs to `vroom_fwf()` has incorrect output when one file is empty",
+    "createdAt" : "2022-05-03T22:02:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 435,
+    "title" : "`vroom_write_lines()` has incorrect documentation for primary input `x`",
+    "createdAt" : "2022-05-05T17:58:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 439,
+    "title" : "Too many delimiters in a row causes final column to be \"overstuffed\" with values",
+    "createdAt" : "2022-05-12T18:03:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "Repair any URLs that refer to `r-lib/vroom` instead of `tidyverse/vroom`; add NEWS bullet",
+    "createdAt" : "2022-05-17T03:09:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 443,
+    "title" : "Make `vroom::problems()` work more like `readr::problems()`",
+    "createdAt" : "2022-05-27T22:43:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Consider rchk issues",
+    "createdAt" : "2022-05-31T04:40:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Update test for `problems()` `unwind::protect` error",
+    "createdAt" : "2022-06-03T18:50:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "read_tsv() causes R to crash on some files",
+    "createdAt" : "2022-06-11T18:15:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "segfault when loading 2GB file with read_delim",
+    "createdAt" : "2022-06-27T23:38:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "choose columns which may or may not exist in data by col_select in vroom",
+    "createdAt" : "2022-07-07T06:08:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 464,
+    "title" : "columns in different order in multiple file read_csv",
+    "createdAt" : "2022-07-24T16:50:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 453,
+    "title" : "empty column of type date or date-time gives error in R version 3.6.3 with skip = 1",
+    "createdAt" : "2022-08-04T14:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Update the `.Rd` files for HTML5 compliance",
+    "createdAt" : "2022-08-18T06:50:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "Switch to `tidyselect::eval_select()`",
+    "createdAt" : "2022-08-18T14:46:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 460,
+    "title" : "Parsing in-memory data is slow",
+    "createdAt" : "2022-08-22T11:57:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 461,
+    "title" : "Don't inherit docs for vroom from readr",
+    "createdAt" : "2022-08-23T17:37:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "leading zeroes in writing years before 1000",
+    "createdAt" : "2022-08-26T09:26:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 465,
+    "title" : "Should the default for `guess_max` be the same for readr and vroom",
+    "createdAt" : "2022-09-16T21:32:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 466,
+    "title" : "no tempfile cleanup when reading compressed files",
+    "createdAt" : "2022-09-22T16:36:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 467,
+    "title" : "Release vroom 1.6.0",
+    "createdAt" : "2022-09-30T04:56:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "Vroom 1.6.0 fails when passed list of (curl) connections",
+    "createdAt" : "2022-10-04T14:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 470,
+    "title" : "Anecdotal data point",
+    "createdAt" : "2022-10-10T16:35:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 471,
+    "title" : "Add fig.alt to benchmarking vignette",
+    "createdAt" : "2022-10-11T23:25:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 473,
+    "title" : "Datetime parsing randomly (but rarely) fails when using multiple threads and latin1 encoding",
+    "createdAt" : "2022-10-12T14:35:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 474,
+    "title" : "vroom fails to guess delimiter in trivial cases",
+    "createdAt" : "2022-10-21T20:48:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 475,
+    "title" : "Error while reading zip file",
+    "createdAt" : "2022-10-27T16:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 476,
+    "title" : "problem when guessing coltypes if values contains \"L\" as the last character",
+    "createdAt" : "2022-10-27T16:28:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 477,
+    "title" : "Printing structure using `str` fails with `col_big_integer`",
+    "createdAt" : "2022-11-09T19:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "Column row/number seems not to correspond to original data",
+    "createdAt" : "2022-11-16T06:05:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 481,
+    "title" : "lazy reading not reading all rows and other issues",
+    "createdAt" : "2022-12-13T18:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 482,
+    "title" : "Short code for big integer appears in docs for `cols()` but not docs for `vroom(col_types =)`",
+    "createdAt" : "2023-01-21T01:14:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 483,
+    "title" : "Release vroom 1.6.1",
+    "createdAt" : "2023-01-22T05:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "‘vroom’ silently truncates CSV files with mismatched quotes",
+    "createdAt" : "2023-01-23T09:47:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 485,
+    "title" : "Re-vendor and re-patch grisu files",
+    "createdAt" : "2023-01-23T18:52:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "vroom fails to detect delimiter if data is quoted with double quote or only contains one column",
+    "createdAt" : "2023-01-27T17:57:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 487,
+    "title" : "Edition 2 reading missing factor rows as empty strings",
+    "createdAt" : "2023-01-31T23:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 488,
+    "title" : "`vroom` does not close failed connections",
+    "createdAt" : "2023-02-19T10:22:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 489,
+    "title" : "consider using fast_float for string => double conversions?",
+    "createdAt" : "2023-03-02T17:13:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 490,
+    "title" : "Upkeep for vroom",
+    "createdAt" : "2023-03-10T21:51:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 491,
+    "title" : "`use_standalone(\"r-lib/rlang\", \"types-check\")` instead of home grown argument checkers",
+    "createdAt" : "2023-03-11T17:11:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 492,
+    "title" : "Consider adding `col_raw`",
+    "createdAt" : "2023-04-07T14:18:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 493,
+    "title" : "Print data to stdout in shell",
+    "createdAt" : "2023-04-13T04:55:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 495,
+    "title" : "Release vroom 1.6.3",
+    "createdAt" : "2023-04-28T04:58:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 496,
+    "title" : "Upkeep for vroom (2023)",
+    "createdAt" : "2023-04-28T05:13:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 498,
+    "title" : "vroom fails to detect delimiter for some CSV file",
+    "createdAt" : "2023-05-30T03:09:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "Silence warning messages when parsing fails",
+    "createdAt" : "2023-06-16T19:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "Guess big integers?",
+    "createdAt" : "2023-06-19T16:14:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 501,
+    "title" : "skip _empty_rows = TRUE fails in vroom_fwf",
+    "createdAt" : "2023-06-23T11:36:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 502,
+    "title" : "unexpected altering of data when guessing column data types on data import with vroom()",
+    "createdAt" : "2023-06-27T10:04:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 503,
+    "title" : "`vroom_fwf` not reading the first line?",
+    "createdAt" : "2023-07-25T03:28:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 504,
+    "title" : "Compilation warning about unused variable",
+    "createdAt" : "2023-08-02T14:00:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "The `id` argument needs to be more discoverable from documentation",
+    "createdAt" : "2023-08-07T07:47:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Integer is loaded as double",
+    "createdAt" : "2023-08-09T08:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 507,
+    "title" : "Is vroom too memory greedy and disk intensive?",
+    "createdAt" : "2023-08-16T15:05:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Pre-filtering through pipe connections does not work on remote files",
+    "createdAt" : "2023-08-18T21:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "`vroom` does not work on list of connections",
+    "createdAt" : "2023-09-12T18:52:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 510,
+    "title" : "Segfault is appearing in vroom in other package's revdep checks",
+    "createdAt" : "2023-09-17T15:22:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "Don't inherit docs from readr",
+    "createdAt" : "2023-09-28T15:26:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Release vroom 1.6.4",
+    "createdAt" : "2023-10-02T01:31:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 518,
+    "title" : "Compilation Issue: MacOSX 14.0",
+    "createdAt" : "2023-10-04T13:41:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 519,
+    "title" : "Error with vroom 1.6.4 on MacOS but not Ubuntu or Windows",
+    "createdAt" : "2023-10-04T20:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 520,
+    "title" : "tests failure: character string is not in a standard unambiguous format",
+    "createdAt" : "2023-10-05T10:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "cryptic error messages when col_select has no valid columns",
+    "createdAt" : "2023-11-12T20:34:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 522,
+    "title" : "Vroom ignores col_names when dealing with imperfect data",
+    "createdAt" : "2023-11-13T10:37:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 523,
+    "title" : "Create agreement between argument type and format string",
+    "createdAt" : "2023-11-28T20:39:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Release vroom 1.6.5",
+    "createdAt" : "2023-12-05T05:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 527,
+    "title" : "CRAN checks and vroom",
+    "createdAt" : "2023-12-11T14:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 528,
+    "title" : "Altrep always used for \"id\" column, slowing down processing of column massively",
+    "createdAt" : "2023-12-21T15:04:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 529,
+    "title" : "Feature request: Add an option for linear-TSV-style writing/reading",
+    "createdAt" : "2024-02-15T21:24:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 531,
+    "title" : "Why the data are different using vroom_write and vroom",
+    "createdAt" : "2024-03-21T15:47:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Feature request: Column-level na values via collectors",
+    "createdAt" : "2024-03-25T16:51:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 533,
+    "title" : "Segfault when calling `read_tsv()` on an HPC cluster",
+    "createdAt" : "2024-04-03T16:52:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 534,
+    "title" : "`problems()` does not get set when readr is loaded, *and* `col_select` is being used.",
+    "createdAt" : "2024-04-13T23:56:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 535,
+    "title" : "Incorrect problem rows displayed by `problems()` when printing before calling ",
+    "createdAt" : "2024-04-14T00:01:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "`id` option allows duplicate column names, ignores `.name_repair`",
+    "createdAt" : "2024-04-14T02:29:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 537,
+    "title" : "Output of vroom::vroom does not display properly in Quarto HTML",
+    "createdAt" : "2024-04-28T19:50:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 538,
+    "title" : "Fails to compile on R4.4",
+    "createdAt" : "2024-05-02T12:14:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 539,
+    "title" : "`n_max = 0` / `col_names`: crashes R when reading from a remote connection",
+    "createdAt" : "2024-07-02T01:11:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 540,
+    "title" : "Error in UseMethod(\"collector_value\"): no applicable method for 'collector_value' applied to an object of class \"c('collector_skip', 'collector')\"",
+    "createdAt" : "2024-07-06T19:02:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "vroom_lines unable to ignore quoted newlines in ISO-8859-1 csv",
+    "createdAt" : "2024-07-19T09:19:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 544,
+    "title" : "segfault error reading large compressed file",
+    "createdAt" : "2024-09-25T08:55:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 545,
+    "title" : "Error handling of n_max=NA could be improved",
+    "createdAt" : "2024-12-12T15:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 546,
+    "title" : "Spurious progress message from vroom_write_connection_()",
+    "createdAt" : "2025-01-15T06:11:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 547,
+    "title" : "More issues with non-ascii characters in paths",
+    "createdAt" : "2025-01-27T16:05:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "Error: no applicable method for 'collector_value' when reading 0-length table with \"n\" column",
+    "createdAt" : "2025-02-19T18:16:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 549,
+    "title" : "Lines read and skip lines use different evaluation in vroom_lines",
+    "createdAt" : "2025-03-02T12:14:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 550,
+    "title" : "`Error: vector memory limit reached` when running `problems()` after setting up a database connection",
+    "createdAt" : "2025-03-10T15:17:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 551,
+    "title" : "`fwf_empty()` does not work with remote files (and that the default for `vroom_fwf()`)",
+    "createdAt" : "2025-03-14T13:12:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "Vroom is unstable when mapping over lists.",
+    "createdAt" : "2025-03-31T17:17:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "incomplete download of remote `.gz`",
+    "createdAt" : "2025-04-23T00:54:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 554,
+    "title" : "vroom::problems() conflicts and gives misleading warning when readr is loaded?",
+    "createdAt" : "2025-04-23T11:16:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 557,
+    "title" : "Release vroom 1.6.6",
+    "createdAt" : "2025-09-18T16:19:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "Warning re: parsing problems cannot be suppressed with `suppressWarnings()` when using altrep",
+    "createdAt" : "2025-09-23T07:11:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 559,
+    "title" : "Relax `check_encoding()` as in readr",
+    "createdAt" : "2025-10-16T15:28:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "C API compliance",
+    "createdAt" : "2025-11-14T20:47:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "Add the entire inst/bench folder to the .Rbuildignore",
+    "createdAt" : "2025-11-21T10:01:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 564,
+    "title" : "Refresh and generally rationalize the benchmarking study and vignette",
+    "createdAt" : "2025-11-21T17:06:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 569,
+    "title" : "Why does vroom not implement `[.spec_tbl_df`?",
+    "createdAt" : "2025-11-26T00:13:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 570,
+    "title" : "Release vroom 1.6.7",
+    "createdAt" : "2025-11-26T02:59:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 572,
+    "title" : "Upkeep for vroom (2025)",
+    "createdAt" : "2025-11-26T05:50:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 575,
+    "title" : "Advance deprecations",
+    "createdAt" : "2025-12-01T23:22:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 577,
+    "title" : "Use `cli::cli_abort()` from vroom's C++ code",
+    "createdAt" : "2025-12-03T23:25:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 579,
+    "title" : "Investigate warnings seen in CI",
+    "createdAt" : "2025-12-04T00:40:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 583,
+    "title" : "Progress problems",
+    "createdAt" : "2025-12-06T22:50:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 585,
+    "title" : "mention vroom as the parsing engine in readr (in the readme)",
+    "createdAt" : "2025-12-08T22:25:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 590,
+    "title" : "Segfault for remote fixed width file when `n_max = 0`",
+    "createdAt" : "2025-12-17T20:11:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 593,
+    "title" : "Get rid of ATTRIB",
+    "createdAt" : "2026-01-06T20:53:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 594,
+    "title" : "Remove guards and workarounds form R < 4.1",
+    "createdAt" : "2026-01-06T22:13:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 601,
+    "title" : "Level up the passing of the caller environment across R <--> C++ boundary",
+    "createdAt" : "2026-01-14T02:19:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 607,
+    "title" : "`vroom_lines()` warns about problems but `problems()` doesn't work on its output",
+    "createdAt" : "2026-01-21T19:45:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 608,
+    "title" : "Comment/token handling fails at connection chunk boundaries",
+    "createdAt" : "2026-01-22T21:17:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 610,
+    "title" : "Release vroom 1.7.0",
+    "createdAt" : "2026-01-23T23:19:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 611,
+    "title" : "Tests fail, vroom_fwf() doesn't leak a connection when opening fails",
+    "createdAt" : "2026-01-28T18:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 614,
+    "title" : "Warning that can't be handled",
+    "createdAt" : "2026-03-03T02:18:42Z",
+    "state" : "CLOSED"
+  } ]
+}

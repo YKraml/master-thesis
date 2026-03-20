@@ -1,0 +1,224 @@
+{
+  "repoOwner" : "PLSysSec",
+  "repoName" : "rlbox",
+  "forks" : [ {
+    "createdAt" : "2020-09-24T10:42:38Z"
+  }, {
+    "createdAt" : "2020-12-21T09:41:19Z"
+  }, {
+    "createdAt" : "2021-06-04T19:07:21Z"
+  }, {
+    "createdAt" : "2021-10-11T21:17:18Z"
+  }, {
+    "createdAt" : "2021-10-13T21:48:48Z"
+  }, {
+    "createdAt" : "2021-10-20T05:20:36Z"
+  }, {
+    "createdAt" : "2021-10-28T06:59:00Z"
+  }, {
+    "createdAt" : "2021-10-29T19:59:28Z"
+  }, {
+    "createdAt" : "2021-12-07T01:12:59Z"
+  }, {
+    "createdAt" : "2021-12-07T21:27:00Z"
+  }, {
+    "createdAt" : "2021-12-29T00:01:26Z"
+  }, {
+    "createdAt" : "2022-01-03T22:45:32Z"
+  }, {
+    "createdAt" : "2022-01-11T20:16:20Z"
+  }, {
+    "createdAt" : "2022-03-18T03:06:44Z"
+  }, {
+    "createdAt" : "2022-05-11T20:49:15Z"
+  }, {
+    "createdAt" : "2022-07-21T18:41:38Z"
+  }, {
+    "createdAt" : "2023-07-06T23:43:18Z"
+  }, {
+    "createdAt" : "2023-10-04T21:36:13Z"
+  }, {
+    "createdAt" : "2024-06-03T21:47:36Z"
+  }, {
+    "createdAt" : "2024-09-05T06:22:45Z"
+  }, {
+    "createdAt" : "2024-12-29T15:58:47Z"
+  }, {
+    "createdAt" : "2025-07-08T15:35:10Z"
+  }, {
+    "createdAt" : "2025-11-25T04:52:10Z"
+  }, {
+    "createdAt" : "2025-12-24T19:03:42Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "Add testing and swizzling of function pointers without context",
+    "createdAt" : "2019-08-06T00:10:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Add support for standard int types (uint32_t, size_t  etc.) for appropriate conversion",
+    "createdAt" : "2019-08-06T00:12:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 4,
+    "title" : "Add support for RLBox tainted_freezable types, to help prevent double fetch bugs",
+    "createdAt" : "2019-08-09T03:22:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5,
+    "title" : "Add support for RLBox helper types like stack_arr or heap_arr ",
+    "createdAt" : "2019-08-09T03:22:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 6,
+    "title" : "Create non const operators such as pre,post increment (++, --), arithmetic assignment (+=, -= etc) for tainted numerics and pointers",
+    "createdAt" : "2019-08-09T03:22:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Add support for threading",
+    "createdAt" : "2019-08-09T03:23:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8,
+    "title" : " Add support for double fetch detection mode ",
+    "createdAt" : "2019-08-09T03:24:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9,
+    "title" : "Implement the implicit type conversions for wrapper types, such as tainted<foo*>  converts to tainted<void*> etc",
+    "createdAt" : "2019-08-09T06:27:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10,
+    "title" : "Remove function casting used in callbacks to support tainted_opaque callback parameters",
+    "createdAt" : "2019-08-09T06:28:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 11,
+    "title" : "Implement auto conversion of wrapper types to opaque",
+    "createdAt" : "2019-08-09T06:29:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "rlbox_noop_sandbox should be self sufficient",
+    "createdAt" : "2019-08-09T06:31:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 13,
+    "title" : "Do a warnings cleanup pass on code when compiling for Arch Linux",
+    "createdAt" : "2019-08-09T06:31:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 14,
+    "title" : "Do a pass with ubsan to check for safety issues, possibly in glue tests.",
+    "createdAt" : "2019-08-09T06:32:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 15,
+    "title" : "Pass to eliminate reinterpret_cast where possible",
+    "createdAt" : "2019-08-09T06:32:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 16,
+    "title" : "Clean up sandbox_function_address to just return a tainted function pointer.",
+    "createdAt" : "2019-08-09T06:34:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Make the test suite compile error testing more robust by using a custom exception type",
+    "createdAt" : "2019-08-09T07:04:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 18,
+    "title" : "Improve error message when sandbox argument to sandbox_invoke is missing",
+    "createdAt" : "2019-12-28T07:33:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 19,
+    "title" : "comparing integers of different signs",
+    "createdAt" : "2019-12-30T21:11:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 20,
+    "title" : "memcpy and malloc_in_sandbox documentation",
+    "createdAt" : "2019-12-30T21:16:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 21,
+    "title" : "expose sandbox created?",
+    "createdAt" : "2019-12-30T21:19:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 22,
+    "title" : "copy_and_verify_string of unsigned char*",
+    "createdAt" : "2019-12-30T21:50:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 23,
+    "title" : "Try compacting signature of convert_base_types_t_helper by passing parameters as a struct",
+    "createdAt" : "2020-03-26T19:58:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 24,
+    "title" : "don't unregister callbacks automatically",
+    "createdAt" : "2020-07-05T23:12:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 25,
+    "title" : "Steps required for Windows support?",
+    "createdAt" : "2020-09-30T17:41:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Provide useful error message/add support when invoke variadic function calls",
+    "createdAt" : "2020-12-15T13:43:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 28,
+    "title" : "Make test optional",
+    "createdAt" : "2021-07-05T19:29:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Minor cleanup",
+    "createdAt" : "2021-07-13T19:38:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 36,
+    "title" : "cmake format-source not a target in release build",
+    "createdAt" : "2021-11-18T17:35:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Cannot build against glibc 2.34 with _DYNAMIC_STACK_SIZE_SOURCE",
+    "createdAt" : "2021-12-07T21:12:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "example should guard against null string pointer",
+    "createdAt" : "2022-03-03T18:05:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 46,
+    "title" : "Broken link to documentation",
+    "createdAt" : "2022-12-02T14:43:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Website URL has been squatted?",
+    "createdAt" : "2023-08-04T22:48:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "RLBox v2: Include method to call function pointer",
+    "createdAt" : "2023-09-25T19:23:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 56,
+    "title" : "! operator on tainted bool automatically unwraps it",
+    "createdAt" : "2023-11-17T16:48:44Z",
+    "state" : "OPEN"
+  } ]
+}

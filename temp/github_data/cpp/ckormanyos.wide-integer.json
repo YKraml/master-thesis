@@ -1,0 +1,865 @@
+{
+  "repoOwner" : "ckormanyos",
+  "repoName" : "wide-integer",
+  "forks" : [ {
+    "createdAt" : "2018-10-14T20:50:19Z"
+  }, {
+    "createdAt" : "2019-05-09T10:22:02Z"
+  }, {
+    "createdAt" : "2019-06-09T12:32:54Z"
+  }, {
+    "createdAt" : "2019-06-19T04:36:11Z"
+  }, {
+    "createdAt" : "2020-01-06T08:31:02Z"
+  }, {
+    "createdAt" : "2020-01-22T06:52:15Z"
+  }, {
+    "createdAt" : "2020-03-09T16:34:20Z"
+  }, {
+    "createdAt" : "2021-01-05T07:27:36Z"
+  }, {
+    "createdAt" : "2021-02-14T05:54:44Z"
+  }, {
+    "createdAt" : "2021-05-01T09:34:22Z"
+  }, {
+    "createdAt" : "2021-05-19T11:23:53Z"
+  }, {
+    "createdAt" : "2021-09-03T11:30:10Z"
+  }, {
+    "createdAt" : "2021-09-13T08:03:47Z"
+  }, {
+    "createdAt" : "2021-11-23T23:23:32Z"
+  }, {
+    "createdAt" : "2022-01-13T14:41:22Z"
+  }, {
+    "createdAt" : "2022-01-22T01:58:02Z"
+  }, {
+    "createdAt" : "2022-01-24T01:23:23Z"
+  }, {
+    "createdAt" : "2022-07-12T20:00:12Z"
+  }, {
+    "createdAt" : "2022-07-30T09:20:22Z"
+  }, {
+    "createdAt" : "2022-08-29T19:22:07Z"
+  }, {
+    "createdAt" : "2022-08-30T06:26:03Z"
+  }, {
+    "createdAt" : "2022-11-11T11:18:22Z"
+  }, {
+    "createdAt" : "2022-12-31T23:07:02Z"
+  }, {
+    "createdAt" : "2023-02-26T22:43:54Z"
+  }, {
+    "createdAt" : "2023-03-30T20:44:05Z"
+  }, {
+    "createdAt" : "2023-12-15T00:42:54Z"
+  }, {
+    "createdAt" : "2024-01-17T02:16:43Z"
+  }, {
+    "createdAt" : "2025-06-25T10:30:52Z"
+  }, {
+    "createdAt" : "2025-07-16T03:17:41Z"
+  }, {
+    "createdAt" : "2025-08-05T21:09:04Z"
+  }, {
+    "createdAt" : "2025-08-07T22:58:35Z"
+  }, {
+    "createdAt" : "2025-12-25T05:28:47Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Is a question?",
+    "createdAt" : "2019-05-31T07:36:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Faster division?",
+    "createdAt" : "2019-12-21T21:40:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Optimize Karatsuba Mul possible?",
+    "createdAt" : "2019-12-21T21:42:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Toom Cook multiplication",
+    "createdAt" : "2019-12-22T16:49:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 5,
+    "title" : "uint24_t missing (removed)",
+    "createdAt" : "2019-12-28T11:09:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Long division broken on AVR 8-bit",
+    "createdAt" : "2019-12-28T12:33:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Relax most constraints on binary digit count",
+    "createdAt" : "2019-12-28T21:29:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Add more test cases and strive for higher test coverage",
+    "createdAt" : "2019-12-29T08:33:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Optimized squaring routine",
+    "createdAt" : "2020-01-08T19:34:53Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 10,
+    "title" : "Signed extension planned?",
+    "createdAt" : "2020-03-28T11:35:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Optimize unsigned integer sqrt",
+    "createdAt" : "2020-06-12T20:41:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "Remove PCG random and use <random> instead",
+    "createdAt" : "2020-08-15T11:53:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Specialize div for 128/256-bit uint with 32/64-bit limbs (generalize to 4 limbs)",
+    "createdAt" : "2020-08-28T06:11:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Negative shifts",
+    "createdAt" : "2020-10-12T15:01:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Create a GCC/GCOV build or shell script",
+    "createdAt" : "2020-10-14T05:32:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Set up CI",
+    "createdAt" : "2020-12-31T09:44:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Fix or explain why example007 breaks CI",
+    "createdAt" : "2020-12-31T16:37:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "GCC with -fsanitize=address indicates problem",
+    "createdAt" : "2021-02-01T21:13:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Add more compilers/standards to CI",
+    "createdAt" : "2021-02-02T22:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Simplify CI with test matrices",
+    "createdAt" : "2021-02-13T21:16:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Add apple clang on MacOS to CI",
+    "createdAt" : "2021-02-13T21:38:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Add Apple GCC to CI ",
+    "createdAt" : "2021-02-14T21:48:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Use Boost develop branch in CI",
+    "createdAt" : "2021-02-22T21:22:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Tests to use manual verify instead of Boost.Test",
+    "createdAt" : "2021-03-01T19:25:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Clean up trivial thread snizize issues in tests",
+    "createdAt" : "2021-03-01T20:05:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Consider optional allocator type template parameter",
+    "createdAt" : "2021-03-02T06:20:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Specialize mul for 128-bit uint with 32-bit limbs",
+    "createdAt" : "2021-03-03T18:15:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Strive for constexpr correctness in ctor and numeric_limits",
+    "createdAt" : "2021-03-03T19:31:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add MinGW builds and runs to CI",
+    "createdAt" : "2021-03-06T17:26:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Reduce amount of Boost develop branch used in CI",
+    "createdAt" : "2021-03-06T17:28:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Breaking Change Announcement April 2021",
+    "createdAt" : "2021-03-23T09:53:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Add undefined behavior sanitizer runs to CI",
+    "createdAt" : "2021-04-01T05:32:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Limb size & speedups",
+    "createdAt" : "2021-04-28T18:44:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Try support 64-bit limb type",
+    "createdAt" : "2021-04-29T09:54:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Ensure specialized mul 4-by-4 on uint256_t with 64-bit limbs",
+    "createdAt" : "2021-04-29T20:48:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Unroll operations add/sub/shift-left/shift-right for 4 limbs",
+    "createdAt" : "2021-04-30T09:29:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "literal types",
+    "createdAt" : "2021-05-01T11:18:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Try/investigate specialized mul 8-by-8 limbs",
+    "createdAt" : "2021-05-01T21:20:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Continuous testing",
+    "createdAt" : "2021-05-02T11:09:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Add construct from/cast to built in float types",
+    "createdAt" : "2021-05-02T17:01:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Reduce amount of Git cloning in CI",
+    "createdAt" : "2021-05-03T06:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Numeric limits min() returns wrongly zero for signed",
+    "createdAt" : "2021-05-08T18:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Handle negative arguments in functions like cbrt, GCD, prime",
+    "createdAt" : "2021-05-09T14:15:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "digits now means width",
+    "createdAt" : "2021-05-09T16:05:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Conversion from non-limb types",
+    "createdAt" : "2021-05-10T01:11:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Remove uintwide_t constructor(s) from array-like aggregates",
+    "createdAt" : "2021-05-10T05:11:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Fix -Wconversion warnings?",
+    "createdAt" : "2021-05-10T21:40:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Construct-from float types constexpr",
+    "createdAt" : "2021-05-14T17:11:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Digit separators in construction from string?",
+    "createdAt" : "2021-05-23T18:22:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Location of public APIs",
+    "createdAt" : "2021-05-23T19:38:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 92,
+    "title" : "Review allocators and types",
+    "createdAt" : "2021-05-23T21:34:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Missing overload of numeric_limits::lowest",
+    "createdAt" : "2021-05-26T05:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Add -Wsign-conversion to CI",
+    "createdAt" : "2021-06-09T11:02:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Add GCC 11 on Ubuntu 20.04 to CI",
+    "createdAt" : "2021-07-02T09:00:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Promotion of negative integers",
+    "createdAt" : "2021-07-06T10:12:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Signed wide integer: Division of `min` by `1` results in `0` rather than `min` itself.",
+    "createdAt" : "2021-08-10T08:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Add more OS-es and compilers to CI",
+    "createdAt" : "2021-08-11T07:55:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Add simple and useful lcm(a, b) least common multiple",
+    "createdAt" : "2021-09-06T18:59:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Add another practical example",
+    "createdAt" : "2021-09-12T18:32:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : " Split tests into many individual tests each with `main()`",
+    "createdAt" : "2021-11-07T18:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Improve support `__int128`",
+    "createdAt" : "2021-11-10T09:14:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Handle messages/warnings from clang-tidy",
+    "createdAt" : "2021-11-22T16:19:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Adapt Example8 code for standalone Boost.Multiprecision",
+    "createdAt" : "2021-11-26T10:08:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Correct round to nearest regardless of FP flags",
+    "createdAt" : "2021-12-10T08:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "How to convert uint256 to uint128?",
+    "createdAt" : "2021-12-18T12:46:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Improved support for __int128 on platforms having it?",
+    "createdAt" : "2021-12-18T21:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "convert to std::string",
+    "createdAt" : "2021-12-21T23:33:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Consider to add namespace-specific version of to_chars(...)",
+    "createdAt" : "2021-12-24T15:11:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "(Previously '65536 bit integer') Infinite integer bit limit",
+    "createdAt" : "2021-12-30T02:31:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Eliminate test/CI dependency on Boost.Random",
+    "createdAt" : "2022-01-01T16:48:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "MSVC 2022 compatibility",
+    "createdAt" : "2022-01-02T10:34:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Get code coverage (via GCOV/LCOV/HtmlGen) running in a CI job",
+    "createdAt" : "2022-01-06T12:33:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Establish a cleaner process for clang-tidy in CI",
+    "createdAt" : "2022-01-07T22:17:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "Correct and streamline documentation",
+    "createdAt" : "2022-01-10T08:48:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "clang-tidy round 2",
+    "createdAt" : "2022-01-10T12:41:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "clang-tidy `[[nodiscard]]`",
+    "createdAt" : "2022-01-11T10:59:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "clang-tidy `(type* = nullptr)` empty param",
+    "createdAt" : "2022-01-11T11:00:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "clang-tidy(-ness) to be cnl-ready",
+    "createdAt" : "2022-01-11T17:44:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Optimize shift, msb() and lsb() functions",
+    "createdAt" : "2022-01-12T12:23:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Add more clang-tidy fixes",
+    "createdAt" : "2022-01-14T15:28:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Try refine construct/cast inter-width types",
+    "createdAt" : "2022-01-15T13:30:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Add a few embedded build(s) to CI",
+    "createdAt" : "2022-01-15T19:43:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "misspelling sing/sign in uintwide_t.h header",
+    "createdAt" : "2022-01-19T18:23:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Clean up and test construction/cast-conversion/assignment",
+    "createdAt" : "2022-01-20T10:31:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Reduce rule exceptions for clang-tidy checks",
+    "createdAt" : "2022-01-20T11:20:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Modernize by using C++11 nested namespaces",
+    "createdAt" : "2022-01-21T16:20:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Look into `altera` guideline messages in clang-tidy",
+    "createdAt" : "2022-01-21T16:25:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Add CI jobs making use of the `WIDE_INTEGER_NAMESPACE` option",
+    "createdAt" : "2022-01-21T16:38:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Use nested namespaces for C++17 and higher",
+    "createdAt" : "2022-01-22T14:03:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Recent hidden edit bug in namespace closing",
+    "createdAt" : "2022-01-23T07:00:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Add embedded avr builds to CI",
+    "createdAt" : "2022-01-23T07:07:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "Improve standalone capability of examples",
+    "createdAt" : "2022-01-23T10:10:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Get all non-Boost examples compiling/running on GCC5 in CI",
+    "createdAt" : "2022-01-23T10:12:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Clean up std headers and dyn-array fwd decl",
+    "createdAt" : "2022-01-23T17:25:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Simplify CI in very obvious points",
+    "createdAt" : "2022-01-24T07:56:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "lcm_impl emits warning on GCC 11.2 x86_64",
+    "createdAt" : "2022-01-24T16:35:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Dynamic array rebind alloc and hard-to-find typo",
+    "createdAt" : "2022-01-25T18:57:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Clean up stack allocation of char arrays in wr_string",
+    "createdAt" : "2022-01-25T19:44:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Add template allocator type to Boost-backend uintwide_t_backend",
+    "createdAt" : "2022-01-27T08:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Base class dynamic_array seems to be missing some constexpr-ness",
+    "createdAt" : "2022-01-29T17:10:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Run full tests on GCC 5 in CI",
+    "createdAt" : "2022-02-03T05:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "More arithmetic tests of Boost backend in CI",
+    "createdAt" : "2022-02-04T15:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Restore `-Werror` on most gcc/clang CI",
+    "createdAt" : "2022-02-05T21:20:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "[question] Porting from boost multiprecision ",
+    "createdAt" : "2022-02-24T14:19:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Add to docs alternatives and limitations",
+    "createdAt" : "2022-02-26T16:42:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Refactor some CI runs",
+    "createdAt" : "2022-03-03T10:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "lgtm integration",
+    "createdAt" : "2022-03-29T18:32:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Try Synopsis Coverity analysis",
+    "createdAt" : "2022-03-30T16:50:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "Harden `eval_divide_knuth` subroutine (Synopsis Coverity finding)",
+    "createdAt" : "2022-03-30T18:24:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "Consider to automate coverity analysis in CI",
+    "createdAt" : "2022-04-01T07:23:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 255,
+    "title" : "Harden wide-integer via CodeSonar",
+    "createdAt" : "2022-04-01T12:42:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Synopsis Coverity runs on PRs and push to master",
+    "createdAt" : "2022-04-01T20:41:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Refactor increment/decrement",
+    "createdAt" : "2022-04-04T13:38:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Use enhanced freedom from warnings on Boost 1.80 (develop)",
+    "createdAt" : "2022-05-02T09:53:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Handle uncaught exceptions",
+    "createdAt" : "2022-05-12T17:31:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Use Ubuntu Jammy with GC12/clang14 in CI",
+    "createdAt" : "2022-05-16T08:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "On clang++ modulus with signed integer is ambiguous",
+    "createdAt" : "2022-05-16T17:29:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Add vs2022 runs (release and ASAN) to CI",
+    "createdAt" : "2022-05-30T12:35:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Remove C++11 in CI response Boost Math/Multiprecision deprecate C++11 in 2023",
+    "createdAt" : "2022-06-02T04:49:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Deprecate C++11 and bump minimum langage standard to C++14",
+    "createdAt" : "2022-06-02T06:32:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Small coverage deltas causing CI failure(s)",
+    "createdAt" : "2022-06-03T21:08:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Try out codacy report and if it adds value then use it",
+    "createdAt" : "2022-06-27T19:03:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "Strive for 100 percent (Line) coverage in CI/Tests",
+    "createdAt" : "2022-06-27T19:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "Get arm-none-eabi benchmarks on the metal (simulated in QEMU)",
+    "createdAt" : "2022-07-12T10:46:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "equivalent to mp::import_bits, mp::export_bits?",
+    "createdAt" : "2022-07-13T18:35:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Upgrade docs to use Markdown's own LaTeX interpreter",
+    "createdAt" : "2022-07-22T12:11:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Handle Ubuntu 18.04 Deprecation on GHA",
+    "createdAt" : "2022-08-26T04:35:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "about import_bits/export_bits",
+    "createdAt" : "2022-09-26T16:37:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Replace (soon to be deprectated) LGTM with GitHub's CodeQL",
+    "createdAt" : "2022-10-04T08:16:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Cannot use integers in template parameters due to private data members.",
+    "createdAt" : "2022-11-07T06:41:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 339,
+    "title" : "Possible bug with <?>",
+    "createdAt" : "2022-11-30T22:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "Support signed/unsigned floored division (like Python // operator or divmod)",
+    "createdAt" : "2023-02-07T09:11:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "Adapt for GCC 13",
+    "createdAt" : "2023-03-27T06:45:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Halt early in a n_by_n multiplication loop if numbers are small enough",
+    "createdAt" : "2023-06-06T12:05:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 368,
+    "title" : "valgrind investigations",
+    "createdAt" : "2023-07-22T11:32:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 374,
+    "title" : "Repair GCD reduction which is broken for certain small values",
+    "createdAt" : "2023-08-14T09:50:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 378,
+    "title" : "Refactoring has lead to slight performance drop and needs repair",
+    "createdAt" : "2023-08-26T09:34:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Add cygwin run in CI",
+    "createdAt" : "2023-08-26T13:56:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Update and modernize CI",
+    "createdAt" : "2023-11-07T04:07:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 392,
+    "title" : "Client request C++14 constexpr-ness",
+    "createdAt" : "2023-11-29T14:33:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Construction from Constexpr StringView",
+    "createdAt" : "2024-01-14T14:44:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 402,
+    "title" : "Clean up constexpr-ness",
+    "createdAt" : "2024-01-23T12:11:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 408,
+    "title" : "Coverity scan for `uintwide_t`, example and test software",
+    "createdAt" : "2024-01-27T10:00:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "Repair cygwin in CI and upgrade all CI",
+    "createdAt" : "2024-03-09T13:22:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 416,
+    "title" : "wide_integer.h header erroneously uses std::lexicographical compare",
+    "createdAt" : "2024-06-03T04:34:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "Restore vs2022 toolset in CI",
+    "createdAt" : "2024-08-26T09:00:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 423,
+    "title" : "Add fuzzing run to CI",
+    "createdAt" : "2024-09-02T16:29:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "Weakness in Miller-Rabin primality test found in fuzzing",
+    "createdAt" : "2024-09-26T17:19:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "The `import_bits()` function fails with leading 0x00",
+    "createdAt" : "2024-09-27T08:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "Run fuzzing CI in parallel --jobs via GNUmake build",
+    "createdAt" : "2024-09-29T08:23:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 437,
+    "title" : "QEMU runs are broken fix via python-free simplify",
+    "createdAt" : "2024-11-23T06:11:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 441,
+    "title" : "Compilation fails on G++ 13 or above in C++20",
+    "createdAt" : "2025-01-08T07:01:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Minimum CXX version in CMake does not agree with README",
+    "createdAt" : "2025-04-11T17:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 447,
+    "title" : "Add conan badge to markdown",
+    "createdAt" : "2025-06-06T20:37:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 448,
+    "title" : "Create occasional releases and start with the first one",
+    "createdAt" : "2025-06-06T20:39:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "Add more fuzzing with new `cppalliance/int128`",
+    "createdAt" : "2025-06-08T19:58:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "Add tests for #454",
+    "createdAt" : "2025-06-26T09:26:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 461,
+    "title" : "Upgrade SonarQube job in CI",
+    "createdAt" : "2025-09-11T12:28:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 462,
+    "title" : "Setup coverage in SonarQube",
+    "createdAt" : "2025-09-11T12:48:45Z",
+    "state" : "OPEN"
+  } ]
+}

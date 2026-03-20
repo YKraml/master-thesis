@@ -1,0 +1,510 @@
+{
+  "repoOwner" : "TeamWisp",
+  "repoName" : "WispRenderer",
+  "forks" : [ {
+    "createdAt" : "2018-10-11T09:37:47Z"
+  }, {
+    "createdAt" : "2019-06-19T00:51:59Z"
+  }, {
+    "createdAt" : "2019-06-26T01:55:34Z"
+  }, {
+    "createdAt" : "2019-07-22T07:49:47Z"
+  }, {
+    "createdAt" : "2019-09-02T09:39:20Z"
+  }, {
+    "createdAt" : "2019-10-04T12:34:53Z"
+  }, {
+    "createdAt" : "2019-10-10T13:01:24Z"
+  }, {
+    "createdAt" : "2019-12-17T01:32:52Z"
+  }, {
+    "createdAt" : "2019-12-20T03:06:27Z"
+  }, {
+    "createdAt" : "2019-12-20T07:46:30Z"
+  }, {
+    "createdAt" : "2019-12-22T01:10:36Z"
+  }, {
+    "createdAt" : "2020-03-14T12:49:48Z"
+  }, {
+    "createdAt" : "2020-05-09T07:15:12Z"
+  }, {
+    "createdAt" : "2022-11-23T12:15:36Z"
+  }, {
+    "createdAt" : "2024-12-07T15:00:55Z"
+  }, {
+    "createdAt" : "2025-01-15T09:22:25Z"
+  }, {
+    "createdAt" : "2025-02-01T00:51:52Z"
+  } ],
+  "issues" : [ {
+    "number" : 24,
+    "title" : "Missing m_ prefix at member variables",
+    "createdAt" : "2018-11-26T14:17:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Duplicate calls to `d3d12::Signal`",
+    "createdAt" : "2018-11-27T13:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Frame graph redesign.",
+    "createdAt" : "2018-11-27T20:05:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "All function definitions don't follow the style guide of the `t_` prefix.",
+    "createdAt" : "2018-11-27T20:06:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Render Target's are not versioned.",
+    "createdAt" : "2018-11-27T20:07:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Replace the structures that bridge the platform high and low level layers with void pointers.",
+    "createdAt" : "2018-11-27T20:14:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Multi-threading can create a race condition?",
+    "createdAt" : "2018-11-27T20:35:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Creating scene graph nodes at runtime should be supported.",
+    "createdAt" : "2018-11-30T08:54:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Instancing & Lighting",
+    "createdAt" : "2018-11-30T09:43:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 48,
+    "title" : "ModelPool: Not vertex and index type independent.",
+    "createdAt" : "2018-12-01T17:22:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "ModelPool: Everything seems to be aligned by 65536 bytes.",
+    "createdAt" : "2018-12-01T17:30:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "ModelPool: index/vertex buffer offset is never 0.",
+    "createdAt" : "2018-12-01T17:35:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "ModelPool: Doesn't log any information to the user.",
+    "createdAt" : "2018-12-01T17:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "ModelPool: Don't offset virtual addressess.",
+    "createdAt" : "2018-12-03T08:29:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Use a bitset instead of a vector for versioning in the SceneGraph Node's",
+    "createdAt" : "2018-12-03T09:24:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Execute Indirect: Only rendering third frame",
+    "createdAt" : "2018-12-03T14:57:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "d3d12_settings.hpp DebugLayer",
+    "createdAt" : "2018-12-04T12:15:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "SceneGraph: Node update",
+    "createdAt" : "2018-12-04T14:55:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "ResizeBuffers doesn't consistently get called by transitioning to full screen",
+    "createdAt" : "2018-12-06T08:52:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Inconsistent placement of \"&\" and \"*\"",
+    "createdAt" : "2018-12-06T14:57:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Aliasing issues when using SampleLevel in compute shaders",
+    "createdAt" : "2018-12-10T12:03:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Use radians everywhere instead of degrees.",
+    "createdAt" : "2018-12-10T13:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Shader reloading reloads every single shader.",
+    "createdAt" : "2018-12-11T09:21:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 82,
+    "title" : "ExecuteIndirect: Binding index buffer",
+    "createdAt" : "2018-12-11T10:53:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "Use `void*` for shader registries instead of the intermediate structs.",
+    "createdAt" : "2018-12-14T14:08:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Submodules should clone a specific commit ID instead of latest.",
+    "createdAt" : "2018-12-15T23:46:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 103,
+    "title" : "Release mode uses unsupported shader model",
+    "createdAt" : "2018-12-18T13:45:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "D3D12RenderSystem::Render_MeshNodes checks execute indirect multiple times",
+    "createdAt" : "2019-01-10T15:46:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Use C++'s \"final\" keyword to clarify design choice.",
+    "createdAt" : "2019-01-11T12:42:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "The updating of the materials for the AS may be incorrect at times.",
+    "createdAt" : "2019-01-15T10:58:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Quaternions are used incorrectly",
+    "createdAt" : "2019-01-16T15:32:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 135,
+    "title" : "Skybox rotated 90 degrees",
+    "createdAt" : "2019-01-24T09:19:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Framebuffer resize on resize",
+    "createdAt" : "2019-01-24T09:22:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "LightNode contains temporary variable.",
+    "createdAt" : "2019-02-11T15:02:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Model loader intermediate data",
+    "createdAt" : "2019-02-18T11:00:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 169,
+    "title" : "Improper program behaviour when shutting down",
+    "createdAt" : "2019-02-19T14:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Sun Temple DDS mipmapping bug.",
+    "createdAt" : "2019-02-25T10:59:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Texture pool causes crash on application shutdown",
+    "createdAt" : "2019-02-25T11:01:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Meshes store pointers to handles",
+    "createdAt" : "2019-02-26T09:47:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Resizing window leaks memory",
+    "createdAt" : "2019-03-08T13:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Deferred Composition uses A RGB8 render target format",
+    "createdAt" : "2019-03-12T12:15:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Starting Engine on non-deferred",
+    "createdAt" : "2019-03-15T11:05:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "More texture file formats",
+    "createdAt" : "2019-03-19T15:02:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Scene graph never deletes batch if last MeshNode with batched mesh is destroyed",
+    "createdAt" : "2019-03-21T10:43:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Change the name of the repository",
+    "createdAt" : "2019-03-25T11:04:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "More visually pleasing README.MD",
+    "createdAt" : "2019-03-25T11:10:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Counting rays",
+    "createdAt" : "2019-03-25T13:12:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 209,
+    "title" : "Hybrid & Path tracing doesn't work with material constants if you don't set a texture as well.",
+    "createdAt" : "2019-03-26T09:21:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "FALLBACK_PTRS is hardcoded to 9",
+    "createdAt" : "2019-03-28T09:33:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 212,
+    "title" : "Material Unload",
+    "createdAt" : "2019-03-28T14:22:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "~D3D12TexturePool() unloads unstaged textures ",
+    "createdAt" : "2019-03-29T09:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Provide a minimal code sample that shows how to integrate the framework",
+    "createdAt" : "2019-03-31T12:05:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 221,
+    "title" : "Switch to full screen works inconsistently",
+    "createdAt" : "2019-04-01T07:20:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 222,
+    "title" : "Duplicated code",
+    "createdAt" : "2019-04-01T08:54:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 226,
+    "title" : "Textures take too much space",
+    "createdAt" : "2019-04-01T12:58:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 227,
+    "title" : "Material pool and Texture pool getters don't have error checking",
+    "createdAt" : "2019-04-01T13:59:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Material has duplicated flags",
+    "createdAt" : "2019-04-02T08:06:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 237,
+    "title" : "UpdateTransform remove used_quaternion flag",
+    "createdAt" : "2019-04-04T12:47:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Self intersection in hybrid",
+    "createdAt" : "2019-04-04T14:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Raytracing normals issue",
+    "createdAt" : "2019-04-08T08:30:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Terrible performance on GTX 960M",
+    "createdAt" : "2019-04-08T09:28:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "When there is only 1 mesh the material appears as black.",
+    "createdAt" : "2019-04-08T12:21:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 248,
+    "title" : "VRAM usage is very high",
+    "createdAt" : "2019-04-08T13:37:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 250,
+    "title" : "Raytracing reflection rays return invalid data.",
+    "createdAt" : "2019-04-08T14:38:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Passing nullopt as RenderTaskDesc.m_properties crashes",
+    "createdAt" : "2019-04-09T15:30:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Make sure integer types are correct",
+    "createdAt" : "2019-05-06T20:16:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 269,
+    "title" : "Barrier management",
+    "createdAt" : "2019-05-06T20:18:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 270,
+    "title" : "Replace discarding `GetPredecessorData` calls with a proper wait function.",
+    "createdAt" : "2019-05-06T20:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "SceneGraph::m_skybox needs to be manually set.",
+    "createdAt" : "2019-05-08T17:22:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "`D3D12RenderSystem::Render` takes a shared pointer and a normal reference.",
+    "createdAt" : "2019-05-08T17:24:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "`CreateMaterialPool` doesn't use the size_in_bytes variable. Always allocates 1_mb",
+    "createdAt" : "2019-05-08T17:37:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 278,
+    "title" : "`d3d12::CreateReadbackBuffer`'s descriptor is passed as a pointer.",
+    "createdAt" : "2019-05-08T19:42:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "Ignore imgui.ini",
+    "createdAt" : "2019-05-09T07:29:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Mipmapping and variable roughness",
+    "createdAt" : "2019-05-09T12:01:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 288,
+    "title" : "Use uints when needed",
+    "createdAt" : "2019-05-10T11:42:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Shadows out of sync",
+    "createdAt" : "2019-05-14T15:07:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "Switching frame graphs after resizing breaks.",
+    "createdAt" : "2019-05-16T08:39:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 320,
+    "title" : "Compute pipelines don't transition their render target.",
+    "createdAt" : "2019-05-24T09:40:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 327,
+    "title" : "Multithreading causes issues when allocating from pools located in the render system",
+    "createdAt" : "2019-05-25T19:59:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Registry descriptors are missing the `m_` prefix",
+    "createdAt" : "2019-05-25T20:00:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 338,
+    "title" : "Fallback AS crashes on removal of a model",
+    "createdAt" : "2019-05-28T10:18:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 340,
+    "title" : "frame_graph's FG_DEPS",
+    "createdAt" : "2019-05-28T12:12:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "m_skybox_changed variable in D3D12RenderSystem",
+    "createdAt" : "2019-05-28T12:25:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 342,
+    "title" : "lerping where branching is better",
+    "createdAt" : "2019-05-28T12:34:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 347,
+    "title" : "Build acceleration crashes when there's no instances left",
+    "createdAt" : "2019-05-28T17:13:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "Lower rendertask count for bloom",
+    "createdAt" : "2019-06-03T08:43:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 352,
+    "title" : "Consider using linear depth buffer in RTAO",
+    "createdAt" : "2019-06-03T11:43:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 353,
+    "title" : "Error logging in D3D12 functions",
+    "createdAt" : "2019-06-03T12:04:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 356,
+    "title" : "Wisp crashes if no imgui.ini file is present ",
+    "createdAt" : "2019-06-04T14:29:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 376,
+    "title" : "Switching framegraph crash (Fallback Layer)",
+    "createdAt" : "2019-06-14T10:10:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 381,
+    "title" : "Scene changer always loads Sponza",
+    "createdAt" : "2019-06-17T07:53:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "Black frames",
+    "createdAt" : "2019-06-17T13:33:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 387,
+    "title" : "Memory leaks",
+    "createdAt" : "2019-06-18T11:46:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 401,
+    "title" : "Constant emissive colors",
+    "createdAt" : "2019-06-25T18:00:26Z",
+    "state" : "OPEN"
+  } ]
+}

@@ -1,0 +1,635 @@
+{
+  "repoOwner" : "llvm-dcpu16",
+  "repoName" : "llvm-dcpu16",
+  "forks" : [ {
+    "createdAt" : "2012-04-07T04:57:33Z"
+  }, {
+    "createdAt" : "2012-04-08T00:18:43Z"
+  }, {
+    "createdAt" : "2012-04-08T10:40:52Z"
+  }, {
+    "createdAt" : "2012-04-09T04:33:26Z"
+  }, {
+    "createdAt" : "2012-04-09T18:21:19Z"
+  }, {
+    "createdAt" : "2012-04-10T16:08:37Z"
+  }, {
+    "createdAt" : "2012-04-14T04:55:51Z"
+  }, {
+    "createdAt" : "2012-04-26T07:03:21Z"
+  }, {
+    "createdAt" : "2012-05-02T04:12:45Z"
+  }, {
+    "createdAt" : "2012-05-10T20:56:35Z"
+  }, {
+    "createdAt" : "2012-07-26T00:54:47Z"
+  }, {
+    "createdAt" : "2012-08-22T11:07:34Z"
+  }, {
+    "createdAt" : "2013-04-21T06:11:55Z"
+  }, {
+    "createdAt" : "2016-07-01T11:06:56Z"
+  }, {
+    "createdAt" : "2017-04-24T16:48:54Z"
+  }, {
+    "createdAt" : "2018-05-07T15:03:59Z"
+  }, {
+    "createdAt" : "2023-08-30T23:34:04Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Create lib/Target/DCPU16 directory",
+    "createdAt" : "2012-04-05T08:11:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Rename filenames in lib/Target/DCPU16",
+    "createdAt" : "2012-04-05T08:26:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Mass replace MSP430->DCPU16",
+    "createdAt" : "2012-04-05T08:38:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Add DCPU16 to llvm targets",
+    "createdAt" : "2012-04-05T08:46:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Mass replace msp430->dcpu16",
+    "createdAt" : "2012-04-05T08:49:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Cleanup DCPU16_INTR",
+    "createdAt" : "2012-04-05T09:00:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Fix configure/make build",
+    "createdAt" : "2012-04-05T09:24:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Rename mov.w -> SET",
+    "createdAt" : "2012-04-05T09:29:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Rename add.w to ADD",
+    "createdAt" : "2012-04-05T09:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Rename sub.w to SUB",
+    "createdAt" : "2012-04-05T09:49:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Add A 16-bit register",
+    "createdAt" : "2012-04-05T16:37:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Delete 8-bit subregs",
+    "createdAt" : "2012-04-05T16:43:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Add B register",
+    "createdAt" : "2012-04-05T17:05:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Add C,X,Y,Z,I,J registers",
+    "createdAt" : "2012-04-05T17:11:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Rename and.w to AND",
+    "createdAt" : "2012-04-05T19:46:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Rename xor.w to XOR",
+    "createdAt" : "2012-04-05T19:54:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Rename bis.w to BOR",
+    "createdAt" : "2012-04-05T20:04:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Make 'main' branch rebaseable on top of master",
+    "createdAt" : "2012-04-05T20:36:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Implement ret and call",
+    "createdAt" : "2012-04-05T20:59:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Pass arguments with X,Y,Z,J",
+    "createdAt" : "2012-04-05T21:23:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Use the Notch order for SET",
+    "createdAt" : "2012-04-05T22:09:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Use the Notch order for ADD",
+    "createdAt" : "2012-04-05T22:18:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Use the Notch order for SUB",
+    "createdAt" : "2012-04-05T22:22:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Rename r1 to SP",
+    "createdAt" : "2012-04-05T22:29:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Fix the format of indexing",
+    "createdAt" : "2012-04-05T22:35:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Fix the format of numbers",
+    "createdAt" : "2012-04-05T22:56:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Fix the format of symbols",
+    "createdAt" : "2012-04-05T22:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Pay technical debt for label format",
+    "createdAt" : "2012-04-05T23:04:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Find an assembler/debugger to support",
+    "createdAt" : "2012-04-05T23:19:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 31,
+    "title" : "Make the compiler available online",
+    "createdAt" : "2012-04-05T23:20:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 32,
+    "title" : "Open source the compiler",
+    "createdAt" : "2012-04-05T23:21:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Make sure all the instructions have the Notch order",
+    "createdAt" : "2012-04-05T23:22:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Fix relative offsets (we have word-addressable memory)",
+    "createdAt" : "2012-04-05T23:34:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "SP is not a register. Use C instead of SP",
+    "createdAt" : "2012-04-06T00:40:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Use SET PC, $dst instead of jmp",
+    "createdAt" : "2012-04-06T02:34:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Implement cmp",
+    "createdAt" : "2012-04-06T02:47:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Implement jge",
+    "createdAt" : "2012-04-06T03:06:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Need tests for the compiler",
+    "createdAt" : "2012-04-06T06:12:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Invalid MODULE_CODE_FUNCTION record",
+    "createdAt" : "2012-04-07T04:55:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Port Clang to support dcpu16",
+    "createdAt" : "2012-04-07T05:03:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Consider libc",
+    "createdAt" : "2012-04-07T07:40:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 43,
+    "title" : "Arch Linux: Cmake fails at configuring",
+    "createdAt" : "2012-04-07T11:00:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Implement build script for LLVM+Clang toolchain",
+    "createdAt" : "2012-04-07T20:30:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Continuously deploy toolchain on S3",
+    "createdAt" : "2012-04-07T20:31:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 47,
+    "title" : "Consider make the output from Clang executable for easier testing",
+    "createdAt" : "2012-04-07T22:55:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 48,
+    "title" : "Do not emit .size",
+    "createdAt" : "2012-04-08T01:58:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "[debt]Enable emit of .glob (linkage)",
+    "createdAt" : "2012-04-08T02:05:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "[debt]Enable section names",
+    "createdAt" : "2012-04-08T02:43:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "[debt] Enable .file directive",
+    "createdAt" : "2012-04-08T02:46:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 52,
+    "title" : "[debt] Enable .align directive",
+    "createdAt" : "2012-04-08T03:10:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 53,
+    "title" : "Emit autoinit in the beginning of the asm file",
+    "createdAt" : "2012-04-08T03:14:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "[debt] Do not emit preamble",
+    "createdAt" : "2012-04-08T03:49:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Remove R13, R14, R15",
+    "createdAt" : "2012-04-08T04:03:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Remove R3",
+    "createdAt" : "2012-04-08T08:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Unexpected instruction rla.w",
+    "createdAt" : "2012-04-08T12:02:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "`JSR __mulhi3hw_noint` emitted in tail-recursive fib implementation",
+    "createdAt" : "2012-04-08T12:46:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Find a place to coordinate short-term development",
+    "createdAt" : "2012-04-08T16:20:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Allow all-memory and memory-literal ops",
+    "createdAt" : "2012-04-08T19:31:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Define supported ABI",
+    "createdAt" : "2012-04-08T20:28:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 71,
+    "title" : "Upstream LabelPrefix",
+    "createdAt" : "2012-04-08T20:59:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 72,
+    "title" : "Code generation is broken ATM",
+    "createdAt" : "2012-04-08T21:03:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : " Remove the FP stuff",
+    "createdAt" : "2012-04-08T21:28:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Rename all registers",
+    "createdAt" : "2012-04-08T21:28:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Optimize cmp & jge",
+    "createdAt" : "2012-04-09T07:31:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Fatal error in backend; zero extension from i8 not supported?",
+    "createdAt" : "2012-04-09T11:45:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "A mess with local variables",
+    "createdAt" : "2012-04-09T19:22:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Adopt MSP430 tests to DCPU16",
+    "createdAt" : "2012-04-09T19:45:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "DCPU16 \"features\" to consider when implementing",
+    "createdAt" : "2012-04-10T04:15:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Illegal Type; shifting seems broken",
+    "createdAt" : "2012-04-10T08:24:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "String literals",
+    "createdAt" : "2012-04-10T12:06:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Linker",
+    "createdAt" : "2012-04-10T18:08:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Crash on zext i1 to i16",
+    "createdAt" : "2012-04-10T20:02:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "[debt] Properly implement bit and compare operations",
+    "createdAt" : "2012-04-10T22:45:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Fix LowerSETCC",
+    "createdAt" : "2012-04-11T03:51:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Sections, labels, types, entry point (linker interop)",
+    "createdAt" : "2012-04-11T17:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "MOV16rmi and related instructions",
+    "createdAt" : "2012-04-11T19:23:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 101,
+    "title" : "Immediates should be unsigned",
+    "createdAt" : "2012-04-12T02:18:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Output invalid opcodes?",
+    "createdAt" : "2012-04-12T04:36:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 104,
+    "title" : "i8 values can be saved at the stack in 8bit alligenment",
+    "createdAt" : "2012-04-12T12:18:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Signed arithmetic is broken",
+    "createdAt" : "2012-04-12T20:47:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Migration of repo to llvm-dcpu16 organization",
+    "createdAt" : "2012-04-14T05:05:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Integrate Clang with nos_linker",
+    "createdAt" : "2012-04-14T06:20:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Write a script that will create DCPU16 SDK",
+    "createdAt" : "2012-04-14T06:21:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Create a comprehensive wiki",
+    "createdAt" : "2012-04-14T06:23:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 115,
+    "title" : "Add examples to SDK",
+    "createdAt" : "2012-04-14T06:29:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 117,
+    "title" : "Trunc store for i8 not supported",
+    "createdAt" : "2012-04-14T07:22:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Implement&write tests for more variants of shifts",
+    "createdAt" : "2012-04-14T15:03:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Implement arithmetic shift and signed comparisons once Notch updates the spec",
+    "createdAt" : "2012-04-14T15:41:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Crash using char, bad size if using short",
+    "createdAt" : "2012-04-14T17:41:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Add tests for #119 (memory operands shifts)",
+    "createdAt" : "2012-04-16T04:47:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 125,
+    "title" : "Illegal instructions printed: memory addressing inherited from MSP",
+    "createdAt" : "2012-04-16T14:18:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Test against official DCPU16 emulator",
+    "createdAt" : "2012-04-17T09:02:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 131,
+    "title" : "struct won't compile",
+    "createdAt" : "2012-04-17T17:27:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Huge .zero section when using literal strings",
+    "createdAt" : "2012-04-17T19:31:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Incorrect handling of bit fields",
+    "createdAt" : "2012-04-22T14:09:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "inline assembly breaks",
+    "createdAt" : "2012-04-23T07:51:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "DCPU16AsmPrinter::printSrcMemOperand() looks outdated",
+    "createdAt" : "2012-04-24T15:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "[debt] Properly implement complex instructions",
+    "createdAt" : "2012-04-24T17:20:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 143,
+    "title" : "Pay attention to the new specs",
+    "createdAt" : "2012-04-25T04:26:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "B register not preserved when making function calls",
+    "createdAt" : "2012-04-26T03:00:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Implementing the changes from DCPU16 RC1",
+    "createdAt" : "2012-04-26T09:01:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "Inefficient compilation of x/2",
+    "createdAt" : "2012-04-27T18:55:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Find a way to use IFB and IFC",
+    "createdAt" : "2012-04-28T07:12:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Respect DCPU16 v1.7",
+    "createdAt" : "2012-04-28T07:57:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "stack pointer is broken",
+    "createdAt" : "2012-04-28T08:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Compile Error on OSX",
+    "createdAt" : "2012-05-02T02:32:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "consider supporting binutils port",
+    "createdAt" : "2012-05-02T10:28:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 159,
+    "title" : "SP+Constant",
+    "createdAt" : "2012-05-03T03:03:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "stack pointer / corruption",
+    "createdAt" : "2012-05-04T02:27:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "Compiler crash on compiling",
+    "createdAt" : "2012-05-06T01:58:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Emitted assembly for function calls is wrong",
+    "createdAt" : "2012-05-07T22:26:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "A broken (?) testcase: binary tree search",
+    "createdAt" : "2012-05-14T15:22:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "[dept] Reenable asserts in SelectionDAG.cpp",
+    "createdAt" : "2012-05-15T16:52:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 180,
+    "title" : "MUL_LOHI should be implemented in ISelDAGtoDAG pass",
+    "createdAt" : "2012-05-19T06:20:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "[debt] Do not force -fno-builtin when the memset issues are fixed",
+    "createdAt" : "2012-05-21T00:06:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 183,
+    "title" : "Support JumpTable in order for switch/case to work",
+    "createdAt" : "2012-05-21T14:50:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Assertion failed: (Node2Index[SU->NodeNum] > Node2Index[I->getSUnit()->NodeNum] && \"Wrong topological sorting\"), function InitDAGTopologicalSorting, file /Users/andy/git/llvm-dcpu16/lib/CodeGen/ScheduleDAG.cpp, line 469. ",
+    "createdAt" : "2012-06-30T13:49:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 191,
+    "title" : "Assertion failed: (!TI->readsRegister(SrcReg) && \"Terminator instructions cannot use virtual registers unless\" \"they are the first terminator in a block!\"), function LowerAtomicPHINode, file /Users/andy/git/llvm-dcpu16/lib/CodeGen/PHIElimination.cpp, line",
+    "createdAt" : "2012-06-30T13:54:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Variable access from inline assembler",
+    "createdAt" : "2013-01-25T20:19:12Z",
+    "state" : "CLOSED"
+  } ]
+}

@@ -1,0 +1,580 @@
+{
+  "repoOwner" : "WeaselGames",
+  "repoName" : "godot_luaAPI",
+  "forks" : [ {
+    "createdAt" : "2021-04-07T20:21:24Z"
+  }, {
+    "createdAt" : "2022-05-14T11:27:49Z"
+  }, {
+    "createdAt" : "2022-07-17T04:41:50Z"
+  }, {
+    "createdAt" : "2022-09-18T23:05:40Z"
+  }, {
+    "createdAt" : "2022-12-30T19:12:52Z"
+  }, {
+    "createdAt" : "2023-01-06T07:06:10Z"
+  }, {
+    "createdAt" : "2023-02-03T18:58:45Z"
+  }, {
+    "createdAt" : "2023-03-29T10:35:20Z"
+  }, {
+    "createdAt" : "2023-03-30T14:35:39Z"
+  }, {
+    "createdAt" : "2023-06-14T00:45:17Z"
+  }, {
+    "createdAt" : "2023-06-30T02:55:37Z"
+  }, {
+    "createdAt" : "2023-08-30T16:29:20Z"
+  }, {
+    "createdAt" : "2023-09-13T13:11:25Z"
+  }, {
+    "createdAt" : "2023-09-14T09:37:33Z"
+  }, {
+    "createdAt" : "2023-09-14T17:34:08Z"
+  }, {
+    "createdAt" : "2023-10-05T06:45:33Z"
+  }, {
+    "createdAt" : "2023-10-07T12:53:12Z"
+  }, {
+    "createdAt" : "2023-12-28T11:20:37Z"
+  }, {
+    "createdAt" : "2023-12-31T08:05:36Z"
+  }, {
+    "createdAt" : "2024-01-30T19:25:23Z"
+  }, {
+    "createdAt" : "2024-02-26T22:04:13Z"
+  }, {
+    "createdAt" : "2024-03-12T01:51:19Z"
+  }, {
+    "createdAt" : "2024-04-28T23:04:12Z"
+  }, {
+    "createdAt" : "2024-06-01T04:42:04Z"
+  }, {
+    "createdAt" : "2024-06-07T10:44:00Z"
+  }, {
+    "createdAt" : "2024-08-27T19:46:19Z"
+  }, {
+    "createdAt" : "2024-09-28T19:42:35Z"
+  }, {
+    "createdAt" : "2024-11-13T17:53:49Z"
+  }, {
+    "createdAt" : "2024-12-22T03:56:01Z"
+  }, {
+    "createdAt" : "2025-01-04T20:01:51Z"
+  }, {
+    "createdAt" : "2025-01-31T14:23:19Z"
+  }, {
+    "createdAt" : "2025-03-07T09:00:43Z"
+  }, {
+    "createdAt" : "2025-03-09T07:29:18Z"
+  }, {
+    "createdAt" : "2025-03-15T03:55:49Z"
+  }, {
+    "createdAt" : "2025-03-30T03:57:48Z"
+  }, {
+    "createdAt" : "2025-06-16T10:40:06Z"
+  }, {
+    "createdAt" : "2025-08-22T12:03:07Z"
+  } ],
+  "issues" : [ {
+    "number" : 3,
+    "title" : "Error building on Windows 10",
+    "createdAt" : "2021-04-05T19:46:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Issue with MSVC tools build",
+    "createdAt" : "2021-04-06T18:41:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Exposed functions with no return, returning nil to lua",
+    "createdAt" : "2021-04-07T21:12:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Included libraries are not actually included",
+    "createdAt" : "2021-04-07T21:12:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Error executing threaded code right after creating Lua object",
+    "createdAt" : "2021-04-08T18:11:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "If Lua object is destroyed while code is executing game crashes",
+    "createdAt" : "2021-04-09T19:55:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Provide a way to build Lua from source using SCons",
+    "createdAt" : "2021-07-14T16:59:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Use correct naming conventions",
+    "createdAt" : "2021-07-22T08:36:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Add a way to pull a variant from lua.",
+    "createdAt" : "2021-07-24T09:22:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Nonexistent functions 'callFunction' and 'luaFunctionExists' in base 'Lua'.",
+    "createdAt" : "2021-07-24T09:39:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Can't find Lua module on exported build but it can on editor",
+    "createdAt" : "2021-07-26T09:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Invalid parametre type on do_string",
+    "createdAt" : "2021-07-27T11:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Unable to find library -llua while building html5 custom export template",
+    "createdAt" : "2021-07-27T17:16:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : " call_function can't return value",
+    "createdAt" : "2021-07-29T18:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "push_varient doesn't update the value",
+    "createdAt" : "2021-07-29T19:04:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Something is wrong I created a project for you to see too",
+    "createdAt" : "2021-07-29T21:39:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Can't change value while doing \"while loop\"",
+    "createdAt" : "2021-07-30T13:42:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "weird output after using yield(get_tree().create_timer(10.0), \"timeout\")",
+    "createdAt" : "2021-08-14T09:26:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "it crashes if i don't get reference of lua",
+    "createdAt" : "2021-08-14T10:44:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "cant send some letter from lua to godot",
+    "createdAt" : "2021-08-14T21:14:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Checking parameter name ",
+    "createdAt" : "2021-09-23T17:26:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Can i add library for lua?",
+    "createdAt" : "2022-02-03T10:26:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Will there be more platform supports?",
+    "createdAt" : "2022-02-20T08:08:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "The repo contains binary bc files and the gitignore doesn't include standard exclusions.",
+    "createdAt" : "2022-04-13T17:12:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "lua invoking GDScript with incorrect arg types will not be passed to the error handler",
+    "createdAt" : "2022-05-08T22:09:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Inheritance bug",
+    "createdAt" : "2022-05-22T08:05:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "(Not a bug or something, just a question)",
+    "createdAt" : "2022-07-06T12:40:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Problem with await functions.",
+    "createdAt" : "2022-07-12T18:04:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "can't hold resource?!?!?!?",
+    "createdAt" : "2022-07-14T02:10:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "pull_variant is broken",
+    "createdAt" : "2022-07-17T02:25:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "can't resume a sub-environment",
+    "createdAt" : "2022-07-18T14:45:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Any way to pass an array to lua and back?",
+    "createdAt" : "2022-07-26T12:12:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "High memory usage using 'push_variant' to send an array to lua",
+    "createdAt" : "2022-07-28T09:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Nightly builds fail for MacOS",
+    "createdAt" : "2022-09-14T20:20:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "V1.1-stable release only has Linux builds",
+    "createdAt" : "2023-01-06T07:29:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "LuaError issues",
+    "createdAt" : "2023-01-11T20:14:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Move to GDExtnension",
+    "createdAt" : "2023-01-12T14:41:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Feature Request: Pass reference of Lua class for metamethod overrides.",
+    "createdAt" : "2023-01-19T20:56:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Look into tuples as a type. ",
+    "createdAt" : "2023-01-19T21:35:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Bug Report: Leaked instance: LuaAPI:id",
+    "createdAt" : "2023-01-20T06:38:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Feature Request: allow linking to dynamic lua libs",
+    "createdAt" : "2023-01-25T16:50:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Godot crashes when running a lua script which gets a node in a loop.",
+    "createdAt" : "2023-02-04T18:43:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Support LuaJIT",
+    "createdAt" : "2023-03-22T12:40:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Why does this not display the captured bug?",
+    "createdAt" : "2023-03-26T11:00:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "JavaScript actons",
+    "createdAt" : "2023-03-27T16:02:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Support await",
+    "createdAt" : "2023-03-29T17:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Thread/Coroutine rework",
+    "createdAt" : "2023-04-06T13:48:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 97,
+    "title" : "MacOS actions do not delete none universal bins",
+    "createdAt" : "2023-04-07T19:26:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Code formatting",
+    "createdAt" : "2023-04-10T14:48:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Vector2.floor() not working on main branch",
+    "createdAt" : "2023-05-08T10:14:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "Is it possible to include the LPEG library?",
+    "createdAt" : "2023-05-09T16:46:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "More properties in LuaError",
+    "createdAt" : "2023-05-22T04:06:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Add Signal for all errors that occure in a Lua state",
+    "createdAt" : "2023-05-31T14:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Feature Request:Improve documentation for LuaCoroutine",
+    "createdAt" : "2023-06-02T11:03:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Feature Request:Allow threads to be yielded forcefully and externally.",
+    "createdAt" : "2023-06-02T15:21:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "GitHub discussions closed in favor of discord",
+    "createdAt" : "2023-06-13T05:16:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Look into 4.1 support",
+    "createdAt" : "2023-06-13T15:37:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Correct syntax for Object method calls",
+    "createdAt" : "2023-06-27T23:38:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Lua `nil` as analog value to GDScript `null` value?",
+    "createdAt" : "2023-06-30T02:32:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Feature Request:can you add luasocket ?",
+    "createdAt" : "2023-07-06T07:55:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Not working on the latest version Godot_v4.1-stable_win64.",
+    "createdAt" : "2023-07-12T04:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "UTF8 support",
+    "createdAt" : "2023-08-19T09:03:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Running a constantly updated function in lua",
+    "createdAt" : "2023-09-06T22:43:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Bug Report:Memory leak with passing lua functions to GDScript",
+    "createdAt" : "2023-09-08T17:02:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Bug Report:Pulling a global function from a thread will not call it from that thread.",
+    "createdAt" : "2023-09-12T10:07:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Show LUA files in FileSystem view",
+    "createdAt" : "2023-09-26T20:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Please add luajit ffi",
+    "createdAt" : "2023-09-27T06:06:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "v2.1-beta6 Releases gdextension-LuaJIT.zip Not Luajit",
+    "createdAt" : "2023-10-02T09:30:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "Feature Request: Actually support C# like the docs says that it does.",
+    "createdAt" : "2023-10-04T04:48:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "LuaAPI gives C# null Callables ",
+    "createdAt" : "2023-10-07T17:10:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Web export missing from Godot Asset Library downloads",
+    "createdAt" : "2023-10-11T18:40:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Bug Report: UTF-8 character parsing error",
+    "createdAt" : "2023-10-14T12:17:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Feature Request/question: a way to limit execution time?",
+    "createdAt" : "2023-11-04T07:58:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "Feature Request:Cross VM object support",
+    "createdAt" : "2023-11-09T20:12:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Feature Request:Implement a `LuaAPI.force_stop` method",
+    "createdAt" : "2023-11-10T13:54:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "Android GDExtension builds failing",
+    "createdAt" : "2023-11-30T21:13:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Running Lua with sandboxed resources",
+    "createdAt" : "2024-01-02T17:42:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "Bug Report: Binding libraries broken on MacOS Sonoma ARM64",
+    "createdAt" : "2024-02-10T23:25:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Monitor LuaAPI at the GDS level for changes in LuaAPI",
+    "createdAt" : "2024-02-25T09:37:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Feature Resuest: Pushing modules to lua ",
+    "createdAt" : "2024-03-09T14:40:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Feature Request: __index includes args for method calls",
+    "createdAt" : "2024-03-12T01:30:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Bug Report: Vector3 metatable not working when nested in an object",
+    "createdAt" : "2024-03-12T19:22:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Possible stack leak",
+    "createdAt" : "2024-03-15T21:44:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "call_function broken on iOS with empty arguments array",
+    "createdAt" : "2024-03-29T22:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 205,
+    "title" : "Bug Report: Binding libraries does not work on Android release builds",
+    "createdAt" : "2024-04-01T03:43:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Bug Report: GDExtension LuaJIT on Linux is not LuaJIT",
+    "createdAt" : "2024-04-04T19:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Allow LuaCallableExtra to be called in GDScript",
+    "createdAt" : "2024-04-17T23:46:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Bug Report: Stack Overflow When Calling Functions Enough Times",
+    "createdAt" : "2024-04-24T04:01:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Bug Report: Numbers returned from lua are always cast as floats",
+    "createdAt" : "2024-04-25T21:02:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "LuaAPI Lua5.1 version build help request",
+    "createdAt" : "2024-04-28T23:40:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Bug Report: Issues with nested tables with named keys",
+    "createdAt" : "2024-05-09T18:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 212,
+    "title" : "Argument type checking for Godot functions with strict types.",
+    "createdAt" : "2024-05-14T22:37:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Branch for 3.x",
+    "createdAt" : "2024-05-17T09:36:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "Feature Request: Implement `threading` library.",
+    "createdAt" : "2024-06-10T08:21:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Listed Godot Version in the README is incorrect",
+    "createdAt" : "2024-07-09T19:18:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Bug Report: Setting a property in a custom meta table while having object_metatable.permissive set to false freezes the lua code",
+    "createdAt" : "2024-08-15T02:20:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "Bug Report: LuaJIT in call using a Lua table type with gd.",
+    "createdAt" : "2024-08-22T06:33:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Bug Report:Calling pull_variant on _G causes crashes at the next pull_variant call",
+    "createdAt" : "2024-08-27T16:02:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Bug Report: gdscript class' methods not accessible from lua",
+    "createdAt" : "2024-12-06T07:24:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Documentation: Is this project in conflict with other implementations ",
+    "createdAt" : "2024-12-15T14:31:41Z",
+    "state" : "CLOSED"
+  } ]
+}

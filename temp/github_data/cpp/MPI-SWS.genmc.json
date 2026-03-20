@@ -1,0 +1,389 @@
+{
+  "repoOwner" : "MPI-SWS",
+  "repoName" : "genmc",
+  "forks" : [ {
+    "createdAt" : "2019-11-12T13:41:32Z"
+  }, {
+    "createdAt" : "2020-07-21T08:39:29Z"
+  }, {
+    "createdAt" : "2020-10-05T10:40:59Z"
+  }, {
+    "createdAt" : "2020-11-25T11:32:38Z"
+  }, {
+    "createdAt" : "2021-01-14T03:49:41Z"
+  }, {
+    "createdAt" : "2021-03-31T07:55:12Z"
+  }, {
+    "createdAt" : "2021-04-29T06:16:10Z"
+  }, {
+    "createdAt" : "2021-07-14T09:58:48Z"
+  }, {
+    "createdAt" : "2021-10-27T09:41:38Z"
+  }, {
+    "createdAt" : "2022-05-31T10:05:10Z"
+  }, {
+    "createdAt" : "2022-10-31T07:45:52Z"
+  }, {
+    "createdAt" : "2023-06-15T06:26:45Z"
+  }, {
+    "createdAt" : "2023-07-25T06:47:43Z"
+  }, {
+    "createdAt" : "2023-10-27T09:48:40Z"
+  }, {
+    "createdAt" : "2023-12-14T10:28:06Z"
+  }, {
+    "createdAt" : "2024-02-08T18:58:01Z"
+  }, {
+    "createdAt" : "2024-09-01T06:18:24Z"
+  }, {
+    "createdAt" : "2024-10-10T01:20:16Z"
+  }, {
+    "createdAt" : "2024-12-20T19:53:38Z"
+  }, {
+    "createdAt" : "2025-03-21T15:52:35Z"
+  }, {
+    "createdAt" : "2025-04-02T19:49:52Z"
+  }, {
+    "createdAt" : "2025-05-13T03:16:34Z"
+  }, {
+    "createdAt" : "2025-05-13T07:41:09Z"
+  }, {
+    "createdAt" : "2025-07-06T11:45:57Z"
+  }, {
+    "createdAt" : "2025-07-24T19:51:37Z"
+  }, {
+    "createdAt" : "2025-07-25T09:32:59Z"
+  }, {
+    "createdAt" : "2025-08-26T15:55:24Z"
+  }, {
+    "createdAt" : "2025-11-26T16:41:19Z"
+  }, {
+    "createdAt" : "2025-12-13T14:20:38Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "IMM release operations do not correctly update PPoRf",
+    "createdAt" : "2020-11-25T11:29:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Support pointer alignment",
+    "createdAt" : "2020-11-25T12:03:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "GenMC crashes on .ll if debug info uses absolute path",
+    "createdAt" : "2020-11-30T14:33:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Print a non-termination warning if the graph becomes too large",
+    "createdAt" : "2021-01-05T18:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Support realloc",
+    "createdAt" : "2021-01-11T13:44:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 8,
+    "title" : "support full pthreads",
+    "createdAt" : "2021-01-12T15:08:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 9,
+    "title" : "segmentation fault for initializers on stack",
+    "createdAt" : "2021-01-12T15:12:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Stack variable and printf cause crash",
+    "createdAt" : "2021-01-13T09:44:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 11,
+    "title" : "LAPOR implementation is not complete ",
+    "createdAt" : "2021-01-22T13:12:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Avoid blocked executions when reading with __VERIFIER_assume",
+    "createdAt" : "2021-02-06T15:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "free(NULL)",
+    "createdAt" : "2021-03-03T10:15:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "malloc + pthread_mutex_init does not seem to work",
+    "createdAt" : "2021-03-03T10:31:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "misdetection of spinloop in GenMC v0.6",
+    "createdAt" : "2021-07-09T13:35:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Using __VERIFIER_spin_{start,end}",
+    "createdAt" : "2021-07-09T14:33:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Incorrect liveness violation detection",
+    "createdAt" : "2021-07-12T12:43:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Access to freed struct not detected",
+    "createdAt" : "2021-07-15T14:26:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "GenMC crash with -check-liveness and -disable-spin-assume",
+    "createdAt" : "2021-07-19T12:02:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "cmpxchg in lkmm.h",
+    "createdAt" : "2021-07-19T12:17:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "installation of header files",
+    "createdAt" : "2021-07-19T12:45:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "LKMM xchg as a full barriers",
+    "createdAt" : "2021-07-20T09:43:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "LKMM dependency tracking issues",
+    "createdAt" : "2021-07-21T12:04:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Instruction does not dominate all uses",
+    "createdAt" : "2021-07-23T13:07:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Some confusion about memory models in GenMC",
+    "createdAt" : "2021-08-17T14:13:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "sprintf causes seg fault, when the buffer is defined on the stack",
+    "createdAt" : "2021-10-05T14:57:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "segmentation fault on array initialization, when array of size 9 or more",
+    "createdAt" : "2021-10-06T11:43:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "GenMC crashes if built against assertions-enabled LLVM",
+    "createdAt" : "2021-10-07T16:50:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Incorrect detection of Non-termination with two reads to the same location",
+    "createdAt" : "2021-11-19T15:54:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "smp_acquire__after_ctrl_dep missing",
+    "createdAt" : "2021-11-23T20:07:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 31,
+    "title" : "Failure at EventLabel.cpp:202/operator<<()! with Linux mcs_spinlock.h (LKMM)",
+    "createdAt" : "2021-12-09T12:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Failure at GenMCDriver.cpp:2017/visitMalloc()! with no malloc",
+    "createdAt" : "2021-12-15T14:20:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Publish docker version for 0.6.1",
+    "createdAt" : "2021-12-19T20:35:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Bug in liveness-violation report  ",
+    "createdAt" : "2022-01-21T06:57:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "False positive in LKMM race detection?",
+    "createdAt" : "2022-01-24T12:58:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 36,
+    "title" : "Feature request: support for argc, argv",
+    "createdAt" : "2022-01-25T07:51:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 37,
+    "title" : "BUG: Failure at Execution.cpp:242/getStaticAddr()! in GenMC 0.7, IMM and RC11",
+    "createdAt" : "2022-02-07T20:31:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Segmentation fault with IMM",
+    "createdAt" : "2022-02-10T14:15:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "LKMM atomic_andnot and non-returning atomics",
+    "createdAt" : "2022-03-08T15:05:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Macro `__CONFIG_GENMC_INODE_DATA_SIZE` not defined",
+    "createdAt" : "2022-03-11T08:03:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Unexpected failure of cmpxchg",
+    "createdAt" : "2022-03-17T16:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Problems with while(x--)",
+    "createdAt" : "2022-03-31T11:29:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Unexpected behaviour under the unroll option.",
+    "createdAt" : "2022-05-05T11:29:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "genmc vs IMM paper (Remark 2)",
+    "createdAt" : "2022-05-12T05:14:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "BUG: Failure at MOCalculator.cpp:65/getStoreOffset()!",
+    "createdAt" : "2022-05-30T15:36:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "LLVM-6 build is much faster than LLVM-14 build",
+    "createdAt" : "2022-08-16T07:29:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "fprintf(stderr,...) triggers a crash in genmc",
+    "createdAt" : "2022-10-28T08:28:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Bug with -imm (dependency broken after revisit?)",
+    "createdAt" : "2022-10-28T15:25:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "[missing feature/bug] thread local storage array results into LLVM error",
+    "createdAt" : "2022-11-02T11:28:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 50,
+    "title" : "bug: Anomaly with seq_cst and assert",
+    "createdAt" : "2022-11-25T07:47:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "BUG: Failure at PromoteMemIntrinsicPass.cpp:78/promoteMemSet()!",
+    "createdAt" : "2023-02-13T13:22:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Strange case with compare and swap",
+    "createdAt" : "2023-02-16T14:24:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Feature Request: support for pthread_rwlock",
+    "createdAt" : "2023-03-29T12:02:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "BUG: Failure at MOCalculator.cpp:65/getStoreOffset()!",
+    "createdAt" : "2023-08-05T14:55:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Several issues with one client",
+    "createdAt" : "2023-11-24T09:34:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Compiling with optimizations disabled results in runtime error",
+    "createdAt" : "2024-01-17T14:33:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 59,
+    "title" : "Rust Support",
+    "createdAt" : "2024-05-18T18:37:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 60,
+    "title" : "LKMM: failing cmpxchg should have no ordering",
+    "createdAt" : "2024-05-24T13:51:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 61,
+    "title" : "v0.10.2 does not compile with gcc 11",
+    "createdAt" : "2024-09-13T14:37:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Segmentation fault while using `-dump-error-graph`",
+    "createdAt" : "2024-10-30T07:59:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Several compiler warnings when compiling with clang16",
+    "createdAt" : "2024-11-10T11:50:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Segfault when using `fprintf(stderr, ...)` ",
+    "createdAt" : "2024-11-18T10:10:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Error when running GenMC Persevere mode for the tutorial example",
+    "createdAt" : "2024-12-20T20:59:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 66,
+    "title" : "Any option to focus on race detection only?",
+    "createdAt" : "2025-01-15T06:53:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 67,
+    "title" : "Is BYTE_ALIGNMENT supported by genmc?",
+    "createdAt" : "2025-02-27T10:57:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 68,
+    "title" : "GenMC breaks when in a directory with parentheses in the name",
+    "createdAt" : "2025-10-15T22:08:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Verifying a whole CMake project with genmc",
+    "createdAt" : "2026-03-02T20:57:47Z",
+    "state" : "OPEN"
+  } ]
+}

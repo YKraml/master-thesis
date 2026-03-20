@@ -1,0 +1,1394 @@
+{
+  "repoOwner" : "PKUHPC",
+  "repoName" : "CraneSched",
+  "forks" : [ {
+    "createdAt" : "2023-08-07T01:32:40Z"
+  }, {
+    "createdAt" : "2023-11-29T02:26:07Z"
+  }, {
+    "createdAt" : "2023-12-24T09:41:19Z"
+  }, {
+    "createdAt" : "2024-01-17T09:28:58Z"
+  }, {
+    "createdAt" : "2024-03-07T04:20:54Z"
+  }, {
+    "createdAt" : "2024-03-18T08:18:28Z"
+  }, {
+    "createdAt" : "2024-03-27T06:37:09Z"
+  }, {
+    "createdAt" : "2024-05-05T11:19:07Z"
+  }, {
+    "createdAt" : "2024-05-17T05:47:53Z"
+  }, {
+    "createdAt" : "2024-06-04T10:01:38Z"
+  }, {
+    "createdAt" : "2024-07-10T13:27:12Z"
+  }, {
+    "createdAt" : "2024-07-11T05:48:59Z"
+  }, {
+    "createdAt" : "2024-08-09T11:44:35Z"
+  }, {
+    "createdAt" : "2024-09-04T02:36:54Z"
+  }, {
+    "createdAt" : "2024-09-27T08:31:48Z"
+  }, {
+    "createdAt" : "2024-10-02T15:42:20Z"
+  }, {
+    "createdAt" : "2024-12-31T06:05:46Z"
+  }, {
+    "createdAt" : "2025-02-21T05:02:07Z"
+  }, {
+    "createdAt" : "2025-02-26T03:01:39Z"
+  }, {
+    "createdAt" : "2025-03-17T02:33:48Z"
+  }, {
+    "createdAt" : "2025-04-15T05:59:47Z"
+  }, {
+    "createdAt" : "2025-04-16T01:59:28Z"
+  }, {
+    "createdAt" : "2025-05-28T06:22:29Z"
+  }, {
+    "createdAt" : "2025-05-28T08:28:45Z"
+  }, {
+    "createdAt" : "2025-06-24T09:52:28Z"
+  }, {
+    "createdAt" : "2025-07-07T00:12:56Z"
+  }, {
+    "createdAt" : "2025-07-14T16:42:22Z"
+  }, {
+    "createdAt" : "2025-09-17T11:22:38Z"
+  }, {
+    "createdAt" : "2025-12-16T06:25:09Z"
+  }, {
+    "createdAt" : "2025-12-17T06:36:16Z"
+  }, {
+    "createdAt" : "2025-12-19T01:58:44Z"
+  }, {
+    "createdAt" : "2026-01-13T15:30:39Z"
+  }, {
+    "createdAt" : "2026-01-28T09:25:11Z"
+  }, {
+    "createdAt" : "2026-02-27T07:40:17Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "cacctmgr 权限问题，添加用户再删除后，用户仍可以提交作业",
+    "createdAt" : "2022-09-13T14:11:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "ccontrol show partition 的  AvailCpus和 AvailMem参数随资源分配变化",
+    "createdAt" : "2022-09-13T14:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "ccontrol show job",
+    "createdAt" : "2022-09-13T14:16:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "mariadb数据库迁移到mongodb",
+    "createdAt" : "2022-09-13T14:27:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "调度算法接口，可自定义编写调度算法",
+    "createdAt" : "2022-09-13T14:34:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "作业QOS",
+    "createdAt" : "2022-09-13T14:34:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "ccancel鉴权，只能取消自己的作业",
+    "createdAt" : "2022-09-13T14:34:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "partition allow accounts，partition allow users",
+    "createdAt" : "2022-09-13T14:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "cqueue不加参数默认显示所有分区作业",
+    "createdAt" : "2022-09-13T14:57:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "cqueue仅输出running，pending，cancelling，completing作业",
+    "createdAt" : "2022-09-13T14:57:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "MongoDbClient修bug",
+    "createdAt" : "2022-09-14T01:38:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "完善作业结束机制，先发SIGINT，再发SIGKILL",
+    "createdAt" : "2022-09-14T01:42:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "MongoDb改成Cmake的FetchContent",
+    "createdAt" : "2022-09-14T01:44:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Crane后端代码变量改名",
+    "createdAt" : "2022-09-14T01:45:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "项目依赖管理全部自动切换成CMake自动下载",
+    "createdAt" : "2022-09-20T14:59:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Crane前端代码变量改名",
+    "createdAt" : "2022-09-20T15:02:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "增加互斥量机制，保障systemd服务可以单例运行",
+    "createdAt" : "2022-09-20T15:02:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "增加状态同步机制，重启后计算节点可以恢复挂掉前的状态",
+    "createdAt" : "2022-09-20T15:02:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "CMake依赖下载更改为类似gRPC项目中的http_archive形式，通过检测库文件在configure阶段安装，同时设定CMAKE的Option减少编译时间",
+    "createdAt" : "2022-09-20T15:04:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "cbatch能用参数的help输出",
+    "createdAt" : "2022-09-21T02:29:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "文档里面Mongodb配置内容",
+    "createdAt" : "2022-09-21T02:43:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "整个系统的SSL加密通信，以及相关SSL配置加入到安装文档中",
+    "createdAt" : "2022-09-22T06:36:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "crane CMAKE文档",
+    "createdAt" : "2022-09-28T03:33:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "修改完善后端的输出日志",
+    "createdAt" : "2022-09-29T05:57:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "增加异常退出检测",
+    "createdAt" : "2022-09-29T05:59:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 29,
+    "title" : "数据库中添加qos表格（同slurm），并在cacctmgr中添加cacctmgr add/modify/show qos 功能",
+    "createdAt" : "2022-09-29T06:03:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "作业调度系统调度作业时，融入qos中作业优先级，qos名，重新计算作业的优先级值",
+    "createdAt" : "2022-09-29T06:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "作业调度前根据用户的qos中MaxWall ，MaxTRESPU MaxJobsPU MaxSubmitPU     MaxTRESPA MaxJobsPA MaxSubmitPA等参数的值进行判断，不符合要求的作业分别输出对应的错误，并阻止作业运行",
+    "createdAt" : "2022-09-29T06:09:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "修改cacctmgr show users/accounts 输出，改成树状结构，或者表格形式",
+    "createdAt" : "2022-09-29T06:11:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "用户只能使用自己关联的qos进行作业提交",
+    "createdAt" : "2022-09-29T06:17:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "添加partition的AllowQos参数",
+    "createdAt" : "2022-09-29T06:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "添加partition的AllowAccounts参数",
+    "createdAt" : "2022-09-29T06:20:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "添加默认的partition功能",
+    "createdAt" : "2022-09-29T06:28:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "cacctmgr的help的撰写",
+    "createdAt" : "2022-10-05T09:12:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "修改cgroup将CPU虚拟化，用户可以申请0.15个CPU，CPU申请单位为double",
+    "createdAt" : "2022-10-10T10:04:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "crane项目 src/CranCtld/CraneCtld.cpp 和 src/CranCtld/CraneMetaContainer.h 两个文件添加注释",
+    "createdAt" : "2022-10-12T01:28:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Crane-FrontEnd 项目中cmd/cacctmgr/cacctmgr.go 文件补充注释",
+    "createdAt" : "2022-10-12T08:05:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "在飞书文档中增加前端Goland环境配置文档",
+    "createdAt" : "2022-10-15T05:52:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "前端增加配置文件路径自定义功能",
+    "createdAt" : "2022-10-16T07:58:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "阅读SLURM中gres插件中GPU相关代码，撰写将GPU并入集群调度的步骤以及对如何对现有各个Crane类、接口的哪些更改",
+    "createdAt" : "2022-10-19T00:21:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "crane项目 src/CraneCtld/TaskScheduler.cpp 、src/CraneCtld/CranedKeeper.cpp 、 src/Craned/TaskManager.cpp 和 src/Craned/CranedServer.cpp 四个文件添加注释#40",
+    "createdAt" : "2022-10-19T00:26:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "在北京大学高性能计算平台提交一个gpu作业",
+    "createdAt" : "2022-10-19T00:31:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "根据cacctmgr的help撰写方式，进行cinfo的help撰写",
+    "createdAt" : "2022-10-19T00:47:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "根据cacctmgr的help撰写方式，进行cbatch,ccontrol的help撰写",
+    "createdAt" : "2022-10-19T00:51:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "根据cacctmgr的help撰写方式，进行ccancel,cqueue的help撰写",
+    "createdAt" : "2022-10-19T00:51:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "根据slurm sacct命令撰写cacct命令，主要功能为查询已经结束的作业，默认如果时间日期都不添加只显示最近100条",
+    "createdAt" : "2022-10-26T00:44:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "完善cqueue的功能，包括-h,-i,-j,-l,-n,-q,--start,-t,-o,-u,-A",
+    "createdAt" : "2022-11-02T05:46:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "完善squeue的功能，包括-A，-u，-t",
+    "createdAt" : "2022-11-02T05:46:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "DefultPartition参数细节",
+    "createdAt" : "2022-11-04T00:37:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Documentation",
+    "createdAt" : "2022-11-21T20:23:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "完善cinfo的功能，包括-d,-i,-n,-N,-p,-r,-R,-s,-t,-o等",
+    "createdAt" : "2022-11-23T02:53:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "cranectld 将config.yaml文件中所有分区和节点全部显示到cinfo，如果config文件中的有一个节点xj02没有启动craned，也要显示到cinfo分区中",
+    "createdAt" : "2022-11-30T01:30:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "完善数据库和账户管理功能",
+    "createdAt" : "2022-12-01T01:46:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "改前端语法错误",
+    "createdAt" : "2022-12-02T10:32:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "完善ccancel的功能，包括-A,-n,-q,-t,-u,-w等",
+    "createdAt" : "2022-12-06T18:37:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "增加配置文件改动检测及对应的重启后保持或杀死任务机制",
+    "createdAt" : "2022-12-12T18:54:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 71,
+    "title" : "修复Craned断连后很长时间才会引起状态改变的问题",
+    "createdAt" : "2022-12-12T19:24:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "优化或重构CranedKeeper",
+    "createdAt" : "2022-12-12T19:25:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "固化CranedId的计算方法",
+    "createdAt" : "2022-12-14T10:04:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "修复xj集群中提交作业无法分配cgroup的问题",
+    "createdAt" : "2022-12-21T16:21:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "修复存在多个分区时craned无法在分区信息中找到自身节点的问题",
+    "createdAt" : "2022-12-21T16:23:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "设计一个简单的qos，名字为low，限制作业最长运行时间1小时，用户最多能使用2核心，一个账户下所有用户总共最多同时使用4核心，用户最多同时提交3个作业，最多同时运行2个作业，这个qos默认的优先级（priority）为100",
+    "createdAt" : "2022-12-22T02:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "设计实现一个调度系统，根据作业信息计算其优先级，并且具备backfill功能",
+    "createdAt" : "2023-01-11T06:34:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "实现调度系统对GPU资源的管理与资源分配",
+    "createdAt" : "2023-01-11T06:35:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "针对slurm中salloc指令，实现calloc指令，使得能够完成交互式和命令行的作业提交",
+    "createdAt" : "2023-01-11T06:37:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "针对slurm中srun指令，实现crun指令，使得能够完成交互式和命令行的作业提交",
+    "createdAt" : "2023-01-11T06:37:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "完善sbatch指令",
+    "createdAt" : "2023-01-11T06:37:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "完善ccontrol指令",
+    "createdAt" : "2023-02-13T14:40:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 97,
+    "title" : "添加资源预留功能reservation",
+    "createdAt" : "2023-02-13T14:45:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "编写sreport指令",
+    "createdAt" : "2023-02-13T14:47:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 99,
+    "title" : "完善sbatch指令",
+    "createdAt" : "2023-02-15T01:09:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "增加封锁账号和解锁账号的功能",
+    "createdAt" : "2023-03-14T12:17:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "增加封锁和解封账号下某个具体用户的功能",
+    "createdAt" : "2023-03-14T12:21:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "增加 cacctmgr show account的个性化输出",
+    "createdAt" : "2023-03-14T12:32:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "修改作业运行时间",
+    "createdAt" : "2023-03-14T12:36:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "完善cacct功能，增加对作业按时间查询的功能，可以按照固定格式输出作业",
+    "createdAt" : "2023-03-14T12:49:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "提交作业的作业输出文件会默认再加一个.out后缀，需要删除",
+    "createdAt" : "2023-06-01T06:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "添加对GPU的调度功能",
+    "createdAt" : "2023-06-06T00:32:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "修改ccontrol show node的输出",
+    "createdAt" : "2023-06-06T00:37:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "修改cinfo -d问题",
+    "createdAt" : "2023-06-06T00:59:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "修改cqueue显示问题",
+    "createdAt" : "2023-06-06T01:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "cbatch 参数识别错误不报错，以及不识别-N问题",
+    "createdAt" : "2023-06-13T03:15:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "QOSTimeLimit问题，cacctmgr show qos的显示为0",
+    "createdAt" : "2023-06-13T03:58:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "系统所有uid改成username，taskId改成JobID",
+    "createdAt" : "2023-06-14T06:15:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "calloc节点状态finished改成Completed，timeout改成ExceedTimeLimit",
+    "createdAt" : "2023-06-14T06:16:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "sbatch -c/--mem等参数资源分配问题",
+    "createdAt" : "2023-06-14T11:18:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "两级调度，在crane上面搭建一个xcrane，对跨集群的crane进行跨域调度",
+    "createdAt" : "2023-06-15T06:12:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 135,
+    "title" : "增加对容器的调度和支持，用户在脚本中可以指定所需要的容器，调度器根据用户给定的容器地址从远端拉取容器并使用容器完成计算",
+    "createdAt" : "2023-06-15T06:14:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "集群yum安装，各个组件通过yum可以直接安装，不需要编译部署",
+    "createdAt" : "2023-06-15T11:53:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "集群打包安装方案，只需要一个配置文件（指定哪个节点是cranectld节点，哪些节点是计算节点，以及集群配置文件）和一个脚本，就可以完成整个集群的部署",
+    "createdAt" : "2023-06-15T11:55:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 138,
+    "title" : "增加根据作业结束时间段查询作业的GRPC和前端接口",
+    "createdAt" : "2023-06-16T07:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "calloc默认分配的内存大小与CPU成正比",
+    "createdAt" : "2023-06-20T12:09:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "修改默认的内存大小单位，将以B为单位的内存全部改为MB为单位",
+    "createdAt" : "2023-06-20T12:17:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "获取用户的环境变量--get-user-env（CBATCH_GET_USER_ENV）",
+    "createdAt" : "2023-06-20T12:18:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "修改任务描述方式，将前后端所有的task改成job",
+    "createdAt" : "2023-06-20T12:21:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "作业结束时间 EndTime，改成作业运行时间加上作业运行时长",
+    "createdAt" : "2023-06-21T03:17:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "cqueue cacct等前端命令输出字段间距不一致问题",
+    "createdAt" : "2023-06-27T08:40:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "用户有好几个账号，但是cacctmgr show account只显示默认账号",
+    "createdAt" : "2023-06-27T08:44:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "申请CPU数量是浮点数，存在运行过程中浮点数错误累积导致系统对节点资源状态错误判断问题",
+    "createdAt" : "2023-06-27T08:52:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "任务队列恢复机制存在漏洞",
+    "createdAt" : "2023-06-28T12:29:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "cgroups创建时就要限制资源，否则非执行节点的cgroup无资源限制",
+    "createdAt" : "2023-06-30T11:46:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "作业添加priority属性，并对多因素综合调度算法进行测试",
+    "createdAt" : "2023-07-11T03:11:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "cbatch提交作业节点不够导致无限pending",
+    "createdAt" : "2023-08-08T02:02:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 169,
+    "title" : "普通用户不能修改自己作业的timelimit",
+    "createdAt" : "2023-08-15T03:35:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "需要修改树状结构，针对每一个普通用户，还有最大提交作业数、作业最长运行时间、优先级、最大作业数等限制",
+    "createdAt" : "2023-08-15T06:23:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "增加QOS的资源限制条目",
+    "createdAt" : "2023-08-15T06:47:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 172,
+    "title" : "增加作业dependency的功能",
+    "createdAt" : "2023-08-15T07:01:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "作业运行一段时间之后可以修改作业资源数量",
+    "createdAt" : "2023-08-15T07:25:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 174,
+    "title" : "定义集群网络拓扑，跨节点任务优先提交到在同一个交换机下的节点组里，没有选择的情况下才考虑跨交换机情况",
+    "createdAt" : "2023-08-15T07:26:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 175,
+    "title" : "指定/tmp目录作业一种资源，用户需要时可以申请资源",
+    "createdAt" : "2023-08-15T07:31:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 180,
+    "title" : "修改前端命令的超时问题的输出",
+    "createdAt" : "2023-08-17T11:39:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "craned启动失败",
+    "createdAt" : "2023-08-28T05:20:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "添加对节点状态的变更的一个事件处理流程",
+    "createdAt" : "2023-09-28T08:33:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "拆分现有数据库为database.yaml和config.yaml两个文件，cranectld读取两个文件，craned只读取config.yaml文件",
+    "createdAt" : "2023-09-28T08:35:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Question about scheduling performance",
+    "createdAt" : "2024-02-20T02:40:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 223,
+    "title" : "Job suspend  和resume功能",
+    "createdAt" : "2024-02-22T02:14:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 224,
+    "title" : "实现slurm wrapper",
+    "createdAt" : "2024-02-22T02:14:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "实现LSF wrapper",
+    "createdAt" : "2024-02-22T02:15:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "作业弹性上云，本地资源不够自动在云上进行计算，并回传结果",
+    "createdAt" : "2024-02-22T02:15:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 227,
+    "title" : "作业监控功能，提供作业运行状态的内存、CPU资源使用情况和利用率",
+    "createdAt" : "2024-02-22T02:15:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "cranectld主控备份",
+    "createdAt" : "2024-02-22T05:46:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 231,
+    "title" : "添加ceff查看作业资源使用状况的命令",
+    "createdAt" : "2024-02-28T05:50:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "与k8s融合调度",
+    "createdAt" : "2024-02-28T05:50:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 233,
+    "title" : "添加license管理功能",
+    "createdAt" : "2024-02-28T05:51:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "添加windows指令和资源使用支持",
+    "createdAt" : "2024-02-28T05:51:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 237,
+    "title" : "针对EL8家族系统更新安装配置文档",
+    "createdAt" : "2024-03-07T05:43:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "对华为NPU芯片的支持",
+    "createdAt" : "2024-03-14T15:09:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "demo无法正常使用",
+    "createdAt" : "2024-03-24T11:37:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "节点独占和抢占等模式",
+    "createdAt" : "2024-04-07T08:27:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 249,
+    "title" : "动态调整节点分区",
+    "createdAt" : "2024-04-10T06:21:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 250,
+    "title" : "添加作业运行生命周期内发送邮箱功能",
+    "createdAt" : "2024-04-10T06:23:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "修改作业优先级，将某个作业设置为最高优先级",
+    "createdAt" : "2024-04-10T06:24:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 257,
+    "title" : "Craned运行出错",
+    "createdAt" : "2024-05-07T05:57:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 295,
+    "title" : "增加作业展示信息",
+    "createdAt" : "2024-07-15T07:45:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "增加节点展示信息",
+    "createdAt" : "2024-07-15T07:45:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "新增cqueue -self 功能，直接显示用户自己所有作业信息",
+    "createdAt" : "2024-08-07T02:01:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "编写内存CPU显示指令，类似slurm的seff",
+    "createdAt" : "2024-10-17T00:53:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 332,
+    "title" : "重构日志等级输出规范",
+    "createdAt" : "2024-10-17T03:16:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 354,
+    "title" : "Bug: Crun任务不指定分区，任务环境变量CRANE_PARTITION为空",
+    "createdAt" : "2024-11-11T09:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "新增统一管理账号接口",
+    "createdAt" : "2024-11-13T02:05:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 366,
+    "title" : "Cacctmgr添加format选项",
+    "createdAt" : "2024-11-15T03:41:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "配置文件node没有对应的分区报错",
+    "createdAt" : "2024-11-15T07:56:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 369,
+    "title" : "用户Qos资源总量限制",
+    "createdAt" : "2024-11-20T08:49:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 373,
+    "title" : "作业暂停功能",
+    "createdAt" : "2024-11-24T10:57:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 374,
+    "title" : "版本显示时需要加上 cranesched字段",
+    "createdAt" : "2024-11-24T11:00:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "将参数错误这个枚举细化多几个枚举值",
+    "createdAt" : "2024-12-02T10:51:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 385,
+    "title" : "补齐cbatch、crun、salloc 相关功能的缺失",
+    "createdAt" : "2024-12-04T12:44:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "cinfo 输出问题",
+    "createdAt" : "2024-12-04T12:58:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 401,
+    "title" : "中科院软件所部署鹤思和SCOW",
+    "createdAt" : "2024-12-18T02:32:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "Partition AllowAccounts",
+    "createdAt" : "2024-12-19T08:59:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "添加修改用户默认账号的功能",
+    "createdAt" : "2024-12-26T02:57:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "修改ccontrol show job 的ReqNodeList和ExecludeNodeList输出",
+    "createdAt" : "2024-12-30T00:24:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 433,
+    "title" : "ccontrol show partition增加DefaultMemPerCPU和MaxMemPerCPU这两个参数的输出",
+    "createdAt" : "2025-02-22T09:44:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "新增--array功能",
+    "createdAt" : "2025-02-27T04:07:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 435,
+    "title" : "哈哈哈",
+    "createdAt" : "2025-02-27T04:22:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "请问使用cinfo等指令都是提示无法连接到CraneCtld是什么原因",
+    "createdAt" : "2025-03-04T15:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 440,
+    "title" : "新增cbatch, crun, calloc --comment功能",
+    "createdAt" : "2025-03-09T18:06:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 441,
+    "title" : "新增cbatch --open-mode功能",
+    "createdAt" : "2025-03-09T18:09:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 442,
+    "title" : "新增crun --comment功能",
+    "createdAt" : "2025-03-09T18:11:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 443,
+    "title" : "新增crun --input功能",
+    "createdAt" : "2025-03-09T18:15:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "新增crun --output功能",
+    "createdAt" : "2025-03-09T18:19:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 445,
+    "title" : "新增crun, calloc --mail-type功能",
+    "createdAt" : "2025-03-09T18:23:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 450,
+    "title" : "新增cbatch --exclusive",
+    "createdAt" : "2025-03-19T05:16:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 451,
+    "title" : "新增calloc --mem-per-cpu",
+    "createdAt" : "2025-03-19T05:32:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 452,
+    "title" : "新增calloc -n, --ntasks",
+    "createdAt" : "2025-03-19T05:35:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 454,
+    "title" : "修正作业提交，修改，批处理等输出格式",
+    "createdAt" : "2025-03-23T14:50:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "完善Cbatch输出环境变量",
+    "createdAt" : "2025-04-06T10:25:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 466,
+    "title" : "cbatch增加--signal",
+    "createdAt" : "2025-04-06T10:31:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 467,
+    "title" : "crun增加-e, --error",
+    "createdAt" : "2025-04-06T10:36:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 481,
+    "title" : "新增对XPU等加速卡自动检测的功能",
+    "createdAt" : "2025-04-16T03:08:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 482,
+    "title" : "需要限制每个账号下的每个分区的资源限制，包含最大提交作业数、做大使用cpu资源数等",
+    "createdAt" : "2025-04-16T03:19:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 521,
+    "title" : "Sbatch --gpus-per-node=[type:]<number>",
+    "createdAt" : "2025-06-17T09:02:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Sbatch --cpu-freq",
+    "createdAt" : "2025-06-17T09:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 523,
+    "title" : "新增cbatch - cpu- freq功能",
+    "createdAt" : "2025-06-18T04:15:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 524,
+    "title" : "新增cbatch gpus-per-node功能",
+    "createdAt" : "2025-06-18T04:44:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 525,
+    "title" : "新增cbatch -ntasks功能",
+    "createdAt" : "2025-06-18T05:52:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 526,
+    "title" : "新增cbatch -d --dependency功能",
+    "createdAt" : "2025-06-18T06:13:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 527,
+    "title" : "新增crun -w --wait功能",
+    "createdAt" : "2025-06-18T06:38:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 530,
+    "title" : "新增crun -n --ntasks功能",
+    "createdAt" : "2025-06-18T06:56:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 531,
+    "title" : "新增crun -k ----kill-on-bad-exit",
+    "createdAt" : "2025-06-18T09:42:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 532,
+    "title" : "新增cbatch -no requeue功能",
+    "createdAt" : "2025-06-18T11:02:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 533,
+    "title" : "删除cacctmgr show user 默认输出的多余行",
+    "createdAt" : "2025-06-18T11:51:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 542,
+    "title" : "新增 cbatch -wckey 功能",
+    "createdAt" : "2025-07-07T05:37:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 543,
+    "title" : "新增 cbatch --threads-per-core=<threads>功能",
+    "createdAt" : "2025-07-07T05:46:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 544,
+    "title" : "新增 cbatch --cores-per-socket=<cores> 功能",
+    "createdAt" : "2025-07-07T05:53:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 545,
+    "title" : "新增cbatch -H,-- hold 功能",
+    "createdAt" : "2025-07-09T12:02:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 546,
+    "title" : "新增cbatch -b, --begin=<time>功能",
+    "createdAt" : "2025-07-09T12:09:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 547,
+    "title" : "新增sreport功能",
+    "createdAt" : "2025-07-09T12:27:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 552,
+    "title" : "新增crun -i, --input=<mode>功能",
+    "createdAt" : "2025-07-18T05:49:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "新增crun -u, --unbuffered",
+    "createdAt" : "2025-07-18T05:54:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 554,
+    "title" : "新增crun -s, --oversubscribe功能",
+    "createdAt" : "2025-07-18T06:56:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 555,
+    "title" : "新增crun -l, --label功能",
+    "createdAt" : "2025-07-28T06:27:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 556,
+    "title" : "新增cbatch- -sockets-per-node功能",
+    "createdAt" : "2025-07-28T06:57:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 557,
+    "title" : "新增cbatch --use-min-nodes功能",
+    "createdAt" : "2025-07-28T07:07:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 571,
+    "title" : "Add separet debug info rpm and deb package in cmake",
+    "createdAt" : "2025-08-04T09:03:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 578,
+    "title" : "mongodb默认空置机制",
+    "createdAt" : "2025-08-11T07:13:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 579,
+    "title" : "crun需要能在转发链路断掉的时候独立运行",
+    "createdAt" : "2025-08-11T07:14:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 580,
+    "title" : "账户管理操作日志（事务记录）",
+    "createdAt" : "2025-08-11T07:18:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 586,
+    "title" : "新增calloc -Q, --quiet功能",
+    "createdAt" : "2025-08-13T09:43:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 607,
+    "title" : "修复系统现在的作业状态显示问题",
+    "createdAt" : "2025-09-02T09:39:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 608,
+    "title" : "修改reservation功能中指定节点的功能",
+    "createdAt" : "2025-09-05T00:47:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 609,
+    "title" : "添加进程数，任务数等环境变量",
+    "createdAt" : "2025-09-05T03:20:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 615,
+    "title" : "修复移出账号下qos时报错提示和root用户无法删除问题",
+    "createdAt" : "2025-09-11T08:35:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 647,
+    "title" : "`cpack -G RPM` failed",
+    "createdAt" : "2025-10-21T06:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 658,
+    "title" : "将pam_crane.so打包进rpm和deb包里，并和包同时安装",
+    "createdAt" : "2025-10-30T08:51:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 660,
+    "title" : "Crane链接中断期间完成的任务的结束时间不正确",
+    "createdAt" : "2025-10-30T13:20:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 661,
+    "title" : "通过RPM安装，systemd中的二进制文件地址为`/usr/local/bin/{craned,cranectld}`，但是实际安装目录是`/usr/bin/{craned,cranectld}`",
+    "createdAt" : "2025-10-31T01:41:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 662,
+    "title" : "Ubuntu指南缺少依赖包 libsystemd-dev",
+    "createdAt" : "2025-10-31T05:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 672,
+    "title" : "文档缺乏crane/config.yaml中必填的Supervisor相关配置的说明",
+    "createdAt" : "2025-11-05T08:22:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 680,
+    "title" : "对于下线但是有任务在进行且超过timelimit的设置为Completing状态并更新endtime",
+    "createdAt" : "2025-11-07T04:00:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 681,
+    "title" : "对于Configuring/Starting状态Job/step的cancel等请求自动igore并定时retry",
+    "createdAt" : "2025-11-08T05:02:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 688,
+    "title" : "Craned需要定时检查supervisor是否非正常退出",
+    "createdAt" : "2025-11-11T04:41:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 690,
+    "title" : "crun exitcode不为0时需要在前端提示",
+    "createdAt" : "2025-11-11T05:52:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 691,
+    "title" : "crun 多task任务支持",
+    "createdAt" : "2025-11-12T02:04:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 692,
+    "title" : "对Job/step/task支持Cgroup资源限制",
+    "createdAt" : "2025-11-12T02:05:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 693,
+    "title" : "配置文件支持可配置保留天数、文件大小、文件数量等",
+    "createdAt" : "2025-11-12T02:15:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 694,
+    "title" : "需要新增作业环境变量相关的文档",
+    "createdAt" : "2025-11-12T08:47:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 697,
+    "title" : "重构资源表示，支持cpupertask/grespertask等",
+    "createdAt" : "2025-11-12T11:51:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 698,
+    "title" : "给日志增加大小和数量的自定义设置",
+    "createdAt" : "2025-11-12T13:01:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 700,
+    "title" : "cacctmgr输出不好理解",
+    "createdAt" : "2025-11-13T04:54:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 701,
+    "title" : "cacct文档格式",
+    "createdAt" : "2025-11-13T04:56:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 712,
+    "title" : "文档添加系统错误提示和解决方法",
+    "createdAt" : "2025-11-19T13:24:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 714,
+    "title" : "License持久化到mongodb，添加相关文档",
+    "createdAt" : "2025-11-20T03:35:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 718,
+    "title" : "X11 forward当前不可用",
+    "createdAt" : "2025-11-22T08:54:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 721,
+    "title" : "当前cancel任务会直接kill pid，不安全",
+    "createdAt" : "2025-11-25T01:33:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 726,
+    "title" : "Details : Error: 13 INTERNAL: qos is nil\",\"metadata\":{\"is_scow_error\":[\"1\"],\"scow_error_code\":[\"ADAPTER_CALL_ON_ONE_ERROR\"]",
+    "createdAt" : "2025-11-27T06:13:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 743,
+    "title" : "Prolog/Epilog 功能",
+    "createdAt" : "2025-12-10T06:01:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 744,
+    "title" : "Lua功能",
+    "createdAt" : "2025-12-10T06:08:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 745,
+    "title" : "远程许可证功能",
+    "createdAt" : "2025-12-10T06:09:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 746,
+    "title" : "当前CgroupV2没有处理Systemd",
+    "createdAt" : "2025-12-10T10:02:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 748,
+    "title" : "修改qos查询条目重复问题",
+    "createdAt" : "2025-12-11T08:54:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 750,
+    "title" : "新增calloc -d, --dependency功能",
+    "createdAt" : "2025-12-14T16:21:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 751,
+    "title" : "新增calloc -n, --ntasks功能",
+    "createdAt" : "2025-12-14T16:22:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 752,
+    "title" : "新增calloc --mem-per-cpu功能",
+    "createdAt" : "2025-12-14T16:23:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 753,
+    "title" : "新增calloc -k, --no-kill功能",
+    "createdAt" : "2025-12-14T16:24:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 754,
+    "title" : "新增calloc -v, --verbose功能",
+    "createdAt" : "2025-12-14T16:25:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 755,
+    "title" : "新增cbatch -a, --array功能",
+    "createdAt" : "2025-12-14T16:27:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 756,
+    "title" : "新增cbatch --parsable功能",
+    "createdAt" : "2025-12-14T16:28:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 757,
+    "title" : "新增cbatch --gpus-per-node功能",
+    "createdAt" : "2025-12-14T16:29:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 758,
+    "title" : "新增cbatch --ntasks-per-socket功能",
+    "createdAt" : "2025-12-14T16:29:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 759,
+    "title" : "新增cbatch --cpu-freq功能",
+    "createdAt" : "2025-12-14T16:30:45Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 760,
+    "title" : "新增cbatch --priority功能",
+    "createdAt" : "2025-12-14T16:35:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 761,
+    "title" : "新增cbatch --mem-per-cpu功能",
+    "createdAt" : "2025-12-14T16:36:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 762,
+    "title" : "新增cbatch --threads-per-core功能",
+    "createdAt" : "2025-12-14T16:36:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 763,
+    "title" : "新增cbatch -m, --distribution功能",
+    "createdAt" : "2025-12-14T16:37:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 764,
+    "title" : "新增cbatch -i, --input功能",
+    "createdAt" : "2025-12-14T16:38:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 765,
+    "title" : "新增cbatch -W, --wait功能",
+    "createdAt" : "2025-12-14T16:40:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 766,
+    "title" : "新增cbatch --requeue功能",
+    "createdAt" : "2025-12-14T16:40:41Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 767,
+    "title" : "新增cbatch --cores-per-socket功能",
+    "createdAt" : "2025-12-14T16:41:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 768,
+    "title" : "新增crun --multi-prog功能",
+    "createdAt" : "2025-12-14T16:46:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 769,
+    "title" : "新增crun --cpu-bind功能",
+    "createdAt" : "2025-12-14T16:47:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 770,
+    "title" : "新增crun --deadline功能",
+    "createdAt" : "2025-12-14T16:47:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 771,
+    "title" : "新增crun --mpi功能",
+    "createdAt" : "2025-12-14T16:48:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 772,
+    "title" : "新增crun -d, --dependency功能",
+    "createdAt" : "2025-12-14T16:48:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 773,
+    "title" : "新增crun -v, --verbose功能",
+    "createdAt" : "2025-12-14T16:49:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 774,
+    "title" : "新增crun -e, --error功能",
+    "createdAt" : "2025-12-14T16:50:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 775,
+    "title" : "新增crun -B, --extra-node-info功能",
+    "createdAt" : "2025-12-14T16:50:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 776,
+    "title" : "新增crun --ntasks-per-core功能",
+    "createdAt" : "2025-12-14T16:51:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 777,
+    "title" : "新增crun -C, --constraint功能",
+    "createdAt" : "2025-12-14T16:52:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 796,
+    "title" : "BPF相关报错没有输出对应的错误信息",
+    "createdAt" : "2026-01-14T03:43:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 819,
+    "title" : "作业提交之后，通过ccontrol命令可以查看到作业提交的节点",
+    "createdAt" : "2026-02-11T02:32:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 832,
+    "title" : "鹤思在线文档中，缺少节能模块部署文档，以及部署完节能模块之后，节点状态的含义",
+    "createdAt" : "2026-02-26T02:13:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 837,
+    "title" : "开发鹤思支持本地笔记本等电脑直接使用鹤思CLI工具",
+    "createdAt" : "2026-03-04T02:55:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 838,
+    "title" : "支持动态加减节点",
+    "createdAt" : "2026-03-06T01:38:26Z",
+    "state" : "OPEN"
+  } ]
+}

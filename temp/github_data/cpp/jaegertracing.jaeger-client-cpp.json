@@ -1,0 +1,995 @@
+{
+  "repoOwner" : "jaegertracing",
+  "repoName" : "jaeger-client-cpp",
+  "forks" : [ {
+    "createdAt" : "2017-08-22T01:22:15Z"
+  }, {
+    "createdAt" : "2017-11-14T01:40:06Z"
+  }, {
+    "createdAt" : "2018-01-26T13:47:14Z"
+  }, {
+    "createdAt" : "2018-01-31T13:28:22Z"
+  }, {
+    "createdAt" : "2018-03-15T17:31:23Z"
+  }, {
+    "createdAt" : "2018-03-18T10:18:25Z"
+  }, {
+    "createdAt" : "2018-04-08T07:10:32Z"
+  }, {
+    "createdAt" : "2018-04-13T19:55:12Z"
+  }, {
+    "createdAt" : "2018-04-27T20:43:48Z"
+  }, {
+    "createdAt" : "2018-05-04T13:06:14Z"
+  }, {
+    "createdAt" : "2018-05-11T15:22:21Z"
+  }, {
+    "createdAt" : "2018-05-14T22:36:01Z"
+  }, {
+    "createdAt" : "2018-05-18T15:28:48Z"
+  }, {
+    "createdAt" : "2018-05-31T01:41:00Z"
+  }, {
+    "createdAt" : "2018-06-22T00:45:54Z"
+  }, {
+    "createdAt" : "2018-09-13T23:04:18Z"
+  }, {
+    "createdAt" : "2018-10-01T18:23:41Z"
+  }, {
+    "createdAt" : "2018-11-15T14:58:14Z"
+  }, {
+    "createdAt" : "2018-12-06T07:49:42Z"
+  }, {
+    "createdAt" : "2018-12-26T18:54:39Z"
+  }, {
+    "createdAt" : "2019-03-12T06:39:41Z"
+  }, {
+    "createdAt" : "2019-03-27T12:44:21Z"
+  }, {
+    "createdAt" : "2019-04-03T10:04:07Z"
+  }, {
+    "createdAt" : "2019-04-15T03:08:59Z"
+  }, {
+    "createdAt" : "2019-04-15T10:41:37Z"
+  }, {
+    "createdAt" : "2019-04-19T13:16:25Z"
+  }, {
+    "createdAt" : "2019-05-03T08:55:36Z"
+  }, {
+    "createdAt" : "2019-05-12T13:56:06Z"
+  }, {
+    "createdAt" : "2019-05-21T01:58:32Z"
+  }, {
+    "createdAt" : "2019-05-23T10:06:30Z"
+  }, {
+    "createdAt" : "2019-06-12T08:56:43Z"
+  }, {
+    "createdAt" : "2019-06-19T16:21:26Z"
+  }, {
+    "createdAt" : "2019-07-15T13:39:59Z"
+  }, {
+    "createdAt" : "2019-07-15T18:14:17Z"
+  }, {
+    "createdAt" : "2019-09-07T09:01:31Z"
+  }, {
+    "createdAt" : "2019-09-13T12:39:11Z"
+  }, {
+    "createdAt" : "2019-09-19T11:13:42Z"
+  }, {
+    "createdAt" : "2019-09-20T06:00:47Z"
+  }, {
+    "createdAt" : "2019-09-21T20:08:07Z"
+  }, {
+    "createdAt" : "2019-09-22T12:11:48Z"
+  }, {
+    "createdAt" : "2019-10-15T12:22:55Z"
+  }, {
+    "createdAt" : "2019-11-04T22:08:55Z"
+  }, {
+    "createdAt" : "2019-11-20T01:23:30Z"
+  }, {
+    "createdAt" : "2019-11-20T15:38:27Z"
+  }, {
+    "createdAt" : "2019-11-22T21:48:17Z"
+  }, {
+    "createdAt" : "2019-12-02T09:59:12Z"
+  }, {
+    "createdAt" : "2019-12-18T20:29:37Z"
+  }, {
+    "createdAt" : "2020-01-07T03:11:49Z"
+  }, {
+    "createdAt" : "2020-02-25T09:37:24Z"
+  }, {
+    "createdAt" : "2020-03-01T18:48:05Z"
+  }, {
+    "createdAt" : "2020-04-17T20:20:11Z"
+  }, {
+    "createdAt" : "2020-04-22T17:36:43Z"
+  }, {
+    "createdAt" : "2020-05-03T15:37:05Z"
+  }, {
+    "createdAt" : "2020-05-07T12:03:21Z"
+  }, {
+    "createdAt" : "2020-06-16T09:35:56Z"
+  }, {
+    "createdAt" : "2020-06-24T15:58:41Z"
+  }, {
+    "createdAt" : "2020-06-28T20:37:20Z"
+  }, {
+    "createdAt" : "2020-07-03T18:36:46Z"
+  }, {
+    "createdAt" : "2020-07-15T11:04:56Z"
+  }, {
+    "createdAt" : "2020-07-21T08:53:29Z"
+  }, {
+    "createdAt" : "2020-07-24T07:18:14Z"
+  }, {
+    "createdAt" : "2020-08-17T14:33:29Z"
+  }, {
+    "createdAt" : "2020-09-23T09:11:47Z"
+  }, {
+    "createdAt" : "2020-09-30T02:04:41Z"
+  }, {
+    "createdAt" : "2020-10-01T02:13:22Z"
+  }, {
+    "createdAt" : "2020-10-01T23:02:35Z"
+  }, {
+    "createdAt" : "2020-10-01T23:37:34Z"
+  }, {
+    "createdAt" : "2020-10-07T14:56:13Z"
+  }, {
+    "createdAt" : "2020-10-20T14:31:39Z"
+  }, {
+    "createdAt" : "2020-11-06T04:05:57Z"
+  }, {
+    "createdAt" : "2020-11-09T14:53:24Z"
+  }, {
+    "createdAt" : "2020-12-21T07:08:53Z"
+  }, {
+    "createdAt" : "2020-12-29T06:24:43Z"
+  }, {
+    "createdAt" : "2021-01-21T20:40:45Z"
+  }, {
+    "createdAt" : "2021-01-25T12:49:56Z"
+  }, {
+    "createdAt" : "2021-03-01T03:37:12Z"
+  }, {
+    "createdAt" : "2021-03-21T19:13:03Z"
+  }, {
+    "createdAt" : "2021-04-01T06:29:45Z"
+  }, {
+    "createdAt" : "2021-04-05T10:49:27Z"
+  }, {
+    "createdAt" : "2021-04-07T23:15:09Z"
+  }, {
+    "createdAt" : "2021-04-08T20:47:39Z"
+  }, {
+    "createdAt" : "2021-04-10T03:56:55Z"
+  }, {
+    "createdAt" : "2021-04-26T15:13:34Z"
+  }, {
+    "createdAt" : "2021-05-04T19:03:44Z"
+  }, {
+    "createdAt" : "2021-05-10T14:32:55Z"
+  }, {
+    "createdAt" : "2021-05-20T15:20:08Z"
+  }, {
+    "createdAt" : "2021-05-26T12:05:22Z"
+  }, {
+    "createdAt" : "2021-05-27T06:49:10Z"
+  }, {
+    "createdAt" : "2021-06-16T20:28:02Z"
+  }, {
+    "createdAt" : "2021-06-19T14:13:56Z"
+  }, {
+    "createdAt" : "2021-06-29T15:31:43Z"
+  }, {
+    "createdAt" : "2021-07-08T14:35:53Z"
+  }, {
+    "createdAt" : "2021-07-08T14:38:56Z"
+  }, {
+    "createdAt" : "2021-07-11T13:33:45Z"
+  }, {
+    "createdAt" : "2021-07-20T08:00:58Z"
+  }, {
+    "createdAt" : "2021-08-07T08:56:51Z"
+  }, {
+    "createdAt" : "2021-09-14T05:07:35Z"
+  }, {
+    "createdAt" : "2021-09-16T06:41:57Z"
+  }, {
+    "createdAt" : "2021-09-22T20:46:40Z"
+  }, {
+    "createdAt" : "2021-10-05T12:51:00Z"
+  }, {
+    "createdAt" : "2021-11-24T04:26:36Z"
+  }, {
+    "createdAt" : "2021-11-24T11:02:33Z"
+  }, {
+    "createdAt" : "2021-12-27T09:47:03Z"
+  }, {
+    "createdAt" : "2022-01-14T00:43:01Z"
+  }, {
+    "createdAt" : "2022-02-14T00:52:09Z"
+  }, {
+    "createdAt" : "2022-03-03T21:14:01Z"
+  }, {
+    "createdAt" : "2022-04-08T07:18:32Z"
+  }, {
+    "createdAt" : "2022-11-29T15:23:21Z"
+  }, {
+    "createdAt" : "2022-11-29T15:24:30Z"
+  }, {
+    "createdAt" : "2023-03-31T02:32:25Z"
+  }, {
+    "createdAt" : "2024-01-30T04:39:09Z"
+  }, {
+    "createdAt" : "2024-10-25T22:13:06Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "License",
+    "createdAt" : "2017-10-11T18:06:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Support dynamic loading",
+    "createdAt" : "2017-10-24T23:36:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Overflow bug in ProbabilisticSampler.",
+    "createdAt" : "2017-11-14T02:38:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "TJSONProtocol is not the same as JSON serialization",
+    "createdAt" : "2017-11-15T14:22:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Parsing YAML causes a segfault.",
+    "createdAt" : "2017-11-15T20:49:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Traces not showing up in jaeger.",
+    "createdAt" : "2017-11-18T01:58:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Crossdock Java/Python issues",
+    "createdAt" : "2017-11-20T16:46:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Make tracer metrics consistent with Go client",
+    "createdAt" : "2017-11-30T15:21:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Need to migrate to new cache repo",
+    "createdAt" : "2017-12-04T12:16:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Segfault in localIP function",
+    "createdAt" : "2017-12-04T19:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "debug error message in jaeger client while jaeger collector is not running",
+    "createdAt" : "2017-12-05T20:51:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Improve documentation",
+    "createdAt" : "2017-12-12T13:14:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Emit jaeger.version tag that includes the language",
+    "createdAt" : "2017-12-17T02:24:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Error \"fatal error: yaml-cpp/yaml.h2\" building library. JAEGERTRACING_WITH_YAML_CPP=OFF is ignored?",
+    "createdAt" : "2018-01-15T17:34:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "C bindings (feature request)",
+    "createdAt" : "2018-01-24T00:54:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Offline builds (reproducibility, security)",
+    "createdAt" : "2018-01-24T01:13:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Jaeger's shared lib links to the opentracing static lib",
+    "createdAt" : "2018-01-24T22:37:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Hunter builds don't install the downloaded dependencies",
+    "createdAt" : "2018-01-26T00:49:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Thrift IDL not in main repository, no build support",
+    "createdAt" : "2018-01-28T12:37:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Support nlohmann json 2.0.x?",
+    "createdAt" : "2018-01-28T13:11:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "jaeger cpp-client isn't in Hunter",
+    "createdAt" : "2018-01-31T05:35:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "cpp-client loses spans on short-lived processes; Close() not flushing buffers?",
+    "createdAt" : "2018-02-05T14:16:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Expose interface to flush buffered spans",
+    "createdAt" : "2018-02-05T14:18:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Extract() failure returns opentracing::expected with has_value=t and null ptr",
+    "createdAt" : "2018-02-07T04:49:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Passing const char* typed nullptr to SetTag crashes tracer during send",
+    "createdAt" : "2018-02-07T08:01:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Logs supplied in Span::FinishWithOptions are silently discarded",
+    "createdAt" : "2018-02-08T14:53:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "CI test incorrectly reports success when there's a failure.",
+    "createdAt" : "2018-03-19T18:43:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "CI test incorrectly reports success when there's a failure.",
+    "createdAt" : "2018-03-19T18:44:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "make error ",
+    "createdAt" : "2018-03-29T02:12:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Build error！Help！！！！",
+    "createdAt" : "2018-03-31T02:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Unhandled exception - Abort raised when write to the jaeger-agent fails",
+    "createdAt" : "2018-04-02T18:45:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Undefined symbols for architecture x86_64",
+    "createdAt" : "2018-04-03T08:33:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Rename project to jaeger-client-cpp",
+    "createdAt" : "2018-04-05T15:15:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "traces not show up in jaeger-ui",
+    "createdAt" : "2018-04-08T07:17:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Add pluggable shared libraries releases?",
+    "createdAt" : "2018-04-08T18:57:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "MacOs gcc/clang error",
+    "createdAt" : "2018-04-26T07:14:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "Add support for overriding hostname and ip fields",
+    "createdAt" : "2018-05-13T04:50:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "tracer.Inject(SpanContext&, HTTPHeadersWriter&) does not use HTTPHeaderPropagator",
+    "createdAt" : "2018-05-15T11:01:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Propagate opentracing-cpp v1.4.1",
+    "createdAt" : "2018-05-21T07:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Make Jaeger Client Cpp build and run on Windows",
+    "createdAt" : "2018-06-02T09:02:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "have a plan to implement ScopeManager?",
+    "createdAt" : "2018-06-10T03:55:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Replace MIT with Apache license",
+    "createdAt" : "2018-07-11T17:55:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "update hunter version to use a newer opentracing-cpp?",
+    "createdAt" : "2018-07-30T12:28:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "DynamicallyLoadTracerTest will not be built with cmake command from 'build-plugin.sh' ",
+    "createdAt" : "2018-07-30T12:36:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Remove Thrift headers from Jaeger public headers",
+    "createdAt" : "2018-08-06T15:30:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Document how to specify agent/collector endpoint",
+    "createdAt" : "2018-08-07T20:08:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Propagating B3-Headers",
+    "createdAt" : "2018-08-17T18:12:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Thread local storage for Context Propagation",
+    "createdAt" : "2018-09-03T20:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Span shared_ptr to Tracer causes deadlock in RemoteReporter",
+    "createdAt" : "2018-09-06T04:46:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "The C++ Jaeger client always populates the \"ip\" tag with 127.0.0.1",
+    "createdAt" : "2018-09-12T01:21:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Jaeger client deadlocks with span of duration 0",
+    "createdAt" : "2018-09-15T19:06:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "Add move constructor / move assignment to Span",
+    "createdAt" : "2018-09-15T19:30:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Fix race condition in testRemoteReporter",
+    "createdAt" : "2018-09-17T13:07:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Automatically add tag with value of jaeger-debug-id header",
+    "createdAt" : "2018-10-02T20:12:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Unable to load library in nginx (Debian)",
+    "createdAt" : "2018-10-27T14:05:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "invoke set_tag from lua core in  jaegertracing::Span::SetTag(opentracing::v2::string_view, opentracing::v2::Value const&) ()",
+    "createdAt" : "2018-12-07T12:44:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "jaeger-agent  Could not submit jaeger batch\",\"error\":\"no peers available\"",
+    "createdAt" : "2018-12-13T11:17:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Does jaeger-client-cpp support constructing the tracer data in X-B3 format and reporting it?",
+    "createdAt" : "2018-12-13T13:54:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "get root span",
+    "createdAt" : "2018-12-17T12:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "flush spans",
+    "createdAt" : "2018-12-18T11:11:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Getting sampled spans when using const sampler and param 0",
+    "createdAt" : "2018-12-26T16:35:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Is there way to build jaeger-client-cpp with all library as static lib",
+    "createdAt" : "2019-01-09T09:54:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Second Finish for span",
+    "createdAt" : "2019-01-21T07:58:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "StartSpan crashes",
+    "createdAt" : "2019-02-08T11:04:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "StartSpanWithOptions is crashing when the sampling rate is set to a value greater than 1.0 (i.e. 1.1 onwards) for sampler-type= probabilistic",
+    "createdAt" : "2019-02-14T11:31:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "IPv4 is assumed",
+    "createdAt" : "2019-03-11T22:51:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Question: is arm supported?",
+    "createdAt" : "2019-04-01T17:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 152,
+    "title" : "Add a MAINTAINERS/CODEOWNERS file",
+    "createdAt" : "2019-04-02T12:32:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Building on macOS failed due to Hunter error",
+    "createdAt" : "2019-04-06T02:09:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Create a span from given parent Span Id / parent Trace Id",
+    "createdAt" : "2019-04-16T08:03:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "vcpkg support?",
+    "createdAt" : "2019-04-22T19:58:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Default sampling server url misses /sampling path",
+    "createdAt" : "2019-05-21T07:10:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Segfault in libjaegertracing_plugin.so",
+    "createdAt" : "2019-06-19T10:52:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "w3c trace context propagation support ",
+    "createdAt" : "2019-06-26T15:12:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "try (Scope s = tracer.activateSpan(span)) {...} pattern interacts poorly with error logging",
+    "createdAt" : "2019-07-02T22:38:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Linking the shared lib without hunter fails because it tries to link with the static opentracing",
+    "createdAt" : "2019-07-09T14:47:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Jaeger client always populates the \"ip\" tag with 127.0.0.1",
+    "createdAt" : "2019-07-31T11:38:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "The C++ Jaeger client always populates the \"ip\" tag with 127.0.0.1",
+    "createdAt" : "2019-07-31T11:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Bypass agent and send traces directly to collector?",
+    "createdAt" : "2019-08-02T20:03:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 166,
+    "title" : "Consider making Tracer constructor non-private",
+    "createdAt" : "2019-08-28T15:16:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Fix time comparisons in test Tracer.testTracer ",
+    "createdAt" : "2019-09-01T21:55:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 173,
+    "title" : "Update the script/build-plugin.sh to link statically the plugin",
+    "createdAt" : "2019-09-17T21:27:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 174,
+    "title" : "Standard FindBoost does not support CONFIG.",
+    "createdAt" : "2019-09-19T09:21:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Large timings when using envoy and libjaegertracing_plugin.so for tracing ( with envoy )",
+    "createdAt" : "2019-09-20T17:06:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Issue building example with dynamic library.",
+    "createdAt" : "2019-09-21T20:25:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "Support configuring client from environment variables",
+    "createdAt" : "2019-09-29T20:06:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "Is gcc >= 4.9 requirement is really mandatory?",
+    "createdAt" : "2019-10-01T09:31:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Why is spanId=0 not valid?",
+    "createdAt" : "2019-10-10T20:20:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "Support building with libc++",
+    "createdAt" : "2019-10-13T03:03:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Build fails on Debian stretch",
+    "createdAt" : "2019-10-15T13:08:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "error: cannot declare parameter 'rhs' to be of abstract type 'jaegertracing::Span'  Span& operator=(Span rhs)",
+    "createdAt" : "2019-10-24T11:38:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "startTime generate by cpp client is different from jaeger UI->Trace JSON",
+    "createdAt" : "2019-11-13T06:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Hunter failed to download yaml-cpp because of SHA1 hash mismatch.",
+    "createdAt" : "2019-11-18T19:35:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Any plan to release new version to upgrade to OpenTracing 1.6.0",
+    "createdAt" : "2019-11-20T14:04:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 193,
+    "title" : "remove yaml dependency",
+    "createdAt" : "2019-12-10T13:54:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Update to latest version of Thrift",
+    "createdAt" : "2019-12-23T16:35:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Add Bazel build support",
+    "createdAt" : "2019-12-24T18:58:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Include compiled library for 0.5.0 release",
+    "createdAt" : "2019-12-25T13:20:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "/bin/sh -c ./scripts/build-plugin.sh' returned a non-zero code: 127",
+    "createdAt" : "2020-01-14T10:04:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "remote sampling strategy fails silently on setting the strategyType",
+    "createdAt" : "2020-01-27T16:27:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Jaeger app crash when compiling with Visual Studio 2017 or 2019",
+    "createdAt" : "2020-02-02T23:17:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 204,
+    "title" : "When restarting jaeger aegent in docker cpp libraries don't connect anymore",
+    "createdAt" : "2020-02-05T11:44:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "\"No buffer space available, code=105\" occurred at span send",
+    "createdAt" : "2020-02-18T03:30:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Gtest failure when running cmake .. inside build folder ",
+    "createdAt" : "2020-02-26T18:36:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Example of using gRPC as the transport",
+    "createdAt" : "2020-03-05T09:25:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "jaeger not building with yaml-cpp",
+    "createdAt" : "2020-03-12T10:03:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 216,
+    "title" : "make install doesn't install dependencies",
+    "createdAt" : "2020-03-19T17:58:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Jaeger Tracing not working with yaml-cpp 0.6.x",
+    "createdAt" : "2020-03-20T06:36:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Send span issue",
+    "createdAt" : "2020-03-23T12:52:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 221,
+    "title" : "size limiting batch performance issue",
+    "createdAt" : "2020-04-24T07:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "SpanContext::ToTraceID() not implemented",
+    "createdAt" : "2020-06-02T13:15:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Invalid percent encoding in URI::queryEscape() for some national characters",
+    "createdAt" : "2020-06-04T11:23:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "Enable Jaeger Arm64 images on official Docker repo",
+    "createdAt" : "2020-06-22T03:27:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 229,
+    "title" : "SetTag does not support unsigned long",
+    "createdAt" : "2020-06-30T02:57:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 230,
+    "title" : "Socket errors on Windows not reported with WSAGetLastError()",
+    "createdAt" : "2020-07-01T08:59:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "cmake is too slow",
+    "createdAt" : "2020-07-07T11:36:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 233,
+    "title" : "How to know if a `Tracer` has been connected to the jaeger backend",
+    "createdAt" : "2020-07-09T17:25:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "ScopeManager not implemented ",
+    "createdAt" : "2020-07-26T20:49:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "sampling_priority appears to be ignored",
+    "createdAt" : "2020-07-28T15:58:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Serialized traceId and spanId are invalid in a span context propagated between jaeger-client-cpp and jaeger-client-java. ",
+    "createdAt" : "2020-08-21T09:47:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "all threads shared a global tracer or every thread own it's thread local tracer? which approach is better?",
+    "createdAt" : "2020-09-02T08:56:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "SpanContext::operator==() has a dead lock problem",
+    "createdAt" : "2020-09-04T13:21:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 243,
+    "title" : "No compatible with fbthrift",
+    "createdAt" : "2020-09-13T09:49:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Client hangs when sending spans to collector directly(without agent) during Jaeger server restart",
+    "createdAt" : "2020-09-14T10:50:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Jaeger cpp client on alpine seems to crash when used with opentracing",
+    "createdAt" : "2020-09-21T12:14:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 246,
+    "title" : "Initialization of Tracer",
+    "createdAt" : "2020-09-21T19:30:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 247,
+    "title" : "Jeager client initialization is too slow. ",
+    "createdAt" : "2020-10-02T03:36:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 249,
+    "title" : "Message too long, code=40",
+    "createdAt" : "2020-10-13T08:02:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 250,
+    "title" : "JAEGER_REPORTER_MAX_QUEUE_SIZE doesn't work",
+    "createdAt" : "2020-10-26T08:17:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "data race observed for jaeger span finish operation",
+    "createdAt" : "2020-10-26T08:43:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "kSamplerTypeConst with param 0 can't work",
+    "createdAt" : "2020-10-26T09:01:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 253,
+    "title" : "opentracing: dynamic library loading is not supported while building manually",
+    "createdAt" : "2020-11-21T16:59:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Migrate CI to GitHub Actions",
+    "createdAt" : "2020-12-13T19:29:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Provide access to context HTTP Header name",
+    "createdAt" : "2021-01-19T10:50:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Jaeger 32 bit C/C++ client required ",
+    "createdAt" : "2021-02-25T13:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 263,
+    "title" : "QUESTION: Can not use with hunter manager",
+    "createdAt" : "2021-03-21T19:14:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "how to release version to real scene",
+    "createdAt" : "2021-03-28T00:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Unit test: Socket.testFailBind fails when run as \"root\"",
+    "createdAt" : "2021-04-01T19:53:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Can we please ditch hunter",
+    "createdAt" : "2021-04-10T03:56:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 271,
+    "title" : "Enable ppc64le arch for jaeger-client-cpp",
+    "createdAt" : "2021-06-14T07:19:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Unable to build windows in a pipeline.",
+    "createdAt" : "2021-07-02T03:16:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Add support for adding tracer tags via config yaml",
+    "createdAt" : "2021-07-08T08:16:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 276,
+    "title" : "My jaeger version is 1.23, and the jaeger-collector component has enabled --sampling.strategies-reload-interval, but the collected logs show that the sampling strategy is still old",
+    "createdAt" : "2021-07-15T02:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Envoy - failed to load dynamic library opentracing versions are incomptable",
+    "createdAt" : "2021-07-15T19:22:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 279,
+    "title" : "`RemoteReporter::report()` is blocked",
+    "createdAt" : "2021-08-06T12:54:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 281,
+    "title" : "Default queue size & buffer flush interval are not used when reading configuration from YAML",
+    "createdAt" : "2021-08-16T07:37:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 286,
+    "title" : "Issue facing while trying to build jaeger-client-cpp",
+    "createdAt" : "2021-09-24T05:29:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 287,
+    "title" : "Compilation issue on Ubuntu 20.04",
+    "createdAt" : "2021-09-25T09:32:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "When the sampling type is rate, the number of actual results is equal to the number of threads multiplied by the configured rate parameter",
+    "createdAt" : "2021-09-28T01:55:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : " warning const' was hidden [-Woverloaded-virtual] when using jaeger client with opentracing libraries",
+    "createdAt" : "2021-10-04T08:15:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Enablement TravisCI integration for IBM ppc64le architecture",
+    "createdAt" : "2021-10-06T20:37:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Deprecate Jaeger C++ SDK",
+    "createdAt" : "2021-10-08T15:57:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "[Bug]: W3C Propagation is wrongfully encoding debug span flag into traceparent",
+    "createdAt" : "2022-08-30T04:58:42Z",
+    "state" : "CLOSED"
+  } ]
+}

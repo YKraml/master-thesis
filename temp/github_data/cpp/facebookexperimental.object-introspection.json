@@ -1,0 +1,553 @@
+{
+  "repoOwner" : "facebookexperimental",
+  "repoName" : "object-introspection",
+  "forks" : [ {
+    "createdAt" : "2022-12-19T14:53:13Z"
+  }, {
+    "createdAt" : "2022-12-19T14:53:18Z"
+  }, {
+    "createdAt" : "2022-12-19T16:01:19Z"
+  }, {
+    "createdAt" : "2022-12-19T16:04:17Z"
+  }, {
+    "createdAt" : "2022-12-19T16:23:26Z"
+  }, {
+    "createdAt" : "2022-12-24T04:25:09Z"
+  }, {
+    "createdAt" : "2023-07-10T18:55:11Z"
+  }, {
+    "createdAt" : "2023-09-21T19:11:00Z"
+  }, {
+    "createdAt" : "2023-09-21T19:22:27Z"
+  }, {
+    "createdAt" : "2024-01-29T18:29:47Z"
+  }, {
+    "createdAt" : "2024-01-30T17:53:19Z"
+  }, {
+    "createdAt" : "2024-08-16T00:09:59Z"
+  }, {
+    "createdAt" : "2024-09-18T14:44:38Z"
+  }, {
+    "createdAt" : "2025-02-26T12:05:27Z"
+  }, {
+    "createdAt" : "2025-06-04T02:48:49Z"
+  }, {
+    "createdAt" : "2025-06-11T22:04:05Z"
+  } ],
+  "issues" : [ {
+    "number" : 13,
+    "title" : "`std::shared_ptr` under reporting size",
+    "createdAt" : "2022-12-30T15:32:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 14,
+    "title" : "`std::vector<bool>` handling is incorrect",
+    "createdAt" : "2022-12-30T15:48:37Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 15,
+    "title" : "Skipped test: `Oi{d,l}Integration.std_unordered_map_int_int`",
+    "createdAt" : "2022-12-30T15:53:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 16,
+    "title" : "References are codegenned as pointers",
+    "createdAt" : "2022-12-30T19:17:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 17,
+    "title" : "Incomplete raw pointers fail codegen for OID but succeed for OIL",
+    "createdAt" : "2022-12-30T20:00:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 19,
+    "title" : "OID produces incorrect results when top level argument is a pointer",
+    "createdAt" : "2023-01-03T13:24:10Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 20,
+    "title" : "Pointers to anonymous structs are stubbed out even with `--chase-raw-pointers`",
+    "createdAt" : "2023-01-03T13:49:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 21,
+    "title" : "Skipped test: `OidIntegration.pointers_vector_of_pointers_no_follow`",
+    "createdAt" : "2023-01-03T13:54:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 22,
+    "title" : "Bad handling of both C-style and C++ function pointers",
+    "createdAt" : "2023-01-03T14:12:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 24,
+    "title" : "Always building drgn with `march=broadwell` reduces compatibility",
+    "createdAt" : "2023-01-04T10:39:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "oilgen doesn't set `DRGN_ENABLE_TYPE_ITERATOR=1`",
+    "createdAt" : "2023-01-17T19:33:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "A function that is both inlined and not inlined causes instrumentation problems",
+    "createdAt" : "2023-01-19T14:11:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 34,
+    "title" : "OIL integration test runner should accept custom parameters",
+    "createdAt" : "2023-01-20T15:36:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 36,
+    "title" : "Help message for -i,--debug-path unclear",
+    "createdAt" : "2023-01-24T15:45:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 44,
+    "title" : "Polymorphic inheritance for classes with the same name in different namespaces",
+    "createdAt" : "2023-01-30T11:40:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 52,
+    "title" : "Support for C++20 `no_unique_address` attribute",
+    "createdAt" : "2023-02-01T23:19:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 53,
+    "title" : "Resizing data segment causes target process SEGV",
+    "createdAt" : "2023-02-02T14:22:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 55,
+    "title" : "Test cases with a `config` section may fail with a relative config",
+    "createdAt" : "2023-02-03T11:38:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "SIGILL in integration_test_target during highly parallel test runs",
+    "createdAt" : "2023-02-06T13:09:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "oilgen: create directly from the weak (impl) symbol by using `-fstandalone-debug` on the input object file",
+    "createdAt" : "2023-02-07T18:04:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Write test for folly::sorted_vector_set",
+    "createdAt" : "2023-02-08T13:33:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "`drgn_type_name` should be checked in `OIGenerator.cpp`",
+    "createdAt" : "2023-02-17T02:14:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Write test to in include a `conditional_t` type",
+    "createdAt" : "2023-02-20T20:08:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Specifying the same treebuilder config but different code in the `.toml` causes unexpected behaviour",
+    "createdAt" : "2023-02-23T20:24:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "oid enters into permanent loop when processes exits prematurely",
+    "createdAt" : "2023-02-26T07:17:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 87,
+    "title" : "oid errors out poorly when target process exits cleanly",
+    "createdAt" : "2023-03-01T03:14:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 88,
+    "title" : "oid is noisy when target process dies with SEGV",
+    "createdAt" : "2023-03-01T03:30:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Improve raw array support",
+    "createdAt" : "2023-03-09T14:04:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "`contTargetThread()` returns a bool but needs to be void",
+    "createdAt" : "2023-03-13T15:42:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 95,
+    "title" : "Typed TreeBuilder",
+    "createdAt" : "2023-03-15T12:52:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "`uintptr_t` sometimes gets stubbed to `char[8]`",
+    "createdAt" : "2023-03-16T11:54:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 104,
+    "title" : "Cycle detection broken in OIL",
+    "createdAt" : "2023-03-22T13:36:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "JLOG* api's should be present in JIT code only when enabled",
+    "createdAt" : "2023-03-28T10:48:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Warnings from C++ dependencies during build",
+    "createdAt" : "2023-03-29T09:29:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 115,
+    "title" : "Support globbing when selecting container definitions in configuration file",
+    "createdAt" : "2023-03-30T14:11:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 123,
+    "title" : "Containers with no template parameters break",
+    "createdAt" : "2023-04-06T14:10:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 131,
+    "title" : "rocksdb is built by calling cmake rather than as a cmake dependency",
+    "createdAt" : "2023-04-21T12:55:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Internal Meta cruft left in trace code",
+    "createdAt" : "2023-04-24T12:49:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Container Alignment is Broken",
+    "createdAt" : "2023-05-24T13:49:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 168,
+    "title" : "Remove old feature flags that are duplicated by the feature `-f/-F` enable/disable options",
+    "createdAt" : "2023-06-16T13:51:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 170,
+    "title" : "Document programs in tools/",
+    "createdAt" : "2023-06-19T17:19:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 175,
+    "title" : "Move away from deprecated RuntimeDyld",
+    "createdAt" : "2023-06-22T16:11:00Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 189,
+    "title" : "Random SIGPIPEs on CI in tests",
+    "createdAt" : "2023-06-28T15:12:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 201,
+    "title" : "Help URL in OSS is a useless fburl",
+    "createdAt" : "2023-07-03T14:58:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 225,
+    "title" : "Remove \"__fbthrift_field_\" prefix from Thrift fields",
+    "createdAt" : "2023-07-11T12:14:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 232,
+    "title" : "TreeBuilder crash for anonymous enums & typedefs",
+    "createdAt" : "2023-07-12T13:30:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 234,
+    "title" : "Support capturing data from tagged unions",
+    "createdAt" : "2023-07-13T09:15:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 239,
+    "title" : "Existing mechanism for attaching to threads is too racy",
+    "createdAt" : "2023-07-14T21:27:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 258,
+    "title" : "folly::sorted_vector_map is not modelled correctly",
+    "createdAt" : "2023-07-25T16:11:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 268,
+    "title" : "Implement group stops",
+    "createdAt" : "2023-07-26T14:59:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 286,
+    "title" : "Primitives are named differently in CodeGenV2/TreeBuilderV2",
+    "createdAt" : "2023-08-16T14:54:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 289,
+    "title" : "Can't locate `_ZNSt11logic_errorC2EOS_` used by folly::Try",
+    "createdAt" : "2023-08-17T12:12:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 291,
+    "title" : "vptrs are included in the JSON output",
+    "createdAt" : "2023-08-18T10:33:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 292,
+    "title" : "Stubbed types do not appear in the generated code as padding",
+    "createdAt" : "2023-08-18T11:05:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 293,
+    "title" : "Cycles are problematic in TreeBuilder V2",
+    "createdAt" : "2023-08-18T14:59:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 295,
+    "title" : "CodeGen v2 codegen fails for zero length array",
+    "createdAt" : "2023-08-18T16:23:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "OIL v2 is missing Thrift isset support",
+    "createdAt" : "2023-08-18T16:42:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 297,
+    "title" : "Enum type template arguments do not match",
+    "createdAt" : "2023-08-18T17:09:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 298,
+    "title" : "std::variant is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T17:18:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 299,
+    "title" : "std::unique_ptr is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T19:01:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "std::shared_ptr is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T19:03:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 301,
+    "title" : "TreeBuilder v2 gets the exclusive size of subfields wrong",
+    "createdAt" : "2023-08-18T19:28:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "std::unordered_set is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T20:30:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "std::unordered_map is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T20:32:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 304,
+    "title" : "std::tuple is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-18T20:35:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 305,
+    "title" : "std::stack is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-21T10:23:13Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 306,
+    "title" : "std::set is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-21T10:25:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "std::reference_wrapper is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-21T10:26:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "std::queue is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-21T10:30:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 309,
+    "title" : "std::priority_queue is not implemented for treebuilder v2",
+    "createdAt" : "2023-08-21T10:33:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 310,
+    "title" : "std::pair tests need updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:37:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "std::string tests need updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:39:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 312,
+    "title" : "std::optional needs updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:52:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 313,
+    "title" : "std::multimap needs updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:54:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 314,
+    "title" : "std::map needs updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:54:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "std::list needs updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:55:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "std::deque needs updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:56:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "std::conditional tests need updating for treebuilder v2",
+    "createdAt" : "2023-08-21T10:57:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 318,
+    "title" : "std::array tests need updating for treebuilder v2",
+    "createdAt" : "2023-08-21T11:04:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 320,
+    "title" : "folly::sorted_vector_set needs updating for treebuilder v2",
+    "createdAt" : "2023-08-22T14:27:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 321,
+    "title" : "folly::small_vector needs updating for treebuilder v2",
+    "createdAt" : "2023-08-22T15:16:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 322,
+    "title" : "folly::fbstring needs updating for treebuilder v2",
+    "createdAt" : "2023-08-22T15:20:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Linking error when trying to compile",
+    "createdAt" : "2023-09-05T13:11:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "CI should build with clang-15",
+    "createdAt" : "2023-09-13T12:11:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "what's required to support shared libs?",
+    "createdAt" : "2023-09-21T10:19:22Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 359,
+    "title" : "issues with CMake dependency handling",
+    "createdAt" : "2023-09-21T19:44:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 361,
+    "title" : "is gcc supported for client applications?",
+    "createdAt" : "2023-09-21T21:04:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 363,
+    "title" : "Incorrect testing advice in PR template",
+    "createdAt" : "2023-09-22T09:58:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 378,
+    "title" : "Review replay instruction code",
+    "createdAt" : "2023-10-09T22:55:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 380,
+    "title" : "result::Element contains potentially redundant pointer information",
+    "createdAt" : "2023-10-10T17:59:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 404,
+    "title" : "OIL uses a single shared pointer set even though it can be called concurrently",
+    "createdAt" : "2023-11-13T19:03:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "The pointer tracking mechanism hangs threads with >125k pointers",
+    "createdAt" : "2023-11-14T11:41:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 406,
+    "title" : "Jit logging missing from new toml definitions",
+    "createdAt" : "2023-11-14T16:09:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 419,
+    "title" : "Logging cleanup",
+    "createdAt" : "2023-11-22T15:18:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 436,
+    "title" : "folly::IOBuf is missing tests",
+    "createdAt" : "2023-12-20T15:50:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 458,
+    "title" : "tbv2: pointer code generation is broken",
+    "createdAt" : "2024-01-12T20:17:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "tbv2: codegen fails on top level incomplete objects",
+    "createdAt" : "2024-01-12T21:38:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 466,
+    "title" : "tbv2: delegate is required for complex processors when write should work",
+    "createdAt" : "2024-01-23T16:28:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 468,
+    "title" : "`folly::sorted_vector_map` ignores the underlying container and pair",
+    "createdAt" : "2024-01-30T16:07:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 479,
+    "title" : "Cached data for `oi::SizedResult` is stored in the short lived iterator",
+    "createdAt" : "2024-02-06T16:56:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 498,
+    "title" : "OIL documentation",
+    "createdAt" : "2024-06-27T07:38:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 500,
+    "title" : "Relative paths in the config file are not handled as expected with a symlink",
+    "createdAt" : "2024-08-13T14:04:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 531,
+    "title" : "Failing to run example in Docker",
+    "createdAt" : "2025-07-20T16:38:19Z",
+    "state" : "OPEN"
+  } ]
+}

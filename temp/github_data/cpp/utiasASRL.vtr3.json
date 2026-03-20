@@ -1,0 +1,309 @@
+{
+  "repoOwner" : "utiasASRL",
+  "repoName" : "vtr3",
+  "forks" : [ {
+    "createdAt" : "2021-09-18T01:31:28Z"
+  }, {
+    "createdAt" : "2021-09-30T19:30:07Z"
+  }, {
+    "createdAt" : "2021-11-08T01:47:47Z"
+  }, {
+    "createdAt" : "2022-02-01T05:45:45Z"
+  }, {
+    "createdAt" : "2022-02-28T19:37:30Z"
+  }, {
+    "createdAt" : "2022-03-14T05:09:36Z"
+  }, {
+    "createdAt" : "2022-07-13T10:38:40Z"
+  }, {
+    "createdAt" : "2022-08-22T06:46:51Z"
+  }, {
+    "createdAt" : "2022-09-05T01:19:50Z"
+  }, {
+    "createdAt" : "2023-01-09T17:47:38Z"
+  }, {
+    "createdAt" : "2023-02-17T02:55:20Z"
+  }, {
+    "createdAt" : "2023-02-24T14:44:45Z"
+  }, {
+    "createdAt" : "2023-03-24T14:30:39Z"
+  }, {
+    "createdAt" : "2023-03-31T02:46:05Z"
+  }, {
+    "createdAt" : "2023-05-29T11:22:02Z"
+  }, {
+    "createdAt" : "2023-06-04T12:57:20Z"
+  }, {
+    "createdAt" : "2023-06-08T04:26:15Z"
+  }, {
+    "createdAt" : "2023-07-04T07:59:42Z"
+  }, {
+    "createdAt" : "2023-08-16T07:48:06Z"
+  }, {
+    "createdAt" : "2023-11-06T21:31:53Z"
+  }, {
+    "createdAt" : "2024-08-20T04:35:53Z"
+  }, {
+    "createdAt" : "2024-10-24T14:28:51Z"
+  }, {
+    "createdAt" : "2024-12-27T01:53:49Z"
+  }, {
+    "createdAt" : "2025-05-13T20:19:40Z"
+  }, {
+    "createdAt" : "2025-06-13T16:04:42Z"
+  }, {
+    "createdAt" : "2025-07-07T09:31:31Z"
+  }, {
+    "createdAt" : "2025-09-25T02:09:46Z"
+  }, {
+    "createdAt" : "2026-01-05T02:52:16Z"
+  }, {
+    "createdAt" : "2026-02-18T20:34:49Z"
+  } ],
+  "issues" : [ {
+    "number" : 42,
+    "title" : "Port vtr safety monitor",
+    "createdAt" : "2021-03-29T21:08:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "No initial location (triangle) on UI when loading graph",
+    "createdAt" : "2021-03-29T21:10:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "UI doesn’t get “before” time entered into the goal box, repeat starts immediately ",
+    "createdAt" : "2021-03-29T21:13:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "The 3 point merge selector is confusing to use",
+    "createdAt" : "2021-03-29T21:20:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 46,
+    "title" : "Goals never get completed (though robot does stop when path is complete), have to manually cancel",
+    "createdAt" : "2021-03-29T21:21:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "UI occasionally gives “ConnectionRefusedError.”",
+    "createdAt" : "2021-03-29T21:26:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "UI incorrectly displays some vertex id ",
+    "createdAt" : "2021-03-29T21:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "path tracker: may not command the robot to the end of a cusp when distance between keyframes is large",
+    "createdAt" : "2021-08-18T03:36:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "When completing a repeat, UI not get the “done” signal from the navigation system",
+    "createdAt" : "2021-08-18T03:38:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 102,
+    "title" : "Put vision pipelines and modules into vtr::vision instead of vtr::tactic",
+    "createdAt" : "2021-08-19T05:51:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "BumblebeeReplay does not replay images at desired rate",
+    "createdAt" : "2021-09-06T22:00:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 108,
+    "title" : "Force re-localization during repeat not supported by the path tracker",
+    "createdAt" : "2021-09-08T07:03:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Stereo pipeline, bundle adjustment, windowed recall module, could not find a temporal edge that has definitely been added.",
+    "createdAt" : "2021-09-08T21:25:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "UI should pop up a warning when merge fails due to offset too large",
+    "createdAt" : "2021-09-09T18:46:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 113,
+    "title" : "stereo vision pipeline: multi experience feature match visualization function call should not be put in ransac_module",
+    "createdAt" : "2021-09-18T19:18:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "path trackier: switches to TURN_ON_SPOT mode when it probably does not have to",
+    "createdAt" : "2021-09-18T19:23:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "VTR crash when attempting to confirm a successful merge in UI and pose graph corrupted",
+    "createdAt" : "2021-09-21T20:40:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Can we setup a Gazebo simulation .",
+    "createdAt" : "2021-09-27T11:10:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "can you add support to zed camera as well",
+    "createdAt" : "2022-02-02T11:15:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Error in Colcon build —symlink-install",
+    "createdAt" : "2022-06-29T02:36:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "Hardware Configuration",
+    "createdAt" : "2022-07-18T03:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "Docker version mismatch",
+    "createdAt" : "2023-01-08T01:08:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Improve Error Messages for Path",
+    "createdAt" : "2023-01-20T18:07:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Update python warnings in vtr_gui",
+    "createdAt" : "2023-01-29T19:31:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "Add Filesystem Checks in Async Tasks",
+    "createdAt" : "2023-02-03T19:50:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 171,
+    "title" : "MPC Failure near Merge",
+    "createdAt" : "2023-03-10T16:33:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "UI Status Should Include Crashed",
+    "createdAt" : "2023-03-18T15:01:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 173,
+    "title" : "UI doesn't update in realtime like in the demo video",
+    "createdAt" : "2023-04-25T02:32:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "filtered_point_cloud is not used consistently",
+    "createdAt" : "2023-05-03T18:09:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 176,
+    "title" : "Dynamic Pose Graph",
+    "createdAt" : "2023-05-04T14:51:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Empty extra message in Pose Graph DB",
+    "createdAt" : "2023-05-06T16:49:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "Limit CT-ICP pose interpolation to a fixed rate",
+    "createdAt" : "2023-05-11T21:16:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 183,
+    "title" : "Fix ICP sample indices after initialization",
+    "createdAt" : "2023-05-11T21:28:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 186,
+    "title" : "System Crashes on Teach Exit if no Vertices are Taught",
+    "createdAt" : "2023-05-18T23:54:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "MPC Keeps Driving on Odometry Failure",
+    "createdAt" : "2023-07-17T16:28:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "Tried to load /home/docker/ASRL/vtr3/models/sample_model.pt",
+    "createdAt" : "2023-09-25T08:54:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Planner Crashes if Repeat is less than 5 vertices long",
+    "createdAt" : "2023-11-14T21:17:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Upgraded CUDA Support in CMake",
+    "createdAt" : "2023-12-12T21:20:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Add Ouster Mode to receive images instead of PointCloud as input",
+    "createdAt" : "2024-01-23T15:17:12Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 208,
+    "title" : "Sort Pose Graph Selection By Date",
+    "createdAt" : "2024-03-15T17:04:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Test and Debug MEL",
+    "createdAt" : "2024-04-04T14:23:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 213,
+    "title" : "Pose Graph Relaxation for Visulization Fails on Init",
+    "createdAt" : "2024-04-22T21:41:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "MPC Extrapolation Crashes in Offline Runs",
+    "createdAt" : "2024-05-01T01:00:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Route Planning Fails for Duplicated Vertex",
+    "createdAt" : "2024-05-01T15:32:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Improve End of Path Behaviour",
+    "createdAt" : "2024-05-02T12:35:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Z-Selection in the UI",
+    "createdAt" : "2025-04-18T11:41:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 235,
+    "title" : "Modify GitHub Actions",
+    "createdAt" : "2025-05-06T15:30:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "lidar model cannot run",
+    "createdAt" : "2025-06-07T03:44:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 243,
+    "title" : "Update ROS install in Dockerfile",
+    "createdAt" : "2025-07-24T16:10:20Z",
+    "state" : "OPEN"
+  } ]
+}

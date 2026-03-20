@@ -1,0 +1,632 @@
+{
+  "repoOwner" : "ROCm",
+  "repoName" : "omnitrace",
+  "forks" : [ {
+    "createdAt" : "2022-05-24T16:51:30Z"
+  }, {
+    "createdAt" : "2022-07-27T02:25:25Z"
+  }, {
+    "createdAt" : "2022-07-28T19:30:49Z"
+  }, {
+    "createdAt" : "2022-08-04T12:53:49Z"
+  }, {
+    "createdAt" : "2022-08-16T23:11:37Z"
+  }, {
+    "createdAt" : "2022-11-10T11:04:20Z"
+  }, {
+    "createdAt" : "2022-11-10T19:44:32Z"
+  }, {
+    "createdAt" : "2023-03-03T00:43:31Z"
+  }, {
+    "createdAt" : "2023-07-29T23:35:55Z"
+  }, {
+    "createdAt" : "2023-08-17T17:40:06Z"
+  }, {
+    "createdAt" : "2023-09-13T15:42:47Z"
+  }, {
+    "createdAt" : "2023-09-14T03:46:55Z"
+  }, {
+    "createdAt" : "2023-12-13T00:45:47Z"
+  }, {
+    "createdAt" : "2024-03-16T18:15:50Z"
+  }, {
+    "createdAt" : "2024-03-20T19:26:08Z"
+  }, {
+    "createdAt" : "2024-06-05T18:49:50Z"
+  }, {
+    "createdAt" : "2024-06-06T10:33:27Z"
+  }, {
+    "createdAt" : "2024-06-12T07:03:43Z"
+  }, {
+    "createdAt" : "2024-06-18T19:52:34Z"
+  }, {
+    "createdAt" : "2024-07-10T07:02:44Z"
+  }, {
+    "createdAt" : "2024-07-21T16:01:31Z"
+  }, {
+    "createdAt" : "2024-07-29T21:27:40Z"
+  }, {
+    "createdAt" : "2024-09-09T20:03:11Z"
+  }, {
+    "createdAt" : "2024-09-24T17:33:49Z"
+  }, {
+    "createdAt" : "2024-10-11T01:45:00Z"
+  }, {
+    "createdAt" : "2024-10-12T17:39:49Z"
+  }, {
+    "createdAt" : "2025-01-16T08:56:42Z"
+  }, {
+    "createdAt" : "2025-08-07T11:20:41Z"
+  } ],
+  "issues" : [ {
+    "number" : 17,
+    "title" : "PYTHONPATH not exported properly in setup-env.sh",
+    "createdAt" : "2022-06-01T18:38:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Category regex not working in omnitrace-avail",
+    "createdAt" : "2022-06-01T18:41:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Enabling OMPT sometimes requires setting OMP_TOOL_LIBRARIES",
+    "createdAt" : "2022-06-01T19:04:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Missing perfetto counter track names ",
+    "createdAt" : "2022-06-06T01:49:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Loop instrumentation option does not appear to be instrumenting loops",
+    "createdAt" : "2022-06-06T01:52:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "omnitrace-python has inconsistent options vs omnitrace exe",
+    "createdAt" : "2022-06-06T01:59:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Reformulate TRACE_COUNTER names for readability",
+    "createdAt" : "2022-06-06T20:40:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Unknown setting 'OMNITRACE_SAMPLING_KEEP_DYNINST_SUFFIX' (value = 'OFF')",
+    "createdAt" : "2022-06-13T18:56:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Any way to configure width of Timemory output?",
+    "createdAt" : "2022-06-13T19:10:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Feature request: Capturing MPI call parameters in MPIP interceptor",
+    "createdAt" : "2022-06-13T19:41:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Unclear how/if OMNITRACE_PERFETTO_COMBINE_TRACES works",
+    "createdAt" : "2022-06-13T19:59:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Rename OMNITRACE_ROCM_SMI_DEVICES option",
+    "createdAt" : "2022-06-14T17:38:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "excluded-instr output identical to available-instr output",
+    "createdAt" : "2022-06-17T18:41:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Deprecate OMNITRACE_USE_THREAD_SAMPLING setting",
+    "createdAt" : "2022-06-22T23:05:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Empty OMNITRACE_CONFIG_FILE in config file causes config file to not be read",
+    "createdAt" : "2022-07-11T21:37:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Generated omnitrace config file disables reading config and parsing environment",
+    "createdAt" : "2022-07-11T21:40:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Segfault instrumenting Cray MPI w/ v1.2.0",
+    "createdAt" : "2022-07-18T13:44:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : " Segfault printing available for libfabric on Crusher w/ v1.2.0",
+    "createdAt" : "2022-07-18T13:50:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Can't instrument libfabric on Crusher",
+    "createdAt" : "2022-07-18T13:57:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Perfetto Flow Events for Stream/Device Synchronize",
+    "createdAt" : "2022-07-21T18:15:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 100,
+    "title" : "Support writing OTF2 and/or CTF files",
+    "createdAt" : "2022-07-21T18:48:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 106,
+    "title" : "omnitrace-avail --advanced option for settings",
+    "createdAt" : "2022-07-22T17:59:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Compile error building v1.3.0 on Crusher",
+    "createdAt" : "2022-07-28T14:29:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Issues with job execution due to  DYNINST_API_RT using OMNITRACE_BUILD_DYNINST=ON",
+    "createdAt" : "2022-07-28T16:33:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "CMAKE_INSTALL_RPATH_USE_LINK_PATH does not play well with \"set(CMAKE_INSTALL_RPATH\" commands in Packages.cmake ",
+    "createdAt" : "2022-07-29T20:16:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "common::join with char delimiter doesn't print properly",
+    "createdAt" : "2022-08-07T22:12:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "Runtime instrumentation's defaults do not seem to match binary re-write's",
+    "createdAt" : "2022-08-31T17:02:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 145,
+    "title" : "Segfault in dyninst when instrumenting boost",
+    "createdAt" : "2022-08-31T17:21:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Deadlock in PIConGPU when instrumenting locks",
+    "createdAt" : "2022-08-31T17:32:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Dyninst trap issue redux",
+    "createdAt" : "2022-08-31T17:39:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 148,
+    "title" : "Libtbb not found",
+    "createdAt" : "2022-09-01T18:11:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "New bash versions don't like current setup-env.sh",
+    "createdAt" : "2022-09-07T14:28:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Missing path in modulefile?",
+    "createdAt" : "2022-09-07T23:11:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Log GPU info whenever rocm is activated",
+    "createdAt" : "2022-09-12T23:25:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Log OpenMP runtime version when OMPT is activated",
+    "createdAt" : "2022-09-12T23:27:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Improve Dyninst Error Handling",
+    "createdAt" : "2022-09-12T23:38:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Segfault after instrumentation phase",
+    "createdAt" : "2022-09-13T15:31:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "module file: no environment variable with absolute install path",
+    "createdAt" : "2022-09-16T08:25:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "Hang on collecting GRBM_GUI_ACTIVE in LAMMPS",
+    "createdAt" : "2022-09-21T20:25:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 166,
+    "title" : "build error in spack",
+    "createdAt" : "2022-09-22T00:27:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Omnitrace hangs during post-processing",
+    "createdAt" : "2022-09-28T21:07:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "omnitrace-sample will recursively preload on system call",
+    "createdAt" : "2022-10-06T18:52:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Question: how to avoid hang during library instrumentation",
+    "createdAt" : "2022-10-14T18:10:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "Multiple perfetto debug annotations of args with same type not handled",
+    "createdAt" : "2022-10-21T05:15:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "Add option to disable debug args in perfetto",
+    "createdAt" : "2022-10-25T19:53:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "Intermediate sampling flushing",
+    "createdAt" : "2022-10-25T19:55:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "Build from release tarball fails",
+    "createdAt" : "2022-11-02T19:23:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Omnitrace 1.7: error out when data workers are used to async move minibatches from host->dev",
+    "createdAt" : "2022-11-04T15:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Omnitrace v1.7.2 with ROCm 5.3.0 rocprofiler_iterate_info issue",
+    "createdAt" : "2022-11-09T17:21:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Feature: capture stack traces of API tracing",
+    "createdAt" : "2022-11-10T09:01:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 199,
+    "title" : "RFC: Add option to instrument functions with specific calls in them",
+    "createdAt" : "2022-11-10T09:12:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 200,
+    "title" : "Feature: Incremental rewriting",
+    "createdAt" : "2022-11-10T09:25:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 207,
+    "title" : "Can't control trace time window with --wait and --duration",
+    "createdAt" : "2022-11-16T12:53:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Show separate traces for different GPUs",
+    "createdAt" : "2022-11-16T13:00:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 210,
+    "title" : "Missing CPU HW counters in perfetto traces",
+    "createdAt" : "2022-11-16T21:16:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Build failure with rocm 5.3.1 and greater",
+    "createdAt" : "2022-11-18T10:48:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "HSA operations (fill, copy) show incorrect perfetto flows",
+    "createdAt" : "2022-11-18T11:19:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Installation question",
+    "createdAt" : "2022-11-22T09:24:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Failed to stop timer : Unknown error",
+    "createdAt" : "2022-11-28T17:35:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 219,
+    "title" : "DYNINST_BUILD_BOOST: build fails to start with ninja",
+    "createdAt" : "2022-11-29T13:51:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 220,
+    "title" : "Segmentation fault sampling without instrumentation python app. ",
+    "createdAt" : "2022-11-29T21:49:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Support global tracing delay and duration",
+    "createdAt" : "2022-12-17T03:19:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Measuring the latency of coherent memory traffic or memcpy memory traffic",
+    "createdAt" : "2023-01-02T17:29:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 230,
+    "title" : "Rename OMNITRACE_USE_PERFETTO to OMNITRACE_TRACE",
+    "createdAt" : "2023-01-18T17:17:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 231,
+    "title" : "Rename OMNITRACE_USE_TIMEMORY to OMNITRACE_PROFILE",
+    "createdAt" : "2023-01-18T17:19:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 232,
+    "title" : "Segmentation fault if no command specified",
+    "createdAt" : "2023-01-23T14:27:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Bad metric 'L2CacheHit', var 'TCC_HIT[0]' is not found when running `omnitrace-avail -G omnitrace.cfg --all`",
+    "createdAt" : "2023-02-01T02:08:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "omnitrace needs dyninst-12.0.0 or higher",
+    "createdAt" : "2023-02-01T21:15:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Binary analysis cache",
+    "createdAt" : "2023-02-08T18:49:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 244,
+    "title" : "Command line multi-value passing style is not clear from help",
+    "createdAt" : "2023-02-10T14:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 245,
+    "title" : "Segmentation fault when using `omnitrace` for generating instrumented binary",
+    "createdAt" : "2023-02-14T15:51:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Allow using external elfutils",
+    "createdAt" : "2023-03-03T00:58:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 259,
+    "title" : "Segfault when OMNITRACE_USE_ROCTX is true",
+    "createdAt" : "2023-03-17T03:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 266,
+    "title" : "Problem with flow event",
+    "createdAt" : "2023-03-22T19:35:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "GPU HW counter metrics broken in ROCm 5.4",
+    "createdAt" : "2023-03-29T05:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "feature request - Energy profiling",
+    "createdAt" : "2023-04-03T13:25:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 275,
+    "title" : "Feature request: Move GPU trace closer to HIP+CPU activity",
+    "createdAt" : "2023-04-03T23:00:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "omnitrace user API",
+    "createdAt" : "2023-04-20T13:34:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 278,
+    "title" : "Percentiles and other statistics besides mean, min, max for flat profiles",
+    "createdAt" : "2023-04-26T03:27:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 280,
+    "title" : "OpenMP offloading",
+    "createdAt" : "2023-05-08T20:01:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 281,
+    "title" : "`omnitrace-avail` fails on ROCM 5.3 and RX 6800XT",
+    "createdAt" : "2023-05-21T22:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 284,
+    "title" : "Omnitrace hangs and prints errors while running STEMDL/stdfc with more than 1 GPU",
+    "createdAt" : "2023-06-15T13:28:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 303,
+    "title" : "Update Dyninst submodule",
+    "createdAt" : "2023-08-30T23:13:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 304,
+    "title" : "Segmentation fault in multi-threaded code",
+    "createdAt" : "2023-09-06T10:51:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "omnitrace hangs before hostCallback function",
+    "createdAt" : "2023-09-21T18:24:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 308,
+    "title" : "Segmentation fault in sampling multi-processing code",
+    "createdAt" : "2023-09-22T21:12:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 310,
+    "title" : "Missing Information for some Memory Operations (host to device or device to host)",
+    "createdAt" : "2023-10-02T15:17:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 311,
+    "title" : "Slice has duration of \"Did not end.\"",
+    "createdAt" : "2023-10-02T15:22:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Missing GPU kernels when using @profile and -b flag",
+    "createdAt" : "2023-10-02T15:30:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 315,
+    "title" : "Still an issue related to \"Segmentation fault in multi-threaded code\"",
+    "createdAt" : "2023-11-17T16:39:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 316,
+    "title" : "Issues with Python support",
+    "createdAt" : "2023-11-28T04:45:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Inaccurate device counter trace ",
+    "createdAt" : "2023-11-29T10:40:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 321,
+    "title" : "ROCm 6.0",
+    "createdAt" : "2023-12-18T09:12:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 329,
+    "title" : "Omnitrace hangs with omnitrace-instrument",
+    "createdAt" : "2024-01-18T19:42:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "omnitrace-python errors with OMNITRACE_USE_ROCM_SMI = true ",
+    "createdAt" : "2024-01-24T23:29:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 332,
+    "title" : "omnitrace-avail fails with GFXIP is not supported(gfx90c)",
+    "createdAt" : "2024-02-22T16:45:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Enabling Detailed Profiling of Graph Nodes in OmniTrace",
+    "createdAt" : "2024-04-09T04:24:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 336,
+    "title" : "torch.cuda.is_available() aborts after module loading omnitrace",
+    "createdAt" : "2024-04-10T09:54:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 340,
+    "title" : "Visualizing profiling results for multi-GPUs",
+    "createdAt" : "2024-05-05T12:32:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "[Documentation]: Fix User API Example",
+    "createdAt" : "2024-05-07T14:52:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 342,
+    "title" : "[Issue]: omnitrace-python gives a TypeError Exception on PyTorch script.",
+    "createdAt" : "2024-06-03T19:39:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "[Issue]: No GPU Hardware Counters Available ROCm 6.1.2",
+    "createdAt" : "2024-06-15T22:55:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 357,
+    "title" : "[Feature]: Add ability to disable and enable categories at runtime",
+    "createdAt" : "2024-07-02T19:11:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Can I use Omnitrace without ROCm just for CPU profiling?",
+    "createdAt" : "2024-07-10T19:13:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 372,
+    "title" : "[Documentation]: Fix link",
+    "createdAt" : "2024-08-20T07:39:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "[Issue]: Mode based index may not be properly configured",
+    "createdAt" : "2024-10-05T05:44:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 407,
+    "title" : "[Feature]: Adjust CI to include quick start installer script",
+    "createdAt" : "2024-10-15T14:28:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 421,
+    "title" : "[Issue]: Compilation error related to Dyninst 13.0.0",
+    "createdAt" : "2024-12-04T07:34:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 422,
+    "title" : "[Issue]: Proto file causes error in ui.perfetto.dev",
+    "createdAt" : "2024-12-04T17:03:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 426,
+    "title" : "[Issue]: Omnitrace not instrumenting MPI calls (Fortran)",
+    "createdAt" : "2024-12-10T14:52:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 428,
+    "title" : "[Issue]: Not seeing GPU sampling values (busy, power, temp, etc.) with high GPU counts",
+    "createdAt" : "2024-12-20T10:03:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 434,
+    "title" : "[Issue]: No rocm-smi sampling and no additional OpenMP threads.",
+    "createdAt" : "2025-01-17T08:18:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 455,
+    "title" : "[Issue]: Unable to Use torchrun -m omnitrace on rocm6.4 rhel 9.1 using torchrun",
+    "createdAt" : "2025-08-28T20:22:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 473,
+    "title" : "is ominitrace supported on ubuntu 24.04 LTS (Noble Numbat)",
+    "createdAt" : "2026-01-20T05:37:59Z",
+    "state" : "CLOSED"
+  } ]
+}

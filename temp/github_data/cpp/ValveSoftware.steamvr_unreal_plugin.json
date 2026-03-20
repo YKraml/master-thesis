@@ -1,0 +1,1036 @@
+{
+  "repoOwner" : "ValveSoftware",
+  "repoName" : "steamvr_unreal_plugin",
+  "forks" : [ {
+    "createdAt" : "2019-04-14T02:36:57Z"
+  }, {
+    "createdAt" : "2019-04-16T22:50:38Z"
+  }, {
+    "createdAt" : "2019-05-09T17:38:07Z"
+  }, {
+    "createdAt" : "2019-05-14T22:55:37Z"
+  }, {
+    "createdAt" : "2019-05-16T08:56:00Z"
+  }, {
+    "createdAt" : "2019-07-05T05:24:21Z"
+  }, {
+    "createdAt" : "2019-07-07T15:56:13Z"
+  }, {
+    "createdAt" : "2019-07-12T06:21:20Z"
+  }, {
+    "createdAt" : "2019-08-18T13:40:09Z"
+  }, {
+    "createdAt" : "2019-09-16T05:56:40Z"
+  }, {
+    "createdAt" : "2019-10-05T06:07:46Z"
+  }, {
+    "createdAt" : "2020-02-10T01:52:24Z"
+  }, {
+    "createdAt" : "2020-03-06T03:07:39Z"
+  }, {
+    "createdAt" : "2020-10-17T17:51:55Z"
+  }, {
+    "createdAt" : "2020-11-07T17:43:00Z"
+  }, {
+    "createdAt" : "2020-12-31T15:16:21Z"
+  }, {
+    "createdAt" : "2020-12-31T15:16:21Z"
+  }, {
+    "createdAt" : "2021-03-27T04:43:19Z"
+  }, {
+    "createdAt" : "2021-11-10T01:00:50Z"
+  }, {
+    "createdAt" : "2021-12-17T02:22:58Z"
+  }, {
+    "createdAt" : "2022-06-10T08:56:08Z"
+  }, {
+    "createdAt" : "2022-11-24T08:25:22Z"
+  }, {
+    "createdAt" : "2023-02-16T03:55:32Z"
+  }, {
+    "createdAt" : "2023-03-20T06:45:17Z"
+  }, {
+    "createdAt" : "2024-02-20T17:37:33Z"
+  }, {
+    "createdAt" : "2024-07-18T15:36:25Z"
+  }, {
+    "createdAt" : "2025-04-04T21:20:05Z"
+  }, {
+    "createdAt" : "2025-07-31T22:00:18Z"
+  }, {
+    "createdAt" : "2025-11-16T20:41:54Z"
+  }, {
+    "createdAt" : "2025-12-08T15:12:46Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Crashes when SteamVR shuts down during editor use",
+    "createdAt" : "2019-04-12T18:10:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "FSteamVRInputDevice::GetControllerOrientationAndPosition doesn't take into account XRSystem's BaseOrientation/BasePosition",
+    "createdAt" : "2019-04-13T07:42:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Unable to init SteamVR runtime when connected to Oculus Rift",
+    "createdAt" : "2019-04-15T04:45:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "When cooking for the PC we get a number of SteamVRInput warnings",
+    "createdAt" : "2019-04-18T20:19:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Ensure plugin builds in mono & non-monolithic builds",
+    "createdAt" : "2019-04-18T22:07:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Expose BP Nodes & CPP API for GetOriginLocalizedName and ShowActionOrigins",
+    "createdAt" : "2019-04-18T22:09:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Throw an error in UELOG when we don’t see pose / skeleton actions for the controllers",
+    "createdAt" : "2019-04-18T22:10:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "When cooking a pc build with the existence of restricted folder names having the the steamvr plugin will cause a staging error",
+    "createdAt" : "2019-04-19T00:59:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Best practice for replication?",
+    "createdAt" : "2019-04-19T12:23:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Vive Trackpad Touch Bindings (UE4 Side) become Press/Click bindings (SteamVR Input Side)",
+    "createdAt" : "2019-04-23T18:40:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Buttons that are mapped to an axis action are set to \"force\" instead of \"scalar_constant\"",
+    "createdAt" : "2019-04-24T22:22:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "SteamVREditor.Build.cs has warnings when GenerateProjectFiles.bat is run",
+    "createdAt" : "2019-04-24T22:23:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Fix sample content warnings in higher versions of the engine (1M Cube, Deprecation warnings in Template)",
+    "createdAt" : "2019-04-25T19:37:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Fix error in sample content when using the Bow and Arrow",
+    "createdAt" : "2019-04-25T20:13:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Actions fire multiple times",
+    "createdAt" : "2019-04-30T03:09:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Node: Experimental node \"Get Get SteamVR Action Array\" is broken in 0.65a",
+    "createdAt" : "2019-05-01T21:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Temporary keys are stored in the DefaultInput.ini when remappings are done via the UI. This is normally fin, but in cases of major refactors in the mapping scheme, it can lead to input breakage.",
+    "createdAt" : "2019-05-01T21:27:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Expose GetOriginTrackedDeviceInfo in BP",
+    "createdAt" : "2019-05-01T23:58:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Using SteamVR Skeletal Anim Pose in packaged app cause crash",
+    "createdAt" : "2019-05-04T12:38:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Vector2 actions arent being generated for MotionControllers when setup on its own",
+    "createdAt" : "2019-05-12T22:01:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Motion Source for \"Special\" categories in higher versions of the engine, need to be updated; Check possible new revisions as well in 4.22",
+    "createdAt" : "2019-05-14T20:09:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Error: Couldn't find file for package /Script/SteamVRInputDevice requested by async loading code. NameToLoad: /Script/SteamVRInputDevice",
+    "createdAt" : "2019-05-16T20:55:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 25,
+    "title" : "Ensure support for seated position",
+    "createdAt" : "2019-05-19T21:59:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Stray Y-Axis actions when applying fix for Issue #21",
+    "createdAt" : "2019-05-21T01:01:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Integrated Haptics",
+    "createdAt" : "2019-05-21T21:08:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Perf optims for Custom Animation Nodes",
+    "createdAt" : "2019-05-21T21:10:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Improve ShowActionOrigin using ShowBindingsForActionSet call",
+    "createdAt" : "2019-05-26T20:52:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Add ShowAllSteamVR_ActionOrigins()",
+    "createdAt" : "2019-05-26T21:18:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Upgrade OpenVR to 1.4.18",
+    "createdAt" : "2019-05-26T22:01:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Add SummaryType to GetFingerCurlsAndSplays (FromAnimation, FromDevice)",
+    "createdAt" : "2019-05-26T22:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "New in 1.4.18 is GetPoseActionRelativeToNow, expose a special BP/ Node & Function to allow devs to use this. Also, provide a way to toggle live controller pose updates to this call vs the default GetPoseActionDataForNextFrame",
+    "createdAt" : "2019-05-27T01:33:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Add new Actor Component to show tracking references - SteamVR Tracking Reference ",
+    "createdAt" : "2019-05-27T05:33:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Get user IPD (Prop_UserIpdMeters_Float)",
+    "createdAt" : "2019-06-03T19:41:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Remove openvr dll in packaging",
+    "createdAt" : "2019-06-03T22:32:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "SteamVR isnt loading the Action Manifest during VR Preview",
+    "createdAt" : "2019-06-04T20:03:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Maps missing from content folder in Sample File download",
+    "createdAt" : "2019-06-08T20:10:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "No input from Knuckles EV3 on Unreal Engine 4.22.2 on Windows 64 bit.",
+    "createdAt" : "2019-06-08T21:30:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "v2 Core Features",
+    "createdAt" : "2019-06-10T19:34:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Ensure AnimInterface casts in Sample Content provide a graceful error when it fails",
+    "createdAt" : "2019-06-13T01:29:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Incorrect Tooltips for bp structs",
+    "createdAt" : "2019-06-13T04:35:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Crash when trying to add virtual bone to UE4HandSkeleton",
+    "createdAt" : "2019-06-13T12:59:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "Not possible to define a new action and edit it in the steamvr binding dashboard without giving it some key",
+    "createdAt" : "2019-06-13T21:47:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Add an event that fires when controllers are registered",
+    "createdAt" : "2019-06-13T22:00:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Add \"Both Hands\" option to Haptics Node",
+    "createdAt" : "2019-06-15T03:04:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Vive Shoulder button input not functioning ",
+    "createdAt" : "2019-06-16T15:27:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "HMD Proximity seems to not be able to be bound",
+    "createdAt" : "2019-06-20T20:30:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "4.21: Checking Controller status in packaged build results in \"VRInputError_WrongType\" input errors",
+    "createdAt" : "2019-06-25T22:15:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Motion controllers stop tracking on built project when plugin is enabled",
+    "createdAt" : "2019-06-26T05:42:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Ensure steamvr input descriptions fit in the UI",
+    "createdAt" : "2019-06-26T22:14:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Having issues getting Rift controllers to work",
+    "createdAt" : "2019-06-28T16:55:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Forward slashes in mapping names breaks manifest",
+    "createdAt" : "2019-07-03T22:37:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 54,
+    "title" : "Oculus Rift Having Issues",
+    "createdAt" : "2019-07-05T03:37:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "SteamVRInput Linux build failure",
+    "createdAt" : "2019-07-13T11:40:49Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 56,
+    "title" : "Converting To C++",
+    "createdAt" : "2019-07-13T14:13:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "cannot access private member declared in class 'UInputSettings' & 'FSteamVRInputDevice': cannot instantiate abstract class",
+    "createdAt" : "2019-07-15T18:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Expose new OpenVR 1.5.17 VRInput call GetActionBindingInfo to Blueprint",
+    "createdAt" : "2019-07-17T04:33:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "MotionSources disappearing if a custom input device silently breaks in editor.",
+    "createdAt" : "2019-07-22T22:51:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "New input nodes like \"grip strength\" always returning 0, only A button and thumbstick work, which return '[STEAMVR INTERNAL] Temporary' bindings",
+    "createdAt" : "2019-07-24T01:39:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Moving Steam VR assets to my own project",
+    "createdAt" : "2019-07-30T15:36:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Nodes \"require refresh\" upon reopening project",
+    "createdAt" : "2019-07-31T14:33:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Provide support for HTC Cosmos",
+    "createdAt" : "2019-07-31T19:27:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Regression in develop branches - Incorrect bindings path for axis mappings",
+    "createdAt" : "2019-09-04T03:40:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "Is it possible to use this plugin to get input from more than 2 Vive controllers?",
+    "createdAt" : "2019-09-10T11:59:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Some actions fail to work under Shipping build configuration",
+    "createdAt" : "2019-09-11T06:02:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Root bone of VR glove has a scale of 100?",
+    "createdAt" : "2019-09-23T22:44:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Input doesn't work when you export the project with the plugin",
+    "createdAt" : "2019-09-25T03:53:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Migration from 4.22 to 4.23 and Input Events are no longer firing anymore on Packaged Shipping Build",
+    "createdAt" : "2019-09-26T19:39:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Switch out vr gloves for custom mesh and rig",
+    "createdAt" : "2019-09-30T20:48:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Lost MotionController tracking and finger splays/curls with latest update",
+    "createdAt" : "2019-10-03T14:08:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "4.22 and SteamVR 1.7.15",
+    "createdAt" : "2019-10-06T04:12:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Axis input value from Thumbsticks and Trackpads always zero",
+    "createdAt" : "2019-10-07T20:48:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "controller bindings not being added in the steamvraction manifest during first attempt at generating the action manifest",
+    "createdAt" : "2019-10-08T23:31:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "input binding editor \"mirror mode\" fails to mirror Oculus Touch X/Y (left hand) vs A/B (right hand) buttons",
+    "createdAt" : "2019-10-15T09:30:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 77,
+    "title" : "Scaling the Root Component of the Player During Runtime causes the hands to track to the original location instead of the scaled location",
+    "createdAt" : "2019-10-16T21:25:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Manual binding doesn't work with Valve Index for Ue4.22",
+    "createdAt" : "2019-10-18T20:48:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Issue with motion controller position on fresh build",
+    "createdAt" : "2019-10-21T09:59:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "Filter Input Device for a Treadmill Controller",
+    "createdAt" : "2019-10-23T14:50:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 81,
+    "title" : "Remove grab modes for Cosmos as they are not supported",
+    "createdAt" : "2019-11-01T23:02:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Hide and dynamically generate temporary action keys",
+    "createdAt" : "2019-11-01T23:03:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Fix possible race condition with GWorld for older engine versions",
+    "createdAt" : "2019-11-01T23:04:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Fix issue where tracking gets lost when Oculus plugin is enabled.",
+    "createdAt" : "2019-11-01T23:05:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Input.ini is still not properly managed in shipping configuration",
+    "createdAt" : "2019-11-05T23:18:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "UE 4.23.1 Inputs doesn't work when Packaged",
+    "createdAt" : "2019-11-07T12:17:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Upgrade to OpenVR 1.8.19",
+    "createdAt" : "2019-11-07T16:43:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 88,
+    "title" : "Expose OpenBindingsUI call to BP",
+    "createdAt" : "2019-11-07T16:44:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "UE 4.23.1 Vive Trackers not working with the plugin enabled",
+    "createdAt" : "2019-11-08T11:47:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Strange rotation snapping when moving controllers around with plugin active",
+    "createdAt" : "2019-11-10T04:19:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 91,
+    "title" : "Noisy logs during play",
+    "createdAt" : "2019-11-12T00:57:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 92,
+    "title" : "Oculus Rift S no longer detected/working",
+    "createdAt" : "2019-11-12T18:27:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Issue on Shipped Game",
+    "createdAt" : "2019-11-17T22:24:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 94,
+    "title" : "UE 4.23.1 Build, SteamVR says Waiting and not works (Vive)",
+    "createdAt" : "2019-11-20T11:06:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Input.ini Gets Modified Every Time The Project Is Reloaded",
+    "createdAt" : "2019-11-22T04:01:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Further Development",
+    "createdAt" : "2019-12-02T12:26:40Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 97,
+    "title" : "How can I find out which controllers a player with HTC is using? Knuckles or not?",
+    "createdAt" : "2019-12-03T16:05:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 98,
+    "title" : "Generic Input Mappings don't fire in BPs",
+    "createdAt" : "2019-12-05T17:35:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "4.24 ?",
+    "createdAt" : "2019-12-10T13:23:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "UE4.24: Index Trackpad Touch vs Click",
+    "createdAt" : "2019-12-15T19:19:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 101,
+    "title" : "Launching VR editor and clicking 'No All' on bindings prompt still writes to bindings",
+    "createdAt" : "2019-12-17T20:50:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 102,
+    "title" : "Thumbstick d-pad bindings default to \"sub_mode\": click",
+    "createdAt" : "2019-12-17T21:24:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Example Hand Model",
+    "createdAt" : "2019-12-20T09:16:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "UE 4.24: MotionController Component not tracking Vive Trackers",
+    "createdAt" : "2019-12-26T04:49:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 105,
+    "title" : "VRTemplate Teleport Rotation Race Condition.",
+    "createdAt" : "2019-12-29T02:02:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Launching with -nohmd still launches steamvr when starting the editor",
+    "createdAt" : "2020-01-03T19:04:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "No way to map Index thumbstick positions to axis bindings",
+    "createdAt" : "2020-01-04T17:37:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "4.24 MotionController not tracked in new project",
+    "createdAt" : "2020-01-09T19:25:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "How can i manual setup 4.24 vision plugin?",
+    "createdAt" : "2020-01-10T01:15:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "SteamVR Nodes dissapearing when reloading project",
+    "createdAt" : "2020-01-16T15:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "4.24.1 UE4 VR Template no Vive controller tracking",
+    "createdAt" : "2020-01-16T23:45:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 113,
+    "title" : "Path handling of action bindings not working correctly",
+    "createdAt" : "2020-01-23T09:40:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Trackpad face buttons axis mappings",
+    "createdAt" : "2020-01-23T12:56:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 115,
+    "title" : "\"Trackpad Touch\" as Axis in UE4.24 Hotfix 2 requires Press",
+    "createdAt" : "2020-01-30T18:20:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Key pressed events keep coming even when the controller is off in 4.24.2",
+    "createdAt" : "2020-01-30T22:19:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "Axis values are not -1 to 1",
+    "createdAt" : "2020-02-01T23:35:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Valve Index not working in VR Editor Mode",
+    "createdAt" : "2020-02-07T14:56:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 119,
+    "title" : "Hello, some help or guide on how to generate the .json files for trackers would be appreciated... So far no luck:",
+    "createdAt" : "2020-02-11T18:47:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "I'm running into a problem with UE 4 vr gloves joints. Can I use the joints for the left and right gloves? In the default there is only a right glove that's mirrored. Do I have to mirror the glove? If don't have to, than how should I orient the joints?",
+    "createdAt" : "2020-02-12T17:24:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Index Controller Crashes",
+    "createdAt" : "2020-02-17T08:38:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Oculus Touch and Vive Cosmos motion controllers are translated incorrectly under UE4.24",
+    "createdAt" : "2020-02-18T16:26:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 123,
+    "title" : "Steam VR not picking up controller bindings",
+    "createdAt" : "2020-02-24T18:03:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Steam VR Hands Misaligned",
+    "createdAt" : "2020-02-25T12:01:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 125,
+    "title" : "Steam Chaperone Compile Error",
+    "createdAt" : "2020-02-25T13:42:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 126,
+    "title" : "Vive Trackers: UE4 and SteamVR fail to link",
+    "createdAt" : "2020-02-26T11:13:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 127,
+    "title" : "Oculus Quest Link not working?",
+    "createdAt" : "2020-02-29T11:54:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Issue with packaging using custom build",
+    "createdAt" : "2020-03-04T06:50:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 129,
+    "title" : "Using \"Find Steam VR Origin Tracked Device Info\" with Vive Pro controllers returns \"Other\"?",
+    "createdAt" : "2020-03-04T10:45:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 130,
+    "title" : "I have managed to get this working with the latest hotfix. However, I have a question about how it is implemented.",
+    "createdAt" : "2020-03-09T21:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 131,
+    "title" : "Oculus Touch bindings not showing up",
+    "createdAt" : "2020-03-17T13:47:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "WMR.json? Bindings?",
+    "createdAt" : "2020-03-19T01:15:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 133,
+    "title" : "UE 4.24.3 New project VR Template - Vive controller does not track",
+    "createdAt" : "2020-03-19T13:08:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "UE 4.23 Teleport sowing sphere instead of path",
+    "createdAt" : "2020-03-22T18:28:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 135,
+    "title" : "Can't Access Dashboard (for project)",
+    "createdAt" : "2020-03-27T15:01:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 136,
+    "title" : "Oculus Touch not tracking in Editor, but works on builds",
+    "createdAt" : "2020-04-06T19:36:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "UE4 Default Mannequin Left Hand not working properly",
+    "createdAt" : "2020-04-06T19:54:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 138,
+    "title" : "Failed to Load SteamVR Inpu Anim Pose Node in BP",
+    "createdAt" : "2020-04-06T22:37:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 139,
+    "title" : "4.24 SteamVR Motion Controller Material",
+    "createdAt" : "2020-04-12T16:57:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "4.24 - can't remove joystick click parameter from default binding on index knuckles",
+    "createdAt" : "2020-04-13T20:26:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 141,
+    "title" : "Base Station Visualization and General Tracking Questions",
+    "createdAt" : "2020-04-22T05:05:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 142,
+    "title" : "Unable to Use Valve Index Thumbstick Bindings",
+    "createdAt" : "2020-04-30T22:18:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Main Game Actions Not Listing in SteamVR Browser Dashboard",
+    "createdAt" : "2020-05-08T19:01:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 144,
+    "title" : "On steamvr tracking initialization event",
+    "createdAt" : "2020-05-12T09:19:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 145,
+    "title" : "Please Help! Bindings not working in Packaged build",
+    "createdAt" : "2020-05-28T09:09:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 146,
+    "title" : "Having OculusSDK and SteamVR both enabled together",
+    "createdAt" : "2020-06-06T17:54:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Cosmos Bindings Missing? 4.24.3",
+    "createdAt" : "2020-06-08T18:49:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Launching with -nohmd still launches SteamVR input (UE 4.21)",
+    "createdAt" : "2020-06-09T20:32:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 149,
+    "title" : "4.25.0/.1 - PIE & game crash when using knuckles controllers",
+    "createdAt" : "2020-06-12T02:06:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 150,
+    "title" : "Eye Level Tracking not working in UE4.24",
+    "createdAt" : "2020-06-13T03:55:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 151,
+    "title" : "No hand animation when using Launch game",
+    "createdAt" : "2020-06-17T07:02:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 152,
+    "title" : "X and Y touch events for the Oculus Touch controller are mapped as clicks in steam",
+    "createdAt" : "2020-06-18T04:49:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 153,
+    "title" : "Getting Trigger Event from Tracker Pogo Pin",
+    "createdAt" : "2020-07-01T20:12:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 154,
+    "title" : "trying to find out why toolbar won't show up in 4.25",
+    "createdAt" : "2020-07-02T18:31:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 155,
+    "title" : "Is it possible to listen to SteamVR Actions?",
+    "createdAt" : "2020-07-28T13:00:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Tracker role not working with certain action path",
+    "createdAt" : "2020-08-13T10:09:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "SteamVR \"Always\" launches with UE4.24.3 without -vr steamworks arg. or enable hmd if Plugin enabled in project",
+    "createdAt" : "2020-08-14T03:17:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 158,
+    "title" : "Hi @uno1982 - I need to understand the actual issue and do my own root cause analysis. So far I've been unable to replicate it at least with vanilla ue. And no, in 4.24 closing steamvr beta without an hmd doesnt crash or close the editor from my end.",
+    "createdAt" : "2020-08-14T22:05:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 159,
+    "title" : "4.22.3 During the production of multi-content using engine code, questions arose regarding index controllers.",
+    "createdAt" : "2020-09-02T08:54:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 160,
+    "title" : "How do i uninstall SteamVrInput",
+    "createdAt" : "2020-09-14T10:59:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 161,
+    "title" : "\"bTracked\" member on MotionControllerComponent is allways true",
+    "createdAt" : "2020-09-29T15:44:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "SteamVR Hand skeleton in UE4",
+    "createdAt" : "2020-09-30T08:26:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 163,
+    "title" : "Input issues on UE 4.25",
+    "createdAt" : "2020-10-23T22:24:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 164,
+    "title" : "How to use with UE mannequin left hand?",
+    "createdAt" : "2020-11-02T23:32:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 165,
+    "title" : "What approach for left handed people?",
+    "createdAt" : "2020-11-03T17:18:03Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 166,
+    "title" : "Where is SteamVR Input Toolbar in 4.25+",
+    "createdAt" : "2020-11-05T16:12:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "How to include correct manifest when packaging....",
+    "createdAt" : "2020-11-06T19:49:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 168,
+    "title" : "Updating end users input.ini file",
+    "createdAt" : "2020-11-09T09:31:35Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 169,
+    "title" : "Using the same action for both hands",
+    "createdAt" : "2020-11-16T15:48:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 170,
+    "title" : "Add action_sets",
+    "createdAt" : "2020-11-18T09:44:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 171,
+    "title" : "Input in VR template does not seem to work when packaged (4.25, Valve Index)",
+    "createdAt" : "2020-11-30T16:11:44Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 172,
+    "title" : "Button press calls actions multiple times (UE 4.25)",
+    "createdAt" : "2020-12-12T17:50:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 173,
+    "title" : "A way to test UE4 and vive tracker/Steam connection?",
+    "createdAt" : "2020-12-15T01:41:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 175,
+    "title" : "SteamVR loading resources after level change",
+    "createdAt" : "2021-01-03T01:52:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 176,
+    "title" : "Why is there no analog value from thumbstick on the index?",
+    "createdAt" : "2021-01-13T17:03:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 177,
+    "title" : "Getting the SteamVR Device ID from the device role",
+    "createdAt" : "2021-01-17T15:33:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 178,
+    "title" : "4.25.4 Controller inputs not firing in packaged build",
+    "createdAt" : "2021-01-25T18:53:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 179,
+    "title" : "4.26 with a setup including the Index (with two Knuckles) and 3 Vive trackers set to Left Foot, Right Foot, and Waist within SteamVR controller settings.  Points of note:",
+    "createdAt" : "2021-02-16T03:00:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 180,
+    "title" : "SteamVR Nodes keep disappearing from Anim graph of Anim BP",
+    "createdAt" : "2021-03-02T20:35:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 181,
+    "title" : "Using the plugin in a multiplatform project",
+    "createdAt" : "2021-03-06T18:40:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 182,
+    "title" : "[4.25] Controller material \"M_DefaultDevice\" loses textures in packaged game",
+    "createdAt" : "2021-03-22T11:51:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 183,
+    "title" : "[Question] Game pose updating",
+    "createdAt" : "2021-03-24T16:58:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 184,
+    "title" : "Callstack corruption in FSteamVRInputDevice::ProcessActionEvents(...)",
+    "createdAt" : "2021-04-27T03:27:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 185,
+    "title" : "4.22 UE4 ,Valve Index make my game error.",
+    "createdAt" : "2021-04-27T07:45:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Any input that is not registered on dashboard not firing in UE4",
+    "createdAt" : "2021-05-10T17:12:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 187,
+    "title" : "No tracking in Development build",
+    "createdAt" : "2021-05-18T17:37:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 188,
+    "title" : "Support for projected camera passthrough",
+    "createdAt" : "2021-05-27T20:02:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 189,
+    "title" : "UE 4.26 | MoveLeft_X also fires MoveRight_X Event",
+    "createdAt" : "2021-07-02T14:46:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Oculus Quest has a delay on the grip buttons",
+    "createdAt" : "2021-08-04T14:18:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 191,
+    "title" : "How can I add a new action mapping item whick likes demo ValveIndex_Left_Trackpad_Click in UE427",
+    "createdAt" : "2021-10-29T11:34:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "Grip input not working suddenly. Seems to be an issue with \"Mismatched Action Manifest\" [UE 4.25]",
+    "createdAt" : "2022-01-23T23:43:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 193,
+    "title" : "SteamVR animation blueprint node disappearing when assigned trough c++",
+    "createdAt" : "2022-05-02T00:19:57Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 194,
+    "title" : "Unable to rebuild project after extracting plugin files in PATH/TO/PROJECT/Plugins",
+    "createdAt" : "2022-05-24T19:52:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 195,
+    "title" : "Errors when rebuilding plugin to 4.26",
+    "createdAt" : "2022-09-11T15:55:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "I get this error when I try to play my unreal packaged build with my oculus in SteamVR",
+    "createdAt" : "2022-11-01T18:40:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 197,
+    "title" : "Axis binding SteamVr ",
+    "createdAt" : "2022-11-21T13:30:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 198,
+    "title" : "Some build error in VS2022",
+    "createdAt" : "2023-10-11T06:56:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 199,
+    "title" : "After update game is forced into Legacy input mode instead of steamvr_input mode",
+    "createdAt" : "2023-12-16T18:35:46Z",
+    "state" : "OPEN"
+  } ]
+}

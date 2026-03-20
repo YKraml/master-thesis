@@ -1,0 +1,390 @@
+{
+  "repoOwner" : "JuanDiegoMontoya",
+  "repoName" : "Fwog",
+  "forks" : [ {
+    "createdAt" : "2022-10-11T11:07:40Z"
+  }, {
+    "createdAt" : "2022-10-28T06:15:26Z"
+  }, {
+    "createdAt" : "2022-12-11T15:19:02Z"
+  }, {
+    "createdAt" : "2022-12-12T12:14:54Z"
+  }, {
+    "createdAt" : "2023-03-17T06:08:22Z"
+  }, {
+    "createdAt" : "2023-04-08T09:41:13Z"
+  }, {
+    "createdAt" : "2023-05-12T03:22:35Z"
+  }, {
+    "createdAt" : "2024-05-31T10:54:23Z"
+  }, {
+    "createdAt" : "2024-07-25T04:05:12Z"
+  }, {
+    "createdAt" : "2024-12-07T11:06:26Z"
+  }, {
+    "createdAt" : "2025-07-07T07:48:02Z"
+  }, {
+    "createdAt" : "2025-09-02T18:47:47Z"
+  } ],
+  "issues" : [ {
+    "number" : 2,
+    "title" : "Remove stdlib includes from headers where possible ",
+    "createdAt" : "2022-06-02T21:17:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Remove fake stencil support or actually support it",
+    "createdAt" : "2022-06-02T21:27:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Remove stdlib forward declarations from Shader.h",
+    "createdAt" : "2022-06-02T21:33:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Deduplicate pipeline state",
+    "createdAt" : "2022-06-03T11:52:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Add stencil buffer example",
+    "createdAt" : "2022-06-03T11:54:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7,
+    "title" : "Dynamic graphics pipeline state",
+    "createdAt" : "2022-06-03T12:04:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Add .clang-format",
+    "createdAt" : "2022-06-03T20:29:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Add a context object, through which API calls are made",
+    "createdAt" : "2022-06-04T04:59:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Add support for indirect drawing and dispatching",
+    "createdAt" : "2022-06-04T06:21:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Add indirect draw example",
+    "createdAt" : "2022-06-04T07:26:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Debug API mode",
+    "createdAt" : "2022-06-05T10:43:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 13,
+    "title" : "Add clustered rendering to gltf loader example",
+    "createdAt" : "2022-06-05T22:57:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 14,
+    "title" : "Add CI actions to ensure the project compiles on major platforms",
+    "createdAt" : "2022-06-15T10:18:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Project does not compile on Linux/Clang platforms",
+    "createdAt" : "2022-06-15T11:37:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Simplify textures",
+    "createdAt" : "2022-06-22T11:22:31Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Buffer views",
+    "createdAt" : "2022-06-23T11:14:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 18,
+    "title" : "Remove `Create` methods and use constructors",
+    "createdAt" : "2022-06-25T06:47:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Fix buffer mapping",
+    "createdAt" : "2022-07-04T02:25:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Issue dummy draw/dispatch on pipeline compile",
+    "createdAt" : "2022-07-28T10:28:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 32,
+    "title" : "Add command for clearing textures",
+    "createdAt" : "2022-10-03T22:24:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Better way to specify clear color",
+    "createdAt" : "2022-10-03T22:28:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Beginning rendering with integer render target causes warnings on Nvidia",
+    "createdAt" : "2022-10-03T22:37:02Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 35,
+    "title" : "Mechanism to safely allow mixed raw GL calls and Fwog calls",
+    "createdAt" : "2022-10-03T22:42:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Add integer types to UploadFormat",
+    "createdAt" : "2022-10-05T05:20:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 37,
+    "title" : "Make MemoryBarrier not a command",
+    "createdAt" : "2022-10-05T06:48:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "Refactor examples",
+    "createdAt" : "2022-10-11T09:37:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Split RenderAttachment into RenderColorAttachment and RenderDepthStencilAttachment",
+    "createdAt" : "2022-10-21T10:04:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Typed textures",
+    "createdAt" : "2022-10-21T10:23:29Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 42,
+    "title" : "Reconsider buffer mapping... again",
+    "createdAt" : "2022-10-21T10:57:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Pipelines should use RAII",
+    "createdAt" : "2022-10-23T09:54:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 44,
+    "title" : "UploadFormat Reversed format not correctly named",
+    "createdAt" : "2022-10-23T10:43:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Framebuffer cache does not account for deleted textures",
+    "createdAt" : "2022-10-25T10:12:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "BindImage should assert format",
+    "createdAt" : "2022-11-24T00:44:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Expose glClipControl, glEnable(GL_FRAMEBUFFER_SRGB), etc.",
+    "createdAt" : "2023-01-12T10:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Handle resource binding leakage",
+    "createdAt" : "2023-01-17T11:35:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Way to query device features and capabilities",
+    "createdAt" : "2023-01-18T10:17:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Expose glTextureBarrier",
+    "createdAt" : "2023-02-16T12:01:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Expose asynchronous pixel transfers",
+    "createdAt" : "2023-02-16T12:06:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Expose UNPACK_ALIGNMENT for PixelStore",
+    "createdAt" : "2023-02-16T12:25:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Add documentation",
+    "createdAt" : "2023-03-20T08:44:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Facility for asynchronously compiling pipelines",
+    "createdAt" : "2023-03-26T06:09:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 59,
+    "title" : "Fancy fragment shader debugging feature",
+    "createdAt" : "2023-03-26T09:47:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Expose a way to swizzle textures",
+    "createdAt" : "2023-04-01T20:44:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 62,
+    "title" : "Expose a way to bind a slice of a 3D texture as a render target",
+    "createdAt" : "2023-04-06T02:02:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 63,
+    "title" : "gltf viewer G-Buffers Preview Bug with Camera Movement",
+    "createdAt" : "2023-04-07T05:36:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 64,
+    "title" : "Suggestion: app_hello_square.cpp should show InputAssemblyState",
+    "createdAt" : "2023-04-07T06:26:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 67,
+    "title" : "Refactor compile options",
+    "createdAt" : "2023-04-08T10:14:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "Fix Warnings in Renderer.cpp and Pipeline",
+    "createdAt" : "2023-04-08T10:21:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 69,
+    "title" : "Following Warnings are Treated as Errors (Release Mode cannot compile)",
+    "createdAt" : "2023-04-16T04:24:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Invalid Integer Constant Expression",
+    "createdAt" : "2023-04-16T07:09:57Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Enable seamless cubemap",
+    "createdAt" : "2023-04-20T11:28:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 73,
+    "title" : "Tesselation Shaders",
+    "createdAt" : "2023-04-21T07:46:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 74,
+    "title" : "Expose BPTC (compressed texture) formats",
+    "createdAt" : "2023-04-26T09:01:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Fwog::Buffer should assert if attempting to call .SubData() on non DYNAMIC_STORAGE",
+    "createdAt" : "2023-04-26T10:04:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 76,
+    "title" : "Remove arrayLayers from TextureCreateInfo",
+    "createdAt" : "2023-04-27T10:42:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 77,
+    "title" : "MSAA example",
+    "createdAt" : "2023-04-29T11:45:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 78,
+    "title" : "Async example",
+    "createdAt" : "2023-04-29T11:47:38Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 79,
+    "title" : "Extend gltf viewer example to showcase PBR",
+    "createdAt" : "2023-04-29T12:54:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 80,
+    "title" : "MSAA graphics pipeline state",
+    "createdAt" : "2023-05-04T09:46:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Functionality for rendering with no attachments",
+    "createdAt" : "2023-05-06T11:21:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Remove unnecessary \"Owning\"isms",
+    "createdAt" : "2023-05-19T21:35:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 85,
+    "title" : "Linking the CMake Starter Template in the readme as an example?",
+    "createdAt" : "2023-06-18T10:52:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Your code is building fine on MSYS2 MINGW64",
+    "createdAt" : "2023-06-24T21:07:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "BeginRendering/EndRendering as Function that takes a lambda?",
+    "createdAt" : "2023-06-26T13:13:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Logging callback",
+    "createdAt" : "2023-06-29T10:14:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 90,
+    "title" : "Better method for tracking pipeline state",
+    "createdAt" : "2023-07-17T08:12:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 91,
+    "title" : "Fwog fails to run on iGPUs (Examples detailed)",
+    "createdAt" : "2023-07-18T12:35:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "Window placement is fooked on irregular monitor placements",
+    "createdAt" : "2023-08-25T10:28:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Buffer size should be rounded to multiple of 16 bytes",
+    "createdAt" : "2023-10-09T12:26:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Better sampler defaults",
+    "createdAt" : "2023-10-18T06:13:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 103,
+    "title" : "Cannot run examples using ktx.dll",
+    "createdAt" : "2024-07-23T05:43:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Documentation improvements",
+    "createdAt" : "2025-01-28T02:49:03Z",
+    "state" : "OPEN"
+  } ]
+}

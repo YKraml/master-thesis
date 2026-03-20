@@ -1,0 +1,1664 @@
+{
+  "repoOwner" : "inexorgame",
+  "repoName" : "vulkan-renderer",
+  "forks" : [ {
+    "createdAt" : "2020-05-13T15:53:36Z"
+  }, {
+    "createdAt" : "2020-07-31T07:36:45Z"
+  }, {
+    "createdAt" : "2020-08-28T18:40:44Z"
+  }, {
+    "createdAt" : "2021-01-19T15:48:28Z"
+  }, {
+    "createdAt" : "2021-01-28T17:57:17Z"
+  }, {
+    "createdAt" : "2021-03-05T21:08:27Z"
+  }, {
+    "createdAt" : "2021-03-27T13:14:42Z"
+  }, {
+    "createdAt" : "2021-04-29T03:54:00Z"
+  }, {
+    "createdAt" : "2021-06-22T02:19:32Z"
+  }, {
+    "createdAt" : "2021-07-25T01:08:50Z"
+  }, {
+    "createdAt" : "2021-07-28T15:19:02Z"
+  }, {
+    "createdAt" : "2021-08-17T12:29:15Z"
+  }, {
+    "createdAt" : "2022-01-17T13:21:59Z"
+  }, {
+    "createdAt" : "2022-02-02T07:20:38Z"
+  }, {
+    "createdAt" : "2022-03-12T08:44:24Z"
+  }, {
+    "createdAt" : "2022-05-07T08:27:11Z"
+  }, {
+    "createdAt" : "2022-06-23T04:18:04Z"
+  }, {
+    "createdAt" : "2022-09-18T11:27:38Z"
+  }, {
+    "createdAt" : "2022-09-26T07:58:38Z"
+  }, {
+    "createdAt" : "2022-09-26T21:50:37Z"
+  }, {
+    "createdAt" : "2022-11-14T08:55:23Z"
+  }, {
+    "createdAt" : "2023-03-13T02:55:28Z"
+  }, {
+    "createdAt" : "2023-03-27T04:31:34Z"
+  }, {
+    "createdAt" : "2023-04-14T00:06:21Z"
+  }, {
+    "createdAt" : "2023-06-06T21:15:54Z"
+  }, {
+    "createdAt" : "2023-07-05T00:36:41Z"
+  }, {
+    "createdAt" : "2023-07-06T06:35:44Z"
+  }, {
+    "createdAt" : "2023-07-12T22:39:09Z"
+  }, {
+    "createdAt" : "2023-08-13T08:49:24Z"
+  }, {
+    "createdAt" : "2023-11-14T09:57:51Z"
+  }, {
+    "createdAt" : "2023-12-08T20:52:02Z"
+  }, {
+    "createdAt" : "2024-05-13T01:41:24Z"
+  }, {
+    "createdAt" : "2024-09-11T22:17:55Z"
+  }, {
+    "createdAt" : "2025-01-26T23:55:02Z"
+  }, {
+    "createdAt" : "2025-03-27T07:15:21Z"
+  }, {
+    "createdAt" : "2025-03-29T01:29:04Z"
+  }, {
+    "createdAt" : "2025-03-30T13:26:59Z"
+  }, {
+    "createdAt" : "2025-04-14T09:32:07Z"
+  }, {
+    "createdAt" : "2025-08-13T04:18:25Z"
+  }, {
+    "createdAt" : "2025-10-26T09:09:45Z"
+  }, {
+    "createdAt" : "2026-01-28T19:07:10Z"
+  }, {
+    "createdAt" : "2026-02-05T01:34:13Z"
+  }, {
+    "createdAt" : "2026-03-12T19:58:02Z"
+  }, {
+    "createdAt" : "2026-03-15T23:59:25Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Get vulkan validation layers working.",
+    "createdAt" : "2019-12-12T13:08:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "Get RenderDoc working.",
+    "createdAt" : "2019-12-12T13:48:12Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Use Vulkan Memory Allocator (VMA)",
+    "createdAt" : "2019-12-25T19:51:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Compare implementation with RenderDoc reference.",
+    "createdAt" : "2019-12-25T22:01:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Check if every function call in the current implementation is valid.",
+    "createdAt" : "2019-12-26T16:15:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Recreate the swap chain to react to change of window size.",
+    "createdAt" : "2019-12-27T23:36:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 7,
+    "title" : "Check which color formats are supported before initialisation.",
+    "createdAt" : "2019-12-27T23:44:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Use C++11 class member initialisation instead of constructor.",
+    "createdAt" : "2020-01-05T19:23:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 9,
+    "title" : "Use a staging buffer and a separated transfer queue (if existent) for memory transfer from CPU to GPU.",
+    "createdAt" : "2020-02-19T19:31:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Switch from std::cout to spdlog output.",
+    "createdAt" : "2020-02-20T17:33:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Perform a soft shutdown of resources like Vulkan Memory Allocator",
+    "createdAt" : "2020-02-20T17:38:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 12,
+    "title" : "Declare a proper error handling strategy.",
+    "createdAt" : "2020-02-20T17:50:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 13,
+    "title" : "Refactor draw_frame() method",
+    "createdAt" : "2020-02-20T17:54:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 14,
+    "title" : "Setup GLFW and Vulkan using CMake.",
+    "createdAt" : "2020-02-20T23:52:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Register a Vulkan debug callback.",
+    "createdAt" : "2020-02-21T02:24:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 16,
+    "title" : "Annotate rendering regions with VK_EXT_debug_marker.",
+    "createdAt" : "2020-02-21T02:27:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Hide window until initialisation is finished.",
+    "createdAt" : "2020-02-21T16:32:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Fragment shader output does not consider vertex color.",
+    "createdAt" : "2020-02-21T16:34:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Get vulkan-renderer running on Linux.",
+    "createdAt" : "2020-02-21T16:35:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 20,
+    "title" : "Create index buffer when creating vertex buffer.",
+    "createdAt" : "2020-02-21T16:54:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 21,
+    "title" : "Use automatic software tests to validate the engine.",
+    "createdAt" : "2020-02-21T22:10:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 22,
+    "title" : "Use assert at the beginning of class methods to check if initialisation took place.",
+    "createdAt" : "2020-02-22T15:56:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 23,
+    "title" : "Add command line argument to force the use of one graphics queue for both graphics and data transfer, even if distinct data transfer queue is available on the system.",
+    "createdAt" : "2020-02-22T18:16:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 24,
+    "title" : "Finalize Inexor's GPU selection mechanism and document it in an illustration.",
+    "createdAt" : "2020-02-22T18:26:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 25,
+    "title" : "Implement camera system.",
+    "createdAt" : "2020-02-24T14:59:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Speed up swapchain recreation by removing unnecessary resource recreation.",
+    "createdAt" : "2020-02-28T00:11:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 27,
+    "title" : "Use one VkBuffer for both vertex and index buffer.",
+    "createdAt" : "2020-02-28T00:31:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 28,
+    "title" : "Refactoring: VulkanQueueManager.",
+    "createdAt" : "2020-02-28T06:29:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Implement imgui",
+    "createdAt" : "2020-03-08T13:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Implement bézier curves.",
+    "createdAt" : "2020-03-08T18:01:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 31,
+    "title" : "Use consistent member names.",
+    "createdAt" : "2020-03-11T17:56:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 32,
+    "title" : "Texture image memory is corrupted when window is resized.",
+    "createdAt" : "2020-03-14T11:54:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "Make sure vulkan-renderer can be restarted.",
+    "createdAt" : "2020-03-18T13:44:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 34,
+    "title" : "Does not showing the window during initialisation cause swapchain recreation?",
+    "createdAt" : "2020-03-26T13:25:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Thread-safety is implemented incorrectly!",
+    "createdAt" : "2020-03-29T11:30:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 36,
+    "title" : "Account for std::thread::hardware_concurrency() to be zero in some cases.",
+    "createdAt" : "2020-03-31T11:10:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 38,
+    "title" : "CMake contains similiar code twice",
+    "createdAt" : "2020-04-01T08:17:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 39,
+    "title" : "Add std::shared_mutex to every manager class.",
+    "createdAt" : "2020-04-05T11:39:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 40,
+    "title" : "Fix shader compilation batch script on Windows.",
+    "createdAt" : "2020-04-05T15:11:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 41,
+    "title" : "Fix tests and benchmarks.",
+    "createdAt" : "2020-04-05T15:39:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Sometimes a command pool is not shut down correctly.",
+    "createdAt" : "2020-04-05T16:52:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 43,
+    "title" : "Aspect ratio is not updated when window is resized.",
+    "createdAt" : "2020-04-05T22:03:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 45,
+    "title" : "Display FPS in window title.",
+    "createdAt" : "2020-04-09T21:59:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 46,
+    "title" : "Declare all unneeded constructors and destructors as default instead of specifying an empty one.",
+    "createdAt" : "2020-04-10T14:22:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 47,
+    "title" : "Use a Vulkan pipeline cache (VkPipelineCache).",
+    "createdAt" : "2020-04-10T14:51:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 48,
+    "title" : "Add support for multisample anti-aliasing (MSAA).",
+    "createdAt" : "2020-04-10T18:42:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 49,
+    "title" : "Program crashes when multisampling_enabled is set to false.",
+    "createdAt" : "2020-04-10T19:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 50,
+    "title" : "Remove global static input callback methods and use polling instead.",
+    "createdAt" : "2020-04-10T20:59:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Use Travis CI to build vulkan-renderer.",
+    "createdAt" : "2020-04-10T21:45:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 52,
+    "title" : "Get ready for first alpha demo.",
+    "createdAt" : "2020-04-11T12:05:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 53,
+    "title" : "Contribute to Vulkan memory allocator library (VMA) by porting VMA replays to Linux.",
+    "createdAt" : "2020-04-12T15:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 54,
+    "title" : "Why is VK_PRESENT_MODE_MAILBOX_KHR not available in v0.1-alpha.1 on AMD graphics cards?",
+    "createdAt" : "2020-04-12T23:04:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 55,
+    "title" : "Write FPS to logfile.",
+    "createdAt" : "2020-04-13T12:48:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 56,
+    "title" : "Implement vsync command line argument.",
+    "createdAt" : "2020-04-13T13:18:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 57,
+    "title" : "Don't show error message ''VK_EXT_debug_marker not supported!' in release builds. Command line argument \"-renderdoc\" is available in debug mode only.",
+    "createdAt" : "2020-04-13T22:54:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 58,
+    "title" : "Use GitHub actions for builds.",
+    "createdAt" : "2020-04-13T23:42:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "Follow all 42 rules of Scott Meyer's book 'Effective Modern C++'.",
+    "createdAt" : "2020-04-15T10:30:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 60,
+    "title" : "Rename InexorTimeStep::get_program_start_time_step() to InexorTimeStep::get_time_step_since_initialisation() to avoid confusion.",
+    "createdAt" : "2020-04-15T11:34:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 61,
+    "title" : "Cleanup CMakeLists.txt for Windows.",
+    "createdAt" : "2020-04-15T11:45:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 65,
+    "title" : "Code Format Style",
+    "createdAt" : "2020-04-15T16:06:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 71,
+    "title" : "Remove global static window resize callback methods and use polling instead.",
+    "createdAt" : "2020-04-16T16:00:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 72,
+    "title" : "Create proper logfiles.",
+    "createdAt" : "2020-04-16T19:10:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Improve use of spdlog.",
+    "createdAt" : "2020-04-16T22:34:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 79,
+    "title" : "Improve repository structure of files and folders.",
+    "createdAt" : "2020-04-17T19:15:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 81,
+    "title" : "Complete the documentation with doxygen comments for every existing feature until next release.",
+    "createdAt" : "2020-04-17T19:47:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 82,
+    "title" : "Replace global macros for constants with constexpr.",
+    "createdAt" : "2020-04-17T20:01:08Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 83,
+    "title" : "Fix glTF 2.0 model rendering.",
+    "createdAt" : "2020-04-17T20:50:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 87,
+    "title" : "Improve Threadpool.",
+    "createdAt" : "2020-04-19T13:04:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 89,
+    "title" : "Make memory ownership clear in code comments.",
+    "createdAt" : "2020-04-19T17:15:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 95,
+    "title" : "Shorten 'initialise' methods to just 'init'.",
+    "createdAt" : "2020-04-20T11:56:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 96,
+    "title" : "Unimplemented functions",
+    "createdAt" : "2020-04-20T12:34:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 99,
+    "title" : "Unnecessary shared_ptrs",
+    "createdAt" : "2020-04-20T14:22:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 100,
+    "title" : "CMake install",
+    "createdAt" : "2020-04-20T19:49:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 103,
+    "title" : "Missing shader compilation step in cmake",
+    "createdAt" : "2020-04-20T22:19:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 104,
+    "title" : "Update code-style in documentation",
+    "createdAt" : "2020-04-21T07:18:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 106,
+    "title" : "Replace enum with enum class if possible",
+    "createdAt" : "2020-04-22T13:16:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 107,
+    "title" : "Use vulkan.hpp instead of vulkan.h",
+    "createdAt" : "2020-04-22T13:24:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Prepare code for introduction of octree rendering.",
+    "createdAt" : "2020-04-22T14:10:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 111,
+    "title" : "Implement a keyboard and mouse input manager.",
+    "createdAt" : "2020-04-22T14:15:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 114,
+    "title" : "Unify variable naming",
+    "createdAt" : "2020-04-22T22:58:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 116,
+    "title" : "Linux ci is broken",
+    "createdAt" : "2020-04-23T11:20:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 121,
+    "title" : "Redesign descriptor management by using a builder pattern.",
+    "createdAt" : "2020-04-24T13:39:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Introduce a reasonable overall error handling strategy for the entire engine.",
+    "createdAt" : "2020-04-24T14:53:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Use member initializer lists",
+    "createdAt" : "2020-04-25T08:31:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 128,
+    "title" : "Display folder structure in Visual Studio as project filters.",
+    "createdAt" : "2020-04-25T11:50:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 132,
+    "title" : "Merge octree renderer.",
+    "createdAt" : "2020-04-26T15:41:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 134,
+    "title" : "Add clang-tidy to ci",
+    "createdAt" : "2020-04-27T12:29:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Make extensive use of RAII in vulkan-renderer",
+    "createdAt" : "2020-04-28T11:13:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 140,
+    "title" : "[ci] Setup cache for conan dependencies",
+    "createdAt" : "2020-04-28T18:09:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Weapon models for game (without textures and bone rig)",
+    "createdAt" : "2020-04-29T10:39:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 147,
+    "title" : "Cube indentations",
+    "createdAt" : "2020-04-29T21:12:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 148,
+    "title" : "Create the next generation of memory management code based on Vulkan Memory Allocator.",
+    "createdAt" : "2020-04-30T12:42:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 156,
+    "title" : "Use an \"error\" texture in case of a loading failure.",
+    "createdAt" : "2020-05-09T14:56:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 157,
+    "title" : "Implement fps limiter",
+    "createdAt" : "2020-05-09T22:59:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 162,
+    "title" : "Make adequate use of [[nodiscard]] attribute.",
+    "createdAt" : "2020-05-11T12:56:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Remove Github Wiki",
+    "createdAt" : "2020-05-15T23:19:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 172,
+    "title" : "Reogranize the Github Labels",
+    "createdAt" : "2020-05-15T23:23:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 190,
+    "title" : "Implement missing Cube methods",
+    "createdAt" : "2020-07-04T12:16:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 193,
+    "title" : "Remove Travis CI in favor of Github Actions",
+    "createdAt" : "2020-07-06T22:37:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 196,
+    "title" : "Disable INEXOR_BUILD_EXAMPLE by default",
+    "createdAt" : "2020-07-14T10:39:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 201,
+    "title" : "Investigate the potential of device groups for future engine versions.",
+    "createdAt" : "2020-07-28T14:19:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 202,
+    "title" : "Find best practices for conditional rendering without re-recording command buffers during rendering.",
+    "createdAt" : "2020-07-28T16:39:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 203,
+    "title" : "Multisampling with rendergraph",
+    "createdAt" : "2020-07-29T21:07:25Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 204,
+    "title" : "Rendergraph input validation",
+    "createdAt" : "2020-07-29T21:08:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 205,
+    "title" : "Decide on whether to use static_cast when casting std::size_t to std::uint32_t",
+    "createdAt" : "2020-07-30T11:10:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 206,
+    "title" : "Either fix MinGW or remove it from Github Actions.",
+    "createdAt" : "2020-07-30T11:52:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 207,
+    "title" : "Simplify move constructors of all RAII wrappers",
+    "createdAt" : "2020-07-30T13:16:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 208,
+    "title" : "Mention C++ code guideline rules which are important for the project in Inexor's documentation",
+    "createdAt" : "2020-07-30T13:54:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 209,
+    "title" : "Clean up clang-tidy warnings",
+    "createdAt" : "2020-07-30T16:29:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 211,
+    "title" : "Fix MSVC build on Windows",
+    "createdAt" : "2020-08-02T22:31:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 213,
+    "title" : "Reintroduce Vulkan debug markers to name framegraph resources.",
+    "createdAt" : "2020-08-03T00:01:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 214,
+    "title" : "Use initializer methods for Vulkan structs.",
+    "createdAt" : "2020-08-03T00:23:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 215,
+    "title" : "Use std::find instead of searching manually with for loops.",
+    "createdAt" : "2020-08-03T00:29:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 217,
+    "title" : "Use taskflow for concurrency",
+    "createdAt" : "2020-08-04T10:23:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 218,
+    "title" : "Remove unnecessary member initialization.",
+    "createdAt" : "2020-08-04T10:33:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 222,
+    "title" : "Unify syntax of get methods for RAII wrappers",
+    "createdAt" : "2020-08-11T17:17:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 224,
+    "title" : "Further shorten variable and function names",
+    "createdAt" : "2020-08-12T12:32:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 225,
+    "title" : "Put if statements in RAII wrapper destructors.",
+    "createdAt" : "2020-08-12T13:27:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 226,
+    "title" : "Outdated documentation in building and preparation",
+    "createdAt" : "2020-08-16T15:29:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 227,
+    "title" : "Use conan for Vulkan tools",
+    "createdAt" : "2020-08-16T15:40:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 228,
+    "title" : "CMake GUI is not generating valid visual studio project solution files",
+    "createdAt" : "2020-08-16T15:45:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 234,
+    "title" : "Implement a simple octree editor",
+    "createdAt" : "2020-09-02T11:44:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 235,
+    "title" : "VK_PRESENT_MODE_MAILBOX_KHR is not supported by the regarded device.",
+    "createdAt" : "2020-09-02T19:02:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 236,
+    "title" : "Minimizing and restoring window rapidly breaks swapchain",
+    "createdAt" : "2020-09-02T19:44:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 238,
+    "title" : "Do not pass data which is already contained in wrapper::Device",
+    "createdAt" : "2020-09-05T13:57:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 239,
+    "title" : "Use or don't use const consistently for function parameters",
+    "createdAt" : "2020-09-05T15:08:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 240,
+    "title" : "Plot fps and render time in imgui",
+    "createdAt" : "2020-09-06T15:17:27Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 243,
+    "title" : "Implement WASD camera movement",
+    "createdAt" : "2020-09-09T12:51:38Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 244,
+    "title" : "Implement a fast ray-octree collision to find selected cubes, cube faces and cube edges.",
+    "createdAt" : "2020-09-09T12:54:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 251,
+    "title" : "Support octree cube rotations other than 90, 180, and 270 degrees",
+    "createdAt" : "2020-10-05T20:03:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 252,
+    "title" : "Use templates for octree cube rotation instead of rotate_90, rotate_180, rotate_270",
+    "createdAt" : "2020-10-05T20:06:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 254,
+    "title" : "Rename branch \"master\" to \"main\"",
+    "createdAt" : "2020-10-06T23:34:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 255,
+    "title" : "Make MeshBuffer a template class",
+    "createdAt" : "2020-10-09T23:47:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 256,
+    "title" : "Implement glTF 2 model support",
+    "createdAt" : "2020-10-10T00:17:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 257,
+    "title" : "Delete, archive or hide unused repositories",
+    "createdAt" : "2020-10-10T20:48:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 258,
+    "title" : "Make copy constructors explicit",
+    "createdAt" : "2020-10-13T19:42:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 259,
+    "title" : "Set vulkan-renderer-example as default startup project in Visual Studio",
+    "createdAt" : "2020-10-13T21:09:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 260,
+    "title" : "Remove unnecessary asserts in code",
+    "createdAt" : "2020-10-13T21:22:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 261,
+    "title" : "Add links to the official Vulkan specification to our code documentation",
+    "createdAt" : "2020-10-13T21:37:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 264,
+    "title" : "Document camera type",
+    "createdAt" : "2020-11-13T21:05:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 265,
+    "title" : "Manifest development roadmap for 2021",
+    "createdAt" : "2020-12-05T02:29:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 267,
+    "title" : "Improve MeshBuffer template",
+    "createdAt" : "2020-12-06T14:57:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 268,
+    "title" : "Separate glTF2 model loading from uploading it's vertex data to GPU",
+    "createdAt" : "2020-12-06T22:32:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 269,
+    "title" : "Delete standard constructor in a wrapper class if appropriate",
+    "createdAt" : "2020-12-07T15:39:17Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 272,
+    "title" : "Agree on consistent order of arguments throughout the entire engine",
+    "createdAt" : "2020-12-10T10:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 273,
+    "title" : "Use a glfw keyboard input callback instead of glfwGetMouseButton",
+    "createdAt" : "2020-12-10T11:05:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 274,
+    "title" : "Fix CI missing system packages",
+    "createdAt" : "2020-12-10T12:11:15Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 277,
+    "title" : "Use builder pattern for the graphics pipeline",
+    "createdAt" : "2020-12-19T23:19:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 280,
+    "title" : "Support Vulkan pipeline statistics",
+    "createdAt" : "2020-12-23T03:05:36Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 281,
+    "title" : "Update year mentioned in license to 2021",
+    "createdAt" : "2020-12-24T18:56:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 282,
+    "title" : "Add documentation building to CI",
+    "createdAt" : "2020-12-27T16:37:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 283,
+    "title" : "Declare a sophisticated error handling strategy using exceptions.",
+    "createdAt" : "2020-12-27T21:12:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 285,
+    "title" : "Modify descriptor builder to allow for multiple images to be passed into the builder pattern.",
+    "createdAt" : "2020-12-28T19:32:59Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 287,
+    "title" : "Include <utility> explicitly when using std::move",
+    "createdAt" : "2020-12-29T14:48:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 288,
+    "title" : "Don't recompile the entire rendergraph at swapchain recreation",
+    "createdAt" : "2020-12-29T16:58:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 289,
+    "title" : "Remove unnecessary move constructors.",
+    "createdAt" : "2020-12-29T20:26:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 290,
+    "title" : "Use conan for Vulkan Memory Allocator library (VMA)",
+    "createdAt" : "2020-12-29T22:46:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 291,
+    "title" : "Implement fullscreen toggle",
+    "createdAt" : "2020-12-31T13:24:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 292,
+    "title" : "Implement was_pressed_once() method for input data",
+    "createdAt" : "2020-12-31T13:50:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 294,
+    "title" : "Implement command line argument which allows for call of std::abort in vulkan validation layer handler",
+    "createdAt" : "2021-01-02T16:08:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 296,
+    "title" : "Implement a builder pattern for octrees.",
+    "createdAt" : "2021-01-02T23:20:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 297,
+    "title" : "Expose a simple API for Vulkan-renderer applications",
+    "createdAt" : "2021-01-02T23:23:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 298,
+    "title" : "Implement --no-imgui command line argument",
+    "createdAt" : "2021-01-04T11:03:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 299,
+    "title" : "Implement a mouse scroll callback.",
+    "createdAt" : "2021-01-04T14:24:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 300,
+    "title" : "--gpu is being ignored",
+    "createdAt" : "2021-01-04T17:30:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 302,
+    "title" : "Split up code from availability checks manager into instance and device wrapper",
+    "createdAt" : "2021-01-05T13:00:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 306,
+    "title" : "Refactor GPU info class",
+    "createdAt" : "2021-01-06T10:02:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 307,
+    "title" : "Move VMA memory budget calculations to renderer's destructor",
+    "createdAt" : "2021-01-06T10:04:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 309,
+    "title" : "Print message about missing VK_EXT_debug_marker as debug message, not as warning.",
+    "createdAt" : "2021-01-07T20:20:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 312,
+    "title" : "Add v0.1-alpha.4 changelog to wiki",
+    "createdAt" : "2021-01-11T15:15:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 313,
+    "title" : "Implement a frame time graph based on ImGui",
+    "createdAt" : "2021-01-11T15:16:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 317,
+    "title" : "Add more exception handlers",
+    "createdAt" : "2021-01-13T22:47:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 318,
+    "title" : "Standardize implementation guidelines in the wiki: get methods.",
+    "createdAt" : "2021-01-14T13:41:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 319,
+    "title" : "Don't make application and engine version is configurable through TOML file. Use constexpr instead.",
+    "createdAt" : "2021-01-15T15:58:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 324,
+    "title" : "Documentation build is broken",
+    "createdAt" : "2021-03-27T18:02:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 328,
+    "title" : "Ability to change window mode during runtime",
+    "createdAt" : "2021-03-29T13:00:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 330,
+    "title" : "Add exception handling for TOML configuration file loading",
+    "createdAt" : "2021-03-29T14:50:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 331,
+    "title" : "Explain commit naming convention in docs",
+    "createdAt" : "2021-03-29T21:41:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 333,
+    "title" : "Link Error spdlog on Clean Build",
+    "createdAt" : "2021-04-04T13:26:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 334,
+    "title" : "Document keyboard/mouse input management in docs",
+    "createdAt" : "2021-04-05T10:19:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 335,
+    "title" : "Explain why CPU/GPU multithreading is important in FAQ of docs",
+    "createdAt" : "2021-04-05T10:22:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 336,
+    "title" : "Explain code topics which are currently not of importance in the docs",
+    "createdAt" : "2021-04-05T10:27:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 337,
+    "title" : "Improve Engine design page in docs",
+    "createdAt" : "2021-04-05T10:28:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 338,
+    "title" : "[wiki] Minor improvement suggestions",
+    "createdAt" : "2021-04-05T22:17:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 341,
+    "title" : "Fix clang-tidy and msvc static code analysis warnings before adding clang-tidy to continuous integration",
+    "createdAt" : "2021-04-07T14:36:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 343,
+    "title" : "Can't move camera using mousepad while holding down WASD keys on laptop using Ubuntu",
+    "createdAt" : "2021-04-09T20:01:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 344,
+    "title" : "Improve exceptions catch block in main.cpp",
+    "createdAt" : "2021-04-09T20:46:02Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 345,
+    "title" : "Simplify Cube root method (m_parent cannot be nullptr)",
+    "createdAt" : "2021-04-09T22:13:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 346,
+    "title" : "Cube-class: Do we need a copy-constructor?",
+    "createdAt" : "2021-04-09T22:39:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 347,
+    "title" : "Remove unnecessary log messages in destructors",
+    "createdAt" : "2021-04-09T22:42:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 348,
+    "title" : "Use C++11 random library instead of rand()",
+    "createdAt" : "2021-04-10T20:36:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 349,
+    "title" : "root cubes children have no parent",
+    "createdAt" : "2021-04-10T20:41:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 355,
+    "title" : "Set up rolling release",
+    "createdAt" : "2021-04-14T22:46:00Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 358,
+    "title" : "Mark all get methods as noexcept if they really can't throw an exception",
+    "createdAt" : "2021-04-15T14:02:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 359,
+    "title" : "Sort definitions in cpp files so they match declarations in hpp files",
+    "createdAt" : "2021-04-16T16:06:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 360,
+    "title" : "Print engine metadata in tests and benchmarks",
+    "createdAt" : "2021-04-17T16:39:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 361,
+    "title" : "Commit naming should support [*] style",
+    "createdAt" : "2021-04-17T20:33:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 362,
+    "title" : "Throw an exception if somebody tries to access childs() on a cube which has no childs",
+    "createdAt" : "2021-04-17T23:42:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 365,
+    "title" : "Implement 3 axis octree rotation and octree collision",
+    "createdAt" : "2021-04-20T19:49:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 366,
+    "title" : "Resizing the window quickly throws an exception on Ubuntu",
+    "createdAt" : "2021-04-22T14:44:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 367,
+    "title" : "conan cmake run deprecated",
+    "createdAt" : "2021-04-22T14:46:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 371,
+    "title" : "Implement a world class which manages octrees",
+    "createdAt" : "2021-04-25T18:27:54Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 374,
+    "title" : "Implement move operator for Cube class",
+    "createdAt" : "2021-04-29T16:05:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 380,
+    "title" : "Put commit naming/clang-format and clang-tidy in one workflow?",
+    "createdAt" : "2021-05-02T18:32:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 382,
+    "title" : "Add Windows resource file for executable icon and version",
+    "createdAt" : "2021-05-03T11:16:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 386,
+    "title" : "Move axis aliases into one axis enum",
+    "createdAt" : "2021-05-05T12:54:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 388,
+    "title" : "Improve reference page about octree collision detection",
+    "createdAt" : "2021-05-06T21:32:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 389,
+    "title" : "Don't throw an error of no device/instance layers/extensions are available",
+    "createdAt" : "2021-05-06T22:15:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 390,
+    "title" : "Implement octree collision which respects indentation",
+    "createdAt" : "2021-05-07T18:14:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 391,
+    "title" : "Move read_binary function from shader code to file utility",
+    "createdAt" : "2021-05-07T20:14:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 394,
+    "title" : "Remove sphinx-mermaid workaround in conf.py",
+    "createdAt" : "2021-05-11T16:12:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 396,
+    "title" : "Support physical device groups",
+    "createdAt" : "2021-05-13T13:07:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 397,
+    "title" : "Offer overloaded constructor which allows to specify VkCommandPool",
+    "createdAt" : "2021-05-14T16:18:59Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 398,
+    "title" : "Add support for VK_LAYER_LUNARG_device_simulation",
+    "createdAt" : "2021-05-16T09:41:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 399,
+    "title" : "CMake ignores INEXOR_CONAN_PROFILE for clang on Ubuntu 20.04 LTS",
+    "createdAt" : "2021-05-16T20:33:34Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 400,
+    "title" : "Refactor input code",
+    "createdAt" : "2021-05-20T16:18:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 403,
+    "title" : "Tell VMA which Vulkan API version we use and which extensions are enabled",
+    "createdAt" : "2021-05-28T18:10:47Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 404,
+    "title" : "Add label about CLion sponsoring",
+    "createdAt" : "2021-06-02T21:43:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 405,
+    "title" : "ImGUI not being updated with new camera information when you move the camera just a little",
+    "createdAt" : "2021-06-19T22:13:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 406,
+    "title" : "Support camera ray collision for indented cubes",
+    "createdAt" : "2021-06-19T22:27:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 407,
+    "title" : "Fragmented Octree Cubes look different based on your position",
+    "createdAt" : "2021-06-19T22:34:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 410,
+    "title" : "ALT+PRINTSCREEN freezes the window",
+    "createdAt" : "2021-06-30T21:45:33Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 411,
+    "title" : "Resizing window causes camera position to reset",
+    "createdAt" : "2021-06-30T22:22:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 412,
+    "title" : "Set working directory in CLion automatically through CMake setup",
+    "createdAt" : "2021-07-02T22:10:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 413,
+    "title" : "Can we add a dictionary file for CLion spell checker?",
+    "createdAt" : "2021-07-02T22:56:40Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 415,
+    "title" : "Reduce number of badges on GitHub main page",
+    "createdAt" : "2021-07-04T08:44:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 417,
+    "title" : "Rename repository from vulkan-renderer to inexor-engine",
+    "createdAt" : "2021-07-17T19:33:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 419,
+    "title" : "How to make handles to cube class both thread safe and efficient?",
+    "createdAt" : "2021-07-18T18:21:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 420,
+    "title" : "Build type in engine metadata is empty on Windows",
+    "createdAt" : "2021-07-21T18:34:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 429,
+    "title" : "Render a skybox",
+    "createdAt" : "2021-08-04T18:15:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 430,
+    "title" : "Refactor descriptors and descriptor builder so it becomes a part of rendergraph",
+    "createdAt" : "2021-08-05T17:46:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 433,
+    "title" : "Migrate to new conan center remote",
+    "createdAt" : "2021-09-24T23:27:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 436,
+    "title" : "CI is broken because of old Vulkan SDK",
+    "createdAt" : "2021-11-06T14:30:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 438,
+    "title" : "Implement support for dynamic rendering",
+    "createdAt" : "2021-11-12T13:37:23Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 443,
+    "title" : "Flatpak support",
+    "createdAt" : "2021-12-02T07:21:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 444,
+    "title" : "Move on to C++20",
+    "createdAt" : "2022-01-01T12:31:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 445,
+    "title" : "Show shader files in Visual Studio project filters",
+    "createdAt" : "2022-01-11T13:44:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 449,
+    "title" : "Build failure with Windows MSVC job",
+    "createdAt" : "2022-02-23T19:07:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 456,
+    "title" : "Refactor debug markers",
+    "createdAt" : "2022-03-13T17:23:25Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 457,
+    "title" : "Refactor GPU selection mechanism",
+    "createdAt" : "2022-03-13T17:44:51Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 458,
+    "title" : "Switch to Vulkan Memory Allocator 3.0.1",
+    "createdAt" : "2022-03-26T15:43:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 459,
+    "title" : "Move Vulkan queue management into device wrapper",
+    "createdAt" : "2022-03-26T16:24:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 460,
+    "title" : "Support Vulkan 1.3 profiles",
+    "createdAt" : "2022-03-28T19:57:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 461,
+    "title" : "Refactor OnceCommandBuffer wrapper so it is part of device wrapper",
+    "createdAt" : "2022-04-02T12:25:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 463,
+    "title" : "Support bindless resources",
+    "createdAt" : "2022-04-03T12:54:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 464,
+    "title" : "Agree on a list of abbreviations for variable names and add it to the docs",
+    "createdAt" : "2022-04-18T20:03:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 465,
+    "title" : "Refactor command pool and command buffer management",
+    "createdAt" : "2022-04-24T20:08:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 468,
+    "title" : "Use std::source_location in exceptions",
+    "createdAt" : "2022-04-28T22:54:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 469,
+    "title" : "AddressSanitizer: SEGV on unknown address",
+    "createdAt" : "2022-04-30T12:57:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 475,
+    "title" : "Remove triangles of adjacent cubes which are not visible",
+    "createdAt" : "2022-06-26T10:59:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 481,
+    "title" : "Wrong logic in physical device selection",
+    "createdAt" : "2022-09-01T13:27:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 482,
+    "title" : "Wrong logic in select suitable physical device",
+    "createdAt" : "2022-09-01T13:48:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 484,
+    "title" : "Update documentation",
+    "createdAt" : "2022-09-01T23:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 486,
+    "title" : "Support command pools for other queues than graphics queues",
+    "createdAt" : "2022-09-05T16:31:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 499,
+    "title" : "Windows: vulkan-1.dll from conan is in the wrong folder",
+    "createdAt" : "2022-10-07T19:30:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 500,
+    "title" : "Add a .bat file in releases to start inexor-vulkan-renderer-example.exe easily",
+    "createdAt" : "2022-10-07T20:15:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 501,
+    "title" : "Use volk meta-loader library",
+    "createdAt" : "2022-10-08T10:54:43Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 505,
+    "title" : "Enable -Wall and -Wextra flags through CMake by default",
+    "createdAt" : "2022-10-10T18:42:42Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 506,
+    "title" : "Ignore compiler warnings from third party conan packages",
+    "createdAt" : "2022-10-10T19:01:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 508,
+    "title" : "Fix all compiler warnings when enabling -Wextra and -Wall",
+    "createdAt" : "2022-10-23T21:32:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 509,
+    "title" : "Update Vulkan Memory Allocator's GpuMemDumpVis python script",
+    "createdAt" : "2022-10-24T21:09:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 510,
+    "title" : "Refactor internal gpu memory naming system and use JSON dump feature of VMA",
+    "createdAt" : "2022-10-24T21:32:07Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 511,
+    "title" : "Use Vulkan Memory Allocator's new memory usage flags",
+    "createdAt" : "2022-10-24T21:38:48Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 513,
+    "title" : "Add custom settings.yml",
+    "createdAt" : "2022-11-01T18:20:16Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 515,
+    "title" : "CI is broken",
+    "createdAt" : "2022-12-01T22:36:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 516,
+    "title" : "Implement an pool allocator and apply it to cube nodes",
+    "createdAt" : "2022-12-05T18:28:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 517,
+    "title" : "Swapchain is not properly destroyed during exit",
+    "createdAt" : "2022-12-17T18:42:20Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 519,
+    "title" : "Random world generator with non-uniform child cube depth",
+    "createdAt" : "2023-01-01T12:49:34Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 520,
+    "title" : "Remove recommonmark requirement",
+    "createdAt" : "2023-01-26T12:20:04Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 521,
+    "title" : "Make another versoned tag release",
+    "createdAt" : "2023-01-30T20:51:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 522,
+    "title" : "Migrate to Conan 2.0",
+    "createdAt" : "2023-03-01T17:57:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 525,
+    "title" : "Fork from Cube2, Tesseract, or Red Eclipse?",
+    "createdAt" : "2023-03-11T02:24:50Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 526,
+    "title" : "Refactor buffer and descriptor management into rendergraph",
+    "createdAt" : "2023-03-12T19:43:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 527,
+    "title" : "Please support MSYS2 MINGW64",
+    "createdAt" : "2023-04-08T07:34:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 529,
+    "title" : "Fix gest and benchmark in Windows CI",
+    "createdAt" : "2023-05-06T11:17:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 530,
+    "title" : "Use VK_PRESENT_MODE_IMMEDIATE_KHR when vsync is turned off",
+    "createdAt" : "2023-05-11T09:35:13Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 531,
+    "title" : "Fix automatic generation of releases in GitHub actions",
+    "createdAt" : "2023-05-11T16:51:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 532,
+    "title" : "Why is readthedocs not updating correctly?",
+    "createdAt" : "2023-05-11T20:01:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 536,
+    "title" : "Show drop-down-list to select gpu in ImGui",
+    "createdAt" : "2023-05-18T12:31:51Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 537,
+    "title" : "Use VK_EXT_debug_utils instead of VK_EXT_debug_report ",
+    "createdAt" : "2023-05-20T13:53:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 538,
+    "title" : "Use new memory statistics API from Vulkan Memory Allocator 3",
+    "createdAt" : "2023-05-20T14:05:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 546,
+    "title" : "Validation error: Hazard WRITE_AFTER_WRITE vs. layout transition",
+    "createdAt" : "2023-06-19T03:03:05Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 547,
+    "title" : "Remove incorrect manual use of VK_LAYER_RENDERDOC_Capture!",
+    "createdAt" : "2023-06-20T17:42:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 548,
+    "title" : "gpu_info.cpp doesn't print any info",
+    "createdAt" : "2023-06-20T18:25:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 552,
+    "title" : "Tell people to download latest Vulkan SDK in our docs before trying to build",
+    "createdAt" : "2023-08-03T16:41:54Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 553,
+    "title" : "Documentation error",
+    "createdAt" : "2023-10-20T20:59:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 555,
+    "title" : "Create our own container for CI to keep it stable",
+    "createdAt" : "2024-07-15T19:56:53Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 558,
+    "title" : "Consider to use a command line argument parsing library",
+    "createdAt" : "2024-07-23T05:07:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 561,
+    "title" : "Invent a consistent terminology for \"cube\", \"octree\", \"world\", and others",
+    "createdAt" : "2025-05-01T14:10:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 562,
+    "title" : "Use a Vulkan pipeline cache",
+    "createdAt" : "2025-05-05T13:50:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 563,
+    "title" : "Add support for BC7 texture compression",
+    "createdAt" : "2025-05-05T14:37:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 564,
+    "title" : "Documentation CI build is broken",
+    "createdAt" : "2025-05-06T13:40:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 567,
+    "title" : "Use a Docker image to speed up Continuous Integration (GitHub workflows)",
+    "createdAt" : "2025-05-08T23:47:32Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 568,
+    "title" : "Implement a PipelineBarrierBatchBuilder for batching calls to vkCmdPipelineBarrier",
+    "createdAt" : "2025-05-21T11:36:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 569,
+    "title" : "Automatic double or triple buffering of resources for frames in flight",
+    "createdAt" : "2025-05-21T11:57:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 570,
+    "title" : "Parallelize command buffer recording",
+    "createdAt" : "2025-05-21T12:07:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 571,
+    "title" : "Parallelize pipeline creation",
+    "createdAt" : "2025-05-21T12:45:28Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 572,
+    "title" : "Advanced buffer/texture update mechanism",
+    "createdAt" : "2025-05-21T13:25:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 573,
+    "title" : "Implement a CommandBufferRecorder wrapper",
+    "createdAt" : "2025-05-21T13:29:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 574,
+    "title" : "Parallelize the entire code early",
+    "createdAt" : "2025-05-21T19:28:18Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 575,
+    "title" : "Use bindless descriptors",
+    "createdAt" : "2025-05-22T16:42:06Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 576,
+    "title" : "Implement a material system for octree",
+    "createdAt" : "2025-05-23T10:47:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 577,
+    "title" : "Recycle fences and semaphores like command buffers",
+    "createdAt" : "2025-05-23T19:07:31Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 578,
+    "title" : "Generate mipmaps automatically",
+    "createdAt" : "2025-05-25T10:58:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 579,
+    "title" : "Implement SPIR-V shader reflection",
+    "createdAt" : "2025-05-25T11:07:17Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 580,
+    "title" : "Can command buffer wrapper reason about potential secondary command buffer use?",
+    "createdAt" : "2025-05-25T12:33:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 581,
+    "title" : "Implement a seed-based octree generator",
+    "createdAt" : "2025-07-27T08:58:39Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 600,
+    "title" : "Refactor GitHub action workflow for nightly release",
+    "createdAt" : "2025-10-05T00:52:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 610,
+    "title" : "Enforce the strong exception guarantee in the entire codebase",
+    "createdAt" : "2025-10-11T14:37:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 612,
+    "title" : "Refactor and extend input management",
+    "createdAt" : "2025-10-15T14:18:56Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 615,
+    "title" : "Replace toml11 library with tomlplusplus for TOML configuration files",
+    "createdAt" : "2025-10-17T19:52:11Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 634,
+    "title" : "Render glTF2 model nodes sorted by material type to avoid unnecessary switching of pipelines and descriptor sets",
+    "createdAt" : "2025-10-31T20:02:21Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 647,
+    "title" : "Consider using an interface library for all third party dependencies to silence warnings when compiling them",
+    "createdAt" : "2026-02-22T15:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 650,
+    "title" : "Enable synchronization validation by default as well",
+    "createdAt" : "2026-02-24T23:25:08Z",
+    "state" : "OPEN"
+  } ]
+}

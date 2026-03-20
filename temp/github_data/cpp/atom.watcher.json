@@ -1,0 +1,445 @@
+{
+  "repoOwner" : "atom",
+  "repoName" : "watcher",
+  "forks" : [ {
+    "createdAt" : "2017-09-09T20:31:34Z"
+  }, {
+    "createdAt" : "2017-10-08T10:36:49Z"
+  }, {
+    "createdAt" : "2017-11-07T00:38:24Z"
+  }, {
+    "createdAt" : "2017-12-04T05:24:54Z"
+  }, {
+    "createdAt" : "2018-01-14T17:15:11Z"
+  }, {
+    "createdAt" : "2018-04-06T01:54:02Z"
+  }, {
+    "createdAt" : "2018-05-09T08:48:57Z"
+  }, {
+    "createdAt" : "2018-10-24T15:00:27Z"
+  }, {
+    "createdAt" : "2018-11-10T16:32:33Z"
+  }, {
+    "createdAt" : "2019-02-08T18:28:31Z"
+  }, {
+    "createdAt" : "2019-04-25T00:42:58Z"
+  }, {
+    "createdAt" : "2019-08-19T06:07:12Z"
+  }, {
+    "createdAt" : "2019-10-01T09:27:46Z"
+  }, {
+    "createdAt" : "2020-02-11T03:54:53Z"
+  }, {
+    "createdAt" : "2020-04-28T20:25:10Z"
+  }, {
+    "createdAt" : "2020-05-04T17:03:52Z"
+  }, {
+    "createdAt" : "2021-01-16T02:06:27Z"
+  }, {
+    "createdAt" : "2021-03-03T19:48:38Z"
+  }, {
+    "createdAt" : "2021-07-21T17:41:52Z"
+  }, {
+    "createdAt" : "2022-06-19T17:02:33Z"
+  }, {
+    "createdAt" : "2022-07-14T02:23:30Z"
+  }, {
+    "createdAt" : "2022-11-08T00:34:35Z"
+  }, {
+    "createdAt" : "2022-12-03T00:21:18Z"
+  }, {
+    "createdAt" : "2023-01-01T18:55:52Z"
+  }, {
+    "createdAt" : "2023-04-01T03:58:36Z"
+  }, {
+    "createdAt" : "2023-05-05T19:01:29Z"
+  }, {
+    "createdAt" : "2024-11-27T02:45:40Z"
+  } ],
+  "issues" : [ {
+    "number" : 1,
+    "title" : "Move MacOS build to CircleCI",
+    "createdAt" : "2017-07-15T14:18:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 2,
+    "title" : "MacOS filesystem events",
+    "createdAt" : "2017-07-15T14:22:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 3,
+    "title" : "Windows filesystem events",
+    "createdAt" : "2017-07-15T14:24:37Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 4,
+    "title" : "Linux filesystem events",
+    "createdAt" : "2017-07-15T14:25:29Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 5,
+    "title" : "Fall back to polling",
+    "createdAt" : "2017-07-15T14:26:46Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 6,
+    "title" : "Debounce events",
+    "createdAt" : "2017-07-15T14:27:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 7,
+    "title" : "Windows command channel",
+    "createdAt" : "2017-07-15T14:29:36Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 8,
+    "title" : "Linux command channel",
+    "createdAt" : "2017-07-15T14:30:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 10,
+    "title" : "Handle and report failure conditions",
+    "createdAt" : "2017-07-17T18:03:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 11,
+    "title" : "Shutdown switch",
+    "createdAt" : "2017-07-17T18:05:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 12,
+    "title" : "Ensure that unicode paths work correctly",
+    "createdAt" : "2017-07-18T17:50:24Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 15,
+    "title" : "Test with valgrind",
+    "createdAt" : "2017-08-11T15:09:16Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 16,
+    "title" : "Test for filesystem case sensitivity issues",
+    "createdAt" : "2017-08-11T15:10:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 17,
+    "title" : "Fill out the README",
+    "createdAt" : "2017-08-11T15:11:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 18,
+    "title" : "Move the NativeWatcherRegistry here from atom/atom",
+    "createdAt" : "2017-08-11T15:13:30Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 19,
+    "title" : "Handle symlinks",
+    "createdAt" : "2017-08-11T15:14:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 26,
+    "title" : "Fix entry kind detection on MacOS in coalesced event spec",
+    "createdAt" : "2017-08-23T18:39:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 29,
+    "title" : "Non-recursively watch files",
+    "createdAt" : "2017-08-25T18:11:49Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 30,
+    "title" : "Mount and unmount events",
+    "createdAt" : "2017-08-28T15:57:43Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 32,
+    "title" : "Make event spec consistent with Atom's watchPath",
+    "createdAt" : "2017-08-30T14:06:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 33,
+    "title" : "C++ unit tests",
+    "createdAt" : "2017-08-30T15:01:47Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 34,
+    "title" : "Lint with clang-tidy",
+    "createdAt" : "2017-08-30T15:03:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 35,
+    "title" : "Creation events dropped ",
+    "createdAt" : "2017-08-30T19:02:27Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 42,
+    "title" : "Exclusion lists",
+    "createdAt" : "2017-10-05T00:29:11Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 50,
+    "title" : "events with poll = false correlates rapid file rename events",
+    "createdAt" : "2017-10-11T03:03:14Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 51,
+    "title" : "Propagate filesystem event errors back to the watcher",
+    "createdAt" : "2017-10-11T13:48:28Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 59,
+    "title" : "rapid events with poll = false understands coalesced creation and deletion events",
+    "createdAt" : "2017-10-19T13:09:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 63,
+    "title" : "Add code of conduct, issue and PR templates, etc.",
+    "createdAt" : "2017-10-20T23:56:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 66,
+    "title" : "TypeError: Cannot read property 'then' of undefined",
+    "createdAt" : "2017-10-23T17:41:39Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 68,
+    "title" : "UnhandledPromiseRejectionWarning: Unhandled promise rejection",
+    "createdAt" : "2017-10-23T19:59:04Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 69,
+    "title" : "Excessive RAM usage during parallel test",
+    "createdAt" : "2017-10-24T12:41:19Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 70,
+    "title" : "Ensure that we handle large directories well on Linux",
+    "createdAt" : "2017-10-24T16:13:32Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 71,
+    "title" : "Potential memory leak in native watcher",
+    "createdAt" : "2017-10-24T16:41:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 72,
+    "title" : "Reject the configure() Promise if attempting to log to a nonexistent path",
+    "createdAt" : "2017-10-24T17:14:01Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 75,
+    "title" : "Handle symlink loops",
+    "createdAt" : "2017-10-26T14:13:30Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 78,
+    "title" : "dirname_r() unavailable until macOS 10.12",
+    "createdAt" : "2017-11-08T13:46:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 84,
+    "title" : "Handle split rename events on Windows",
+    "createdAt" : "2017-11-12T01:30:45Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 85,
+    "title" : "Translate Windows short names to long names",
+    "createdAt" : "2017-11-12T01:36:05Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 86,
+    "title" : "Windows cannot follow the root directory being renamed",
+    "createdAt" : "2017-11-12T01:43:24Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 88,
+    "title" : "Renaming a directory invalidates the RecentFileCache for its contents",
+    "createdAt" : "2017-11-13T19:55:07Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 93,
+    "title" : "(Windows) Unknown and unexpected results",
+    "createdAt" : "2017-11-15T22:01:50Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 95,
+    "title" : "Emit modification event for the creation of a non-empty file",
+    "createdAt" : "2017-11-16T13:54:55Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 96,
+    "title" : "Detect deletion entry kinds on Windows",
+    "createdAt" : "2017-11-16T14:13:09Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 109,
+    "title" : "Question about the roadmap",
+    "createdAt" : "2018-01-26T10:35:56Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 110,
+    "title" : "Weird exit signal",
+    "createdAt" : "2018-01-27T21:42:48Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 112,
+    "title" : "Optionally follow symlinks within a watch root",
+    "createdAt" : "2018-02-07T14:46:46Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 117,
+    "title" : "Creation event not fired for file after deleting (or moving it).",
+    "createdAt" : "2018-02-12T03:20:18Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 118,
+    "title" : "Crash when disconnecting a network drive with a watched root",
+    "createdAt" : "2018-02-13T19:03:03Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 120,
+    "title" : "Crash on thread creation",
+    "createdAt" : "2018-02-16T13:09:55Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 122,
+    "title" : "Webhook testing",
+    "createdAt" : "2018-02-16T16:23:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 124,
+    "title" : "Intermittent stall on launch",
+    "createdAt" : "2018-02-19T17:22:01Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 126,
+    "title" : "Consistency among platforms for directory modification events",
+    "createdAt" : "2018-02-24T05:23:15Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 127,
+    "title" : "Crash on Atom quit",
+    "createdAt" : "2018-02-26T20:15:20Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 134,
+    "title" : "Any plan to publish binaries?",
+    "createdAt" : "2018-04-04T01:29:44Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 137,
+    "title" : "Expected Events API",
+    "createdAt" : "2018-04-17T17:42:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 138,
+    "title" : "Polling exits itself",
+    "createdAt" : "2018-04-18T21:24:33Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 141,
+    "title" : "Please cut a new release",
+    "createdAt" : "2018-04-25T20:39:22Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 143,
+    "title" : "Version 10 of node.js has been released",
+    "createdAt" : "2018-04-26T13:20:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 154,
+    "title" : "Please cut a new release",
+    "createdAt" : "2018-05-29T23:16:52Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 167,
+    "title" : "Consistent badge style on README.md",
+    "createdAt" : "2018-08-14T11:52:58Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 170,
+    "title" : "Logging has stopped working",
+    "createdAt" : "2018-08-21T17:21:23Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 171,
+    "title" : "Duplicate file system events on Windows",
+    "createdAt" : "2018-08-26T21:35:19Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 181,
+    "title" : "Mkdir -p are not correctly reported on Linux",
+    "createdAt" : "2018-10-24T15:53:42Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 182,
+    "title" : "An initial option, like chokidar, would be nice",
+    "createdAt" : "2018-10-24T16:03:09Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 184,
+    "title" : "Bogus deleted event when changing case of a filename on Windows",
+    "createdAt" : "2018-10-25T08:52:08Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 185,
+    "title" : "prebuild-install hang",
+    "createdAt" : "2018-10-25T12:50:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 186,
+    "title" : "Yarn add hangs on Linux",
+    "createdAt" : "2018-10-26T12:24:26Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 188,
+    "title" : "An in-range update of fs-extra is breaking the build \uD83D\uDEA8",
+    "createdAt" : "2018-11-07T13:46:06Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 191,
+    "title" : "An in-range update of event-kit is breaking the build \uD83D\uDEA8",
+    "createdAt" : "2018-11-14T23:16:41Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 192,
+    "title" : "An in-range update of prebuild-install is breaking the build \uD83D\uDEA8",
+    "createdAt" : "2018-11-28T23:52:58Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 194,
+    "title" : "An in-range update of nan is breaking the build \uD83D\uDEA8",
+    "createdAt" : "2018-12-16T13:28:21Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 197,
+    "title" : "Race condition in stopAllWatchers()",
+    "createdAt" : "2019-01-07T15:03:52Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 204,
+    "title" : "Prebuild binaries",
+    "createdAt" : "2019-01-22T14:57:14Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 210,
+    "title" : "Native crash against Electron 3",
+    "createdAt" : "2019-02-22T20:15:26Z",
+    "state" : "OPEN"
+  }, {
+    "number" : 240,
+    "title" : "watcher is not firing a `deleted` event when I move a file to the trash.",
+    "createdAt" : "2021-07-22T13:09:10Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 241,
+    "title" : "Where are TypeScript typings?",
+    "createdAt" : "2021-09-25T08:51:35Z",
+    "state" : "CLOSED"
+  }, {
+    "number" : 242,
+    "title" : "Fails to build from source on Electron versions higher than 12",
+    "createdAt" : "2021-09-27T09:39:22Z",
+    "state" : "OPEN"
+  } ]
+}
