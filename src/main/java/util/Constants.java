@@ -16,7 +16,7 @@ public class Constants {
     public static final int AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
     public static final int CONCURRENT_REPO_DOWNLOADS = 4;
 
-    public static final int NUMBER_OF_REPOS = 10000;
+    public static final int NUMBER_OF_REPOS = 20000;
     public static final Language CURRENT_LANGUAGE = Language.CPP;
 
     public static final int SIZE_IN_KB = 1000 * 1000; // 1 GB

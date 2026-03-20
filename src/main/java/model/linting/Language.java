@@ -1,9 +1,5 @@
 package model.linting;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.Set;
 
 public enum Language {
@@ -38,9 +34,5 @@ public enum Language {
 
     public String getAnalysisProfile() {
         return analysisProfile;
-    }
-
-    public static void main(String[] args) throws IOException {
-        FileUtils.deleteDirectory(new File("E:\\master-thesis\\temp\\repos_full"));
     }
 }
