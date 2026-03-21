@@ -129,3 +129,63 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
 }
 
 # ------------------------------------------------------------------------------
+
+plot_project_scatter <- function(id, data, metric, metric_unit, metric_display_name){
+
+  # 1. Filter and prepare data
+  projectData <- data[data$id == id, ]
+
+  # Create a clean plotting frame
+  plot_df <- data.frame(
+    time = ifelse(
+      projectData$base_slope != 0,
+      projectData$base_slope,
+      projectData$intervention_slope
+    ),
+    metric_val = projectData[[metric]]
+  )
+
+  # Remove NAs to prevent the spline function from crashing
+  plot_df <- na.omit(plot_df)
+
+
+  ymin_all <- min(plot_df$metric_val)
+  ymax_all <- max(plot_df$metric_val)
+  ydiff_all <- ymax_all - ymin_all
+  upper_limit <- ymax_all + ydiff_all / 2
+  lower_limit <- ymin_all - ydiff_all / 2
+
+  # 2. Initialize the plot
+  plot(
+    plot_df$time,
+    plot_df$metric_val,
+    xlab = "Time (Years)",
+    ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
+    ylim = c(lower_limit, upper_limit),
+    main = paste0("Project: ", id),
+    col = "lightblue",
+    pch = 4
+  )
+
+  # 3. Add Smoothing Spline
+  # We check if we have enough points to fit a spline
+  if(nrow(plot_df) >= 4) {
+    # Fit the spline: x is time, y is metric_val
+    spline_fit <- smooth.spline(plot_df$time, plot_df$metric_val, spar = 0.7)
+
+    # Draw the spline line
+    lines(spline_fit, col = "darkblue", lwd = 2)
+  }
+
+  # 4. Update legend to include the spline
+  legend(
+    "topright",
+    legend = c("Weekly Data", "Smoothing Spline"),
+    col = c("lightblue", "darkblue"),
+    pch = c(4, NA),
+    lty = c(NA, 1),
+    lwd = c(1, 2),
+  )
+}
+
+# ------------------------------------------------------------------------------

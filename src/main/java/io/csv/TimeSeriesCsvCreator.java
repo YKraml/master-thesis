@@ -109,14 +109,12 @@ public class TimeSeriesCsvCreator implements CsvCreator {
         }
 
         // Create file for each linter
-        int i = 0;
         for (Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> entry : linterCommitsWithProof.entrySet()) {
-            createFile(combinedData, entry, i, folderName);
-            i++;
+            createFile(combinedData, entry, folderName);
         }
     }
 
-    private static void createFile(CombinedData combinedData, Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> linterCommitWithProof, int i, String folderName) throws IOException {
+    private static void createFile(CombinedData combinedData, Map.Entry<CemProject.LinterCommit, Optional<LinterWithProof>> linterCommitWithProof, String folderName) throws IOException {
 
         // Extracting some infos from the given data
         String repoOwner = combinedData.repoOwner();
@@ -136,8 +134,8 @@ public class TimeSeriesCsvCreator implements CsvCreator {
 
         // Creating id for file name and id column
         Optional<LinterWithProof> linterWithProof = linterCommitWithProof.getValue();
-        String linterName = linterWithProof.map(LinterWithProof::linterName).orElse("CONTROL" + i);
-        String id = repoOwner + "." + repoName + "." + linterName;
+        String linterName = linterWithProof.map(LinterWithProof::linterName).orElse("CONTROL");
+        String id = repoOwner + "." + repoName;
 
         // Create file and skip if it already exists
         File dataFile = new File(folderName + separator + id + ".csv");

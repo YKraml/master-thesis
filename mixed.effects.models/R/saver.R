@@ -37,13 +37,6 @@ save_everything <- function(model, data, out_dir, language, group, metric_data){
     file = file.path(out_dir, paste0(prefix, "sensitivity.png"))
   )
 
-  # 4. print metric histogram
-  save_png(
-    expression = plot_raw_data_hist(data[data$t_day == 0,][[metric_name]], metric_display_name, metric_unit),
-    file = file.path(out_dir, paste0(prefix, "hist.png"))
-  )
-
-
 
   # 5. print fixed effects
   save_multipanel_png(
@@ -131,7 +124,8 @@ save_everything <- function(model, data, out_dir, language, group, metric_data){
     height = 20
   )
 
-  # 15. print prediction for project
+
+  # 16. print prediction for project
   i <- 0
   project_out_dir <- file.path(out_dir, "projects")
   dir.create(project_out_dir, showWarnings = FALSE, recursive = TRUE)

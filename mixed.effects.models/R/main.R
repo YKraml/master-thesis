@@ -24,6 +24,7 @@ library(marginaleffects)
 library(glmertree)
 library(mgcv)
 library(robustlmm)
+library(hexbin)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -45,29 +46,29 @@ source("R/lagged_day_zero.R")
 # Shared
 # ------------------------------------------------------------------------------
 
-languages <- c("python", "java")
+languages <- c("python", "java", "cpp")
 
 metrics <- list(
   # All findings
-  findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1000 LOC"),
+  findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1 kLOC"),
 
   # Findings groups
-  comprehensibilityDensity = list(name = "comprehensibilityDensity", display_name = "Comprehensibility Density", unit = "Findings per 1000 LOC"),
-  correctnessDensity       = list(name = "correctnessDensity",       display_name = "Correctness Density",       unit = "Findings per 1000 LOC"),
-  documentationDensity     = list(name = "documentationDensity",     display_name = "Documentation Density",     unit = "Findings per 1000 LOC"),
-  efficiencyDensity        = list(name = "efficiencyDensity",        display_name = "Efficiency Density",        unit = "Findings per 1000 LOC"),
-  errorHandlingDensity     = list(name = "errorHandlingDensity",     display_name = "Error Handling Density",    unit = "Findings per 1000 LOC"),
-  redundancyDensity        = list(name = "redundancyDensity",        display_name = "Redundancy Density",        unit = "Findings per 1000 LOC"),
-  structureDensity         = list(name = "structureDensity",         display_name = "Structure Density",         unit = "Findings per 1000 LOC"),
-  securityDensity          = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1000 LOC"),
+  comprehensibilityDensity = list(name = "comprehensibilityDensity", display_name = "Comprehensibility Density", unit = "Findings per 1 kLOC"),
+  correctnessDensity       = list(name = "correctnessDensity",       display_name = "Correctness Density",       unit = "Findings per 1 kLOC"),
+  documentationDensity     = list(name = "documentationDensity",     display_name = "Documentation Density",     unit = "Findings per 1 kLOC"),
+  efficiencyDensity        = list(name = "efficiencyDensity",        display_name = "Efficiency Density",        unit = "Findings per 1 kLOC"),
+  errorHandlingDensity     = list(name = "errorHandlingDensity",     display_name = "Error Handling Density",    unit = "Findings per 1 kLOC"),
+  redundancyDensity        = list(name = "redundancyDensity",        display_name = "Redundancy Density",        unit = "Findings per 1 kLOC"),
+  structureDensity         = list(name = "structureDensity",         display_name = "Structure Density",         unit = "Findings per 1 kLOC"),
+  securityDensity          = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1 kLOC"),
 
   # Structure metrics
   longFiles                = list(name = "longFiles",                display_name = "Long Files",                unit = "Findings"),
   longMethods              = list(name = "longMethods",              display_name = "Long Method",               unit = "Findings"),
   deepNesting              = list(name = "deepNesting",              display_name = "Deep Nesting",              unit = "Findings"),
-  longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1000 LOC"),
-  longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1000 LOC"),
-  deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1000 LOC"),
+  longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1 kLOC"),
+  longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1 kLOC"),
+  deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1 kLOC"),
   cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
   averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC per File"),
 
@@ -76,6 +77,97 @@ metrics <- list(
   numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
   numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
   )
+
+
+
+
+
+
+
+
+# ------------------------------------------------------------------------------
+# Exploratory Data Analysis
+# ------------------------------------------------------------------------------
+
+for(language in languages) {
+  message(paste("---", language, "---"))
+
+  data_treatment <- get_data(language, "treatment", 0)
+  data_control   <- get_data(language, "control", 0)
+
+  data_all <- list(
+    treatment = data_treatment,
+    control   = data_control
+  )
+
+  for (metric_data in metrics) {
+    metric_name <- metric_data$name
+    metric_display_name <- metric_data$display_name
+    metric_unit         <- metric_data$unit
+
+
+    message(metric_name)
+
+    for(group in c("treatment", "control")){
+      message(sprintf(" - %s ", group))
+      data <- data_all[[group]]
+
+
+      message("   * Creating folder")
+      out_dir <- file.path("plots", language, "exploratory_data_analysis", group, metric_name)
+      dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+
+      message("   * Creating plots")
+      prefix <- sprintf("%s.%s.%s.",language, group, metric_name)
+
+
+      # 1. print metric histogram
+      save_png(
+        expression = plot_raw_data_hist(data[data$t_day == 0,][[metric_name]], metric_display_name, metric_unit),
+        file = file.path(out_dir, paste0(prefix, "hist.png"))
+      )
+
+      # 3. print giant scatter hex
+      plot <-  plot_all_projects_hexbin(data, metric_name, metric_unit, metric_display_name)
+      save_png(
+        expression = print(plot),
+        file = file.path(out_dir, paste0(prefix, "scatter_hex.png")),
+        width = 15,
+        height = 10
+      )
+
+      # 3. print giant scatter hex for project older than two years
+      plot <-  plot_all_projects_hexbin(data[data$relative_introduction_time > 2,], metric_name, metric_unit, metric_display_name)
+      save_png(
+        expression = print(plot),
+        file = file.path(out_dir, paste0(prefix, "scatter_hex_old_projects.png")),
+        width = 15,
+        height = 10
+      )
+
+
+      # 4. print scatter for each project
+      i <- 0
+      project_out_dir <- file.path(out_dir, "projects_scatter")
+      dir.create(project_out_dir, showWarnings = FALSE, recursive = TRUE)
+      for (id in unique(data[["id"]])) {
+        save_png(
+          expression = plot_project_scatter(id, data, metric_name, metric_unit, metric_display_name),
+          file = file.path(project_out_dir, paste0(prefix, id, ".png"))
+        )
+
+        i <- i + 1
+        if(i >= 100){
+          break
+        }
+      }
+
+
+    }
+
+  }
+}
 
 
 # ------------------------------------------------------------------------------
@@ -95,7 +187,8 @@ for(language in languages) {
   )
 
   for (metric_data in metrics) {
-    metric_name <- metric_data$name
+    metric_name         <- metric_data$name
+
     message(metric_name)
 
     for(group in c("treatment", "control")){
@@ -106,20 +199,6 @@ for(language in languages) {
       message("   * Creating folder")
       out_dir <- file.path("plots", language, "interrupted_time_series", group, metric_name)
       dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-
-
-      message("   * Removing outliers")
-      metric_values <- data[[metric_name]]
-      Q1 <- quantile(metric_values, 0.25, na.rm = TRUE)
-      Q3 <- quantile(metric_values, 0.75, na.rm = TRUE)
-      IQR_val <- Q3 - Q1
-      lower_bound <- Q1 - 1.5 * IQR_val
-      upper_bound <- Q3 + 1.5 * IQR_val
-      data_clean <- data[metric_values >= lower_bound & metric_values <= upper_bound, ]
-
-
-      message(paste("   * Removed", (nrow(data) - nrow(data_clean)), "outliers from", metric_name))
-      data <- data_clean
 
 
       tryCatch({
