@@ -36,7 +36,8 @@ plot_star_count <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
          )
@@ -77,10 +78,11 @@ plot_creation_year <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
-         )
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -123,10 +125,11 @@ plot_commit_count <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
-         )
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -161,10 +164,11 @@ plot_linter_age <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
-         )
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -202,10 +206,11 @@ plot_linter_intro_year <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
-         )
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -248,10 +253,11 @@ plot_window_commits <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
-        )
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -294,7 +300,8 @@ plot_linter_commit_indicies <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
   )
@@ -340,7 +347,8 @@ plot_sloc <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
   )
@@ -386,7 +394,8 @@ plot_number_of_contributors <- function(control_data, treated_data) {
   polygon(d_treated, col = gg_blue, border = border_blue)
 
   legend("topright",
-         legend = c("Control", "Treated"),
+         legend = c(paste0("Control (N = ", length(control_data$id), ")"),
+                    paste0("Treated (N = ", length(treated_data$id), ")")),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue)
   )

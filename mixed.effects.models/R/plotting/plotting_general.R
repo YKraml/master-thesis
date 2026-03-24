@@ -35,7 +35,7 @@ plot_all_projects_hexbin <- function(data, metric, metric_unit, metric_display_n
   plot_df <- plot_df[order(plot_df$time), ]
 
   # 2. Smart Zoom Limits
-  y_quants <- quantile(plot_df$metric_val, probs = c(0.2, 0.8))
+  y_quants <- quantile(plot_df$metric_val, probs = c(0.05, 0.95))
   ymin_zoom <- y_quants[1]
   ymax_zoom <- y_quants[2]
   buffer <- (ymax_zoom - ymin_zoom) * 0.1
