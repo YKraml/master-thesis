@@ -100,7 +100,7 @@ public class CemPairCsvCreator implements CsvCreator {
                     String linterName = linterCommit.linterName();
                     int numberOfCommitsInTwoYearWindow = linterCommit.numberOfCommitsInTwoYearWindow();
 
-                    String id = repoOwner + "." + repoName + "." + i;
+                    String id = repoOwner + "." + repoName;
                     pw.println(id + "," +
                             repoOwner + "," +
                             repoName + "," +
@@ -118,6 +118,9 @@ public class CemPairCsvCreator implements CsvCreator {
                             index + "," +
                             linterName + "," +
                             numberOfCommitsInTwoYearWindow);
+
+                    // Only first linter
+                    break;
                 }
             }
         }
