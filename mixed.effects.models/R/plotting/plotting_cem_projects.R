@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 
-plot_star_count <- function(control_data, treated_data) {
+plot_star_count <- function(control_data, treated_data, language) {
   control_stars <- log10(control_data$numberOfStars + 1)
   treated_stars <- log10(treated_data$numberOfStars + 1)
 
@@ -14,10 +14,10 @@ plot_star_count <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Star Count of Projects",
+       main = paste0("Star Count: ", language),
        xlab = "Number of Stars (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
@@ -47,7 +47,7 @@ plot_star_count <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_creation_year <- function(control_data, treated_data) {
+plot_creation_year <- function(control_data, treated_data, language) {
   control_years <- control_data$creationYear
   treated_years <- treated_data$creationYear
 
@@ -60,11 +60,11 @@ plot_creation_year <- function(control_data, treated_data) {
   border_red  <- rgb(248, 118, 109, maxColorValue = 255)
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
-  x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  x_lim <- range(c(2000, 2040))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Creation Years of Projects",
+       main =  paste0("Creation Year: ", language),
        xlab = "Year",
        ylab = "Density",
        xlim = x_lim,
@@ -89,7 +89,7 @@ plot_creation_year <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_commit_count <- function(control_data, treated_data) {
+plot_commit_count <- function(control_data, treated_data, language) {
   control_commits <- log10(control_data$numberOfCommits + 1)
   treated_commits <- log10(treated_data$numberOfCommits + 1)
 
@@ -103,10 +103,10 @@ plot_commit_count <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Number of Commits of Projects",
+       main = paste0("Number of Commits: ", language),
        xlab = "Number of Commits (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
@@ -136,7 +136,7 @@ plot_commit_count <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_linter_age <- function(control_data, treated_data) {
+plot_linter_age <- function(control_data, treated_data, language) {
   d_control <- density(control_data$time_diff, na.rm = TRUE)
   d_treated <- density(treated_data$time_diff, na.rm = TRUE)
 
@@ -147,10 +147,10 @@ plot_linter_age <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Project Age at Linter Introduction",
+       main = paste0("Project Age at Linter Introduction: ", language),
        xlab = "Project Age (Years)",
        ylab = "Density",
        xlim = x_lim,
@@ -175,7 +175,7 @@ plot_linter_age <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_linter_intro_year <- function(control_data, treated_data) {
+plot_linter_intro_year <- function(control_data, treated_data, language) {
   control_years <- control_data$linter_intro_year
   treated_years <- treated_data$linter_intro_year
 
@@ -189,10 +189,10 @@ plot_linter_intro_year <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Linter Introduction Years",
+       main = "Linter Introduction Year",
        xlab = "Year",
        ylab = "Density",
        xlim = x_lim,
@@ -217,7 +217,7 @@ plot_linter_intro_year <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_window_commits <- function(control_data, treated_data) {
+plot_window_commits <- function(control_data, treated_data, language) {
   control_commits <- log10(control_data$numberOfCommitsInTwoYearWindow + 1)
   treated_commits <- log10(treated_data$numberOfCommitsInTwoYearWindow + 1)
 
@@ -231,10 +231,10 @@ plot_window_commits <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Number of Commits of Projects in Analysis Window",
+       main = paste0("Number of Commits in Analysis Window: ", language),
        xlab = "Number of Commits (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
@@ -264,7 +264,7 @@ plot_window_commits <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_linter_commit_indicies <- function(control_data, treated_data) {
+plot_linter_commit_indicies <- function(control_data, treated_data, language) {
   control_commits <- log10(control_data$linterCommitIndex + 1)
   treated_commits <- log10(treated_data$linterCommitIndex + 1)
 
@@ -278,10 +278,10 @@ plot_linter_commit_indicies <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Linter Commit Index",
+       main = paste0("Linter Commit Index: ", language),
        xlab = "Linter Commit Index (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
@@ -311,7 +311,7 @@ plot_linter_commit_indicies <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_sloc <- function(control_data, treated_data) {
+plot_sloc <- function(control_data, treated_data, language) {
   control_sloc <- log10(control_data$sloc + 1)
   treated_sloc <- log10(treated_data$sloc + 1)
 
@@ -325,10 +325,10 @@ plot_sloc <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Source Lines of Code",
+       main = paste0("Source Lines of Code: ", language),
        xlab = "SLOC (Log Scale)",
        ylab = "Density",
        xlim = x_lim,
@@ -358,7 +358,7 @@ plot_sloc <- function(control_data, treated_data) {
 
 # ------------------------------------------------------------------------------
 
-plot_number_of_contributors <- function(control_data, treated_data) {
+plot_number_of_contributors <- function(control_data, treated_data, language) {
   control_contributors <- log10(control_data$numberOfContributors + 1)
   treated_contributors <- log10(treated_data$numberOfContributors + 1)
 
@@ -372,10 +372,10 @@ plot_number_of_contributors <- function(control_data, treated_data) {
   border_blue <- rgb(0, 191, 196, maxColorValue = 255)
 
   x_lim <- range(c(d_control$x, d_treated$x))
-  y_lim <- range(c(d_control$y, d_treated$y))
+  y_lim <- range(c(d_control$y * 1.3, d_treated$y * 1.3))
 
   plot(d_control,
-       main = "Number of Contributors",
+       main = paste0("Number of Contributors: ", language),
        xlab = "Number of Contributors (Log Scale)",
        ylab = "Density",
        xlim = x_lim,

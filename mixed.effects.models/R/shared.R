@@ -43,7 +43,7 @@ get_data <- function(language, group, transition_n_days) {
 # ------------------------------------------------------------------------------
 
 save_png <- function(expression, file, width = 15, height = 10) {
-  png(file, width = width, height = height, units = "cm", res = 300, pointsize = 8)
+  png(file, width = width, height = height, units = "cm", res = 300, pointsize = 10)
   on.exit(dev.off())
   force(expression)
 }
@@ -53,7 +53,7 @@ save_png <- function(expression, file, width = 15, height = 10) {
 # ------------------------------------------------------------------------------
 
 save_multipanel_png <- function(expression, file, mfrow = c(2, 2), width = 30, height = 20) {
-  png(file, width = width, height = height, units = "cm", res = 300, pointsize = 8)
+  png(file, width = width, height = height, units = "cm", res = 300, pointsize = 10)
   par(mfrow = mfrow)
   force(expression)
   par(mfrow = c(1, 1))

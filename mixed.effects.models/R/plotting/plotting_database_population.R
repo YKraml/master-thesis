@@ -12,17 +12,17 @@ plot_merged_star_polygons <- function(java_data, python_data, cpp_data){
   d_python <- density(python_stars)
   d_cpp    <- density(cpp_stars)
 
-  # 2. Define Colors (Using semi-transparent RGBA for overlaps)
+
   colors_fill <- c(
-    java   = rgb(248, 118, 109, maxColorValue = 255, alpha = 100), # Red-ish
-    python = rgb(0, 191, 196, maxColorValue = 255, alpha = 100),   # Teal-ish
-    cpp    = rgb(123, 104, 238, maxColorValue = 255, alpha = 100)  # SlateBlue
+    java   = rgb(123, 104, 238, maxColorValue = 255, alpha = 100), # Red-ish
+    python = rgb(248, 118, 109, maxColorValue = 255, alpha = 100),   # Teal-ish
+    cpp    = rgb(0, 191, 196, maxColorValue = 255, alpha = 100)  # SlateBlue
   )
 
   colors_border <- c(
-    java   = rgb(248, 118, 109, maxColorValue = 255),
-    python = rgb(0, 191, 196, maxColorValue = 255),
-    cpp    = rgb(123, 104, 238, maxColorValue = 255)
+    java   = "#7B68EE",
+    python = "#F8766D",
+    cpp    = "#00BFC4"
   )
 
   # 3. Calculate Global Ranges for the Plot
@@ -51,15 +51,15 @@ plot_merged_star_polygons <- function(java_data, python_data, cpp_data){
   polygon(d_python, col = colors_fill["python"], border = colors_border["python"])
   polygon(d_cpp,    col = colors_fill["cpp"],    border = colors_border["cpp"])
 
-  # 7. Add Legend
-  legend("topright",
-         legend = c(
-           paste0("Java (N = ", nrow(java_data), ")"),
-           paste0("Python (N = ", nrow(python_data), ")"),
-           paste0("C++ (N = ", nrow(cpp_data), ")")
-         ),
-         fill = colors_fill,
-         border = colors_border,)
+   # 7. Add Legend
+   legend("topright",
+          legend = c(
+            paste0("Java"),
+            paste0("Python"),
+            paste0("C++")
+          ),
+          fill = colors_fill,
+          border = colors_border,)
 
 }
 
@@ -80,7 +80,7 @@ plot_star_hist <- function(data, language_name, color_hex) {
     xlab = "Number of Stars (Log Scale)",
     ylab = "Frequency",
     col = color_hex,
-    border = "white", # White borders look cleaner with solid colors
+    border = "black", # White borders look cleaner with solid colors
     xaxt = "n"        # Disable default axis to add custom labels
   )
 

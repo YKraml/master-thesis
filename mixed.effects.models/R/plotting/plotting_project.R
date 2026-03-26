@@ -130,7 +130,7 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
 
 # ------------------------------------------------------------------------------
 
-plot_project_scatter <- function(id, data, metric, metric_unit, metric_display_name){
+plot_project_scatter <- function(id, data, metric, metric_unit, metric_display_name, color1, color2){
 
   # 1. Filter and prepare data
   projectData <- data[data$id == id, ]
@@ -162,26 +162,23 @@ plot_project_scatter <- function(id, data, metric, metric_unit, metric_display_n
     xlab = "Time (Years)",
     ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylim = c(lower_limit, upper_limit),
-    main = paste0("Project: ", id),
-    col = "lightblue",
+    main = id,
+    col = color1,
     pch = 4
   )
 
   # 3. Add Smoothing Spline
   # We check if we have enough points to fit a spline
   if(nrow(plot_df) >= 4) {
-    # Fit the spline: x is time, y is metric_val
     spline_fit <- smooth.spline(plot_df$time, plot_df$metric_val, spar = 0.7)
-
-    # Draw the spline line
-    lines(spline_fit, col = "darkblue", lwd = 2)
+    lines(spline_fit, col = color2, lwd = 2)
   }
 
   # 4. Update legend to include the spline
   legend(
     "topright",
     legend = c("Weekly Data", "Smoothing Spline"),
-    col = c("lightblue", "darkblue"),
+    col = c(color1, color2),
     pch = c(4, NA),
     lty = c(NA, 1),
     lwd = c(1, 2),

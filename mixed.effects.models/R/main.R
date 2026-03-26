@@ -48,7 +48,11 @@ source("R/lagged_day_zero.R")
 # Shared
 # ------------------------------------------------------------------------------
 
-languages <- c("python", "java", "cpp")
+languages <- list(
+  java   = list(name = "java",   display_name ="Java",   color = "#7B68EE", color_secondary = "#D3CCFF"),
+  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1"),
+  cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3")
+)
 
 metrics <- list(
   # All findings
@@ -85,45 +89,6 @@ metrics <- list(
 
 
 
-# ------------------------------------------------------------------------------
-# CEM-Projects
-# ------------------------------------------------------------------------------
-
-for(language in languages){
-  message(paste("---", language, "---"))
-
-  control_data <- read.csv(file.path("data", language, "cem_projects", "control.csv"))
-  control_data$time_diff <- (control_data$linterCommitTime - control_data$firstCommitTime) / 60 / 60 / 24 / 365
-  control_data$linter_intro_year <- control_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
-
-  treated_data <- read.csv(file.path("data", language, "cem_projects", "treated.csv"))
-  treated_data$time_diff <- (treated_data$linterCommitTime - treated_data$firstCommitTime) / 60 / 60 / 24 / 365
-  treated_data$linter_intro_year <- treated_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
-
-  out_dir <- file.path("plots", language, "cem_projects")
-  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-
-  capture.output(wilcox.test(control_data$numberOfStars, treated_data$numberOfStars),                                   file = file.path(out_dir, paste0(language, "wilcox_test_star_counts.txt")))
-  capture.output(wilcox.test(control_data$creationYear, treated_data$creationYear),                                     file = file.path(out_dir, paste0(language, "wilcox_test_project_creation_years.txt")))
-  capture.output(wilcox.test(control_data$numberOfCommits, treated_data$numberOfCommits),                               file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts.txt")))
-  capture.output(wilcox.test(control_data$time_diff, treated_data$time_diff),                                           file = file.path(out_dir, paste0(language, "wilcox_test_linter_ages.txt")))
-  capture.output(wilcox.test(control_data$linter_intro_year, treated_data$linter_intro_year),                           file = file.path(out_dir, paste0(language, "wilcox_test_linter_introduction_years.txt")))
-  capture.output(wilcox.test(control_data$numberOfCommitsInTwoYearWindow, treated_data$numberOfCommitsInTwoYearWindow), file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts_in_analysis_window.txt")))
-  capture.output(wilcox.test(control_data$linterCommitIndex, treated_data$linterCommitIndex),                           file = file.path(out_dir, paste0(language, "wilcox_test_commit_counts_in_analysis_window.txt")))
-  capture.output(wilcox.test(control_data$sloc, treated_data$sloc),                                                     file = file.path(out_dir, paste0(language, "wilcox_test_sloc.txt")))
-  capture.output(wilcox.test(control_data$numberOfContributors, treated_data$numberOfContributors),                     file = file.path(out_dir, paste0(language, "wilcox_test_number_of_contributors.txt")))
-
-
-  save_png(expression = plot_star_count(control_data, treated_data),             file = file.path(out_dir, paste0(language, "star_counts.png")))
-  save_png(expression = plot_creation_year(control_data, treated_data),          file = file.path(out_dir, paste0(language, "project_creation_years.png")))
-  save_png(expression = plot_commit_count(control_data, treated_data),           file = file.path(out_dir, paste0(language, "commit_counts.png")))
-  save_png(expression = plot_linter_age(control_data, treated_data),             file = file.path(out_dir, paste0(language, "linter_ages.png")))
-  save_png(expression = plot_linter_intro_year(control_data, treated_data),      file = file.path(out_dir, paste0(language, "linter_introduction_years.png")))
-  save_png(expression = plot_window_commits(control_data, treated_data),         file = file.path(out_dir, paste0(language, "commit_counts_in_analysis_window.png")))
-  save_png(expression = plot_linter_commit_indicies(control_data, treated_data), file = file.path(out_dir, paste0(language, "commit_indices.png")))
-  save_png(expression = plot_sloc(control_data, treated_data),                   file = file.path(out_dir, paste0(language, "sloc.png")))
-  save_png(expression = plot_number_of_contributors(control_data, treated_data), file = file.path(out_dir, paste0(language, "number_of_contributors.png")))
-}
 
 
 # ------------------------------------------------------------------------------
@@ -144,24 +109,160 @@ save_png(
 )
 
 save_png(
-  expression = plot_star_hist(java_data, "Java", "#F8766D"),
+  expression = plot_star_hist(java_data, "Java", languages$java$color),
   file = file.path(out_dir, "java_stars.png")
 )
 
 save_png(
-  expression = plot_star_hist(python_data, "Python", "#00BFC4"),
+  expression = plot_star_hist(python_data, "Python", languages$python$color),
   file = file.path(out_dir, "python_stars.png")
 )
 
 save_png(
-  expression = plot_star_hist(cpp_data, "C++", "#7B68EE"),
+  expression = plot_star_hist(cpp_data, "C++", languages$cpp$color),
   file = file.path(out_dir, "cpp_stars.png")
 )
 
 
 
+save_multipanel_png(
+  {
+    plot_star_hist(java_data, "Java", languages$java$color)
+    plot_star_hist(python_data, "Python", languages$python$color)
+    plot_star_hist(cpp_data, "C++", languages$cpp$color)
+    plot_merged_star_polygons(java_data, python_data, cpp_data)
+  },
+  file.path(out_dir, "multipanel_stars.png"),
+  mfrow = c(2, 2),
+  width = 15,
+  height = 15
+  )
 
 
+
+# ------------------------------------------------------------------------------
+# CEM-Projects
+# ------------------------------------------------------------------------------
+
+for(language in languages){
+  language_name <- language$name
+  language_display_name <- language$display_name
+  message(paste("---", language_name, "---"))
+
+  control_data <- read.csv(file.path("data", language_name, "cem_projects", "control.csv"))
+  control_data$time_diff <- (control_data$linterCommitTime - control_data$firstCommitTime) / 60 / 60 / 24 / 365
+  control_data$linter_intro_year <- control_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
+
+  treated_data <- read.csv(file.path("data", language_name, "cem_projects", "treated.csv"))
+  treated_data$time_diff <- (treated_data$linterCommitTime - treated_data$firstCommitTime) / 60 / 60 / 24 / 365
+  treated_data$linter_intro_year <- treated_data$linterCommitTime / 60 / 60 / 24 / 365 + 1970
+
+  potential_control_data <- read.csv(file.path("data", language_name, "cem_projects", "potential_control.csv"))
+  potential_treated_data <- read.csv(file.path("data", language_name, "cem_projects", "potential_treated.csv"))
+
+
+  out_dir <- file.path("plots", language_name, "cem_projects")
+  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+  save_multipanel_png(
+    {
+      plot_linter_age(control_data, treated_data, language_display_name)
+      plot_window_commits(control_data, treated_data, language_display_name)
+      plot_linter_intro_year(control_data, treated_data, language_display_name)
+      plot_linter_commit_indicies(control_data, treated_data, language_display_name)
+    },
+    file = file.path(out_dir, paste0(language_name, "_all_merged_non_balanced.png")),
+    mfrow = c(2, 2),
+    width = 20,
+    height = 14
+  )
+
+
+  save_multipanel_png(
+    {
+      plot_creation_year(potential_control_data, potential_treated_data, language_display_name)
+      plot_creation_year(control_data,treated_data, language_display_name)
+      plot_star_count(potential_control_data, potential_treated_data, language_display_name)
+      plot_star_count(control_data, treated_data, language_display_name)
+      plot_commit_count(potential_control_data, potential_treated_data, language_display_name)
+      plot_commit_count(control_data,treated_data, language_display_name)
+      plot_sloc(potential_control_data, potential_treated_data, language_display_name)
+      plot_sloc(control_data, treated_data, language_display_name)
+      plot_number_of_contributors(potential_control_data, potential_treated_data, language_display_name)
+      plot_number_of_contributors(control_data, treated_data, language_display_name)
+    },
+    file = file.path(out_dir, paste0(language_name, "_all_merged.png")),
+    mfrow = c(5, 2),
+    width = 20,
+    height = 28
+  )
+
+
+}
+
+
+for(language in languages) {
+  language_name <- language$name
+  message(paste("--- Testing:", language_name, "---"))
+
+  # 1. Load and Preprocess Data
+  process_data <- function(path) {
+    if (!file.exists(path)) return(NULL)
+    df <- read.csv(path)
+    # Calculate derived columns from your original script
+    df$time_diff <- (df$linterCommitTime - df$firstCommitTime) / (60 * 60 * 24 * 365)
+    df$linter_intro_year <- (df$linterCommitTime / (60 * 60 * 24 * 365)) + 1970
+    return(df)
+  }
+
+  control_data <- process_data(file.path("data", language_name, "cem_projects", "control.csv"))
+  treated_data <- process_data(file.path("data", language_name, "cem_projects", "treated.csv"))
+  pot_control  <- read.csv(file.path("data", language_name, "cem_projects", "potential_control.csv"))
+  pot_treated  <- read.csv(file.path("data", language_name, "cem_projects", "potential_treated.csv"))
+
+  # 2. Helper to run test and return formatted string
+  run_stat <- function(var_name, data_ctrl, data_trtd, label) {
+    if (is.null(data_ctrl) || is.null(data_trtd) || !var_name %in% names(data_ctrl)) return(NULL)
+
+    res <- wilcox.test(data_ctrl[[var_name]], data_trtd[[var_name]])
+    p_val_fmt <- format.pval(res$p.value, digits = 3, eps = 0.001)
+    sig <- if(res$p.value < 0.05) "*" else ""
+
+    # Format: Label (35 chars), W (12 chars), p-value (10 chars)
+    sprintf("%-35s | %12.1f | %10s %s", label, res$statistic, p_val_fmt, sig)
+  }
+
+  # 3. Collect all results
+  results_lines <- c(
+    sprintf("Wilcoxon Rank Sum Test Results: %s", language_name),
+    paste(rep("-", 65), collapse = ""),
+    sprintf("%-35s | %12s | %10s", "Variable", "W-Statistic", "p-value"),
+    paste(rep("-", 65), collapse = ""),
+    run_stat("numberOfStars", control_data, treated_data, "Stars"),
+    run_stat("creationYear", control_data, treated_data, "Project Creation Year"),
+    run_stat("numberOfCommits", control_data, treated_data, "Commit Counts"),
+    run_stat("time_diff", control_data, treated_data, "Linter Age (Years)"),
+    run_stat("linter_intro_year", control_data, treated_data, "Linter Introduction Year"),
+    run_stat("numberOfCommitsInTwoYearWindow", control_data, treated_data, "Commits (Analysis Window)"),
+    run_stat("linterCommitIndex", control_data, treated_data, "Linter Commit Index"),
+    run_stat("sloc", control_data, treated_data, "SLOC"),
+    run_stat("numberOfContributors", control_data, treated_data, "Number of Contributors"),
+    paste(rep("-", 65), collapse = ""),
+    "POTENTIAL DATASETS:",
+    run_stat("numberOfStars", pot_control, pot_treated, "Potential: Stars"),
+    run_stat("creationYear", pot_control, pot_treated, "Potential: Creation Year"),
+    run_stat("numberOfCommits", pot_control, pot_treated, "Potential: Commit Counts"),
+    run_stat("sloc", pot_control, pot_treated, "Potential: SLOC"),
+    run_stat("numberOfContributors", pot_control, pot_treated, "Potential: Contributors"),
+    paste(rep("-", 65), collapse = "")
+  )
+
+  # 4. Save to one TXT file
+  out_dir <- file.path("plots", language_name, "cem_projects")
+  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+  writeLines(as.character(na.omit(results_lines)),
+             file.path(out_dir, paste0(language_name, "_wilcox_summary.txt")))
+}
 
 
 # ------------------------------------------------------------------------------
@@ -169,7 +270,11 @@ save_png(
 # ------------------------------------------------------------------------------
 
 for(language in languages) {
-  message(paste("---", language, "---"))
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+
+  message(paste("---", language_name, "---"))
 
   data_treatment <- get_data(language, "treatment", 0)
   data_control   <- get_data(language, "control", 0)
@@ -178,6 +283,104 @@ for(language in languages) {
     treatment = data_treatment,
     control   = data_control
   )
+
+
+
+  # Box plots without outliers
+  overview_dir <- file.path("plots", language_name, "exploratory_data_analysis", "all_metrics_overview")
+  dir.create(overview_dir, showWarnings = FALSE, recursive = TRUE)
+  save_png(
+    {
+      par(mfrow = c(5, 4), oma = c(0, 0, 0, 0), mar = c(2, 3, 3, 1))
+      for (metric_data in metrics) {
+        metric_name         <- metric_data$name
+        metric_display_name <- metric_data$display_name
+        metric_unit         <- metric_data$unit
+
+        boxplot(
+          data_treatment[[metric_name]],
+          main = metric_display_name,
+          col = language_color,
+          outline = FALSE
+        )
+      }
+    },
+    file = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot.png")),
+    width = 16,
+    height = 22.6
+  )
+
+
+  #Box plots with outliers
+  save_png(
+    {
+      par(mfrow = c(5, 4), oma = c(0, 0, 0, 0), mar = c(2, 3, 3, 1))
+      for (metric_data in metrics) {
+        metric_name         <- metric_data$name
+        metric_display_name <- metric_data$display_name
+        metric_unit         <- metric_data$unit
+
+        boxplot(
+          data_treatment[[metric_name]],
+          main = metric_display_name,
+          col = language_color,
+          outline = TRUE
+        )
+      }
+    },
+    file = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot_with_outliers.png")),
+    width = 16,
+    height = 22.6
+  )
+
+
+  # Hisotgrams
+  save_png(
+    {
+      par(mfrow = c(5, 4), oma = c(0, 0, 0, 0), mar = c(2, 4, 4, 1))
+
+      for (metric_data in metrics) {
+        metric_name         <- metric_data$name
+        metric_display_name <- metric_data$display_name
+        metric_unit         <- metric_data$unit
+
+
+        current_data <- na.omit(data_treatment[[metric_name]])
+
+        sigma <- sd(current_data)
+        mean_val <- mean(current_data)
+        upper_limit <- mean_val + 3 * sigma
+
+        if (is.na(sigma) || sigma == 0) {
+          upper_limit <- max(current_data, 0) + 1
+        }
+
+        hist(
+          current_data[current_data <= upper_limit],
+          breaks = 30,
+          freq = TRUE,
+          xlab = "",
+          ylab = "",
+          col = language_color,
+          border = "black",
+          main = metric_display_name,
+          xlim = c(0, upper_limit)
+        )
+      }
+    },
+    file = file.path(overview_dir, paste0(language_name, ".all_metrics_histogram.png")),
+    width = 16,
+    height = 22.6
+  )
+
+
+
+
+
+
+
+
+
 
   for (metric_data in metrics) {
     metric_name <- metric_data$name
@@ -193,21 +396,14 @@ for(language in languages) {
 
 
       message("   * Creating folder")
-      out_dir <- file.path("plots", language, "exploratory_data_analysis", group, metric_name)
+      out_dir <- file.path("plots", language_name, "exploratory_data_analysis", group, metric_name)
       dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 
       message("   * Creating plots")
-      prefix <- sprintf("%s.%s.%s.",language, group, metric_name)
+      prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
 
-
-      # 1. print metric histogram
-      save_png(
-        expression = plot_raw_data_hist(data[data$t_day == 0,][[metric_name]], metric_display_name, metric_unit),
-        file = file.path(out_dir, paste0(prefix, "hist.png"))
-      )
-
-      # 3. print giant scatter hex
+      # 2. print giant scatter hex
       plot <-  plot_all_projects_hexbin(data, metric_name, metric_unit, metric_display_name)
       save_png(
         expression = print(plot),
@@ -225,6 +421,28 @@ for(language in languages) {
         height = 10
       )
 
+      # Individual Projects
+      save_multipanel_png(
+        {
+
+          i <- 0
+          project_out_dir <- file.path(out_dir, "projects_scatter")
+          dir.create(project_out_dir, showWarnings = FALSE, recursive = TRUE)
+          for (id in unique(data[["id"]])) {
+            plot_project_scatter(id, data, metric_name, metric_unit, metric_display_name, language_color_secondary, language_color)
+            i <- i + 1
+            if(i >= 8){
+              break
+            }
+          }
+
+
+        },
+        file = file.path(out_dir, paste0(prefix, "individuals.png")),
+        width = 16,
+        height = 22.6,
+        mfrow = c(4, 2)
+      )
 
       # 4. print scatter for each project
       i <- 0
@@ -232,12 +450,12 @@ for(language in languages) {
       dir.create(project_out_dir, showWarnings = FALSE, recursive = TRUE)
       for (id in unique(data[["id"]])) {
         save_png(
-          expression = plot_project_scatter(id, data, metric_name, metric_unit, metric_display_name),
+          expression = plot_project_scatter(id, data, metric_name, metric_unit, metric_display_name, language_color_secondary, language_color),
           file = file.path(project_out_dir, paste0(prefix, substring(id, 0, 30), ".png"))
         )
 
         i <- i + 1
-        if(i >= 100){
+        if(i >= 30){
           break
         }
       }
