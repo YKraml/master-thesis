@@ -403,23 +403,6 @@ for(language in languages) {
       message("   * Creating plots")
       prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
 
-      # 2. print giant scatter hex
-      plot <-  plot_all_projects_hexbin(data, metric_name, metric_unit, metric_display_name)
-      save_png(
-        expression = print(plot),
-        file = file.path(out_dir, paste0(prefix, "scatter_hex.png")),
-        width = 15,
-        height = 10
-      )
-
-      # 3. print giant scatter hex for project older than two years
-      plot <-  plot_all_projects_hexbin(data[data$relative_introduction_time > 2,], metric_name, metric_unit, metric_display_name)
-      save_png(
-        expression = print(plot),
-        file = file.path(out_dir, paste0(prefix, "scatter_hex_old_projects.png")),
-        width = 15,
-        height = 10
-      )
 
       # Individual Projects
       save_multipanel_png(
@@ -444,21 +427,20 @@ for(language in languages) {
         mfrow = c(4, 2)
       )
 
-      # 4. print scatter for each project
-      i <- 0
-      project_out_dir <- file.path(out_dir, "projects_scatter")
-      dir.create(project_out_dir, showWarnings = FALSE, recursive = TRUE)
-      for (id in unique(data[["id"]])) {
-        save_png(
-          expression = plot_project_scatter(id, data, metric_name, metric_unit, metric_display_name, language_color_secondary, language_color),
-          file = file.path(project_out_dir, paste0(prefix, substring(id, 0, 30), ".png"))
-        )
+      # Hex Plots
+      save_png(
+        expression = {
+          # Generate the two plots
+          p1 <- plot_all_projects_hexbin(data,                                       metric_name, metric_unit, metric_display_name, "All Projects")
+          p2 <- plot_all_projects_hexbin(data[data$relative_introduction_time > 2,], metric_name, metric_unit, metric_display_name, "Projects Older Than 2 Years")
 
-        i <- i + 1
-        if(i >= 30){
-          break
-        }
-      }
+          # Combine and print them simultaneously
+          print(p1 + p2)
+        },
+        file = file.path(out_dir, paste0(prefix, "scatter_hex.png")),
+        width = 22,
+        height = 10
+      )
 
 
     }

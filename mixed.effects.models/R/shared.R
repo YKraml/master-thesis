@@ -11,6 +11,8 @@ get_data <- function(language, group, transition_n_days) {
     dt <- fread(file)
     dt <- na.omit(dt)
 
+    dt$cloneCoverage <- dt$cloneCoverage * 100
+
     # create new columns
     dt$t_norm <- dt$t_day / 365
     dt$base_slope <- dt$t_day / 365
