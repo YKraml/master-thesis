@@ -24,7 +24,7 @@ public class MainStatistics {
         FilteredProjectReaderWriter filteredProjectReaderWriter = injector.getInstance(FilteredProjectReaderWriter.class);
         CemProjectReaderWriter cemProjectReaderWriter = injector.getInstance(CemProjectReaderWriter.class);
         CemProjectPairReaderWriter cemProjectPairReaderWriter = injector.getInstance(CemProjectPairReaderWriter.class);
-
+        
         outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.JAVA);
         outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.PYTHON);
         outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.CPP);

@@ -49,8 +49,8 @@ source("R/lagged_day_zero.R")
 # ------------------------------------------------------------------------------
 
 languages <- list(
-  java   = list(name = "java",   display_name ="Java",   color = "#7B68EE", color_secondary = "#D3CCFF"),
-  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1"),
+  python = list(name = "python", display_name ="Python", color = "#7B68EE", color_secondary = "#D3CCFF"),
+  java   = list(name = "java",   display_name ="Java", color = "#F8766D", color_secondary = "#FFD5D1"),
   cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3")
 )
 
@@ -94,7 +94,7 @@ metrics <- list(
 # ------------------------------------------------------------------------------
 # Population Selection
 # ------------------------------------------------------------------------------
-
+source("R/plotting/plotting_database_population.R")
 
 java_data   <- read.csv("data/python/database_population/data.csv")
 python_data <- read.csv("data/java/database_population/data.csv")
@@ -105,39 +105,31 @@ dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 save_png(
   expression = plot_merged_star_polygons(java_data, python_data, cpp_data),
-  file = file.path(out_dir, "merged_stars.png")
+  file = file.path(out_dir, "merged_stars.png"),
+  width = 10,
+  height = 8
 )
 
 save_png(
   expression = plot_star_hist(java_data, "Java", languages$java$color),
-  file = file.path(out_dir, "java_stars.png")
+  file = file.path(out_dir, "java_stars.png"),
+  width = 10,
+  height = 8
 )
 
 save_png(
   expression = plot_star_hist(python_data, "Python", languages$python$color),
-  file = file.path(out_dir, "python_stars.png")
+  file = file.path(out_dir, "python_stars.png"),
+  width = 10,
+  height = 8
 )
 
 save_png(
   expression = plot_star_hist(cpp_data, "C++", languages$cpp$color),
-  file = file.path(out_dir, "cpp_stars.png")
+  file = file.path(out_dir, "cpp_stars.png"),
+  width = 10,
+  height = 8
 )
-
-
-
-save_multipanel_png(
-  {
-    plot_star_hist(java_data, "Java", languages$java$color)
-    plot_star_hist(python_data, "Python", languages$python$color)
-    plot_star_hist(cpp_data, "C++", languages$cpp$color)
-    plot_merged_star_polygons(java_data, python_data, cpp_data)
-  },
-  file.path(out_dir, "multipanel_stars.png"),
-  mfrow = c(2, 2),
-  width = 15,
-  height = 15
-  )
-
 
 
 # ------------------------------------------------------------------------------
@@ -449,6 +441,91 @@ for(language in languages) {
 }
 
 
+
+
+# ------------------------------------------------------------------------------
+# Model comparison - Random Effects
+# ------------------------------------------------------------------------------
+
+
+
+for(language in languages) {
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+  data <- get_data(language_name, "treatment", 0)
+
+  message(language_name)
+
+  output_dir <- file.path("plots", language_name, "random_effects_comparison")
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+  for (metric in metrics) {
+    metric_name <- metric$name
+    message(metric_name)
+
+    # Skip if file exists
+    file <- file.path(output_dir, sprintf("random_effects_comparison.%s.txt", metric_name))
+    if(file.exists(file)){
+      message("  * Skip")
+      next
+    }
+
+
+    # Shared parameters
+    fixed_formula <- as.formula(sprintf("%s ~ base_slope + level_change + slope_change", metric_name))
+    ctrl <- lmeControl(opt = "optim")
+
+
+    message("  * 0 Random Effect")
+    m_none <- gls(model = fixed_formula, data = data, method = "ML")
+
+    message("  * 1 Random Effect")
+    m_int   <- lme(fixed = fixed_formula, random = ~ 1 | id, data = data, method = "ML", control = ctrl)
+    m_base  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope | id, data = data, method = "ML", control = ctrl)
+    m_jump  <- lme(fixed = fixed_formula, random = ~ 0 + level_change | id, data = data, method = "ML", control = ctrl)
+    m_slope <- lme(fixed = fixed_formula, random = ~ 0 + slope_change | id, data = data, method = "ML", control = ctrl)
+
+    message("  * 2 Random Effect")
+    m_int_base   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope | id, data = data, method = "ML", control = ctrl)
+    m_int_jump   <- lme(fixed = fixed_formula, random = ~ 1 + level_change | id, data = data, method = "ML", control = ctrl)
+    m_int_slope  <- lme(fixed = fixed_formula, random = ~ 1 + slope_change | id, data = data, method = "ML", control = ctrl)
+    m_base_jump  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
+    m_base_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
+    m_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+    message("  * 3 Random Effect")
+    m_int_base_jump   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
+    m_int_base_slope  <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
+    m_int_jump_slope  <- lme(fixed = fixed_formula, random = ~ 1 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+    m_base_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+    message("  * 4 Random Effect")
+    m_full <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+    message("  * Comparing")
+    model_comparison <- anova(
+      m_none,
+      m_int, m_base, m_jump, m_slope,
+      m_int_base, m_int_jump, m_int_slope, m_base_jump, m_base_slope, m_jump_slope,
+      m_int_base_jump, m_int_base_slope, m_int_jump_slope, m_base_jump_slope,
+      m_full
+    )
+
+    message("  * Saving")
+    capture.output(
+      model_comparison[order(model_comparison$AIC), ],
+      file = file
+    )
+  }
+}
+
+
+
+
+
+
+
 # ------------------------------------------------------------------------------
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
@@ -593,49 +670,7 @@ for (metric_name in names(metrics)) {
 
 
 
-# ------------------------------------------------------------------------------
-# Model comparison - Random Effects
-# ------------------------------------------------------------------------------
 
-
-transition_n_days <- 90
-data <- get_data("treatment", transition_n_days)
-
-output_dir <- file.path("plots", "random_effects_comparison")
-dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-
-for (metric in metrics) {
-  metric_name <- metric$name
-  message(metric_name)
-
-  # Shared parameters
-  fixed_formula <- as.formula(sprintf("%s ~ base_slope + intervention_jump + intervention_slope", metric_name))
-  ctrl <- lmeControl(opt = "optim")
-
-  # 0-Slope Model: Random Intercept only
-  m_int <- lme(fixed = fixed_formula, random = ~ 1 | id, data = data, method = "ML", control = ctrl)
-
-  # 1-Slope Models: Intercept + One Random Effect
-  m_base <- lme(fixed = fixed_formula, random = ~ 1 + base_slope | id, data = data, method = "ML", control = ctrl)
-  m_jump <- lme(fixed = fixed_formula, random = ~ 1 + intervention_jump | id, data = data, method = "ML", control = ctrl)
-  m_slope <- lme(fixed = fixed_formula, random = ~ 1 + intervention_slope | id, data = data, method = "ML", control = ctrl)
-
-  # 2-Slope Models: Intercept + Two Random Effects
-  m_base_jump <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_jump | id, data = data, method = "ML", control = ctrl)
-  m_base_slope <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_slope | id, data = data, method = "ML", control = ctrl)
-  m_jump_slope <- lme(fixed = fixed_formula, random = ~ 1 + intervention_jump + intervention_slope | id, data = data, method = "ML", control = ctrl)
-
-  # 3-Slope Model: Full Random Effects Structure
-  m_full <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + intervention_jump + intervention_slope | id, data = data, method = "ML", control = ctrl)
-
-  # Compare models
-  model_comparison <- anova(m_int, m_base, m_jump, m_slope, m_base_jump, m_base_slope, m_jump_slope, m_full)
-
-  capture.output(
-    model_comparison[order(model_comparison$AIC), ],
-    file = file.path(output_dir, sprintf("random_effects_comparison.%s.txt", metric_name))
-  )
-}
 
 # ------------------------------------------------------------------------------
 # Model comparison - Interaction Term

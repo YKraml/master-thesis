@@ -16,11 +16,11 @@ get_data <- function(language, group, transition_n_days) {
     # create new columns
     dt$t_norm <- dt$t_day / 365
     dt$base_slope <- dt$t_day / 365
-    dt$intervention_slope <- dt$t_day / 365 * dt$intervention
-    dt$intervention_jump <- dt$intervention
+    dt$slope_change <- dt$t_day / 365 * dt$intervention
+    dt$level_change <- dt$intervention
 
     # some filtering
-    dt$intervention_jump[dt$t_day == 0] <- 0
+    dt$level_change[dt$t_day == 0] <- 0
     dt[, c("intervention") := NULL]
     dt <- dt[dt$relative_introduction_time >= 0, ]
     dt <- dt[dt$t_day <= 0 | t_day >= transition_n_days]
