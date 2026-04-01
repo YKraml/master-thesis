@@ -22,5 +22,5 @@ public class Constants {
     public static final int ANALYSIS_TIME = 1764547200; // Time in seconds at: 2025.12.01, 00:00:00
     public static final int ANALYSIS_WINDOW_IN_SECONDS = 60 * 60 * 24 * 365 * 2; // 2 Years in seconds
     public static final String SCC_EXE = "C:/ProgramData/chocolatey/lib/scc/tools/scc.exe";
-    public static Language CURRENT_LANGUAGE = Language.PYTHON;
+    public static Language CURRENT_LANGUAGE = Language.CPP;
 }
