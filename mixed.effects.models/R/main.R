@@ -49,8 +49,8 @@ source("R/lagged_day_zero.R")
 # ------------------------------------------------------------------------------
 
 languages <- list(
-  python = list(name = "python", display_name ="Python", color = "#7B68EE", color_secondary = "#D3CCFF"),
-  java   = list(name = "java",   display_name ="Java", color = "#F8766D", color_secondary = "#FFD5D1"),
+  java   = list(name = "java",   display_name ="Java",   color = "#7B68EE", color_secondary = "#D3CCFF"),
+  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1"),
   cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3")
 )
 
@@ -347,8 +347,13 @@ for(language in languages) {
           upper_limit <- max(current_data, 0) + 1
         }
 
+        filtered_data <- current_data[current_data <= upper_limit]
+
+        h <- hist(filtered_data, breaks = 30, plot = FALSE)
+        max_count <- max(h$counts)
+
         hist(
-          current_data[current_data <= upper_limit],
+          filtered_data,
           breaks = 30,
           freq = TRUE,
           xlab = "",
@@ -356,7 +361,8 @@ for(language in languages) {
           col = language_color,
           border = "black",
           main = metric_display_name,
-          xlim = c(0, upper_limit)
+          xlim = c(0, upper_limit * 1.1),
+          ylim = c(0, max_count * 1.1)
         )
       }
     },

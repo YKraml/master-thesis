@@ -24,7 +24,7 @@ plot_all_projects_hexbin <- function(data, metric, metric_unit, metric_display_n
 
   # 1. Prepare data
   plot_df <- data.frame(
-    time = ifelse(data$base_slope != 0, data$base_slope, data$intervention_slope),
+    time = ifelse(data$base_slope != 0, data$base_slope, data$slope_change),
     metric_val = data[[metric]]
   )
   plot_df <- na.omit(plot_df)

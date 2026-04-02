@@ -140,7 +140,7 @@ plot_project_scatter <- function(id, data, metric, metric_unit, metric_display_n
     time = ifelse(
       projectData$base_slope != 0,
       projectData$base_slope,
-      projectData$intervention_slope
+      projectData$slope_change
     ),
     metric_val = projectData[[metric]]
   )
