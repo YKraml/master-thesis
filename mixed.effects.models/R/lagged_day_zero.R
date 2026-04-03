@@ -11,7 +11,7 @@ get_lagged_dataset <- function(df, lag_weeks) {
     df_lagged <- df_ordered %>%
       group_by(id) %>%
       mutate(
-        intervention_jump = dplyr::lag(intervention_jump, n = lag_weeks, default = 0)
+        level_change = dplyr::lag(level_change, n = lag_weeks, default = 0)
       ) %>%
       ungroup()
 
@@ -21,7 +21,7 @@ get_lagged_dataset <- function(df, lag_weeks) {
     df_lagged <- df_ordered %>%
       group_by(id) %>%
       mutate(
-        intervention_jump = dplyr::lead(intervention_jump, n = abs(lag_weeks), default = 1)
+        level_change = dplyr::lead(level_change, n = abs(lag_weeks), default = 1)
       ) %>%
       ungroup()
 
@@ -34,9 +34,9 @@ get_lagged_dataset <- function(df, lag_weeks) {
   # This step is common to all conditions, so we do it at the end
   df_lagged %>%
     mutate(
-      intervention_slope = intervention_jump * (base_slope - lag_weeks / (365 / 7))
+      slope_change = level_change * (base_slope - lag_weeks / (365 / 7))
     ) %>%
-    filter(!is.na(intervention_jump)) # Safety cleanup
+    filter(!is.na(level_change)) # Safety cleanup
 }
 
 # ------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ get_lagged_dataset <- function(df, lag_weeks) {
 compare_lagged_models <- function(data, metric, min_lag = -5, max_lag = 10) {
 
   model_results <- list()
-  f_string <- paste0(metric, " ~ relative_introduction_time * (base_slope + intervention_jump + intervention_slope)")
+  f_string <- paste0(metric, " ~ 1 + base_slope + level_change + slope_change")
 
   message(paste0("   * Starting comparison for lags ", min_lag, " to ", max_lag))
 
@@ -65,7 +65,7 @@ compare_lagged_models <- function(data, metric, min_lag = -5, max_lag = 10) {
     model_fit <- tryCatch({
       lme(
         fixed = as.formula(f_string),
-        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+        random = ~ 1 + base_slope + slope_change + level_change | id,
         data = lagged_data,
         method = "ML",
         control = lmeControl(opt = "optim")

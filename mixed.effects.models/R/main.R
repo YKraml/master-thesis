@@ -82,7 +82,7 @@ metrics <- list(
   numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
   numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
   numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
-  )
+)
 
 
 
@@ -453,8 +453,6 @@ for(language in languages) {
 # Model comparison - Random Effects
 # ------------------------------------------------------------------------------
 
-
-
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
@@ -467,63 +465,70 @@ for(language in languages) {
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
   for (metric in metrics) {
-    metric_name <- metric$name
-    message(metric_name)
+    tryCatch(
+      {
+        metric_name <- metric$name
+        message(metric_name)
 
-    # Skip if file exists
-    file <- file.path(output_dir, sprintf("random_effects_comparison.%s.txt", metric_name))
-    if(file.exists(file)){
-      message("  * Skip")
-      next
+        # Skip if file exists
+        file <- file.path(output_dir, sprintf("random_effects_comparison.%s.txt", metric_name))
+        if(file.exists(file)){
+          message("  * Skip")
+          next
+        }
+
+
+        # Shared parameters
+        fixed_formula <- as.formula(sprintf("%s ~ base_slope + level_change + slope_change", metric_name))
+        ctrl <- lmeControl(opt = "optim")
+
+
+        message("  * 0 Random Effect")
+        m_none <- gls(model = fixed_formula, data = data, method = "ML")
+
+        message("  * 1 Random Effect")
+        m_int   <- lme(fixed = fixed_formula, random = ~ 1 | id, data = data, method = "ML", control = ctrl)
+        m_base  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope | id, data = data, method = "ML", control = ctrl)
+        m_jump  <- lme(fixed = fixed_formula, random = ~ 0 + level_change | id, data = data, method = "ML", control = ctrl)
+        m_slope <- lme(fixed = fixed_formula, random = ~ 0 + slope_change | id, data = data, method = "ML", control = ctrl)
+
+        message("  * 2 Random Effect")
+        m_int_base   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope | id, data = data, method = "ML", control = ctrl)
+        m_int_jump   <- lme(fixed = fixed_formula, random = ~ 1 + level_change | id, data = data, method = "ML", control = ctrl)
+        m_int_slope  <- lme(fixed = fixed_formula, random = ~ 1 + slope_change | id, data = data, method = "ML", control = ctrl)
+        m_base_jump  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
+        m_base_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
+        m_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+        message("  * 3 Random Effect")
+        m_int_base_jump   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
+        m_int_base_slope  <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
+        m_int_jump_slope  <- lme(fixed = fixed_formula, random = ~ 1 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+        m_base_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+        message("  * 4 Random Effect")
+        m_full <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
+
+        message("  * Comparing")
+        model_comparison <- anova(
+          m_none,
+          m_int, m_base, m_jump, m_slope,
+          m_int_base, m_int_jump, m_int_slope, m_base_jump, m_base_slope, m_jump_slope,
+          m_int_base_jump, m_int_base_slope, m_int_jump_slope, m_base_jump_slope,
+          m_full
+        )
+
+        message("  * Saving")
+        capture.output(
+          model_comparison[order(model_comparison$AIC), ],
+          file = file
+        )
+      },
+      error = function(e) {
+        message("Error while comparing.", conditionMessage(e))
+        return(NULL)
+      })
     }
-
-
-    # Shared parameters
-    fixed_formula <- as.formula(sprintf("%s ~ base_slope + level_change + slope_change", metric_name))
-    ctrl <- lmeControl(opt = "optim")
-
-
-    message("  * 0 Random Effect")
-    m_none <- gls(model = fixed_formula, data = data, method = "ML")
-
-    message("  * 1 Random Effect")
-    m_int   <- lme(fixed = fixed_formula, random = ~ 1 | id, data = data, method = "ML", control = ctrl)
-    m_base  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope | id, data = data, method = "ML", control = ctrl)
-    m_jump  <- lme(fixed = fixed_formula, random = ~ 0 + level_change | id, data = data, method = "ML", control = ctrl)
-    m_slope <- lme(fixed = fixed_formula, random = ~ 0 + slope_change | id, data = data, method = "ML", control = ctrl)
-
-    message("  * 2 Random Effect")
-    m_int_base   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope | id, data = data, method = "ML", control = ctrl)
-    m_int_jump   <- lme(fixed = fixed_formula, random = ~ 1 + level_change | id, data = data, method = "ML", control = ctrl)
-    m_int_slope  <- lme(fixed = fixed_formula, random = ~ 1 + slope_change | id, data = data, method = "ML", control = ctrl)
-    m_base_jump  <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
-    m_base_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
-    m_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
-
-    message("  * 3 Random Effect")
-    m_int_base_jump   <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change | id, data = data, method = "ML", control = ctrl)
-    m_int_base_slope  <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + slope_change | id, data = data, method = "ML", control = ctrl)
-    m_int_jump_slope  <- lme(fixed = fixed_formula, random = ~ 1 + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
-    m_base_jump_slope <- lme(fixed = fixed_formula, random = ~ 0 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
-
-    message("  * 4 Random Effect")
-    m_full <- lme(fixed = fixed_formula, random = ~ 1 + base_slope + level_change + slope_change | id, data = data, method = "ML", control = ctrl)
-
-    message("  * Comparing")
-    model_comparison <- anova(
-      m_none,
-      m_int, m_base, m_jump, m_slope,
-      m_int_base, m_int_jump, m_int_slope, m_base_jump, m_base_slope, m_jump_slope,
-      m_int_base_jump, m_int_base_slope, m_int_jump_slope, m_base_jump_slope,
-      m_full
-    )
-
-    message("  * Saving")
-    capture.output(
-      model_comparison[order(model_comparison$AIC), ],
-      file = file
-    )
-  }
 }
 
 
@@ -532,68 +537,68 @@ for(language in languages) {
 
 
 
+
+
+
+
+
+
 # ------------------------------------------------------------------------------
-# Interrupted Time Series Loop
+# Lagged - Day 0
 # ------------------------------------------------------------------------------
+
+
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/plotting/plotting_lagged_transition_time.R")
+source("R/plotting/plotting_lagged_day_zero.R")
+source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
+source("R/plotting/plotting_database_population.R")
+
+
+source("R/saver.R")
+source("R/shared.R")
+source("R/lagged_transition_time.R")
+source("R/lagged_day_zero.R")
 
 
 for(language in languages) {
-  message(paste("---", language, "---"))
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+  data <- get_data(language_name, "treatment", 0)
 
-  data_treatment <- get_data(language, "treatment", 90)
-  data_control   <- get_data(language, "control", 90)
+  message(language_name)
 
-  data_all <- list(
-    treatment = data_treatment,
-    control   = data_control
-  )
+  output_dir <- file.path("plots", language_name, "lagged_day_zero")
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-  for (metric_data in metrics) {
-    metric_name         <- metric_data$name
-
+  for (metric in metrics) {
+    metric_name <- metric$name
     message(metric_name)
 
-    for(group in c("treatment", "control")){
-      message(sprintf(" - %s ", group))
-      data <- data_all[[group]]
+    output_filename <- sprintf("lagged.%s.png", metric_name)
+    output_path <- file.path(output_dir, output_filename)
 
-
-      message("   * Creating folder")
-      out_dir <- file.path("plots", language, "interrupted_time_series", group, metric_name)
-      dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-
-
-      tryCatch({
-        message("   * Creating model")
-        formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
-        model <- lme(
-          fixed = as.formula(formula),
-          random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-          data = data,
-          method = "ML",
-          # correlation = corAR1(form = ~ t | id),
-          control = lmeControl(opt = "optim")
-        )
-
-        message("   * Drawing plots")
-        save_everything(
-          model = model,
-          data = data,
-          out_dir = out_dir,
-          language = language,
-          group = group,
-          metric_data = metric_data
-        )
-
-      }, error = function(e) {
-        warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
-        message(paste0("\n ", warning_msg, "\nError message: ", e$message, "\n"))
-      })
+    if (file.exists(output_path)) {
+      message(" - Skip: ", metric_name)
+      next
     }
+
+    message(" - Generating: ", metric_name)
+    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 20)
+
+    save_png(
+      expression = plot_lag_comparison(result_table),
+      file = output_path
+    )
   }
 }
-
-
 
 
 
@@ -605,74 +610,71 @@ for(language in languages) {
 # Lagged - Transition Time
 # ------------------------------------------------------------------------------
 
-for (metric_key in names(metrics)) {
-  metric_data <- metrics[[metric_key]]
-  metric_name <- metric_data$name
-  message(metric_name)
 
-  # Get data from the different models with the lagged data
-  results_list <- get_results(metric_name, 210)
-
-  # Create folder
-  out_dir <- file.path("plots", "lagged")
-  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-
-  # transform data
-  results_matrix <- do.call(rbind, results_list)
-  x_values <- results_matrix[, 1]
-  effect_names <- colnames(results_matrix)[-1]
-
-  # create and safe plot
-  save_multipanel_png(
-    expression = {
-      for (i in 1:length(effect_names)) {
-        y_values <- results_matrix[, i + 1]
-        effect_name <- effect_names[i]
-        plot_lagged(effect_name, x_values, y_values)
-      }
-    },
-    file = file.path(out_dir, sprintf("lagged.%s.png", metric_name)),
-    height = 15,
-    width = 40,
-    mfrow = c(2,4)
-  )
-
-}
-
-# ------------------------------------------------------------------------------
-# Lagged - Day 0
-# ------------------------------------------------------------------------------
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/plotting/plotting_lagged_transition_time.R")
+source("R/plotting/plotting_lagged_day_zero.R")
+source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
+source("R/plotting/plotting_database_population.R")
 
 
-output_dir <- file.path("plots", "lagged_day_zero")
-dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+source("R/saver.R")
+source("R/shared.R")
+source("R/lagged_transition_time.R")
+source("R/lagged_day_zero.R")
 
-data_treatment <- get_data("treatment", 90)
-data <- data_treatment
 
+for(language in languages) {
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+  message(language_name)
 
-for (metric_name in names(metrics)) {
-  metric_unit <- metrics[[metric_name]]
+  output_dir <- file.path("plots", language_name, "lagged_transition_time")
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-  output_filename <- sprintf("lagged.%s.png", metric_name)
-  output_path <- file.path(output_dir, output_filename)
+  for (metric in metrics) {
+    metric_name <- metric$name
+    message(metric_name)
 
-  if (file.exists(output_path)) {
-    message(" - Skip: ", metric_name)
-    next
+    # Get data from the different models with the lagged data
+    results_list <- get_lagged_results(language_name, metric_name, 42)
+
+    # Create folder
+    dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+    # transform data
+    results_matrix <- do.call(rbind, results_list)
+    x_values <- results_matrix[, 1]
+    effect_names <- colnames(results_matrix)[-1]
+
+    # create and safe plot
+    save_multipanel_png(
+      expression = {
+        for (i in 1:length(effect_names)) {
+          y_values <- results_matrix[, i + 1]
+          effect_name <- effect_names[i]
+          plot_lagged(effect_name, x_values, y_values, language_color)
+        }
+      },
+      file = file.path(output_dir, sprintf("lagged.%s.png", metric_name)),
+      height = 15,
+      width = 15,
+      mfrow = c(2,2)
+    )
+
   }
-
-  message(" - Generating: ", metric_name)
-
-  # Use metric_name here
-  result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 20)
-
-  # If plot_lag_comparison accepts a Y-axis label, you can use 'metric_unit' here
-  save_png(
-    expression = plot_lag_comparison(result_table),
-    file = output_path
-  )
 }
+
+
+
+
 
 
 
@@ -743,6 +745,68 @@ for(language in languages){
     )
   }
 
+}
+
+
+# ------------------------------------------------------------------------------
+# Interrupted Time Series Loop
+# ------------------------------------------------------------------------------
+
+
+for(language in languages) {
+  message(paste("---", language, "---"))
+
+  data_treatment <- get_data(language, "treatment", 90)
+  data_control   <- get_data(language, "control", 90)
+
+  data_all <- list(
+    treatment = data_treatment,
+    control   = data_control
+  )
+
+  for (metric_data in metrics) {
+    metric_name         <- metric_data$name
+
+    message(metric_name)
+
+    for(group in c("treatment", "control")){
+      message(sprintf(" - %s ", group))
+      data <- data_all[[group]]
+
+
+      message("   * Creating folder")
+      out_dir <- file.path("plots", language, "interrupted_time_series", group, metric_name)
+      dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+
+      tryCatch({
+        message("   * Creating model")
+        formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
+        model <- lme(
+          fixed = as.formula(formula),
+          random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+          data = data,
+          method = "ML",
+          # correlation = corAR1(form = ~ t | id),
+          control = lmeControl(opt = "optim")
+        )
+
+        message("   * Drawing plots")
+        save_everything(
+          model = model,
+          data = data,
+          out_dir = out_dir,
+          language = language,
+          group = group,
+          metric_data = metric_data
+        )
+
+      }, error = function(e) {
+        warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
+        message(paste0("\n ", warning_msg, "\nError message: ", e$message, "\n"))
+      })
+    }
+  }
 }
 
 
