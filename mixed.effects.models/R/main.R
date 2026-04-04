@@ -548,25 +548,6 @@ for(language in languages) {
 # ------------------------------------------------------------------------------
 
 
-source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_fixed_effects.R")
-source("R/plotting/plotting_random_effects.R")
-source("R/plotting/plotting_residuals.R")
-source("R/plotting/plotting_general.R")
-source("R/plotting/plotting_lagged_transition_time.R")
-source("R/plotting/plotting_lagged_day_zero.R")
-source("R/plotting/plotting_cem_projects.R")
-source("R/plotting/plotting_sensitivity.R")
-source("R/plotting/plotting_effects_distributions.R")
-source("R/plotting/plotting_database_population.R")
-
-
-source("R/saver.R")
-source("R/shared.R")
-source("R/lagged_transition_time.R")
-source("R/lagged_day_zero.R")
-
-
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
@@ -591,7 +572,7 @@ for(language in languages) {
     }
 
     message(" - Generating: ", metric_name)
-    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 20)
+    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 30)
 
     save_png(
       expression = plot_lag_comparison(result_table),
@@ -610,51 +591,35 @@ for(language in languages) {
 # Lagged - Transition Time
 # ------------------------------------------------------------------------------
 
-
-source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_fixed_effects.R")
-source("R/plotting/plotting_random_effects.R")
-source("R/plotting/plotting_residuals.R")
-source("R/plotting/plotting_general.R")
-source("R/plotting/plotting_lagged_transition_time.R")
-source("R/plotting/plotting_lagged_day_zero.R")
-source("R/plotting/plotting_cem_projects.R")
-source("R/plotting/plotting_sensitivity.R")
-source("R/plotting/plotting_effects_distributions.R")
-source("R/plotting/plotting_database_population.R")
-
-
-source("R/saver.R")
-source("R/shared.R")
-source("R/lagged_transition_time.R")
-source("R/lagged_day_zero.R")
-
-
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
   language_color_secondary <- language$color_secondary
   message(language_name)
 
-  output_dir <- file.path("plots", language_name, "lagged_transition_time")
-  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+  out_dir <- file.path("plots", language_name, "lagged_transition_time")
+  dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
   for (metric in metrics) {
     metric_name <- metric$name
     message(metric_name)
 
-    # Get data from the different models with the lagged data
-    results_list <- get_lagged_results(language_name, metric_name, 42)
+    # skip if file exists
+    output_path <- file.path(out_dir, sprintf("lagged.%s.png", metric_name))
+    if (file.exists(output_path)) {
+      message(" - Skip: ", metric_name)
+      next
+    }
 
-    # Create folder
-    dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+    # do analysis
+    results_list <- get_lagged_results(language_name, metric_name, 365)
 
     # transform data
     results_matrix <- do.call(rbind, results_list)
     x_values <- results_matrix[, 1]
     effect_names <- colnames(results_matrix)[-1]
 
-    # create and safe plot
+    # create plot
     save_multipanel_png(
       expression = {
         for (i in 1:length(effect_names)) {
@@ -663,7 +628,7 @@ for(language in languages) {
           plot_lagged(effect_name, x_values, y_values, language_color)
         }
       },
-      file = file.path(output_dir, sprintf("lagged.%s.png", metric_name)),
+      file = output_path,
       height = 15,
       width = 15,
       mfrow = c(2,2)
@@ -671,6 +636,7 @@ for(language in languages) {
 
   }
 }
+
 
 
 

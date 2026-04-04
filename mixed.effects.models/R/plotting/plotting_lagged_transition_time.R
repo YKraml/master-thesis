@@ -29,17 +29,6 @@ plot_lagged <- function(effect_name, x_values, y_values, color){
        cex.main = 1)
 
   grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
-
-  # 4. Add the raw derivative line
-  lines(x_deriv, derivative, col = "darkgrey", lty = "dashed", lwd = 2)
-
-  # 5. Add Legend
-  legend("right",
-         legend = c("Estimate", "1st Derivative"),
-         col = c(color, "darkgrey"),
-         lty = c(1, 2),
-         pch = c(20, NA),
-         cex = 0.8)
 }
 
 # ------------------------------------------------------------------------------
