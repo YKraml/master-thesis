@@ -591,6 +591,25 @@ for(language in languages) {
 # Lagged - Transition Time
 # ------------------------------------------------------------------------------
 
+
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/plotting/plotting_lagged_transition_time.R")
+source("R/plotting/plotting_lagged_day_zero.R")
+source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
+source("R/plotting/plotting_database_population.R")
+source("R/saver.R")
+source("R/shared.R")
+source("R/lagged_transition_time.R")
+source("R/lagged_day_zero.R")
+
+
+
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
@@ -604,36 +623,58 @@ for(language in languages) {
     metric_name <- metric$name
     message(metric_name)
 
-    # skip if file exists
-    output_path <- file.path(out_dir, sprintf("lagged.%s.png", metric_name))
-    if (file.exists(output_path)) {
-      message(" - Skip: ", metric_name)
-      next
+
+    # data loading and caching
+    csv_cache_path <- file.path(out_dir, sprintf("%s.results.csv", metric_name))
+    if (file.exists(csv_cache_path)) {
+      message(" - Loading from cache: ", csv_cache_path)
+      results_matrix <- read.csv(csv_cache_path, check.names = FALSE)
+      # Convert to matrix if your plotting functions require it,
+      # though data.frames usually work fine in R indexing.
+      results_matrix <- as.matrix(results_matrix)
+    } else {
+      message(" - Computing results")
+      results_list <- get_lagged_results(language_name, metric_name, 365)
+
+      # transform data
+      results_matrix <- do.call(rbind, results_list)
+
+      # Save to CSV for next time
+      write.csv(results_matrix, csv_cache_path, row.names = FALSE)
     }
 
-    # do analysis
-    results_list <- get_lagged_results(language_name, metric_name, 365)
 
-    # transform data
-    results_matrix <- do.call(rbind, results_list)
+
     x_values <- results_matrix[, 1]
     effect_names <- colnames(results_matrix)[-1]
 
-    # create plot
-    save_multipanel_png(
+    # create plot 1
+    save_png(
       expression = {
-        for (i in 1:length(effect_names)) {
-          y_values <- results_matrix[, i + 1]
-          effect_name <- effect_names[i]
-          plot_lagged(effect_name, x_values, y_values, language_color)
-        }
+        par(mfrow = c(2, 2), oma = c(0, 0, 0, 0), mar = c(5, 5, 2, 1))
+        plot_lagged("Intercept", x_values, results_matrix[, 2], language_color)
+        plot_lagged("Base Slope", x_values, results_matrix[, 3], language_color)
+        plot_lagged("Level Change", x_values, results_matrix[, 4], language_color)
+        plot_lagged("Slope Change", x_values, results_matrix[, 5], language_color)
       },
-      file = output_path,
-      height = 15,
-      width = 15,
-      mfrow = c(2,2)
+      file = file.path(out_dir, sprintf("%s.lagged.png", metric_name)),
+      height = 10,
+      width = 15
     )
 
+    # create plot 2
+    save_png(
+      expression = {
+        par(mfrow = c(2, 2), oma = c(0, 0, 0, 0), mar = c(5, 5, 2, 1))
+        plot_max_abs_normalized_change("Intercept", x_values, results_matrix[, 2], language_color)
+        plot_max_abs_normalized_change("Base Slope", x_values, results_matrix[, 3], language_color)
+        plot_max_abs_normalized_change("Level Change", x_values, results_matrix[, 4], language_color)
+        plot_max_abs_normalized_change("Slope Change", x_values, results_matrix[, 5], language_color)
+      },
+      file = file.path(out_dir, sprintf("%s.lagged_relative.png", metric_name)),
+      height = 10,
+      width = 15
+    )
   }
 }
 

@@ -5,7 +5,7 @@ get_lagged_results <- function(language_name, metric_name, days){
   results_list <- list()
 
   for (t_time in transition_times) {
-    message(t_time)
+    message(paste0(" - ", t_time))
     data_treatment <- get_data(language_name, "treatment", t_time)
     f_full <- sprintf("%s ~ base_slope + level_change + slope_change", metric_name)
     model <- tryCatch({
