@@ -25,6 +25,7 @@ library(glmertree)
 library(mgcv)
 library(robustlmm)
 library(hexbin)
+library(data.table)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -38,8 +39,6 @@ source("R/plotting/plotting_sensitivity.R")
 source("R/plotting/plotting_effects_distributions.R")
 source("R/plotting/plotting_database_population.R")
 
-
-source("R/saver.R")
 source("R/shared.R")
 source("R/lagged_transition_time.R")
 source("R/lagged_day_zero.R")
@@ -56,32 +55,32 @@ languages <- list(
 
 metrics <- list(
   # All findings
-  findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1 kLOC"),
+  findingsDensity          = list(name = "findingsDensity",          display_name = "Findings Density",          unit = "Findings per 1 kLOC", interaction = "time_saturated"),
 
   # Findings groups
-  comprehensibilityDensity = list(name = "comprehensibilityDensity", display_name = "Comprehensibility Density", unit = "Findings per 1 kLOC"),
-  correctnessDensity       = list(name = "correctnessDensity",       display_name = "Correctness Density",       unit = "Findings per 1 kLOC"),
-  documentationDensity     = list(name = "documentationDensity",     display_name = "Documentation Density",     unit = "Findings per 1 kLOC"),
-  efficiencyDensity        = list(name = "efficiencyDensity",        display_name = "Efficiency Density",        unit = "Findings per 1 kLOC"),
-  errorHandlingDensity     = list(name = "errorHandlingDensity",     display_name = "Error Handling Density",    unit = "Findings per 1 kLOC"),
-  redundancyDensity        = list(name = "redundancyDensity",        display_name = "Redundancy Density",        unit = "Findings per 1 kLOC"),
-  structureDensity         = list(name = "structureDensity",         display_name = "Structure Density",         unit = "Findings per 1 kLOC"),
-  securityDensity          = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1 kLOC"),
+  comprehensibilityDensity = list(name = "comprehensibilityDensity", display_name = "Comprehensibility Density", unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  correctnessDensity       = list(name = "correctnessDensity",       display_name = "Correctness Density",       unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  documentationDensity     = list(name = "documentationDensity",     display_name = "Documentation Density",     unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  efficiencyDensity        = list(name = "efficiencyDensity",        display_name = "Efficiency Density",        unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  errorHandlingDensity     = list(name = "errorHandlingDensity",     display_name = "Error Handling Density",    unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  redundancyDensity        = list(name = "redundancyDensity",        display_name = "Redundancy Density",        unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  structureDensity         = list(name = "structureDensity",         display_name = "Structure Density",         unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  securityDensity          = list(name = "securityDensity",          display_name = "Security Density",          unit = "Findings per 1 kLOC", interaction = "time_saturated"),
 
   # Structure metrics
-  longFiles                = list(name = "longFiles",                display_name = "Long Files",                unit = "Findings"),
-  longMethods              = list(name = "longMethods",              display_name = "Long Method",               unit = "Findings"),
-  deepNesting              = list(name = "deepNesting",              display_name = "Deep Nesting",              unit = "Findings"),
-  longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1 kLOC"),
-  longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1 kLOC"),
-  deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1 kLOC"),
-  cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%"),
-  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC per File"),
+  longFiles                = list(name = "longFiles",                display_name = "Long Files",                unit = "Findings",            interaction = "relative_introduction_time"),
+  longMethods              = list(name = "longMethods",              display_name = "Long Method",               unit = "Findings",            interaction = "relative_introduction_time"),
+  deepNesting              = list(name = "deepNesting",              display_name = "Deep Nesting",              unit = "Findings",            interaction = "relative_introduction_time"),
+  longFilesDensity         = list(name = "longFilesDensity",         display_name = "Long Files Density",        unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  longMethodDensity        = list(name = "longMethodDensity",        display_name = "Long Method Density",       unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  deepNestingDensity       = list(name = "deepNestingDensity",       display_name = "Deep Nesting Density",      unit = "Findings per 1 kLOC", interaction = "time_saturated"),
+  cloneCoverage            = list(name = "cloneCoverage",            display_name = "Clone Coverage",            unit = "%",                   interaction = "time_saturated"),
+  averageFileLoc           = list(name = "averageFileLoc",           display_name = "Average File Size",         unit = "LOC per File",        interaction = "time_saturated"),
 
   # Git metrics
-  numberOfForks            = list(name = "numberOfForks",           display_name = "Number of Forks",            unit = "Forks"),
-  numberOfIssues           = list(name = "numberOfIssues",          display_name = "Number of Issues",           unit = "Issues"),
-  numberOfContributors     = list(name = "numberOfContributors",    display_name = "Number of Contributors",     unit = "Contributors")
+  numberOfForks            = list(name = "numberOfForks",            display_name = "Number of Forks",            unit = "Forks",              interaction = "relative_introduction_time"),
+  numberOfIssues           = list(name = "numberOfIssues",           display_name = "Number of Issues",           unit = "Issues",             interaction = "relative_introduction_time"),
+  numberOfContributors     = list(name = "numberOfContributors",     display_name = "Number of Contributors",     unit = "Contributors",       interaction = "relative_introduction_time")
 )
 
 
@@ -533,82 +532,9 @@ for(language in languages) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-# ------------------------------------------------------------------------------
-# Lagged - Day 0
-# ------------------------------------------------------------------------------
-
-
-for(language in languages) {
-  language_name <- language$name
-  language_color <- language$color
-  language_color_secondary <- language$color_secondary
-  data <- get_data(language_name, "treatment", 0)
-
-  message(language_name)
-
-  output_dir <- file.path("plots", language_name, "lagged_day_zero")
-  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-
-  for (metric in metrics) {
-    metric_name <- metric$name
-    message(metric_name)
-
-    output_filename <- sprintf("lagged.%s.png", metric_name)
-    output_path <- file.path(output_dir, output_filename)
-
-    if (file.exists(output_path)) {
-      message(" - Skip: ", metric_name)
-      next
-    }
-
-    message(" - Generating: ", metric_name)
-    result_table <- compare_lagged_models(data, metric = metric_name, min_lag = -10, max_lag = 30)
-
-    save_png(
-      expression = plot_lag_comparison(result_table),
-      file = output_path
-    )
-  }
-}
-
-
-
-
-
-
-
 # ------------------------------------------------------------------------------
 # Lagged - Transition Time
 # ------------------------------------------------------------------------------
-
-
-source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_fixed_effects.R")
-source("R/plotting/plotting_random_effects.R")
-source("R/plotting/plotting_residuals.R")
-source("R/plotting/plotting_general.R")
-source("R/plotting/plotting_lagged_transition_time.R")
-source("R/plotting/plotting_lagged_day_zero.R")
-source("R/plotting/plotting_cem_projects.R")
-source("R/plotting/plotting_sensitivity.R")
-source("R/plotting/plotting_effects_distributions.R")
-source("R/plotting/plotting_database_population.R")
-source("R/saver.R")
-source("R/shared.R")
-source("R/lagged_transition_time.R")
-source("R/lagged_day_zero.R")
-
-
 
 for(language in languages) {
   language_name <- language$name
@@ -623,32 +549,49 @@ for(language in languages) {
     metric_name <- metric$name
     message(metric_name)
 
-
     # data loading and caching
     csv_cache_path <- file.path(out_dir, sprintf("%s.results.csv", metric_name))
+    results_matrix <- NULL
+
     if (file.exists(csv_cache_path)) {
       message(" - Loading from cache: ", csv_cache_path)
-      results_matrix <- read.csv(csv_cache_path, check.names = FALSE)
-      # Convert to matrix if your plotting functions require it,
-      # though data.frames usually work fine in R indexing.
-      results_matrix <- as.matrix(results_matrix)
-    } else {
+      # Use tryCatch in case the CSV exists but is empty/corrupt
+      results_matrix <- tryCatch({
+        data <- read.csv(csv_cache_path, check.names = FALSE)
+        if(nrow(data) == 0) stop("Empty CSV")
+        as.matrix(data)
+      }, error = function(e) {
+        message("   ! Cache corrupt or empty, recomputing...")
+        return(NULL)
+      })
+    }
+
+    # If cache didn't exist or was invalid, compute
+    if (is.null(results_matrix)) {
       message(" - Computing results")
       results_list <- get_lagged_results(language_name, metric_name, 365)
 
-      # transform data
-      results_matrix <- do.call(rbind, results_list)
+      # Check if get_lagged_results returned an empty list or NULL
+      if (is.null(results_list) || length(results_list) == 0) {
+        warning(sprintf("   ! No data returned for %s in %s. Skipping.", metric_name, language_name))
+        next # Skip to the next metric
+      }
 
-      # Save to CSV for next time
+      results_matrix <- do.call(rbind, results_list)
       write.csv(results_matrix, csv_cache_path, row.names = FALSE)
+    }
+
+    # Double check matrix dimensions before plotting
+    if (ncol(results_matrix) < 5) {
+      warning(sprintf("   ! Results matrix for %s has insufficient columns. Skipping.", metric_name))
+      next
     }
 
 
 
     x_values <- results_matrix[, 1]
-    effect_names <- colnames(results_matrix)[-1]
 
-    # create plot 1
+    # Plot 1
     save_png(
       expression = {
         par(mfrow = c(2, 2), oma = c(0, 0, 0, 0), mar = c(5, 5, 2, 1))
@@ -662,7 +605,7 @@ for(language in languages) {
       width = 15
     )
 
-    # create plot 2
+    # Plot 2
     save_png(
       expression = {
         par(mfrow = c(2, 2), oma = c(0, 0, 0, 0), mar = c(5, 5, 2, 1))
@@ -691,65 +634,87 @@ for(language in languages) {
 # Model comparison - Interaction Term
 # ------------------------------------------------------------------------------
 
-
 for(language in languages){
-  message(paste("---", language, "---"))
-  data <- get_data(language, "treatment", 90)
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
 
-  output_dir <- file.path("plots", language, "time_interaction_comparison")
+  message(paste("---", language_name, "---"))
+
+  output_dir <- file.path("plots", language_name, "time_interaction_comparison")
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
   for (metric in metrics) {
     metric_name <- metric$name
     message(metric_name)
 
-    # Shared parameters
-    effects <- "(base_slope + intervention_jump + intervention_slope)"
-    random_effects <- ~ 1 + base_slope + intervention_jump + intervention_slope | id
-    ctrl <- lmeControl(opt = "optim")
+    file <- file.path(output_dir, sprintf("%s.%s.time_interaction_comparison.txt", language_name, metric_name))
+    if (file.exists(file)) {
+      next
+    }
 
-    message("1. Linear Model")
-    f_lin <- as.formula(sprintf("%s ~ relative_introduction_time * %s", metric_name, effects))
-    m_lin <- lme(fixed = f_lin, random = random_effects, data = data, method = "ML", control = ctrl)
+    file.exists(file)
 
-    message("2. Saturation Model")
-    f_sat <- as.formula(sprintf("%s ~ time_saturated * %s", metric_name, effects))
-    m_sat <- lme(fixed = f_sat, random = random_effects, data = data, method = "ML", control = ctrl)
+    data <- get_data(language, "treatment", get_transition_time(language_name, metric_name))
 
-    message("3. Logarithmic Model")
-    f_log <- as.formula(sprintf("%s ~ log_time * %s", metric_name, effects))
-    m_log <- lme(fixed = f_log, random = random_effects, data = data, method = "ML", control = ctrl)
+    tryCatch({
 
-    message("4. Polynomial Models (Degrees 1 to 3)")
-    f_poly1 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 1) * %s", metric_name, effects))
-    m_poly1 <- lme(fixed = f_poly1, random = random_effects, data = data, method = "ML", control = ctrl)
+      # Shared parameters
+      effects <- "(base_slope + level_change + slope_change)"
+      random_effects <- ~ 1 + base_slope + level_change + slope_change | id
+      ctrl <- lmeControl(opt = "optim")
 
-    f_poly2 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 2) * %s", metric_name, effects))
-    m_poly2 <- lme(fixed = f_poly2, random = random_effects, data = data, method = "ML", control = ctrl)
+      message("1. Linear Model")
+      f_lin <- as.formula(sprintf("%s ~ relative_introduction_time * %s", metric_name, effects))
+      m_lin <- lme(fixed = f_lin, random = random_effects, data = data, method = "ML", control = ctrl)
 
-    f_poly3 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 3) * %s", metric_name, effects))
-    m_poly3 <- lme(fixed = f_poly3, random = random_effects, data = data, method = "ML", control = ctrl)
+      message("2. Saturation Model")
+      f_sat <- as.formula(sprintf("%s ~ time_saturated * %s", metric_name, effects))
+      m_sat <- lme(fixed = f_sat, random = random_effects, data = data, method = "ML", control = ctrl)
+
+      message("3. Logarithmic Model")
+      f_log <- as.formula(sprintf("%s ~ time_log * %s", metric_name, effects))
+      m_log <- lme(fixed = f_log, random = random_effects, data = data, method = "ML", control = ctrl)
+
+      message("4. Exponential Model")
+      f_exp <- as.formula(sprintf("%s ~ time_e * %s", metric_name, effects))
+      m_exp <- lme(fixed = f_log, random = random_effects, data = data, method = "ML", control = ctrl)
+
+      message("5. Polynomial Models (Degrees 1 to 3)")
+      f_poly1 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 1) * %s", metric_name, effects))
+      m_poly1 <- lme(fixed = f_poly1, random = random_effects, data = data, method = "ML", control = ctrl)
+
+      f_poly2 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 2) * %s", metric_name, effects))
+      m_poly2 <- lme(fixed = f_poly2, random = random_effects, data = data, method = "ML", control = ctrl)
+
+      f_poly3 <- as.formula(sprintf("%s ~ poly(relative_introduction_time, 3) * %s", metric_name, effects))
+      m_poly3 <- lme(fixed = f_poly3, random = random_effects, data = data, method = "ML", control = ctrl)
 
 
-    message("5. Natural Spline Models (Degrees of Freedom 1 to 3)")
-    f_spline1 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 1) * %s", metric_name, effects))
-    m_spline1 <- lme(fixed = f_spline1, random = random_effects, data = data, method = "ML", control = ctrl)
+      message("6. Natural Spline Models (Degrees of Freedom 1 to 3)")
+      f_spline1 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 1) * %s", metric_name, effects))
+      m_spline1 <- lme(fixed = f_spline1, random = random_effects, data = data, method = "ML", control = ctrl)
 
-    f_spline2 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 2) * %s", metric_name, effects))
-    m_spline2 <- lme(fixed = f_spline2, random = random_effects, data = data, method = "ML", control = ctrl)
+      f_spline2 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 2) * %s", metric_name, effects))
+      m_spline2 <- lme(fixed = f_spline2, random = random_effects, data = data, method = "ML", control = ctrl)
 
-    f_spline3 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 3) * %s", metric_name, effects))
-    m_spline3 <- lme(fixed = f_spline3, random = random_effects, data = data, method = "ML", control = ctrl)
+      f_spline3 <- as.formula(sprintf("%s ~ ns(relative_introduction_time, df = 3) * %s", metric_name, effects))
+      m_spline3 <- lme(fixed = f_spline3, random = random_effects, data = data, method = "ML", control = ctrl)
 
 
-    message("6. Compare models")
-    model_comparison <- anova(m_lin, m_sat, m_log, m_poly1, m_poly2, m_poly3, m_spline1, m_spline2, m_spline3)
+      message("6. Compare models")
+      model_comparison <- anova(m_lin, m_sat, m_log, m_exp, m_poly1, m_poly2, m_poly3, m_spline1, m_spline2, m_spline3)
 
-    # Save results sorted by AIC
-    capture.output(
-      model_comparison[order(model_comparison$AIC), ],
-      file = file.path(output_dir, sprintf("%s.%s.time_interaction_comparison.txt", language, metric_name))
-    )
+      # Save results sorted by AIC
+      capture.output(
+        model_comparison[order(model_comparison$AIC), ],
+        file = file
+      )
+
+
+    }, error = function(e) { message("Error: ", e$message); return(NULL) })
+
+
   }
 
 }
@@ -760,58 +725,216 @@ for(language in languages){
 # ------------------------------------------------------------------------------
 
 
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/plotting/plotting_lagged_transition_time.R")
+source("R/plotting/plotting_lagged_day_zero.R")
+source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
+source("R/plotting/plotting_database_population.R")
+
+source("R/shared.R")
+source("R/lagged_transition_time.R")
+source("R/lagged_day_zero.R")
+
+
 for(language in languages) {
-  message(paste("---", language, "---"))
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+  message(paste("---", language_name, "---"))
 
-  data_treatment <- get_data(language, "treatment", 90)
-  data_control   <- get_data(language, "control", 90)
-
-  data_all <- list(
-    treatment = data_treatment,
-    control   = data_control
-  )
 
   for (metric_data in metrics) {
     metric_name         <- metric_data$name
+    metric_display_name <- metric_data$display_name
+    metric_unit         <- metric_data$unit
+    interaction         <- metric_data$interaction
 
     message(metric_name)
+    transition_n_days <- get_transition_time(language_name, metric_name)
+    data_treatment <- get_data(language, "treatment", transition_n_days)
+    data_control   <- get_data(language, "control", transition_n_days)
+
+    data_treatment <- data_treatment[complete.cases(data_treatment), ]
+    data_control   <- data_control[complete.cases(data_control), ]
+
+
+    data_all <- list(
+      treatment = data_treatment,
+      control   = data_control
+    )
+
 
     for(group in c("treatment", "control")){
       message(sprintf(" - %s ", group))
       data <- data_all[[group]]
 
 
-      message("   * Creating folder")
-      out_dir <- file.path("plots", language, "interrupted_time_series", group, metric_name)
+      message("   * Creating Folder")
+      out_dir <- file.path("plots", language_name, "interrupted_time_series", group, metric_name)
       dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 
-      tryCatch({
-        message("   * Creating model")
-        formula <- sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)
+      # tryCatch({
+        message("   * Creating Model")
         model <- lme(
-          fixed = as.formula(formula),
-          random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
+          fixed = as.formula(sprintf("%s ~ time_saturated * (1 + base_slope + slope_change + level_change)", metric_name)),
+          random = ~ 1 + base_slope + slope_change + level_change | id,
           data = data,
           method = "ML",
           # correlation = corAR1(form = ~ t | id),
           control = lmeControl(opt = "optim")
         )
 
-        message("   * Drawing plots")
-        save_everything(
-          model = model,
-          data = data,
-          out_dir = out_dir,
-          language = language,
-          group = group,
-          metric_data = metric_data
+        message("   * Extracting Effects")
+        random_effects <- ranef(model)
+        fixed_effects <- fixef(model)
+        prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
+
+
+        message("   * Saving Summary")
+        capture.output(
+          summary(model),
+          file = file.path(out_dir, paste0(prefix, "model_summary.txt"))
         )
 
-      }, error = function(e) {
-        warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
-        message(paste0("\n ", warning_msg, "\nError message: ", e$message, "\n"))
-      })
+
+
+        # 1. print model sensitivity
+        message("   * Start Plotting")
+        save_png(
+          expression = plot_model_sensitivity(model, interaction),
+          file = file.path(out_dir, paste0(prefix, "sensitivity.png"))
+        )
+
+
+        # 2. print fixed effects
+        save_multipanel_png(
+          expression = {
+            plot_predicted(data, model,  0.1, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  0.5, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  1  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  2  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  3  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  4  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days, interaction)
+          },
+          file = file.path(out_dir, paste0(prefix, "predicted.png")),
+          mfrow = c(4, 2),
+          width = 20,
+          height = 28
+        )
+
+        # 3. print qq of residuals
+        save_png(
+          expression = plot_residuals_qq(data, model),
+          file = file.path(out_dir, paste0(prefix, "residual_qq.png"))
+        )
+
+        # 4. print residuals vs fitted
+        save_png(
+          expression = plot_residuals_vs_fitted(data, model, language_color, metric_display_name, metric_unit),
+          file = file.path(out_dir, paste0(prefix, "residual_vs_fitted.png"))
+        )
+
+        # 5. print residuals vs time
+        save_png(
+          expression = plot_residuals_vs_time(data, model, language_color),
+          file = file.path(out_dir, paste0(prefix, "residual_vs_time.png"))
+        )
+
+        # 6. print residuals vs age
+        save_png(
+          expression = plot_residuals_vs_age(data, model, language_color),
+          file = file.path(out_dir, paste0(prefix, "residual_vs_age.png"))
+        )
+
+        # 7. print residuals histogram
+        save_png(
+          expression = plot_residuals_histogram(data, model, language_color),
+          file = file.path(out_dir, paste0(prefix, "residual_hist.png"))
+        )
+
+        # 8. print Auto- and Cross- Covariance and -Correlation Function Estimation
+        save_png(
+          expression = acf(resid(model, type = "normalized")),
+          file = file.path(out_dir, paste0(prefix, "acf.png"))
+        )
+
+        # 9. print random effects correlation
+        save_png(
+          expression = plot_random_effects_correlation(model, metric_display_name, language_color),
+          file = file.path(out_dir, paste0(prefix, "random_effects_correlation.png"))
+        )
+
+        # 10. print random effects histograms
+        save_multipanel_png(
+          expression = {
+            plot_random_effects_histogram(random_effects$`(Intercept)`, "lightblue", "Intercept", random_effects["(Intercept)"])
+            plot_random_effects_histogram(random_effects$base_slope, "lightgreen", "Base Slope", random_effects["base_slope"])
+            plot_random_effects_histogram(random_effects$slope_change, "darkseagreen1", "Slope Change", random_effects["slope_change"])
+            plot_random_effects_histogram(random_effects$level_change, "paleturquoise1", "Level Change", random_effects["level_change"])
+          },
+          file = file.path(out_dir, paste0(prefix, "random_effect_hist.png")),
+          width = 20,
+          height = 14
+        )
+
+        # 11. print random effects qq-plot
+        save_multipanel_png(
+          expression = {
+            qqnorm(random_effects[, "(Intercept)"], main = "Intercept"); qqline(random_effects[, "(Intercept)"])
+            qqnorm(random_effects[, "base_slope"], main = "Base Slope"); qqline(random_effects[, "base_slope"])
+            qqnorm(random_effects[, "slope_change"], main = "Slope Change"); qqline(random_effects[, "slope_change"])
+            qqnorm(random_effects[, "level_change"], main = "Level Change"); qqline(random_effects[, "level_change"])
+          },
+          file = file.path(out_dir, paste0(prefix, "random_effects_qq.png")),
+        )
+
+        # 12. print random effects vs residuals
+        effects <- c("(Intercept)", "base_slope", "slope_change", "level_change")
+        plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
+        save_png(
+          expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),
+          file = file.path(out_dir, paste0(prefix, "random_effects_residuals.png")),
+          width = 30,
+          height = 20
+        )
+
+        # 13. print prediction for project
+        save_multipanel_png(
+          expression = {
+
+            i <- 0
+            for (id in unique(data[["id"]])) {
+              plot_project(model, id, data, metric_name, metric_unit, metric_display_name, transition_n_days, interaction, language_color)
+              i <- i + 1
+              if(i >= 8){
+                break
+              }
+            }
+
+          },
+          file = file.path(out_dir, paste0(prefix, "projects.png")),
+          mfrow = c(4, 2),
+          width = 20,
+          height = 28
+        )
+
+
+
+
+
+      # }, error = function(e) {
+      #   warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
+      #   message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
+      # })
     }
   }
 }

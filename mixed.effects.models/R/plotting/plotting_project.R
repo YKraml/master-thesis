@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 
-plot_project <- function(model, id, data, metric, metric_unit, metric_display_name, transition_n_days) {
+plot_project <- function(model, id, data, metric, metric_unit, metric_display_name, transition_n_days, interaction, color) {
   gap_end <- transition_n_days / 365
 
   projectData <- data[data$id == id, ]
@@ -8,12 +8,12 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
 
   randomEffectsFromProject <- ranef(model)[id, ]
 
-  parameters <- get_parameters(model, relative_introduction_time)
+  parameters <- get_parameters(model, relative_introduction_time, interaction)
 
-  intercept          <- randomEffectsFromProject[["(Intercept)"]]        + parameters$Value[1]
-  base_slope         <- randomEffectsFromProject[["base_slope"]]         + parameters$Value[2]
-  intervention_jump  <- randomEffectsFromProject[["intervention_jump"]]  + parameters$Value[3]
-  intervention_slope <- randomEffectsFromProject[["intervention_slope"]] + parameters$Value[4]
+  intercept          <- randomEffectsFromProject[["(Intercept)"]]   + parameters$Value[1]
+  base_slope         <- randomEffectsFromProject[["base_slope"]]    + parameters$Value[2]
+  level_change       <- randomEffectsFromProject[["level_change"]]  + parameters$Value[3]
+  slope_change       <- randomEffectsFromProject[["slope_change"]]  + parameters$Value[4]
 
   # compute predicted values
   x <- seq(max(-2, -relative_introduction_time), 2, by = 0.01)
@@ -22,19 +22,19 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
     y = ifelse(
       x < 0,
       intercept + base_slope * x,
-      intercept + base_slope * x + intervention_jump + intervention_slope * x
+      intercept + base_slope * x + level_change + slope_change * x
     )
   )
   predictedData <- subset(predictedData, x < 0 | x > transition_n_days / 365)
 
   # scatter plot data
   projectData <- data[data$id == id, ]
-  projectData <- projectData[c(metric, "base_slope", "intervention_slope")]
+  projectData <- projectData[c(metric, "base_slope", "slope_change")]
   projectData <- data.frame(
     time = ifelse(
       projectData$base_slope != 0,
       projectData$base_slope,
-      projectData$intervention_slope
+      projectData$slope_change
     ),
     metric = projectData[[metric]]
   )
@@ -43,12 +43,12 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   ymin_all <- min(c(predictedData$y, projectData$metric))
   ymax_all <- max(c(predictedData$y, projectData$metric))
   ydiff_all <- ymax_all - ymin_all
-  upper_limit <- ymax_all + ydiff_all / 2
-  lower_limit <- ymin_all - ydiff_all / 2
+  upper_limit <- ymax_all + ydiff_all / 1.5
+  lower_limit <- ymin_all - ydiff_all / 1.5
 
   # get introduction date
   l <- data[data$id == id, ]
-  seconds_timestamp <- l[l$intervention_jump == 1, ][1, ]$time
+  seconds_timestamp <- l[l$level_change == 1, ][1, ]$time
   date_time_object <- as.POSIXct(seconds_timestamp, origin = "1970-01-01", tz = "GMT")
   date <- format(date_time_object, format = "%d.%m.%Y")
 
@@ -63,8 +63,7 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
     xlab = "Time (Years)",
     ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylim = c(lower_limit, upper_limit),
-    main = paste0("Project: ", id),
-    cex.main = 1.1, cex.lab = 1.1, las = 1
+    main = paste0("Project: ", id)
   )
   lines(predictedData$x[idx_pre], predictedData$y[idx_pre], col = "red", lwd = 2.5)
   lines(predictedData$x[idx_post], predictedData$y[idx_post], col = "red", lwd = 2.5)
@@ -73,7 +72,7 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   # scatter
   points(
     projectData$time, projectData$metric,
-    col = "lightblue",
+    col = color,
     pch = 4
   )
 
@@ -84,7 +83,7 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   legend(
     "topright",
     legend = c("Fitted Line", "Weekly Data", "Transition Start & End", "Transition"),
-    col = c("red", "lightblue", "darkgrey", rgb(0.9, 0.9, 0.9, alpha = 0.4)),
+    col = c("red", color, "darkgrey", rgb(0.9, 0.9, 0.9, alpha = 0.4)),
     lty = c(1, NA, 2, 1),
     pch = c(NA, 4, NA, NA),
     lwd = c(1, 1, 1, 10)
@@ -92,13 +91,13 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
 
 
   # text
-  plot_text <- paste0(
-    "Project Age at Intro. = ", round(relative_introduction_time, 3), "\n",
-    "Intercept = ",             round(intercept, 3),                  "\n",
-    "Base Slope = ",            round(base_slope, 3),                 "\n",
-    "Intervention Jump = ",     round(intervention_jump, 3),          "\n",
-    "Intervention Slope = ",    round(intervention_slope, 3),         "\n"
-  )
+  # plot_text <- paste0(
+  #   "Project Age  = ", round(relative_introduction_time, 3), "\n",
+  #   "Intercept    = ", round(intercept, 3),                  "\n",
+  #   "Base Slope   = ", round(base_slope, 3),                 "\n",
+  #   "Level Change = ", round(level_change, 3),          "\n",
+  #   "Slope Change = ", round(slope_change, 3),         "\n"
+  # )
 
   # Intervention Lines
   abline(v = 0, lty = 2, col = "darkgrey", lwd = 1.5)
@@ -113,19 +112,19 @@ plot_project <- function(model, id, data, metric, metric_unit, metric_display_na
   )
 
 
-  txt_x <- max(-2, -relative_introduction_time)
-  txt_y <- upper_limit
-  txt_w <- strwidth(plot_text, cex = 0.8)
-  txt_h <- strheight(plot_text, cex = 0.8)
-  rect(
-    xleft   = txt_x,
-    ybottom = txt_y - txt_h,
-    xright  = txt_x + txt_w,
-    ytop    = txt_y,
-    col     = "white",
-    border  = NA
-  )
-  text(x = txt_x, y = txt_y, labels = plot_text, adj = c(0, 1), cex = 0.8)
+  # txt_x <- max(-2, -relative_introduction_time)
+  # txt_y <- upper_limit
+  # txt_w <- strwidth(plot_text, cex = 0.8)
+  # txt_h <- strheight(plot_text, cex = 0.8)
+  # rect(
+  #   xleft   = txt_x,
+  #   ybottom = txt_y - txt_h,
+  #   xright  = txt_x + txt_w,
+  #   ytop    = txt_y,
+  #   col     = "white",
+  #   border  = NA
+  # )
+  # text(x = txt_x, y = txt_y, labels = plot_text, adj = c(0, 1), cex = 0.8)
 }
 
 # ------------------------------------------------------------------------------

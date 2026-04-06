@@ -1,10 +1,10 @@
 # ------------------------------------------------------------------------------
 
-plot_model_sensitivity <- function(model) {
+plot_model_sensitivity <- function(model, interaction) {
   time_values <- seq(0.1, 10, length.out = 100)
 
   param_list <- lapply(time_values, function(t) {
-    params <- get_parameters(model, t)
+    params <- get_parameters(model, t, interaction)
     params$time <- t
     return(params)
   })

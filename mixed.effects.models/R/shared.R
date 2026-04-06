@@ -1,5 +1,4 @@
 # ------------------------------------------------------------------------------
-library(data.table)
 
 get_data <- function(language, group, transition_n_days) {
   files <- list.files(file.path("data", language, "time_series", group),
@@ -27,7 +26,8 @@ get_data <- function(language, group, transition_n_days) {
 
     # add some columns for potential interactions
     dt$time_saturated <- 1 - exp(-1 * dt$relative_introduction_time)
-    dt$log_time <- log(dt$relative_introduction_time + 1)
+    dt$time_log <- log(dt$relative_introduction_time + 1)
+    dt$time_e <- exp(dt$relative_introduction_time)
 
     return(dt)
   }
@@ -54,9 +54,9 @@ save_png <- function(expression, file, width = 15, height = 10) {
 
 # ------------------------------------------------------------------------------
 
-save_multipanel_png <- function(expression, file, mfrow = c(2, 2), width = 30, height = 20) {
+save_multipanel_png <- function(expression, file, mfrow = c(2, 2), width = 15, height = 10) {
   png(file, width = width, height = height, units = "cm", res = 300, pointsize = 10)
-  par(mfrow = mfrow)
+  par(mfrow = mfrow, oma = c(0, 0, 0, 0), mar = c(5, 5, 2, 1))
   force(expression)
   par(mfrow = c(1, 1))
   dev.off()
@@ -86,3 +86,32 @@ fmt_p <- function(p) {
 }
 
 # ------------------------------------------------------------------------------
+
+
+get_transition_time <- function(lang, metric_name) {
+  model_stability_data <- data.frame(
+    Metric = c(
+      "longFiles", "longFilesDensity", "longMethods", "longMethodDensity",
+      "deepNesting", "deepNestingDensity", "cloneCoverage", "averageFileLoc",
+      "comprehensibilityDensity", "correctnessDensity", "documentationDensity",
+      "efficiencyDensity", "errorHandlingDensity", "redundancyDensity",
+      "securityDensity", "structureDensity", "findingsDensity",
+      "numberOfForks", "numberOfIssues", "numberOfContributors"
+    ),
+    java =   c(46, 4, 46, 4, 46, 45, 4, 4, 20, 4, 20, 0, 4, 0, 0, 45, 20, 0, 0, 2),
+    python = c(30, "x", 5, 0, "x", 33, 0, 0, 0, 0, 0, 0, "x", "x", 36, 28, 0, 0, 0, 0),
+    cpp =    c("x", 0, "x", "x", "x", 0, 0, 51, 0, 0, 0, "x", "x", 40, 21, "x", 0, 0, 0, 0)
+  )
+
+  if (!lang %in% colnames(model_stability_data)) {
+    stop(paste("Language", lang, "not found in table."))
+  }
+
+  row_idx <- which(model_stability_data$Metric == metric_name)
+
+  if (length(row_idx) == 0) {
+    stop(paste("Metric", metric_name, "not found in table."))
+  }
+
+  return(model_stability_data[row_idx, lang])
+}

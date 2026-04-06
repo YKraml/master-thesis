@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 
-plot_residuals_histogram <- function(data, model) {
+plot_residuals_histogram <- function(data, model, color) {
   residuals <- residuals(model)
 
   sigma <- sd(residuals)
@@ -13,12 +13,12 @@ plot_residuals_histogram <- function(data, model) {
     residuals[residuals > left & residuals < right],
     xlab = "Residuals",
     ylab = "Density",
-    col = "lightblue",
+    col = color,
     border = "black",
     freq = FALSE,
     breaks = 30,
     xlim = c(left, right),
-    main = "Hisotgram of residuals"
+    main = "Histogram of Residuals"
   )
 
   curve(
@@ -33,42 +33,63 @@ plot_residuals_histogram <- function(data, model) {
 
 # ------------------------------------------------------------------------------
 
-plot_residuals_vs_time_1 <- function(data, model) {
+plot_residuals_vs_time <- function(data, model, color) {
+
   residuals <- residuals(model)
-  fitted_vals <- fitted(model)
+  time <- data$base_slope
+
 
   plot(
-    data$t_norm,
+    time,
     residuals,
     xlab = "Time (Years)",
     ylab = "Residuals",
-    main = "Residuals vs time",
-    col = "lightblue",
+    main = "Residuals vs Time",
+    col = color,
     pch = 4
   )
 
-  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
+  abline(h = 0, col = "red", lty = 2)
 }
 
 # ------------------------------------------------------------------------------
 
+
+plot_residuals_vs_age <- function(data, model, color) {
+  residuals <- residuals(model)
+  time <- data$relative_introduction_time
+
+
+  plot(
+    time,
+    residuals,
+    xlab = "Age at Linter Introduction (Years)",
+    ylab = "Residuals",
+    main = "Residuals vs Age",
+    col = color,
+    pch = 4
+  )
+
+  abline(h = 0, col = "red", lty = 2)
+}
+
 # ------------------------------------------------------------------------------
 
-plot_residuals_vs_fitted <- function(data, model) {
+plot_residuals_vs_fitted <- function(data, model, color, metric_display_name, metric_unit) {
   residuals <- residuals(model)
   fitted_vals <- fitted(model)
 
   plot(
     fitted_vals,
     residuals,
-    xlab = "Fitted values",
+    xlab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylab = "Residuals",
-    main = "Residuals vs fitted",
-    col = "lightblue",
+    main = "Residuals vs Fitted",
+    col = color,
     pch = 4
   )
 
-  abline(h = 0, col = "red", lty = 2) # Add a horizontal line at 0
+  abline(h = 0, col = "red", lty = 2)
 }
 
 # ------------------------------------------------------------------------------

@@ -50,19 +50,13 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
   lines(x, dnorm(x, mean = mu, sd = sigma),
         col = "red", lwd = 2)
 
-  # vertical line at mean
-  abline(v = mu, col = "red", lwd = 2, lty = 2)
-
   # legend
   legend(
     "topright",
-    legend = c(
-      paste0("Mean: ", round(mu, 3)),
-      "Normal density"
-    ),
-    col = c("red", "red"),
-    lty = c(2, 1),
-    lwd = c(2, 2),
+    legend = c("Normal density"),
+    col = c("red"),
+    lty = c(2),
+    lwd = c(2),
   )
 }
 
@@ -70,11 +64,11 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
 
 # ------------------------------------------------------------------------------
 
-plot_random_effects_correlation <- function(model, metric) {
+plot_random_effects_correlation <- function(model, metric, color) {
 
   # 1. Lower Panel: Scatter plot and Regression line ONLY
   panel.scatter <- function(x, y, ...) {
-    points(x, y, pch = 4, col = "lightblue")
+    points(x, y, pch = 4, col = color)
 
     fit <- lm(y ~ x)
     abline(fit, col = "red", lwd = 2)

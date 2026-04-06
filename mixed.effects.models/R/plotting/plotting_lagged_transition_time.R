@@ -25,8 +25,7 @@ plot_lagged <- function(effect_name, x_values, y_values, color){
        ylim = y_limits,
        main = effect_name,
        xlab = "Transition Time (Days)",
-       ylab = "Value",
-       cex.main = 1)
+       ylab = "Value")
 
   grid(nx = NULL, ny = NULL, col = "lightgray", lty = "dotted")
 }
@@ -75,7 +74,7 @@ plot_max_abs_normalized_change <- function(effect_name, x_values, y_values, colo
        ylim = y_limits,
        main = effect_name,
        xlab = "Transition Time (Days)",
-       ylab = "% of Peak Magnitude")
+       ylab = "Relative Change (%)")
 
   # Overlay red points for significant changes
   point_colors <- ifelse(abs(norm_change) > 5, "red", color)
