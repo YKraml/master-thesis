@@ -27,8 +27,6 @@ plot_residuals_histogram <- function(data, model, color) {
     lwd = 2,
     add = TRUE
   )
-
-  abline(v = mean, col = "red", lwd = 2, lty = 2)
 }
 
 # ------------------------------------------------------------------------------
