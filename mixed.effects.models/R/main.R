@@ -724,24 +724,6 @@ for(language in languages){
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
 
-
-source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_fixed_effects.R")
-source("R/plotting/plotting_random_effects.R")
-source("R/plotting/plotting_residuals.R")
-source("R/plotting/plotting_general.R")
-source("R/plotting/plotting_lagged_transition_time.R")
-source("R/plotting/plotting_lagged_day_zero.R")
-source("R/plotting/plotting_cem_projects.R")
-source("R/plotting/plotting_sensitivity.R")
-source("R/plotting/plotting_effects_distributions.R")
-source("R/plotting/plotting_database_population.R")
-
-source("R/shared.R")
-source("R/lagged_transition_time.R")
-source("R/lagged_day_zero.R")
-
-
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
@@ -780,15 +762,21 @@ for(language in languages) {
       dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 
-      # tryCatch({
+      #tryCatch({
         message("   * Creating Model")
         model <- lme(
           fixed = as.formula(sprintf("%s ~ time_saturated * (1 + base_slope + slope_change + level_change)", metric_name)),
           random = ~ 1 + base_slope + slope_change + level_change | id,
           data = data,
           method = "ML",
-          # correlation = corAR1(form = ~ t | id),
-          control = lmeControl(opt = "optim")
+          correlation = corCAR1(form = ~ week | id),
+          control = lmeControl(
+            opt = "nlminb",           # Try switching back to nlminb
+            maxIter = 1000,           # Increase iterations
+            msMaxIter = 1000,
+            tolerance = 1e-4,         # Relax tolerance slightly (default is 1e-5 or 1e-6)
+            msVerbose = TRUE          # Turn this on to see exactly where it fails
+          )
         )
 
         message("   * Extracting Effects")
@@ -931,10 +919,10 @@ for(language in languages) {
 
 
 
-      # }, error = function(e) {
-      #   warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
-      #   message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
-      # })
+      #}, error = function(e) {
+      #  warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
+      #  message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
+      #})
     }
   }
 }

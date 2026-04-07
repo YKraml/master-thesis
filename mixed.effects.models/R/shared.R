@@ -28,6 +28,7 @@ get_data <- function(language, group, transition_n_days) {
     dt$time_saturated <- 1 - exp(-1 * dt$relative_introduction_time)
     dt$time_log <- log(dt$relative_introduction_time + 1)
     dt$time_e <- exp(dt$relative_introduction_time)
+    dt$week <- dt$t_day / 7
 
     return(dt)
   }
@@ -36,6 +37,9 @@ get_data <- function(language, group, transition_n_days) {
 
   finalData <- rbindlist(data_list)
   setDF(finalData)
+
+  finalData <- finalData %>%
+    distinct(week, id, .keep_all = TRUE)
 
   return(finalData)
 }
