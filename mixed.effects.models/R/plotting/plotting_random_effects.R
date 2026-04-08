@@ -49,15 +49,6 @@ plot_random_effects_histogram <- function(data, color, main, fixed) {
   x <- seq(left, right, length.out = 500)
   lines(x, dnorm(x, mean = mu, sd = sigma),
         col = "red", lwd = 2)
-
-  # legend
-  legend(
-    "topright",
-    legend = c("Normal density"),
-    col = c("red"),
-    lty = c(2),
-    lwd = c(2),
-  )
 }
 
 # ------------------------------------------------------------------------------
