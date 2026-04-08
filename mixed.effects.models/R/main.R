@@ -104,28 +104,28 @@ dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 save_png(
   expression = plot_merged_star_polygons(java_data, python_data, cpp_data),
-  file = file.path(out_dir, "merged_stars.png"),
+  path = file.path(out_dir, "merged_stars.png"),
   width = 10,
   height = 8
 )
 
 save_png(
   expression = plot_star_hist(java_data, "Java", languages$java$color),
-  file = file.path(out_dir, "java_stars.png"),
+  path = file.path(out_dir, "java_stars.png"),
   width = 10,
   height = 8
 )
 
 save_png(
   expression = plot_star_hist(python_data, "Python", languages$python$color),
-  file = file.path(out_dir, "python_stars.png"),
+  path = file.path(out_dir, "python_stars.png"),
   width = 10,
   height = 8
 )
 
 save_png(
   expression = plot_star_hist(cpp_data, "C++", languages$cpp$color),
-  file = file.path(out_dir, "cpp_stars.png"),
+  path = file.path(out_dir, "cpp_stars.png"),
   width = 10,
   height = 8
 )
@@ -162,7 +162,7 @@ for(language in languages){
       plot_linter_intro_year(control_data, treated_data, language_display_name)
       plot_linter_commit_indicies(control_data, treated_data, language_display_name)
     },
-    file = file.path(out_dir, paste0(language_name, "_all_merged_non_balanced.png")),
+    path = file.path(out_dir, paste0(language_name, "_all_merged_non_balanced.png")),
     mfrow = c(2, 2),
     width = 20,
     height = 14
@@ -182,7 +182,7 @@ for(language in languages){
       plot_number_of_contributors(potential_control_data, potential_treated_data, language_display_name)
       plot_number_of_contributors(control_data, treated_data, language_display_name)
     },
-    file = file.path(out_dir, paste0(language_name, "_all_merged.png")),
+    path = file.path(out_dir, paste0(language_name, "_all_merged.png")),
     mfrow = c(5, 2),
     width = 20,
     height = 28
@@ -296,7 +296,7 @@ for(language in languages) {
         )
       }
     },
-    file = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot.png")),
+    path = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot.png")),
     width = 16,
     height = 22.6
   )
@@ -319,7 +319,7 @@ for(language in languages) {
         )
       }
     },
-    file = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot_with_outliers.png")),
+    path = file.path(overview_dir, paste0(language_name, ".all_metrics_boxplot_with_outliers.png")),
     width = 16,
     height = 22.6
   )
@@ -365,7 +365,7 @@ for(language in languages) {
         )
       }
     },
-    file = file.path(overview_dir, paste0(language_name, ".all_metrics_histogram.png")),
+    path = file.path(overview_dir, paste0(language_name, ".all_metrics_histogram.png")),
     width = 16,
     height = 22.6
   )
@@ -418,7 +418,7 @@ for(language in languages) {
 
 
         },
-        file = file.path(out_dir, paste0(prefix, "individuals.png")),
+        path = file.path(out_dir, paste0(prefix, "individuals.png")),
         width = 16,
         height = 22.6,
         mfrow = c(4, 2)
@@ -434,7 +434,7 @@ for(language in languages) {
           # Combine and print them simultaneously
           print(p1 + p2)
         },
-        file = file.path(out_dir, paste0(prefix, "scatter_hex.png")),
+        path = file.path(out_dir, paste0(prefix, "scatter_hex.png")),
         width = 22,
         height = 10
       )
@@ -520,7 +520,7 @@ for(language in languages) {
         message("  * Saving")
         capture.output(
           model_comparison[order(model_comparison$AIC), ],
-          file = file
+          path = file
         )
       },
       error = function(e) {
@@ -600,7 +600,7 @@ for(language in languages) {
         plot_lagged("Level Change", x_values, results_matrix[, 4], language_color)
         plot_lagged("Slope Change", x_values, results_matrix[, 5], language_color)
       },
-      file = file.path(out_dir, sprintf("%s.lagged.png", metric_name)),
+      path = file.path(out_dir, sprintf("%s.lagged.png", metric_name)),
       height = 10,
       width = 15
     )
@@ -614,7 +614,7 @@ for(language in languages) {
         plot_max_abs_normalized_change("Level Change", x_values, results_matrix[, 4], language_color)
         plot_max_abs_normalized_change("Slope Change", x_values, results_matrix[, 5], language_color)
       },
-      file = file.path(out_dir, sprintf("%s.lagged_relative.png", metric_name)),
+      path = file.path(out_dir, sprintf("%s.lagged_relative.png", metric_name)),
       height = 10,
       width = 15
     )
@@ -708,7 +708,7 @@ for(language in languages){
       # Save results sorted by AIC
       capture.output(
         model_comparison[order(model_comparison$AIC), ],
-        file = file
+        path = file
       )
 
 
@@ -738,6 +738,8 @@ for(language in languages) {
     interaction         <- metric_data$interaction
 
     message(metric_name)
+
+    message("   * Loading Data")
     transition_n_days <- get_transition_time(language_name, metric_name)
     data_treatment <- get_data(language, "treatment", transition_n_days)
     data_control   <- get_data(language, "control", transition_n_days)
@@ -760,29 +762,39 @@ for(language in languages) {
       message("   * Creating Folder")
       out_dir <- file.path("plots", language_name, "interrupted_time_series", group, metric_name)
       dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+      prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
 
 
-      #tryCatch({
-        message("   * Creating Model")
-        model <- lme(
-          fixed = as.formula(sprintf("%s ~ time_saturated * (1 + base_slope + slope_change + level_change)", metric_name)),
-          random = ~ 1 + base_slope + slope_change + level_change | id,
-          data = data,
-          method = "ML",
-          correlation = corCAR1(form = ~ week | id),
-          control = lmeControl(
-            opt = "nlminb",           # Try switching back to nlminb
-            maxIter = 1000,           # Increase iterations
-            msMaxIter = 1000,
-            tolerance = 1e-4,         # Relax tolerance slightly (default is 1e-5 or 1e-6)
-            msVerbose = TRUE          # Turn this on to see exactly where it fails
+      tryCatch({
+
+        model_file <- file.path(out_dir, paste0(prefix, "model.rds"))
+        if (file.exists(model_file)) {
+          message("   * Loading Model from disk")
+          model <- readRDS(model_file)
+        } else {
+          message("   * Creating Model")
+          model <- lme(
+            fixed = as.formula(sprintf("%s ~ %s * (1 + base_slope + slope_change + level_change)", metric_name, interaction)),
+            random = ~ 1 + base_slope + slope_change + level_change | id,
+            data = data,
+            # correlation = corCAR1(form = ~ week | id),
+            # control = lmeControl(
+            #   opt = "nlminb",
+            #   maxIter = 1000,
+            #   msMaxIter = 1000,
+            #   tolerance = 1e-4,
+            #   msVerbose = TRUE
+            # )
+            control = lmeControl(opt = "optim")
           )
-        )
+
+          message("   * Saving Model to disk")
+          saveRDS(model, file = model_file)
+        }
 
         message("   * Extracting Effects")
         random_effects <- ranef(model)
         fixed_effects <- fixef(model)
-        prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
 
 
         message("   * Saving Summary")
@@ -791,15 +803,12 @@ for(language in languages) {
           file = file.path(out_dir, paste0(prefix, "model_summary.txt"))
         )
 
-
-
         # 1. print model sensitivity
         message("   * Start Plotting")
         save_png(
           expression = plot_model_sensitivity(model, interaction),
-          file = file.path(out_dir, paste0(prefix, "sensitivity.png"))
+          path = file.path(out_dir, paste0(prefix, "sensitivity.png"))
         )
-
 
         # 2. print fixed effects
         save_multipanel_png(
@@ -813,7 +822,7 @@ for(language in languages) {
             plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days, interaction)
             plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days, interaction)
           },
-          file = file.path(out_dir, paste0(prefix, "predicted.png")),
+          path = file.path(out_dir, paste0(prefix, "predicted.png")),
           mfrow = c(4, 2),
           width = 20,
           height = 28
@@ -822,43 +831,75 @@ for(language in languages) {
         # 3. print qq of residuals
         save_png(
           expression = plot_residuals_qq(data, model),
-          file = file.path(out_dir, paste0(prefix, "residual_qq.png"))
+          path = file.path(out_dir, paste0(prefix, "residual_qq.png"))
         )
 
         # 4. print residuals vs fitted
         save_png(
           expression = plot_residuals_vs_fitted(data, model, language_color, metric_display_name, metric_unit),
-          file = file.path(out_dir, paste0(prefix, "residual_vs_fitted.png"))
+          path = file.path(out_dir, paste0(prefix, "residual_vs_fitted.png")),
+          width = 10,
+          height = 8
         )
 
         # 5. print residuals vs time
         save_png(
           expression = plot_residuals_vs_time(data, model, language_color),
-          file = file.path(out_dir, paste0(prefix, "residual_vs_time.png"))
+          path = file.path(out_dir, paste0(prefix, "residual_vs_time.png")),
+          width = 10,
+          height = 8
         )
 
         # 6. print residuals vs age
         save_png(
           expression = plot_residuals_vs_age(data, model, language_color),
-          file = file.path(out_dir, paste0(prefix, "residual_vs_age.png"))
+          path = file.path(out_dir, paste0(prefix, "residual_vs_age.png")),
+          width = 10,
+          height = 8
         )
+
+        # X. print residuals vs intervention
+        save_png(
+          expression = plot_residuals_vs_intervention(data, model, language_color),
+          path = file.path(out_dir, paste0(prefix, "residual_vs_intervention.png")),
+          width = 10,
+          height = 8
+        )
+
+        save_multipanel_png(
+          expression = {
+            plot_residual_histogram(data, model, 0, language_color)
+            plot_residual_histogram(data, model, 1, language_color)
+          },
+          path = file.path(out_dir, paste0(prefix, "residual_vs_intervention_hist.png")),
+          mfrow = c(1, 2),
+          width = 15,
+          height = 8
+        )
+
+
+
 
         # 7. print residuals histogram
         save_png(
           expression = plot_residuals_histogram(data, model, language_color),
-          file = file.path(out_dir, paste0(prefix, "residual_hist.png"))
+          path = file.path(out_dir, paste0(prefix, "residual_hist.png")),
+          width = 10,
+          height = 8
         )
 
         # 8. print Auto- and Cross- Covariance and -Correlation Function Estimation
         save_png(
           expression = acf(resid(model, type = "normalized")),
-          file = file.path(out_dir, paste0(prefix, "acf.png"))
+          path = file.path(out_dir, paste0(prefix, "acf.png")),
+          width = 10,
+          height = 8
         )
 
         # 9. print random effects correlation
         save_png(
           expression = plot_random_effects_correlation(model, metric_display_name, language_color),
-          file = file.path(out_dir, paste0(prefix, "random_effects_correlation.png"))
+          path = file.path(out_dir, paste0(prefix, "random_effects_correlation.png"))
         )
 
         # 10. print random effects histograms
@@ -869,7 +910,7 @@ for(language in languages) {
             plot_random_effects_histogram(random_effects$slope_change, "darkseagreen1", "Slope Change", random_effects["slope_change"])
             plot_random_effects_histogram(random_effects$level_change, "paleturquoise1", "Level Change", random_effects["level_change"])
           },
-          file = file.path(out_dir, paste0(prefix, "random_effect_hist.png")),
+          path = file.path(out_dir, paste0(prefix, "random_effect_hist.png")),
           width = 20,
           height = 14
         )
@@ -882,7 +923,7 @@ for(language in languages) {
             qqnorm(random_effects[, "slope_change"], main = "Slope Change"); qqline(random_effects[, "slope_change"])
             qqnorm(random_effects[, "level_change"], main = "Level Change"); qqline(random_effects[, "level_change"])
           },
-          file = file.path(out_dir, paste0(prefix, "random_effects_qq.png")),
+          path = file.path(out_dir, paste0(prefix, "random_effects_qq.png")),
         )
 
         # 12. print random effects vs residuals
@@ -890,10 +931,12 @@ for(language in languages) {
         plots <- lapply(effects, function(eff) plot_random_effects_vs_residuals(data, model, eff))
         save_png(
           expression = print((plots[[1]] | plots[[2]]) / (plots[[3]] | plots[[4]])),
-          file = file.path(out_dir, paste0(prefix, "random_effects_residuals.png")),
+          path = file.path(out_dir, paste0(prefix, "random_effects_residuals.png")),
           width = 30,
           height = 20
         )
+
+
 
         # 13. print prediction for project
         save_multipanel_png(
@@ -909,7 +952,7 @@ for(language in languages) {
             }
 
           },
-          file = file.path(out_dir, paste0(prefix, "projects.png")),
+          path = file.path(out_dir, paste0(prefix, "projects.png")),
           mfrow = c(4, 2),
           width = 20,
           height = 28
@@ -919,10 +962,10 @@ for(language in languages) {
 
 
 
-      #}, error = function(e) {
-      #  warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
-      #  message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
-      #})
+      }, error = function(e) {
+        warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
+        message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
+      })
     }
   }
 }
@@ -1029,7 +1072,7 @@ for (range in age_ranges) {
           font = 2
         )
       },
-      file = file.path(output_dir, sprintf("%s.%s.%s.predicted.png", metric_name, min_project_age, max_project_age)),
+      path = file.path(output_dir, sprintf("%s.%s.%s.predicted.png", metric_name, min_project_age, max_project_age)),
     )
 
 

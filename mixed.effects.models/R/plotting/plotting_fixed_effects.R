@@ -4,7 +4,6 @@
 
 plot_predicted <- function(data, model, relative_introduction_time, metric_display_name, metric_unit, transition_n_days, interaction) {
 
-
   pred <- data.frame(x = seq(max(-2, -relative_introduction_time), 2, by = 0.01))
   pred <- subset(pred, x < 0 | x > transition_n_days / 365)
 
@@ -278,13 +277,10 @@ get_parameters <- function(model, relative_introduction_time, interaction) {
 
 
   if(interaction == "relative_introduction_time"){
-    int <- 1 - relative_introduction_time
+    int <- relative_introduction_time
 
-    # 2. Extract fixed effects coefficients
     beta <- fixef(model)
 
-    # 3. Define the "Effective" Values
-    # Each parameter is: Main_Effect + (Interaction_Effect * t_sat)
     params <- c(
       intercept    = beta["(Intercept)"] + beta["relative_introduction_time"] * int,
       base_slope   = beta["base_slope"] + beta["relative_introduction_time:base_slope"] * int,
@@ -292,12 +288,9 @@ get_parameters <- function(model, relative_introduction_time, interaction) {
       slope_change = beta["slope_change"] + beta["relative_introduction_time:slope_change"] * int
     )
 
-    # 4. Calculate Standard Errors and P-values
-    # We use the Delta Method logic: Var(A + k*B) = Var(A) + k^2*Var(B) + 2*k*Cov(A,B)
     V <- vcov(model)
     df <- model$fixDF$X # Degrees of freedom from the model
 
-    # Mapping parameters to their component indices in the vcov matrix
     mapping <- list(
       intercept     = c("(Intercept)", "relative_introduction_time"),
       base_slope    = c("base_slope", "relative_introduction_time:base_slope"),
@@ -306,6 +299,7 @@ get_parameters <- function(model, relative_introduction_time, interaction) {
     )
 
     results <- data.frame(Parameter = names(params), Value = as.numeric(params), Std.Error = NA, p_value = NA)
+
 
     for (i in seq_along(mapping)) {
       p_main <- mapping[[i]][1]
