@@ -2,7 +2,7 @@
 
 # ------------------------------------------------------------------------------
 
-plot_predicted <- function(data, model, relative_introduction_time, metric_display_name, metric_unit, transition_n_days, interaction) {
+plot_predicted <- function(data, model, relative_introduction_time, metric_display_name, metric_unit, transition_n_days, interaction, ylim = -1) {
 
   pred <- data.frame(x = seq(max(-2, -relative_introduction_time), 2, by = 0.01))
   pred <- subset(pred, x < 0 | x > transition_n_days / 365)
@@ -31,10 +31,10 @@ plot_predicted <- function(data, model, relative_introduction_time, metric_displ
 
   # --- 6. Prepare Plot Labels (Using the MARGINAL results) ---
   plot_text <- paste0(
-    "Intercept = ",           round(vals[1], 3), " (p ", fmt_p(ps[1]), ")\n",
-    "Base Slope = ",          round(vals[2], 3), " (p ", fmt_p(ps[2]), ")\n",
-    "Intervention Jump = ",   round(vals[3], 3), " (p ", fmt_p(ps[3]), ")\n",
-    "Intervention Slope = ",  round(vals[4], 3), " (p ", fmt_p(ps[4]), ")\n"
+    "β_0 = ",    round(vals[1], 3), " (p ", fmt_p(ps[1]), ")\n",
+    "β_1 = ",   round(vals[2], 3), " (p ", fmt_p(ps[2]), ")\n",
+    "β_2 = ", round(vals[3], 3), " (p ", fmt_p(ps[3]), ")\n",
+    "β_3 = ", round(vals[4], 3), " (p ", fmt_p(ps[4]), ")\n"
   )
 
   # --- 7. Plotting (Enhanced) ---
@@ -60,7 +60,8 @@ plot_predicted <- function(data, model, relative_introduction_time, metric_displ
     xlab = "Time (Years)",
     ylab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylim = ylim,
-    main = paste0("Model Prediction (Intro Time: ", relative_introduction_time, ifelse(relative_introduction_time == 1, " year)", " years)")),
+    xlim = c(-2,2),
+    main = paste0("Model Prediction (Project Age: ", relative_introduction_time, ifelse(relative_introduction_time == 1, " year)", " years)")),
     cex.main = 1.1, cex.lab = 1.1, las = 1
   )
 
@@ -100,10 +101,10 @@ plot_predicted <- function(data, model, relative_introduction_time, metric_displ
   abline(v = gap_end , lty = 2, col = "darkgrey", lwd = 1.5)
 
   # Stats Box
-  txt_x <- min(pred$x)
+  txt_x <- -2
   txt_y <- ylim[2]
-  txt_w <- strwidth(plot_text, cex = 0.8)
-  txt_h <- strheight(plot_text, cex = 0.8)
+  txt_w <- strwidth(plot_text)
+  txt_h <- strheight(plot_text)
   rect(
     xleft   = txt_x,
     ybottom = txt_y - txt_h,
@@ -113,7 +114,7 @@ plot_predicted <- function(data, model, relative_introduction_time, metric_displ
     border  = NA
   )
 
-  text(x = txt_x, y = txt_y, labels = plot_text, adj = c(0, 1), cex = 0.8)
+  text(x = txt_x, y = txt_y, labels = plot_text, adj = c(0, 1))
 
   # Legend
   legend(
@@ -135,35 +136,26 @@ get_predicted <- function(model, relative_introduction_time, base_slope, level_c
 
 
   if(interaction == "time_saturated"){
-    # 1. Calculate the transformed time variable used in the model
     time_saturated <- 1 - exp(-1 * relative_introduction_time)
 
-    # 2. Create the design vector (X) matching the order of fixed effects:
-    # (Intercept), time_saturated, base_slope, level_change, slope_change,
-    # time_saturated:base_slope, time_saturated:level_change, time_saturated:slope_change
     new_data_vec <- c(
-      1,                                 # (Intercept)
-      time_saturated,                    # time_saturated
-      base_slope,                        # base_slope
-      level_change,                 # level_change
-      slope_change,                # slope_change
-      time_saturated * base_slope,       # time_saturated:base_slope
-      time_saturated * level_change,# time_saturated:level_change
-      time_saturated * slope_change# time_saturated:slope_change
+      1,
+      time_saturated,
+      base_slope,
+      slope_change,
+      level_change,
+      time_saturated * base_slope,
+      time_saturated * slope_change,
+      time_saturated * level_change
     )
 
-    # 3. Get fixed effects coefficients and variance-covariance matrix
     beta <- nlme::fixef(model)
     V_cov <- vcov(model)
 
-    # 4. Calculate point prediction: y = X * beta
     prediction <- sum(new_data_vec * beta)
 
-    # 5. Calculate Standard Error for the prediction: SE = sqrt(X %*% V %*% t(X))
-    # This accounts for the correlations between the fixed effects coefficients
     se_pred <- sqrt(t(new_data_vec) %*% V_cov %*% new_data_vec)
 
-    # 6. Calculate 95% CI (using 1.96 for normal approximation)
     upper <- prediction + (1.96 * se_pred)
     lower <- prediction - (1.96 * se_pred)
 
@@ -182,25 +174,20 @@ get_predicted <- function(model, relative_introduction_time, base_slope, level_c
       1,
       relative_introduction_time,
       base_slope,
-      level_change,
       slope_change,
+      level_change,
       relative_introduction_time * base_slope,
-      relative_introduction_time * level_change,
-      relative_introduction_time * slope_change
+      relative_introduction_time * slope_change,
+      relative_introduction_time * level_change
     )
 
-    # 3. Get fixed effects coefficients and variance-covariance matrix
     beta <- nlme::fixef(model)
     V_cov <- vcov(model)
 
-    # 4. Calculate point prediction: y = X * beta
     prediction <- sum(new_data_vec * beta)
 
-    # 5. Calculate Standard Error for the prediction: SE = sqrt(X %*% V %*% t(X))
-    # This accounts for the correlations between the fixed effects coefficients
     se_pred <- sqrt(t(new_data_vec) %*% V_cov %*% new_data_vec)
 
-    # 6. Calculate 95% CI (using 1.96 for normal approximation)
     upper <- prediction + (1.96 * se_pred)
     lower <- prediction - (1.96 * se_pred)
 

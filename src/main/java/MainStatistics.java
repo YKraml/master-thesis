@@ -25,21 +25,21 @@ public class MainStatistics {
         CemProjectReaderWriter cemProjectReaderWriter = injector.getInstance(CemProjectReaderWriter.class);
         CemProjectPairReaderWriter cemProjectPairReaderWriter = injector.getInstance(CemProjectPairReaderWriter.class);
 
-        //outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.JAVA);
-        //outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.PYTHON);
-        //outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.CPP);
+        outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.JAVA);
+        outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.PYTHON);
+        outputMatchingResults(cemProjectReaderWriter, cemProjectPairReaderWriter, Language.CPP);
 
-        //outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.JAVA);
-        //outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.PYTHON);
-        //outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.CPP);
+        outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.JAVA);
+        outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.PYTHON);
+        outputLinterUsage(proofReaderWriter, filteredProjectReaderWriter, Language.CPP);
 
         outputExactLinterUsage(proofReaderWriter, Language.JAVA);
         outputExactLinterUsage(proofReaderWriter, Language.PYTHON);
         outputExactLinterUsage(proofReaderWriter, Language.CPP);
 
-        // outputExactLinterUsageCombinations(proofReaderWriter, Language.JAVA);
-        // outputExactLinterUsageCombinations(proofReaderWriter, Language.PYTHON);
-        // outputExactLinterUsageCombinations(proofReaderWriter, Language.CPP);
+        outputExactLinterUsageCombinations(proofReaderWriter, Language.JAVA);
+        outputExactLinterUsageCombinations(proofReaderWriter, Language.PYTHON);
+        outputExactLinterUsageCombinations(proofReaderWriter, Language.CPP);
     }
 
     private static void outputMatchingResults(CemProjectReaderWriter cemProjectReaderWriter, CemProjectPairReaderWriter cemProjectPairReaderWriter, Language language) throws IOException {

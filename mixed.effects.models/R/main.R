@@ -26,6 +26,8 @@ library(mgcv)
 library(robustlmm)
 library(hexbin)
 library(data.table)
+library(clubSandwich)
+library(latex2exp)
 
 source("R/plotting/plotting_project.R")
 source("R/plotting/plotting_fixed_effects.R")
@@ -724,6 +726,24 @@ for(language in languages){
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
 
+source("R/plotting/plotting_project.R")
+source("R/plotting/plotting_fixed_effects.R")
+source("R/plotting/plotting_random_effects.R")
+source("R/plotting/plotting_residuals.R")
+source("R/plotting/plotting_general.R")
+source("R/plotting/plotting_lagged_transition_time.R")
+source("R/plotting/plotting_lagged_day_zero.R")
+source("R/plotting/plotting_cem_projects.R")
+source("R/plotting/plotting_sensitivity.R")
+source("R/plotting/plotting_effects_distributions.R")
+source("R/plotting/plotting_database_population.R")
+
+source("R/shared.R")
+source("R/lagged_transition_time.R")
+source("R/lagged_day_zero.R")
+
+
+
 for(language in languages) {
   language_name <- language$name
   language_color <- language$color
@@ -785,8 +805,12 @@ for(language in languages) {
             #   tolerance = 1e-4,
             #   msVerbose = TRUE
             # )
+            # weights = varIdent(form = ~ 1 | level_change),
             control = lmeControl(opt = "optim")
           )
+
+
+
 
           message("   * Saving Model to disk")
           saveRDS(model, file = model_file)
@@ -806,27 +830,28 @@ for(language in languages) {
         # 1. print model sensitivity
         message("   * Start Plotting")
         save_png(
-          expression = plot_model_sensitivity(model, interaction),
+          expression = plot_model_sensitivity(model, interaction, language_color),
           path = file.path(out_dir, paste0(prefix, "sensitivity.png"))
         )
 
         # 2. print fixed effects
         save_multipanel_png(
           expression = {
-            plot_predicted(data, model,  0.1, metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  0.5, metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  1  , metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  2  , metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  3  , metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  4  , metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  6  , metric_display_name, metric_unit, transition_n_days, interaction)
-            plot_predicted(data, model,  8  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 0, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 0.5, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 1  , metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 2, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 3, metric_display_name, metric_unit, transition_n_days, interaction)
+            plot_predicted(data, model, 4, metric_display_name, metric_unit, transition_n_days, interaction)
           },
           path = file.path(out_dir, paste0(prefix, "predicted.png")),
-          mfrow = c(4, 2),
+          mfrow = c(3, 2),
           width = 20,
-          height = 28
+          height = 25
         )
+
+
+
 
         # 3. print qq of residuals
         save_png(
