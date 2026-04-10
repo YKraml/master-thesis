@@ -1,3 +1,5 @@
+package runnables;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import logic.ProjectCreatorStarter;
@@ -6,11 +8,11 @@ import util.GuiceModule;
 
 import java.io.IOException;
 
-public class MainCreateControlProjects {
+public class MainCreateTreatedProjects {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Injector injector = Guice.createInjector(new GuiceModule());
         ProjectCreatorStarter projectCreatorStarter = injector.getInstance(ProjectCreatorStarter.class);
-        projectCreatorStarter.createProjects(CemProject.GroupType.CONTROL);
+        projectCreatorStarter.createProjects(CemProject.GroupType.TREATMENT);
     }
 }

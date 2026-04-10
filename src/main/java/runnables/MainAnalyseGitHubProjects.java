@@ -1,20 +1,22 @@
+package runnables;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import io.git.GitHubDataCollector;
+import logic.GitHubRepoAnalyser;
 import logic.StateHandler;
 import util.GuiceModule;
 
 import java.io.IOException;
 
-public class MainCollectGitHubData {
+public class MainAnalyseGitHubProjects {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         Injector injector = Guice.createInjector(new GuiceModule());
         StateHandler stateHandler = injector.getInstance(StateHandler.class);
-        GitHubDataCollector gitHubDataCollector = injector.getInstance(GitHubDataCollector.class);
+        GitHubRepoAnalyser gitHubRepoAnalyser = injector.getInstance(GitHubRepoAnalyser.class);
 
         stateHandler.start();
-        gitHubDataCollector.startCollecting();
+        gitHubRepoAnalyser.startAnalysing();
         stateHandler.end();
     }
 }
