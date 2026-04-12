@@ -106,40 +106,43 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
 # ------------------------------------------------------------------------------
 
 
-calculate_custom_effects <- function(model, data) {
-  ids <- unique(data$id)
+calculate_custom_effects <- function(model, data, min_project_age = 0, max_project_age = 20, interaction) {
+  filtered_data <- data[data$relative_introduction_time >= min_project_age &
+                          data$relative_introduction_time <= max_project_age, ]
+
+  ids <- unique(filtered_data$id)
   all_ranefs <- ranef(model)
 
-
   results_list <- list()
+
   for (id in ids) {
-
     id_str <- as.character(id)
-    projectData <- data[data$id == id, ]
 
+    projectData <- filtered_data[filtered_data$id == id, ]
 
     relative_introduction_time <- projectData[["relative_introduction_time"]][1]
-
     randomEffectsFromProject <- all_ranefs[id_str, , drop = FALSE]
 
+    parameters <- get_parameters(model, relative_introduction_time, interaction)
 
-    parameters <- get_parameters(model, relative_introduction_time)
+    # Calculation logic remains the same
+    intercept      <- randomEffectsFromProject[["(Intercept)"]]  + parameters$Value[1]
+    base_slope     <- randomEffectsFromProject[["base_slope"]]   + parameters$Value[2]
+    level_change   <- randomEffectsFromProject[["level_change"]] + parameters$Value[3]
+    slope_change   <- randomEffectsFromProject[["slope_change"]] + parameters$Value[4]
 
-    intercept          <- randomEffectsFromProject[["(Intercept)"]]        + parameters$Value[1]
-    base_slope         <- randomEffectsFromProject[["base_slope"]]         + parameters$Value[2]
-    intervention_jump  <- randomEffectsFromProject[["intervention_jump"]]  + parameters$Value[3]
-    intervention_slope <- randomEffectsFromProject[["intervention_slope"]] + parameters$Value[4]
-
-    slope_after_intervention <- base_slope + intervention_slope
+    slope_after_intervention <- base_slope + slope_change
 
     results_list[[id_str]] <- data.frame(
       id = id,
       intercept = intercept,
       base_slope = base_slope,
-      intervention_jump = intervention_jump,
+      level_change = level_change,
       slope_after_intervention = slope_after_intervention
     )
   }
+
+  if (length(results_list) == 0) return(data.frame())
 
   return(do.call(rbind, results_list))
 }

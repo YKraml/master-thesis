@@ -726,23 +726,6 @@ for(language in languages){
 # Interrupted Time Series Loop
 # ------------------------------------------------------------------------------
 
-source("R/plotting/plotting_project.R")
-source("R/plotting/plotting_fixed_effects.R")
-source("R/plotting/plotting_random_effects.R")
-source("R/plotting/plotting_residuals.R")
-source("R/plotting/plotting_general.R")
-source("R/plotting/plotting_lagged_transition_time.R")
-source("R/plotting/plotting_lagged_day_zero.R")
-source("R/plotting/plotting_cem_projects.R")
-source("R/plotting/plotting_sensitivity.R")
-source("R/plotting/plotting_effects_distributions.R")
-source("R/plotting/plotting_database_population.R")
-
-source("R/shared.R")
-source("R/lagged_transition_time.R")
-source("R/lagged_day_zero.R")
-
-
 
 for(language in languages) {
   language_name <- language$name
@@ -759,62 +742,25 @@ for(language in languages) {
 
     message(metric_name)
 
-    message("   * Loading Data")
-    transition_n_days <- get_transition_time(language_name, metric_name)
-    data_treatment <- get_data(language, "treatment", transition_n_days)
-    data_control   <- get_data(language, "control", transition_n_days)
-
-    data_treatment <- data_treatment[complete.cases(data_treatment), ]
-    data_control   <- data_control[complete.cases(data_control), ]
-
-
-    data_all <- list(
-      treatment = data_treatment,
-      control   = data_control
-    )
-
-
     for(group in c("treatment", "control")){
       message(sprintf(" - %s ", group))
-      data <- data_all[[group]]
-
-
-      message("   * Creating Folder")
-      out_dir <- file.path("plots", language_name, "interrupted_time_series", group, metric_name)
-      dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-      prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
-
 
       tryCatch({
 
-        model_file <- file.path(out_dir, paste0(prefix, "model.rds"))
-        if (file.exists(model_file)) {
-          message("   * Loading Model from disk")
-          model <- readRDS(model_file)
-        } else {
-          message("   * Creating Model")
-          model <- lme(
-            fixed = as.formula(sprintf("%s ~ %s * (1 + base_slope + slope_change + level_change)", metric_name, interaction)),
-            random = ~ 1 + base_slope + slope_change + level_change | id,
-            data = data,
-            # correlation = corCAR1(form = ~ week | id),
-            # control = lmeControl(
-            #   opt = "nlminb",
-            #   maxIter = 1000,
-            #   msMaxIter = 1000,
-            #   tolerance = 1e-4,
-            #   msVerbose = TRUE
-            # )
-            # weights = varIdent(form = ~ 1 | level_change),
-            control = lmeControl(opt = "optim")
-          )
+        message("   * Loading Data")
+        transition_n_days <- get_transition_time(language_name, metric_name)
+        data <- get_data(language, group, transition_n_days)
+        data <- data[complete.cases(data), ]
 
 
+        message("   * Creating Folder")
+        out_dir <- file.path("plots", language_name, "interrupted_time_series", group, metric_name)
+        dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+        prefix <- sprintf("%s.%s.%s.",language_name, group, metric_name)
 
+        message("   * Getting Model")
+        model <- get_model(data, language_name, group, metric_name, interaction)
 
-          message("   * Saving Model to disk")
-          saveRDS(model, file = model_file)
-        }
 
         message("   * Extracting Effects")
         random_effects <- ranef(model)
@@ -826,6 +772,7 @@ for(language in languages) {
           summary(model),
           file = file.path(out_dir, paste0(prefix, "model_summary.txt"))
         )
+
 
         # 1. print model sensitivity
         message("   * Start Plotting")
@@ -985,8 +932,6 @@ for(language in languages) {
 
 
 
-
-
       }, error = function(e) {
         warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
         message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
@@ -997,110 +942,201 @@ for(language in languages) {
 
 
 
+
+
+
+
+get_model <- function(data, language_name, group, metric_name, interaction) {
+
+  # 1. Setup paths and formulas
+  out_dir <- file.path("plots", language_name, "interrupted_time_series", group, metric_name)
+  prefix <- sprintf("%s.%s.%s.", language_name, group, metric_name)
+
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+  fixed_form <- as.formula(sprintf("%s ~ %s * (1 + base_slope + slope_change + level_change)", metric_name, interaction))
+  random_form <- ~ 1 + base_slope + slope_change + level_change | id
+
+  # ---------------------------------------------------------
+  # ATTEMPT 1: Complex Model
+  # ---------------------------------------------------------
+  model_file <- file.path(out_dir, paste0(prefix, "model.rds"))
+  model_failed_file <- file.path(out_dir, paste0(prefix, "model.failed"))
+
+  if (file.exists(model_file)) {
+    message("   * Loading Complex Model from disk")
+    return(readRDS(model_file))
+  } else if (file.exists(model_failed_file)) {
+    message("   * Complex Model previously failed. Skipping to next.")
+  } else {
+    message("   * Creating Complex Model")
+    tryCatch({
+      m <- lme(
+        fixed = fixed_form,
+        random = random_form,
+        data = data,
+        correlation = corAR1(form = ~ 1 | id),
+        weights = varIdent(form = ~ 1 | level_change),
+        control = lmeControl(opt = "nlminb", maxIter = 10000, msMaxIter = 10000, niterEM = 100, tolerance = 1e-3, msVerbose = TRUE)
+      )
+      message("   * Complex Model Converged! Saving to disk.")
+      saveRDS(m, file = model_file)
+      capture.output(summary(m), file = file.path(out_dir, paste0(prefix, "model_summary.txt")))
+      return(m)
+    }, error = function(e) {
+      message("   ! Complex Model failed to converge: ", e$message)
+      file.create(model_failed_file) # Drop a marker so we don't try this again
+    })
+  }
+
+
+  # ---------------------------------------------------------
+  # ATTEMPT 2: Medium Model (Fallback 1)
+  # ---------------------------------------------------------
+  model_medium_file <- file.path(out_dir, paste0(prefix, "model_medium.rds"))
+  model_medium_failed_file <- file.path(out_dir, paste0(prefix, "model_medium.failed"))
+
+  if (file.exists(model_medium_file)) {
+    message("   * Loading Medium Model from disk")
+    return(readRDS(model_medium_file))
+  } else if (file.exists(model_medium_failed_file)) {
+    message("   * Medium Model previously failed. Skipping to next.")
+  } else {
+    message("   * Creating Medium Model")
+    tryCatch({
+      m <- lme(
+        fixed = fixed_form,
+        random = random_form,
+        data = data,
+        correlation = corAR1(form = ~ 1 | id),
+        control = lmeControl(opt = "nlminb", maxIter = 10000, msMaxIter = 10000, niterEM = 100, tolerance = 1e-3, msVerbose = TRUE)
+      )
+      message("   * Medium Model Converged! Saving to disk.")
+      saveRDS(m, file = model_medium_file)
+      capture.output(summary(m), file = file.path(out_dir, paste0(prefix, "model_medium_summary.txt")))
+      return(m)
+    }, error = function(e) {
+      message("   ! Medium Model failed to converge: ", e$message)
+      file.create(model_medium_failed_file)
+    })
+  }
+
+
+  # ---------------------------------------------------------
+  # ATTEMPT 3: Simple Model (Fallback 2)
+  # ---------------------------------------------------------
+  model_simple_file <- file.path(out_dir, paste0(prefix, "model_simple.rds"))
+  model_simple_failed_file <- file.path(out_dir, paste0(prefix, "model_simple.failed"))
+
+  if (file.exists(model_simple_file)) {
+    message("   * Loading Simple Model from disk")
+    return(readRDS(model_simple_file))
+  } else if (file.exists(model_simple_failed_file)) {
+    message("   * Simple Model previously failed. Skipping.")
+  } else {
+    message("   * Creating Simple Model")
+    tryCatch({
+      m <- lme(
+        fixed = fixed_form,
+        random = random_form,
+        data = data,
+        control = lmeControl(opt = "optim")
+      )
+      message("   * Simple Model Converged! Saving to disk.")
+      saveRDS(m, file = model_simple_file)
+      capture.output(summary(m), file = file.path(out_dir, paste0(prefix, "model_simple_summary.txt")))
+      return(m)
+    }, error = function(e) {
+      message("   ! Simple Model failed to converge: ", e$message)
+      file.create(model_simple_failed_file)
+    })
+  }
+
+  # ---------------------------------------------------------
+  # Final Fallback
+  # ---------------------------------------------------------
+  message("   !!! All models failed to converge or were previously marked as failed.")
+  return(NULL)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ------------------------------------------------------------------------------
 # Treated vs Control Effects Distributions
 # ------------------------------------------------------------------------------
 
-transition_n_days <- 90
-
 age_ranges <- list(
-  c(0, 0.1),
-  c(0.1, 0.5),
+  c(0, 0.5),
   c(0.5, 1),
   c(1, 2),
-  c(2, 4),
-  c(4, 20)
+  c(2, 20)
 )
 
-data_treatment_full <- get_data("python", "treatment", transition_n_days)
-data_treatment_full$time_saturated <- 1 - exp(-1 * data_treatment_full$relative_introduction_time)
 
-data_control_full <- get_data("python", "control", transition_n_days)
-data_control_full$time_saturated <- 1 - exp(-1 * data_control_full$relative_introduction_time)
+for(language in languages) {
+  language_name <- language$name
+  language_color <- language$color
+  language_color_secondary <- language$color_secondary
+  message(paste("---", language_name, "---"))
 
+  for (metric_data in metrics) {
+    metric_name         <- metric_data$name
+    metric_display_name <- metric_data$display_name
+    metric_unit         <- metric_data$unit
+    interaction         <- metric_data$interaction
 
-
-for (range in age_ranges) {
-  min_project_age <- range[1]
-  max_project_age <- range[2]
-
-  message(sprintf("Time Span: %s to %s years", min_project_age, max_project_age))
-
-  data_treatment <- data_treatment_full[
-    data_treatment_full$relative_introduction_time >= min_project_age &
-      data_treatment_full$relative_introduction_time <= max_project_age,
-  ]
-
-  data_control <- data_control_full[
-    data_control_full$relative_introduction_time >= min_project_age &
-      data_control_full$relative_introduction_time <= max_project_age,
-  ]
-
-  # Optional: Check if we have enough data to proceed, skip if empty to avoid errors
-  if (nrow(data_treatment) == 0 || nrow(data_control) == 0) {
-    message("    Skipping: Insufficient data for this time span.")
-    next
-  }
+    message(metric_name)
 
 
-  for (metric in metrics) {
-    metric_name <- metric$name
-    message(paste("    Metric:", metric_name))
-
-
-    message("    * Calculating treated model")
-    model_treatment <- tryCatch({
-      lme(
-        fixed = as.formula(sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)),
-        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-        data = data_treatment,
-        method = "ML",
-        control = lmeControl(opt = "optim")
-      )
-    }, error = function(e) { message("      Error in treatment model: ", e$message); return(NULL) })
-
-    message("    * Calculating control model")
-    model_control <- tryCatch({
-      lme(
-        fixed = as.formula(sprintf("%s ~ time_saturated * (1 + base_slope + intervention_jump + intervention_slope)", metric_name)),
-        random = ~ 1 + base_slope + intervention_slope + intervention_jump | id,
-        data = data_control,
-        method = "ML",
-        control = lmeControl(opt = "optim")
-      )
-    }, error = function(e) { message("      Error in control model: ", e$message); return(NULL) })
-
-    # skip if models did not converge
-    if (is.null(model_treatment) || is.null(model_control)) {
-      message("    * Skipped")
-      next
-    }
-
-    df_treatment <- calculate_custom_effects(model_treatment, data_treatment)
-    df_control   <- calculate_custom_effects(model_control, data_control)
-
-    output_dir <- file.path("plots", "effects_distributions", metric_name)
+    message("   * Creating folder")
+    output_dir <- file.path("plots", language_name, "effects_distributions", metric_name)
     dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-    message("    * Creating plot")
-    save_multipanel_png(
-      expression = {
-        par(oma = c(0, 0, 3, 0))
-        plot_treated_vs_control_effects(df_control$intercept,                 df_treatment$intercept,                "Intercept")
-        plot_treated_vs_control_effects(df_control$base_slope,                df_treatment$base_slope,               "Slope before Intervention")
-        plot_treated_vs_control_effects(df_control$intervention_jump,         df_treatment$intervention_jump,        "Intervention Jump")
-        plot_treated_vs_control_effects(df_control$slope_after_intervention,  df_treatment$slope_after_intervention, "Slope after Intervention")
-        mtext(
-          sprintf("Treatment and Control Effects Distributions - Project Age from %s to %s (Years)", min_project_age, max_project_age),
-          outer = TRUE,
-          cex = 1.5,
-          font = 2
-        )
-      },
-      path = file.path(output_dir, sprintf("%s.%s.%s.predicted.png", metric_name, min_project_age, max_project_age)),
-    )
 
+    message("   * Loading Data")
+    transition_n_days <- get_transition_time(language_name, metric_name)
+    data_treatment <- get_data(language, "treatment", transition_n_days)
+    data_control   <- get_data(language, "control",   transition_n_days)
 
+    message("   * Loading Models")
+    model_treatment <- get_model(data_treatment, language_name, "treatment", metric_name, interaction)
+    model_control   <- get_model(data_control,   language_name, "control",   metric_name, interaction)
+
+    message("    * Creating plots")
+    for (range in age_ranges) {
+      min_project_age <- range[1]
+      max_project_age <- range[2]
+
+      df_treatment <- calculate_custom_effects(model_treatment, data_treatment, min_project_age, max_project_age, interaction)
+      df_control   <- calculate_custom_effects(model_control,   data_control,   min_project_age, max_project_age, interaction)
+
+      save_multipanel_png(
+        expression = {
+          plot_treated_vs_control_effects(df_control$intercept,                 df_treatment$intercept,                "Intercept")
+          plot_treated_vs_control_effects(df_control$base_slope,                df_treatment$base_slope,               "Base Slope")
+          plot_treated_vs_control_effects(df_control$level_change,              df_treatment$level_change,             "Level Change")
+          plot_treated_vs_control_effects(df_control$slope_after_intervention,  df_treatment$slope_after_intervention, "Slope after Intervention")
+        },
+        path = file.path(output_dir, sprintf("%s.%s.%s.random_effects_comparison.png", metric_name, min_project_age, max_project_age)),
+        mfrow = c(2, 2),
+        width = 20,
+        height = 14
+      )
+    }
   }
 }
 

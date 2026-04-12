@@ -41,6 +41,8 @@ get_data <- function(language, group, transition_n_days) {
   finalData <- finalData %>%
     distinct(week, id, .keep_all = TRUE)
 
+
+  finalData <- finalData[complete.cases(finalData), ]
   return(finalData)
 }
 
