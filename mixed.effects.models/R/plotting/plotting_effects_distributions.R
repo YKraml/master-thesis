@@ -5,7 +5,7 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   # 1. Run Statistical Test (Welch Two Sample t-test)
 
 
-  test_res <- t.test(vals_treated, vals_control, alternative = "less")
+  test_res <- t.test(vals_treated, vals_control)
 
   # Extract stats for the text box
   mean_control <- mean(vals_control, na.rm = TRUE)
@@ -22,8 +22,9 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   stats_text <- paste0(
     "Control Mean: ", round(mean_control, 3), "\n",
     "Treated Mean: ", round(mean_treated, 3), "\n",
-    "p ", fmt_p(pval), " (one-sided less)\n",
-    "n(C) = ", n_control, ", n(T) = ", n_treated
+    "p ", fmt_p(pval), "\n",
+    "n_t = ", n_treated, "\n",
+    "n_c = ", n_control
   )
 
   # 2. Calculate Densities
@@ -44,7 +45,7 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   if(is.infinite(max_y_control)) max_y_control <- max(d_control$y)
   if(is.infinite(max_y_treated)) max_y_treated <- max(d_treated$y)
 
-  y_lim_zoomed <- c(0, max(max_y_control, max_y_treated) * 1.1)
+  y_lim_zoomed <- c(0, max(max_y_control, max_y_treated) * 1.3)
 
   # Colors
   gg_red      <- rgb(248, 118, 109, maxColorValue = 255, alpha = 128)
@@ -55,7 +56,7 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   # 5. Plot Canvas
   plot(d_control,
        main = plot_title,
-       xlab = "Value",
+       xlab = "Random Effect Value",
        ylab = "Density",
        xlim = x_lim_zoomed,
        ylim = y_lim_zoomed,
@@ -72,32 +73,31 @@ plot_treated_vs_control_effects <- function(vals_control, vals_treated, plot_tit
   # 7. Add Stats Box (Top Left Corner)
   usr <- par("usr")
 
-  txt_x <- usr[1] + strwidth(stats_text, cex = 0.8) * 0.1
+  txt_x <- usr[1] + strwidth(stats_text) * 0.1
   txt_y <- usr[4]
 
-  txt_w <- strwidth(stats_text, cex = 0.8)
-  txt_h <- strheight(stats_text, cex = 0.8)
+  txt_w <- strwidth(stats_text)
+  txt_h <- strheight(stats_text)
 
   # Draw White Rectangle (Background)
-  rect(
-    xleft   = txt_x,
-    ybottom = txt_y - txt_h * 1.2, # Slightly adjusted padding for the extra line
-    xright  = txt_x + txt_w,
-    ytop    = txt_y,
-    col     = "white",
-    border  = NA
-  )
+  #rect(
+  #  xleft   = txt_x,
+  #  ybottom = txt_y - txt_h * 1.2, # Slightly adjusted padding for the extra line
+  #  xright  = txt_x + txt_w,
+  #  ytop    = txt_y,
+  #  col     = "white",
+  #  border  = NA
+  #)
 
   # Draw Text
-  text(x = txt_x, y = txt_y, labels = stats_text, adj = c(0, 1), cex = 0.8)
+  text(x = txt_x, y = txt_y, labels = stats_text, adj = c(0, 1))
 
   # 8. Legend (Top Right)
   legend("topright",
          legend = c("Control", "Treated"),
          fill = c(gg_red, gg_blue),
          border = c(border_red, border_blue),
-         bty = "n",
-         cex = 0.8)
+         bty = "n")
 }
 
 # ------------------------------------------------------------------------------

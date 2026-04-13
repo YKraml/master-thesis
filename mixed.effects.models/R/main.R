@@ -52,8 +52,8 @@ source("R/model_creator.R")
 
 languages <- list(
   java   = list(name = "java",   display_name ="Java",   color = "#7B68EE", color_secondary = "#D3CCFF"),
-  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1"),
-  cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3")
+  cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3"),
+  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1")
 )
 
 metrics <- list(
@@ -947,12 +947,11 @@ for(language in languages) {
 # ------------------------------------------------------------------------------
 
 age_ranges <- list(
-  c(0, 0.5),
-  c(0.5, 1),
+  c(0, 0.3),
+  c(0.3, 1),
   c(1, 2),
   c(2, 20)
 )
-
 
 for(language in languages) {
   language_name <- language$name
@@ -1001,7 +1000,7 @@ for(language in languages) {
         path = file.path(output_dir, sprintf("%s.%s.%s.random_effects_comparison.png", metric_name, min_project_age, max_project_age)),
         mfrow = c(2, 2),
         width = 20,
-        height = 14
+        height = 13
       )
     }
   }

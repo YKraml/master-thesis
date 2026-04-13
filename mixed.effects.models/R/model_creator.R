@@ -17,7 +17,7 @@ get_model <- function(data, language_name, group, metric_name, interaction) {
 
   if (file.exists(model_complex_file)) {
     message("   * Loading Complex Model from disk")
-    return(readRDS(model_file))
+    return(readRDS(model_complex_file))
   } else if (file.exists(model_complex_failed_file)) {
     message("   * Complex Model previously failed. Skipping to next.")
   } else {
@@ -37,7 +37,7 @@ get_model <- function(data, language_name, group, metric_name, interaction) {
       return(m)
     }, error = function(e) {
       message("   ! Complex Model failed to converge: ", e$message)
-      file.create(model_failed_file)
+      file.create(model_complex_failed_file)
     })
   }
 
