@@ -52,8 +52,8 @@ source("R/model_creator.R")
 
 languages <- list(
   java   = list(name = "java",   display_name ="Java",   color = "#7B68EE", color_secondary = "#D3CCFF"),
-  cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3"),
-  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1")
+  python = list(name = "python", display_name ="Python", color = "#F8766D", color_secondary = "#FFD5D1"),
+  cpp    = list(name = "cpp",    display_name ="C++",    color = "#00BFC4", color_secondary = "#CCF2F3")
 )
 
 metrics <- list(
@@ -522,7 +522,7 @@ for(language in languages) {
         message("  * Saving")
         capture.output(
           model_comparison[order(model_comparison$AIC), ],
-          path = file
+          file = file
         )
       },
       error = function(e) {
@@ -534,7 +534,7 @@ for(language in languages) {
 
 
 
-# ------------------------------------------------------------------------------
+ # ------------------------------------------------------------------------------
 # Lagged - Transition Time
 # ------------------------------------------------------------------------------
 
@@ -657,7 +657,7 @@ for(language in languages){
 
     file.exists(file)
 
-    data <- get_data(language, "treatment", get_transition_time(language_name, metric_name))
+    data <- get_data(language, "treatment", get_transition_time_in_days(language_name, metric_name))
 
     tryCatch({
 
@@ -710,7 +710,7 @@ for(language in languages){
       # Save results sorted by AIC
       capture.output(
         model_comparison[order(model_comparison$AIC), ],
-        path = file
+        file = file
       )
 
 
@@ -745,10 +745,10 @@ for(language in languages) {
     for(group in c("treatment", "control")){
       message(sprintf(" - %s ", group))
 
-      tryCatch({
+      # tryCatch({
 
         message("   * Loading Data")
-        transition_n_days <- get_transition_time(language_name, metric_name)
+        transition_n_days <- get_transition_time_in_days(language_name, metric_name)
         data <- get_data(language, group, transition_n_days)
         data <- data[complete.cases(data), ]
 
@@ -932,10 +932,10 @@ for(language in languages) {
 
 
 
-      }, error = function(e) {
-        warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
-        message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
-      })
+      # }, error = function(e) {
+      #   warning_msg <- sprintf("FAILURE in Metric: '%s' | Group: '%s'", metric_name, group)
+      #   message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
+      # })
     }
   }
 }
@@ -960,6 +960,9 @@ for(language in languages) {
   message(paste("---", language_name, "---"))
 
   for (metric_data in metrics) {
+
+    tryCatch({
+
     metric_name         <- metric_data$name
     metric_display_name <- metric_data$display_name
     metric_unit         <- metric_data$unit
@@ -974,7 +977,7 @@ for(language in languages) {
 
 
     message("   * Loading Data")
-    transition_n_days <- get_transition_time(language_name, metric_name)
+    transition_n_days <- get_transition_time_in_days(language_name, metric_name)
     data_treatment <- get_data(language, "treatment", transition_n_days)
     data_control   <- get_data(language, "control",   transition_n_days)
 
@@ -1003,6 +1006,12 @@ for(language in languages) {
         height = 13
       )
     }
+
+  }, error = function(e) {
+    warning_msg <- sprintf("FAILURE in Metric: '%s'", metric_name)
+    message(paste0("\n ", warning_msg, "\n Error message: ", e$message, "\n"))
+  })
+
   }
 }
 

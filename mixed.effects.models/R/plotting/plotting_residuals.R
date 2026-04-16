@@ -42,7 +42,7 @@ plot_residuals_vs_time <- function(data, model, color) {
     residuals,
     xlab = "Time (Years)",
     ylab = "Residuals",
-    main = "Residuals vs Time",
+    main = "Residuals against Time",
     col = color,
     pch = 4
   )
@@ -62,7 +62,7 @@ plot_residuals_vs_intervention <- function(data, model, color) {
     residuals,
     xlab = "Intervention",
     ylab = "Residuals",
-    main = "Residuals vs Intervention",
+    main = "Residuals against Intervention",
     col = color,
     pch = 4,
     xaxt = "n",
@@ -127,7 +127,7 @@ plot_residuals_vs_age <- function(data, model, color) {
     residuals,
     xlab = "Age at Linter Introduction (Years)",
     ylab = "Residuals",
-    main = "Residuals vs Age",
+    main = "Residuals against Age",
     col = color,
     pch = 4
   )
@@ -146,7 +146,7 @@ plot_residuals_vs_fitted <- function(data, model, color, metric_display_name, me
     residuals,
     xlab = sprintf("%s (%s)", metric_display_name, metric_unit),
     ylab = "Residuals",
-    main = "Residuals vs Fitted",
+    main = "Residuals against Fitted",
     col = color,
     pch = 4
   )

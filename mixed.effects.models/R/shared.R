@@ -94,7 +94,7 @@ fmt_p <- function(p) {
 # ------------------------------------------------------------------------------
 
 
-get_transition_time <- function(lang, metric_name) {
+get_transition_time_in_days <- function(lang, metric_name) {
   model_stability_data <- data.frame(
     Metric = c(
       "longFiles", "longFilesDensity", "longMethods", "longMethodDensity",
@@ -119,5 +119,5 @@ get_transition_time <- function(lang, metric_name) {
     stop(paste("Metric", metric_name, "not found in table."))
   }
 
-  return(as.numeric(model_stability_data[row_idx, lang]))
+  return(as.numeric(model_stability_data[row_idx, lang]) * 7)
 }
