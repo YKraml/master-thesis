@@ -97,8 +97,8 @@ metrics <- list(
 # Population Selection
 # ------------------------------------------------------------------------------
 
-java_data   <- read.csv("data/python/database_population/data.csv")
-python_data <- read.csv("data/java/database_population/data.csv")
+java_data   <- read.csv("data/java/database_population/data.csv")
+python_data <- read.csv("data/python/database_population/data.csv")
 cpp_data    <- read.csv("data/cpp/database_population/data.csv")
 
 out_dir <- file.path("plots", "database_population")
